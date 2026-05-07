@@ -1,4 +1,5 @@
 payload:
+
   # > OpenAI
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,openai.com
@@ -6,6 +7,7 @@ payload:
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,openai.com
+  
   # > Chat GPT API & CDN
   - DOMAIN-SUFFIX,cdn.oaistatic.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
@@ -42,3 +44,5 @@ payload:
   
   # Token供应商
   - DOMAIN-SUFFIX,openrouter.ai
+  - DOMAIN-SUFFIX,poe.com
+  - DOMAIN-SUFFIX,poecdn.net
