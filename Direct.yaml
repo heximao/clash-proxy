@@ -26,6 +26,8 @@ payload:
   - DOMAIN-SUFFIX,xuedingtoken.com
   - DOMAIN-SUFFIX,linuxdo.org
   - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,sbyr.de5.net
+  
     # 腾讯云-香港
   - IP-CIDR,43.160.156.23/32,no-resolve
   - IP-CIDR,43.160.156.172/32,no-resolve
