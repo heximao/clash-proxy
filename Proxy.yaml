@@ -2,6 +2,7 @@ payload:
     # CF
   - DOMAIN-SUFFIX,cloudflaremirrors.com
   - DOMAIN-SUFFIX,cloudflare.com
+  - DOMAIN-SUFFIX,cloudflare.dev
   - IP-CIDR,1.1.1.1/32,no-resolve
   - IP-CIDR,1.0.0.1/32,no-resolve
   
