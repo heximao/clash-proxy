@@ -23,7 +23,8 @@ payload:
 
     # Chrome 标签页插件 bonjourr
   - DOMAIN-SUFFIX,bonjourr.fr
-
+    # 云数据库
+  - DOMAIN-SUFFIX,tidbcloud.com
   - DOMAIN-SUFFIX,icon.horse
   - DOMAIN-SUFFIX,trakt.tv
     # Mac App 破解资源下载
