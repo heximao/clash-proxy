@@ -5,7 +5,8 @@ payload:
   - DOMAIN-SUFFIX,cloudflare.dev
   - IP-CIDR,1.1.1.1/32,no-resolve
   - IP-CIDR,1.0.0.1/32,no-resolve
-  
+    #沉浸式翻译
+  - DOMAIN-SUFFIX,imtintl.com
     # 宾夕法尼亚州立大学 
   - DOMAIN-SUFFIX,psu.edu
   - DOMAIN-SUFFIX,ocsp.digicert.com
