@@ -49,3 +49,5 @@ payload:
   
   - DOMAIN-SUFFIX,nvidia.com
   - DOMAIN-SUFFIX,aihubmix.com
+
+  - DOMAIN-SUFFIX,hf.space
