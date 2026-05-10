@@ -16,7 +16,8 @@ payload:
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
   - DOMAIN-SUFFIX,docker.net
-
+  
+  - DOMAIN-SUFFIX,0.ubuntu.pool.ntp.org
     # Firefox
   - DOMAIN-SUFFIX,firefox.com
   - DOMAIN-SUFFIX,mozilla.com
