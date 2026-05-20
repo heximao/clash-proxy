@@ -3,7 +3,7 @@ payload:
   - DOMAIN-SUFFIX,spotifycdn.com
   - DOMAIN-SUFFIX,scdn.co
 
-  # 本地运行 clash mihomo 代理时可用
+# === 本地运行 clash mihomo 代理时可用 ===
   - PROCESS-NAME,Spotify
   - PROCESS-NAME,Spotify.exe
   

@@ -1,7 +1,8 @@
 payload:
-  # Wechat
+
+# === Wechat ===
   - DOMAIN-SUFFIX,mp.weixin.qq.com
   - DOMAIN-SUFFIX,xueqiu.com
   
-  #xvideo
+# === xvideo ===
   - DOMAIN-SUFFIX,xvideo.com

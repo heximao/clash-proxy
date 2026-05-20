@@ -4,16 +4,19 @@ payload:
   - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,apple.news
   - DOMAIN-SUFFIX,apple-dns.net
-  # Apple 中国
+
+# === Apple 中国 ===
   - DOMAIN-SUFFIX,apple.cn  
   - DOMAIN-SUFFIX,apple.com.cn
   - DOMAIN-SUFFIX,icloud.com.cn 
   - DOMAIN-SUFFIX,apple-icloud.cn
   - DOMAIN-SUFFIX,appleicloud.cn 
   - DOMAIN-SUFFIX,icloud-apple.cn
-  # Mail 邮件
+
+# === Mail 邮件 ===
   - DOMAIN-SUFFIX,me.com
-  # iCloud
+
+# === iCloud ===
   - DOMAIN-SUFFIX,icloud.com
   - DOMAIN-SUFFIX,api.apple-cloudkit.com
   - DOMAIN-SUFFIX,myicloud.net
@@ -21,12 +24,15 @@ payload:
   - DOMAIN-SUFFIX,icloud-content.com
   - DOMAIN-SUFFIX,icloud.net
   - DOMAIN-SUFFIX,icloud-sandbox.com
-  # Map
+
+# === Map ===
   - DOMAIN-SUFFIX,apple-mapkit.com
-  # Apple CDN
+
+# === Apple CDN ===
   - DOMAIN-SUFFIX,cdn-apple.com
   - DOMAIN-SUFFIX,mzstatic.com
-  # Akamai Technologies CDN for Apple
+
+# === Akamai Technologies CDN for Apple ===
   - DOMAIN-SUFFIX,apple.com.akadns.net
   - DOMAIN-SUFFIX,me.com.akadns.net
   - DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net

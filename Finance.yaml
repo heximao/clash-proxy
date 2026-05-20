@@ -1,5 +1,6 @@
 payload:
-  # 券商
+
+# === 券商 ===
   - DOMAIN-SUFFIX,tradingview.com
   
   - DOMAIN-SUFFIX,longbridge.com
@@ -19,13 +20,14 @@ payload:
   
   - DOMAIN-SUFFIX,fastbull.com
   
-    # 银行
-    ###### ZA Group
+# === 银行 ===
+
+# === ##### ZA Group ===
   - DOMAIN-SUFFIX,za.group
   - DOMAIN-SUFFIX,bank.za.group
   - DOMAIN-SUFFIX,broker.za.group
   
-    ###### 汇立银行
+# === ##### 汇立银行 ===
   - DOMAIN-SUFFIX,welab.bank
   - DOMAIN-SUFFIX,wapi-sit.dev-wlab.com
   
@@ -53,15 +55,16 @@ payload:
   - DOMAIN-SUFFIX,airstarbank.com
   - DOMAIN-SUFFIX,airstarbank.com.hk
   
-  # 财经资讯
+# === 财经资讯 ===
   - DOMAIN-SUFFIX,seekingalpha.com
   - DOMAIN-SUFFIX,investing.com
-  # Web3
+
+# === Web3 ===
   - DOMAIN-SUFFIX,bit.com
   - DOMAIN-SUFFIX,bitexch.io
   - DOMAIN-SUFFIX,polymarket.com
 
-  ######## 币安
+# === ####### 币安 ===
   - DOMAIN-SUFFIX,binance.com
   
   - DOMAIN-SUFFIX,okx.com

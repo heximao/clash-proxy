@@ -1,48 +1,38 @@
 payload:
 
-  # > OpenAI
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,openai.com
-
+# === OpenAI ===
   - DOMAIN-SUFFIX,ai.com
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,openai.com
   
-  # > Chat GPT API & CDN
-  - DOMAIN-SUFFIX,cdn.oaistatic.com
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,openaiapi-site.azureedge.net
-  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-  - DOMAIN,openaicomproductionae4b.blob.core.windows.net
-  - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
+# === Chat GPT API & CDN ===
+
+# === OpenAI entries moved to openai.yaml ===
   - DOMAIN-SUFFIX,o33249.ingest.sentry.io
   
-  # Anthropic
+# === Anthropic ===
   - DOMAIN_SUFFIX,claude.ai
   - DOMAIN-SUFFIX,anthropic.com
   
-  # OpenCode Zen
+# === OpenCode Zen ===
   - DOMAIN-SUFFIX,opencode.ai
   - DOMAIN-SUFFIX,mcp.context7.com
   - DOMAIN-SUFFIX,mcp.exa.ai
   - DOMAIN-SUFFIX,mcp.grep.app
-  # AI 模型的开放源数据库
+
+# === AI 模型的开放源数据库 ===
   - DOMAIN-SUFFIX,models.dev
 
-  # > Perplexity AI
+# === Perplexity AI ===
   - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,ai.com
   
-  # OpenClaw
+# === OpenClaw ===
   - DOMAIN-SUFFIX,openclaw.ai
   - DOMAIN-SUFFIX,clawhub.ai
 
-  # MiniMax 国际版
+# === MiniMax 国际版 ===
   - DOMAIN-SUFFIX,minimax.io
   
-  # Token供应商
+# === Token供应商 ===
   - DOMAIN-SUFFIX,openrouter.ai
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,poecdn.net

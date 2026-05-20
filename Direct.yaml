@@ -1,20 +1,28 @@
 payload:
-  # 1- 理论上 Clash 开启“绕过大陆”功能后，大陆域名和 IP 都不经过内核，此规则集不会又任何一条被匹配
-  # 2- 保留的作用是,为了防止“绕过大陆”功能不可用或者主动关闭,大陆域名和 IP 能被此规则集匹配中,保持直连
-  # 3- 没有被墙的海外站点并且稳定直连放在这里，如果不稳定，改放到 Proxy 组
-    # 一元机场订阅更新地址
+
+# === 1- 理论上 Clash 开启“绕过大陆”功能后，大陆域名和 IP 都不经过内核，此规则集不会又任何一条被匹配 ===
+
+# === 2- 保留的作用是,为了防止“绕过大陆”功能不可用或者主动关闭,大陆域名和 IP 能被此规则集匹配中,保持直连 ===
+
+# === 3- 没有被墙的海外站点并且稳定直连放在这里，如果不稳定，改放到 Proxy 组 ===
+
+# === 一元机场订阅更新地址 ===
   - DOMAIN-SUFFIX,sub3.smallstrawberry.com
-    # TMDB
+
+# === TMDB ===
   - DOMAIN-SUFFIX,themoviedb.org
-    # 沉浸式翻译
+
+# === 沉浸式翻译 ===
   - DOMAIN-SUFFIX,immersivetranslate.cn
   - DOMAIN-SUFFIX,immersivetranslate.com
-    # Github 镜像站
+
+# === Github 镜像站 ===
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
   - DOMAIN-SUFFIX,redhat.com
   - DOMAIN-SUFFIX,xz.pphimalayanrt.com
   - DOMAIN-SUFFIX,infuse.im
-    # 字节跳动 Trae CN
+
+# === 字节跳动 Trae CN ===
   - DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
   - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,cloudflare.com
@@ -29,7 +37,8 @@ payload:
   - DOMAIN-SUFFIX,sbyr.de5.net
   - DOMAIN-SUFFIX,gh-proxy.org
   - DOMAIN-SUFFIX,gh-proxy.com
-    # 腾讯云-香港
+
+# === 腾讯云-香港 ===
   - IP-CIDR,43.160.156.23/32,no-resolve
   - IP-CIDR,43.160.156.172/32,no-resolve
   - DOMAIN-SUFFIX,dell.com
@@ -186,12 +195,13 @@ payload:
   - IP-CIDR,42.186.0.0/16
 
   - IP-CIDR,223.5.5.5/32,no-resolve
-  # Aliyun HK
+
+# === Aliyun HK ===
   - IP-CIDR,43.175.230.135/32,no-resolve
   - IP-CIDR,43.175.230.4/32,no-resolve
   - IP-CIDR,43.175.230.20/32,no-resolve
   
-  # lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏
+# === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,lan
   - DOMAIN-SUFFIX,local
   - DOMAIN-SUFFIX,localhost

@@ -1,11 +1,25 @@
 payload:
-    # --- 核心域名 ---
+  #
+  # Google 规则分组目录：
+  #   1. Google 核心域名
+  #   2. Google 核心 IP
+  #   3. Gmail 邮箱服务
+  #   4. Antigravity（重力实验/AI 相关）
+  #   5. 统计/广告/分析/API
+
+# === 6. 其它 Google 相关域名 ===
+
+# === 7. Google with Fastly CDN ===
+
+# === ===
+
+# === Google 核心域名 ===
   - DOMAIN-SUFFIX,goog
   - DOMAIN-SUFFIX,google
   - DOMAIN-SUFFIX,google.com
   - DOMAIN-SUFFIX,google.dev
 
-    # --- 核心IP ---
+# === Google 核心 IP ===
   - IP-CIDR,8.8.8.8/32,no-resolve
   - IP-CIDR,8.8.4.4/32,no-resolve
   - IP-CIDR,64.233.187.188/32,no-resolve
@@ -13,19 +27,20 @@ payload:
   - IP-CIDR,108.177.125.188/32,no-resolve
   - IP-CIDR,173.194.0.0/16,no-resolve
   - IP-CIDR,74.125.0.0/16,no-resolve
-  # Gemini CLI
+
+# === Gemini CLI ===
   - DOMAIN-SUFFIX,geminicli.com
   - DOMAIN-SUFFIX,ggpht.com
-  
+
+# === 统计/广告/分析/API ===
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,2mdn-cn.net
-  
   - DOMAIN-SUFFIX,admob-cn.com
 
-    # Gmail
+# === Gmail 邮箱服务 ===
   - DOMAIN-SUFFIX,gmail.com
     
-    # Antigravity
+# === Antigravity（重力实验/AI 相关） ===
   - DOMAIN-SUFFIX,antigravity.google 
   - DOMAIN-SUFFIX,antigravity-auto-updater-974169037036.us-central1.run.app
 
@@ -45,6 +60,7 @@ payload:
   - DOMAIN-SUFFIX,dartsearch-cn.net
   - DOMAIN-SUFFIX,dg-meta.video.google.com
   
+# === DoubleClick 广告平台 ===
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,doubleclick-cn.net
   
@@ -54,9 +70,11 @@ payload:
   - DOMAIN-SUFFIX,gonglchuangl.net
   - DOMAIN-SUFFIX,gongyichuangyi.net
   
+# === Google Analytics 分析 ===
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,google-analytics-cn.com
   
+# === Google 广告服务 ===
   - DOMAIN-SUFFIX,googleads.com
   - DOMAIN-SUFFIX,googleadapis.com
   
@@ -67,6 +85,7 @@ payload:
   
   - DOMAIN-SUFFIX,googleapps-cn.com
   
+# === Google API 服务 ===
   - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN-SUFFIX,googleapis-cn.com
   
@@ -75,6 +94,7 @@ payload:
   - DOMAIN-SUFFIX,googleoptimize.com
   - DOMAIN-SUFFIX,googleoptimize-cn.com  
 
+# === Google 广告联盟 ===
   - DOMAIN-SUFFIX,googlesyndication.com
   - DOMAIN-SUFFIX,googlesyndication-cn.com
   
@@ -136,5 +156,6 @@ payload:
   - DOMAIN-SUFFIX,chromercise.com
   - DOMAIN-SUFFIX,chromestatus.com
   - DOMAIN-SUFFIX,chromium.org
-  # google with fastly
+
+# === Google with Fastly CDN ===
   - DOMAIN-SUFFIX,google-ohttp-relay-safebrowsing.fastly-edge.com

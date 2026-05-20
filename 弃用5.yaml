@@ -1,12 +1,13 @@
 payload:
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,openai.com
-  # > ChatGPT
+
+# === ChatGPT ===
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,openai.com
 
-  # > Chat GPT API & CDN
+# === Chat GPT API & CDN ===
   - DOMAIN-SUFFIX,cdn.oaistatic.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,openaiapi-site.azureedge.net

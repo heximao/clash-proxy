@@ -1,49 +1,60 @@
 payload:
-    # CF
+
+# === CF ===
   - DOMAIN-SUFFIX,cloudflaremirrors.com
   - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,cloudflare.dev
   - IP-CIDR,1.1.1.1/32,no-resolve
   - IP-CIDR,1.0.0.1/32,no-resolve
-    #沉浸式翻译
+
+# === 沉浸式翻译 ===
   - DOMAIN-SUFFIX,imtintl.com
-    # 宾夕法尼亚州立大学 
+
+# === 宾夕法尼亚州立大学 ===
   - DOMAIN-SUFFIX,psu.edu
   - DOMAIN-SUFFIX,ocsp.digicert.com
-    ###### Adgruad
+
+# === ##### Adgruad ===
   - DOMAIN-SUFFIX,adtidy.org
-    # docker
+
+# === docker ===
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
   - DOMAIN-SUFFIX,docker.net
   
   - DOMAIN-SUFFIX,0.ubuntu.pool.ntp.org
-    # Firefox
+
+# === Firefox ===
   - DOMAIN-SUFFIX,firefox.com
   - DOMAIN-SUFFIX,mozilla.com
   - DOMAIN-SUFFIX,mozilla.org
   - DOMAIN-SUFFIX,mozilla.net
 
-    # Chrome 标签页插件 bonjourr
+# === Chrome 标签页插件 bonjourr ===
   - DOMAIN-SUFFIX,bonjourr.fr
-    # 云数据库
+
+# === 云数据库 ===
   - DOMAIN-SUFFIX,tidbcloud.com
   - DOMAIN-SUFFIX,icon.horse
   - DOMAIN-SUFFIX,trakt.tv
-    # Mac App 破解资源下载
+
+# === Mac App 破解资源下载 ===
   - DOMAIN-SUFFIX,appstorrent.ru
   - DOMAIN-SUFFIX,macked.app
-    ###### 密码管理器
+
+# === ##### 密码管理器 ===
   - DOMAIN-SUFFIX,bitwarden.com
   - DOMAIN-SUFFIX,bitwarden.net
-    ## Kwrt
+
+# === # Kwrt ===
   - DOMAIN-SUFFIX,openwrt.ai
   - DOMAIN-SUFFIX,prompts.chat
-    ## ubuntu
+
+# === # ubuntu ===
   - DOMAIN-SUFFIX,ubuntu.com
   - IP-CIDR,185.125.190.57,no-resolve
   
-    ## Nodejs
+# === # Nodejs ===
   - DOMAIN-SUFFIX,nodejs.org
   - DOMAIN-SUFFIX,npmjs.com 
   - DOMAIN-SUFFIX,npmjs.org
@@ -51,18 +62,22 @@ payload:
   - DOMAIN-SUFFIX,asusrouter.com
   - DOMAIN-SUFFIX,opencodecn.com
   - DOMAIN-SUFFIX,npmmirror.com
-    ## royal TSX
+
+# === # royal TSX ===
   - DOMAIN-SUFFIX,royalapps.com
   - DOMAIN-SUFFIX,royalapps.onfastspring.com
   - DOMAIN-SUFFIX,adspower.net
   
-  # 不能直连，也就是被墙的
-    # 机器人验证
+# === 不能直连，也就是被墙的 ===
+
+# === 机器人验证 ===
   - DOMAIN-SUFFIX,hcaptcha.com
-    # unsplash
+
+# === unsplash ===
   - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,imgix.com
-    # IP综合测试
+
+# === IP综合测试 ===
   - DOMAIN-SUFFIX,skk.moe
   - DOMAIN-SUFFIX,ip.sb
   - DOMAIN-SUFFIX,ippure.com
@@ -80,11 +95,11 @@ payload:
   - DOMAIN-SUFFIX,geocode.xyz
   - DOMAIN-SUFFIX,geoipify.whoisxmlapi.com
   - DOMAIN-SUFFIX,geoiplookup.io
-  - DOMAIN-SUFFIXipify.org
+  - DOMAIN-SUFFIX,ipify.org
   - DOMAIN-SUFFIX,iplocation.com
   - DOMAIN-SUFFIX,ipinfo.io
 
-    # DNS泄漏测试
+# === DNS泄漏测试 ===
   - DOMAIN-SUFFIX,iplocation.net
   - DOMAIN-SUFFIX,ipdata.co
   - DOMAIN-SUFFIX,ipapi.co
@@ -101,46 +116,51 @@ payload:
   - DOMAIN-SUFFIX,whatismyip.com
   - DOMAIN-SUFFIX,whoer.net
   - DOMAIN-SUFFIX,xtools.wmflabs.org
-    # 测速
+
+# === 测速 ===
   - DOMAIN-SUFFIX,fast.com
   - DOMAIN-SUFFIX,speedtest.net
   - DOMAIN-SUFFIX,speedtest.com
   - DOMAIN-SUFFIX,speedtest.org
-    # Cloud Server
+
+# === Cloud Server ===
   - DOMAIN-SUFFIX,oracle.com
   
-    # Cloud Hosting
-    # 免费版
+# === Cloud Hosting ===
+
+# === 免费版 ===
   - DOMAIN-SUFFIX,wasmer.io
   - DOMAIN-SUFFIX,galaxycloud.app
   - DOMAIN-SUFFIX,huggingface.co
   - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,vercel-storage.com
 
-    # > Riot Games
+# === Riot Games ===
   - DOMAIN-SUFFIX,riotcdn.net
   - DOMAIN-SUFFIX,wr.pvp.net
   - DOMAIN-SUFFIX,riotgames.com
 
-    # > Spark
+# === Spark ===
   - DOMAIN-SUFFIX,api.amplitude.com
   - DOMAIN-SUFFIX,app.smartmailcloud.com
   - DOMAIN-SUFFIX,gate.hockeyapp.net
   - DOMAIN-SUFFIX,smartmailcloud.com
   - DOMAIN-SUFFIX,knock.app
   
-    # > 机场(订阅)
-    # 一元机场
+# === 机场(订阅) ===
+
+# === 一元机场 ===
   - DOMAIN-SUFFIX,xn--1-q07a56pdss.org
   - DOMAIN-SUFFIX,xn--4gq62f52gdss.ink
   - DOMAIN-SUFFIX,xn--4gq62f.com
   - DOMAIN-SUFFIX,xn--4gq62f.org
   - DOMAIN-SUFFIX,yiyuanjichang.com
-    # 自建
+
+# === 自建 ===
   - DOMAIN-SUFFIX,rapid-disk-29c72222.he-ximao.workers.dev
   - DOMAIN-SUFFIX,laower.wasmer.app
   
-    # > Top blocked sites
+# === Top blocked sites ===
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,4everProxy.com
   - DOMAIN-SUFFIX,4shared.com
@@ -727,7 +747,7 @@ payload:
   - DOMAIN-SUFFIX,zynamics.com
 
 
-  # - USER-AGENT,WhatsApp*
+# === USER-AGENT,WhatsApp* ===
 
   - DOMAIN-KEYWORD,appledaily
   - DOMAIN-KEYWORD,beetalk
@@ -786,20 +806,20 @@ payload:
   - DOMAIN-SUFFIX,webmproject.org
   - DOMAIN-SUFFIX,webrtc.org
 
-    # > V2EX
+# === V2EX ===
   - DOMAIN-SUFFIX,v2ex.com
   
   - DOMAIN-KEYWORD,dlercloud
 
-    # > VikACG
+# === VikACG ===
   - DOMAIN-SUFFIX,vikacg.com
   - DOMAIN-SUFFIX,picjs.xyz
 
-    # > exception
+# === exception ===
   - DOMAIN-SUFFIX,wheel-size.cn
   - DOMAIN-SUFFIX,chalungu.cn
 
-    # > Amazon
+# === Amazon ===
   - IP-CIDR,13.32.0.0/16,no-resolve
   - IP-CIDR,13.33.0.0/16,no-resolve
   - IP-CIDR,13.35.0.0/17,no-resolve
@@ -817,7 +837,7 @@ payload:
   - IP-CIDR,54.230.156.0/22,no-resolve
   - IP-CIDR,54.93.0.0/16,no-resolve
 
-    # > Kakao Talk
+# === Kakao Talk ===
   - IP-CIDR,1.201.0.0/24,no-resolve
   - IP-CIDR,103.246.56.0/22,no-resolve
   - IP-CIDR,103.27.148.0/22,no-resolve
@@ -825,13 +845,13 @@ payload:
   - IP-CIDR,113.61.104.0/22,no-resolve
   - IP-CIDR,27.0.236.0/22,no-resolve
 
-    # > Potato Chat
+# === Potato Chat ===
   - IP-CIDR,13.251.24.157/24,no-resolve
   - IP-CIDR,13.251.41.203/24,no-resolve
   - IP-CIDR,17.252.156.147/24,no-resolve
   - IP-CIDR,17.252.157.26/24,no-resolve
 
-    # > SoftLayer
+# === SoftLayer ===
   - IP-CIDR,74.86.0.0/16,no-resolve
   - IP-CIDR,75.126.0.0/16,no-resolve
   - IP-CIDR,174.37.0.0/16,no-resolve

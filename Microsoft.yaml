@@ -1,5 +1,6 @@
 payload:
-  # === Microsoft 主域 ===
+
+# === Microsoft 主域 ===
   - DOMAIN-SUFFIX,microsoft
   - DOMAIN-SUFFIX,microsoft.com
   - DOMAIN-SUFFIX,microsoft.net
@@ -9,8 +10,8 @@ payload:
   - DOMAIN-SUFFIX,msftauth.net
   - DOMAIN-SUFFIX,s-microsoft.com
   - DOMAIN-SUFFIX,msauth.net
-  
-  # === Microsoft 365 ===
+
+# === Microsoft 365 ===
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,office.com
   - DOMAIN-SUFFIX,office.net
@@ -25,7 +26,7 @@ payload:
   - DOMAIN-SUFFIX,sharepointonline.com
   - DOMAIN-SUFFIX,microsoftonline.com
 
-  # === Bing / Edge / MSN / Copilot ===
+# === Bing / Edge / MSN / Copilot ===
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,bing.net
   - DOMAIN-SUFFIX,bingads.com
@@ -34,7 +35,7 @@ payload:
   - DOMAIN-SUFFIX,msn.com
   - DOMAIN-SUFFIX,microsoftedge.com
 
-  # === Azure / Cloud ===
+# === Azure / Cloud ===
   - DOMAIN-SUFFIX,azure.com
   - DOMAIN-SUFFIX,azure.cn
   - DOMAIN-SUFFIX,azure.net
@@ -45,21 +46,21 @@ payload:
   - DOMAIN-SUFFIX,azurecosmos.net
   - DOMAIN-SUFFIX,microsoftcloud.com
 
-  # === Windows / Update ===
+# === Windows / Update ===
   - DOMAIN-SUFFIX,windows.com
   - DOMAIN-SUFFIX,windows.net
   - DOMAIN-SUFFIX,windowsazure.com
   - DOMAIN-SUFFIX,windowsupdate.com
   - DOMAIN-SUFFIX,windowslive.cn
 
-  # === Xbox / Gaming ===
+# === Xbox / Gaming ===
   - DOMAIN-SUFFIX,xbox.com
   - DOMAIN-SUFFIX,xboxlive.com
   - DOMAIN-SUFFIX,xboxgamepass.com
   - DOMAIN-SUFFIX,xboxgamestudios.com
   - DOMAIN-SUFFIX,xboxservices.com
 
-  # === 开发者 / VS / MSDN ===
+# === 开发者 / VS / MSDN ===
   - DOMAIN-SUFFIX,visualstudio.com
   - DOMAIN-SUFFIX,visualstudio.net
   - DOMAIN-SUFFIX,vscode.dev
@@ -69,18 +70,8 @@ payload:
   - DOMAIN-SUFFIX,msdn.com
   - DOMAIN-SUFFIX,msecnd.net
   - DOMAIN-SUFFIX,nuget.org
-  
-    # === OpenAI / ChatGPT ===
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,openai-api.arkoselabs.com
-  - DOMAIN,openaicomproductionae4b.blob.core.windows.net
-  - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
-  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-  - DOMAIN-SUFFIX,openaicom.imgix.net
-  
-  # === 第三方依赖服务 ===
+
+# === 第三方依赖服务 ===
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,intercom.io

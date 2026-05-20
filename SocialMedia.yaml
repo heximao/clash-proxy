@@ -1,12 +1,13 @@
 payload:
-  # ==   X & xAI   == #
+
+# === X & xAI   == # ===
   - DOMAIN-SUFFIX,x.com
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,twimg.com
   - DOMAIN-SUFFIX,x.ai  
   - DOMAIN-SUFFIX,grok.com
   
-  # ==   Meta   == #
+# === Meta   == # ===
   - DOMAIN-SUFFIX,meta.ai
   - DOMAIN-SUFFIX,meta.com
   - DOMAIN-SUFFIX,fb.com
@@ -34,14 +35,14 @@ payload:
   - IP-CIDR,69.63.176.0/20,no-resolve
   - IP-CIDR,74.119.76.0/22,no-resolve
   
-  # reddit
+# === reddit ===
   - DOMAIN-SUFFIX,redd.it
   - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,redditmedia.com
   - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,redditspace.com
 
-  # pornhub
+# === pornhub ===
   - DOMAIN-SUFFIX,pornhub.com
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,youporn.com
@@ -52,16 +53,16 @@ payload:
   - DOMAIN-SUFFIX,t8cdn.com
   - DOMAIN-SUFFIX,thumbzilla.com
   
-    # xvideo
+# === xvideo ===
   - DOMAIN-SUFFIX,xvideo.com
 
-    # discord
+# === discord ===
   - DOMAIN-SUFFIX,discord.com
-  - DOMAIN-SUFFIX,discordapp.com,
+  - DOMAIN-SUFFIX,discordapp.com
   - DOMAIN-SUFFIX,discordapp.net
   - DOMAIN-SUFFIX,discord.gg
 
-      # Telegram 
+# === Telegram ===
   - IP-CIDR,5.28.195.2/32,no-resolve
   - IP-CIDR,91.105.192.0/23,no-resolve
   - IP-CIDR,91.108.4.0/22,no-resolve
@@ -87,7 +88,7 @@ payload:
   - DOMAIN-SUFFIX,api.telegram.org
   - DOMAIN-SUFFIX,telesco.pe
   
-    # LINE
+# === LINE ===
   - DOMAIN-SUFFIX,lin.ee
   - DOMAIN-SUFFIX,line.me
   - DOMAIN-SUFFIX,line.naver.jp

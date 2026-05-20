@@ -1,5 +1,6 @@
 payload:
-  # 直接拦截丢弃请求，均为广告
+
+# === 直接拦截丢弃请求，均为广告 ===
   - DOMAIN-SUFFIX,ad.weixin.qq.com
   - DOMAIN-SUFFIX,ads.weixin.qq.com
   - DOMAIN-SUFFIX,gtimg.cn
@@ -1088,7 +1089,8 @@ payload:
   - DOMAIN-SUFFIX,hc.baidu.com
   - DOMAIN-SUFFIX,hdickeu.top
   - DOMAIN-SUFFIX,hdswgc.com
-##  - DOMAIN-SUFFIX,heads-fa.spotify.com
+
+# === #  - DOMAIN-SUFFIX,heads-fa.spotify.com ===
   - DOMAIN-SUFFIX,hetlwsu.top
   - DOMAIN-SUFFIX,hewrutu.top
   - DOMAIN-SUFFIX,hfjmvr.xyz

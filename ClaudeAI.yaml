@@ -1,3 +1,4 @@
 payload:
-  - DOMAIN_SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeai.cn
   - DOMAIN-SUFFIX,anthropic.com
