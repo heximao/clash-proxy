@@ -1,0 +1,436 @@
+# Duplicate Rules Report
+
+Rules appearing in more than one file:
+
+- `DOMAIN-SUFFIX,2mdn.net`: 3 files
+  - Direct.yaml
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,bit.com`: 3 files
+  - Finance.yaml
+  - Proxy.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,okx.com`: 3 files
+  - Finance.yaml
+  - Proxy.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,recaptcha.net`: 3 files
+  - Direct.yaml
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,scdn.co`: 3 files
+  - Proxy.yaml
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,twimg.com`: 3 files
+  - Proxy.yaml
+  - SocialMedia.yaml
+  - X弃用.yaml
+- `DOMAIN,chat.openai.com.cdn.cloudflare.net`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN,openaicomproductionae4b.blob.core.windows.net`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN,production-openaicom-storage.azureedge.net`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,aaplimg.com`: 2 files
+  - Apple.yaml
+  - Direct.yaml
+- `DOMAIN-SUFFIX,ai.com`: 2 files
+  - AI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,anthropic.com`: 2 files
+  - AI.yaml
+  - ClaudeAI.yaml
+- `DOMAIN-SUFFIX,api.telegram.org`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,apple-dns.net`: 2 files
+  - Apple.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,azure.com`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,azureedge.net`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,azurewebsites.net`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,binance.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,bing.com`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,bing.net`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,bitexch.io`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,bitget.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,bybit.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,byspotify.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,chatgpt.com`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,cloudflare.com`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,coinbase.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,edgekey.net`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,fast.com`: 2 files
+  - Proxy.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,fb.com`: 2 files
+  - Proxy.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,ggpht.com`: 2 files
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,gmail.com`: 2 files
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,googletagservices-cn.com`: 2 files
+  - Google.yaml
+  - Reject.yaml
+- `DOMAIN-SUFFIX,grok.com`: 2 files
+  - SocialMedia.yaml
+  - X弃用.yaml
+- `DOMAIN-SUFFIX,gstatic.com`: 2 files
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,gtm.oasisfeng.com`: 2 files
+  - Direct.yaml
+  - Google.yaml
+- `DOMAIN-SUFFIX,gvt1.com`: 2 files
+  - Google.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,helpshift.com`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,huobi.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,licdn.com`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,lin.ee`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,line-apps.com`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,line-cdn.net`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,line-scdn.net`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,line.me`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,line.naver.jp`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,messenger.com`: 2 files
+  - Proxy.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,mzstatic.com`: 2 files
+  - Apple.yaml
+  - Direct.yaml
+- `DOMAIN-SUFFIX,nhncorp.jp`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,nvidia.com`: 2 files
+  - AI.yaml
+  - 弃用2.yaml
+- `DOMAIN-SUFFIX,o33249.ingest.sentry.io`: 2 files
+  - AI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,oaistatic.com`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,oaiusercontent.com`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,office365.com`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,onenote.com`: 2 files
+  - Microsoft.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,openai.com`: 2 files
+  - OpenAI.yaml
+  - 弃用5.yaml
+- `DOMAIN-SUFFIX,oracle.com`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,polymarket.com`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,pscdn.co`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,pubnub.com`: 2 files
+  - Proxy.yaml
+  - Reject.yaml
+- `DOMAIN-SUFFIX,redd.it`: 2 files
+  - Proxy.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,settings.crashlytics.com`: 2 files
+  - Direct.yaml
+  - Google.yaml
+- `DOMAIN-SUFFIX,sfx.ms`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,sharepoint.com`: 2 files
+  - Direct.yaml
+  - Microsoft.yaml
+- `DOMAIN-SUFFIX,sharethis.com`: 2 files
+  - Proxy.yaml
+  - Reject.yaml
+- `DOMAIN-SUFFIX,spoti.fi`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify-com.akamaized.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify-everywhere.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.app.link`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.com.edgesuite.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.design`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.map.fastly.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotify.map.fastlylb.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifycdn.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifycdn.net`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifycharts.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifycodes.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifyforbrands.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifyjobs.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotifynewsroom.jp`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,spotilocal.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,t.me`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,tdesktop.com`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,teamviewer.com`: 2 files
+  - Direct.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,telegra.ph`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,telegram.me`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,telegram.org`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,telesco.pe`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `DOMAIN-SUFFIX,tether.to`: 2 files
+  - Finance.yaml
+  - 弃用4.yaml
+- `DOMAIN-SUFFIX,tospotify.com`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `DOMAIN-SUFFIX,tradingview.com`: 2 files
+  - Finance.yaml
+  - Proxy.yaml
+- `DOMAIN-SUFFIX,twitter.com`: 2 files
+  - SocialMedia.yaml
+  - X弃用.yaml
+- `DOMAIN-SUFFIX,x.ai`: 2 files
+  - SocialMedia.yaml
+  - X弃用.yaml
+- `DOMAIN-SUFFIX,x.com`: 2 files
+  - SocialMedia.yaml
+  - X弃用.yaml
+- `DOMAIN-SUFFIX,xvideo.com`: 2 files
+  - SocialMedia.yaml
+  - SocialMediaCN弃用.yaml
+- `DOMAIN-SUFFIX,youtu.be`: 2 files
+  - Proxy.yaml
+  - Youtube.yaml
+- `DOMAIN-SUFFIX,ytimg.com`: 2 files
+  - Proxy.yaml
+  - Youtube.yaml
+- `IP-CIDR,103.2.28.0/22,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,109.239.140.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,119.235.224.0/21,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,119.235.232.0/23,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,119.235.235.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,119.235.236.0/23,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,125.209.208.0/20,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,125.6.146.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,125.6.149.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,125.6.190.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,149.154.160.0/20,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,185.76.151.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,203.104.103.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,203.104.128.0/20,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,203.174.66.64/26,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,203.174.77.0/24,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,5.28.195.2/32,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.105.192.0/23,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.0.0/16,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.16.0/21,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.4.0/22,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.56.0/22,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.56.187/32,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,91.108.8.0/21,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR,95.161.64.0/20,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR6,2001:67c:4e8::/48,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR6,2001:b28:f23c::/47,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR6,2001:b28:f23d::/48,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR6,2001:b28:f23f::/48,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `IP-CIDR6,2a0a:f280::/32,no-resolve`: 2 files
+  - InstantMessage弃用.yaml
+  - SocialMedia.yaml
+- `PROCESS-NAME,Spotify`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+- `PROCESS-NAME,Spotify.exe`: 2 files
+  - Spotify弃用.yaml
+  - Streaming.yaml
+
+Per-file intra-file duplicates (same rule repeated within the same file):
+
+- AI.yaml:
+  - `DOMAIN-SUFFIX,ai.com`
+- Finance.yaml:
+  - `DOMAIN-SUFFIX,tradingview.com`
+- Proxy.yaml:
+  - `DOMAIN-SUFFIX,docker.com`
+  - `DOMAIN-SUFFIX,ip.sb`
+  - `DOMAIN-SUFFIX,ipaddress.com`
+  - `DOMAIN-SUFFIX,ipapi.co`
+  - `DOMAIN-SUFFIX,ipify.org`
+  - `DOMAIN-SUFFIX,trakt.tv`
+  - `DOMAIN-SUFFIX,unsplash.com`
+- 弃用5.yaml:
+  - `DOMAIN-SUFFIX,chatgpt.com`
+  - `DOMAIN-SUFFIX,openai.com`
