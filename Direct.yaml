@@ -18,36 +18,27 @@ payload:
 
 # === Github 镜像站 ===
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,infuse.im
   - DOMAIN-SUFFIX,redhat.com
   - DOMAIN-SUFFIX,xz.pphimalayanrt.com
-  - DOMAIN-SUFFIX,infuse.im
 
 # === 字节跳动 Trae CN ===
-  - DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
-  - DOMAIN-SUFFIX,unpkg.com
-  - DOMAIN-SUFFIX,cloudflare.com
-  - DOMAIN-SUFFIX,obsidian.md
-  - DOMAIN-SUFFIX,iina.io
-  - DOMAIN-SUFFIX,oplist.org
   - DOMAIN-SUFFIX,adguard.org
-  - DOMAIN-SUFFIX,langbot.app
-  - DOMAIN-SUFFIX,xuedingtoken.com
-  - DOMAIN-SUFFIX,linuxdo.org
-  - DOMAIN-SUFFIX,linux.do
-  - DOMAIN-SUFFIX,sbyr.de5.net
-  - DOMAIN-SUFFIX,gh-proxy.org
+  - DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
+  - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,gh-proxy.com
+  - DOMAIN-SUFFIX,gh-proxy.org
+  - DOMAIN-SUFFIX,iina.io
+  - DOMAIN-SUFFIX,langbot.app
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,linuxdo.org
+  - DOMAIN-SUFFIX,obsidian.md
+  - DOMAIN-SUFFIX,oplist.org
+  - DOMAIN-SUFFIX,sbyr.de5.net
+  - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN-SUFFIX,xuedingtoken.com
 
 # === 腾讯云-香港 ===
-  - IP-CIDR,43.160.156.23/32,no-resolve
-  - IP-CIDR,43.160.156.172/32,no-resolve
-  - DOMAIN-SUFFIX,dell.com
-  - DOMAIN-SUFFIX,focusee.imobie.com
-  - DOMAIN-SUFFIX,focusee.imobie-resource.com
-  - DOMAIN-SUFFIX,cherryin.ai
-  - DOMAIN-SUFFIX,kusa.pics
-  - DOMAIN-SUFFIX,wan.video
-  - DOMAIN-SUFFIX,baostock.com
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,71.am.com
   - DOMAIN-SUFFIX,aaplimg.com
@@ -56,13 +47,16 @@ payload:
   - DOMAIN-SUFFIX,akadns.net
   - DOMAIN-SUFFIX,akamaiedge.net
   - DOMAIN-SUFFIX,algocasts.io
+  - DOMAIN-SUFFIX,app.adjust.com
   - DOMAIN-SUFFIX,baduziyuan.com
+  - DOMAIN-SUFFIX,baostock.com
   - DOMAIN-SUFFIX,battle.net
   - DOMAIN-SUFFIX,biquge.com
   - DOMAIN-SUFFIX,blizzard.com
   - DOMAIN-SUFFIX,broadcasthe.net
   - DOMAIN-SUFFIX,chaipip.com
   - DOMAIN-SUFFIX,chdbits.co
+  - DOMAIN-SUFFIX,cherryin.ai
   - DOMAIN-SUFFIX,chinaplay.store
   - DOMAIN-SUFFIX,cloudxns.net
   - DOMAIN-SUFFIX,cm.steampowered.com
@@ -74,6 +68,7 @@ payload:
   - DOMAIN-SUFFIX,crl.pki.goog
   - DOMAIN-SUFFIX,czybjz.com
   - DOMAIN-SUFFIX,dandanzan.com
+  - DOMAIN-SUFFIX,dell.com
   - DOMAIN-SUFFIX,didiglobal.com
   - DOMAIN-SUFFIX,dilidili.wang
   - DOMAIN-SUFFIX,dizhensubao.getui.com
@@ -85,6 +80,8 @@ payload:
   - DOMAIN-SUFFIX,fantasy.tv
   - DOMAIN-SUFFIX,fir.im
   - DOMAIN-SUFFIX,fjhps.com
+  - DOMAIN-SUFFIX,focusee.imobie-resource.com
+  - DOMAIN-SUFFIX,focusee.imobie.com
   - DOMAIN-SUFFIX,g-cores.com
   - DOMAIN-SUFFIX,got001.com
   - DOMAIN-SUFFIX,gtm.oasisfeng.com
@@ -93,6 +90,7 @@ payload:
   - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,hollisterco.com
   - DOMAIN-SUFFIX,images-amazon.com
+  - DOMAIN-SUFFIX,injections.adguard.org
   - DOMAIN-SUFFIX,ip.la
   - DOMAIN-SUFFIX,ipv6-test.com
   - DOMAIN-SUFFIX,ixdzs.com
@@ -100,6 +98,7 @@ payload:
   - DOMAIN-SUFFIX,koodomobile.ca
   - DOMAIN-SUFFIX,koodomobile.com
   - DOMAIN-SUFFIX,koyso.com
+  - DOMAIN-SUFFIX,kusa.pics
   - DOMAIN-SUFFIX,kuyunbo.club
   - DOMAIN-SUFFIX,lancdns.com
   - DOMAIN-SUFFIX,lemicp.com
@@ -109,17 +108,18 @@ payload:
   - DOMAIN-SUFFIX,maoyun.tv
   - DOMAIN-SUFFIX,moke.com
   - DOMAIN-SUFFIX,msftncsi.com
+  - DOMAIN-SUFFIX,msg.umengcloud.com
   - DOMAIN-SUFFIX,myunlu.com
   - DOMAIN-SUFFIX,mzstatic.com
   - DOMAIN-SUFFIX,ocsp.pki.goog
   - DOMAIN-SUFFIX,ol.epicgames.com
   - DOMAIN-SUFFIX,oracle.com
+  - DOMAIN-SUFFIX,origin-a.akamaihd.net
   - DOMAIN-SUFFIX,ourbits.club
   - DOMAIN-SUFFIX,p4pfile.com
   - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,passthepopcorn.me
   - DOMAIN-SUFFIX,paypalobjects.com
-
   - DOMAIN-SUFFIX,playstation.com
   - DOMAIN-SUFFIX,playstation.net
   - DOMAIN-SUFFIX,playstationnetwork.com
@@ -158,6 +158,7 @@ payload:
   - DOMAIN-SUFFIX,udacity.com
   - DOMAIN-SUFFIX,unrealengine.com
   - DOMAIN-SUFFIX,uxengine.net
+  - DOMAIN-SUFFIX,wan.video
   - DOMAIN-SUFFIX,weather.com
   - DOMAIN-SUFFIX,weiphone.com
   - DOMAIN-SUFFIX,xip.io
@@ -166,59 +167,53 @@ payload:
   - DOMAIN-SUFFIX,zhangzishi.cc
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN-SUFFIX,zoho.com
-  - DOMAIN-SUFFIX,app.adjust.com
-
-  - DOMAIN-SUFFIX,injections.adguard.org
-
-  - DOMAIN-SUFFIX,msg.umengcloud.com
-  - DOMAIN-SUFFIX,origin-a.akamaihd.net
-
   - IP-CIDR,1.12.12.12/32
+  - IP-CIDR,14.1.112.0/22
+  - IP-CIDR,19.28.0.0/23
+  - IP-CIDR,223.5.5.5/32,no-resolve
+  - IP-CIDR,41.222.240.0/22
+  - IP-CIDR,41.223.119.0/24
+  - IP-CIDR,42.186.0.0/16
+  - IP-CIDR,43.160.156.172/32,no-resolve
+  - IP-CIDR,43.160.156.23/32,no-resolve
   - IP-CIDR,8.128.0.0/10
   - IP-CIDR,8.208.0.0/12
   - IP-CIDR,8.209.32.0/22
   - IP-CIDR,8.209.40.0/21
   - IP-CIDR,8.209.48.0/20
   - IP-CIDR,8.210.0.0/16
-  - IP-CIDR,8.211.64.0/18
   - IP-CIDR,8.211.128.0/20
   - IP-CIDR,8.211.144.0/21
   - IP-CIDR,8.211.152.0/22
   - IP-CIDR,8.211.208.0/20
   - IP-CIDR,8.211.224.0/19
+  - IP-CIDR,8.211.64.0/18
   - IP-CIDR,8.212.0.0/14
   - IP-CIDR,8.216.0.0/13
-  - IP-CIDR,14.1.112.0/22
-  - IP-CIDR,19.28.0.0/23
-  - IP-CIDR,41.222.240.0/22
-  - IP-CIDR,41.223.119.0/24
-  - IP-CIDR,42.186.0.0/16
-
-  - IP-CIDR,223.5.5.5/32,no-resolve
 
 # === Aliyun HK ===
   - IP-CIDR,43.175.230.135/32,no-resolve
-  - IP-CIDR,43.175.230.4/32,no-resolve
   - IP-CIDR,43.175.230.20/32,no-resolve
-  
+  - IP-CIDR,43.175.230.4/32,no-resolve
+
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
+  - DOMAIN-SUFFIX,kwrt
   - DOMAIN-SUFFIX,lan
   - DOMAIN-SUFFIX,local
   - DOMAIN-SUFFIX,localhost
-  - DOMAIN-SUFFIX,kwrt
+  - IP-CIDR,0.0.0.0/8
   - IP-CIDR,10.0.0.0/8
-  - IP-CIDR,192.168.0.0/16
   - IP-CIDR,100.64.0.0/10
   - IP-CIDR,127.0.0.0/8
   - IP-CIDR,169.254.0.0/16
   - IP-CIDR,172.16.0.0/12
+  - IP-CIDR,192.168.0.0/16
   - IP-CIDR,192.88.99.0/24
   - IP-CIDR,198.18.0.0/15
   - IP-CIDR,224.0.0.0/3
-  - IP-CIDR,0.0.0.0/8
+  - IP-CIDR6,2001::/32
+  - IP-CIDR6,2002::/16
   - IP-CIDR6,::1/128
   - IP-CIDR6,fc00::/7
   - IP-CIDR6,fe80::/10
   - IP-CIDR6,ff00::/8
-  - IP-CIDR6,2001::/32
-  - IP-CIDR6,2002::/16

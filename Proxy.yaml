@@ -1,41 +1,40 @@
 payload:
 
 # === CF ===
-  - DOMAIN-SUFFIX,cloudflaremirrors.com
   - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,cloudflare.dev
-  - IP-CIDR,1.1.1.1/32,no-resolve
+  - DOMAIN-SUFFIX,cloudflaremirrors.com
   - IP-CIDR,1.0.0.1/32,no-resolve
+  - IP-CIDR,1.1.1.1/32,no-resolve
 
 # === 沉浸式翻译 ===
   - DOMAIN-SUFFIX,imtintl.com
 
 # === 宾夕法尼亚州立大学 ===
-  - DOMAIN-SUFFIX,psu.edu
   - DOMAIN-SUFFIX,ocsp.digicert.com
+  - DOMAIN-SUFFIX,psu.edu
 
 # === ##### Adgruad ===
   - DOMAIN-SUFFIX,adtidy.org
 
 # === docker ===
+  - DOMAIN-SUFFIX,0.ubuntu.pool.ntp.org
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
   - DOMAIN-SUFFIX,docker.net
-  
-  - DOMAIN-SUFFIX,0.ubuntu.pool.ntp.org
 
 # === Firefox ===
   - DOMAIN-SUFFIX,firefox.com
   - DOMAIN-SUFFIX,mozilla.com
-  - DOMAIN-SUFFIX,mozilla.org
   - DOMAIN-SUFFIX,mozilla.net
+  - DOMAIN-SUFFIX,mozilla.org
 
 # === Chrome 标签页插件 bonjourr ===
   - DOMAIN-SUFFIX,bonjourr.fr
 
 # === 云数据库 ===
-  - DOMAIN-SUFFIX,tidbcloud.com
   - DOMAIN-SUFFIX,icon.horse
+  - DOMAIN-SUFFIX,tidbcloud.com
   - DOMAIN-SUFFIX,trakt.tv
 
 # === Mac App 破解资源下载 ===
@@ -53,113 +52,111 @@ payload:
 # === # ubuntu ===
   - DOMAIN-SUFFIX,ubuntu.com
   - IP-CIDR,185.125.190.57,no-resolve
-  
+
 # === # Nodejs ===
-  - DOMAIN-SUFFIX,nodejs.org
-  - DOMAIN-SUFFIX,npmjs.com 
-  - DOMAIN-SUFFIX,npmjs.org
-  - DOMAIN-SUFFIX,nodesource.com
   - DOMAIN-SUFFIX,asusrouter.com
-  - DOMAIN-SUFFIX,opencodecn.com
+  - DOMAIN-SUFFIX,nodejs.org
+  - DOMAIN-SUFFIX,nodesource.com
+  - DOMAIN-SUFFIX,npmjs.com
+  - DOMAIN-SUFFIX,npmjs.org
   - DOMAIN-SUFFIX,npmmirror.com
+  - DOMAIN-SUFFIX,opencodecn.com
 
 # === # royal TSX ===
+  - DOMAIN-SUFFIX,adspower.net
   - DOMAIN-SUFFIX,royalapps.com
   - DOMAIN-SUFFIX,royalapps.onfastspring.com
-  - DOMAIN-SUFFIX,adspower.net
-  
+
 # === 不能直连，也就是被墙的 ===
 
 # === 机器人验证 ===
   - DOMAIN-SUFFIX,hcaptcha.com
 
 # === unsplash ===
-  - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,imgix.com
+  - DOMAIN-SUFFIX,unsplash.com
 
 # === IP综合测试 ===
-  - DOMAIN-SUFFIX,skk.moe
-  - DOMAIN-SUFFIX,ip.sb
-  - DOMAIN-SUFFIX,ippure.com
-  - DOMAIN-SUFFIX,browserscan.net
-  - DOMAIN-SUFFIX,ipapi.co
   - DOMAIN-SUFFIX,browserleaks.com
-  - DOMAIN-SUFFIX,ipify.org
-  - DOMAIN-SUFFIX,dnsleaktest.com
+  - DOMAIN-SUFFIX,browserscan.net
   - DOMAIN-SUFFIX,db-ip.com
+  - DOMAIN-SUFFIX,dnsleaktest.com
   - DOMAIN-SUFFIX,freegeoip.app
   - DOMAIN-SUFFIX,freegeoip.net
-  - DOMAIN-SUFFIX,geoplugin.com
-  - DOMAIN-SUFFIX,wiki.metacubex.one  
-  - DOMAIN-SUFFIX,geolocation.com
   - DOMAIN-SUFFIX,geocode.xyz
   - DOMAIN-SUFFIX,geoipify.whoisxmlapi.com
   - DOMAIN-SUFFIX,geoiplookup.io
+  - DOMAIN-SUFFIX,geolocation.com
+  - DOMAIN-SUFFIX,geoplugin.com
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ipapi.co
   - DOMAIN-SUFFIX,ipify.org
-  - DOMAIN-SUFFIX,iplocation.com
   - DOMAIN-SUFFIX,ipinfo.io
+  - DOMAIN-SUFFIX,iplocation.com
+  - DOMAIN-SUFFIX,ippure.com
+  - DOMAIN-SUFFIX,skk.moe
+  - DOMAIN-SUFFIX,wiki.metacubex.one
 
 # === DNS泄漏测试 ===
-  - DOMAIN-SUFFIX,iplocation.net
-  - DOMAIN-SUFFIX,ipdata.co
-  - DOMAIN-SUFFIX,ipapi.co
-  - DOMAIN-SUFFIX,ipapi.com
   - DOMAIN-SUFFIX,ip2location.com
   - DOMAIN-SUFFIX,ipaddress.com
   - DOMAIN-SUFFIX,ipaddress.io
-  - DOMAIN-SUFFIX,ipgeolocationapi.com
+  - DOMAIN-SUFFIX,ipapi.com
+  - DOMAIN-SUFFIX,ipdata.co
   - DOMAIN-SUFFIX,ipgeolocate.io
   - DOMAIN-SUFFIX,ipgeolocation.io
+  - DOMAIN-SUFFIX,ipgeolocationapi.com
+  - DOMAIN-SUFFIX,iplocation.net
   - DOMAIN-SUFFIX,ipstack.com
   - DOMAIN-SUFFIX,viewdns.info
-  - DOMAIN-SUFFIX,whatismyipaddress.com
   - DOMAIN-SUFFIX,whatismyip.com
+  - DOMAIN-SUFFIX,whatismyipaddress.com
   - DOMAIN-SUFFIX,whoer.net
   - DOMAIN-SUFFIX,xtools.wmflabs.org
 
 # === 测速 ===
   - DOMAIN-SUFFIX,fast.com
-  - DOMAIN-SUFFIX,speedtest.net
   - DOMAIN-SUFFIX,speedtest.com
+  - DOMAIN-SUFFIX,speedtest.net
   - DOMAIN-SUFFIX,speedtest.org
 
 # === Cloud Server ===
   - DOMAIN-SUFFIX,oracle.com
-  
+
 # === Cloud Hosting ===
 
 # === 免费版 ===
-  - DOMAIN-SUFFIX,wasmer.io
   - DOMAIN-SUFFIX,galaxycloud.app
   - DOMAIN-SUFFIX,huggingface.co
-  - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,vercel-storage.com
+  - DOMAIN-SUFFIX,vercel.com
+  - DOMAIN-SUFFIX,wasmer.io
 
 # === Riot Games ===
   - DOMAIN-SUFFIX,riotcdn.net
-  - DOMAIN-SUFFIX,wr.pvp.net
   - DOMAIN-SUFFIX,riotgames.com
+  - DOMAIN-SUFFIX,wr.pvp.net
 
 # === Spark ===
   - DOMAIN-SUFFIX,api.amplitude.com
   - DOMAIN-SUFFIX,app.smartmailcloud.com
   - DOMAIN-SUFFIX,gate.hockeyapp.net
-  - DOMAIN-SUFFIX,smartmailcloud.com
   - DOMAIN-SUFFIX,knock.app
-  
+  - DOMAIN-SUFFIX,smartmailcloud.com
+
 # === 机场(订阅) ===
 
 # === 一元机场 ===
   - DOMAIN-SUFFIX,xn--1-q07a56pdss.org
-  - DOMAIN-SUFFIX,xn--4gq62f52gdss.ink
   - DOMAIN-SUFFIX,xn--4gq62f.com
   - DOMAIN-SUFFIX,xn--4gq62f.org
+  - DOMAIN-SUFFIX,xn--4gq62f52gdss.ink
   - DOMAIN-SUFFIX,yiyuanjichang.com
 
 # === 自建 ===
-  - DOMAIN-SUFFIX,rapid-disk-29c72222.he-ximao.workers.dev
   - DOMAIN-SUFFIX,laower.wasmer.app
-  
+  - DOMAIN-SUFFIX,rapid-disk-29c72222.he-ximao.workers.dev
+
 # === Top blocked sites ===
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,4everProxy.com
@@ -172,8 +169,8 @@ payload:
   - DOMAIN-SUFFIX,adobe.com
   - DOMAIN-SUFFIX,adobedtm.com
   - DOMAIN-SUFFIX,aerisapi.com
-  - DOMAIN-SUFFIX,akamaihd.net
   - DOMAIN-SUFFIX,airtable.com
+  - DOMAIN-SUFFIX,akamaihd.net
   - DOMAIN-SUFFIX,alfredapp.com
   - DOMAIN-SUFFIX,allconnected.co
   - DOMAIN-SUFFIX,amazon.co
@@ -185,9 +182,9 @@ payload:
   - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-SUFFIX,anaconda.com
   - DOMAIN-SUFFIX,ancsconf.org
+  - DOMAIN-SUFFIX,android-x86.org
   - DOMAIN-SUFFIX,android.com
   - DOMAIN-SUFFIX,androidify.com
-  - DOMAIN-SUFFIX,android-x86.org
   - DOMAIN-SUFFIX,angularjs.org
   - DOMAIN-SUFFIX,anthonycalzadilla.com
   - DOMAIN-SUFFIX,aol.com
@@ -288,7 +285,6 @@ payload:
   - DOMAIN-SUFFIX,disquscdn.com
   - DOMAIN-SUFFIX,dmm.co.jp
   - DOMAIN-SUFFIX,dnsimple.com
-  - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,doub.io
   - DOMAIN-SUFFIX,dowjones.com
   - DOMAIN-SUFFIX,dribbble.com
@@ -340,7 +336,6 @@ payload:
   - DOMAIN-SUFFIX,gfx.ms
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,ghostnoteapp.com
-
   - DOMAIN-SUFFIX,git.io
   - DOMAIN-SUFFIX,gitbook.com
   - DOMAIN-SUFFIX,globalsign.com
@@ -383,8 +378,6 @@ payload:
   - DOMAIN-SUFFIX,instapaper.com
   - DOMAIN-SUFFIX,instructables.com
   - DOMAIN-SUFFIX,io.io
-  - DOMAIN-SUFFIX,ip.sb
-  - DOMAIN-SUFFIX,ipaddress.com
   - DOMAIN-SUFFIX,ipn.li
   - DOMAIN-SUFFIX,is.gd
   - DOMAIN-SUFFIX,ishowsapp.com
@@ -497,8 +490,6 @@ payload:
   - DOMAIN-SUFFIX,polymer-project.org
   - DOMAIN-SUFFIX,popo.tw
   - DOMAIN-SUFFIX,potato.im
-  - DOMAIN-SUFFIX,redd.it
-  - DOMAIN-SUFFIX,rthk.hk
   - DOMAIN-SUFFIX,prfct.co
   - DOMAIN-SUFFIX,proxfree.com
   - DOMAIN-SUFFIX,psiphon3.com
@@ -513,12 +504,13 @@ payload:
   - DOMAIN-SUFFIX,readingtimes.com.tw
   - DOMAIN-SUFFIX,readmoo.com
   - DOMAIN-SUFFIX,recaptcha.net
-
+  - DOMAIN-SUFFIX,redd.it
   - DOMAIN-SUFFIX,reuters.com
   - DOMAIN-SUFFIX,rfi.fr
   - DOMAIN-SUFFIX,rileyguide.com
   - DOMAIN-SUFFIX,rime.im
   - DOMAIN-SUFFIX,rsf.org
+  - DOMAIN-SUFFIX,rthk.hk
   - DOMAIN-SUFFIX,sciencedaily.com
   - DOMAIN-SUFFIX,sciencemag.org
   - DOMAIN-SUFFIX,scribd.com
@@ -535,9 +527,9 @@ payload:
   - DOMAIN-SUFFIX,simp.ly
   - DOMAIN-SUFFIX,simplenote.com
   - DOMAIN-SUFFIX,sketchappsources.com
-  - DOMAIN-SUFFIX,slack.com
   - DOMAIN-SUFFIX,slack-edge.com
   - DOMAIN-SUFFIX,slack-msgs.com
+  - DOMAIN-SUFFIX,slack.com
   - DOMAIN-SUFFIX,slideshare.net
   - DOMAIN-SUFFIX,smartdnsproxy.com
   - DOMAIN-SUFFIX,smh.com.au
@@ -606,7 +598,6 @@ payload:
   - DOMAIN-SUFFIX,torrentz.eu
   - DOMAIN-SUFFIX,tradingview.com
   - DOMAIN-SUFFIX,traffichaus.com
-  - DOMAIN-SUFFIX,trakt.tv
   - DOMAIN-SUFFIX,transparency.org
   - DOMAIN-SUFFIX,trello.com
   - DOMAIN-SUFFIX,trendsmap.com
@@ -640,7 +631,6 @@ payload:
   - DOMAIN-SUFFIX,unblockdmm.com
   - DOMAIN-SUFFIX,unblocksites.co
   - DOMAIN-SUFFIX,unpo.org
-  - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,untraceable.us
   - DOMAIN-SUFFIX,uploaded.net
   - DOMAIN-SUFFIX,uProxy.org
@@ -697,13 +687,13 @@ payload:
   - DOMAIN-SUFFIX,westca.com
   - DOMAIN-SUFFIX,westpoint.edu
   - DOMAIN-SUFFIX,whatbrowser.org
-  - DOMAIN-SUFFIX,wikiwand.com
+  - DOMAIN-SUFFIX,wikileaks-forum.com
   - DOMAIN-SUFFIX,wikileaks.info
   - DOMAIN-SUFFIX,wikileaks.org
-  - DOMAIN-SUFFIX,wikileaks-forum.com
   - DOMAIN-SUFFIX,wikimedia.org
   - DOMAIN-SUFFIX,wikipedia.com
   - DOMAIN-SUFFIX,wikipedia.org
+  - DOMAIN-SUFFIX,wikiwand.com
   - DOMAIN-SUFFIX,wn.com
   - DOMAIN-SUFFIX,wordpress.com
   - DOMAIN-SUFFIX,workflow.is
@@ -729,8 +719,8 @@ payload:
   - DOMAIN-SUFFIX,yastatic.net
   - DOMAIN-SUFFIX,ycombinator.com
   - DOMAIN-SUFFIX,yeeyi.com
-  - DOMAIN-SUFFIX,yesasia.com
   - DOMAIN-SUFFIX,yes-news.com
+  - DOMAIN-SUFFIX,yesasia.com
   - DOMAIN-SUFFIX,yidio.com
   - DOMAIN-SUFFIX,yimg.com
   - DOMAIN-SUFFIX,ying.com
@@ -746,20 +736,7 @@ payload:
   - DOMAIN-SUFFIX,zeutch.com
   - DOMAIN-SUFFIX,zynamics.com
 
-
 # === USER-AGENT,WhatsApp* ===
-
-  - DOMAIN-KEYWORD,appledaily
-  - DOMAIN-KEYWORD,beetalk
-  - DOMAIN-KEYWORD,blogspot
-  - DOMAIN-KEYWORD,dropbox
-  - DOMAIN-KEYWORD,facebook
-  - DOMAIN-KEYWORD,github
-  - DOMAIN-KEYWORD,instagram
-  - DOMAIN-KEYWORD,twitter
-  - DOMAIN-KEYWORD,whatsapp
-  - DOMAIN-KEYWORD,google
-  
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,abc.xyz
@@ -805,19 +782,28 @@ payload:
   - DOMAIN-SUFFIX,waveprotocol.org
   - DOMAIN-SUFFIX,webmproject.org
   - DOMAIN-SUFFIX,webrtc.org
+  - DOMAIN-KEYWORD,appledaily
+  - DOMAIN-KEYWORD,beetalk
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,dropbox
+  - DOMAIN-KEYWORD,facebook
+  - DOMAIN-KEYWORD,github
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,instagram
+  - DOMAIN-KEYWORD,twitter
+  - DOMAIN-KEYWORD,whatsapp
 
 # === V2EX ===
   - DOMAIN-SUFFIX,v2ex.com
-  
   - DOMAIN-KEYWORD,dlercloud
 
 # === VikACG ===
-  - DOMAIN-SUFFIX,vikacg.com
   - DOMAIN-SUFFIX,picjs.xyz
+  - DOMAIN-SUFFIX,vikacg.com
 
 # === exception ===
-  - DOMAIN-SUFFIX,wheel-size.cn
   - DOMAIN-SUFFIX,chalungu.cn
+  - DOMAIN-SUFFIX,wheel-size.cn
 
 # === Amazon ===
   - IP-CIDR,13.32.0.0/16,no-resolve
@@ -852,7 +838,7 @@ payload:
   - IP-CIDR,17.252.157.26/24,no-resolve
 
 # === SoftLayer ===
-  - IP-CIDR,74.86.0.0/16,no-resolve
-  - IP-CIDR,75.126.0.0/16,no-resolve
   - IP-CIDR,174.37.0.0/16,no-resolve
   - IP-CIDR,208.43.0.0/16,no-resolve
+  - IP-CIDR,74.86.0.0/16,no-resolve
+  - IP-CIDR,75.126.0.0/16,no-resolve
