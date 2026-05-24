@@ -12,6 +12,7 @@ import re
 import sys
 from pathlib import Path
 from urllib.request import urlopen
+import argparse
 
 SOURCE_URL = "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
 TARGET = Path("Reject.yaml")
@@ -24,6 +25,15 @@ def normalize_source_line(line: str) -> str | None:
     s = line.strip()
     if not s or s.startswith("#"):
         return None
+
+    # Handle YAML payload list items: - '+.example.com'
+    if s.startswith("-"):
+        s = s[1:].strip()
+    s = s.strip("'\"")
+
+    # Loyalsoldier reject format often uses +.domain entries.
+    if s.startswith("+.") and len(s) > 2:
+        return f"DOMAIN-SUFFIX,{s[2:].lower()}"
 
     # Accept existing Clash rule format from source.
     if "," in s:
@@ -58,9 +68,7 @@ def load_existing_rules(text: str) -> tuple[list[str], set[str]]:
     return lines, existing_set
 
 
-def fetch_source_rules() -> list[str]:
-    with urlopen(SOURCE_URL, timeout=30) as resp:
-        raw = resp.read().decode("utf-8", errors="replace")
+def fetch_source_rules(raw: str) -> list[str]:
 
     out: list[str] = []
     seen: set[str] = set()
@@ -73,14 +81,20 @@ def fetch_source_rules() -> list[str]:
     return out
 
 
-def merge() -> int:
+def merge(source_file: str | None = None) -> int:
     if not TARGET.exists():
         raise FileNotFoundError(f"{TARGET} not found")
 
     text = TARGET.read_text(encoding="utf-8")
     lines, existing = load_existing_rules(text)
 
-    source_rules = fetch_source_rules()
+    if source_file:
+        raw = Path(source_file).read_text(encoding="utf-8", errors="replace")
+    else:
+        with urlopen(SOURCE_URL, timeout=30) as resp:
+            raw = resp.read().decode("utf-8", errors="replace")
+
+    source_rules = fetch_source_rules(raw)
     new_rules = [r for r in source_rules if r not in existing]
 
     if not new_rules:
@@ -105,8 +119,11 @@ def merge() -> int:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source-file", help="Use local source file instead of network URL.")
+    args = parser.parse_args()
     try:
-        raise SystemExit(merge())
+        raise SystemExit(merge(source_file=args.source_file))
     except Exception as e:
         print(f"ERROR: {e}", file=sys.stderr)
         raise SystemExit(1)

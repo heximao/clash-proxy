@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779523228595,
+  "projectRoot": "/Users/saibopika/clash-proxy",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "scripts"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1779523228560,
+      "keyFiles": [
+        "find_duplicates.py",
+        "normalize_yaml_comments.py"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}
