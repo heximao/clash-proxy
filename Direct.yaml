@@ -25,7 +25,6 @@ payload:
 # === 字节跳动 Trae CN ===
   - DOMAIN-SUFFIX,adguard.org
   - DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
-  - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,gh-proxy.com
   - DOMAIN-SUFFIX,gh-proxy.org
   - DOMAIN-SUFFIX,iina.io
@@ -39,7 +38,6 @@ payload:
   - DOMAIN-SUFFIX,xuedingtoken.com
 
 # === 腾讯云-香港 ===
-  - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,71.am.com
   - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,abercrombie.com
@@ -73,7 +71,6 @@ payload:
   - DOMAIN-SUFFIX,dilidili.wang
   - DOMAIN-SUFFIX,dizhensubao.getui.com
   - DOMAIN-SUFFIX,dns.alidns.com
-  - DOMAIN-SUFFIX,edgekey.net
   - DOMAIN-SUFFIX,element-plus.org
   - DOMAIN-SUFFIX,epicgames.com
   - DOMAIN-SUFFIX,epicgames.dev
@@ -87,7 +84,6 @@ payload:
   - DOMAIN-SUFFIX,gtm.oasisfeng.com
   - DOMAIN-SUFFIX,hdchina.org
   - DOMAIN-SUFFIX,hdcmct.org
-  - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,hollisterco.com
   - DOMAIN-SUFFIX,images-amazon.com
   - DOMAIN-SUFFIX,injections.adguard.org
@@ -103,7 +99,6 @@ payload:
   - DOMAIN-SUFFIX,lancdns.com
   - DOMAIN-SUFFIX,lemicp.com
   - DOMAIN-SUFFIX,letitfly.me
-  - DOMAIN-SUFFIX,licdn.com
   - DOMAIN-SUFFIX,luoo.net
   - DOMAIN-SUFFIX,maoyun.tv
   - DOMAIN-SUFFIX,moke.com
@@ -113,7 +108,6 @@ payload:
   - DOMAIN-SUFFIX,mzstatic.com
   - DOMAIN-SUFFIX,ocsp.pki.goog
   - DOMAIN-SUFFIX,ol.epicgames.com
-  - DOMAIN-SUFFIX,oracle.com
   - DOMAIN-SUFFIX,origin-a.akamaihd.net
   - DOMAIN-SUFFIX,ourbits.club
   - DOMAIN-SUFFIX,p4pfile.com
@@ -127,11 +121,9 @@ payload:
   - DOMAIN-SUFFIX,qin.io
   - DOMAIN-SUFFIX,qupu123.com
   - DOMAIN-SUFFIX,rarbg.to
-  - DOMAIN-SUFFIX,recaptcha.net
   - DOMAIN-SUFFIX,redacted.ch
   - DOMAIN-SUFFIX,repaik.com
   - DOMAIN-SUFFIX,settings.crashlytics.com
-  - DOMAIN-SUFFIX,sfx.ms
   - DOMAIN-SUFFIX,sharepoint.com
   - DOMAIN-SUFFIX,shumilou.net
   - DOMAIN-SUFFIX,signalr.net
@@ -146,7 +138,6 @@ payload:
   - DOMAIN-SUFFIX,steamusercontent.com
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,tbcdn.com
-  - DOMAIN-SUFFIX,teamviewer.com
   - DOMAIN-SUFFIX,tebex.io
   - DOMAIN-SUFFIX,test-ipv6.com
   - DOMAIN-SUFFIX,tmiaoo.com
