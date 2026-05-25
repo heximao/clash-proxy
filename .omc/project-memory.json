@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1779523228595,
+  "lastScanned": 1779626850090,
   "projectRoot": "/Users/saibopika/clash-proxy",
   "techStack": {
     "languages": [],
@@ -37,10 +37,11 @@
     "scripts": {
       "path": "scripts",
       "purpose": "Build/utility scripts",
-      "fileCount": 2,
-      "lastAccessed": 1779523228560,
+      "fileCount": 3,
+      "lastAccessed": 1779626850029,
       "keyFiles": [
         "find_duplicates.py",
+        "merge_reject_from_loyalsoldier.py",
         "normalize_yaml_comments.py"
       ]
     }
