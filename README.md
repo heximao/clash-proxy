@@ -21,10 +21,6 @@ rule-providers:
 
 注意：每个 `.yaml` 文件应以 `payload:` 作为根键开始（见仓库中各文件）。
 
-广告拦截规则可以叠加使用，例如：
-
-https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-
 快速校验建议：
 
 - 使用 `yamllint` 或 `yamllint <file>` 进行格式检查（如已安装）。
