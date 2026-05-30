@@ -1,5 +1,8 @@
 payload:
 
+# === 机场订阅 ===
+  - DOMAIN-SUFFIX,smjcdh.top
+
 # === CF ===
   - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,cloudflare.dev

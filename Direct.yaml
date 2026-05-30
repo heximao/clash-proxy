@@ -6,6 +6,9 @@ payload:
 
 # === 3- 没有被墙的海外站点并且稳定直连放在这里，如果不稳定，改放到 Proxy 组 ===
 
+# === 阿里云 ===
+  - DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com
+
 # === 一元机场订阅更新地址 ===
   - DOMAIN-SUFFIX,sub3.smallstrawberry.com
 
