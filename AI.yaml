@@ -44,3 +44,6 @@ payload:
 
 # === Firecrawl 爬虫服务 ===
   - DOMAIN-SUFFIX,firecrawl.dev
+
+# === Skill.sh ===
+  - DOMAIN-SUFFIX,skill.sh
