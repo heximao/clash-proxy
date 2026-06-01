@@ -40,6 +40,12 @@ payload:
   - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,xuedingtoken.com
 
+# === OpenWrt NTP ===
+  - DOMAIN-SUFFIX,0.openwrt.pool.ntp.org
+
+# === STUN 服务器 ===
+  - DOMAIN-SUFFIX,stun.voip.aebc.com
+
 # === 腾讯云-香港 ===
   - DOMAIN-SUFFIX,71.am.com
   - DOMAIN-SUFFIX,aaplimg.com

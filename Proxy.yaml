@@ -3,6 +3,13 @@ payload:
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
 
+# === 漏网之鱼（2026-06-01 补录）===
+  - DOMAIN-SUFFIX,api.ttt.sh
+  - DOMAIN-SUFFIX,go.cfapi.ccwu.cc
+  - DOMAIN-SUFFIX,ttt.sh
+  - DOMAIN-SUFFIX,argotunnel.com
+  - DOMAIN-SUFFIX,px-cloud.net
+
 # === CF ===
   - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,cloudflare.dev
