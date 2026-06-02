@@ -3,12 +3,32 @@ payload:
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
 
-# === 漏网之鱼（2026-06-01 补录）===
+# === 漏网之鱼（2026-06-02 补录）===
   - DOMAIN-SUFFIX,api.ttt.sh
   - DOMAIN-SUFFIX,go.cfapi.ccwu.cc
   - DOMAIN-SUFFIX,ttt.sh
   - DOMAIN-SUFFIX,argotunnel.com
   - DOMAIN-SUFFIX,px-cloud.net
+  - DOMAIN-SUFFIX,cloudflare-dns.com
+  - DOMAIN-SUFFIX,myexternalip.com
+  - DOMAIN-SUFFIX,dcdeploy.cloud
+  - DOMAIN-SUFFIX,dcdeploy.com
+  - DOMAIN-SUFFIX,razorpay.com
+  - DOMAIN-SUFFIX,zoho.in
+  - DOMAIN-SUFFIX,zohocdn.com
+  - DOMAIN-SUFFIX,zohopublic.in
+  - DOMAIN-SUFFIX,simplesvg.com
+  - DOMAIN-SUFFIX,unisvg.com
+  - DOMAIN-SUFFIX,iconify.design
+  - DOMAIN-SUFFIX,supabase.co
+  - DOMAIN-SUFFIX,fastly-edge.com
+  - DOMAIN-SUFFIX,rapidssl.com
+  - DOMAIN-SUFFIX,exp-tas.com
+  - DOMAIN-SUFFIX,posthog.com
+  - DOMAIN-SUFFIX,istatmenus.app
+  - DOMAIN-SUFFIX,tunabellysoftware.com
+  - DOMAIN-SUFFIX,orbstack.dev
+  - DOMAIN-SUFFIX,macpaw.com
 
 # === CF ===
   - DOMAIN-SUFFIX,cloudflare.com
