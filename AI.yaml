@@ -1,13 +1,5 @@
 payload:
 
-# === OpenAI ===
-  - DOMAIN-SUFFIX,ai.com
-  
-# === Chat GPT API & CDN ===
-
-# === OpenAI entries moved to openai.yaml ===
-  - DOMAIN-SUFFIX,o33249.ingest.sentry.io
-  
 # === Anthropic ===
   - DOMAIN_SUFFIX,claude.ai
   - DOMAIN-SUFFIX,anthropic.com
