@@ -11,6 +11,7 @@ payload:
 
 # === 一元机场订阅更新地址 ===
   - DOMAIN-SUFFIX,sub3.smallstrawberry.com
+  - DOMAIN-SUFFIX,virxact.com
 
 # === TMDB ===
   - DOMAIN-SUFFIX,themoviedb.org
