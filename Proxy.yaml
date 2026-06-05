@@ -3,6 +3,18 @@ payload:
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
 
+# === 漏网之鱼（2026-06-05 补录）===
+  - DOMAIN-SUFFIX,byteplusapi.com
+  - DOMAIN-SUFFIX,bytepluscdn.com
+  - DOMAIN-SUFFIX,onesignal.com
+  - DOMAIN-SUFFIX,datadoghq.com
+  - DOMAIN-SUFFIX,nousresearch.com
+  - DOMAIN-SUFFIX,aliyuncs.com
+  - DOMAIN-SUFFIX,rtcplus.com
+  - DOMAIN-SUFFIX,gihiji.com
+  - DOMAIN-SUFFIX,cnouyi.pizza
+  - DOMAIN-SUFFIX,edu.kg
+
 # === 漏网之鱼（2026-06-02 补录）===
   - DOMAIN-SUFFIX,api.ttt.sh
   - DOMAIN-SUFFIX,go.cfapi.ccwu.cc

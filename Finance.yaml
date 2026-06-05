@@ -20,6 +20,9 @@ payload:
   
   - DOMAIN-SUFFIX,fastbull.com
   
+  - DOMAIN-SUFFIX,walletconnect.com
+  - DOMAIN-SUFFIX,walletconnect.org
+
 # === 银行 ===
 
 # === ##### ZA Group ===
@@ -69,6 +72,12 @@ payload:
   
   - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,bybit.com
+  - DOMAIN-SUFFIX,bybit.biz
+  - DOMAIN-SUFFIX,bycsi.com
+  - DOMAIN-SUFFIX,byabcde.com
+  - DOMAIN-SUFFIX,bybdc6.com
+  - DOMAIN-SUFFIX,byd3c3.com
+  - DOMAIN-SUFFIX,wsot2022.com
   - DOMAIN-SUFFIX,bitget.com
   - DOMAIN-SUFFIX,huobi.com
   - DOMAIN-SUFFIX,coinbase.com
