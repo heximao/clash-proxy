@@ -39,3 +39,6 @@ payload:
 
 # === Skill.sh ===
   - DOMAIN-SUFFIX,skill.sh
+
+# === Tavily ===
+  - DOMAIN-SUFFIX,tavily.com

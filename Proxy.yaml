@@ -3,6 +3,11 @@ payload:
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
 
+# === 漏网之鱼（2026-06-06 补录）===
+  - DOMAIN-SUFFIX,config.mapbox.com
+  - DOMAIN-SUFFIX,lbctrl.com
+  - DOMAIN-SUFFIX,dynatrace.com
+
 # === 漏网之鱼（2026-06-05 补录）===
   - DOMAIN-SUFFIX,byteplusapi.com
   - DOMAIN-SUFFIX,bytepluscdn.com

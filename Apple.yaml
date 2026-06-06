@@ -51,3 +51,9 @@ payload:
   - DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
   - DOMAIN-SUFFIX,itunes-cdn-cn.itunes-apple.com.akadns.net
   - DOMAIN-SUFFIX,store.apple.com.edgekey.net
+
+# === Apple IP 段 ===
+  - IP-CIDR,17.188.143.29/32,no-resolve
+  - IP-CIDR,17.188.170.224/32,no-resolve
+  - IP-CIDR,17.188.178.27/32,no-resolve
+  - IP-CIDR,17.188.178.164/32,no-resolve
