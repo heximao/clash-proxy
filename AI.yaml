@@ -42,3 +42,6 @@ payload:
 
 # === Tavily ===
   - DOMAIN-SUFFIX,tavily.com
+
+# === Agnes AI ===
+  - DOMAIN-SUFFIX,agnes-ai.com
