@@ -53,7 +53,28 @@ payload:
   - DOMAIN-SUFFIX,store.apple.com.edgekey.net
 
 # === Apple IP 段 ===
+  - IP-CIDR,17.188.143.28/32,no-resolve
   - IP-CIDR,17.188.143.29/32,no-resolve
+  - IP-CIDR,17.188.143.135/32,no-resolve
+  - IP-CIDR,17.188.170.4/32,no-resolve
+  - IP-CIDR,17.188.170.196/32,no-resolve
   - IP-CIDR,17.188.170.224/32,no-resolve
+  - IP-CIDR,17.188.171.27/32,no-resolve
+  - IP-CIDR,17.188.171.29/32,no-resolve
+  - IP-CIDR,17.188.171.91/32,no-resolve
+  - IP-CIDR,17.188.172.68/32,no-resolve
+  - IP-CIDR,17.188.178.26/32,no-resolve
   - IP-CIDR,17.188.178.27/32,no-resolve
+  - IP-CIDR,17.188.178.56/32,no-resolve
+  - IP-CIDR,17.188.178.57/32,no-resolve
   - IP-CIDR,17.188.178.164/32,no-resolve
+  - IP-CIDR,17.188.179.56/32,no-resolve
+  - IP-CIDR,17.188.179.59/32,no-resolve
+  - IP-CIDR,17.188.180.136/32,no-resolve
+  - IP-CIDR,17.188.182.14/32,no-resolve
+  - IP-CIDR,17.188.182.72/32,no-resolve
+  - IP-CIDR,17.188.182.77/32,no-resolve
+  - IP-CIDR,17.188.182.78/32,no-resolve
+  - IP-CIDR,17.188.182.205/32,no-resolve
+  - IP-CIDR,17.188.182.206/32,no-resolve
+  - IP-CIDR,17.188.183.13/32,no-resolve

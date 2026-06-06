@@ -7,6 +7,13 @@ payload:
   - DOMAIN-SUFFIX,config.mapbox.com
   - DOMAIN-SUFFIX,lbctrl.com
   - DOMAIN-SUFFIX,dynatrace.com
+  - DOMAIN,browser-intake-us5-datadoghq.com
+  - DOMAIN-SUFFIX,influxdata.com
+  - DOMAIN-SUFFIX,formulae.brew.sh
+  - DOMAIN-SUFFIX,revenuecat.com
+  - DOMAIN-SUFFIX,da7d.org
+  - DOMAIN-SUFFIX,hbbz.top
+  - DOMAIN-SUFFIX,voipstunt.com
 
 # === 漏网之鱼（2026-06-05 补录）===
   - DOMAIN-SUFFIX,byteplusapi.com
@@ -66,7 +73,7 @@ payload:
   - DOMAIN-SUFFIX,adtidy.org
 
 # === docker ===
-  - DOMAIN-SUFFIX,0.ubuntu.pool.ntp.org
+  - DOMAIN-SUFFIX,ubuntu.pool.ntp.org
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
   - DOMAIN-SUFFIX,docker.net

@@ -33,6 +33,7 @@ payload:
   - DOMAIN-SUFFIX,aihubmix.com
 
   - DOMAIN-SUFFIX,hf.space
+  - DOMAIN-SUFFIX,hf.co
 
 # === Firecrawl 爬虫服务 ===
   - DOMAIN-SUFFIX,firecrawl.dev

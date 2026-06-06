@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1779626850090,
+  "lastScanned": 1780663813022,
   "projectRoot": "/Users/saibopika/clash-proxy",
   "techStack": {
     "languages": [],
@@ -34,11 +34,24 @@
   },
   "customNotes": [],
   "directoryMap": {
+    "log": {
+      "path": "log",
+      "purpose": null,
+      "fileCount": 8,
+      "lastAccessed": 1780663812975,
+      "keyFiles": [
+        "2026-05-30 09-36-49.log",
+        "OpenClash-2026-6-1-8-34-46.log",
+        "OpenClash-2026-6-2-8-14-45.log",
+        "OpenClash-2026-6-5-8-32-29.log",
+        "兴业银行_FX_USDCNY_2025-08-22_2700_Buy.md"
+      ]
+    },
     "scripts": {
       "path": "scripts",
       "purpose": "Build/utility scripts",
-      "fileCount": 3,
-      "lastAccessed": 1779626850029,
+      "fileCount": 4,
+      "lastAccessed": 1780663812978,
       "keyFiles": [
         "find_duplicates.py",
         "merge_reject_from_loyalsoldier.py",
@@ -46,6 +59,49 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "Apple.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1780709081302,
+      "type": "file"
+    },
+    {
+      "path": "Proxy.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1780709064483,
+      "type": "file"
+    },
+    {
+      "path": "ClaudeAI.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1780709147842,
+      "type": "file"
+    },
+    {
+      "path": "AI.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1780714987245,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 2,
+      "lastAccessed": 1780665251676,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE-CN.md",
+      "accessCount": 2,
+      "lastAccessed": 1780665266323,
+      "type": "file"
+    },
+    {
+      "path": "log/OpenClash-2026-6-6-9-18-3.log",
+      "accessCount": 1,
+      "lastAccessed": 1780708764037,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }
