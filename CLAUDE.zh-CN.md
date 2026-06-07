@@ -46,9 +46,39 @@ python3 scripts/normalize_yaml_comments.py
 - **Reject.yaml**（约 6.7 MB）由 GitHub Actions 每日从 Loyalsoldier 上游自动生成 — 请勿手动编辑其中来自上游的 `DOMAIN-SUFFIX` 条目。
 - **log/**：OpenClash 运行日志（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组。需定期将这些域名归类到对应的规则文件中。
 
+## 规则文件一览
+
+| 文件 | 说明 |
+|------|------|
+| **Proxy.yaml** | 兜底代理 — 需代理的杂项域名 |
+| **Direct.yaml** | 兜底直连 — 国内及可直连的海外域名 |
+| **Reject.yaml** | 广告/追踪/恶意软件拦截 — 由 Loyalsoldier 上游自动生成，勿手动编辑 |
+| **Google.yaml** | Google 服务 |
+| **Youtube.yaml** | YouTube |
+| **Telegram.yaml** | Telegram |
+| **Meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
+| **X.yaml** | Twitter / X |
+| **LINE.yaml** | LINE 即时通讯 |
+| **Spotify.yaml** | Spotify |
+| **Streaming.yaml** | 流媒体服务（Netflix、Disney+、HBO 等） |
+| **Social.yaml** | 社交平台（Reddit、Discord、Pinterest 等） |
+| **Pornhub.yaml** | Pornhub |
+| **AI.yaml** | AI 服务（ChatGPT 替代品、Perplexity 等） |
+| **OpenAI.yaml** | OpenAI（ChatGPT、API 等） |
+| **ClaudeAI.yaml** | Claude / Anthropic |
+| **Github.yaml** | GitHub 及相关开发者工具 |
+| **Apple.yaml** | Apple 服务（App Store、iCloud 等） |
+| **Microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
+| **NVIDIA.yaml** | NVIDIA 服务 |
+| **Crypto.yaml** | 加密货币交易所与钱包 |
+| **Finance.yaml** | 金融服务 |
+| **Fin-Media.yaml** | 财经媒体与数据 |
+| **FinaMedia.yaml** | FinaMedia（与 Fin-Media 重复/遗留 — 建议合并） |
+| **DNS.yaml** | DNS 服务器 |
+
 ## 同步规则
 
-当 `CLAUDE.md` 更新时，`CLAUDE.zh-CN.md` 也必须同步更新。
+当 `CLAUDE.md` 更新时，`CLAUDE.zh-CN.md` 也必须同步更新。更新之后并检查两份文档全文内容是否一致，如不一致，询问用户改如何修改。
 
 ## Git 工作流
 

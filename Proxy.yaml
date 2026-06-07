@@ -3,6 +3,17 @@ payload:
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
 
+# === Steam ===
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+
+# === PlayStation ===
+  - DOMAIN-SUFFIX,playstation.net
+
+# === Linux 社区 ===
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,linuxdo.org
+
 # === 漏网之鱼（2026-06-07 补录）===
   - DOMAIN-SUFFIX,oaistatsig.com
   - DOMAIN-SUFFIX,pypi.org
@@ -261,7 +272,6 @@ payload:
   - DOMAIN-SUFFIX,apk-dl.com
   - DOMAIN-SUFFIX,apkpure.com
   - DOMAIN-SUFFIX,appdownloader.net
-  - DOMAIN-SUFFIX,apple-dns.net
   - DOMAIN-SUFFIX,appshopper.com
   - DOMAIN-SUFFIX,arcgis.com
   - DOMAIN-SUFFIX,archive.is
@@ -273,23 +283,17 @@ payload:
   - DOMAIN-SUFFIX,att.com
   - DOMAIN-SUFFIX,avgle.com
   - DOMAIN-SUFFIX,awsstatic.com
-  - DOMAIN-SUFFIX,azure.com
-  - DOMAIN-SUFFIX,azureedge.net
-  - DOMAIN-SUFFIX,azurewebsites.net
   - DOMAIN-SUFFIX,badoo.com
   - DOMAIN-SUFFIX,bandisoft.com
   - DOMAIN-SUFFIX,bbtoystore.com
   - DOMAIN-SUFFIX,bet365.com
   - DOMAIN-SUFFIX,betvictor.com
   - DOMAIN-SUFFIX,bigsound.org
-  - DOMAIN-SUFFIX,bing.com
-  - DOMAIN-SUFFIX,bing.net
   - DOMAIN-SUFFIX,bintray.com
   - DOMAIN-SUFFIX,bit.com
   - DOMAIN-SUFFIX,bit.do
   - DOMAIN-SUFFIX,bit.ly
   - DOMAIN-SUFFIX,bitbucket.org
-  - DOMAIN-SUFFIX,bitcointalk.org
   - DOMAIN-SUFFIX,bitshare.com
   - DOMAIN-SUFFIX,bkrtx.com
   - DOMAIN-SUFFIX,blog.com
@@ -434,7 +438,6 @@ payload:
   - DOMAIN-SUFFIX,img.ly
   - DOMAIN-SUFFIX,imgur.com
   - DOMAIN-SUFFIX,imore.com
-  - DOMAIN-SUFFIX,imtoken.fans
   - DOMAIN-SUFFIX,ingress.com
   - DOMAIN-SUFFIX,inoreader.com
   - DOMAIN-SUFFIX,insder.co
@@ -519,10 +522,7 @@ payload:
   - DOMAIN-SUFFIX,nytimes.com
   - DOMAIN-SUFFIX,nytimg.com
   - DOMAIN-SUFFIX,nytstyle.com
-  - DOMAIN-SUFFIX,office365.com
-  - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,omnigroup.com
-  - DOMAIN-SUFFIX,onenote.com
   - DOMAIN-SUFFIX,ooyala.com
   - DOMAIN-SUFFIX,openvpn.net
   - DOMAIN-SUFFIX,openwrt.org

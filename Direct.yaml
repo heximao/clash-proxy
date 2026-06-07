@@ -33,8 +33,6 @@ payload:
   - DOMAIN-SUFFIX,gh-proxy.org
   - DOMAIN-SUFFIX,iina.io
   - DOMAIN-SUFFIX,langbot.app
-  - DOMAIN-SUFFIX,linux.do
-  - DOMAIN-SUFFIX,linuxdo.org
   - DOMAIN-SUFFIX,obsidian.md
   - DOMAIN-SUFFIX,oplist.org
   - DOMAIN-SUFFIX,sbyr.de5.net
@@ -49,7 +47,6 @@ payload:
 
 # === 腾讯云-香港 ===
   - DOMAIN-SUFFIX,71.am.com
-  - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,abercrombie.com
   - DOMAIN-SUFFIX,acfun.tv
   - DOMAIN-SUFFIX,akadns.net
@@ -112,10 +109,8 @@ payload:
   - DOMAIN-SUFFIX,luoo.net
   - DOMAIN-SUFFIX,maoyun.tv
   - DOMAIN-SUFFIX,moke.com
-  - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN-SUFFIX,msg.umengcloud.com
   - DOMAIN-SUFFIX,myunlu.com
-  - DOMAIN-SUFFIX,mzstatic.com
   - DOMAIN-SUFFIX,ocsp.pki.goog
   - DOMAIN-SUFFIX,ol.epicgames.com
   - DOMAIN-SUFFIX,origin-a.akamaihd.net
@@ -125,7 +120,6 @@ payload:
   - DOMAIN-SUFFIX,passthepopcorn.me
   - DOMAIN-SUFFIX,paypalobjects.com
   - DOMAIN-SUFFIX,playstation.com
-  - DOMAIN-SUFFIX,playstation.net
   - DOMAIN-SUFFIX,playstationnetwork.com
   - DOMAIN-SUFFIX,privatehd.to
   - DOMAIN-SUFFIX,qin.io
@@ -134,7 +128,6 @@ payload:
   - DOMAIN-SUFFIX,redacted.ch
   - DOMAIN-SUFFIX,repaik.com
   - DOMAIN-SUFFIX,settings.crashlytics.com
-  - DOMAIN-SUFFIX,sharepoint.com
   - DOMAIN-SUFFIX,shumilou.net
   - DOMAIN-SUFFIX,signalr.net
   - DOMAIN-SUFFIX,simplecd.me
@@ -144,8 +137,6 @@ payload:
   - DOMAIN-SUFFIX,sohuno.com
   - DOMAIN-SUFFIX,sony.com
   - DOMAIN-SUFFIX,startssl.com
-  - DOMAIN-SUFFIX,steamcontent.com
-  - DOMAIN-SUFFIX,steamusercontent.com
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,tbcdn.com
   - DOMAIN-SUFFIX,tebex.io
@@ -153,7 +144,6 @@ payload:
   - DOMAIN-SUFFIX,tmiaoo.com
   - DOMAIN-SUFFIX,totheglory.im
   - DOMAIN-SUFFIX,tp.m-team.cc
-  - DOMAIN-SUFFIX,trafficmanager.net
   - DOMAIN-SUFFIX,trip.com
   - DOMAIN-SUFFIX,ttmeiju.com
   - DOMAIN-SUFFIX,udacity.com
