@@ -77,4 +77,35 @@ payload:
   - IP-CIDR,17.188.182.78/32,no-resolve
   - IP-CIDR,17.188.182.205/32,no-resolve
   - IP-CIDR,17.188.182.206/32,no-resolve
-  - IP-CIDR,17.188.183.13/32,no-resolve
+  - IP-CIDR,17.188.143.59/32,no-resolve
+  - IP-CIDR,17.188.143.198/32,no-resolve
+  - IP-CIDR,17.188.143.252/32,no-resolve
+  - IP-CIDR,17.188.168.158/32,no-resolve
+  - IP-CIDR,17.188.169.196/32,no-resolve
+  - IP-CIDR,17.188.170.132/32,no-resolve
+  - IP-CIDR,17.188.171.4/32,no-resolve
+  - IP-CIDR,17.188.171.28/32,no-resolve
+  - IP-CIDR,17.188.171.31/32,no-resolve
+  - IP-CIDR,17.188.171.92/32,no-resolve
+  - IP-CIDR,17.188.171.94/32,no-resolve
+  - IP-CIDR,17.188.171.96/32,no-resolve
+  - IP-CIDR,17.188.171.155/32,no-resolve
+  - IP-CIDR,17.188.171.157/32,no-resolve
+  - IP-CIDR,17.188.178.24/32,no-resolve
+  - IP-CIDR,17.188.178.25/32,no-resolve
+  - IP-CIDR,17.188.178.37/32,no-resolve
+  - IP-CIDR,17.188.178.132/32,no-resolve
+  - IP-CIDR,17.188.179.5/32,no-resolve
+  - IP-CIDR,17.188.179.26/32,no-resolve
+  - IP-CIDR,17.188.179.27/32,no-resolve
+  - IP-CIDR,17.188.179.58/32,no-resolve
+  - IP-CIDR,17.188.181.7/32,no-resolve
+  - IP-CIDR,17.188.181.135/32,no-resolve
+  - IP-CIDR,17.188.181.199/32,no-resolve
+  - IP-CIDR,17.188.182.8/32,no-resolve
+  - IP-CIDR,17.188.182.142/32,no-resolve
+  - IP-CIDR,17.188.182.143/32,no-resolve
+  - IP-CIDR,17.188.183.15/32,no-resolve
+  - IP-CIDR,17.188.183.76/32,no-resolve
+  - IP-CIDR,17.188.183.78/32,no-resolve
+  - IP-CIDR,17.188.183.79/32,no-resolve

@@ -197,6 +197,11 @@ payload:
   - IP-CIDR,43.175.230.20/32,no-resolve
   - IP-CIDR,43.175.230.4/32,no-resolve
 
+# === 漏网之鱼-直连 ===
+  - DOMAIN-SUFFIX,model.uprime.cc.cd
+  - DOMAIN-SUFFIX,wechat.zoro.build
+  - DOMAIN-SUFFIX,werss.csol.store
+
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,kwrt
   - DOMAIN-SUFFIX,lan
