@@ -1,9 +1,7 @@
 payload:
 
-# === Anthropic ===
-  - DOMAIN_SUFFIX,claude.ai
-  - DOMAIN-SUFFIX,anthropic.com
-  
+# IP风控不严格的AI平台统一使用
+  - DOMAIN-SUFFIX,ai.com
 # === OpenCode Zen ===
   - DOMAIN-SUFFIX,opencode.ai
   - DOMAIN-SUFFIX,mcp.context7.com
