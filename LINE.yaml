@@ -20,6 +20,3 @@ payload:
   - IP-CIDR,203.104.128.0/20,no-resolve
   - IP-CIDR,203.174.66.64/26,no-resolve
   - IP-CIDR,203.174.77.0/24,no-resolve
-# === 单独为 DNS 分组，是为了给 DNS 服务器分配代理节点 ===
-  - DOMAIN-SUFFIX,dns.cloudflare.com
-  - DOMAIN-SUFFIX,dns.google
