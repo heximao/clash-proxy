@@ -61,21 +61,33 @@
   },
   "hotPaths": [
     {
+      "path": "Proxy.yaml",
+      "accessCount": 16,
+      "lastAccessed": 1780839557360,
+      "type": "file"
+    },
+    {
+      "path": "Direct.yaml",
+      "accessCount": 11,
+      "lastAccessed": 1780839395970,
+      "type": "file"
+    },
+    {
       "path": "CLAUDE.md",
-      "accessCount": 6,
-      "lastAccessed": 1780837033083,
+      "accessCount": 8,
+      "lastAccessed": 1780838772840,
       "type": "file"
     },
     {
       "path": "Apple.yaml",
-      "accessCount": 6,
-      "lastAccessed": 1780837506293,
+      "accessCount": 8,
+      "lastAccessed": 1780839356363,
       "type": "file"
     },
     {
-      "path": "Proxy.yaml",
+      "path": "CLAUDE.zh-CN.md",
       "accessCount": 5,
-      "lastAccessed": 1780837499529,
+      "lastAccessed": 1780838791956,
       "type": "file"
     },
     {
@@ -91,9 +103,9 @@
       "type": "file"
     },
     {
-      "path": "CLAUDE.zh-CN.md",
+      "path": "Microsoft.yaml",
       "accessCount": 3,
-      "lastAccessed": 1780837019581,
+      "lastAccessed": 1780839419919,
       "type": "file"
     },
     {
@@ -103,9 +115,9 @@
       "type": "file"
     },
     {
-      "path": "Direct.yaml",
+      "path": "Web3.yaml",
       "accessCount": 2,
-      "lastAccessed": 1780837200780,
+      "lastAccessed": 1780838703532,
       "type": "file"
     },
     {
