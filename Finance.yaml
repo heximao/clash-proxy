@@ -57,11 +57,6 @@ payload:
   - DOMAIN-SUFFIX,fusionbank.com.hk
   - DOMAIN-SUFFIX,airstarbank.com
   - DOMAIN-SUFFIX,airstarbank.com.hk
-  
-# === 财经资讯 ===
-  - DOMAIN-SUFFIX,seekingalpha.com
-  - DOMAIN-SUFFIX,investing.com
-
 # === Web3 ===
   - DOMAIN-SUFFIX,bit.com
   - DOMAIN-SUFFIX,bitexch.io
