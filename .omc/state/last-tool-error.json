@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"git add CLAUDE.md CLAUDE.zh-CN.md Crypto.yaml Direct.yaml Microsoft.yaml Proxy.yaml Spotify.yaml\",\"description\":\"Stage rule file changes\"}",
-  "error": "Exit code 1\nThe following paths are ignored by one of your .gitignore files:\nCLAUDE.md\nhint: Use -f if you really want to add them.\nhint: Turn this message off by running\nhint: \"git config advice.addIgnoredFile false\"",
-  "timestamp": "2026-06-07T13:40:40.331Z",
-  "retry_count": 1
+  "tool_input_preview": "{\"command\":\"git pull --rebase origin main\",\"description\":\"Pull and rebase the latest changes from the remote repository\"}",
+  "error": "Exit code 128\nerror: cannot pull with rebase: You have unstaged changes.\nerror: please commit or stash them.",
+  "timestamp": "2026-06-10T02:24:03.473Z",
+  "retry_count": 2
 }

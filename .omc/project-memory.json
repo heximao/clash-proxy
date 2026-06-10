@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1780836028881,
+  "lastScanned": 1781057869875,
   "projectRoot": "/Users/saibopika/clash-proxy",
   "techStack": {
     "languages": [],
@@ -37,13 +37,13 @@
     "log": {
       "path": "log",
       "purpose": null,
-      "fileCount": 14,
-      "lastAccessed": 1780836028761,
+      "fileCount": 9,
+      "lastAccessed": 1781057869838,
       "keyFiles": [
         "2026-05-30 09-36-49.log",
         "2026-06-06 13-08-03.log",
         "2026-06-07 20-36-16.log",
-        "DUPLICATES.md",
+        "2026-06-09 00-41-01.log",
         "OpenClash-2026-6-1-8-34-46.log"
       ]
     },
@@ -51,7 +51,7 @@
       "path": "scripts",
       "purpose": "Build/utility scripts",
       "fileCount": 4,
-      "lastAccessed": 1780836028766,
+      "lastAccessed": 1781057869839,
       "keyFiles": [
         "find_duplicates.py",
         "merge_reject_from_loyalsoldier.py",
@@ -62,14 +62,14 @@
   "hotPaths": [
     {
       "path": "Proxy.yaml",
-      "accessCount": 16,
-      "lastAccessed": 1780839557360,
+      "accessCount": 18,
+      "lastAccessed": 1781057966445,
       "type": "file"
     },
     {
       "path": "Direct.yaml",
-      "accessCount": 11,
-      "lastAccessed": 1780839395970,
+      "accessCount": 12,
+      "lastAccessed": 1781057978395,
       "type": "file"
     },
     {
@@ -124,6 +124,18 @@
       "path": "log/OpenClash-2026-6-6-9-18-3.log",
       "accessCount": 1,
       "lastAccessed": 1780708764037,
+      "type": "file"
+    },
+    {
+      "path": "Telegram.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1780937389724,
+      "type": "file"
+    },
+    {
+      "path": "Streaming.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1781057957698,
       "type": "file"
     }
   ],
