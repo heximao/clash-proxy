@@ -1,4 +1,5 @@
 payload:
+  #google youtube
   - DOMAIN-SUFFIX,googlevideo.com
   - DOMAIN-SUFFIX,youtubei.googleapis.com
   - DOMAIN-SUFFIX,youtube.com
