@@ -7,8 +7,8 @@ payload:
   - DOMAIN-SUFFIX,instagram.com
   - DOMAIN-SUFFIX,whatsapp.com
   - DOMAIN-SUFFIX,messenger.com
-  - DOMAIN-SUFFIX,Threads.com
-  - DOMAIN-SUFFIX,Threads.net
+  - DOMAIN-SUFFIX,threads.com
+  - DOMAIN-SUFFIX,threads.net
   - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,metamail.com
   - IP-CIDR,103.4.96.0/22,no-resolve

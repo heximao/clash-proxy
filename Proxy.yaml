@@ -189,7 +189,6 @@ payload:
   - DOMAIN-SUFFIX,xtools.wmflabs.org
 
 # === 测速 ===
-  - DOMAIN-SUFFIX,fast.com
   - DOMAIN-SUFFIX,speedtest.com
   - DOMAIN-SUFFIX,speedtest.net
   - DOMAIN-SUFFIX,speedtest.org
@@ -401,7 +400,6 @@ payload:
   - DOMAIN-SUFFIX,getpricetag.com
   - DOMAIN-SUFFIX,gfw.press
   - DOMAIN-SUFFIX,gfx.ms
-  - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,ghostnoteapp.com
   - DOMAIN-SUFFIX,git.io
   - DOMAIN-SUFFIX,gitbook.com
@@ -418,10 +416,8 @@ payload:
   - DOMAIN-SUFFIX,goodreads.com
   - DOMAIN-SUFFIX,gravatar.com
   - DOMAIN-SUFFIX,gstatic.cn
-  - DOMAIN-SUFFIX,gstatic.com
   - DOMAIN-SUFFIX,gunsamerica.com
   - DOMAIN-SUFFIX,gvt0.com
-  - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,helpshift.com
   - DOMAIN-SUFFIX,hitun.io
   - DOMAIN-SUFFIX,hockeyapp.net
@@ -566,8 +562,6 @@ payload:
   - DOMAIN-SUFFIX,quoracdn.net
   - DOMAIN-SUFFIX,readingtimes.com.tw
   - DOMAIN-SUFFIX,readmoo.com
-  - DOMAIN-SUFFIX,recaptcha.net
-  - DOMAIN-SUFFIX,redd.it
   - DOMAIN-SUFFIX,reuters.com
   - DOMAIN-SUFFIX,rfi.fr
   - DOMAIN-SUFFIX,rileyguide.com
@@ -659,7 +653,6 @@ payload:
   - DOMAIN-SUFFIX,torrentprivacy.com
   - DOMAIN-SUFFIX,torrentproject.se
   - DOMAIN-SUFFIX,torrentz.eu
-  - DOMAIN-SUFFIX,tradingview.com
   - DOMAIN-SUFFIX,traffichaus.com
   - DOMAIN-SUFFIX,transparency.org
   - DOMAIN-SUFFIX,trello.com
@@ -775,7 +768,6 @@ payload:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-SUFFIX,xteko.com
   - DOMAIN-SUFFIX,xuite.net
-  - DOMAIN-SUFFIX,xvideos.com
   - DOMAIN-SUFFIX,yahoo.com
   - DOMAIN-SUFFIX,yahooapis.com
   - DOMAIN-SUFFIX,yasni.co.uk
@@ -801,7 +793,6 @@ payload:
 
 # === USER-AGENT,WhatsApp* ===
   - DOMAIN-SUFFIX,1e100.net
-  - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,abc.xyz
   - DOMAIN-SUFFIX,akamai.net
   - DOMAIN-SUFFIX,appspot.com
@@ -813,12 +804,10 @@ payload:
   - DOMAIN-SUFFIX,crittercism.com
   - DOMAIN-SUFFIX,culturalspot.org
   - DOMAIN-SUFFIX,dartlang.org
-  - DOMAIN-SUFFIX,fb.com
   - DOMAIN-SUFFIX,fb.me
   - DOMAIN-SUFFIX,fbcdn.net
   - DOMAIN-SUFFIX,fbsbx.com
   - DOMAIN-SUFFIX,gcr.io
-  - DOMAIN-SUFFIX,gmail.com
   - DOMAIN-SUFFIX,gosetsuden.jp
   - DOMAIN-SUFFIX,gwtproject.org
   - DOMAIN-SUFFIX,hackmd.io
@@ -829,17 +818,14 @@ payload:
   - DOMAIN-SUFFIX,kobobooks.com
   - DOMAIN-SUFFIX,madewithcode.com
   - DOMAIN-SUFFIX,material.io
-  - DOMAIN-SUFFIX,messenger.com
   - DOMAIN-SUFFIX,netmarble.com
   - DOMAIN-SUFFIX,nianticlabs.com
   - DOMAIN-SUFFIX,pinimg.com
   - DOMAIN-SUFFIX,pubnub.com
-  - DOMAIN-SUFFIX,scdn.co
   - DOMAIN-SUFFIX,t.co
   - DOMAIN-SUFFIX,tensorflow.org
   - DOMAIN-SUFFIX,toggleable.com
   - DOMAIN-SUFFIX,torproject.org
-  - DOMAIN-SUFFIX,twimg.com
   - DOMAIN-SUFFIX,twitpic.com
   - DOMAIN-SUFFIX,unfiltered.news
   - DOMAIN-SUFFIX,waveprotocol.org
@@ -849,12 +835,6 @@ payload:
   - DOMAIN-KEYWORD,beetalk
   - DOMAIN-KEYWORD,blogspot
   - DOMAIN-KEYWORD,dropbox
-  - DOMAIN-KEYWORD,facebook
-  - DOMAIN-KEYWORD,github
-  - DOMAIN-KEYWORD,google
-  - DOMAIN-KEYWORD,instagram
-  - DOMAIN-KEYWORD,twitter
-  - DOMAIN-KEYWORD,whatsapp
 
 # === V2EX ===
   - DOMAIN-SUFFIX,v2ex.com

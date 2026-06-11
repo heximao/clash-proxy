@@ -8,7 +8,6 @@ payload:
   
   - DOMAIN-SUFFIX,firstrade.com
   - DOMAIN-SUFFIX,firstrade.net
-  - DOMAIN-SUFFIX,tradingview.com
   
   - DOMAIN-SUFFIX,interactivebrokers.com.hk
   - DOMAIN-SUFFIX,interactivebrokers.com.cn
@@ -20,9 +19,6 @@ payload:
   
   - DOMAIN-SUFFIX,fastbull.com
   
-  - DOMAIN-SUFFIX,walletconnect.com
-  - DOMAIN-SUFFIX,walletconnect.org
-
 # === 银行 ===
 
 # === ##### ZA Group ===
@@ -57,23 +53,3 @@ payload:
   - DOMAIN-SUFFIX,fusionbank.com.hk
   - DOMAIN-SUFFIX,airstarbank.com
   - DOMAIN-SUFFIX,airstarbank.com.hk
-# === Web3 ===
-  - DOMAIN-SUFFIX,bit.com
-  - DOMAIN-SUFFIX,bitexch.io
-  - DOMAIN-SUFFIX,polymarket.com
-
-# === ####### 币安 ===
-  - DOMAIN-SUFFIX,binance.com
-  
-  - DOMAIN-SUFFIX,okx.com
-  - DOMAIN-SUFFIX,bybit.com
-  - DOMAIN-SUFFIX,bybit.biz
-  - DOMAIN-SUFFIX,bycsi.com
-  - DOMAIN-SUFFIX,byabcde.com
-  - DOMAIN-SUFFIX,bybdc6.com
-  - DOMAIN-SUFFIX,byd3c3.com
-  - DOMAIN-SUFFIX,wsot2022.com
-  - DOMAIN-SUFFIX,bitget.com
-  - DOMAIN-SUFFIX,huobi.com
-  - DOMAIN-SUFFIX,coinbase.com
-  - DOMAIN-SUFFIX,tether.to

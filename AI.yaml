@@ -13,7 +13,6 @@ payload:
 
 # === Perplexity AI ===
   - DOMAIN-SUFFIX,perplexity.ai
-  - DOMAIN-SUFFIX,ai.com
   
 # === OpenClaw ===
   - DOMAIN-SUFFIX,openclaw.ai
@@ -27,7 +26,6 @@ payload:
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,poecdn.net
   
-  - DOMAIN-SUFFIX,nvidia.com
   - DOMAIN-SUFFIX,aihubmix.com
 
   - DOMAIN-SUFFIX,hf.space
