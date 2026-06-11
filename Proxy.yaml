@@ -2,7 +2,7 @@ payload:
 
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
-
+  - DOMAIN-SUFFIX,dns.cloudflare.com
 # === Steam ===
   - DOMAIN-SUFFIX,steamcontent.com
   - DOMAIN-SUFFIX,steamusercontent.com
