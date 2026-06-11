@@ -90,6 +90,10 @@ python3 scripts/normalize_yaml_comments.py
 
 确保本地分支与远程同步后再推送，禁止跳过检查直接 push。
 
+## 提交规范
+
+- 提交信息（commit message）尽量使用中文。
+
 ## CI/CD
 
 单一 GitHub Actions 工作流（`auto-merge-reject.yml`）每日 00:20 UTC 运行，调用 `scripts/merge_reject_from_loyalsoldier.py` 并自动提交 `Reject.yaml` 的变更。
