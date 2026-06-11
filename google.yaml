@@ -1,13 +1,12 @@
 payload:
-  #
   # Google 规则分组目录：
   #   1. Google 核心域名
   #   2. Google 核心 IP
   #   3. Gmail 邮箱服务
   #   4. Antigravity（重力实验/AI 相关）
   #   5. 统计/广告/分析/API
-# === 6. 其它 Google 相关域名 ===
-# === 7. Google with Fastly CDN ===
+  # === 6. 其它 Google 相关域名 ===
+  # === 7. Google with Fastly CDN ===
 
 # === Google 核心域名 ===
   - DOMAIN-SUFFIX,goog
