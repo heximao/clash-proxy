@@ -1,4 +1,4 @@
 payload:
-# === 单独为 DNS 分组，是为了给 DNS 服务器分配代理节点 ===
+# === 单独为 DNS 分组，给 DNS 服务器分配代理节点 ===
   - DOMAIN-SUFFIX,dns.cloudflare.com
   - DOMAIN-SUFFIX,dns.google

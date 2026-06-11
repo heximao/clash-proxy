@@ -3,7 +3,6 @@ payload:
 # === 道琼斯 ===
   - DOMAIN-SUFFIX,dowjones.ai
   - DOMAIN-SUFFIX,dowjones.io
-
 # === 财经媒体 ===
   - DOMAIN-SUFFIX,mansionglobal.com
   - DOMAIN-SUFFIX,mktw.net

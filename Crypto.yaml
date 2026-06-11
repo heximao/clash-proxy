@@ -11,8 +11,6 @@ payload:
   - DOMAIN-SUFFIX,tether.to
   - DOMAIN-SUFFIX,bitcointalk.org
   - DOMAIN-SUFFIX,imtoken.fans
-
-# === Bybit 补充 ===
   - DOMAIN-SUFFIX,bybit.biz
   - DOMAIN-SUFFIX,bycsi.com
   - DOMAIN-SUFFIX,byabcde.com

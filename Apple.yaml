@@ -15,7 +15,6 @@ payload:
 
 # === Mail 邮件 ===
   - DOMAIN-SUFFIX,me.com
-
 # === iCloud ===
   - DOMAIN-SUFFIX,icloud.com
   - DOMAIN-SUFFIX,api.apple-cloudkit.com
@@ -24,7 +23,6 @@ payload:
   - DOMAIN-SUFFIX,icloud-content.com
   - DOMAIN-SUFFIX,icloud.net
   - DOMAIN-SUFFIX,icloud-sandbox.com
-
 # === Map ===
   - DOMAIN-SUFFIX,apple-mapkit.com
 

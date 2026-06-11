@@ -20,7 +20,9 @@ payload:
 
 # === MiniMax 国际版 ===
   - DOMAIN-SUFFIX,minimax.io
-  
+# === Agnes AI ===
+  - DOMAIN-SUFFIX,agnes-ai.com
+    
 # === Token供应商 ===
   - DOMAIN-SUFFIX,openrouter.ai
   - DOMAIN-SUFFIX,poe.com
@@ -31,14 +33,11 @@ payload:
   - DOMAIN-SUFFIX,hf.space
   - DOMAIN-SUFFIX,hf.co
 
-# === Firecrawl 爬虫服务 ===
+# === 爬虫服务 ===
   - DOMAIN-SUFFIX,firecrawl.dev
-
+  - DOMAIN-SUFFIX,tavily.com
 # === Skill.sh ===
   - DOMAIN-SUFFIX,skill.sh
 
-# === Tavily ===
-  - DOMAIN-SUFFIX,tavily.com
 
-# === Agnes AI ===
-  - DOMAIN-SUFFIX,agnes-ai.com
+
