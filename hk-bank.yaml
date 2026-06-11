@@ -1,35 +1,17 @@
 payload:
 
-# === 券商 ===
-  - DOMAIN-SUFFIX,tradingview.com
-  
-  - DOMAIN-SUFFIX,longbridge.com
-  - DOMAIN-SUFFIX,longbridgewhale.com
-  
-  - DOMAIN-SUFFIX,firstrade.com
-  - DOMAIN-SUFFIX,firstrade.net
-  
-  - DOMAIN-SUFFIX,interactivebrokers.com.hk
-  - DOMAIN-SUFFIX,interactivebrokers.com.cn
-  - DOMAIN-SUFFIX,interactivebrokers.com
-  
-  - DOMAIN-SUFFIX,schwab.com
-  - DOMAIN-SUFFIX,schwabmail.com
-  - DOMAIN-SUFFIX,schwabadvisorcenter.com
-  
-  - DOMAIN-SUFFIX,fastbull.com
-  
-# === 银行 ===
+# === 香港银行 ===
 
-# === ##### ZA Group ===
+# === ZA Group ===
   - DOMAIN-SUFFIX,za.group
   - DOMAIN-SUFFIX,bank.za.group
   - DOMAIN-SUFFIX,broker.za.group
-  
-# === ##### 汇立银行 ===
+
+# === 汇立银行 ===
   - DOMAIN-SUFFIX,welab.bank
   - DOMAIN-SUFFIX,wapi-sit.dev-wlab.com
-  
+
+# === 传统银行 ===
   - DOMAIN-SUFFIX,hsbc.com.hk
   - DOMAIN-SUFFIX,bochk.com
   - DOMAIN-SUFFIX,bankofchina.com.hk
@@ -44,12 +26,25 @@ payload:
   - DOMAIN-SUFFIX,fubonbank.com.hk
   - DOMAIN-SUFFIX,publicbank.com.hk
   - DOMAIN-SUFFIX,shacombank.com.hk
-  
+
+# === 虚拟银行 / 电子支付 ===
   - DOMAIN-SUFFIX,livibank.com
-  
   - DOMAIN-SUFFIX,antbank.hk
   - DOMAIN-SUFFIX,alipayhk.com
   - DOMAIN-SUFFIX,fusionbank.com
   - DOMAIN-SUFFIX,fusionbank.com.hk
   - DOMAIN-SUFFIX,airstarbank.com
   - DOMAIN-SUFFIX,airstarbank.com.hk
+
+# === 财经媒体（原 FinaMedia） ===
+
+# === 道琼斯 ===
+  - DOMAIN-SUFFIX,dowjones.ai
+  - DOMAIN-SUFFIX,dowjones.io
+
+# === 财经媒体 ===
+  - DOMAIN-SUFFIX,mansionglobal.com
+  - DOMAIN-SUFFIX,mktw.net
+  - DOMAIN-SUFFIX,rdcpix.com
+  - DOMAIN-SUFFIX,seekingalpha.com
+  - DOMAIN-SUFFIX,investing.com

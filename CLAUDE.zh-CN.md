@@ -71,9 +71,9 @@ python3 scripts/normalize_yaml_comments.py
 | **Microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
 | **NVIDIA.yaml** | NVIDIA 服务 |
 | **Crypto.yaml** | 加密货币交易所与钱包 |
-| **Finance.yaml** | 金融服务 |
+| **hk-broker.yaml** | 券商（TradingView、Longbridge、IBKR 等） |
+| **hk-bank.yaml** | 香港银行（汇丰、ZA、汇立等）+ 财经媒体 |
 | **Fin-Media.yaml** | 财经媒体与数据 |
-| **FinaMedia.yaml** | FinaMedia（与 Fin-Media 重复/遗留 — 建议合并） |
 | **DNS.yaml** | DNS 服务器 |
 
 ## 同步规则
