@@ -17,7 +17,6 @@ payload:
   - DOMAIN-SUFFIX,bybdc6.com
   - DOMAIN-SUFFIX,byd3c3.com
   - DOMAIN-SUFFIX,wsot2022.com
-
 # === WalletConnect ===
   - DOMAIN-SUFFIX,walletconnect.com
   - DOMAIN-SUFFIX,walletconnect.org
