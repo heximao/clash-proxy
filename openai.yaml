@@ -1,6 +1,6 @@
 payload:
 
-# === OpenAI / ChatGPT ===
+# === OpenAI ===
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,openai-api.arkoselabs.com
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
