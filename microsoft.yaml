@@ -10,7 +10,6 @@ payload:
   - DOMAIN-SUFFIX,msftauth.net
   - DOMAIN-SUFFIX,s-microsoft.com
   - DOMAIN-SUFFIX,msauth.net
-
 # === Microsoft 365 ===
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,office.com
