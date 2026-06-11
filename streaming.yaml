@@ -1,12 +1,11 @@
 payload:
-# === 华视影院 ===
+   # === 华视影院 ===
   - DOMAIN-SUFFIX,huavod.com
   - DOMAIN-SUFFIX,okhuaren.com
   - DOMAIN-SUFFIX,huaren.live
   - DOMAIN-SUFFIX,huarenlivewebsite.top
   - DOMAIN-SUFFIX,okokserver.com
   - DOMAIN-SUFFIX,api.mapbox.com
-  
-# === netflix ===
+  # === netflix ===
   - DOMAIN-SUFFIX,fast.com
   - DOMAIN-SUFFIX,netflix.com
