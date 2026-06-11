@@ -2,53 +2,29 @@
 .tmp.driveupload/
 .tmp.drivedownload/
 
-# 常见不需要加入 Git 的文件/目录（补充）
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows 缩略图
-Thumbs.db
-
 # 编辑器/IDE
 .vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
 
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
-env/
-venv/
-ENV/
 
 # Node
 node_modules/
 
 # 日志/数据库/备份
-*.log
 *.sqlite3
 *.db
 *.bak
 
 # 环境变量/密钥/证书
-.env
-.env.*
-*.pem
-*.key
 *.crt
 *.p12
 *.pfx
 
 # 临时文件
-*.swp
-*~
 *.tmp
 *.temp
 
@@ -66,3 +42,7 @@ output/
 # Claude Code 指引文件
 CLAUDE.md
 CLAUDE.zh-CN.md
+
+# OMC 运行时状态（保留 .omc/sessions/ 对话记录）
+.omc/state/
+.omc/project-memory.json
