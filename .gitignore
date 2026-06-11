@@ -40,8 +40,6 @@ coverage/
 output/
 
 # Claude Code 指引文件
-CLAUDE.md
-CLAUDE.zh-CN.md
 
 # OMC 运行时状态（保留 .omc/sessions/ 对话记录）
 .omc/state/
