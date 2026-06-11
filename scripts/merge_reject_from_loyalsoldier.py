@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Merge Loyalsoldier reject list into Reject.yaml.
+"""Merge Loyalsoldier reject list into reject.yaml.
 
 - Source: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-- Target file: Reject.yaml
-- Keeps existing Reject.yaml rules, appends only new DOMAIN-SUFFIX rules.
+- Target file: reject.yaml
+- Keeps existing reject.yaml rules, appends only new DOMAIN-SUFFIX rules.
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ from urllib.request import urlopen
 import argparse
 
 SOURCE_URL = "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-TARGET = Path("Reject.yaml")
+TARGET = Path("reject.yaml")
 SECTION_HEADER = "# === Auto merged from Loyalsoldier reject.txt ==="
 
 RULE_RE = re.compile(r"^\s*-\s*(.+?)\s*$")
@@ -103,7 +103,7 @@ def merge(source_file: str | None = None) -> int:
 
     # Ensure file starts with payload root key.
     if not lines or lines[0].strip() != "payload:":
-        raise ValueError("Reject.yaml must start with 'payload:'")
+        raise ValueError("reject.yaml must start with 'payload:'")
 
     out_lines = list(lines)
     if out_lines and out_lines[-1].strip() != "":

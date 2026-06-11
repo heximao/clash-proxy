@@ -1,4 +1,4 @@
-name: Auto Merge Reject Rules
+name: Auto Merge reject Rules
 
 on:
   schedule:
@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Reject.yaml
+          git add reject.yaml
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
