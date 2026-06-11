@@ -5,7 +5,7 @@ payload:
   - DOMAIN-SUFFIX,apple.news
   - DOMAIN-SUFFIX,apple-dns.net
 
-# === Apple 中国 ===
+# === Apple China ===
   - DOMAIN-SUFFIX,apple.cn  
   - DOMAIN-SUFFIX,apple.com.cn
   - DOMAIN-SUFFIX,icloud.com.cn 
