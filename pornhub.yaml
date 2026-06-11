@@ -1,5 +1,5 @@
 payload:
-# === pornhub ===
+  # === pornhub ===
   - DOMAIN-SUFFIX,pornhub.com
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,youporn.com
@@ -10,5 +10,5 @@ payload:
   - DOMAIN-SUFFIX,t8cdn.com
   - DOMAIN-SUFFIX,thumbzilla.com
   
-# === xvideos ===
+  # === xvideos ===
   - DOMAIN-SUFFIX,xvideos.com
