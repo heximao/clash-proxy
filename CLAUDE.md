@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Agent when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ python -c "import sys,yaml; yaml.safe_load(sys.stdin)" < SomeFile.yaml
 # Check for duplicate rules across files (outputs DUPLICATES.md + duplicates.json)
 python3 scripts/find_duplicates.py
 
-# Merge latest reject rules from Loyalsoldier upstream into Reject.yaml
+# Merge latest reject rules from Loyalsoldier upstream into reject.yaml
 python3 scripts/merge_reject_from_loyalsoldier.py
 
 # Normalize section comment headings to `# === Title ===` format
@@ -39,42 +39,42 @@ Use `DOMAIN-SUFFIX` (hyphen), **not** `DOMAIN_SUFFIX` (underscore).
 
 ## Conventions
 
-- **Naming**: `CapitalCase.yaml` for new files (e.g., `SocialMedia.yaml`).
-- **Deprecation**: Rename retired files with `弃用` suffix (e.g., `ServiceName弃用.yaml`) — do not delete.
+- **Naming**: `lowercase.yaml` with hyphens for multi-word names (e.g., `hk-broker.yaml`, `fin-media.yaml`).
 - **Grouping**: Use `# === Service Name ===` comment headers to group rules by service/category.
-- **Catch-all files**: `Proxy.yaml` (proxy routing) and `Direct.yaml` (direct connection) hold miscellaneous rules. Major services (Apple, Google, Microsoft, AI, etc.) have dedicated files.
-- **Reject.yaml** (~6.7 MB) is auto-generated daily by GitHub Actions from Loyalsoldier's upstream — do not manually edit its `DOMAIN-SUFFIX` entries from that source.
+- **Catch-all files**: `proxy.yaml` (proxy routing) and `direct.yaml` (direct connection) hold miscellaneous rules. Major services (Apple, Google, Microsoft, AI, etc.) have dedicated files.
+- **reject.yaml** (~7 MB) is auto-generated daily by GitHub Actions from Loyalsoldier's upstream — do not manually edit its `DOMAIN-SUFFIX` entries from that source.
 - **log/**: OpenClash runtime logs (traffic logs and plugin logs). Log entries showing `match Match` indicate domains that didn't match any rule and fell through to the "漏网之鱼" (unmatched) policy group. Periodically review these domains and categorize them into the appropriate rule files.
 
 ## Rule Files
 
 | File | Description |
 |------|-------------|
-| **Proxy.yaml** | Catch-all for sites that need proxy — miscellaneous blocked/overseas domains |
-| **Direct.yaml** | Catch-all for sites that can connect directly — domestic & unblocked overseas |
-| **Reject.yaml** | Ad/tracking/malware blocking — auto-generated from Loyalsoldier upstream, do not manually edit |
-| **Google.yaml** | Google services |
-| **Youtube.yaml** | YouTube |
-| **Telegram.yaml** | Telegram |
-| **Meta.yaml** | Facebook, Instagram, WhatsApp, Threads |
-| **X.yaml** | Twitter / X |
-| **LINE.yaml** | LINE messenger |
-| **Spotify.yaml** | Spotify |
-| **Streaming.yaml** | Streaming services (Netflix, Disney+, HBO, etc.) |
-| **Social.yaml** | Social platforms (Reddit, Discord, Pinterest, etc.) |
-| **Pornhub.yaml** | Pornhub |
-| **AI.yaml** | AI services (ChatGPT alternatives, Perplexity, etc.) |
-| **OpenAI.yaml** | OpenAI (ChatGPT, API, etc.) |
-| **ClaudeAI.yaml** | Claude / Anthropic |
-| **Github.yaml** | GitHub and related developer tools |
-| **Apple.yaml** | Apple services (App Store, iCloud, etc.) |
-| **Microsoft.yaml** | Microsoft services (Office, Azure, etc.) |
-| **NVIDIA.yaml** | NVIDIA services |
-| **Crypto.yaml** | Cryptocurrency exchanges and wallets |
-| **hk-broker.yaml** | Brokerages (TradingView, Longbridge, IBKR, etc.) |
+| **proxy.yaml** | Catch-all for sites that need proxy — miscellaneous blocked/overseas domains |
+| **direct.yaml** | Catch-all for sites that can connect directly — domestic & unblocked overseas |
+| **reject.yaml** | Ad/tracking/malware blocking — auto-generated from Loyalsoldier upstream, do not manually edit |
+| **google.yaml** | Google services |
+| **youtube.yaml** | YouTube |
+| **telegram.yaml** | Telegram |
+| **meta.yaml** | Facebook, Instagram, WhatsApp, Threads |
+| **x.yaml** | Twitter / X |
+| **line.yaml** | LINE messenger |
+| **spotify.yaml** | Spotify |
+| **streaming.yaml** | Streaming services (Netflix, Disney+, HBO, etc.) |
+| **social.yaml** | Social platforms (Reddit, Discord, Pinterest, etc.) |
+| **pornhub.yaml** | Pornhub |
+| **claude.yaml** | Claude / Anthropic |
+| **openai.yaml** | OpenAI (ChatGPT, API, etc.) |
+| **direct-ai.yaml** | AI services accessible via direct connection |
+| **proxy-ai.yaml** | AI services requiring proxy |
+| **github.yaml** | GitHub and related developer tools |
+| **apple.yaml** | Apple services (App Store, iCloud, etc.) |
+| **microsoft.yaml** | Microsoft services (Office, Azure, etc.) |
+| **nvidia.yaml** | NVIDIA services |
+| **crypto.yaml** | Cryptocurrency exchanges and wallets |
+| **hk-broker.yaml** | Hong Kong brokerages (TradingView, Longbridge, IBKR, etc.) |
+| **us-broker.yaml** | US brokerages |
 | **hk-bank.yaml** | Hong Kong banks (HSBC, ZA, Welab, etc.) + financial media |
-| **Fin-Media.yaml** | Financial media and data |
-| **DNS.yaml** | DNS servers |
+| **fin-media.yaml** | Financial media and data |
 
 ## Sync Rule
 
@@ -96,4 +96,4 @@ Never push without first ensuring the local branch is up to date with the remote
 
 ## CI/CD
 
-A single GitHub Actions workflow (`auto-merge-reject.yml`) runs daily at 00:20 UTC. It calls `scripts/merge_reject_from_loyalsoldier.py` and auto-commits changes to `Reject.yaml`.
+A single GitHub Actions workflow (`auto-merge-reject.yml`) runs daily at 00:20 UTC. It calls `scripts/merge_reject_from_loyalsoldier.py` and auto-commits changes to `reject.yaml`.
