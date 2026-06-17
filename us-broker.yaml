@@ -1,8 +1,17 @@
 payload:
 
-# === Wechat ===
-  - DOMAIN-SUFFIX,mp.weixin.qq.com
-  - DOMAIN-SUFFIX,xueqiu.com
-  
-# === xvideo ===
-  - DOMAIN-SUFFIX,xvideo.com
+# === 券商 ===
+  - DOMAIN-SUFFIX,tradingview.com
+
+  - DOMAIN-SUFFIX,firstrade.com
+  - DOMAIN-SUFFIX,firstrade.net
+
+  - DOMAIN-SUFFIX,interactivebrokers.com.hk
+  - DOMAIN-SUFFIX,interactivebrokers.com.cn
+  - DOMAIN-SUFFIX,interactivebrokers.com
+
+  - DOMAIN-SUFFIX,schwab.com
+  - DOMAIN-SUFFIX,schwabmail.com
+  - DOMAIN-SUFFIX,schwabadvisorcenter.com
+
+  - DOMAIN-SUFFIX,fastbull.com
