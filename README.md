@@ -41,8 +41,8 @@
 | | `google.yaml` | Google 服务 |
 | | `nvidia.yaml` | NVIDIA 服务 |
 | **金融** | `crypto.yaml` | 加密货币交易所与钱包 |
-| | `hk-broker.yaml` | 港美股券商（TradingView、长桥、IBKR 等） |
-| | `us-broker.yaml` | 美股券商 |
+| | `hk-broker.yaml` | 港美股券商（TradingView、长桥、IBKR 等），建议使用香港节点 |
+| | `us-broker.yaml` | 美股券商，建议优先直连 |
 | | `hk-bank.yaml` | 香港银行（汇丰、ZA、WeLab 等） |
 | | `fin-media.yaml` | 财经媒体与数据 |
 | **网络** | `dns.yaml` | DNS 服务器 |
