@@ -21,7 +21,6 @@ payload:
 # === MiniMax 国际版 ===
   - DOMAIN-SUFFIX,minimax.io
   # === Token供应商 ===
-  - DOMAIN-SUFFIX,openrouter.ai
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,poecdn.net
   
