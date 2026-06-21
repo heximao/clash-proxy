@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,goog
   - DOMAIN-SUFFIX,google
   - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,google.com.hk
   - DOMAIN-SUFFIX,google.dev
 
 # === Google 核心 IP ===
