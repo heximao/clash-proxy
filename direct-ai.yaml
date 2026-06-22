@@ -7,3 +7,4 @@ payload:
   - DOMAIN-SUFFIX,openrouter.com
   # === ModelScope 魔搭 — 阿里旗下 AI 模型社区 ===
   - DOMAIN-SUFFIX,modelscope.ai
+  - DOMAIN-SUFFIX,freemodel.dev
