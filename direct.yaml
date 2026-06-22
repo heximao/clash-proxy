@@ -193,6 +193,7 @@ payload:
   - DOMAIN-SUFFIX,60s.viki.moe
   - DOMAIN-SUFFIX,skan.singular.net
   - DOMAIN-SUFFIX,uptime.kuma.pet
+  - DOMAIN-SUFFIX,the-best-airport.com
 
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,kwrt
