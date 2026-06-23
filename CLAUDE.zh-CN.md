@@ -75,6 +75,7 @@ python3 scripts/normalize_yaml_comments.py
 | **us-broker.yaml** | 美股券商 |
 | **hk-bank.yaml** | 香港银行（汇丰、ZA、汇立等）+ 财经媒体 |
 | **fin-media.yaml** | 财经媒体与数据 |
+| **fin-tech.yaml** | 金融科技工具（TradingView 等） |
 
 ## 同步规则
 

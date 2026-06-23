@@ -75,6 +75,7 @@ Use `DOMAIN-SUFFIX` (hyphen), **not** `DOMAIN_SUFFIX` (underscore).
 | **us-broker.yaml** | US brokerages |
 | **hk-bank.yaml** | Hong Kong banks (HSBC, ZA, Welab, etc.) + financial media |
 | **fin-media.yaml** | Financial media and data |
+| **fin-tech.yaml** | Financial technology tools (TradingView, etc.) |
 
 ## Sync Rule
 
