@@ -17,35 +17,36 @@
 
 ## 规则文件
 
-| 分类 | 文件 | 说明 |
-|------|------|------|
-| **通用** | `proxy.yaml` | 需代理的杂项域名 |
-| | `direct.yaml` | 可直连的域名 |
-| | `reject.yaml` | 广告/追踪/恶意软件拦截（自动同步，勿手动编辑） |
-| **社交通讯** | `telegram.yaml` | Telegram |
-| | `meta.yaml` | Facebook、Instagram、WhatsApp、Threads |
-| | `x.yaml` | Twitter / X |
-| | `line.yaml` | LINE |
-| | `social.yaml` | Reddit、Discord、Pinterest 等 |
-| **流媒体** | `youtube.yaml` | YouTube |
-| | `streaming.yaml` | Netflix、Disney+、HBO 等 |
-| | `spotify.yaml` | Spotify |
-| | `pornhub.yaml` | Pornhub |
-| **AI** | `direct-ai.yaml` | 可直连的 AI 服务 |
-| | `proxy-ai.yaml` | 需代理的 AI 服务 |
-| | `openai.yaml` | OpenAI（ChatGPT、API 等） |
-| | `claude.yaml` | Claude / Anthropic |
-| **开发者** | `github.yaml` | GitHub 及相关开发工具 |
-| **系统服务** | `apple.yaml` | Apple 服务（App Store、iCloud 等） |
-| | `microsoft.yaml` | Microsoft 服务（Office、Azure 等） |
-| | `google.yaml` | Google 服务 |
-| | `nvidia.yaml` | NVIDIA 服务 |
-| **金融** | `crypto.yaml` | 加密货币交易所与钱包 |
-| | `hk-broker.yaml` | 港美股券商（TradingView、长桥、IBKR 等），建议使用香港节点 |
-| | `us-broker.yaml` | 美股券商，建议优先直连 |
-| | `hk-bank.yaml` | 香港银行（汇丰、ZA、WeLab 等） |
-| | `fin-media.yaml` | 财经媒体与数据 |
-| **网络** | `dns.yaml` | DNS 服务器 |
+| 文件 | 说明 |
+|------|------|
+| **apple.yaml** | Apple 服务（App Store、iCloud 等） |
+| **claude.yaml** | Claude / Anthropic |
+| **crypto.yaml** | 加密货币交易所与钱包 |
+| **direct-ai.yaml** | 可直连的 AI 服务 |
+| **direct.yaml** | 可直连的域名 |
+| **dns.yaml** | DNS 服务器 |
+| **fin-media.yaml** | 财经媒体与数据 |
+| **fin-tech.yaml** | 金融科技工具 |
+| **github.yaml** | GitHub 及相关开发工具 |
+| **google.yaml** | Google 服务 |
+| **hk-bank.yaml** | 香港银行（汇丰、ZA、WeLab 等） |
+| **hk-broker.yaml** | 港美股券商（TradingView、长桥、IBKR 等），建议使用香港节点 |
+| **line.yaml** | LINE |
+| **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
+| **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
+| **nvidia.yaml** | NVIDIA 服务 |
+| **openai.yaml** | OpenAI（ChatGPT、API 等） |
+| **pornhub.yaml** | Pornhub |
+| **proxy-ai.yaml** | 需代理的 AI 服务 |
+| **proxy.yaml** | 需代理的杂项域名 |
+| **reject.yaml** | 广告/追踪/恶意软件拦截（自动同步，勿手动编辑） |
+| **social.yaml** | Reddit、Discord、Pinterest 等 |
+| **spotify.yaml** | Spotify |
+| **streaming.yaml** | Netflix、Disney+、HBO 等 |
+| **telegram.yaml** | Telegram |
+| **us-broker.yaml** | 美股券商，建议优先直连 |
+| **x.yaml** | Twitter / X |
+| **youtube.yaml** | YouTube |
 
 ## 引用方式
 

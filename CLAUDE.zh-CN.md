@@ -49,33 +49,33 @@ python3 scripts/normalize_yaml_comments.py
 
 | 文件 | 说明 |
 |------|------|
-| **proxy.yaml** | 兜底代理 — 需代理的杂项域名 |
-| **direct.yaml** | 兜底直连 — 国内及可直连的海外域名 |
-| **reject.yaml** | 广告/追踪/恶意软件拦截 — 由 Loyalsoldier 上游自动生成，勿手动编辑 |
-| **google.yaml** | Google 服务 |
-| **youtube.yaml** | YouTube |
-| **telegram.yaml** | Telegram |
-| **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
-| **x.yaml** | Twitter / X |
-| **line.yaml** | LINE 即时通讯 |
-| **spotify.yaml** | Spotify |
-| **streaming.yaml** | 流媒体服务（Netflix、Disney+、HBO 等） |
-| **social.yaml** | 社交平台（Reddit、Discord、Pinterest 等） |
-| **pornhub.yaml** | Pornhub |
-| **claude.yaml** | Claude / Anthropic |
-| **openai.yaml** | OpenAI（ChatGPT、API 等） |
-| **direct-ai.yaml** | 可直连的 AI 服务 |
-| **proxy-ai.yaml** | 需代理的 AI 服务 |
-| **github.yaml** | GitHub 及相关开发者工具 |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
-| **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
-| **nvidia.yaml** | NVIDIA 服务 |
+| **claude.yaml** | Claude / Anthropic |
 | **crypto.yaml** | 加密货币交易所与钱包 |
-| **hk-broker.yaml** | 港美股券商（TradingView、长桥、IBKR 等） |
-| **us-broker.yaml** | 美股券商 |
-| **hk-bank.yaml** | 香港银行（汇丰、ZA、汇立等）+ 财经媒体 |
+| **direct.yaml** | 兜底直连 — 国内及可直连的海外域名 |
+| **direct-ai.yaml** | 可直连的 AI 服务 |
 | **fin-media.yaml** | 财经媒体与数据 |
 | **fin-tech.yaml** | 金融科技工具（TradingView 等） |
+| **github.yaml** | GitHub 及相关开发者工具 |
+| **google.yaml** | Google 服务 |
+| **hk-bank.yaml** | 香港银行（汇丰、ZA、汇立等）+ 财经媒体 |
+| **hk-broker.yaml** | 港美股券商（TradingView、长桥、IBKR 等） |
+| **line.yaml** | LINE 即时通讯 |
+| **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
+| **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
+| **nvidia.yaml** | NVIDIA 服务 |
+| **openai.yaml** | OpenAI（ChatGPT、API 等） |
+| **pornhub.yaml** | Pornhub |
+| **proxy.yaml** | 兜底代理 — 需代理的杂项域名 |
+| **proxy-ai.yaml** | 需代理的 AI 服务 |
+| **reject.yaml** | 广告/追踪/恶意软件拦截 — 由 Loyalsoldier 上游自动生成，勿手动编辑 |
+| **social.yaml** | 社交平台（Reddit、Discord、Pinterest 等） |
+| **spotify.yaml** | Spotify |
+| **streaming.yaml** | 流媒体服务（Netflix、Disney+、HBO 等） |
+| **telegram.yaml** | Telegram |
+| **us-broker.yaml** | 美股券商 |
+| **x.yaml** | Twitter / X |
+| **youtube.yaml** | YouTube |
 
 ## 同步规则
 

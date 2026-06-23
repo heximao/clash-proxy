@@ -49,33 +49,33 @@ Use `DOMAIN-SUFFIX` (hyphen), **not** `DOMAIN_SUFFIX` (underscore).
 
 | File | Description |
 |------|-------------|
-| **proxy.yaml** | Catch-all for sites that need proxy — miscellaneous blocked/overseas domains |
-| **direct.yaml** | Catch-all for sites that can connect directly — domestic & unblocked overseas |
-| **reject.yaml** | Ad/tracking/malware blocking — auto-generated from Loyalsoldier upstream, do not manually edit |
-| **google.yaml** | Google services |
-| **youtube.yaml** | YouTube |
-| **telegram.yaml** | Telegram |
-| **meta.yaml** | Facebook, Instagram, WhatsApp, Threads |
-| **x.yaml** | Twitter / X |
-| **line.yaml** | LINE messenger |
-| **spotify.yaml** | Spotify |
-| **streaming.yaml** | Streaming services (Netflix, Disney+, HBO, etc.) |
-| **social.yaml** | Social platforms (Reddit, Discord, Pinterest, etc.) |
-| **pornhub.yaml** | Pornhub |
-| **claude.yaml** | Claude / Anthropic |
-| **openai.yaml** | OpenAI (ChatGPT, API, etc.) |
-| **direct-ai.yaml** | AI services accessible via direct connection |
-| **proxy-ai.yaml** | AI services requiring proxy |
-| **github.yaml** | GitHub and related developer tools |
 | **apple.yaml** | Apple services (App Store, iCloud, etc.) |
-| **microsoft.yaml** | Microsoft services (Office, Azure, etc.) |
-| **nvidia.yaml** | NVIDIA services |
+| **claude.yaml** | Claude / Anthropic |
 | **crypto.yaml** | Cryptocurrency exchanges and wallets |
-| **hk-broker.yaml** | Hong Kong brokerages (TradingView, Longbridge, IBKR, etc.) |
-| **us-broker.yaml** | US brokerages |
-| **hk-bank.yaml** | Hong Kong banks (HSBC, ZA, Welab, etc.) + financial media |
+| **direct.yaml** | Catch-all for sites that can connect directly — domestic & unblocked overseas |
+| **direct-ai.yaml** | AI services accessible via direct connection |
 | **fin-media.yaml** | Financial media and data |
 | **fin-tech.yaml** | Financial technology tools (TradingView, etc.) |
+| **github.yaml** | GitHub and related developer tools |
+| **google.yaml** | Google services |
+| **hk-bank.yaml** | Hong Kong banks (HSBC, ZA, Welab, etc.) + financial media |
+| **hk-broker.yaml** | Hong Kong brokerages (TradingView, Longbridge, IBKR, etc.) |
+| **line.yaml** | LINE messenger |
+| **meta.yaml** | Facebook, Instagram, WhatsApp, Threads |
+| **microsoft.yaml** | Microsoft services (Office, Azure, etc.) |
+| **nvidia.yaml** | NVIDIA services |
+| **openai.yaml** | OpenAI (ChatGPT, API, etc.) |
+| **pornhub.yaml** | Pornhub |
+| **proxy.yaml** | Catch-all for sites that need proxy — miscellaneous blocked/overseas domains |
+| **proxy-ai.yaml** | AI services requiring proxy |
+| **reject.yaml** | Ad/tracking/malware blocking — auto-generated from Loyalsoldier upstream, do not manually edit |
+| **social.yaml** | Social platforms (Reddit, Discord, Pinterest, etc.) |
+| **spotify.yaml** | Spotify |
+| **streaming.yaml** | Streaming services (Netflix, Disney+, HBO, etc.) |
+| **telegram.yaml** | Telegram |
+| **us-broker.yaml** | US brokerages |
+| **x.yaml** | Twitter / X |
+| **youtube.yaml** | YouTube |
 
 ## Sync Rule
 
