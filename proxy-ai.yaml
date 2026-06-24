@@ -19,12 +19,12 @@ payload:
   - DOMAIN-SUFFIX,clawhub.ai
 
 # === MiniMax 国际版 ===
-  - DOMAIN-SUFFIX,minimax.io
+
   # === Token供应商 ===
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,poecdn.net
   
-  - DOMAIN-SUFFIX,aihubmix.com
+
 
   - DOMAIN-SUFFIX,hf.space
   - DOMAIN-SUFFIX,hf.co
