@@ -34,3 +34,9 @@ payload:
   - DOMAIN-SUFFIX,tavily.com
 # === Skill.sh ===
   - DOMAIN-SUFFIX,skill.sh
+
+# === io.net ===
+  - DOMAIN-SUFFIX,ai.io.net
+  - DOMAIN-SUFFIX,io.net
+  - DOMAIN-SUFFIX,ionet.betteruptime.com
+  - DOMAIN-SUFFIX,status.io.net

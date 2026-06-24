@@ -9,6 +9,9 @@ payload:
   - DOMAIN-SUFFIX,interactivebrokers.com.hk
   - DOMAIN-SUFFIX,interactivebrokers.com.cn
   - DOMAIN-SUFFIX,interactivebrokers.com
+  - DOMAIN-SUFFIX,api.ibkr.com
+
+  - DOMAIN-SUFFIX,www.clientam.com
 
   - DOMAIN-SUFFIX,schwab.com
   - DOMAIN-SUFFIX,schwabmail.com

@@ -48,3 +48,6 @@ payload:
   - DOMAIN-SUFFIX,rdcpix.com
   - DOMAIN-SUFFIX,seekingalpha.com
   - DOMAIN-SUFFIX,investing.com
+
+# === ELE Bank ===
+  - DOMAIN-SUFFIX,conn.broker.elebank.com

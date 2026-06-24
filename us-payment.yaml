@@ -1,0 +1,20 @@
+payload:
+
+# === PayPal ===
+  - DOMAIN-SUFFIX,paypal.com
+  - DOMAIN-SUFFIX,www.paypal.com
+  - DOMAIN-SUFFIX,api-m.paypal.com
+  - DOMAIN-SUFFIX,c.paypal.com
+  - DOMAIN-SUFFIX,c6.paypal.com
+  - DOMAIN-SUFFIX,d.paypal.com
+  - DOMAIN-SUFFIX,ddbm2.paypal.com
+  - DOMAIN-SUFFIX,t.paypal.com
+  - DOMAIN-SUFFIX,pics.paypal.com
+  - DOMAIN-SUFFIX,hcaptcha.paypal.com
+  - DOMAIN-SUFFIX,newassets.hcaptcha.paypal.com
+
+# === Wise ===
+  - DOMAIN-SUFFIX,wise.com
+  - DOMAIN-SUFFIX,api.wise.com
+  - DOMAIN-SUFFIX,sst.wise.com
+  - DOMAIN-SUFFIX,loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com

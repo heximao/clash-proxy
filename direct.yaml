@@ -195,6 +195,12 @@ payload:
   - DOMAIN-SUFFIX,uptime.kuma.pet
   - DOMAIN-SUFFIX,the-best-airport.com
 
+# === 证书验证（2026-06-25 补录）===
+  - DOMAIN-SUFFIX,cacerts.digicert.com
+  - DOMAIN-SUFFIX,vmc.digicert.com
+  - DOMAIN-SUFFIX,crt.r2m02.amazontrust.com
+  - DOMAIN-SUFFIX,crt.rootg2.amazontrust.com
+
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,kwrt
   - DOMAIN-SUFFIX,lan

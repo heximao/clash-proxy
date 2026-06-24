@@ -885,3 +885,14 @@ payload:
   - IP-CIDR,208.43.0.0/16,no-resolve
   - IP-CIDR,74.86.0.0/16,no-resolve
   - IP-CIDR,75.126.0.0/16,no-resolve
+
+# === 漏网之鱼（2026-06-25 补录）监控分析 ===
+  - DOMAIN-SUFFIX,betterstack.com
+  - DOMAIN-SUFFIX,betterstack.net
+  - DOMAIN-SUFFIX,cdnjs.betterstack.com
+  - DOMAIN-SUFFIX,t.betterstack.com
+  - DOMAIN-SUFFIX,uptime.betterstack.com
+  - DOMAIN-SUFFIX,s1569222.us-west-12.betterstackdata.com
+  - DOMAIN-SUFFIX,faro-collector-prod-us-east-0.grafana.net
+  - DOMAIN-SUFFIX,plausible.io
+  - DOMAIN-SUFFIX,uptimekuma.org
