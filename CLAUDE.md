@@ -79,7 +79,7 @@ Use `DOMAIN-SUFFIX` (hyphen), **not** `DOMAIN_SUFFIX` (underscore).
 
 ## Sync Rule
 
-When `CLAUDE.md` is updated, `CLAUDE.zh-CN.md` must also be updated to stay in sync.
+When `CLAUDE.md` is updated, `CLAUDE.zh-CN.md` must also be updated to stay in sync. After updating, verify both files are fully consistent; if they differ, ask the user how to resolve the discrepancies.
 
 ## Git Workflow
 

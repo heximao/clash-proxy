@@ -11,8 +11,8 @@
 ## 📁 File Structure & Conventions
 
 - **File Format**: 每个 `.yaml` 文件必须以 `payload:` 作为根键开始。
-- **Naming**: 新文件请使用 `CapitalCase.yaml`（例如 `SocialMedia.yaml`）。
-- **Deprecation**: 退役文件请改名加上 `弃用`（例如 `ServiceName弃用.yaml`），而不是立即删除。
+- **Naming**: 新文件请使用 `lowercase.yaml`，多词用连字符（例如 `hk-broker.yaml`、`fin-media.yaml`）。
+- **Deprecation**: 退役文件请改名加上 `弃用`（例如 `service-name弃用.yaml`），而不是立即删除。
 - **Rule Types**:
   - `DOMAIN-SUFFIX,example.com`（大多数网站首选）
   - `DOMAIN-KEYWORD,keyword`
@@ -27,7 +27,7 @@
   - DOMAIN-SUFFIX,example.com
   ```
 - **Ordering**: 将相关规则放在一起。虽然不强制按字母顺序，但优先考虑可读性。
-- **Exceptions**: `Proxy.yaml` 和 `Direct.yaml` 是用于杂项规则的 catch-all 文件。大型特定服务（Apple、Google、Microsoft）有各自的文件。
+- **Exceptions**: `proxy.yaml` 和 `direct.yaml` 是用于杂项规则的 catch-all 文件。大型特定服务（Apple、Google、Microsoft）有各自的文件。
 
 ## 使用示例（Clash 配置）
 
@@ -38,8 +38,8 @@ rule-providers:
   example-rules:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/heximao/clash-proxy/SocialMedia.yaml
-    path: ./SocialMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/heximao/clash-proxy/hk-broker.yaml
+    path: ./hk-broker.yaml
     interval: 86400
 ```
 
