@@ -12,7 +12,6 @@
 
 - **File Format**: 每个 `.yaml` 文件必须以 `payload:` 作为根键开始。
 - **Naming**: 新文件请使用 `lowercase.yaml`，多词用连字符（例如 `hk-broker.yaml`、`fin-media.yaml`）。
-- **Deprecation**: 退役文件请改名加上 `弃用`（例如 `service-name弃用.yaml`），而不是立即删除。
 - **Rule Types**:
   - `DOMAIN-SUFFIX,example.com`（大多数网站首选）
   - `DOMAIN-KEYWORD,keyword`
