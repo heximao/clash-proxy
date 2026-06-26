@@ -1,100 +1,96 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Claude Code (claude.ai/code) 在本仓库中工作时提供指引。
 
-## Project Overview
+## 项目概述
 
-Clash proxy rule-provider repository — a collection of YAML rule files served via jsDelivr CDN for Clash / OpenClash clients. No application runtime; this is a pure data/content repository.
+Clash 代理规则提供者仓库 — 一组通过 jsDelivr CDN 分发给 Clash / OpenClash 客户端的 YAML 规则文件。无应用运行时，纯数据/内容仓库。
 
-CDN URL pattern: `https://cdn.jsdelivr.net/gh/heximao/clash-proxy/<filename>.yaml`
+CDN URL 格式：`https://cdn.jsdelivr.net/gh/heximao/clash-proxy/<filename>.yaml`
 
-## Key Commands
+## 常用命令
 
-There is no build system, test suite, or linter configured. Verification is manual:
+本仓库无构建系统、测试套件或 linter，验证需手动进行：
 
 ```bash
-# Validate YAML syntax
+# 校验 YAML 语法
 python -c "import sys,yaml; yaml.safe_load(sys.stdin)" < SomeFile.yaml
 
-# Check for duplicate rules across files (outputs DUPLICATES.md + duplicates.json)
+# 检查跨文件重复规则（输出 DUPLICATES.md + duplicates.json）
 python3 scripts/find_duplicates.py
 
-# Merge latest reject rules from Loyalsoldier upstream into reject.yaml
+# 从 Loyalsoldier 上游合并最新拒绝规则至 reject.yaml
 python3 scripts/merge_reject_from_loyalsoldier.py
 
-# Normalize section comment headings to `# === Title ===` format
+# 将章节注释标题规范化为 `# === Title ===` 格式
 python3 scripts/normalize_yaml_comments.py
 ```
 
-## File Format Rules
+## 文件格式规则
 
-Every `.yaml` rule file **must** start with `payload:` as the root key. Rule types used:
+每个 `.yaml` 规则文件**必须**以 `payload:` 作为根键开头。使用的规则类型：
 
-- `DOMAIN-SUFFIX,example.com` — preferred for most sites
+- `DOMAIN-SUFFIX,example.com` — 大多数网站首选
 - `DOMAIN-KEYWORD,keyword`
 - `IP-CIDR,1.1.1.1/32,no-resolve`
-- `PROCESS-NAME,BinaryName` — use sparingly, desktop apps only
+- `PROCESS-NAME,BinaryName` — 谨慎使用，仅限桌面应用
 
-Use `DOMAIN-SUFFIX` (hyphen), **not** `DOMAIN_SUFFIX` (underscore).
+使用 `DOMAIN-SUFFIX`（连字符），**而非** `DOMAIN_SUFFIX`（下划线）。
 
-## Conventions
+## 约定
 
-- **Naming**: `lowercase.yaml` with hyphens for multi-word names (e.g., `hk-broker.yaml`, `fin-media.yaml`).
-- **Grouping**: Use `# === Service Name ===` comment headers to group rules by service/category.
-- **Catch-all files**: `proxy.yaml` (proxy routing) and `direct.yaml` (direct connection) hold miscellaneous rules. Major services (Apple, Google, Microsoft, AI, etc.) have dedicated files.
-- **reject.yaml** (~7 MB) is auto-generated daily by GitHub Actions from Loyalsoldier's upstream — do not manually edit its `DOMAIN-SUFFIX` entries from that source.
-- **log/**: OpenClash runtime logs (traffic logs and plugin logs). Log entries showing `match Match` indicate domains that didn't match any rule and fell through to the "漏网之鱼" (unmatched) policy group. Periodically review these domains and categorize them into the appropriate rule files.
+- **命名**：新文件使用 `lowercase.yaml`，多词用连字符（如 `hk-broker.yaml`、`fin-media.yaml`）。
+- **分组**：使用 `# === Service Name ===` 注释头按服务/类别分组规则。
+- **兜底文件**：`proxy.yaml`（代理路由）和 `direct.yaml`（直连）存放杂项规则。主要服务（Apple、Google、Microsoft、AI 等）有各自专属文件。
+- **reject.yaml**（约 7 MB）由 GitHub Actions 每日从 Loyalsoldier 上游自动生成 — 请勿手动编辑其中来自上游的 `DOMAIN-SUFFIX` 条目。
+- **log/**：OpenClash 运行日志（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组。需定期将这些域名归类到对应的规则文件中。
 
-## Rule Files
+## 规则文件一览
 
-| File | Description |
-|------|-------------|
-| **apple.yaml** | Apple services (App Store, iCloud, etc.) |
+| 文件 | 说明 |
+|------|------|
+| **apple.yaml** | Apple 服务（App Store、iCloud 等） |
 | **claude.yaml** | Claude / Anthropic |
-| **crypto.yaml** | Cryptocurrency exchanges and wallets |
-| **direct.yaml** | Catch-all for sites that can connect directly — domestic & unblocked overseas |
-| **direct-ai.yaml** | AI services accessible via direct connection |
-| **fin-media.yaml** | Financial media and data |
-| **fin-tech.yaml** | Financial technology tools (TradingView, etc.) |
-| **github.yaml** | GitHub and related developer tools |
-| **google.yaml** | Google services |
-| **hk-bank.yaml** | Hong Kong banks (HSBC, ZA, Welab, etc.) + financial media |
-| **hk-broker.yaml** | Hong Kong brokerages (TradingView, Longbridge, IBKR, etc.) |
-| **line.yaml** | LINE messenger |
-| **meta.yaml** | Facebook, Instagram, WhatsApp, Threads |
-| **microsoft.yaml** | Microsoft services (Office, Azure, etc.) |
-| **nvidia.yaml** | NVIDIA services |
-| **openai.yaml** | OpenAI (ChatGPT, API, etc.) |
+| **crypto.yaml** | 加密货币交易所与钱包 |
+| **direct.yaml** | 兜底直连 — 国内及可直连的海外域名 |
+| **direct-ai.yaml** | 可直连的 AI 服务 |
+| **fin-media.yaml** | 财经媒体与数据 |
+| **fin-tech.yaml** | 金融科技工具（TradingView 等） |
+| **github.yaml** | GitHub 及相关开发者工具 |
+| **google.yaml** | Google 服务 |
+| **hk-bank.yaml** | 香港银行（汇丰、ZA、汇立等）+ 财经媒体 |
+| **hk-broker.yaml** | 港美股券商（TradingView、长桥、IBKR 等） |
+| **line.yaml** | LINE 即时通讯 |
+| **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
+| **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
+| **nvidia.yaml** | NVIDIA 服务 |
+| **openai.yaml** | OpenAI（ChatGPT、API 等） |
 | **pornhub.yaml** | Pornhub |
-| **proxy.yaml** | Catch-all for sites that need proxy — miscellaneous blocked/overseas domains |
-| **proxy-ai.yaml** | AI services requiring proxy |
-| **reject.yaml** | Ad/tracking/malware blocking — auto-generated from Loyalsoldier upstream, do not manually edit |
-| **social.yaml** | Social platforms (Reddit, Discord, Pinterest, etc.) |
+| **proxy.yaml** | 兜底代理 — 需代理的杂项域名 |
+| **proxy-ai.yaml** | 需代理的 AI 服务 |
+| **reject.yaml** | 广告/追踪/恶意软件拦截 — 由 Loyalsoldier 上游自动生成，勿手动编辑 |
+| **social.yaml** | 社交平台（Reddit、Discord、Pinterest 等） |
 | **spotify.yaml** | Spotify |
-| **streaming.yaml** | Streaming services (Netflix, Disney+, HBO, etc.) |
+| **streaming.yaml** | 流媒体服务（Netflix、Disney+、HBO 等） |
 | **telegram.yaml** | Telegram |
-| **us-broker.yaml** | US brokerages |
+| **us-broker.yaml** | 美股券商 |
 | **x.yaml** | Twitter / X |
 | **youtube.yaml** | YouTube |
 
-## Sync Rule
+## Git 工作流
 
-When `CLAUDE.md` is updated, `CLAUDE.zh-CN.md` must also be updated to stay in sync. After updating, verify both files are fully consistent; if they differ, ask the user how to resolve the discrepancies.
+编辑本地文件时，始终遵循以下顺序：
 
-## Git Workflow
+1. **检查远程** — 执行 `git fetch` 并对比本地与远程（`git status` 或 `git rev-list`）。若远程有新提交，先 `git pull --rebase`。
+2. **编辑本地文件** — 进行修改。
+3. **提交并推送** — 暂存、提交，然后 `git push`。
 
-When editing local files, always follow this sequence:
+确保本地分支与远程同步后再推送，禁止跳过检查直接 push。
 
-1. **Check remote** — run `git fetch` and compare local vs remote (`git status` or `git rev-list`). If remote has new commits, `git pull --rebase` first.
-2. **Edit local files** — make your changes.
-3. **Commit & push** — stage, commit, then `git push`.
+## 提交规范
 
-Never push without first ensuring the local branch is up to date with the remote.
-
-## Commit Convention
-
-- Commit messages should be written in Chinese.
+- 提交信息（commit message）尽量使用中文。
 
 ## CI/CD
 
-A single GitHub Actions workflow (`auto-merge-reject.yml`) runs daily at 00:20 UTC. It calls `scripts/merge_reject_from_loyalsoldier.py` and auto-commits changes to `reject.yaml`.
+单一 GitHub Actions 工作流（`auto-merge-reject.yml`）每日 00:20 UTC 运行，调用 `scripts/merge_reject_from_loyalsoldier.py` 并自动提交 `reject.yaml` 的变更。
