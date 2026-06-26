@@ -107,3 +107,8 @@ payload:
   - IP-CIDR,17.188.183.76/32,no-resolve
   - IP-CIDR,17.188.183.78/32,no-resolve
   - IP-CIDR,17.188.183.79/32,no-resolve
+
+# === Apple Mail IMAPS 推送（2026-06-26 补录）===
+  - IP-CIDR,17.56.9.32/32,no-resolve
+  - IP-CIDR,17.42.251.69/32,no-resolve
+  - IP-CIDR,17.156.192.7/32,no-resolve

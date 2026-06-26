@@ -896,3 +896,6 @@ payload:
   - DOMAIN-SUFFIX,faro-collector-prod-us-east-0.grafana.net
   - DOMAIN-SUFFIX,plausible.io
   - DOMAIN-SUFFIX,uptimekuma.org
+
+# === 漏网之鱼（2026-06-26 补录）CDN ===
+  - DOMAIN-SUFFIX,mintcdn.com

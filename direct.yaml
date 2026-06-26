@@ -7,7 +7,7 @@ payload:
   - DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com
 
 # === 一元机场订阅更新地址 ===
-  - DOMAIN-SUFFIX,sub3.smallstrawberry.com
+  - DOMAIN-SUFFIX,smallstrawberry.com
   - DOMAIN-SUFFIX,virxact.com
 
 # === TMDB ===
@@ -200,6 +200,9 @@ payload:
   - DOMAIN-SUFFIX,vmc.digicert.com
   - DOMAIN-SUFFIX,crt.r2m02.amazontrust.com
   - DOMAIN-SUFFIX,crt.rootg2.amazontrust.com
+
+# === 漏网之鱼（2026-06-26 补录）占位图 CDN ===
+  - DOMAIN-SUFFIX,picsum.photos
 
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,kwrt
