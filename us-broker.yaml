@@ -16,5 +16,6 @@ payload:
   - DOMAIN-SUFFIX,schwab.com
   - DOMAIN-SUFFIX,schwabmail.com
   - DOMAIN-SUFFIX,schwabadvisorcenter.com
+  - DOMAIN-SUFFIX,toslc.thinkorswim.com
 
   - DOMAIN-SUFFIX,fastbull.com
