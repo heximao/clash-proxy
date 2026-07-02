@@ -161,3 +161,13 @@ payload:
 
 # === Google with Fastly CDN ===
   - DOMAIN-SUFFIX,google-ohttp-relay-safebrowsing.fastly-edge.com
+
+# === YouTube ===
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,youtubei.googleapis.com
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,yt.be
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,youtube
