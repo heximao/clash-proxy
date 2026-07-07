@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-本文件为 Claude Code (claude.ai/code) 在本仓库中工作时提供指引。
+本文件为 Claude Code Codex Opencode Hermes Agent 在本仓库中工作时提供指引。
 
 ## 项目概述
 
@@ -41,9 +41,12 @@ python3 scripts/normalize_yaml_comments.py
 
 - **命名**：新文件使用 `lowercase.yaml`，多词用连字符（如 `hk-broker.yaml`、`fin-media.yaml`）。
 - **分组**：使用 `# === Service Name ===` 注释头按服务/类别分组规则。
+- **域名规则文件原则**：
+  1. 大型互联网公司使用独立规则文件
+  2. 其次按照域名所属的服务区分
 - **兜底文件**：`proxy.yaml`（代理路由）和 `direct.yaml`（直连）存放杂项规则。主要服务（Apple、Google、Microsoft、AI 等）有各自专属文件。
 - **reject.yaml**（约 7 MB）由 GitHub Actions 每日从 Loyalsoldier 上游自动生成 — 请勿手动编辑其中来自上游的 `DOMAIN-SUFFIX` 条目。
-- **log/**：OpenClash 运行日志（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组。需定期将这些域名归类到对应的规则文件中。
+- **log/**：OpenClash 运行日志（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组。需定期将这些域名归类到对应的规则文件中。归类漏网之鱼的域名时，使用whois查询域名归属
 
 ## 规则文件一览
 
@@ -89,7 +92,7 @@ python3 scripts/normalize_yaml_comments.py
 
 ## 提交规范
 
-- 提交信息（commit message）尽量使用中文。
+- 提交信息（commit message）使用中文。
 
 ## CI/CD
 
