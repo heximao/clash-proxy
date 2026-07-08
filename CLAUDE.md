@@ -48,7 +48,7 @@ python3 scripts/normalize_yaml_comments.py
 - **reject.yaml**（约 7 MB）由 GitHub Actions 每日从 Loyalsoldier 上游自动生成 — 请勿手动编辑其中来自上游的 `DOMAIN-SUFFIX` 条目。
 - **log/**：OpenClash 运行日志（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组。需定期将这些域名归类到对应的规则文件中。归类漏网之鱼的域名时，使用whois查询域名归属
 
-## 规则文件一览
+## 规则文件一览(非穷举)
 
 | 文件 | 说明 |
 |------|------|
