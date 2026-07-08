@@ -2,6 +2,10 @@
 
 一套长期维护的域名规则集，可在 mihomo / Clash 系列代理软件中引用，实现代理的精准分流。
 
+## 使用建议
+
+- **按需引用**：推荐引用个人常用的规则即可，例如需要精准控制访问`OpenAI`时使用的代理，只引用`openai.yaml`即可，其余规则集不引用，为`openai`分配策略（代理）组之后，再为`Match`设置一个兜底策略（代理）组即可。
+
 ## 支持软件
 
 - OpenClash
@@ -73,12 +77,12 @@ https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
 
 ```yaml
 rule-providers:
-  google:
+  google:                                                                      # 规则集名称，可自定义
     type: http
     behavior: classical
     url: https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
-    path: ./ruleset/google.yaml
-    interval: 86400
+    path: ./rule_provider/google.yaml                                          # 规则集文件存放目录，Openclash安装在OpenWRT的完整默认目录是/etc/openclash/rule_provider 
+    interval: 86400                                                            # 自动更新时间，单位秒，86400 = 24 小时
 ```
 
 ### Clash Verge
@@ -93,10 +97,7 @@ rule-providers:
     interval: 86400
 ```
 
-## 更新机制
 
-- 主要规则文件不定期手动更新
-- `reject.yaml` 由 GitHub Actions 每日自动同步 [Loyalsoldier](https://github.com/Loyalsoldier) 上游规则
 
 ## 反馈
 
