@@ -20,6 +20,7 @@
 | 文件 | 说明 |
 |------|------|
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
+| **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
 | **claude.yaml** | Claude / Anthropic |
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct-ai.yaml** | 可直连的 AI 服务 |
@@ -34,6 +35,7 @@
 | **line.yaml** | LINE |
 | **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
 | **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
+| **netease-music.yaml** | 网易云音乐 |
 | **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
 | **pornhub.yaml** | Pornhub |
@@ -44,7 +46,10 @@
 | **spotify.yaml** | Spotify |
 | **streaming.yaml** | Netflix、Disney+、HBO 等 |
 | **telegram.yaml** | Telegram |
+| **us-bank.yaml** | 美国银行 |
 | **us-broker.yaml** | 美股券商，建议优先直连 |
+| **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
+| **wechat.yaml** | 微信（国内域名，可直连） |
 | **x.yaml** | Twitter / X |
 | **youtube.yaml** | YouTube |
 
