@@ -1,11 +1,10 @@
 payload:
 
 # === 券商 ===
-  - DOMAIN-SUFFIX,tradingview.com
 
   - DOMAIN-SUFFIX,firstrade.com
   - DOMAIN-SUFFIX,firstrade.net
-
+# 盈透
   - DOMAIN-SUFFIX,interactivebrokers.com.hk
   - DOMAIN-SUFFIX,interactivebrokers.com.cn
   - DOMAIN-SUFFIX,interactivebrokers.com
@@ -13,10 +12,12 @@ payload:
 
   - DOMAIN-SUFFIX,www.clientam.com
 
+# 嘉信理财
   - DOMAIN-SUFFIX,schwab.com
   - DOMAIN-SUFFIX,schwabcdn.com
   - DOMAIN-SUFFIX,schwabmail.com
   - DOMAIN-SUFFIX,schwabadvisorcenter.com
   - DOMAIN-SUFFIX,toslc.thinkorswim.com
+  - DOMAIN-SUFFIX,launchdarkly.com
 
   - DOMAIN-SUFFIX,fastbull.com
