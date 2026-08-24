@@ -1,0 +1,6 @@
+payload:
+# === Firefox ===
+  - DOMAIN-SUFFIX,firefox.com
+  - DOMAIN-SUFFIX,mozilla.com
+  - DOMAIN-SUFFIX,mozilla.net
+  - DOMAIN-SUFFIX,mozilla.org
