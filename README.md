@@ -26,8 +26,12 @@
 
 | 文件 | 说明 |
 |------|------|
+| **alibaba-global.yaml** | 阿里巴巴海外服务（待补充） |
+| **alibaba.yaml** | 阿里巴巴 / 阿里系服务（待补充） |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
 | **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
+| **bytedance-global.yaml** | 字节跳动海外服务（TikTok 等，待补充） |
+| **bytedance.yaml** | 字节跳动（抖音、飞书、豆包等） |
 | **claude.yaml** | Claude / Anthropic |
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct-ai.yaml** | 可直连的 AI 服务 |
@@ -35,6 +39,7 @@
 | **dns.yaml** | DNS 服务器 |
 | **fin-media.yaml** | 财经媒体与数据 |
 | **fin-tech.yaml** | 金融科技工具 |
+| **firefox.yaml** | Firefox / Mozilla |
 | **github.yaml** | GitHub 及相关开发工具 |
 | **google.yaml** | Google 服务 |
 | **hk-bank.yaml** | 香港银行（汇丰、ZA、WeLab 等） |
@@ -45,19 +50,24 @@
 | **netease-music.yaml** | 网易云音乐 |
 | **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
+| **paypal.yaml** | PayPal（待补充） |
 | **pornhub.yaml** | Pornhub |
 | **proxy-ai.yaml** | 需代理的 AI 服务 |
 | **proxy.yaml** | 需代理的杂项域名 |
 | **reject.yaml** | 广告/追踪/恶意软件拦截（自动同步，勿手动编辑） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
 | **spotify.yaml** | Spotify |
+| **steam.yaml** | Steam 游戏平台（待补充） |
 | **streaming.yaml** | Netflix、Disney+、HBO 等 |
 | **telegram.yaml** | Telegram |
-| **us-bank.yaml** | 美国银行 |
+| **tencent-global.yaml** | 腾讯海外服务 |
+| **tencent.yaml** | 腾讯 / 微信 |
+| **us-bank.yaml** | 美国银行（待补充） |
 | **us-broker.yaml** | 美股券商，建议优先直连 |
 | **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
 | **wechat.yaml** | 微信（国内域名，可直连） |
 | **x.yaml** | Twitter / X |
+| **xhs.yaml** | 小红书（待补充） |
 | **youtube.yaml** | YouTube |
 
 ## 引用方式
