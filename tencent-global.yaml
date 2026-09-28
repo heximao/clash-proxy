@@ -3,4 +3,3 @@ payload:
   - DOMAIN-SUFFIX,tgalileo.com
   - DOMAIN,sg.tgalileo.com
   - IP-CIDR,43.156.86.223/32,no-resolve
-  - PROCESS-NAME,WorkBuddy AI Helper
