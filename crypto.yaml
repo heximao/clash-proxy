@@ -20,3 +20,13 @@ payload:
 # === WalletConnect ===
   - DOMAIN-SUFFIX,walletconnect.com
   - DOMAIN-SUFFIX,walletconnect.org
+
+# === Hyperliquid（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,hyperliquid.xyz
+
+# === 行情数据 / Web3 基础设施（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,coingecko.com
+  - DOMAIN-SUFFIX,coinyep.com
+  - DOMAIN-SUFFIX,web3modal.org
+  - DOMAIN-SUFFIX,privy.io
+  - DOMAIN-SUFFIX,magic.link

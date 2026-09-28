@@ -9,3 +9,9 @@ payload:
   
   - DOMAIN-SUFFIX,usmart.hk
   - DOMAIN-SUFFIX,usmart.sg
+
+# === 长桥 CDN（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,wbrks.com
+
+# === uSMART（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,usmartglobal.com

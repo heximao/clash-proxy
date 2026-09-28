@@ -3,3 +3,6 @@ payload:
   - DOMAIN-SUFFIX,tgalileo.com
   - DOMAIN,sg.tgalileo.com
   - IP-CIDR,43.156.86.223/32,no-resolve
+  # === WorkBuddy / CodeBuddy（腾讯海外 AI，2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,workbuddy.ai
+  - DOMAIN-SUFFIX,codebuddy.ai

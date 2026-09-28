@@ -40,3 +40,17 @@ payload:
   - DOMAIN-SUFFIX,io.net
   - DOMAIN-SUFFIX,ionet.betteruptime.com
   - DOMAIN-SUFFIX,status.io.net
+# === 漏网之鱼（2026-09-29 补录）AI 服务 ===
+  - DOMAIN-SUFFIX,newapi.ai
+  - DOMAIN-SUFFIX,newapi.pro
+  - DOMAIN-SUFFIX,parallel.ai
+  - DOMAIN-SUFFIX,cua.ai
+  - DOMAIN-SUFFIX,keenable.ai
+  - DOMAIN-SUFFIX,flova.ai
+  - DOMAIN-SUFFIX,lobehub.com
+  - DOMAIN-SUFFIX,manus.space
+  - DOMAIN-SUFFIX,agentlane.com
+  - DOMAIN-SUFFIX,ccswitch.io
+  - DOMAIN-SUFFIX,skills.sh
+  - DOMAIN-SUFFIX,skill-history.com
+  - DOMAIN-SUFFIX,browse.sh

@@ -9,3 +9,11 @@ payload:
   - DOMAIN-SUFFIX,rdcpix.com
   - DOMAIN-SUFFIX,seekingalpha.com
   - DOMAIN-SUFFIX,investing.com
+
+# === 美国证监会（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sec.gov
+
+# === 交易学习/比价站点（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,tradingcode.net
+  - DOMAIN-SUFFIX,trading-strategies.academy
+  - DOMAIN-SUFFIX,biggo.com

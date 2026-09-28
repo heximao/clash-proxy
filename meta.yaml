@@ -4,6 +4,7 @@ payload:
   - DOMAIN-SUFFIX,meta.com
   - DOMAIN-SUFFIX,fb.com
   - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,facebook.net
   - DOMAIN-SUFFIX,instagram.com
   - DOMAIN-SUFFIX,whatsapp.com
   - DOMAIN-SUFFIX,messenger.com

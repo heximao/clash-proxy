@@ -7,3 +7,6 @@ payload:
   - DOMAIN-SUFFIX,githubapp.com
   - DOMAIN-SUFFIX,githubcopilot.com
   - DOMAIN-SUFFIX,ghcr.io
+
+# === GitHub 相关工具（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,star-history.com

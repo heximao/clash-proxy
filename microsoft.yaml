@@ -72,6 +72,9 @@ payload:
   - DOMAIN-SUFFIX,msecnd.net
   - DOMAIN-SUFFIX,nuget.org
 
+# === Playwright（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,playwright.dev
+
 # === 第三方依赖服务 ===
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,algolia.net

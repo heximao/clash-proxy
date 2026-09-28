@@ -204,6 +204,15 @@ payload:
 # === 漏网之鱼（2026-06-26 补录）占位图 CDN ===
   - DOMAIN-SUFFIX,picsum.photos
 
+# === 60s API 文档（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,60s-api.viki.moe
+
+# === Bob 翻译作者 CDN（2026-09-29 漏网之鱼补录）===
+  - DOMAIN,cdn.ripperhe.com
+
+# === IANA WHOIS（2026-09-29 漏网之鱼补录）===
+  - IP-CIDR,192.0.32.59/32,no-resolve
+
 # === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
   - DOMAIN-SUFFIX,kwrt
   - DOMAIN-SUFFIX,lan

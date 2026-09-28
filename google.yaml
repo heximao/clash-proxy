@@ -19,6 +19,7 @@ payload:
   - DOMAIN-SUFFIX,google
   - DOMAIN-SUFFIX,google.com
   - DOMAIN-SUFFIX,google.com.hk
+  - DOMAIN-SUFFIX,google.co.jp
   - DOMAIN-SUFFIX,google.dev
 
 # === Google 核心 IP ===
@@ -44,7 +45,9 @@ payload:
     
 # === Antigravity（重力实验/AI 相关） ===
   - DOMAIN-SUFFIX,antigravity.google 
-  - DOMAIN-SUFFIX,antigravity-auto-updater-974169037036.us-central1.run.app
+
+# === Google Cloud Run（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,a.run.app
 
   - DOMAIN-SUFFIX,app-analytics-services.com
   

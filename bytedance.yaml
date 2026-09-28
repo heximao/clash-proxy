@@ -7,3 +7,5 @@ payload:
   - DOMAIN-SUFFIX,feishu.cn
   # === Short URL / 短链 ===
   - DOMAIN-SUFFIX,bdurl.net
+  # === VisActor 开源可视化（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,visactor.io

@@ -112,3 +112,9 @@ payload:
   - IP-CIDR,17.56.9.32/32,no-resolve
   - IP-CIDR,17.42.251.69/32,no-resolve
   - IP-CIDR,17.156.192.7/32,no-resolve
+
+# === Apple 推送 apsd（2026-09-29 漏网之鱼补录）===
+  - IP-CIDR,17.57.145.0/24,no-resolve
+
+# === Apple NTP 时间同步 timed（2026-09-29 漏网之鱼补录）===
+  - IP-CIDR,17.253.0.0/16,no-resolve

@@ -1,4 +1,9 @@
 payload:
+  # === 漏网之鱼（2026-09-29 手动补录）疑似追踪域名（NameCheap+Cloudflare 无主体信息，浏览器后台加载）===
+  - DOMAIN-SUFFIX,hibchr.com
+  - DOMAIN-SUFFIX,antpeak.com
+  - DOMAIN-SUFFIX,zorvian.com
+  - DOMAIN-SUFFIX,premzon.com
 
 # === 直接拦截丢弃请求，均为广告 ===
   - DOMAIN-SUFFIX,ad.weixin.qq.com

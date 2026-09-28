@@ -9,3 +9,8 @@ payload:
   # === netflix ===
   - DOMAIN-SUFFIX,fast.com
   - DOMAIN-SUFFIX,netflix.com
+
+# === Twitch（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,live-video.net
+  - DOMAIN-SUFFIX,twitchcdn.net
+  - DOMAIN-SUFFIX,pscp.tv

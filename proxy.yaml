@@ -893,3 +893,54 @@ payload:
 
 # === 漏网之鱼（2026-06-26 补录）CDN ===
   - DOMAIN-SUFFIX,mintcdn.com
+
+# === Riot Games（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,lolesports.com
+
+# === 漏网之鱼（2026-09-29 补录）证书验证 ===
+  - DOMAIN-SUFFIX,lencr.org
+  - DOMAIN,crt.sectigo.com
+  - DOMAIN,ocsp.comodoca4.com
+
+# === 漏网之鱼（2026-09-29 补录）开发者工具 ===
+  - DOMAIN-SUFFIX,pythonhosted.org
+  - DOMAIN-SUFFIX,astral.sh
+  - DOMAIN-SUFFIX,open-vsx.org
+  - DOMAIN-SUFFIX,rgpub.io
+
+# === 漏网之鱼（2026-09-29 补录）文档/状态页平台 ===
+  - DOMAIN-SUFFIX,gitbook.io
+  - DOMAIN-SUFFIX,statuspage.io
+
+# === 漏网之鱼（2026-09-29 补录）AWS ===
+  - DOMAIN-SUFFIX,awswaf.com
+  - DOMAIN-SUFFIX,on.aws
+
+# === 漏网之鱼（2026-09-29 补录）网站功能组件（客服/合规/分析） ===
+  - DOMAIN-SUFFIX,easychat.co
+  - DOMAIN-SUFFIX,omnichat.ai
+  - DOMAIN-SUFFIX,smartlook.cloud
+  - DOMAIN,cdn-ukwest.onetrust.com
+  - DOMAIN,privacyportal-uk.onetrust.com
+  - DOMAIN,cdn.cookielaw.org
+  - DOMAIN,cmp.osano.com
+  - DOMAIN,cdp.customer.io
+  - DOMAIN,blacklist.tampermonkey.net
+
+# === 漏网之鱼（2026-09-29 补录）Docker Registry 别名 ===
+  - DOMAIN-SUFFIX,prodregistryv2.org
+
+# === 漏网之鱼（2026-09-29 补录）杂项站点 ===
+  - DOMAIN-SUFFIX,manyvids.com
+  - DOMAIN-SUFFIX,numuki.com
+  - DOMAIN-SUFFIX,printfriendly.com
+  - DOMAIN-SUFFIX,split-tool.com
+  - DOMAIN-SUFFIX,xiaowan.hk
+  - DOMAIN-SUFFIX,cdnfonts.com
+  - DOMAIN-SUFFIX,bootstrapcdn.com
+  - DOMAIN-SUFFIX,sublimetext.com
+  - DOMAIN-SUFFIX,sublimehq.com
+  - DOMAIN-SUFFIX,gfis.info
+  - DOMAIN-SUFFIX,aisecmatrix.org
+  - DOMAIN,api.sunbreak.com
+  - DOMAIN,cvs.prohost.org
