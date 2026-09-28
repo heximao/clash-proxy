@@ -1,3 +1,9 @@
 payload:
-  # X
-  - DOMAIN-SUFFIX,
+  # === ByteDance / 字节跳动 ===
+  - DOMAIN-SUFFIX,bytedance.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,doubao.com
+  # === Feishu / 飞书 ===
+  - DOMAIN-SUFFIX,feishu.cn
+  # === Short URL / 短链 ===
+  - DOMAIN-SUFFIX,bdurl.net
