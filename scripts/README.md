@@ -31,7 +31,7 @@
 python3 scripts/find_duplicates.py
 ```
 
-脚本始终以退出码 0 结束，发现重复时需人工查看报告并决定保留位置。
+**退出码**：无任何重复时为 `0`；存在跨文件重复或文件内重复时为 `1`（报告照常生成），便于在 shell 或 CI 中直接用退出码做门禁。终端同时会打印两类重复的数量汇总；具体重复了哪些规则仍需查看 `DUPLICATES.md`。
 
 ## merge_reject_from_loyalsoldier.py
 

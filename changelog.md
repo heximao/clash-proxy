@@ -1,5 +1,11 @@
 # 更新记录
 
+## 2026-09-29 find_duplicates.py 退出码反映重复检查结果
+
+- 脚本原先无论是否存在重复都以退出码 0 结束，无法在 shell / CI 中作为门禁；现改为：**无重复退出 0，存在跨文件或文件内重复退出 1**（两种情况下报告均照常生成）。
+- 终端新增重复数量汇总输出（跨文件重复规则数、文件内重复条目数）。
+- 同步更新 `scripts/README.md` 与本地 `AGENTS.md` 的自检闭环说明。
+
 ## 2026-09-29 scripts/duplicates.json 取消版本跟踪并加入 .gitignore
 
 - `find_duplicates.py` 生成的 `scripts/duplicates.json` 体积约 17MB 且为可随时再生成的本地产物，改用 `git rm --cached` 取消跟踪（本地文件保留），并在 `.gitignore` 中忽略。
