@@ -22,7 +22,7 @@
 运行后在 `scripts/` 目录（与脚本同级）生成两份报告：
 
 - `scripts/DUPLICATES.md`：人类可读的 Markdown 报告；
-- `scripts/duplicates.json`：机器可读的 JSON，包含每条规则所在文件列表（`rule_map`）和每个文件的内部重复项（`file_dups`）。
+- `scripts/duplicates.json`：机器可读的 JSON，包含每条规则所在文件列表（`rule_map`）和每个文件的内部重复项（`file_dups`）。体积较大，已加入 `.gitignore`，仅在本地生成、不入库；需要时运行脚本即可重新生成。
 
 扫描范围始终是运行时的当前目录（仓库根目录），仅报告输出路径固定在脚本所在目录。
 

@@ -1,5 +1,10 @@
 # 更新记录
 
+## 2026-09-29 scripts/duplicates.json 取消版本跟踪并加入 .gitignore
+
+- `find_duplicates.py` 生成的 `scripts/duplicates.json` 体积约 17MB 且为可随时再生成的本地产物，改用 `git rm --cached` 取消跟踪（本地文件保留），并在 `.gitignore` 中忽略。
+- `scripts/DUPLICATES.md` 仍保留版本跟踪；同步更新 `scripts/README.md` 说明。
+
 ## 2026-09-29 scripts 目录补充 README，重复报告输出路径移至 scripts/
 
 - 新增 `scripts/README.md`：说明 `find_duplicates.py`、`merge_reject_from_loyalsoldier.py`、`normalize_yaml_comments.py` 三个脚本的用途、用法、输出产物、运行目录要求及与每日 GitHub Actions 的关系。
