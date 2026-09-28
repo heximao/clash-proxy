@@ -1,5 +1,10 @@
 # 更新记录
 
+## 2026-09-29 去重：youtu.be、ytimg.com 仅保留在 youtube.yaml
+
+- `DOMAIN-SUFFIX,youtu.be`、`DOMAIN-SUFFIX,ytimg.com` 此前同时存在于 `google.yaml`、`proxy.yaml`、`youtube.yaml`，现按服务归属仅在 `youtube.yaml` 保留，从另外两个文件删除。
+- 重复检查跨文件重复数由 64 降至 62，两个被编辑文件 YAML 语法校验通过。
+
 ## 2026-09-29 find_duplicates.py 退出码反映重复检查结果
 
 - 脚本原先无论是否存在重复都以退出码 0 结束，无法在 shell / CI 中作为门禁；现改为：**无重复退出 0，存在跨文件或文件内重复退出 1**（两种情况下报告均照常生成）。
