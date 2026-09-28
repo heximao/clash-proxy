@@ -8,6 +8,8 @@ from pathlib import Path
 import json
 
 root = Path('.')
+# Reports are written next to this script (scripts/), while scanning stays at repo root.
+out_dir = Path(__file__).resolve().parent
 files = sorted(root.rglob('*.yaml'))
 rule_re = re.compile(r"^\s*-\s*(.+)$")
 
@@ -50,10 +52,10 @@ for f, dups in file_dups.items():
         for r in dups:
             md.append(f'  - `{r}`')
 
-(Path(root) / 'DUPLICATES.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
-(Path(root) / 'duplicates.json').write_text(json.dumps({'rule_map': {k:sorted(list(v)) for k,v in rule_map.items()}, 'file_dups': file_dups}, indent=2), encoding='utf-8')
+(out_dir / 'DUPLICATES.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+(out_dir / 'duplicates.json').write_text(json.dumps({'rule_map': {k:sorted(list(v)) for k,v in rule_map.items()}, 'file_dups': file_dups}, indent=2), encoding='utf-8')
 
-print('Wrote DUPLICATES.md and duplicates.json')
+print(f'Wrote {out_dir / "DUPLICATES.md"} and {out_dir / "duplicates.json"}')
 
 # Exit status
 import sys

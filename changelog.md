@@ -1,5 +1,11 @@
 # 更新记录
 
+## 2026-09-29 scripts 目录补充 README，重复报告输出路径移至 scripts/
+
+- 新增 `scripts/README.md`：说明 `find_duplicates.py`、`merge_reject_from_loyalsoldier.py`、`normalize_yaml_comments.py` 三个脚本的用途、用法、输出产物、运行目录要求及与每日 GitHub Actions 的关系。
+- `find_duplicates.py` 生成的 `DUPLICATES.md`、`duplicates.json` 由仓库根目录改为输出到脚本所在的 `scripts/` 目录（`Path(__file__).parent`），扫描范围仍为仓库根目录。
+- 已通过 `git mv` 将现有两份报告迁移至 `scripts/`，保留重命名历史。
+
 ## 2026-09-29 漏网之鱼日志归类（log/ 子目录 clashx 日志全量提取）
 
 数据来源：`log/` 下 19 个子目录中的 clashx_*.log 与 clashx_mihomo.log，提取落入兜底 `match Match`（漏网之鱼）规则的目标，去重后共 **183 个**（域名 169 + 裸 IP 14）。经 whois 归属查询与进程上下文核对后分类如下：
