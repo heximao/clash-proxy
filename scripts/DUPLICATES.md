@@ -2,9 +2,7 @@
 
 Rules appearing in more than one file:
 
-- `DOMAIN-SUFFIX,`: 5 files
-  - alibaba-global.yaml
-  - alibaba.yaml
+- `DOMAIN-SUFFIX,`: 3 files
   - paypal.yaml
   - steam.yaml
   - xhs.yaml
