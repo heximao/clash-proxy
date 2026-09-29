@@ -30,7 +30,7 @@
 | **alibaba.yaml** | 阿里巴巴 / 阿里系服务（待补充） |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
 | **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
-| **bytedance-global.yaml** | 字节跳动海外服务（TikTok 等，待补充） |
+| **bytedance-global.yaml** | 字节跳动海外服务（Trae 国际版、TikTok 等） |
 | **bytedance.yaml** | 字节跳动（抖音、飞书、豆包等） |
 | **claude.yaml** | Claude / Anthropic |
 | **crypto.yaml** | 加密货币交易所与钱包 |
