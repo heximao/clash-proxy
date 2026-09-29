@@ -26,8 +26,8 @@
 
 | 文件 | 说明 |
 |------|------|
-| **alibaba-global.yaml** | 阿里巴巴海外服务（待补充） |
-| **alibaba.yaml** | 阿里巴巴 / 阿里系服务（待补充） |
+| **alibaba-global.yaml** | 阿里巴巴海外服务（ModelScope 国际版等） |
+| **alibaba.yaml** | 阿里巴巴 / 阿里系服务（ModelScope 魔搭等） |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
 | **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
 | **bytedance-global.yaml** | 字节跳动海外服务（Trae 国际版、TikTok 等） |
