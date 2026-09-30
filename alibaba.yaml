@@ -1,3 +1,13 @@
 payload:
   # === ModelScope ===
   - DOMAIN-SUFFIX,modelscope.cn
+  # === 淘宝 / 天猫 / 阿里巴巴（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,alibaba.com
+  - DOMAIN-SUFFIX,alibaba-inc.com
+  # === CDN / 云（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,alicdn.com
+  - DOMAIN-SUFFIX,aliyun.com
+  # === 高德地图（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,autonavi.com

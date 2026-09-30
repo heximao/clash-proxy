@@ -9,3 +9,5 @@ payload:
   - DOMAIN-SUFFIX,freemodel.dev
   - DOMAIN-SUFFIX,minimax.io
   - DOMAIN-SUFFIX,aihubmix.com
+  # === DeepSeek（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,deepseek.com

@@ -10,3 +10,8 @@ payload:
   - DOMAIN-SUFFIX,hdslb.com
   - DOMAIN,upos-hz-mirrorakam.akamaized.net
   - DOMAIN,apiintl.biliapi.net
+  # === CDN / 关联域（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,biliimg.com
+  - DOMAIN-SUFFIX,bilivideo.cn
+  - DOMAIN-SUFFIX,biligame.com
+  - DOMAIN-SUFFIX,solseed.cn

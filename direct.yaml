@@ -234,3 +234,18 @@ payload:
   - IP-CIDR6,fc00::/7
   - IP-CIDR6,fe80::/10
   - IP-CIDR6,ff00::/8
+
+# === 域名查询 / RDAP（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,rdap.org
+  - DOMAIN-SUFFIX,identitydigital.services
+  - DOMAIN-SUFFIX,publicinterestregistry.org
+
+# === 路由器固件 / NAS 生态（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,koolcenter.com
+  - DOMAIN-SUFFIX,linkease.com
+  - DOMAIN-SUFFIX,istoreos.com
+  - DOMAIN-SUFFIX,ddnsto.com
+
+# === 其他国内站点（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,zhihu.com
+  - DOMAIN-SUFFIX,mountaintoys.cn

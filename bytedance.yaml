@@ -5,7 +5,17 @@ payload:
   - DOMAIN-SUFFIX,doubao.com
   # === Feishu / 飞书 ===
   - DOMAIN-SUFFIX,feishu.cn
+  - DOMAIN-SUFFIX,larkoffice.com
   # === Short URL / 短链 ===
   - DOMAIN-SUFFIX,bdurl.net
   # === VisActor 开源可视化（2026-09-29 漏网之鱼补录）===
   - DOMAIN-SUFFIX,visactor.io
+  # === 火山引擎 / 基础设施（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,volces.com
+  - DOMAIN-SUFFIX,volccdn.com
+  # === Trae CN（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,trae.cn
+  - DOMAIN-SUFFIX,trae.com.cn
+  - DOMAIN-SUFFIX,mchost.guru

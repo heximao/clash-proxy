@@ -1,3 +1,6 @@
 payload:
-  - DOMAIN-SUFFIX,wx.qlogo.cn
   - DOMAIN-SUFFIX,wximg.wxs.qq.com
+  # === 微信图片 / JSBridge（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,qlogo.cn
+  - DOMAIN-SUFFIX,qpic.cn
+  - DOMAIN-SUFFIX,weixinbridge.com
