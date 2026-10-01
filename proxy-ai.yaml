@@ -54,3 +54,6 @@ payload:
   - DOMAIN-SUFFIX,skills.sh
   - DOMAIN-SUFFIX,skill-history.com
   - DOMAIN-SUFFIX,browse.sh
+
+# === 漏网之鱼（2026-09-30 补录）AI 阅读/搜索 API ===
+  - DOMAIN-SUFFIX,jina.ai

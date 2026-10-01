@@ -942,3 +942,10 @@ payload:
   - DOMAIN-SUFFIX,aisecmatrix.org
   - DOMAIN,api.sunbreak.com
   - DOMAIN,cvs.prohost.org
+
+# === 漏网之鱼（2026-09-30 补录）云服务商 ===
+  - DOMAIN-SUFFIX,nube.sh
+
+# === 漏网之鱼（2026-09-30 补录）交易框架 ===
+  - DOMAIN-SUFFIX,pynesys.io
+  - DOMAIN-SUFFIX,pynecore.org
