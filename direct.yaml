@@ -185,7 +185,7 @@ payload:
 
 # === 漏网之鱼-直连 ===
   - DOMAIN-SUFFIX,model.uprime.cc.cd
-  - DOMAIN-SUFFIX,wechat.zoro.build
+  - DOMAIN-SUFFIX,zoro.build
   - DOMAIN-SUFFIX,werss.csol.store
 
 # === 漏网之鱼（2026-06-19 补录）===
@@ -249,3 +249,22 @@ payload:
 # === 其他国内站点（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,zhihu.com
   - DOMAIN-SUFFIX,mountaintoys.cn
+
+# === 中国移动（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,10086.cn
+  - DOMAIN-SUFFIX,chinamobile.com
+  - DOMAIN-SUFFIX,online-cmcc.cn
+  - DOMAIN-SUFFIX,cmcc-cs.cn
+  - DOMAIN-SUFFIX,komect.com
+  - DOMAIN-SUFFIX,mmarket.com
+  - DOMAIN-SUFFIX,miguvideo.com
+
+# === 中国电信（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,189.cn
+
+# === 开发者服务（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,dcloud.net.cn
+  - DOMAIN-SUFFIX,packagecontrol.io
+
+# === 其他国内站点（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,telefen.com

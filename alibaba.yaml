@@ -11,3 +11,4 @@ payload:
   - DOMAIN-SUFFIX,aliyun.com
   # === 高德地图（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,autonavi.com
+  - DOMAIN-SUFFIX,amap.com

@@ -7,3 +7,5 @@ payload:
   # === WorkBuddy / Buddy（腾讯 AI，2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,workbuddy.cn
   - DOMAIN-SUFFIX,tencentbuddy.com
+  # === 腾讯云（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,myqcloud.com

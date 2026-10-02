@@ -68,7 +68,7 @@
 | **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
 | **wechat.yaml** | 微信（国内域名，可直连） |
 | **x.yaml** | Twitter / X |
-| **xhs.yaml** | 小红书（待补充） |
+| **xhs.yaml** | 小红书 / RedNote |
 | **youtube.yaml** | YouTube |
 
 ## 引用方式

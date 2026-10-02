@@ -11,3 +11,7 @@ payload:
   - DOMAIN-SUFFIX,aihubmix.com
   # === DeepSeek（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,deepseek.com
+  # === 商汤 SenseNova / SenseCore（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sensenova.cn
+  - DOMAIN-SUFFIX,sensecore.cn
+  - DOMAIN-SUFFIX,sensecoreapi.cn

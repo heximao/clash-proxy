@@ -10,3 +10,6 @@ payload:
 
 # === GitHub 相关工具（2026-09-29 漏网之鱼补录）===
   - DOMAIN-SUFFIX,star-history.com
+
+# === GitHub Status（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,githubstatus.com
