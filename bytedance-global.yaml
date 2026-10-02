@@ -1,3 +1,6 @@
 payload:
 # === Trae AI IDE（海外版）===
   - DOMAIN-SUFFIX,trae.ai
+
+# === Lark（国际版）（2026-10-01 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,larksuite.com

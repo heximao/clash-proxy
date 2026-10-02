@@ -38,9 +38,6 @@ Rules appearing in more than one file:
 - `DOMAIN-SUFFIX,boomtrain.com`: 2 files
   - proxy.yaml
   - reject.yaml
-- `DOMAIN-SUFFIX,clarity.ms`: 2 files
-  - microsoft.yaml
-  - reject.yaml
 - `DOMAIN-SUFFIX,demdex.net`: 2 files
   - proxy.yaml
   - reject.yaml

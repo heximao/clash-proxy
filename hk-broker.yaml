@@ -2,6 +2,7 @@ payload:
 
 # === 券商 ===
   - DOMAIN-SUFFIX,longbridge.com
+  - DOMAIN-SUFFIX,longbridge.cn
   - DOMAIN-SUFFIX,longbridgewhale.com
   - DOMAIN-SUFFIX,lbkrs.com
   - DOMAIN-SUFFIX,lbctrl.com

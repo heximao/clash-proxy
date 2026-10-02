@@ -1,9 +1,14 @@
+.agents/
 .claude/
 .omc/
 log/
+.trae/
 .workbuddy-ai/
+.workbuddy/
+.codebuddy/
 AGENTS.md
 CLAUDE.md
+changelog.md
 
 # find_duplicates.py 生成的大体积机器可读报告（本地生成，不入库）
 scripts/duplicates.json
