@@ -16,9 +16,6 @@ Rules appearing in more than one file:
 - `DOMAIN-SUFFIX,dowjones.io`: 2 files
   - fin-media.yaml
   - hk-bank.yaml
-- `DOMAIN-SUFFIX,googlevideo.com`: 2 files
-  - google.yaml
-  - youtube.yaml
 - `DOMAIN-SUFFIX,investing.com`: 2 files
   - fin-media.yaml
   - hk-bank.yaml
@@ -46,21 +43,6 @@ Rules appearing in more than one file:
 - `DOMAIN-SUFFIX,settings.crashlytics.com`: 2 files
   - direct.yaml
   - google.yaml
-- `DOMAIN-SUFFIX,youtube`: 2 files
-  - google.yaml
-  - youtube.yaml
-- `DOMAIN-SUFFIX,youtube-nocookie.com`: 2 files
-  - google.yaml
-  - youtube.yaml
-- `DOMAIN-SUFFIX,youtube.com`: 2 files
-  - google.yaml
-  - youtube.yaml
-- `DOMAIN-SUFFIX,youtubei.googleapis.com`: 2 files
-  - google.yaml
-  - youtube.yaml
-- `DOMAIN-SUFFIX,yt.be`: 2 files
-  - google.yaml
-  - youtube.yaml
 
 Per-file intra-file duplicates (same rule repeated within the same file):
 
