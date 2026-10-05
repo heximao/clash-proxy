@@ -40,18 +40,5 @@ payload:
   - DOMAIN-SUFFIX,airstarbank.com
   - DOMAIN-SUFFIX,airstarbank.com.hk
 
-# === 财经媒体（原 FinaMedia） ===
-
-# === 道琼斯 ===
-  - DOMAIN-SUFFIX,dowjones.ai
-  - DOMAIN-SUFFIX,dowjones.io
-
-# === 财经媒体 ===
-  - DOMAIN-SUFFIX,mansionglobal.com
-  - DOMAIN-SUFFIX,mktw.net
-  - DOMAIN-SUFFIX,rdcpix.com
-  - DOMAIN-SUFFIX,seekingalpha.com
-  - DOMAIN-SUFFIX,investing.com
-
 # === ELE Bank ===
   - DOMAIN-SUFFIX,conn.broker.elebank.com
