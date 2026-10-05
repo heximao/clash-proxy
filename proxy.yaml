@@ -24,7 +24,6 @@ payload:
 
 # === 漏网之鱼（2026-06-06 补录）===
   - DOMAIN-SUFFIX,config.mapbox.com
-  - DOMAIN-SUFFIX,lbctrl.com
   - DOMAIN-SUFFIX,dynatrace.com
   - DOMAIN,browser-intake-us5-datadoghq.com
   - DOMAIN-SUFFIX,influxdata.com
@@ -283,7 +282,6 @@ payload:
   - DOMAIN-SUFFIX,betvictor.com
   - DOMAIN-SUFFIX,bigsound.org
   - DOMAIN-SUFFIX,bintray.com
-  - DOMAIN-SUFFIX,bit.com
   - DOMAIN-SUFFIX,bit.do
   - DOMAIN-SUFFIX,bit.ly
   - DOMAIN-SUFFIX,bitbucket.org
