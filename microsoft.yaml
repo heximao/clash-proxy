@@ -86,3 +86,6 @@ payload:
   - DOMAIN-SUFFIX,chatgpt.livekit.cloud
   - DOMAIN-SUFFIX,host.livekit.cloud
   - DOMAIN-SUFFIX,turn.livekit.cloud
+
+# === Microsoft Clarity（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,clarity.ms

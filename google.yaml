@@ -21,6 +21,7 @@ payload:
   - DOMAIN-SUFFIX,google.com.hk
   - DOMAIN-SUFFIX,google.co.jp
   - DOMAIN-SUFFIX,google.dev
+  - DOMAIN-SUFFIX,google.cn
 
 # === Google 核心 IP ===
   - IP-CIDR,8.8.8.8/32,no-resolve

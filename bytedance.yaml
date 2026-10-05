@@ -19,3 +19,8 @@ payload:
   - DOMAIN-SUFFIX,trae.cn
   - DOMAIN-SUFFIX,trae.com.cn
   - DOMAIN-SUFFIX,mchost.guru
+# === 字节系图片 / 对象存储（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytetos.com
+  - DOMAIN-SUFFIX,byteacctimg.com
+# === MarsCode（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,marscode.cn

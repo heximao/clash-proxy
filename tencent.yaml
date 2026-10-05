@@ -9,3 +9,7 @@ payload:
   - DOMAIN-SUFFIX,tencentbuddy.com
   # === 腾讯云（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,myqcloud.com
+# === 腾讯主域 / CodeBuddy（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,codebuddy.cn
+  - DOMAIN-SUFFIX,ardot.tencent.com
+  - DOMAIN-SUFFIX,galileotelemetry.tencent.com

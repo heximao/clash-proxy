@@ -1,6 +1,16 @@
 payload:
 # === Trae AI IDE（海外版）===
   - DOMAIN-SUFFIX,trae.ai
+  - DOMAIN-SUFFIX,traecdn.ai
+
+# === TikTok（国际版）（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,ttwstatic.com
+  - DOMAIN-SUFFIX,byteoversea.com
+
+# === 字节海外埋点 / APM（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytedapm.com
+  - DOMAIN-SUFFIX,ibytedapm.com
 
 # === Lark（国际版）（2026-10-01 漏网之鱼补录）===
   - DOMAIN-SUFFIX,larksuite.com

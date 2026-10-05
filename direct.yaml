@@ -257,6 +257,30 @@ payload:
   - DOMAIN-SUFFIX,mmarket.com
   - DOMAIN-SUFFIX,miguvideo.com
 
+# === 中国移动（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,10085.cn
+  - DOMAIN-SUFFIX,5gnewcall.cn
+  - DOMAIN-SUFFIX,cmicapm.com
+  - DOMAIN-SUFFIX,cmicrwx.cn
+  - DOMAIN-SUFFIX,gmcc.net
+  - DOMAIN-SUFFIX,migu.cn
+
+# === 金山办公 / WPS（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,wps.cn
+  - DOMAIN-SUFFIX,wpscdn.cn
+  - DOMAIN-SUFFIX,qwps.cn
+  - DOMAIN-SUFFIX,ksosoft.com
+  - DOMAIN-SUFFIX,ksord.com
+
+# === 国内招聘 / 生活服务（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,zhipin.com
+  - DOMAIN-SUFFIX,bosszhipin.com
+  - DOMAIN-SUFFIX,kanzhun.com
+  - DOMAIN-SUFFIX,c-ctrip.com
+
+# === 域名 / IP 查询（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,ipip.net
+
 # === 中国电信（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,189.cn
 
