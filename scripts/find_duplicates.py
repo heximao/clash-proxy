@@ -14,7 +14,10 @@ from pathlib import Path
 root = Path('.')
 # Reports are written next to this script (scripts/), while scanning stays at repo root.
 out_dir = Path(__file__).resolve().parent
-files = sorted(root.rglob('*.yaml'))
+# reject.yaml is machine-generated from the Loyalsoldier upstream and is never
+# edited locally, so duplicates inside or against it are expected and ignored.
+EXCLUDED = {'reject.yaml'}
+files = sorted(p for p in root.rglob('*.yaml') if p.name not in EXCLUDED)
 rule_re = re.compile(r"^\s*-\s*(.+)$")
 
 rule_map = {}  # rule -> set(files)
@@ -46,6 +49,7 @@ intra_dup_total = sum(len(dups) for dups in file_dups.values())
 
 md = []
 md.append('# Duplicate Rules Report\n')
+md.append(f'Scanned {len(files)} YAML files; skipped: {", ".join(sorted(EXCLUDED))}\n')
 md.append('Rules appearing in more than one file:\n')
 for rule, fileset in cross_file:
     md.append(f'- `{rule}`: {len(fileset)} files')
