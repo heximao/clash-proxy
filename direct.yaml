@@ -238,6 +238,10 @@ payload:
   - DOMAIN-SUFFIX,identitydigital.services
   - DOMAIN-SUFFIX,publicinterestregistry.org
 
+# === 域名查询 / RDAP（2026-10-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,verisign.com
+  - DOMAIN-SUFFIX,crt.sh
+
 # === 路由器固件 / NAS 生态（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,koolcenter.com
   - DOMAIN-SUFFIX,linkease.com
@@ -264,6 +268,9 @@ payload:
   - DOMAIN-SUFFIX,cmicrwx.cn
   - DOMAIN-SUFFIX,gmcc.net
   - DOMAIN-SUFFIX,migu.cn
+
+# === 中国移动（2026-10-05 漏网之鱼补录）===
+  - IP-CIDR,120.53.53.53/32,no-resolve
 
 # === 金山办公 / WPS（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,wps.cn

@@ -13,3 +13,5 @@ payload:
   - DOMAIN-SUFFIX,codebuddy.cn
   - DOMAIN-SUFFIX,ardot.tencent.com
   - DOMAIN-SUFFIX,galileotelemetry.tencent.com
+# === Spacelama（2026-10-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,spacelama.com
