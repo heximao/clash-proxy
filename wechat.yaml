@@ -4,3 +4,6 @@ payload:
   - DOMAIN-SUFFIX,qlogo.cn
   - DOMAIN-SUFFIX,qpic.cn
   - DOMAIN-SUFFIX,weixinbridge.com
+
+# === 微信主域（2026-10-06 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,weixin.com

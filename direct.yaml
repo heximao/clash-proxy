@@ -285,6 +285,9 @@ payload:
   - DOMAIN-SUFFIX,kanzhun.com
   - DOMAIN-SUFFIX,c-ctrip.com
 
+# === 国内招聘 / 生活服务（2026-10-06 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,aikobo.cn
+
 # === 域名 / IP 查询（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,ipip.net
 
