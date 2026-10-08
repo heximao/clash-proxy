@@ -251,6 +251,8 @@ payload:
 # === 其他国内站点（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,zhihu.com
   - DOMAIN-SUFFIX,mountaintoys.cn
+  # 知乎图片 CDN（2026-10-07 漏网之鱼补录，与 zhihu.com 同系）
+  - DOMAIN-SUFFIX,zhimg.com
 
 # === 中国移动（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,10086.cn

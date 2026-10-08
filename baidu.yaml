@@ -1,3 +1,5 @@
 payload:
   # === Baidu / 百度（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,baidu.com
+  # 百度静态资源 CDN（2026-10-07 漏网之鱼补录，与 baidu.com 同系）
+  - DOMAIN-SUFFIX,bdstatic.com
