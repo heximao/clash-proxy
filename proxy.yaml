@@ -947,3 +947,17 @@ payload:
 # === 漏网之鱼（2026-09-30 补录）交易框架 ===
   - DOMAIN-SUFFIX,pynesys.io
   - DOMAIN-SUFFIX,pynecore.org
+
+# === 漏网之鱼（2026-10-11 补录）海外 PaaS ===
+  - DOMAIN-SUFFIX,railway.com
+  - DOMAIN-SUFFIX,zeabur.com
+
+# === 漏网之鱼（2026-10-11 补录）AI 编程 / 代码文档 ===
+  - DOMAIN-SUFFIX,deepwiki.com
+  - DOMAIN-SUFFIX,onorca.dev
+
+# === 漏网之鱼（2026-10-11 补录）Mac 资源站 ===
+  - DOMAIN-SUFFIX,macked.site
+
+# === 漏网之鱼（2026-10-11 补录）风控 / 反欺诈 ===
+  - DOMAIN-SUFFIX,turingfraud.net

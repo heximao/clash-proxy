@@ -302,3 +302,9 @@ payload:
 
 # === 其他国内站点（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,telefen.com
+
+# === 其他国内站点（2026-10-11 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,hellogithub.com
+  - DOMAIN-SUFFIX,zvo.cn
+  - DOMAIN-SUFFIX,bobtranslate.com
+  - DOMAIN-SUFFIX,gitcode.com
