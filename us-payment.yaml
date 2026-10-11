@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,pics.paypal.com
   - DOMAIN-SUFFIX,hcaptcha.paypal.com
   - DOMAIN-SUFFIX,newassets.hcaptcha.paypal.com
+  - DOMAIN-SUFFIX,paypalobjects.com
 
 # === Wise ===
   - DOMAIN-SUFFIX,wise.com

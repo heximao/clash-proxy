@@ -52,7 +52,6 @@
 | **netease-music.yaml** | 网易云音乐 |
 | **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
-| **paypal.yaml** | PayPal（待补充） |
 | **pornhub.yaml** | Pornhub |
 | **proxy-ai.yaml** | 需代理的 AI 服务 |
 | **proxy.yaml** | 需代理的杂项域名 |
