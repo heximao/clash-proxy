@@ -5,6 +5,7 @@ payload:
   - DOMAIN-SUFFIX,doubao.com
   # === Feishu / 飞书 ===
   - DOMAIN-SUFFIX,feishu.cn
+  - DOMAIN-SUFFIX,feishucdn.com
   - DOMAIN-SUFFIX,larkoffice.com
   # === Short URL / 短链 ===
   - DOMAIN-SUFFIX,bdurl.net
