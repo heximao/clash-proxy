@@ -25,3 +25,5 @@ payload:
   - DOMAIN-SUFFIX,byteacctimg.com
 # === MarsCode（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,marscode.cn
+  # === 字节系 API（2026-10-11 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytedanceapi.com
