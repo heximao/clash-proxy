@@ -82,6 +82,8 @@ payload:
   - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN-SUFFIX,segment.io
   - DOMAIN-SUFFIX,sentry.io
+  # Sentry 浏览器 SDK CDN（2026-10-12 漏网之鱼补录，与 sentry.io 同厂商）
+  - DOMAIN-SUFFIX,sentry-cdn.com
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,chatgpt.livekit.cloud
   - DOMAIN-SUFFIX,host.livekit.cloud
