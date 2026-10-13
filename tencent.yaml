@@ -20,3 +20,4 @@ payload:
 # === 腾讯子域补充（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,copilot.tencent.com
   - DOMAIN-SUFFIX,lightai.cloud.tencent.com
+  - DOMAIN-SUFFIX,time1.cloud.tencent.com
