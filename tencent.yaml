@@ -9,14 +9,17 @@ payload:
   - DOMAIN-SUFFIX,tencentbuddy.com
   # === 腾讯云（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,myqcloud.com
+  - DOMAIN-SUFFIX,cloud.tencent.com
+  - DOMAIN-SUFFIX,tencent-cloud.cn
 # === 腾讯主域 / CodeBuddy（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,codebuddy.cn
   - DOMAIN-SUFFIX,ardot.tencent.com
   - DOMAIN-SUFFIX,galileotelemetry.tencent.com
 # === Spacelama（2026-10-05 漏网之鱼补录）===
   - DOMAIN-SUFFIX,spacelama.com
-# === 腾讯静态资源（2026-10-07 漏网之鱼补录）===
+  # === 腾讯静态资源（2026-10-07 漏网之鱼补录）===
   - DOMAIN-SUFFIX,gtimg.com
+  - DOMAIN-SUFFIX,gtimg.cn
 # === 腾讯子域补充（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,copilot.tencent.com
   - DOMAIN-SUFFIX,lightai.cloud.tencent.com
