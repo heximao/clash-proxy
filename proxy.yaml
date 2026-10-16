@@ -13,6 +13,9 @@ payload:
 # === Linux 社区 ===
   - DOMAIN-SUFFIX,linux.do
   - DOMAIN-SUFFIX,linuxdo.org
+  - DOMAIN-SUFFIX,gnu.org
+# === 安全研究 / 恶意软件库（2026-10-16 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,team-cymru.com
 
 # === 漏网之鱼（2026-06-07 补录）===
   - DOMAIN-SUFFIX,oaistatsig.com
@@ -28,6 +31,7 @@ payload:
   - DOMAIN,browser-intake-us5-datadoghq.com
   - DOMAIN-SUFFIX,influxdata.com
   - DOMAIN-SUFFIX,formulae.brew.sh
+  - DOMAIN-SUFFIX,brew.sh
   - DOMAIN-SUFFIX,revenuecat.com
   - DOMAIN-SUFFIX,da7d.org
   - DOMAIN-SUFFIX,hbbz.top

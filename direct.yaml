@@ -307,3 +307,6 @@ payload:
   - DOMAIN-SUFFIX,zvo.cn
   - DOMAIN-SUFFIX,bobtranslate.com
   - DOMAIN-SUFFIX,gitcode.com
+
+# === 国内教育网镜像（2026-10-16 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,tsinghua.edu.cn
