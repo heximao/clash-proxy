@@ -197,6 +197,7 @@ payload:
   - DOMAIN-SUFFIX,vmc.digicert.com
   - DOMAIN-SUFFIX,crt.r2m02.amazontrust.com
   - DOMAIN-SUFFIX,crt.rootg2.amazontrust.com
+  - DOMAIN-SUFFIX,digicert.cn
 
 # === 漏网之鱼（2026-06-26 补录）占位图 CDN ===
   - DOMAIN-SUFFIX,picsum.photos
