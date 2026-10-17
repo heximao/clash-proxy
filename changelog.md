@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-10-17 fill-domains-from-log skill v2.4.1：归档护栏——app 会话未结束不归档（main 直接提交）
+
+- 触发：v2.4.0 首次实跑（itdog.cn 轮，提交 `14c677c`）发现边界——被处理的日志文件夹 `2026-10-17_08-38-11` 在 `mv` 移入后仍被 ClashX Meta 内核（mihomo，PID 持有 fd 指向新路径）实时写入（core/mihomo 日志 mtime 17:51 持续更新、进程 `pgrep` 确认在运行）。此时归档会让后续写入落入 `log/.archive/`，污染「已处理完不再动」语义并使下轮 diff 找不到今日日志。
+- 改动：skill 第 12 节新增护栏条款「仍在被写入的文件夹不归档」——ClashX Meta 进程在运行 + 日志 mtime 接近当前时间 → 留原地，待 app 重启生成新时间戳文件夹、该文件夹停止增长后再归档。检查方式 `pgrep -fl ClashX` + `ls -lT log/clashx-meta-log/<folder>/`。version v2.4.0 → v2.4.1。
+- 本轮 itdog.cn 日志文件夹 `2026-10-17_08-38-11` 按此护栏**未归档**，留 `log/clashx-meta-log/` 原地待 app 重启后再归档。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 漏网之鱼归类：itdog.cn 归入 direct.yaml（v2.4.0 自主裁决模式首次实跑，main 直接提交）
 
 - **本轮为 fill-domains-from-log skill v2.4.0（自主裁决）首次实跑验证**：全程未向用户提问，归属由 agent 自主裁决 + RDAP/DoH 留痕。流程 `mv 移入 → 提取 → 查重 → 自主裁决 → DoH/dig → 落盘 → 自检` 跑通。
@@ -16,7 +23,7 @@
   - **自主模式核实陷阱留痕**：`mmbiz.qpic.cn` 主域应为 `qpic.cn`（非 `qlogo.cn`），首轮归并时误并到 `qlogo.cn` 致漏查；精确 grep 后确认 `wechat.yaml:5` 已有 `DOMAIN-SUFFIX,qpic.cn` 覆盖，归入已覆盖跳过。**教训：归并主域须逐字符精确，`grep -l` 子串命中后必须回看命中行规则类型与主域字面。**
 - 待人工确认：0 项。
 - 自检结果：`find_duplicates.py` 跨文件重复 1（历史基线 `settings.crashlytics.com` direct/google，非本次引入）、文件内 0、**本次新引入 0 项**；`direct.yaml` payload 数 241、`yaml.safe_load` 通过。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `14c677c` → push（`bc9927c..14c677c`）→ 同步 `0 0`。
 
 ## 2026-10-17 AGENTS.md 同步日志移动制 + fill-domains-from-log skill v2.4.0：归属判定改自主裁决（main 直接提交）
 

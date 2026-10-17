@@ -1,6 +1,6 @@
 ---
 name: fill-domains-from-log
-version: v2.4.0
+version: v2.4.1
 description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，本地查重与进程名粗判后**自主裁决归属**（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行重复检查自检闭环。日志获取采用移动制：将 ~/.config/clash.meta/logs 下的日志移入仓库 log/clashx-meta-log/，本轮分析全部完成（push 并确认 0 0）后将已处理日志归档至同级的 log/.archive/。Git 侧自 2026-10-17 起取消分支制度：每轮开头先 fetch 并把本地 main 追上远程、确认与远程双向 0 0，全部改动直接在 main 上完成并提交，commit 前再查一次同步状态，随后立即 push main 并确认 0 0。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
@@ -260,6 +260,7 @@ mv log/clashx-meta-log/<已处理文件夹> log/.archive/
 ```
 
 - 只归档本轮**确认处理完成**的文件夹；上轮中断遗留、本轮未能定案（留待人工）的日志**留在 `log/clashx-meta-log/` 原地**，待后续轮次处理完再归档。
+- **仍在被写入的文件夹不归档**（v2.4.1 护栏）：若 ClashX Meta 进程仍在运行、对应会话日志文件夹的 core/mihomo 日志 mtime 接近当前时间（`pgrep -fl ClashX` 看进程 + `ls -lT log/clashx-meta-log/<folder>/` 看 mtime），说明 app 会话未结束、mihomo 内核 fd 仍指向该目录继续写入。此时归档（mv 到 `.archive/`）会让后续写入落入 `.archive/`、污染「已处理完不再动」语义并使下轮 diff 找不到今日日志。**留原地**，待 app 重启生成新时间戳文件夹、该文件夹停止增长后再归档。
 - `.archive/` 与 `clashx-meta-log/` 同级（即 `log/.archive/`），同被 `.gitignore` 的 `log/` 规则覆盖，不会入库。
 - 归档后 `log/clashx-meta-log/` 应只剩未处理项；下一轮的待处理集合 = 源目录新增 + `log/clashx-meta-log/` 未归档存量。
 - 归档情况（哪些文件夹移入了 `.archive/`）记入当日 memory 日志。
