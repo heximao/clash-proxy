@@ -5,3 +5,4 @@
 .workbuddy/
 .codebuddy/
 log/
+__pycache__/
