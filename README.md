@@ -183,6 +183,62 @@ rules:
 
 按顺序排查：① 在策略组里换一个节点；② 确认订阅链接没填错、节点列表已更新；③ 确认配置已保存并"应用"（部分软件需重新加载配置才生效）。
 
+### 第四步：看懂一次访问是怎么"走"的
+
+规则是从上往下逐条比对的，**命中即停**。以上面配置里的这三条规则为例：
+
+```yaml
+rules:
+  - RULE-SET,google,Google    # Google 域名 → 走 Google 策略组
+  - GEOIP,CN,DIRECT           # 中国 IP → 直连
+  - MATCH,PROXY               # 兜底：以上都没命中 → 走 PROXY
+```
+
+下面跟着三次访问把流程走一遍，你就明白流量是怎么被分流的：
+
+#### 例 1：访问 google.com —— 命中第 1 条
+
+1. 浏览器输入 `google.com`，请求首先交给代理软件；
+2. 软件拿这个域名去比对 `google.yaml` 规则集——**命中**，google.com 就在清单里；
+3. 流量转交「Google」策略组，走你在组里选中的那个机场节点；
+4. 机场节点替你去访问 google.com，再把结果传回来。谷歌服务器只看到节点的 IP，看不到你的真实 IP。
+
+```
+你 → 代理软件 → 命中 google 规则集 → Google 策略组 → 机场节点 → google.com
+```
+
+#### 例 2：访问 baidu.com —— 命中第 2 条
+
+1. 浏览器输入 `baidu.com`，请求交给代理软件；
+2. 先比 google 规则集——没命中（百度不在 Google 清单里），继续往下；
+3. 比到 `GEOIP,CN`：软件把 baidu.com 解析成 IP 地址，发现这个 IP 属于中国大陆；
+4. 流量走 DIRECT——不经过代理，直接连百度的服务器。国内网站直连最快，也不消耗代理流量。
+
+```
+你 → 代理软件 → IP 属于中国 → DIRECT 直连 → baidu.com
+```
+
+#### 例 3：访问 facebook.com —— 落到第 3 条
+
+1. 浏览器输入 `facebook.com`，请求交给代理软件；
+2. google 规则集没命中；解析出的 IP 也不在中国，`GEOIP,CN` 同样没命中；
+3. 一路落到最后的 `MATCH,PROXY`——这是兜底规则，前面所有规则都没中的流量都归它管；
+4. 流量走 PROXY（默认代理节点）出国，正常打开 Facebook。
+
+```
+你 → 代理软件 → 前两条都没命中 → MATCH 兜底 → PROXY → 机场节点 → facebook.com
+```
+
+#### 一张表总结三次访问
+
+| 访问的网站 | 命中哪条规则 | 走向 | 完整路径 |
+|-----------|-------------|------|---------|
+| google.com | 第 1 条 `RULE-SET,google` | Google 策略组 | 你 → 代理软件 → 机场节点 → google.com |
+| baidu.com | 第 2 条 `GEOIP,CN` | DIRECT 直连 | 你 → 代理软件 → baidu.com |
+| facebook.com | 第 3 条 `MATCH` | PROXY | 你 → 代理软件 → 机场节点 → facebook.com |
+
+> 注意例 3：facebook.com 并没有自己的规则，走的是兜底。这份最精简配置只引用了 `google.yaml`，除 Google 外的海外网站一律落入 `MATCH,PROXY`。想给 Facebook（或 YouTube、OpenAI）单独指定策略，按 Q3 的方法再引用对应规则集、加一条规则即可。
+
 ## 反馈
 
 欢迎通过 [Issues](https://github.com/heximao/clash-proxy/issues) 提出建议或反馈。
