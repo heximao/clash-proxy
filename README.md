@@ -1,6 +1,6 @@
 # clash-proxy 为代理软件实现精准分流的互联网域名规则集
 
-clash-proxy 是互联网域名规则集，可在 mihomo / Clash 系列代理软件中引用，实现代理网络请求的精准分流控制。
+clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分类整理，可在 mihomo / Clash 系列代理软件中引用，实现网络请求的精准分流控制。
 
 ## 支持软件或插件
 
@@ -97,7 +97,7 @@ https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
 四者的分工：`rule-providers` 提供"清单"，`rules` 按清单分拣流量，`proxy-groups` 决定流量从哪个出口出去，`proxy-providers` 提供出口（节点）本身。
 
 
-下面是一份最精简的配置：引用本仓库的 `google.yaml`，让访问 Google 走代理，使用的是名为`Google`的策略组、中国流量直连、其余兜底。进阶更多玩法请查阅 mihomo 官方文档。
+下面是一份最精简的配置：引用本仓库的 `google.yaml`，让 Google 走「Google」策略组代理访问，中国流量直连，其余兜底。进阶玩法请查阅 mihomo 官方文档。
 
 ```yaml
 proxy-providers:                                                       # 订阅集合块：放你的机场节点列表
@@ -130,8 +130,6 @@ rules:                                                                 # 规则�
   - GEOIP,CN,DIRECT                                                    # 中国 IP → 直连
   - MATCH,PROXY                                                        # 兜底：以上都没命中 → 走 PROXY
 ```
-
-如果你是小白，懒得折腾上述的配置文件（`config.yaml`），本项目提供付费代写个性化定制的配置文件（`config.yaml`），如有需要，请在 [Issues](https://github.com/heximao/clash-proxy/issues) 联系。（本项目不提供代理节点、机场订阅）
 
 网络请求是怎么被分流的：
 
@@ -172,6 +170,26 @@ rules:                                                                 # 规则�
 
 按顺序排查：① 在策略组里换一个节点；② 确认订阅链接没填错、节点列表已更新；③ 确认配置已保存并"应用"（部分软件需重新加载配置才生效）。
 
+如果你是小白，懒得折腾上述的配置文件（`config.yaml`），本项目提供付费代写个性化定制的配置文件（`config.yaml`），如有需要，请在 [Issues](https://github.com/heximao/clash-proxy/issues) 联系。（本项目不提供代理节点、机场订阅）
+
 ## 反馈
 
 欢迎通过 [Issues](https://github.com/heximao/clash-proxy/issues) 提出建议或反馈。
+
+## 关键词
+
+Clash 规则集、Clash 规则、Clash 分流规则、mihomo 规则集、OpenClash 规则、ClashX Meta 规则、Clash Verge 规则、Clash for Android 规则、Stash 规则、Shadowrocket 规则、Surge 规则、域名规则集、rule-provider、RULE-SET、规则订阅、精准分流、智能分流、代理规则推荐、广告过滤规则、去广告域名、追踪域名拦截、Google 规则、ChatGPT 规则、OpenAI 规则、YouTube 规则、Telegram 规则、TikTok 规则、Netflix 规则、GitHub 规则、港美股券商规则、香港银行规则、美国银行规则、clash rules、mihomo rules、clash rule provider、openclash ruleset
+
+## 项目速览
+
+**clash-proxy** 是一个长期维护的 Clash / mihomo 域名规则集：将真实网络访问中遇到的域名按厂商与服务分类，整理为 40 余个 yaml 规则文件，通过 jsDelivr CDN 分发（`https://cdn.jsdelivr.net/gh/heimao/clash-proxy/<name>.yaml`），供 OpenClash、ClashX Meta、Clash Verge、Clash for Android、Stash 等代理软件以 `rule-providers` 订阅方式引用，实现指定域名走指定策略的精准分流。
+
+核心事实：
+
+- **数据来源真实**：域名来自代理软件运行日志中未命中任何规则的请求，经归属判定后归类补录，而非凭空罗列；
+- **规则形态**：全部为域名级规则（以 `DOMAIN-SUFFIX` 为主），在 `rules` 中以 `RULE-SET,名字,策略组` 引用，自上而下、命中即停；
+- **兜底不漏**：未引用的规则集不会导致域名"漏掉"，未命中流量自动落入 `MATCH`，由用户自行指定兜底策略；
+- **更新机制**：客户端按 `interval` 定时拉取规则文件（示例配置为 86400 秒即 24 小时）；`reject.yaml` 广告/追踪拦截列表由 GitHub Actions 每日自动合并上游更新；
+- **边界**：本项目仅提供域名分类规则，不提供代理节点与机场订阅。
+
+适用人群：不希望全局代理，需要让 Google、YouTube、OpenAI 等海外服务走代理，同时让国内网站及银行、券商等站点按需直连或代理的 Clash / mihomo 用户。
