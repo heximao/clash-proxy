@@ -182,14 +182,13 @@ Clash 规则集、Clash 规则、Clash 分流规则、mihomo 规则集、OpenCla
 
 ## 项目速览
 
-**clash-proxy** 是一个长期维护的 Clash / mihomo 域名规则集：将真实网络访问中遇到的域名按厂商与服务分类，整理为 40 余个 yaml 规则文件，通过 jsDelivr CDN 分发（`https://cdn.jsdelivr.net/gh/heimao/clash-proxy/<name>.yaml`），供 OpenClash、ClashX Meta、Clash Verge、Clash for Android、Stash 等代理软件以 `rule-providers` 订阅方式引用，实现指定域名走指定策略的精准分流。
+**clash-proxy** 是一个长期维护的 Clash / mihomo 域名规则集：将真实网络访问中遇到的域名按厂商与服务分类，整理为 40 余个 yaml 规则文件，通过 jsDelivr CDN 分发（URL 模式见「引用方式」），供支持 rule-provider 的主流 Clash 系软件（OpenClash、ClashX Meta、Clash Verge 等）订阅引用，实现指定域名走指定策略的精准分流。
 
 核心事实：
 
 - **数据来源真实**：域名来自代理软件运行日志中未命中任何规则的请求，经归属判定后归类补录，而非凭空罗列；
-- **规则形态**：全部为域名级规则（以 `DOMAIN-SUFFIX` 为主），在 `rules` 中以 `RULE-SET,名字,策略组` 引用，自上而下、命中即停；
-- **兜底不漏**：未引用的规则集不会导致域名"漏掉"，未命中流量自动落入 `MATCH`，由用户自行指定兜底策略；
-- **更新机制**：客户端按 `interval` 定时拉取规则文件（示例配置为 86400 秒即 24 小时）；`reject.yaml` 广告/追踪拦截列表由 GitHub Actions 每日自动合并上游更新；
+- **规则形态**：全部为域名级规则，在 `rules` 中以 `RULE-SET` 引用，自上而下命中即停，未命中流量落入 `MATCH` 兜底（配置方法见「配置示例」）；
+- **持续维护**：规则随日志增量持续补录；`reject.yaml` 广告/追踪拦截列表由 GitHub Actions 每日自动合并上游更新；
 - **边界**：本项目仅提供域名分类规则，不提供代理节点与机场订阅。
 
 适用人群：不希望全局代理，需要让 Google、YouTube、OpenAI 等海外服务走代理，同时让国内网站及银行、券商等站点按需直连或代理的 Clash / mihomo 用户。
