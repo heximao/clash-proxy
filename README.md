@@ -14,7 +14,7 @@ clash-proxy 是互联网域名规则集，可在 mihomo / Clash 系列代理软�
 - Potatso
 - 其他同类型软件或插件
 
-> 🌟 本项目长期更新，域名基于真实的网络访问请求，不断更新补充，推荐直接引用，无需Fork单独维护，对你有帮助，欢迎点 [Star](https://github.com/heximao/clash-proxy) 支持，如果需要为某个规则补充域名，请提[Issues](https://github.com/heximao/clash-proxy/issues) 。
+> 🌟 本项目长期更新，域名基于真实的网络访问请求，不断更新补充，推荐直接引用，无需 Fork 单独维护，对你有帮助，欢迎点 [Star](https://github.com/heximao/clash-proxy) 支持，如果需要为某个规则补充域名，请提[Issues](https://github.com/heximao/clash-proxy/issues) 。
 
 ## 规则文件
 
@@ -48,14 +48,14 @@ clash-proxy 是互联网域名规则集，可在 mihomo / Clash 系列代理软�
 | **pornhub.yaml** | Pornhub |
 | **proxy-ai.yaml** | 需代理的 AI 服务 |
 | **proxy.yaml** | 需代理的杂项域名 |
-| **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置reject） |
+| **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
 | **spotify.yaml** | Spotify |
 | **steam.yaml** | Steam 游戏平台（待补充） |
 | **streaming.yaml** | Netflix、Disney+、HBO 等 |
 | **telegram.yaml** | Telegram |
 | **tencent-global.yaml** | 腾讯海外服务 |
-| **tencent.yaml** | 腾讯 / 微信 |
+| **tencent.yaml** | 腾讯（QQ、腾讯云等） |
 | **us-bank.yaml** | 美国银行，建议优先直连 |
 | **us-broker.yaml** | 美股券商，建议优先直连 |
 | **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
@@ -85,7 +85,7 @@ https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
 
 ## 配置示例
 
-打开你正在使用的代理软件配置文件（通常叫 `config.yaml`）打，配置文件的内容除`dns`等块外，还包含以下 4 类内容组成：
+打开你正在使用的代理软件配置文件（通常叫 `config.yaml`），除了 `dns` 等块外，还包含以下 4 类内容：
 
 | 配置块 | 它是什么 | 说明 |
 |--------|---------|--------|
@@ -131,7 +131,7 @@ rules:                                                                 # 规则�
   - MATCH,PROXY                                                        # 兜底：以上都没命中 → 走 PROXY
 ```
 
-如果你是小白，懒得折腾上述的配置文件（ `config.yaml`），本项目提供付费代写个性化定制的配置文件 （`config.yaml`），如有需要，请在[Issues](https://github.com/heximao/clash-proxy/issues) 联系。（本项目不提供代理节点、机场订阅）
+如果你是小白，懒得折腾上述的配置文件（`config.yaml`），本项目提供付费代写个性化定制的配置文件（`config.yaml`），如有需要，请在 [Issues](https://github.com/heximao/clash-proxy/issues) 联系。（本项目不提供代理节点、机场订阅）
 
 网络请求是怎么被分流的：
 
@@ -149,14 +149,14 @@ rules:                                                                 # 规则�
 3. 软件接着拿域名比到 `GEOIP,CN`：软件把 baidu.com 解析成 IP 地址，发现这个 IP 属于中国大陆；
 4. 流量走 DIRECT——不经过代理，直接连百度的服务器。百度服务器看到的是你本地的真实 IP，请求不经过代理，不消耗代理流量。
 
-#### 例 3：访问 facebook.com —— 落到第 3 条
+#### 例 3：访问 facebook.com
 
 1. 浏览器输入 `facebook.com`，请求交给代理软件；
-2. 软件拿这个域名先去比对google 规则集——没命中；
-3. 软件接着拿域名比到 `GEOIP,CN`：软件把facebook.com 解析成 IP 地址，发现这个 IP 不属于中国大陆，没命中；
+2. 软件拿这个域名先去比对 google 规则集——没命中；
+3. 软件接着拿域名比到 `GEOIP,CN`：软件把 facebook.com 解析成 IP 地址，发现这个 IP 不属于中国大陆，没命中；
 4. 一路落到最后的 `MATCH,PROXY`——这是兜底规则，前面所有规则都没中的流量都归它管；流量走 PROXY（默认代理节点），正常打开 Facebook。
 
-> 注意例 3：facebook.com 并没有自己的规则，走的是兜底。这份最精简配置只引用了 `google.yaml`，除 Google 外的海外网站一律落入 `MATCH,PROXY`。想给 Facebook（或 YouTube、OpenAI）单独指定策略，加一条规则即可。
+> 注意例 3：facebook.com 并没有自己的规则，走的是兜底。这份最精简配置只引用了 `google.yaml`，除 Google 外的海外网站一律落入 `MATCH,PROXY`。想给 Facebook（或 YouTube、OpenAI）单独指定策略，需要在 `rule-providers` 中增加对应规则集，再在 `rules` 中加一行 `RULE-SET,名字,策略组名`。
 
 ## 常见问题
 
