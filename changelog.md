@@ -1,11 +1,25 @@
 # 更新记录
 
+## 2026-10-17 fill-domains-from-log skill v2.5.0：日志获取回退 cp + 只处理昨天（避免沙箱弹窗、支持 automation 全自动）（main 直接提交）
+
+- 用户裁决：日志获取从移动制（v2.3.0–v2.4.1）**回退 cp 复制 + 只处理昨天**。原因：移动制 `mv` 源目录 `~/.config/clash.meta/logs` 每次触发沙箱授权弹窗（写/删系统配置目录），定时 automation 无人响应会卡死，违背全自动诉求；cp 只读源不弹窗（实测 `ls`/`diff`/`cp` 读 `~/.config` 均无弹窗，`mv`/`rm` 写删才弹）。
+- **SKILL.md 改动（v2.4.1 → v2.5.0）**：
+  - frontmatter description：移动制 → cp 复制昨天的日志（禁 mv/rm 源目录、支持 automation 全自动）。
+  - 第 1 节重写：只处理昨天（当天不处理、更早留存）；`cp -R` 只读复制（禁 mv/rm 源目录，附沙箱弹窗理由）；优先用仓库已有昨天前缀文件夹（无则从源 cp，防 cp 套娃——目标同名跳过）。
+  - 第 12 节归档：cp 模式下仓库副本是静态快照（cp 后不再增长）可直接归档；历史 mv 遗留仍在被写的文件夹才需 mtime 检查（v2.4.1 护栏降级为历史场景）。归档仍工作区内 mv，不碰 ~/.config。
+  - 硬性约束新增「禁止 mv/rm 源目录 `~/.config/clash.meta/logs`（沙箱弹窗+automation 卡死），日志获取只用 cp 只读源；归档用工作区内 mv」。
+  - 流程图第 1 步改「cp 复制昨天的」。
+- **AGENTS.md 同步**：「日志差集纪律」首条改回 cp + 只昨天口径；「增量可能落在今日目录」改为「只处理昨天，当天日志留待次日 automation」。
+- **MEMORY.md 同步**：日志差集纪律回退 cp + 只昨天（注明回退原因）；Skill 流程裁决追加 v2.5.0 条目（沙箱规则：读 `~/.config` 不弹窗，写/删才弹窗）。
+- **遗留处理**：上轮（傍晚八 itdog 验证）mv 进仓库的 `2026-10-17_08-38-11`（今天日志、仍在被 mihomo 写）按新模式「只处理昨天」**本轮不处理**，留 `log/clashx-meta-log/` 原地待明日（10-18）automation 作为「昨天」处理；届时若仍被写（会话未重启）按 v2.4.1 护栏检查 mtime。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 fill-domains-from-log skill v2.4.1：归档护栏——app 会话未结束不归档（main 直接提交）
 
 - 触发：v2.4.0 首次实跑（itdog.cn 轮，提交 `14c677c`）发现边界——被处理的日志文件夹 `2026-10-17_08-38-11` 在 `mv` 移入后仍被 ClashX Meta 内核（mihomo，PID 持有 fd 指向新路径）实时写入（core/mihomo 日志 mtime 17:51 持续更新、进程 `pgrep` 确认在运行）。此时归档会让后续写入落入 `log/.archive/`，污染「已处理完不再动」语义并使下轮 diff 找不到今日日志。
 - 改动：skill 第 12 节新增护栏条款「仍在被写入的文件夹不归档」——ClashX Meta 进程在运行 + 日志 mtime 接近当前时间 → 留原地，待 app 重启生成新时间戳文件夹、该文件夹停止增长后再归档。检查方式 `pgrep -fl ClashX` + `ls -lT log/clashx-meta-log/<folder>/`。version v2.4.0 → v2.4.1。
 - 本轮 itdog.cn 日志文件夹 `2026-10-17_08-38-11` 按此护栏**未归档**，留 `log/clashx-meta-log/` 原地待 app 重启后再归档。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `a8019f4` → push（`14c677c..a8019f4`）→ 同步 `0 0`。
 
 ## 2026-10-17 漏网之鱼归类：itdog.cn 归入 direct.yaml（v2.4.0 自主裁决模式首次实跑，main 直接提交）
 

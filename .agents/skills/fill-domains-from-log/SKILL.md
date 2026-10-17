@@ -1,7 +1,7 @@
 ---
 name: fill-domains-from-log
-version: v2.4.1
-description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，本地查重与进程名粗判后**自主裁决归属**（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行重复检查自检闭环。日志获取采用移动制：将 ~/.config/clash.meta/logs 下的日志移入仓库 log/clashx-meta-log/，本轮分析全部完成（push 并确认 0 0）后将已处理日志归档至同级的 log/.archive/。Git 侧自 2026-10-17 起取消分支制度：每轮开头先 fetch 并把本地 main 追上远程、确认与远程双向 0 0，全部改动直接在 main 上完成并提交，commit 前再查一次同步状态，随后立即 push main 并确认 0 0。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
+version: v2.5.0
+description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，本地查重与进程名粗判后**自主裁决归属**（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行重复检查自检闭环。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs **只读复制昨天的日志**到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录以避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧自 2026-10-17 起取消分支制度：每轮开头先 fetch 并把本地 main 追上远程、确认与远程双向 0 0，全部改动直接在 main 上完成并提交，commit 前再查一次同步状态，随后立即 push main 并确认 0 0。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
 # 从日志补漏域名
@@ -19,7 +19,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
  0. ★ 同步准备（每轮开头必做，详见第 0 节）★
       git fetch origin → main 追上远程 → 确认与远程双向 0 0
       ↓
- 1. 准备日志（移动：~/.config/clash.meta/logs → log/clashx-meta-log/）
+ 1. 准备日志（cp 复制昨天的：~/.config/clash.meta/logs → log/clashx-meta-log/）
       ↓
  2. 提取 + 去重 + 过滤伪域名
       ↓
@@ -84,16 +84,16 @@ git status -sb                                # 工作区干净（未跟踪文�
 
 ## 1. 准备日志
 
-- 日志源目录：`/Users/saibopika/.config/clash.meta/logs`，其中日志文件夹命名格式为 `YYYY-MM-DD_HH-MM-SS`。
-- 若用户未指定日期，默认处理**昨天**的文件夹（多个同名日期前缀时全部处理）。
-- **移动而非复制**（2026-10-17 起）：把待处理文件夹从源目录**移入**仓库 `log/clashx-meta-log/`：
+- 日志源目录：`/Users/saibopika/.config/clash.meta/logs`，文件夹命名格式 `YYYY-MM-DD_HH-MM-SS`。
+- **只处理昨天的日志**（2026-10-17 用户裁决）：当天日志仍被 ClashX Meta 实时写入，不处理；更早的历史日志留存源目录不处理（累积由用户定期清理）。默认昨天；用户显式指定其他日期时按指定。
+- **cp 复制（禁止 mv/rm 源目录）**：用 `cp -R` 把昨天的文件夹复制到仓库 `log/clashx-meta-log/`——**只读源、写仓库、不删源**：
   ```bash
-  mv /Users/saibopika/.config/clash.meta/logs/<YYYY-MM-DD_HH-MM-SS> log/clashx-meta-log/
+  cp -R /Users/saibopika/.config/clash.meta/logs/<YYYY-MM-DD_HH-MM-SS> log/clashx-meta-log/
   ```
-  移动制下源目录不保留已迁移日志，天然消除"源目录与仓库副本出现差集"的复制缺口问题。
-- **⚠️ mv 套娃坑**：目标侧已存在同名文件夹时，`mv` 会把源文件夹**塞进目标文件夹内部**而不报错。移动前必须先 `diff -rq /Users/saibopika/.config/clash.meta/logs log/clashx-meta-log` 比对，**只移入"Only in 源目录"的文件夹**；双侧同名的跳过不移（视为已迁移）。
-- **历史遗留**：2026-10-17 之前采用 `cp -R` 复制，源目录曾残留大量与仓库同名的旧副本，当日已由用户清理完毕；现移动制下源目录日常只留当日未移入的新日志。
-- `log/clashx-meta-log/` 下已有、但尚未归档（上轮中断遗留或本轮移入）的日志直接纳入本轮提取范围；处理完成后按第 12 节归档。
+  **禁止 `mv` / `rm` 源目录**：写/删 `~/.config`（系统配置目录）会触发沙箱授权弹窗，定时 automation 无人响应会卡死，违背全自动诉求；cp 只读源不触发弹窗（实测 `ls`/`diff`/`cp` 读 `~/.config` 均无弹窗，`mv`/`rm` 写删才弹）。
+- **优先用仓库已有**：先在 `log/clashx-meta-log/` 下找昨天日期前缀的文件夹，**有则直接用**（上轮遗留或已 cp）；没有才从源目录 cp。这样无论日志在源还是在仓库（如历史 mv 进去后未归档）都能处理。
+- **cp 套娃防护**：`cp -R src dst/` 当 `dst/src` 已存在时会复制成 `dst/src/src` 套娃。cp 前确认 `log/clashx-meta-log/<folder>` 不存在；存在则跳过（已复制过）。
+- `log/clashx-meta-log/` 下未归档存量（上轮中断遗留）直接纳入本轮提取范围；处理完成后按第 12 节归档（归档是工作区内 mv，不碰 ~/.config，不弹窗）。
 
 ## 2. 提取与去重
 
@@ -260,9 +260,9 @@ mv log/clashx-meta-log/<已处理文件夹> log/.archive/
 ```
 
 - 只归档本轮**确认处理完成**的文件夹；上轮中断遗留、本轮未能定案（留待人工）的日志**留在 `log/clashx-meta-log/` 原地**，待后续轮次处理完再归档。
-- **仍在被写入的文件夹不归档**（v2.4.1 护栏）：若 ClashX Meta 进程仍在运行、对应会话日志文件夹的 core/mihomo 日志 mtime 接近当前时间（`pgrep -fl ClashX` 看进程 + `ls -lT log/clashx-meta-log/<folder>/` 看 mtime），说明 app 会话未结束、mihomo 内核 fd 仍指向该目录继续写入。此时归档（mv 到 `.archive/`）会让后续写入落入 `.archive/`、污染「已处理完不再动」语义并使下轮 diff 找不到今日日志。**留原地**，待 app 重启生成新时间戳文件夹、该文件夹停止增长后再归档。
+- **cp 模式下仓库副本是静态快照**（cp 后不再增长，源目录的实时写入不影响仓库副本），可直接归档。仅当历史 mv 场景遗留的文件夹仍在被内核写入时（fd 指向仓库副本）才需检查：`pgrep -fl ClashX` + `ls -lT log/clashx-meta-log/<folder>/` 看 core/mihomo mtime 是否接近当前时间；是则留原地待 app 重启后归档。
 - `.archive/` 与 `clashx-meta-log/` 同级（即 `log/.archive/`），同被 `.gitignore` 的 `log/` 规则覆盖，不会入库。
-- 归档后 `log/clashx-meta-log/` 应只剩未处理项；下一轮的待处理集合 = 源目录新增 + `log/clashx-meta-log/` 未归档存量。
+- 归档后 `log/clashx-meta-log/` 应只剩未处理项；下一轮的待处理集合 = 昨天日期前缀的文件夹（源目录或仓库已有）+ `log/clashx-meta-log/` 未归档存量。
 - 归档情况（哪些文件夹移入了 `.archive/`）记入当日 memory 日志。
 
 ## 13. 填写更新记录
@@ -286,6 +286,7 @@ push 并确认 `0 0` 后，确认本轮条目已按第 10 步写入 `changelog.m
 - **禁止跳过第 0 步同步准备（本地与远程一致性检查）。** 在旧基线上做查重与规则判断会得出错误结论。
 - **自主裁决须留痕**：每个归类决定在 changelog 写明依据（AGENTS.md 判据条号 / 进程名 / RDAP 结果 / 同文件同类分组），未归类项写明原因；证据不足且查询无结论的按兜底规则处理（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。
 - **第 4 步只做本地查重和粗判，禁止外部查询**；RDAP/DoH/wayback 等外部查询集中在第 6 节按需自主发起。
+- **禁止 `mv` / `rm` 源目录 `~/.config/clash.meta/logs`**（沙箱授权弹窗 + automation 卡死）：写/删系统配置目录触发沙箱升级，定时 automation 无人响应会卡死。日志获取只用 `cp -R` 只读源（读 `~/.config` 不弹窗）。归档用工作区内 `mv`（不碰 `~/.config`，安全）。
 - **禁止编辑 `reject.yaml`**，**禁止在提交中包含 `reject.yaml`**。
 - **禁止任何形式的强制推送**（`--force` / `--force-with-lease`）。
 - **禁止 `git add -A` / `git add .` 等批量跟踪**，只显式暂存本次改动文件；commit 后必须立即 push 并校验 `0 0`。
