@@ -21,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Merge reject rules
-        run: python3 scripts/merge_reject_from_loyalsoldier.py
+        run: python3 scripts/merge-reject-from-loyalsoldier/merge_reject_from_loyalsoldier.py
 
       - name: Commit changes
         run: |

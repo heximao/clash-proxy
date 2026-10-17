@@ -11,9 +11,11 @@ import sys
 import json
 from pathlib import Path
 
-root = Path('.')
-# Reports are written next to this script (scripts/), while scanning stays at repo root.
+# Scan root is anchored to the repo root (two levels above this script's
+# directory), so the script works regardless of the caller's cwd.
+# Reports are written next to this script (scripts/find-duplicates/).
 out_dir = Path(__file__).resolve().parent
+root = out_dir.parent.parent
 # reject.yaml is machine-generated from the Loyalsoldier upstream and is never
 # edited locally, so duplicates inside or against it are expected and ignored.
 EXCLUDED = {'reject.yaml'}
@@ -25,6 +27,7 @@ file_rules = {}
 file_dups = {}
 
 for p in files:
+    rel = str(p.relative_to(root))
     text = p.read_text(encoding='utf-8')
     lines = text.splitlines()
     seen = {}
@@ -38,9 +41,9 @@ for p in files:
             if rule in seen:
                 dups.append(rule)
             seen[rule] = seen.get(rule, 0) + 1
-            rule_map.setdefault(rule, set()).add(str(p))
-    file_rules[str(p)] = rules
-    file_dups[str(p)] = sorted(set(dups))
+            rule_map.setdefault(rule, set()).add(rel)
+    file_rules[rel] = rules
+    file_dups[rel] = sorted(set(dups))
 
 # Prepare DUPLICATES.md
 cross_file = [(rule, fs) for rule, fs in rule_map.items() if len(fs) > 1]
