@@ -1,5 +1,23 @@
 # 更新记录
 
+## 2026-10-17 漏网之鱼归类：itdog.cn 归入 direct.yaml（v2.4.0 自主裁决模式首次实跑，main 直接提交）
+
+- **本轮为 fill-domains-from-log skill v2.4.0（自主裁决）首次实跑验证**：全程未向用户提问，归属由 agent 自主裁决 + RDAP/DoH 留痕。流程 `mv 移入 → 提取 → 查重 → 自主裁决 → DoH/dig → 落盘 → 自检` 跑通。
+- 数据来源：`log/clashx-meta-log/2026-10-17_08-38-11`（今日目录，`mv` 移入；日志在移入时仍在实时追加，提取为当时快照）。`diff -rq` 源目录仅此一项「Only in 源目录」，无套娃风险。
+- 提取量（去重后，已过滤伪域名）：
+  - `match Match`：25 域名、0 裸 IP；归并主域后 17 个（`53.com`、`antpeak.com`、`breadfinancial.com`、`capitalone.com`、`current.com`、`logitech.io`、`logitechg.com`、`hibchr.com`、`key.com`、`marcus.com`、`mdoelscope.ai`、`mtb.com`、`rdap.org`、`verisign.com`、`varomoney.com`、`wellsfargo.com`、`zorvian.com`）。
+  - `oc-cn-domain`：约 60 域名、1 裸 IP（`120.53.53.53`）；归并主域后约 20 个 + 1 IP。
+- 补录明细（1 个）：
+  - `DOMAIN-SUFFIX,itdog.cn` → `direct.yaml`「其他国内站点（2026-10-11 漏网之鱼补录）」分组。**判定依据**：rdap.org 对 .cn 无 RDAP 服务（404）；改用阿里 DoH + dig 查得 A 记录 `103.248.152.254`（国内段）+ CNAME `9u8gzsjm.yunzz.net`（国内解析服务）+ .cn TLD + ITDOG 测速站域名语义；按 AGENTS.md「国内经 RDAP/NS 确认 → direct.yaml」裁决。判据留痕：DoH/dig 实测 A 记录 + CNAME 链。
+- 未收录及原因：
+  - **已覆盖整批跳过**（规则集先于本地 yaml 匹配，不代表缺失）：`us-bank.yaml` 10 美国银行主域（`53.com`/`breadfinancial`/`capitalone`/`current`/`key`/`marcus`/`mtb`/`varomoney`/`wellsfargo`）、`bilibili.yaml` 6 bilibili 主域（`bilibili.com`/`biligame.com`/`hdslb.com`/`bilivideo.com`/`bilivideo.cn`）、`wechat.yaml` 4 微信主域（`weixinbridge.com`/`servicewechat.com`/`wechat.com`/`qlogo.cn`）、`direct-ai.yaml` 3 商汤主域（`sensenova.cn`/`sensecore.cn`/`sensecoreapi.cn`）、`direct.yaml` `mountaintoys.cn`+`120.53.53.53/32`+`rdap.org`+`verisign.com`、`baidu.yaml` `hm.baidu.com`、`bytedance.yaml` `bytednsdoc.com`。
+  - **已裁决项跳过**（不查不收）：`antpeak.com`/`hibchr.com`/`zorvian.com`（无主端点）、`mdoelscope.ai`（仿冒域）、`logitech.io`/`ntp.org.cn`/`oceanengine.com`/`yhgfb-cn-static.com`（长期挂起待人工）。
+  - **`logitechg.com`**：无 `logitech.yaml` 锚点文件，按判据#5「无锚点即新增厂商文件→留人工」跳过（与既有 `logitech.io` 同属 Logitech 系挂起项）。
+  - **自主模式核实陷阱留痕**：`mmbiz.qpic.cn` 主域应为 `qpic.cn`（非 `qlogo.cn`），首轮归并时误并到 `qlogo.cn` 致漏查；精确 grep 后确认 `wechat.yaml:5` 已有 `DOMAIN-SUFFIX,qpic.cn` 覆盖，归入已覆盖跳过。**教训：归并主域须逐字符精确，`grep -l` 子串命中后必须回看命中行规则类型与主域字面。**
+- 待人工确认：0 项。
+- 自检结果：`find_duplicates.py` 跨文件重复 1（历史基线 `settings.crashlytics.com` direct/google，非本次引入）、文件内 0、**本次新引入 0 项**；`direct.yaml` payload 数 241、`yaml.safe_load` 通过。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 AGENTS.md 同步日志移动制 + fill-domains-from-log skill v2.4.0：归属判定改自主裁决（main 直接提交）
 
 - 用户裁决两项：① 同步 AGENTS.md「日志差集纪律」为移动制口径；② skill 入库 yaml 判定改 agent **自主裁决**，不再经用户确认。
@@ -16,7 +34,7 @@
   - changelog 模板「用户判定不归类」→「自主裁决不归类」。
 - **MEMORY.md 同步**：日志差集纪律备注改为「AGENTS.md 已同步」；新增「Skill 流程裁决」节记录自主裁决裁决与留痕要求。
 - 验证：SKILL.md 全文 grep `用户|AskUserQuestion|review|确认归属|提问` 残留引用均已收敛为自主口径或用户主动介入通道；章节编号 0–15 连续。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `bc9927c` → push（`5514a20..bc9927c`）→ 同步 `0 0`。
 
 ## 2026-10-17 fill-domains-from-log skill v2.3.0：日志获取改为移动制 + 处理完成归档（main 直接提交）
 

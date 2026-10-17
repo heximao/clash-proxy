@@ -1327,6 +1327,9 @@
     "DOMAIN-SUFFIX,gitcode.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,itdog.cn": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,tsinghua.edu.cn": [
       "direct.yaml"
     ],
