@@ -1,11 +1,23 @@
 # 更新记录
 
+## 2026-10-17 fill-domains-from-log skill v2.3.0：日志获取改为移动制 + 处理完成归档（main 直接提交）
+
+- 用户裁决：日志流转从「`cp -R` 复制、源目录保留」改为**移动制**——源目录 `~/.config/clash.meta/logs` 的日志**移入** `log/clashx-meta-log/`，本轮分析全部完成（push + 同步 0 0）后再把已处理日志移入同级的 `log/.archive/`。
+- SKILL.md 变更明细（v2.2.0 → v2.3.0）：
+  - **第 1 节重写**：`mv` 移入替代 `cp -R`；新增 **mv 套娃坑**（目标侧存在同名文件夹时 `mv` 会把源塞进目标内部而不报错，须先 `diff -rq` 比对、只移「Only in 源目录」项）；历史 cp 时代的源目录残留同名旧副本**不主动删除**（破坏性操作，清理由用户裁决）；`log/clashx-meta-log/` 未归档存量（上轮遗留 / 本轮移入）直接纳入提取范围。
+  - **新增第 12 节「归档已处理日志」**：push + 0 0 后 `mkdir -p log/.archive` 并移入本轮已处理文件夹；未定案（留待人工）的留在原地，待后续轮次处理完再归档；归档情况记入当日 memory。
+  - 流程图新增第 12 步；原 12/13/14 节顺延为 13/14/15，全部交叉引用同步更新（第 6/9 节「见第 14 节」→ 第 15 节，第 10 节「见第 12 节」→ 第 13 节）。
+  - 硬性约束新增「禁止跳过日志归档」；环境坑新增 mv 套娃条目；frontmatter description 补移动制语义。
+- 连带更新：`.agents/memory/MEMORY.md`「日志差集纪律」首条改为移动制口径。**遗留未同步项**：`AGENTS.md`「日志差集纪律」仍为旧 `cp -R` 口径，与 skill 新流程冲突，本轮未动（用户未授权改 AGENTS.md），待用户裁决是否同步。
+- 验证：SKILL.md 全文通读复核，章节编号 0–15 连续、交叉引用全部指向正确。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 移除远程误入库的 .omc/ 会话文件（main 直接提交）
 
 - 用户裁决：处理掉远程的 `.omc/`。核查：git 索引跟踪着 `.omc/sessions/` 下 **49 个 session JSON**（`git ls-files .omc/` 实查；系早期误提交——`.gitignore` 早已含 `.omc/`，但对已跟踪文件不生效，故一直留在库中）。本地磁盘 `.omc/`（`project-memory.json`、`sessions/`、`state/`）为 OMC 工具运行数据，**全部保留不动**。
 - 操作：`git rm -r --cached .omc/` 仅从 git 索引移除（不碰磁盘），配合既有 `.gitignore` 规则此后不再被跟踪；远程下一次 push 后即从仓库消失。
 - 流程确认（用户当日明确）：**涉及 changelog.md 的提交一律先写 changelog.md 后 commit**，changelog 变更与业务改动同一提交入库；提交后回填 hash 产生的未暂存改动顺延至下轮提交。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `124486d` → push（`54ae7f9..124486d`）→ 同步 `0 0`；`git ls-tree origin/main .omc/` 确认远程已清零，本地磁盘 `.omc/` 完好。
 
 ## 2026-10-17 纳入跟踪 .agents/、AGENTS.md、CLAUDE.md、changelog.md、duplicates.json（main 直接提交）
 
