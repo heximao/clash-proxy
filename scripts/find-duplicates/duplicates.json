@@ -1,0 +1,5638 @@
+{
+  "rule_map": {
+    "DOMAIN-SUFFIX,modelscope.ai": [
+      "alibaba-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,modelscope.cn": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,taobao.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,tmall.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alibaba.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alibaba-inc.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alicdn.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,aliyun.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,autonavi.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,amap.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,aaplimg.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple.news": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple-dns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple.com.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud.com.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple-icloud.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,appleicloud.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud-apple.cn": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,me.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.apple-cloudkit.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,myicloud.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,applemx-icloud.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud-content.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud-sandbox.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple-mapkit.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn-apple.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,mzstatic.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,me.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,gspe19-2-cn-ssl.ls-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,gspe19-cn.ls-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,itunes-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,prod-support.apple-support.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,push-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,origin-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,images.apple.com.edgekey.net.globalredir.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,store.apple.com.edgekey.net.globalredir.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,support-china.apple-support.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,www-cdn.icloud.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,itunes-cdn-cn.itunes-apple.com.akadns.net": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,store.apple.com.edgekey.net": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.28/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.29/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.135/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.170.4/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.170.196/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.170.224/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.27/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.29/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.91/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.172.68/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.26/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.27/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.56/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.57/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.164/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.56/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.59/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.180.136/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.14/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.72/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.77/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.78/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.205/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.206/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.59/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.198/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.143.252/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.168.158/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.169.196/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.170.132/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.4/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.28/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.31/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.92/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.94/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.96/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.155/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.171.157/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.24/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.25/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.37/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.178.132/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.5/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.26/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.27/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.179.58/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.181.7/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.181.135/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.181.199/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.8/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.142/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.182.143/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.183.15/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.183.76/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.183.78/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.188.183.79/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.56.9.32/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.42.251.69/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.156.192.7/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.57.145.0/24,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.57.0.147/32,no-resolve": [
+      "apple.yaml"
+    ],
+    "IP-CIDR,17.253.0.0/16,no-resolve": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,baidu.com": [
+      "baidu.yaml"
+    ],
+    "DOMAIN-SUFFIX,bdstatic.com": [
+      "baidu.yaml"
+    ],
+    "DOMAIN-SUFFIX,bdimg.com": [
+      "baidu.yaml"
+    ],
+    "DOMAIN-SUFFIX,acg.tv": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,acgvideo.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,b23.tv": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,bilibili.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,bilibili.tv": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,biliapi.net": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,biliapi.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,bilivideo.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,hdslb.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN,upos-hz-mirrorakam.akamaized.net": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN,apiintl.biliapi.net": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,biliimg.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,bilivideo.cn": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,biligame.com": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,solseed.cn": [
+      "bilibili.yaml"
+    ],
+    "DOMAIN-SUFFIX,trae.ai": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,traecdn.ai": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,tiktok.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,ttwstatic.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteoversea.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytedapm.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,ibytedapm.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,larksuite.com": [
+      "bytedance-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytedance.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,snssdk.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,doubao.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,feishu.cn": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,feishucdn.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,larkoffice.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bdurl.net": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,visactor.io": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,zijieapi.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteimg.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,volces.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,volccdn.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,trae.cn": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,trae.com.cn": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,mchost.guru": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytetos.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteacctimg.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,marscode.cn": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytedanceapi.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytescm.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytetcc.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,doubaocdn.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytednsdoc.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,claude.ai": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,claude.com": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,anthropic.com": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,anthropic.ai": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,bit.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitexch.io": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,polymarket.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,binance.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,okx.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bybit.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitget.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,huobi.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,coinbase.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,tether.to": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitcointalk.org": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,imtoken.fans": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bybit.biz": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bycsi.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,byabcde.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,bybdc6.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,byd3c3.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,wsot2022.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,walletconnect.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,walletconnect.org": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,hyperliquid.xyz": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,coingecko.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,coinyep.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,web3modal.org": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,privy.io": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,magic.link": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,sbyr.de5.net": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,model.uprime.cc.cd": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,agnes-ai.com": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openrouter.ai": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openrouter.com": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,freemodel.dev": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,minimax.io": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,aihubmix.com": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,deepseek.com": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensenova.cn": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensecore.cn": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensecoreapi.cn": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,smallstrawberry.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,virxact.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,themoviedb.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,immersivetranslate.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,immersivetranslate.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn.jsdelivr.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,infuse.im": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,redhat.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,xz.pphimalayanrt.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,adguard.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gh-proxy.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gh-proxy.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,iina.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,langbot.app": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,obsidian.md": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,oplist.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,unpkg.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,xuedingtoken.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,0.openwrt.pool.ntp.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,stun.voip.aebc.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,71.am.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,abercrombie.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,acfun.tv": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,akadns.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,akamaiedge.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,algocasts.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,app.adjust.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,baduziyuan.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,baostock.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,battle.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,biquge.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,blizzard.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,broadcasthe.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,chaipip.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,chdbits.co": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cherryin.ai": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,chinaplay.store": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudxns.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cm.steampowered.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cmct.tv": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cn163.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnbeta.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnbetacdn.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,com-hs-hkdy.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,crl.pki.goog": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,czybjz.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dandanzan.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dell.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,didiglobal.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dilidili.wang": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dizhensubao.getui.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dns.alidns.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,element-plus.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,epicgames.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,epicgames.dev": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,fantasy.tv": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,fir.im": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,fjhps.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,focusee.imobie-resource.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,focusee.imobie.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,g-cores.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,got001.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,hdchina.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,hdcmct.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,hollisterco.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,images-amazon.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,injections.adguard.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ip.la": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipv6-test.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ixdzs.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,jsdelivr.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,koodomobile.ca": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,koodomobile.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,koyso.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,kusa.pics": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,kuyunbo.club": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lancdns.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lemicp.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,letitfly.me": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,luoo.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,maoyun.tv": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,moke.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,msg.umengcloud.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,myunlu.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ocsp.pki.goog": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ol.epicgames.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,origin-a.akamaihd.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ourbits.club": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,p4pfile.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,paragon.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,passthepopcorn.me": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,playstation.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,playstationnetwork.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,privatehd.to": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qin.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qupu123.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,rarbg.to": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,redacted.ch": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,repaik.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,settings.crashlytics.com": [
+      "direct.yaml",
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,shumilou.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,signalr.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,simplecd.me": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,smtp": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,snapdrop.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,snwx.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sohuno.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sony.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,startssl.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,synology.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tbcdn.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tebex.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,test-ipv6.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tmiaoo.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,totheglory.im": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tp.m-team.cc": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,trip.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ttmeiju.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,udacity.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,unrealengine.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,uxengine.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,wan.video": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,weather.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,weiphone.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,xip.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,yach.me": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,yyets.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zhangzishi.cc": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zhuihd.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zoho.com": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,1.12.12.12/32": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,14.1.112.0/22": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,19.28.0.0/23": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,223.5.5.5/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,41.222.240.0/22": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,41.223.119.0/24": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,42.186.0.0/16": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,43.160.156.172/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,43.160.156.23/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.128.0.0/10": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.208.0.0/12": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.209.32.0/22": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.209.40.0/21": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.209.48.0/20": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.210.0.0/16": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.128.0/20": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.144.0/21": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.152.0/22": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.208.0/20": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.224.0/19": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.211.64.0/18": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.212.0.0/14": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.216.0.0/13": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,43.175.230.135/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,43.175.230.20/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,43.175.230.4/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zoro.build": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,werss.csol.store": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,newsnow.busiyi.world": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,60s.viki.moe": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,skan.singular.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,uptime.kuma.pet": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,the-best-airport.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cacerts.digicert.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,vmc.digicert.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,crt.r2m02.amazontrust.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,crt.rootg2.amazontrust.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,digicert.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,picsum.photos": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,60s-api.viki.moe": [
+      "direct.yaml"
+    ],
+    "DOMAIN,cdn.ripperhe.com": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,192.0.32.59/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,kwrt": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lan": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,local": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,localhost": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,0.0.0.0/8": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,10.0.0.0/8": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,100.64.0.0/10": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,127.0.0.0/8": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,169.254.0.0/16": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,172.16.0.0/12": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,192.168.0.0/16": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,192.88.99.0/24": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,198.18.0.0/15": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,224.0.0.0/3": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,2001::/32": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,2002::/16": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,::1/128": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,fc00::/7": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,fe80::/10": [
+      "direct.yaml"
+    ],
+    "IP-CIDR6,ff00::/8": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,rdap.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,identitydigital.services": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,publicinterestregistry.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,verisign.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,crt.sh": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,koolcenter.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,linkease.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,istoreos.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ddnsto.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zhihu.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,mountaintoys.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zhimg.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,10086.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,chinamobile.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,online-cmcc.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cmcc-cs.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,komect.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,mmarket.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,miguvideo.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,10085.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,5gnewcall.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cmicapm.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cmicrwx.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gmcc.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,migu.cn": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,120.53.53.53/32,no-resolve": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,wps.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,wpscdn.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qwps.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ksosoft.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ksord.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zhipin.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,bosszhipin.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,kanzhun.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,c-ctrip.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,aikobo.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipip.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,189.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dcloud.net.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,packagecontrol.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,telefen.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,hellogithub.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zvo.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,bobtranslate.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gitcode.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tsinghua.edu.cn": [
+      "direct.yaml"
+    ],
+    "IP-CIDR,8.8.8.8,no-resolve": [
+      "dns.yaml"
+    ],
+    "IP-CIDR,8.8.4.4,no-resolve": [
+      "dns.yaml"
+    ],
+    "IP-CIDR,1.1.1.1,no-resolve": [
+      "dns.yaml"
+    ],
+    "DOMAIN-SUFFIX,dowjones.ai": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,dowjones.io": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,mansionglobal.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,mktw.net": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,rdcpix.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,seekingalpha.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,investing.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,sec.gov": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,tradingcode.net": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,trading-strategies.academy": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,biggo.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,tradingview.com": [
+      "fin-tech.yaml"
+    ],
+    "DOMAIN-SUFFIX,firefox.com": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,mozilla.com": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,mozilla.net": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,mozilla.org": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,mozilla-backup.org": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,firefox-portal-detection.com": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,github.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,githubusercontent.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,githubassets.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,github.io": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,githubapp.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,githubcopilot.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,ghcr.io": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,star-history.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,githubstatus.com": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,contrib.rocks": [
+      "github.yaml"
+    ],
+    "DOMAIN-SUFFIX,withgoogle.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,osv.dev": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.osv.dev": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,goog": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.com.hk": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.co.jp": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.dev": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.cn": [
+      "google.yaml"
+    ],
+    "IP-CIDR,8.8.8.8/32,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,8.8.4.4/32,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,64.233.187.188/32,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,64.233.160.0/19,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,108.177.125.188/32,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,173.194.0.0/16,no-resolve": [
+      "google.yaml"
+    ],
+    "IP-CIDR,74.125.0.0/16,no-resolve": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,geminicli.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,ggpht.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,2mdn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,2mdn-cn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,admob-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gmail.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,antigravity.google": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,a.run.app": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,app-analytics-services.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,app-measurement.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,app-measurement-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,apps5.oingo.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,avail.googleflights.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,c.admob.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,clickserve.cc-dt.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,clickserve.dartsearch.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,cn.widevine.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,dartsearch-cn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,dg-meta.video.google.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,doubleclick.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,doubleclick-cn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,download.qatp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,firebase-settings.crashlytics.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gonglchuangl.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gongyichuangyi.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google-analytics.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google-analytics-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleads.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleadapis.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleadservices-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleadservices.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleanalytics.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleapps-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleapis.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleapis-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleflights-cn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleoptimize.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleoptimize-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googlesyndication.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googlesyndication-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletagmanager.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletagmanager-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletagservices.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletagservices-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletraveladservices-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googletraveladservices.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googleusercontent.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,googlevads-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gstatic.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gstatic-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gtm.oasisfeng.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gvt1.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gvt1-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gvt2.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,gvt2-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,monitoring.qpdp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qagpublic.qatp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qgadmin.qcpp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qiao-cn.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qpx.googleflights.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qualysapi.qatp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,qualysguard.qpdp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,scanservice1.qcpp1.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,recaptcha.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,recaptcha-cn.net": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,redirector.bdn.dev": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,redirector.xn--ngstr-lra8j.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,service.urchin.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,test.gbugs-qa.chromium.org": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,update.crashlytics.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.destinationurl.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.pxcc.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--flw351e.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,chrome.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,chromecast.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,chromercise.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,chromestatus.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,chromium.org": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google-ohttp-relay-safebrowsing.fastly-edge.com": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,za.group": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,bank.za.group": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,broker.za.group": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,welab.bank": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,wapi-sit.dev-wlab.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,hsbc.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,bochk.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,bankofchina.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,hkab.org.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,hkbea.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,sc.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,hangseng.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,icbcasia.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,ccb.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,citibank.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,ocbcwhhk.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,fubonbank.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,publicbank.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,shacombank.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,livibank.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,antbank.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,alipayhk.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,fusionbank.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,tpns.hk.tencent.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,airstarbank.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,airstarbank.com.hk": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,conn.broker.elebank.com": [
+      "hk-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,longbridge.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,longbridge.cn": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,longbridgewhale.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,lbkrs.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,lbctrl.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,wbkrs.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,usmart.hk": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,usmart.sg": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,wbrks.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,usmartglobal.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,lin.ee": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,line.me": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,line.naver.jp": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-apps.com": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-cdn.net": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-scdn.net": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,nhncorp.jp": [
+      "line.yaml"
+    ],
+    "IP-CIDR,103.2.28.0/22,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,119.235.224.0/21,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,119.235.232.0/23,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,119.235.235.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,119.235.236.0/23,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,125.6.146.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,125.6.149.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,125.6.190.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,125.209.208.0/20,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,203.104.103.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,203.104.128.0/20,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,203.174.66.64/26,no-resolve": [
+      "line.yaml"
+    ],
+    "IP-CIDR,203.174.77.0/24,no-resolve": [
+      "line.yaml"
+    ],
+    "DOMAIN-SUFFIX,meta.ai": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,meta.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,fb.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,facebook.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,facebook.net": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,instagram.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,whatsapp.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,messenger.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,threads.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,threads.net": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,facebookmail.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,metamail.com": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,103.4.96.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,129.134.0.0/17,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,157.240.0.0/17,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,173.252.64.0/19,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,173.252.96.0/19,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,179.60.192.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,185.60.216.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,204.15.20.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,31.13.24.0/21,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,31.13.64.0/18,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,45.64.40.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,66.220.144.0/20,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,69.171.224.0/19,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,69.63.176.0/20,no-resolve": [
+      "meta.yaml"
+    ],
+    "IP-CIDR,74.119.76.0/22,no-resolve": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoft": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoft.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoft.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoft365.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,aka.ms": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,skype.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msftauth.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,s-microsoft.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msauth.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,live.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,office.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,office.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,office365.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,outlook.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,outlook.cn": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,passport.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,onedrive.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,1drv.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,onenote.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,sharepoint.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,sharepointonline.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoftonline.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,bing.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,bing.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,bingads.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,bingapis.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,bingtranslator.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msn.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoftedge.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azure.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azure.cn": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azure.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azureedge.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azurefd.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azurewebsites.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azureiotcentral.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,azurecosmos.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsoftcloud.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,windows.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,windows.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,windowsazure.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,windowsupdate.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,windowslive.cn": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msftncsi.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,trafficmanager.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,xbox.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,xboxlive.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,xboxgamepass.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,xboxgamestudios.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,xboxservices.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,visualstudio.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,visualstudio.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,vscode.dev": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,vscode-cdn.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,vscode-unpkg.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,vscode-webview.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msdn.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,msecnd.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,nuget.org": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,playwright.dev": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,auth0.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,algolia.net": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,intercom.io": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,intercomcdn.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,segment.io": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,sentry.io": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,sentry-cdn.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,stripe.com": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,chatgpt.livekit.cloud": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,host.livekit.cloud": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,turn.livekit.cloud": [
+      "microsoft.yaml"
+    ],
+    "DOMAIN-SUFFIX,163yun.com": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.iplay.163.com": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,hz.netease.com": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,mam.netease.com": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,music.163.com": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,101.71.154.241/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,103.126.92.132/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,103.126.92.133/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,112.13.119.17/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,112.13.122.1/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,115.236.118.33/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,115.236.121.1/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,118.24.63.156/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,193.112.159.225/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,223.252.199.66/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,223.252.199.67/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,39.105.63.80/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,45.254.48.1/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,47.100.127.239/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,59.111.160.195/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,59.111.160.197/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,59.111.181.35/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,59.111.181.38/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "IP-CIDR,59.111.181.60/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,nvidia.com": [
+      "nvidia.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.nvidianews.com": [
+      "nvidia.yaml"
+    ],
+    "DOMAIN-SUFFIX,info.nvidianews.com": [
+      "nvidia.yaml"
+    ],
+    "DOMAIN,chat.openai.com.cdn.cloudflare.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN,openai-api.arkoselabs.com": [
+      "openai.yaml"
+    ],
+    "DOMAIN,openaicomproductionae4b.blob.core.windows.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN,production-openaicom-storage.azureedge.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,chatgpt.com": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openai.com": [
+      "openai.yaml"
+    ],
+    "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,oaistatic.com": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,oaiusercontent.com": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openaiapi-site.azureedge.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openaicom.imgix.net": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,o33249.ingest.sentry.io": [
+      "openai.yaml"
+    ],
+    "DOMAIN-SUFFIX,pornhub.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,phncdn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,youporn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,ypncdn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,redtube.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,rdtcdn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,tube8.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,t8cdn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,thumbzilla.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos-cdn.com": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos.net": [
+      "pornhub.yaml"
+    ],
+    "DOMAIN-SUFFIX,ai.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,opencode.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,mcp.context7.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,mcp.exa.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,mcp.grep.app": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,models.dev": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,perplexity.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,openclaw.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,clawhub.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,poe.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,poecdn.net": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,hf.space": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,hf.co": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,firecrawl.dev": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,tavily.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,skill.sh": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,ai.io.net": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,io.net": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,ionet.betteruptime.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,status.io.net": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,newapi.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,newapi.pro": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,parallel.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,cua.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,keenable.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,flova.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,lobehub.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,manus.space": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,agentlane.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,ccswitch.io": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,skills.sh": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,skill-history.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,browse.sh": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,jina.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,smjcdh.top": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dns.cloudflare.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamcontent.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamusercontent.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,playstation.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,linux.do": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,linuxdo.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gnu.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,team-cymru.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,oaistatsig.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pypi.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,snapcraft.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shields.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stripecdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vercel.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,config.mapbox.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dynatrace.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,browser-intake-us5-datadoghq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,influxdata.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,formulae.brew.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,brew.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,revenuecat.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,da7d.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hbbz.top": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,voipstunt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteplusapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytepluscdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,onesignal.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,datadoghq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nousresearch.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aliyuncs.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rtcplus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gihiji.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnouyi.pizza": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,edu.kg": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.ttt.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.cfapi.ccwu.cc": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ttt.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,argotunnel.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,px-cloud.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflare-dns.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,myexternalip.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dcdeploy.cloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dcdeploy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,razorpay.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zoho.in": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zohocdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zohopublic.in": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,simplesvg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unisvg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iconify.design": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,supabase.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fastly-edge.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rapidssl.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,exp-tas.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,posthog.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,istatmenus.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tunabellysoftware.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,orbstack.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macpaw.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflare.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflare.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflare.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflaremirrors.com": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,1.0.0.1/32,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,1.1.1.1/32,no-resolve": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imtintl.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ocsp.digicert.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,psu.edu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,adtidy.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ubuntu.pool.ntp.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,docker.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,docker.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,docker.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bonjourr.fr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,icon.horse": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tidbcloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trakt.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,appstorrent.ru": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macked.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitwarden.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitwarden.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,openwrt.ai": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,prompts.chat": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ubuntu.com": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,185.125.190.57,no-resolve": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,asusrouter.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nodejs.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nodesource.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,npmjs.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,npmjs.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,npmmirror.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,opencodecn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,adspower.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,royalapps.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,royalapps.onfastspring.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hcaptcha.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imgix.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unsplash.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browserleaks.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browserleaks.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browserleaks.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browserscan.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,db-ip.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dnsleaktest.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,freegeoip.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,freegeoip.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geocode.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geoipify.whoisxmlapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geoiplookup.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geolocation.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geoplugin.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ip.sb": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipapi.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipify.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipinfo.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iplocation.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ippure.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,skk.moe": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wiki.metacubex.one": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ip2location.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipaddress.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipaddress.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipdata.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipgeolocate.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipgeolocation.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipgeolocationapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iplocation.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipstack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,viewdns.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,whatismyip.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,whatismyipaddress.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,whoer.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xtools.wmflabs.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,speedtest.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,speedtest.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,speedtest.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,oracle.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,galaxycloud.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,huggingface.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vercel-storage.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vercel.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wasmer.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,riotcdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,riotgames.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wr.pvp.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.amplitude.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,app.smartmailcloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gate.hockeyapp.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,knock.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,smartmailcloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--1-q07a56pdss.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--4gq62f.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--4gq62f.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--4gq62f52gdss.ink": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yiyuanjichang.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,laower.wasmer.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rapid-disk-29c72222.he-ximao.workers.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,2o7.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,4everProxy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,4shared.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,4sqi.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,9to5mac.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,abpchina.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,accountkit.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,adblockplus.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,adobe.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,adobedtm.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aerisapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,airtable.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,akamaihd.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,alfredapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,allconnected.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,amazon.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,amazon.co.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,amazon.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,amazonaws.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ampproject.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ampproject.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ampproject.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,anaconda.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ancsconf.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,android-x86.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,android.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,androidify.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,angularjs.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,anthonycalzadilla.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aol.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aolcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,apache.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.mixpanel.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.termius.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.tiktokv.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.urbandictionary.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,apigee.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,apk-dl.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,apkpure.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,appdownloader.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,appshopper.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,arcgis.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,archive.is": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,archive.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,archives.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,armorgames.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aspnetcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,async.be": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,att.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,avgle.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,awsstatic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,badoo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bandisoft.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bbtoystore.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bet365.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,betvictor.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bigsound.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bintray.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bit.do": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bit.ly": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitbucket.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bitshare.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bkrtx.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blog.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blogcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blogger.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bloglovin.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blogsmithmedia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blogspot.hk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bloomberg.cn": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bloomberg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,books.com.tw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,boomtrain.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,botanwang.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,box.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,box.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,boxun.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cachefly.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cbc.ca": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn.angruo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn.segment.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdnst.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,celestrak.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,census.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,certificate-transparency.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,chinadigitaltimes.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,chinatimes.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cl.ly": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,clien.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudfront.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudgarage.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudmagic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cmail19.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnet.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cocoapods.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,comodoca.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,content.office.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,crisp.chat": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,culturedcode.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cygames.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,d.pr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,danilo.to": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,daolan.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,data-vocabulary.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dayone.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,db.tt": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dcmilitary.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,deja.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,demdex.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,deskconnect.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,digisfera.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,digitaltrends.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,disconnect.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,disq.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,disqus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,disquscdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dmm.co.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dnsimple.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,doub.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dowjones.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dribbble.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,droplr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,duckduckgo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dueapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dw.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,easybib.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,economist.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,edgecastcdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,edgekey.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,edgesuite.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,engadget.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,entrust.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,eurekavpt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,evernote.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,extmatrix.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,eyny.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fabric.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fastly.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fastmail.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fc2.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,feedburner.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,feedly.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,feedsportal.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fiftythree.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,firebaseio.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flexibits.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flickr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flipboard.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flipkart.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flitto.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,flurry.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,freeopenProxy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fubo.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fullstory.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fzlm.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,g.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gabia.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,garena.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geni.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,get.how": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,getcloudapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,getfoxyProxy.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,getlantern.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,getmdl.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,getpricetag.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gfw.press": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gfx.ms": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ghostnoteapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,git.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gitbook.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,globalsign.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gmocloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gmodules.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,godaddy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,golang.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gongm.in": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,goo.gl": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,goodreaders.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,goodreads.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gravatar.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gstatic.cn": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gunsamerica.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gvt0.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,helpshift.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hitun.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hockeyapp.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,homedepot.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hootsuite.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,howtoforge.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,i-cable.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iam.soy": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,icoco.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,icons8.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ift.tt": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ifttt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imageshack.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,img.ly": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imgur.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imore.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ingress.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,inoreader.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,insder.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,instapaper.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,instructables.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,io.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipn.li": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,is.gd": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ishowsapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,issuu.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,itgonglun.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,itun.es": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ixquick.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,j.mp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,javbus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,js.revsci.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,jshint.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,jtvnw.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,justgetflux.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kakao.co.kr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kakao.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kakaocdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kat.cr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kenengba.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kik.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,klip.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,leancloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,leetcode.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,libsyn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,licdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,lightboxcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,like.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,linkedin.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,linode.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,lithium.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,littlehj.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,livefilestore.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,llnwd.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,localnetwork.uop": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,logmein.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macid.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macromedia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macrumors.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mangaup.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,manhuaren.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,marketwatch.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mashable.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mathjax.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,maven.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,medium.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mega.co.nz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mega.nz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,megaupload.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,microsofttranslator.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mindnode.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mixin.one": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mlssoccer.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mobile01.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,modmyi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,moves-export.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mp3buscador.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,msedge.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mycnnews.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,myfontastic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,name.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nasa.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ndr.de": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,netdna-cdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,newipnow.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nextmedia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nicovideo.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nih.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nimg.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nintendo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nintendo.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,notion.so": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,novafile.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nrk.no": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nsstatic.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nssurge.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nyt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nytimes.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nytimg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nytstyle.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,omnigroup.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ooyala.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,openvpn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,openwrt.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,optimizely.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,orkut.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,osha.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,osxdaily.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,overcast.fm": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ow.ly": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,paddle.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,paddleapi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,panoramio.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,parallels.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,parse.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pdfexpert.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,periscope.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,piaotian.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,picacomic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,picasaweb.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pinboard.in": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ping.pe": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pinterest.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pixelmator.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pixiv.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pixnet.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,playpcesor.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pokemon.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,polymer-project.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,popo.tw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,potato.im": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,prfct.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,proxfree.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,psiphon3.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ptt.cc": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pubu.com.tw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,puffinbrowser.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pushbullet.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pushwoosh.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pximg.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,quora.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,quoracdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,readingtimes.com.tw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,readmoo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,reuters.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rfi.fr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rileyguide.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rime.im": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rsf.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rthk.hk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sciencedaily.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sciencemag.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,scribd.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,search.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,servebom.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sexinsex.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sfx.ms": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shadowsocks.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shadowverse.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sharethis.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shazam.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shutterstock.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sidelinesnews.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,simp.ly": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,simplenote.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sketchappsources.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,slack-edge.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,slack-msgs.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,slack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,slideshare.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,smartdnsproxy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,smh.com.au": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,snapchat.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sndcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sockslist.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,soundcloud.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sourceforge.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sowers.org.hk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,speedsmart.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,spike.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,squarespace.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ssa.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sstatic.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,st.luluku.pw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stackoverflow.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,starp2p.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,startpage.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,state.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,staticflickr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,storify.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stumbleupon.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sugarsync.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,supermariorun.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,surfeasy.com.au": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,surge.run": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,surrenderat20.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sydneytoday.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,symauth.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,symcb.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,symcd.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,t66y.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tablesgenerator.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tabtter.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,talk853.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,talkboxapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,talkonly.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tapbots.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tapbots.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,teamviewer.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,techcrunch.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,technorati.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,techsmith.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,teddysun.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,textnow.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,thebobs.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,theinitium.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,thepiratebay.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,theverge.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,thewgo.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tiltbrush.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,time.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,timeinc.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tinder.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tiny.cc": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tinychat.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tinypic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tmblr.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,todoist.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,togetter.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tokyocn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tomshardware.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torcn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torrentprivacy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torrentproject.se": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torrentz.eu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,traffichaus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,transparency.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trello.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trendsmap.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trulyergonomic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trustasiassl.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tt-rss.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ttvnw.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tumblr.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tumblr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,turbobit.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tv.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tweetdeck.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tweetmarker.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twimg.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twitch.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twitthat.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twtkr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twttr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,txmblr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,typcn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,typekit.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,typography.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ubertags.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ublock.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ubnt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uchicago.edu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,udn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ugo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uhdwallpapers.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ulyssesapp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unblockdmm.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unblocksites.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unpo.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,untraceable.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uploaded.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uProxy.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,upwork.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,urchin.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,urlparser.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,us.to": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,usertrust.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,usgs.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,usma.edu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uspto.gov": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ustream.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,v.gd": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,v2ex.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,v2ray.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,van001.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vanpeople.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vansky.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vbstatic.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,venchina.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,venturebeat.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,veoh.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,verizonwireless.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,viber.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vid.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,videomega.tv": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vidinfo.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vimeo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vimeocdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vimperator.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vine.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,visibletweets.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,viu.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vivaldi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,voachinese.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vocativ.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vox-cdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vpnaccount.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vpnbook.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vpngate.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vsco.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vultr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vzw.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,w.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,w3schools.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wattpad.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,web2project.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,webfreer.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,weblagu.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,websnapr.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,webtype.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,webwarper.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wenxuecity.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,westca.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,westpoint.edu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,whatbrowser.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikileaks-forum.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikileaks.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikileaks.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikimedia.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikipedia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikipedia.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wikiwand.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wordpress.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,workflow.is": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,workflowy.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,worldcat.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wow.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wp.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wsj.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wsj.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wwitv.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xanga.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xclient.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xda-developers.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xeeno.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xiti.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xteko.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xuite.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yahoo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yahooapis.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yasni.co.uk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yastatic.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ycombinator.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yeeyi.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yes-news.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yesasia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yidio.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yimg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ying.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yorkbbs.ca": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,youmaker.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yourlisten.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,yoyo.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zacebook.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zalmos.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zaobao.com.sg": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zeutch.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zynamics.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,1e100.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,abc.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,akamai.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,appspot.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,autodraw.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bandwagonhost.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,blogblog.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,chromeexperiments.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,creativelab5.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,crittercism.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,culturalspot.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dartlang.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fb.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fbcdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fbsbx.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gcr.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gosetsuden.jp": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gwtproject.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hackmd.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,heroku.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,html5rocks.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,keyhole.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kobo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kobobooks.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,madewithcode.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,material.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,netmarble.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nianticlabs.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pinimg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pubnub.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,t.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tensorflow.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,toggleable.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torproject.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,twitpic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,unfiltered.news": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,waveprotocol.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,webmproject.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,webrtc.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-KEYWORD,appledaily": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-KEYWORD,beetalk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-KEYWORD,blogspot": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-KEYWORD,dropbox": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,v2ex.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-KEYWORD,dlercloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,picjs.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vikacg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,chalungu.cn": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wheel-size.cn": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,13.32.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,13.33.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,13.35.0.0/17,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,18.184.0.0/15,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,18.194.0.0/15,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,18.208.0.0/13,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,18.232.0.0/14,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,52.200.0.0/13,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,52.58.0.0/15,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,52.74.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,52.77.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,52.84.0.0/15,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,54.156.0.0/14,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,54.226.0.0/15,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,54.230.156.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,54.93.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,1.201.0.0/24,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,103.246.56.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,103.27.148.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,110.76.140.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,113.61.104.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,27.0.236.0/22,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,13.251.24.157/24,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,13.251.41.203/24,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,17.252.156.147/24,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,17.252.157.26/24,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,174.37.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,208.43.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,74.86.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "IP-CIDR,75.126.0.0/16,no-resolve": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,betterstack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,betterstack.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdnjs.betterstack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,t.betterstack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uptime.betterstack.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,s1569222.us-west-12.betterstackdata.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,faro-collector-prod-us-east-0.grafana.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,plausible.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,uptimekuma.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mintcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,lolesports.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,lencr.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,crt.sectigo.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,ocsp.comodoca4.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pythonhosted.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,astral.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,open-vsx.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rgpub.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gitbook.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,statuspage.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,awswaf.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,on.aws": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,easychat.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,omnichat.ai": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,smartlook.cloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,cdn-ukwest.onetrust.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,privacyportal-uk.onetrust.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,cdn.cookielaw.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,cmp.osano.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,cdp.customer.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,blacklist.tampermonkey.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,prodregistryv2.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,manyvids.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,numuki.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,printfriendly.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,split-tool.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,xiaowan.hk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdnfonts.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bootstrapcdn.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sublimetext.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sublimehq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gfis.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,aisecmatrix.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,api.sunbreak.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN,cvs.prohost.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nube.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pynesys.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pynecore.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,railway.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zeabur.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,deepwiki.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,onorca.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macked.site": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,turingfraud.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,redd.it": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,reddit.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,redditmedia.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,redditstatic.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,redditspace.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,discord.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,discordapp.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,discordapp.net": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,discord.gg": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycdn.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,scdn.co": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,byspotify.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,pscdn.co": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spoti.fi": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.app.link": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.design": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycdn.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycharts.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycodes.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifyforbrands.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifyjobs.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifynewsroom.jp": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotilocal.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,tospotify.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify-everywhere.com": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.com.edgesuite.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.map.fastly.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.map.fastlylb.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify-com.akamaized.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com": [
+      "spotify.yaml"
+    ],
+    "PROCESS-NAME,Spotify": [
+      "spotify.yaml"
+    ],
+    "PROCESS-NAME,Spotify.exe": [
+      "spotify.yaml"
+    ],
+    "IP-CIDR,104.154.127.126/32,no-resolve": [
+      "spotify.yaml"
+    ],
+    "IP-CIDR,35.186.224.47/32,no-resolve": [
+      "spotify.yaml"
+    ],
+    "DOMAIN-SUFFIX,steampowered.com": [
+      "steam.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamcommunity.com": [
+      "steam.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamstatic.com": [
+      "steam.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamchina.com": [
+      "steam.yaml"
+    ],
+    "DOMAIN-SUFFIX,huavod.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,okhuaren.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,huaren.live": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,huarenlivewebsite.top": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,okokserver.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.mapbox.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,fast.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,netflix.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,live-video.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,twitchcdn.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,pscp.tv": [
+      "streaming.yaml"
+    ],
+    "IP-CIDR,5.28.195.2/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.105.192.0/23,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.4.0/22,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.0.0/16,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.8.0/21,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.16.0/21,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.56.0/22,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,91.108.56.187/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,95.161.64.0/20,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,109.239.140.0/24,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,149.154.160.0/20,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,185.76.151.0/24,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR6,2001:67c:4e8::/48,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR6,2001:b28:f23c::/47,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR6,2001:b28:f23f::/48,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR6,2001:b28:f23d::/48,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR6,2a0a:f280::/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,t.me": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,tdesktop.com": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,telegra.ph": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,telegram.me": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,telegram.org": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.telegram.org": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,telesco.pe": [
+      "telegram.yaml"
+    ],
+    "DOMAIN-SUFFIX,tgalileo.com": [
+      "tencent-global.yaml"
+    ],
+    "DOMAIN,sg.tgalileo.com": [
+      "tencent-global.yaml"
+    ],
+    "IP-CIDR,43.156.86.223/32,no-resolve": [
+      "tencent-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,workbuddy.ai": [
+      "tencent-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,codebuddy.ai": [
+      "tencent-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,weixin.qq.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,qq.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,qq.com.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,workbuddy.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tencentbuddy.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,myqcloud.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloud.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tencent-cloud.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,codebuddy.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,ardot.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,galileotelemetry.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,spacelama.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,gtimg.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,gtimg.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,copilot.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,lightai.cloud.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,time1.cloud.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,chase.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,jpmorgan.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,jpmorganchase.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,bankofamerica.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,bofa.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,wellsfargo.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,wf.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,citi.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,citibank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,citibankonline.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,usbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,capitalone.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,capitalone360.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,tdbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,pnc.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,truist.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,53.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,regions.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,key.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,huntington.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,mtb.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,citizensbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,comerica.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,zionsbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,eastwestbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,santanderbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,popular.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,firsthorizon.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,synovus.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,websterbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,frostbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,arvest.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,umb.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,associatedbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,wintrust.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,cadencebank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,southstatebank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,trustmark.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,oldnational.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,westernalliancebank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,ally.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,discover.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,discoverbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,chime.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,sofi.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,marcus.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,synchrony.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,synchronybank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,breadfinancial.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,axosbank.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,varomoney.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,current.com": [
+      "us-bank.yaml"
+    ],
+    "DOMAIN-SUFFIX,firstrade.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,firstrade.net": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,interactivebrokers.com.hk": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,interactivebrokers.com.cn": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,interactivebrokers.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,ibkr.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.ibkr.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.clientam.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,schwab.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,schwabcdn.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,schwabmail.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,schwabadvisorcenter.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,toslc.thinkorswim.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,launchdarkly.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,fastbull.com": [
+      "us-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,api-m.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,c.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,c6.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,d.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,ddbm2.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,t.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,pics.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,hcaptcha.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,newassets.hcaptcha.paypal.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,paypalobjects.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,wise.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,api.wise.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,sst.wise.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,wximg.wxs.qq.com": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,qlogo.cn": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,qpic.cn": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,weixinbridge.com": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,weixin.com": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,wechat.com": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,servicewechat.com": [
+      "wechat.yaml"
+    ],
+    "DOMAIN-SUFFIX,x.com": [
+      "x.yaml"
+    ],
+    "DOMAIN-SUFFIX,twitter.com": [
+      "x.yaml"
+    ],
+    "DOMAIN-SUFFIX,twimg.com": [
+      "x.yaml"
+    ],
+    "DOMAIN-SUFFIX,x.ai": [
+      "x.yaml"
+    ],
+    "DOMAIN-SUFFIX,grok.com": [
+      "x.yaml"
+    ],
+    "DOMAIN-SUFFIX,zztfly.com": [
+      "xhs.yaml"
+    ],
+    "DOMAIN-SUFFIX,youtube": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,youtube.com": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,youtube-nocookie.com": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,youtu.be": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,yt.be": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,googlevideo.com": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,ytimg.com": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,youtubei.googleapis.com": [
+      "youtube.yaml"
+    ],
+    "DOMAIN-SUFFIX,redirector.c.youtubeeducation.com": [
+      "youtube.yaml"
+    ]
+  },
+  "file_dups": {
+    "alibaba-global.yaml": [],
+    "alibaba.yaml": [],
+    "apple.yaml": [],
+    "baidu.yaml": [],
+    "bilibili.yaml": [],
+    "bytedance-global.yaml": [],
+    "bytedance.yaml": [],
+    "claude.yaml": [],
+    "crypto.yaml": [],
+    "direct-ai.yaml": [],
+    "direct.yaml": [],
+    "dns.yaml": [],
+    "fin-media.yaml": [],
+    "fin-tech.yaml": [],
+    "firefox.yaml": [],
+    "github.yaml": [],
+    "google.yaml": [],
+    "hk-bank.yaml": [],
+    "hk-broker.yaml": [],
+    "line.yaml": [],
+    "meta.yaml": [],
+    "microsoft.yaml": [],
+    "netease-music.yaml": [],
+    "nvidia.yaml": [],
+    "openai.yaml": [],
+    "pornhub.yaml": [],
+    "proxy-ai.yaml": [],
+    "proxy.yaml": [],
+    "social.yaml": [],
+    "spotify.yaml": [],
+    "steam.yaml": [],
+    "streaming.yaml": [],
+    "telegram.yaml": [],
+    "tencent-global.yaml": [],
+    "tencent.yaml": [],
+    "us-bank.yaml": [],
+    "us-broker.yaml": [],
+    "us-payment.yaml": [],
+    "wechat.yaml": [],
+    "x.yaml": [],
+    "xhs.yaml": [],
+    "youtube.yaml": []
+  }
+}
