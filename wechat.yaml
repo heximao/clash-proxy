@@ -7,6 +7,7 @@ payload:
 
 # === 微信主域（2026-10-06 漏网之鱼补录）===
   - DOMAIN-SUFFIX,weixin.com
+  - DOMAIN-SUFFIX,wechat.com
 
 # === 微信小程序服务（2026-10-15 漏网之鱼补录）===
   - DOMAIN-SUFFIX,servicewechat.com
