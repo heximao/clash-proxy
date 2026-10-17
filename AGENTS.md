@@ -14,11 +14,13 @@ clash-proxy/
 ├── README.md                           # 面向使用者：CDN 引用方式、客户端配置示例、规则文件全表
 ├── changelog.md                        # 更新记录：每次变更后在顶部追加（见 Git 工作流）
 ├── scripts/                            # 维护脚本（每个脚本独立子目录，各带自己的 README）
-│   ├── find-duplicates/               # find_duplicates.py + 生成物 DUPLICATES.md（入库）/ duplicates.json（本地）
+│   ├── find-duplicates/               # find_duplicates.py + 生成物 DUPLICATES.md（入库）/ duplicates.json（入库）
+│   ├── check-coverage/                # check_coverage.py：规则级覆盖检查 + 品牌标签锚点检索（查询工具，非门禁）
 │   ├── merge-reject-from-loyalsoldier/
 │   └── normalize-yaml-comments/
 ├── .agents/skills/                     # 项目级 Agent Skills（已纳入 git 跟踪）
 │   └── fill-domains-from-log/         # 从日志提取漏网之鱼域名并分类补录的完整工作流
+│       └── scripts/extract-match-domains/  # 提取脚本 + skip-list.txt（已裁决跳过项数据源）+ README
 ├── .github/workflows/
 │   └── auto-merge-reject.yml           # 每日 00:20 UTC 自动合并 reject.yaml
 └── log/                                # 本地运行日志（已 gitignore，不入库）
@@ -46,7 +48,7 @@ clash-proxy/
 
 为新域名定归属文件时，按以下判据逐级判断；都不满足的一律留人工，不得凭感觉归类：
 
-1. **同标签 TLD 变体**：库内已有该品牌标签任一 TLD（如 `browserleaks.com`）→ `.net`/`.org` 零歧义补录。**grep 必须按品牌标签而非全域名**，否则会漏掉锚点。标签须**逐字符相同**，形近/字母转位（`mdoelscope.ai` vs `modelscope.ai`）是仿冒域，绝不补录。
+1. **同标签 TLD 变体**：库内已有该品牌标签任一 TLD（如 `browserleaks.com`）→ `.net`/`.org` 零歧义补录。**标签须逐字符相同**，形近/字母转位（`mdoelscope.ai` vs `modelscope.ai`）是仿冒域，绝不补录。（锚点检索已机器化：`check_coverage.py` 对未覆盖域名自动输出 `BRAND-ANCHOR`，仍须人工确认标签逐字符相同。）
 2. **同厂商兄弟域 + 文件内既有成组约定**：`intercom.io`+`intercomcdn.com` 组 → 补 `sentry-cdn.com`；`pornhub.yaml` 的「主域+同名 CDN」组 → 补 `xvideos.net`。
 3. **「品牌 + 固定后缀」成对先例**：同文件分组内已有「主域 + 同品牌衍生域」成对并存（`volces.com` + `volccdn.com`、`doubao.com`）→ 同结构的 `doubaocdn.com` 属零歧义补录。
 4. **命名族归属 > 进程证据**：`byte*` 族（byteimg/bytetos/bytedanceapi/bytescm/bytetcc）支持 `bytednsdoc`；`bdstatic.com` 支持 `bdimg.com`。进程证据只能加分不能单独定案（`volceapplog.com` 疑火山但仅 firefox 进程 → 留人工）。
@@ -56,6 +58,10 @@ clash-proxy/
 8. **精确主机规则 ≠ 主域覆盖**：`DOMAIN,cdn.ripperhe.com` 不代表覆盖 `ripperhe.com`。判定前必须回看命中行规则类型。
 
 #### 已裁决结论（勿再问、勿收录）
+
+> 机器可读映射：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`
+> （`skip`=静默跳过，`manual`=待人工可见）。**新裁决项落 changelog 时必须同步追加到该文件**，
+> 用户定案的 manual 项要从文件移除；本节为判据权威，两者须保持一致。
 
 - 无主端点不归类：`antpeak.com` / `hibchr.com` / `zorvian.com`。
 - reject 上游已收录（跳过不加不问）：`clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com`、`cloudflareinsights.com`、`go-mpulse.net`、`akstat.io`。
@@ -141,6 +147,10 @@ $PY -c "import sys,yaml; yaml.safe_load(sys.stdin)" < SomeFile.yaml
 # 该脚本扫描根已锚定仓库根，任意目录可运行
 python3 scripts/find-duplicates/find_duplicates.py
 
+# 规则级覆盖检查：判断域名/IP 是否已被业务 yaml 覆盖 + 品牌标签锚点（判据1 机器化）
+# 排除 reject.yaml；查询工具非门禁，退出码恒 0；任意目录可运行
+python3 scripts/check-coverage/check_coverage.py feishu.cn itdog.cn 1.2.3.4
+
 # 从 Loyalsoldier 上游合并最新拒绝规则至 reject.yaml（须在仓库根目录执行）
 # 注意：本地无需手动执行，auto-merge-reject.yml 每日自动运行；仅在需要本地验证合并结果时使用
 python3 scripts/merge-reject-from-loyalsoldier/merge_reject_from_loyalsoldier.py
@@ -203,7 +213,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 
 #### 仓库状态（已知事实与遗留问题）
 
-- PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先 grep 全库查重。
+- PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先用 `scripts/check-coverage/check_coverage.py` 全库查重（规则级判断，勿用 grep 子串匹配）。
 - 未修的已知问题：`proxy.yaml:784` 把 `USER-AGENT,WhatsApp*` 误写成分组注释头致 43 条归属错误；`direct.yaml` 44–179 行「腾讯云-香港」134 条实为杂项。
 - `domain-distribution.html` 未被 gitignore（未跟踪未提交）。
 - README 仍有用户挂起未确认的改动（两条 FAQ 未恢复、L100 句式杂糅等），非用户明确要求不要擅自动。

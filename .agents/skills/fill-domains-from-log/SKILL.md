@@ -1,7 +1,7 @@
 ---
 name: fill-domains-from-log
-version: v2.5.0
-description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，本地查重与进程名粗判后**自主裁决归属**（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行重复检查自检闭环。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs **只读复制昨天的日志**到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录以避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧自 2026-10-17 起取消分支制度：每轮开头先 fetch 并把本地 main 追上远程、确认与远程双向 0 0，全部改动直接在 main 上完成并提交，commit 前再查一次同步状态，随后立即 push main 并确认 0 0。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
+version: v2.6.0
+description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
 # 从日志补漏域名
@@ -21,11 +21,13 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
       ↓
  1. 准备日志（cp 复制昨天的：~/.config/clash.meta/logs → log/clashx-meta-log/）
       ↓
- 2. 提取 + 去重 + 过滤伪域名
+ 2. 提取（extract-match-domains 脚本：结构化候选表 + skip-list 过滤
+    + 私有 IP/探针过滤 + 主域归并；候选为 0 → 空结果轮收尾，直接跳 12）
       ↓
- 3. 归并主域
+ 3. 人工复核过滤边界（脚本内置过滤之外的漏网情况）
       ↓
- 4. 批量查现有规则（grep *.yaml）+ 读历史 changelog + 进程名粗判
+ 4. 规则级查重（scripts/check-coverage/check_coverage.py，含品牌标签锚点）
+    + 读历史 changelog + 进程名粗判，粗判表落盘 log/.work/ 续跑
    —— 本步骤禁止任何外部查询 ——
       ↓
  5. ★ 自主裁决归属（证据足直接定；不足进 6）★
@@ -42,7 +44,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
       ↓
 10. 更新 changelog → 在 main 上提交（显式列文件，不推远程）
       ↓
-11. push main → 确认 0 0
+11. push main → 确认 0 0 → 删除本轮粗判草稿 log/.work/
       ↓
 12. 归档已处理日志（log/clashx-meta-log/ → log/.archive/）
 ```
@@ -95,53 +97,76 @@ git status -sb                                # 工作区干净（未跟踪文�
 - **cp 套娃防护**：`cp -R src dst/` 当 `dst/src` 已存在时会复制成 `dst/src/src` 套娃。cp 前确认 `log/clashx-meta-log/<folder>` 不存在；存在则跳过（已复制过）。
 - `log/clashx-meta-log/` 下未归档存量（上轮中断遗留）直接纳入本轮提取范围；处理完成后按第 12 节归档（归档是工作区内 mv，不碰 ~/.config，不弹窗）。
 
-## 2. 提取与去重
+## 2. 提取与过滤（结构化脚本）
 
-用本 skill 自带脚本提取，输出五段：match Match 域名、match Match 裸 IP、oc-cn-domain 域名、oc-cn-domain 裸 IP、进程提示（`目标: 进程名(次数)`），已完成去重并过滤无 TLD 伪域名：
-
-```bash
-python3 .agents/skills/fill-domains-from-log/scripts/extract_match_domains.py <日志文件或目录>
-```
-
-手工核对时等价命令：
+用本 skill 自带脚本提取（v2.6.0 起为**结构化输出**，目录结构与仓库 scripts/ 约定一致——每脚本一目录一 README）：
 
 ```bash
-# match Match
-grep -oE -- '--> [^ ]+ match Match using' <log> | sed -E 's/--> ([^:]+):[0-9]+ match Match using/\1/' | sort -u
-# oc-cn-domain
-grep -oE -- '--> [^ ]+ match RuleSet\(oc-cn-domain\) using' <log> | sed -E 's/--> ([^:]+):[0-9]+ match RuleSet\(oc-cn-domain\) using/\1/' | sort -u
+python3 .agents/skills/fill-domains-from-log/scripts/extract-match-domains/extract_match_domains.py <日志文件或目录>
 ```
+
+输出段（详见脚本旁 README.md）：
+
+| 段 | 内容 |
+|---|---|
+| `# summary` | 各类计数（候选数、过滤数、skip-list 命中数） |
+| `# domains` | 候选域名表 `域名 \| 类别(mm/oc) \| 次数 \| 进程(次数)`，按总次数降序——第 4 步粗判的直接输入 |
+| `# registrable` | 主域归并 `主域 <- 子域(次数), ...`——check_coverage 的直接输入 |
+| `# public-ips` | 公网裸 IP（私有/保留段已过滤） |
+| `# manual-review` | skip-list `manual` 项本轮命中——待人工，不参与自动裁决，changelog「待人工确认」段照抄 |
+| `# skipped` | skip-list `skip` 项本轮命中——changelog「整批跳过」段照抄即可，不再逐个判断 |
+
+脚本内置过滤（不再人工排除）：无 TLD 伪域名、探针族（`wpad`、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`、`root-key-sentinel-*`）、私有/保留 IP 段、skip-list 清单。
+
+**skip-list.txt 维护入口**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt` 是「已裁决结论」的机器可读映射（`skip`=静默跳过、`manual`=待人工可见）。每轮产生新的「已裁决不归类 / 待人工」结论后，落 changelog 的同时**必须同步追加**到该文件，否则下轮重复出现同样候选。反过来，人工已定案的 manual 项（用户给出归属）要从文件移除。
 
 只提取 info 级别的 `... using` 行；忽略 `match Match/`、`match RuleSet/oc-cn-domain` 等斜杠形式的 dial 报错行（同一目标已含于 info 行）。
 
 日志行格式：`[TCP] 源地址(进程名) --> 目标:端口 match <Match|RuleSet(oc-cn-domain)> using 策略组`。进程名位于源地址后的圆括号内，可有可无。
 
-## 3. 过滤
+## 2b. 空结果轮收尾（候选为 0 时必走）
 
-以下目标不归类：
+automation 每天跑，多数轮可能过滤后**一个候选都没有**（全部已覆盖 / 被 skip-list 消化）。此时：
 
-- 无 TLD 的伪域名（脚本已过滤），如 `monitor_browser`、`kwrt`、`lan`、`local`、`localhost`。
-- 局域网 / 保留 IP 段地址。
-- 明显的本地服务主机名。
+- **不写 changelog 条目、不产生任何提交**——空轮没有可审计的变更，changelog 只记实质变更。
+- **照常归档**（第 12 节）：已提取确认无增量的日志文件夹照样移入 `log/.archive/`，否则下轮重复提取。
+- **记当日 memory 一行**（如「10-18 轮：昨日日志提取 0 候选，全部已覆盖，已归档」），供用户事后核对 automation 存活。
+- 公网裸 IP 段也无新增时同样适用。
 
-## 4. 批量查重 + 粗判归属（不做外部查询）
+## 3. 人工复核过滤边界
+
+脚本已内置过滤伪域名、探针族、私有 IP、skip-list。本步只人工兜底脚本覆盖不到的：
+
+- 偶发漏网的明显本地服务主机名（内网域名后缀但非保留 IP 的目标）。
+- `# domains` 里明显是广告/追踪类的（按 AGENTS.md「广告/追踪类整批不落盘」只记录不判断）。
+- 主域归并是启发式（常见二级 TLD 取三级、其余取两级），个别特殊后缀可能归并不准，粗判时留意 `# registrable` 里归并结果是否合理。
+
+## 4. 规则级查重 + 粗判归属（不做外部查询）
 
 **这一阶段禁止调用任何外部查询（RDAP / DoH / wayback / urlscan / WebSearch）**，只靠本地证据做粗判，为第 5 步自主裁决提供素材。
 
-1. **批量查现有规则**：把提取结果归并到主域（`xx.yy.cn` 取 `yy.cn`，`a.b.com` 取 `b.com`），然后一次性扫描：
+1. **规则级查重（取代 grep 子串匹配）**：把 `# registrable` 段的主域喂给仓库脚本（也可加裸 IP）：
    ```bash
-   for d in <主域列表>; do hit=$(grep -l "$d" *.yaml 2>/dev/null | grep -v '^reject.yaml$' | tr '\n' ' '); echo "$d => ${hit:-NONE}"; done
+   python3 .agents/skills/fill-domains-from-log/scripts/extract-match-domains/extract_match_domains.py <日志目录> \
+     | awk '/^# registrable/{f=1;next} /^# public-ips/{f=0} f && !/^（无）/{print $1}' \
+     | python3 scripts/check-coverage/check_coverage.py -
    ```
-   已有 `DOMAIN-SUFFIX` 覆盖的主域**整批跳过**（规则集先于本地 yaml 匹配，不代表规则缺失），不逐个处理。**禁止查询、核对 `reject.yaml`**。
-2. **读历史 changelog**：`changelog.md` 已纳入 git 跟踪、持续维护。里面可能已记录某域「reject.yaml 上游已收录」（如 `clarity.ms`、`jpush.cn`、`jiguang.cn`），这类**直接跳过，不加也不问**。必须先读。
-3. **进程名粗判**：脚本 process-hints 段给出每个目标的发起进程，这是第一手线索：
+   - 输出 `COVERED`（含命中文件与规则）的主域**整批跳过**——规则集先于本地 yaml 匹配，不代表规则缺失。
+   - 输出 `DOMAIN,精确主机` 命中的注意判据 8：精确主机规则 ≠ 主域覆盖，回看命中行规则类型再定。
+   - 输出 `DOMAIN-KEYWORD` 命中的是弱证据，不算覆盖。
+   - 输出 `BRAND-ANCHOR` 的即判据 1 命中（库内同标签其他 TLD），直接可定为该锚点文件。
+   - 输出 `UNCOVERED` 的进入粗判。
+   **禁止查询、核对 `reject.yaml`**（脚本已自动排除）。
+2. **读历史 changelog**：重点读最近若干条目，看未覆盖主域是否已被往期记录判定过。reject 上游已收录等历史跳过项已由 skip-list 机器化，changelog 主要查「往期裁决过但未进 skip-list」的漏网记录。
+3. **进程名粗判**：`# domains` 表的进程列是第一手线索：
    - `Trae CN Helper` / `TRAE SOLO CN Helper` / `DoubaoIme` → 字节系（Trae / 豆包）
    - `Feishu` / `Lark Helper` → 飞书系
    - `wpsoffice` / `wpscloudsvr` → 金山办公 WPS
    - `trustd` → macOS 证书校验，目标多为 OCSP / CRL 端点
    - `mihomo` / `OrbStack Helper` → 内核 / 基础设施自身流量
+   - `logioptionsplus_agent` → 罗技 Options+（logitech 系，无锚点时留人工）
    - `Google Chrome Helper` / `firefox` → **无产品指向，归属由第 5/6 步自主裁决；证据不足走 RDAP**
-4. **给出粗判结论并记录**：每个未覆盖主域写一行「主域 → 建议归属文件 + 判断依据（进程名 / 域名语义 / 已有同类分组 / AGENTS.md 判据条号）」。证据充分的标记为 `可定`，证据不足的标记为 `待查`（进入第 6 节 RDAP/DoH）。**禁止在本步发起任何外部查询。**
+4. **粗判表落盘（中断续跑）**：每个未覆盖主域写一行「主域 → 建议归属文件 + 判断依据（进程名 / 域名语义 / BRAND-ANCHOR / AGENTS.md 判据条号）」，标记 `可定` / `待查`，**写入 `log/.work/YYYY-MM-DD-draft.md`**（gitignore 覆盖，不入库）。中断后下轮若发现该文件存在，先读它续跑而不是从头再来；第 11 步 push 成功后删除。
 
 ## 5. 自主裁决归属（留痕，可追溯）
 
@@ -151,7 +176,7 @@ grep -oE -- '--> [^ ]+ match RuleSet\(oc-cn-domain\) using' <log> | sed -E 's/--
 
 - **证据充分（`可定`）**：粗判依据明确（命中 AGENTS.md 判据条号、或进程名+域名语义双佐证、或同文件已有同类分组）→ 直接定归属文件，进入第 7 步落盘。
 - **证据不足（`待查`）**：进入第 6 节自主调用 RDAP / DoH / wayback 查询；查询有结论的据结果定夺，无结论的按既定兜底规则处理（见下）。
-- **已裁决项直接跳过**：AGENTS.md「已裁决结论」、changelog 记录的「reject.yaml 上游已收录」（如 `clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com` 等）、伪域名/探针族——不查、不收、不归类。
+- **已裁决项直接跳过**：AGENTS.md「已裁决结论」、skip-list 已收录项（reject 上游已收录如 `clarity.ms`、`jpush.cn` 等，无主端点，伪域名/探针族——提取脚本已自动消化，见 `# skipped` / `# manual-review` 段）——不查、不收、不归类。
 - **无主端点兜底**：Cloudflare NS + RDAP 无注册商实体 + 首页 429/空 + 直连超时 + 仅浏览器进程且无产品指向（典型 `antpeak.com` / `hibchr.com` / `zorvian.com`）→ 不归类，记 changelog「待人工」。
 - **杂项兜底**：国内经 RDAP/NS 确认归 `direct.yaml`；海外归 `proxy.yaml`；归属仍完全无法判定的记 changelog「待人工」并跳过落盘，不强行归类。
 
@@ -163,13 +188,14 @@ grep -oE -- '--> [^ ]+ match RuleSet\(oc-cn-domain\) using' <log> | sed -E 's/--
 
 **前置条件：第 5 步自主裁决中标记为 `待查` 的项。** 不再以"用户答不确定"为触发条件，由 agent 自主判断证据是否充分。
 
+- **代理可用性先探测（每轮现场做）**：本机 7893 代理状态会来回翻转，查询前先 `nc -z 127.0.0.1 7893`。不通时**不要无限重试**：所有待查项在粗判草稿（`log/.work/`）中标记「代理不可用，顺延下轮」，本轮按无结论兜底处理（记 changelog「待人工/下轮重试」），automation 正常收尾不卡死。
 - **本机 `whois` 命令不可用**：`whois.iana.org` 无法解析，客户端会挂起而非报错；macOS 也**没有 `timeout` 命令**（`timeout: command not found`）。不要再尝试 `timeout 30 whois <domain>`。
 - **RDAP（首选）**：`https_proxy=http://127.0.0.1:7893 curl -sL --max-time 20 https://rdap.org/domain/<domain>` — **必须走代理**（直连返回空）。首次调用常返回空响应，需重试 2–3 次（间隔 3s）。返回 JSON 中 `registrar` 为空数组 + `nameservers` 为 Cloudflare NS（`ALEC.NS.CLOUDFLARE.COM`）通常意味着注册信息完全隐私保护。
 - **批量 RDAP**：写成 `/tmp/rdap.py` 循环 + 重试执行（heredoc 内联 python 会被安全策略拦截，见第 15 节环境坑）。
 - **DoH 存活检查**：`https_proxy=http://127.0.0.1:7893 curl -s "https://cloudflare-dns.com/dns-query?name=<domain>&type=A" -H "Accept: application/dns-json"` — `"Status":3`（NXDOMAIN）= 域名已失效，不归类。适合一次批量筛多个主域。
 - **辅助判**：`https://archive.org/wayback/available?url=<domain>` 查历史快照（走代理，高频会 429）；`urlscan.io` 搜索结果常直接暴露归属（如 `cmicapm.com` → China Mobile Group Guangdong）。
-- **查询结果据以定夺并留痕**：拿到 RDAP/外部证据后，结论与粗判不同或仍有歧义时，按查询结果修正裁决，不再回问用户。查询无结论的（隐私保护 + 首页 429/空 + 直连超时 + 仅浏览器进程）按第 5 节「无主端点兜底」处理——不归类，记 changelog「待人工」。
-- **判定"无主端点"的标准**：Cloudflare NS + RDAP 无注册商实体 + 首页 429 或空响应 + 直连超时 + 发起进程仅浏览器且无产品指向 → 判定为无主广告/追踪端点。典型样例：antpeak.com / hibchr.com / zorvian.com（2026-10-04）。**这类默认不归类，记 changelog「待人工」；不主动询问用户。**
+- **查询结果据以定夺并留痕**：拿到 RDAP/外部证据后，结论与粗判不同或仍有歧义时，按查询结果修正裁决，不再回问用户。查询无结论的（隐私保护 + 首页 429/空 + 直连超时 + 仅浏览器进程）按第 5 节「无主端点兜底」处理——不归类，记 changelog「待人工」，并同步追加到 skip-list（`manual` 模式）。
+- **判定"无主端点"的标准**：Cloudflare NS + RDAP 无注册商实体 + 首页 429 或空响应 + 直连超时 + 发起进程仅浏览器且无产品指向 → 判定为无主广告/追踪端点。典型样例：antpeak.com / hibchr.com / zorvian.com（2026-10-04）。**这类默认不归类，记 changelog「待人工」并同步进 skip-list（`skip` 模式）；不主动询问用户。**
 
 ## 7. 分类到规则文件（按自主裁决结论执行）
 
@@ -189,7 +215,7 @@ grep -oE -- '--> [^ ]+ match RuleSet\(oc-cn-domain\) using' <log> | sed -E 's/--
 判断要点：
 
 - 日志中走代理节点不代表必须归代理文件；按服务性质判断（如 Let's Encrypt 证书端点 `lencr.org` 可直连归 `proxy.yaml` 或 `direct.yaml` 的证书验证分组需按实际情况定）。
-- **oc-cn-domain 类别**的域名命中外部 OpenClash CN 域名规则集且通常走 DIRECT，说明其为国内可达服务，多为国内大厂子域（字节系 `zijieapi.com`、`doubao.com`、`feishu.cn`、`byteimg.com` 等，腾讯系 `qq.com`、`weixinbridge.com` 等）——优先归入对应厂商文件，杂项归 `direct.yaml`。**高频场景：oc-cn-domain 提取出的域名主域往往已被现有 `DOMAIN-SUFFIX` 规则覆盖（如 `*.feishu.cn` 已有 `DOMAIN-SUFFIX,feishu.cn`），这是 Clash 规则集评估优先级导致——规则集先于本地 yaml 匹配，不代表规则缺失。应先批量查重主域（`grep -rl <主域> *.yaml`），已覆盖的整批跳过，不逐个处理。**
+- **oc-cn-domain 类别**的域名命中外部 OpenClash CN 域名规则集且通常走 DIRECT，说明其为国内可达服务，多为国内大厂子域（字节系 `zijieapi.com`、`doubao.com`、`feishu.cn`、`byteimg.com` 等，腾讯系 `qq.com`、`weixinbridge.com` 等）——优先归入对应厂商文件，杂项归 `direct.yaml`。**高频场景：oc-cn-domain 提取出的域名主域往往已被现有 `DOMAIN-SUFFIX` 规则覆盖（如 `*.feishu.cn` 已有 `DOMAIN-SUFFIX,feishu.cn`），这是 Clash 规则集评估优先级导致——规则集先于本地 yaml 匹配，不代表规则缺失。check_coverage 判为 COVERED 的整批跳过，不逐个处理。**
 - **不要用厂商主域一次性兜底**：`DOMAIN-SUFFIX,tencent.com` 这类主域会与其它文件里的子域分组产生语义冲突（如 hk-bank.yaml 的 `tpns.hk.tencent.com`），厂商主域很宽时改用精确子域。
 - 已收录的域名不重复添加；若已有文件中的归属明显合理，沿用即可。
 - **禁止编辑 `reject.yaml`**。
@@ -206,9 +232,10 @@ grep -oE -- '--> [^ ]+ match RuleSet\(oc-cn-domain\) using' <log> | sed -E 's/--
 每次编辑任意 `.yaml` 后必须执行：
 
 1. 运行 `python3 scripts/find-duplicates/find_duplicates.py`（扫描根已锚定仓库根，任意目录可跑），读取 `scripts/find-duplicates/DUPLICATES.md`。
-2. 若存在本次编辑**新引入**的重复，调整归属或删除冗余后重跑。编辑前已存在的历史重复（多为与 `reject.yaml` 重复，或既有的跨文件重复）不在本次处理范围，在汇报中说明即可。
+2. 若存在本次编辑**新引入**的重复，调整归属或删除冗余后重跑。编辑前已存在的历史重复（基线 1 条：`settings.crashlytics.com` direct/google）不在本次处理范围，在汇报中说明即可。
 3. 语法校验每个被编辑文件（注意用带 pyyaml 的解释器，见第 15 节）：
    `/Users/saibopika/.workbuddy/binaries/python/envs/default/bin/python -c "import yaml; yaml.safe_load(open('<file>.yaml'))"`
+4. `DUPLICATES.md` 与 `duplicates.json` 均**已纳入 git 跟踪**：本轮有 yaml 编辑（报告内容变化）时，把两者随本次提交显式暂存入库；纯 skill/文档轮次不涉及。
 
 ## 10. 更新 changelog 并在 main 上提交
 
@@ -242,6 +269,9 @@ git push origin main
 
 # 3. 门禁：必须输出 0  0
 git rev-list --left-right --count origin/main...HEAD
+
+# 4. push 成功后清理粗判草稿（本轮已消费的所有草稿，含往日中断遗留）
+rm -f log/.work/*.md
 ```
 
 冲突与异常处理：
@@ -265,9 +295,11 @@ mv log/clashx-meta-log/<已处理文件夹> log/.archive/
 - 归档后 `log/clashx-meta-log/` 应只剩未处理项；下一轮的待处理集合 = 昨天日期前缀的文件夹（源目录或仓库已有）+ `log/clashx-meta-log/` 未归档存量。
 - 归档情况（哪些文件夹移入了 `.archive/`）记入当日 memory 日志。
 
-## 13. 填写更新记录
+## 13. 收尾核对与记忆
 
-push 并确认 `0 0` 后，确认本轮条目已按第 10 步写入 `changelog.md` 顶部并已随提交入库（若第 10 步遗漏，此处补写并在下轮补提交；条目格式如下）：
+push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步随提交写入，本节只核对不重写；若第 10 步遗漏，此处补写并在下轮补提交）：
+
+1. **核对 changelog 条目已入库**：`git show --stat HEAD` 应包含 `changelog.md`。条目格式：
 
 ```markdown
 ## YYYY-MM-DD 漏网之鱼归类：<一句话摘要>
@@ -279,18 +311,22 @@ push 并确认 `0 0` 后，确认本轮条目已按第 10 步写入 `changelog.m
 - Git：main 提交 <hash> 已推送，同步 0 0。
 ```
 
-同时把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若该轮产生了新的归属判定经验，再更新 `.agents/memory/MEMORY.md`），并按第 12 节完成日志归档。
+2. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。
+3. **完成日志归档**：按第 12 节执行。
 
 ## 14. 硬性约束
 
 - **禁止跳过第 0 步同步准备（本地与远程一致性检查）。** 在旧基线上做查重与规则判断会得出错误结论。
-- **自主裁决须留痕**：每个归类决定在 changelog 写明依据（AGENTS.md 判据条号 / 进程名 / RDAP 结果 / 同文件同类分组），未归类项写明原因；证据不足且查询无结论的按兜底规则处理（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。
-- **第 4 步只做本地查重和粗判，禁止外部查询**；RDAP/DoH/wayback 等外部查询集中在第 6 节按需自主发起。
+- **查重必须用 `scripts/check-coverage/check_coverage.py`（规则级判断）**，不得回退到 `grep -l <域名> *.yaml` 子串匹配（会误命中 `xxxx53.com` 这类假阳性、漏掉品牌标签锚点）。
+- **skip-list 是已裁决跳过项的唯一数据源**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`。新的「已裁决不归类 / 待人工」结论落 changelog 时必须同步追加（`skip` / `manual`），用户定案的 manual 项要移除；禁止只写 changelog 不更新 skip-list。
+- **自主裁决须留痕**：每个归类决定在 changelog 写明依据（AGENTS.md 判据条号 / 进程名 / BRAND-ANCHOR / RDAP 结果 / 同文件同类分组），未归类项写明原因；证据不足且查询无结论的按兜底规则处理（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。
+- **第 4 步只做本地查重和粗判，禁止外部查询**；RDAP/DoH/wayback 等外部查询集中在第 6 节按需自主发起；代理 7893 不可用时待查项顺延下轮，不无限重试阻塞 automation。
+- **空结果轮按第 2b 节收尾**：无候选 → 无 changelog、无提交、照常归档、记 memory 一行。
 - **禁止 `mv` / `rm` 源目录 `~/.config/clash.meta/logs`**（沙箱授权弹窗 + automation 卡死）：写/删系统配置目录触发沙箱升级，定时 automation 无人响应会卡死。日志获取只用 `cp -R` 只读源（读 `~/.config` 不弹窗）。归档用工作区内 `mv`（不碰 `~/.config`，安全）。
 - **禁止编辑 `reject.yaml`**，**禁止在提交中包含 `reject.yaml`**。
 - **禁止任何形式的强制推送**（`--force` / `--force-with-lease`）。
 - **禁止 `git add -A` / `git add .` 等批量跟踪**，只显式暂存本次改动文件；commit 后必须立即 push 并校验 `0 0`。
-- **禁止跳过日志归档（第 12 节）**：push 并确认 `0 0` 后必须把本轮已处理日志移入 `log/.archive/`，否则下轮会对同一批日志重复提取。
+- **禁止跳过日志归档（第 12 节）**：push 并确认 `0 0` 后必须把本轮已处理日志移入 `log/.archive/`（空结果轮同样归档），否则下轮会对同一批日志重复提取。
 - 用户主动介入给归属时（对话中直接给出），以用户输入为准，不再自行论证或改判；默认不主动询问用户。
 
 ## 15. 环境坑（本机实测）
@@ -301,6 +337,7 @@ push 并确认 `0 0` 后，确认本轮条目已按第 10 步写入 `changelog.m
 - **`mv <源文件夹> <已存在同名文件夹的目标目录>` 不报错，而是把源塞进目标内部**（套娃）。移动日志前必须 diff 确认目标侧无同名文件夹（见第 1 节）。
 - **heredoc 内联 python 会被安全策略误判为系统级工具并直接拒绝执行**（提示"该命令属于系统级工具（如 WSL、wmic、sc、reg、schtasks）"）。必须先用 Write 写成 `/tmp/xxx.py`，再 `python3 /tmp/xxx.py`。
 - `scripts/find-duplicates/find_duplicates.py` 已排除 reject.yaml，报告中的重复项**均为真实业务文件之间的重复**，可直接作为门禁使用。
+- `scripts/check-coverage/check_coverage.py` 为行级正则解析（与 find-duplicates 一致），不依赖 pyyaml，系统 `python3` 可直接运行；退出码恒为 0（查询工具，非门禁）。
 - Git 提交用 heredoc（`git commit -F - <<'EOF'`）可用，不会被安全策略拦截；只有 python 内联脚本会被误判。
 - **`.workbuddy/skills` 与 `.workbuddy/memory` 是指向 `.agents/` 下真实目录的符号链接**，两个路径访问的是同一份文件。`Skill` 工具加载本 skill 会报 "Cannot find skill"（符号链接对加载器不生效），需要时直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
 

@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-10-17 fill-domains-from-log skill v2.6.0：提取结构化 + check-coverage 规则级查重 + skip-list 数据化（main 直接提交）
+
+- **动机**：评审 v2.5.0 后用户指示优化。三大短板：① 第 4 步查重是 `grep -l <域名> *.yaml` 子串匹配（`53.com` 误命中 `xxxx53.com`、漏品牌标签锚点）；② 已裁决跳过项散在 AGENTS.md / skill / changelog 三处，每轮人工排除 + 全量读 663 行 changelog 耗 context；③ 提取输出五段纯文本需 agent 二次加工，无私有 IP / 探针族 / skip-list 内置过滤，automation 空结果轮无收尾定义。
+- **提取脚本重构**（`.agents/skills/fill-domains-from-log/scripts/extract_match_domains.py` → `scripts/extract-match-domains/`，git mv 保留历史，对齐仓库「每脚本一目录一 README」约定）：结构化输出六段（summary / domains 候选表 `域名|类别|次数|进程` / registrable 主域归并 / public-ips / manual-review / skipped）；内置过滤无 TLD 伪域名、探针族（dotnxdomain/dashnxdomain/starnxdomain、root-key-sentinel-*、wpad）、私有保留 IP 段（ipaddress is_private 系列判据）；新增 `--skip-list` 参数与主域归并（常见二级 TLD 取三级启发式）；修复 v1 process-hints 大小写与域名桶不一致的 bug；IPv6 目标剥方括号。
+- **skip-list 数据化**（`scripts/extract-match-domains/skip-list.txt`，新增）：已裁决结论的机器可读映射，`skip` 模式 10 项（reject 上游已收录 7 + 无主端点 3）、`manual` 模式 8 项（长期挂起待人工含 mdoelscope.ai 仿冒域）。AGENTS.md「已裁决结论」仍为判据权威，两者须同步维护（新裁决落 changelog 时同步追加）。
+- **新增 `scripts/check-coverage/check_coverage.py`**：YAML 规则级覆盖检查（行级正则解析与 find-duplicates 一致，无 pyyaml 依赖）——DOMAIN-SUFFIX 按自身+逐级父域判覆盖、DOMAIN 精确主机（判据 8 口径）、DOMAIN-KEYWORD 报告为弱证据不算覆盖、IP-CIDR 网段包含判断（判据 7）；未覆盖域名自动扫「品牌标签锚点」（判据 1 机器化，标签逐字符相同才命中，形近/转位天然不误报）；排除 reject.yaml；支持 argv/stdin/`--quiet`；退出码恒 0（查询工具非门禁）。附 README。
+- **SKILL.md v2.5.0 → v2.6.0**：流程图与第 2/3/4 节改为脚本化流程；新增第 2b 节「空结果轮收尾」（无候选 → 无 changelog 无提交、照常归档、记 memory 一行）；第 4 步粗判表落盘 `log/.work/YYYY-MM-DD-draft.md` 支持中断续跑（第 11 步 push 后清理）；第 6 节新增代理 7893 可用性探测与降级（不通时待查项顺延下轮，不阻塞 automation）；第 9 节明确 DUPLICATES.md / duplicates.json 均已入库随 yaml 编辑提交；第 13 节改为「收尾核对与记忆」澄清与第 10/12 节职责边界；硬性约束新增「查重必须用 check_coverage 禁止回退 grep 子串匹配」「skip-list 为跳过项唯一数据源」「空结果轮按 2b 收尾」三条。
+- **AGENTS.md 同步**：目录结构补 check-coverage 与 skill scripts 子目录；判据 1 注明 BRAND-ANCHOR 已机器化；「已裁决结论」头部加 skip-list 权威源指针与同步纪律；常用命令补 check_coverage.py；仓库状态「加文件前查重」改指 check_coverage；修正目录树中 duplicates.json「本地」为「入库」（实查 git ls-files 已跟踪）。
+- **实测**（log/clashx-meta-log/2026-10-17_08-38-11，4 个日志文件）：提取 123 候选域（mm 18 / oc 105）+ 1 公网 IP，skip-list 命中 skip 3 / manual 7，伪域名过滤 12；registrable 段 32 个主域喂 check_coverage：31 COVERED（含命中文件与行号）、1 UNCOVERED（logitechg.com，确为挂起项）；BRAND-ANCHOR 验证 `hdslb.net`→`hdslb.com`、`qpic.com`→`qpic.cn` 正确命中，`mdoelscope.ai` 标签不同不误报；IP 判定 `120.53.53.53`、`17.57.0.147` 均正确判 COVERED。
+- 本提交同时带上上轮 hash 回填（v2.5.0 条目 `<hash>` → `f39b892`）与当日 memory 更新。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 fill-domains-from-log skill v2.5.0：日志获取回退 cp + 只处理昨天（避免沙箱弹窗、支持 automation 全自动）（main 直接提交）
 
 - 用户裁决：日志获取从移动制（v2.3.0–v2.4.1）**回退 cp 复制 + 只处理昨天**。原因：移动制 `mv` 源目录 `~/.config/clash.meta/logs` 每次触发沙箱授权弹窗（写/删系统配置目录），定时 automation 无人响应会卡死，违背全自动诉求；cp 只读源不弹窗（实测 `ls`/`diff`/`cp` 读 `~/.config` 均无弹窗，`mv`/`rm` 写删才弹）。
@@ -12,7 +24,7 @@
 - **AGENTS.md 同步**：「日志差集纪律」首条改回 cp + 只昨天口径；「增量可能落在今日目录」改为「只处理昨天，当天日志留待次日 automation」。
 - **MEMORY.md 同步**：日志差集纪律回退 cp + 只昨天（注明回退原因）；Skill 流程裁决追加 v2.5.0 条目（沙箱规则：读 `~/.config` 不弹窗，写/删才弹窗）。
 - **遗留处理**：上轮（傍晚八 itdog 验证）mv 进仓库的 `2026-10-17_08-38-11`（今天日志、仍在被 mihomo 写）按新模式「只处理昨天」**本轮不处理**，留 `log/clashx-meta-log/` 原地待明日（10-18）automation 作为「昨天」处理；届时若仍被写（会话未重启）按 v2.4.1 护栏检查 mtime。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `f39b892` → push（`a8019f4..f39b892`）→ 同步 `0 0`。
 
 ## 2026-10-17 fill-domains-from-log skill v2.4.1：归档护栏——app 会话未结束不归档（main 直接提交）
 
