@@ -1,3 +1,59 @@
 payload:
 
-# === 银行 ===
+# === 全国性大行 ===
+  - DOMAIN-SUFFIX,chase.com
+  - DOMAIN-SUFFIX,jpmorgan.com
+  - DOMAIN-SUFFIX,jpmorganchase.com
+  - DOMAIN-SUFFIX,bankofamerica.com
+  - DOMAIN-SUFFIX,bofa.com
+  - DOMAIN-SUFFIX,wellsfargo.com
+  - DOMAIN-SUFFIX,wf.com
+  - DOMAIN-SUFFIX,citi.com
+  - DOMAIN-SUFFIX,citibank.com
+  - DOMAIN-SUFFIX,citibankonline.com
+  - DOMAIN-SUFFIX,usbank.com
+  - DOMAIN-SUFFIX,capitalone.com
+  - DOMAIN-SUFFIX,capitalone360.com
+  - DOMAIN-SUFFIX,tdbank.com
+
+# === 大型地区银行 ===
+  - DOMAIN-SUFFIX,pnc.com
+  - DOMAIN-SUFFIX,truist.com
+  - DOMAIN-SUFFIX,53.com
+  - DOMAIN-SUFFIX,regions.com
+  - DOMAIN-SUFFIX,key.com
+  - DOMAIN-SUFFIX,huntington.com
+  - DOMAIN-SUFFIX,mtb.com
+  - DOMAIN-SUFFIX,citizensbank.com
+  - DOMAIN-SUFFIX,comerica.com
+  - DOMAIN-SUFFIX,zionsbank.com
+  - DOMAIN-SUFFIX,eastwestbank.com
+  - DOMAIN-SUFFIX,santanderbank.com
+  - DOMAIN-SUFFIX,popular.com
+  - DOMAIN-SUFFIX,firsthorizon.com
+  - DOMAIN-SUFFIX,synovus.com
+  - DOMAIN-SUFFIX,websterbank.com
+  - DOMAIN-SUFFIX,frostbank.com
+  - DOMAIN-SUFFIX,arvest.com
+  - DOMAIN-SUFFIX,umb.com
+  - DOMAIN-SUFFIX,associatedbank.com
+  - DOMAIN-SUFFIX,wintrust.com
+  - DOMAIN-SUFFIX,cadencebank.com
+  - DOMAIN-SUFFIX,southstatebank.com
+  - DOMAIN-SUFFIX,trustmark.com
+  - DOMAIN-SUFFIX,oldnational.com
+  - DOMAIN-SUFFIX,westernalliancebank.com
+
+# === 知名线上银行 ===
+  - DOMAIN-SUFFIX,ally.com
+  - DOMAIN-SUFFIX,discover.com
+  - DOMAIN-SUFFIX,discoverbank.com
+  - DOMAIN-SUFFIX,chime.com
+  - DOMAIN-SUFFIX,sofi.com
+  - DOMAIN-SUFFIX,marcus.com
+  - DOMAIN-SUFFIX,synchrony.com
+  - DOMAIN-SUFFIX,synchronybank.com
+  - DOMAIN-SUFFIX,breadfinancial.com
+  - DOMAIN-SUFFIX,axosbank.com
+  - DOMAIN-SUFFIX,varomoney.com
+  - DOMAIN-SUFFIX,current.com
