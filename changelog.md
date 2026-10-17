@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-10-17 移除远程误入库的 .omc/ 会话文件（main 直接提交）
+
+- 用户裁决：处理掉远程的 `.omc/`。核查：git 索引跟踪着 `.omc/sessions/` 下 **49 个 session JSON**（`git ls-files .omc/` 实查；系早期误提交——`.gitignore` 早已含 `.omc/`，但对已跟踪文件不生效，故一直留在库中）。本地磁盘 `.omc/`（`project-memory.json`、`sessions/`、`state/`）为 OMC 工具运行数据，**全部保留不动**。
+- 操作：`git rm -r --cached .omc/` 仅从 git 索引移除（不碰磁盘），配合既有 `.gitignore` 规则此后不再被跟踪；远程下一次 push 后即从仓库消失。
+- 流程确认（用户当日明确）：**涉及 changelog.md 的提交一律先写 changelog.md 后 commit**，changelog 变更与业务改动同一提交入库；提交后回填 hash 产生的未暂存改动顺延至下轮提交。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-17 纳入跟踪 .agents/、AGENTS.md、CLAUDE.md、changelog.md、duplicates.json（main 直接提交）
 
 - 用户裁决：`.agents/` 应跟踪、`.omc/` 不跟踪（后者本就被 .gitignore 忽略，维持现状零动作）；`AGENTS.md`、`CLAUDE.md`、`changelog.md`、`scripts/find-duplicates/duplicates.json` 加入跟踪。
@@ -10,7 +17,7 @@
   - 自动化运行契约（`.agents/memory/automations/.../memory.md`）1 处：暂存清单须包含 `changelog.md`。
   - 新纪律：**changelog.md 变更随对应提交一并入库，不再存在「本地独享账本」**。
 - 历史日志中的「未跟踪」表述系当时事实，不回溯修改。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `54ae7f9` → push（`5c3b85d..54ae7f9`）→ 同步 `0 0`。
 
 ## 2026-10-17 清理误入库 pyc 缓存并忽略 __pycache__/（main 直接提交）
 
