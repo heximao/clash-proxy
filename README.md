@@ -1,15 +1,8 @@
-# clash-proxy 精准分流域名规则集
+# clash-proxy 为代理软件实现精准分流的互联网域名规则集
 
-clash-proxy是一套长期维护的域名规则集，可在 mihomo / Clash 系列代理软件中引用，实现代理的精准分流。
+clash-proxy 是互联网域名规则集，可在 mihomo / Clash 系列代理软件中引用，实现代理网络请求的精准分流控制。
 
-> 🌟 如果本项目对你有帮助，欢迎点 [Star](https://github.com/heximao/clash-proxy) 支持，也方便后续持续跟进更新。
-
-## 使用建议
-
-- **按需引用，不必大而全**：只需引用你个人常用、需要精准控制策略（代理）组的规则集即可，无需把本仓库所有规则全部引用。没有引用的域名不会"漏掉"——它们会自动落到 `MATCH` 兜底规则，由你为 `MATCH` 设置的策略（代理）组统一处理。这样配置更精简，也更容易维护。
-- **示例**：你只想精准控制 `OpenAI` 的访问代理，那只就只引用 `openai.yaml`，为它单独分配一个策略（代理）组，再为 `MATCH` 设置一个兜底策略（代理）组即可。
-
-## 支持软件
+## 支持软件或插件
 
 - OpenClash
 - Clash for Android
@@ -19,9 +12,9 @@ clash-proxy是一套长期维护的域名规则集，可在 mihomo / Clash 系�
 - Stash
 - Surge
 - Potatso
-- 其他同类型软件
+- 其他同类型软件或插件
 
-> 在绕过中国大陆场景下，无需全局代理。只需在代理软件配置文件的 `rules` 末尾将 `MATCH` 规则指向一个专用的"漏网之鱼"策略组，并将该策略组分配至 PROXY 或 DIRECT；同时创建一个 PROXY 策略组，将本仓库的 `proxy` 规则集分配给它，即可实现对未命中规则域名的精准分流控制。
+> 🌟 本项目长期更新，域名基于真实的网络访问请求，不断更新补充，推荐直接引用，无需Fork单独维护，对你有帮助，欢迎点 [Star](https://github.com/heximao/clash-proxy) 支持，如果需要为某个规则补充域名，请提[Issues](https://github.com/heximao/clash-proxy/issues) 。
 
 ## 规则文件
 
@@ -45,7 +38,7 @@ clash-proxy是一套长期维护的域名规则集，可在 mihomo / Clash 系�
 | **github.yaml** | GitHub 及相关开发工具 |
 | **google.yaml** | Google 服务 |
 | **hk-bank.yaml** | 香港银行（汇丰、ZA、WeLab 等） |
-| **hk-broker.yaml** | 港美股券商（TradingView、长桥、IBKR 等），建议使用香港节点 |
+| **hk-broker.yaml** | 港股券商，建议使用代理 |
 | **line.yaml** | LINE |
 | **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
 | **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
@@ -63,13 +56,18 @@ clash-proxy是一套长期维护的域名规则集，可在 mihomo / Clash 系�
 | **telegram.yaml** | Telegram |
 | **tencent-global.yaml** | 腾讯海外服务 |
 | **tencent.yaml** | 腾讯 / 微信 |
-| **us-bank.yaml** | 美国银行（待补充） |
+| **us-bank.yaml** | 美国银行，建议优先直连 |
 | **us-broker.yaml** | 美股券商，建议优先直连 |
 | **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
 | **wechat.yaml** | 微信（国内域名，可直连） |
 | **x.yaml** | Twitter / X |
 | **xhs.yaml** | 小红书 / RedNote |
 | **youtube.yaml** | YouTube |
+
+## 使用建议
+
+- **按需引用，不必大而全**：只需引用你个人常用、需要精准控制策略（代理）组的规则集即可，无需把本仓库所有规则全部引用。访问没有引用的域名时，请求会自动落到 `MATCH` 兜底规则，由你为 `MATCH` 设置的策略（代理）组统一处理。这样配置更精简，也更容易维护。
+- **示例**：如果你只想精准控制 `OpenAI` 的访问代理，那只就只引用 `openai.yaml`，为它单独分配一个策略（代理）组，再为 `MATCH` 设置一个兜底策略（代理）组即可。
 
 ## 引用方式
 
@@ -87,11 +85,9 @@ https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
 
 ## 配置示例
 
-### 第一步：先看懂 4 个概念（小白必读，约 1 分钟）
+打开你正在使用的代理软件配置文件（通常叫 `config.yaml`）打，配置文件的内容除`dns`等块外，还包含以下 4 类内容组成：
 
-代理软件的配置文件由 4 类内容组成。看懂它们，下面的示例就是"填空题"：
-
-| 配置块 | 它是什么 | 大白话 |
+| 配置块 | 它是什么 | 说明 |
 |--------|---------|--------|
 | `proxy-providers` | 订阅集合 | 你从"机场"买来的节点列表，软件会定时自动更新 |
 | `proxy-groups` | 策略组 | 流量的"出口选择器"：命中规则的流量，走这里选定的节点 |
@@ -100,17 +96,14 @@ https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
 
 四者的分工：`rule-providers` 提供"清单"，`rules` 按清单分拣流量，`proxy-groups` 决定流量从哪个出口出去，`proxy-providers` 提供出口（节点）本身。
 
-### 第二步：复制最精简配置
 
-适用于 **OpenClash、ClashX Meta、Clash Verge、Clash for Android、Stash** 等 mihomo / Clash 系软件；Surge、Shadowrocket 语法不同，请使用各自软件内置的规则集功能。
-
-下面是一份最精简的完整配置：引用本仓库的 `google.yaml`，让 Google 走代理、中国流量直连、其余兜底。**必须修改的只有一处——订阅链接**（标 ★ 那行）；其他名字不喜欢可以随便改，不改也能直接用。更多玩法请查阅 mihomo 官方文档。
+下面是一份最精简的配置：引用本仓库的 `google.yaml`，让访问 Google 走代理，使用的是名为`Google`的策略组、中国流量直连、其余兜底。进阶更多玩法请查阅 mihomo 官方文档。
 
 ```yaml
 proxy-providers:                                                       # 订阅集合块：放你的机场节点列表
   airport:                                                             # 给订阅起个名字（后面会引用，可改）
     type: http                                                         # 订阅类型：通过网址获取
-    url: https://你的机场订阅链接                                      # ★ 全篇唯一必改：换成你自己的订阅链接
+    url: https://你的机场订阅链接                                        # ★ 全篇唯一必改：换成你自己的订阅链接
     path: ./proxy_provider/airport.yaml                                # 节点列表下载后保存在本地哪个文件
     interval: 3600                                                     # 更新间隔：3600 秒 = 1 小时
     health-check:                                                      # 健康检查：自动测出节点是否还能用
@@ -138,106 +131,46 @@ rules:                                                                 # 规则�
   - MATCH,PROXY                                                        # 兜底：以上都没命中 → 走 PROXY
 ```
 
-### 第三步：常见问题
+如果你是小白，懒得折腾上述的配置文件（ `config.yaml`），本项目提供付费代写个性化定制的配置文件 （`config.yaml`），如有需要，请在[Issues](https://github.com/heximao/clash-proxy/issues) 联系。（本项目不提供代理节点、机场订阅）
 
-**Q1：这段配置粘到哪里？**
+网络请求是怎么被分流的：
 
-- Clash Verge / ClashX Meta / Stash：打开你正在使用的配置文件（通常叫 `config.yaml`），把上面内容合并进去。若文件里已有 `proxy-providers`、`rules` 等同名段落，只把条目添进去，**不要出现两个 `rules:`**。
-- OpenClash：进入「配置文件」管理页 → 编辑正在使用的配置 → 粘贴保存 → 应用配置。
-- Clash for Android：在「配置」页编辑当前配置，粘贴合并后保存并应用。
-
-**Q2：没有"机场"和订阅链接，能用吗？**
-
-不能。"机场"是代理服务商的俗称，需自行购买，对方会提供一个订阅链接。本仓库只提供域名分类规则，不提供节点。
-
-**Q3：想让 YouTube、OpenAI 也走代理？**
-
-在 `rule-providers` 里照抄一段、改个名字和链接，再在 `rules` 里加一行 `RULE-SET,名字,策略组名`：
-
-```yaml
-rule-providers:
-  google:                                                              # 原有示例（不用动）
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/heximao/clash-proxy/google.yaml
-    path: ./rule_provider/google.yaml
-    interval: 86400
-  openai:                                                              # 新增：照抄一段，改个名字和链接
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/heximao/clash-proxy/openai.yaml
-    path: ./rule_provider/openai.yaml
-    interval: 86400
-rules:
-  - RULE-SET,google,Google
-  - RULE-SET,openai,Google                                             # 新增一行：OpenAI 域名也走 Google 策略组
-  - GEOIP,CN,DIRECT
-  - MATCH,PROXY
-```
-
-**Q4：提示"规则集下载失败 / 加载失败"？**
-
-先确认当前网络能打开 `https://cdn.jsdelivr.net`（浏览器直接访问测试）；打不开时临时开启全局代理，更新一次配置后再关。规则每 24 小时自动更新（`interval: 86400`），也可在软件里手动"更新配置"立即刷新。
-
-**Q5：按示例配好了，Google 还是打不开？**
-
-按顺序排查：① 在策略组里换一个节点；② 确认订阅链接没填错、节点列表已更新；③ 确认配置已保存并"应用"（部分软件需重新加载配置才生效）。
-
-### 第四步：看懂一次访问是怎么"走"的
-
-规则是从上往下逐条比对的，**命中即停**。以上面配置里的这三条规则为例：
-
-```yaml
-rules:
-  - RULE-SET,google,Google    # Google 域名 → 走 Google 策略组
-  - GEOIP,CN,DIRECT           # 中国 IP → 直连
-  - MATCH,PROXY               # 兜底：以上都没命中 → 走 PROXY
-```
-
-下面跟着三次访问把流程走一遍，你就明白流量是怎么被分流的：
-
-#### 例 1：访问 google.com —— 命中第 1 条
+#### 例 1：访问 google.com
 
 1. 浏览器输入 `google.com`，请求首先交给代理软件；
-2. 软件拿这个域名去比对 `google.yaml` 规则集——**命中**，google.com 就在清单里；
+2. 软件拿这个域名先去比对 `google.yaml` 规则集——**命中**，google.com 就在清单里；
 3. 流量转交「Google」策略组，走你在组里选中的那个机场节点；
 4. 机场节点替你去访问 google.com，再把结果传回来。谷歌服务器只看到节点的 IP，看不到你的真实 IP。
 
-```
-你 → 代理软件 → 命中 google 规则集 → Google 策略组 → 机场节点 → google.com
-```
-
-#### 例 2：访问 baidu.com —— 命中第 2 条
+#### 例 2：访问 baidu.com
 
 1. 浏览器输入 `baidu.com`，请求交给代理软件；
-2. 先比 google 规则集——没命中（百度不在 Google 清单里），继续往下；
-3. 比到 `GEOIP,CN`：软件把 baidu.com 解析成 IP 地址，发现这个 IP 属于中国大陆；
-4. 流量走 DIRECT——不经过代理，直接连百度的服务器。国内网站直连最快，也不消耗代理流量。
-
-```
-你 → 代理软件 → IP 属于中国 → DIRECT 直连 → baidu.com
-```
+2. 软件拿这个域名先去比对 google 规则集——没命中（百度不在 Google 清单里），继续往下；
+3. 软件接着拿域名比到 `GEOIP,CN`：软件把 baidu.com 解析成 IP 地址，发现这个 IP 属于中国大陆；
+4. 流量走 DIRECT——不经过代理，直接连百度的服务器。百度服务器看到的是你本地的真实 IP，请求不经过代理，不消耗代理流量。
 
 #### 例 3：访问 facebook.com —— 落到第 3 条
 
 1. 浏览器输入 `facebook.com`，请求交给代理软件；
-2. google 规则集没命中；解析出的 IP 也不在中国，`GEOIP,CN` 同样没命中；
-3. 一路落到最后的 `MATCH,PROXY`——这是兜底规则，前面所有规则都没中的流量都归它管；
-4. 流量走 PROXY（默认代理节点）出国，正常打开 Facebook。
+2. 软件拿这个域名先去比对google 规则集——没命中；
+3. 软件接着拿域名比到 `GEOIP,CN`：软件把facebook.com 解析成 IP 地址，发现这个 IP 不属于中国大陆，没命中；
+4. 一路落到最后的 `MATCH,PROXY`——这是兜底规则，前面所有规则都没中的流量都归它管；流量走 PROXY（默认代理节点），正常打开 Facebook。
 
-```
-你 → 代理软件 → 前两条都没命中 → MATCH 兜底 → PROXY → 机场节点 → facebook.com
-```
+> 注意例 3：facebook.com 并没有自己的规则，走的是兜底。这份最精简配置只引用了 `google.yaml`，除 Google 外的海外网站一律落入 `MATCH,PROXY`。想给 Facebook（或 YouTube、OpenAI）单独指定策略，加一条规则即可。
 
-#### 一张表总结三次访问
+## 常见问题
 
-| 访问的网站 | 命中哪条规则 | 走向 | 完整路径 |
-|-----------|-------------|------|---------|
-| google.com | 第 1 条 `RULE-SET,google` | Google 策略组 | 你 → 代理软件 → 机场节点 → google.com |
-| baidu.com | 第 2 条 `GEOIP,CN` | DIRECT 直连 | 你 → 代理软件 → baidu.com |
-| facebook.com | 第 3 条 `MATCH` | PROXY | 你 → 代理软件 → 机场节点 → facebook.com |
+**Q1：没有"机场"和订阅链接，能用吗？**
 
-> 注意例 3：facebook.com 并没有自己的规则，走的是兜底。这份最精简配置只引用了 `google.yaml`，除 Google 外的海外网站一律落入 `MATCH,PROXY`。想给 Facebook（或 YouTube、OpenAI）单独指定策略，按 Q3 的方法再引用对应规则集、加一条规则即可。
+不能。"机场"是代理服务商的俗称，需自行解决，对方会提供一个订阅链接。本仓库只提供域名分类规则，不提供节点。
+
+**Q2：代理软件提示"规则集下载失败 / 加载失败"？**
+
+先确认当前网络能打开 `https://cdn.jsdelivr.net`（浏览器直接访问测试）；打不开时临时开启全局代理，更新一次配置后再关。规则每 24 小时自动更新（`interval: 86400`），也可在软件里手动"更新配置"立即刷新。
+
+**Q3：按示例配好了，Google 还是打不开？**
+
+按顺序排查：① 在策略组里换一个节点；② 确认订阅链接没填错、节点列表已更新；③ 确认配置已保存并"应用"（部分软件需重新加载配置才生效）。
 
 ## 反馈
 
