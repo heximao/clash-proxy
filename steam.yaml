@@ -1,3 +1,13 @@
 payload:
-  # X
-  - DOMAIN-SUFFIX,
+
+# === Steam 商店 / 账户 / API ===
+  - DOMAIN-SUFFIX,steampowered.com
+
+# === Steam 社区 / 市场 ===
+  - DOMAIN-SUFFIX,steamcommunity.com
+
+# === Steam 静态资源 / 下载 CDN ===
+  - DOMAIN-SUFFIX,steamstatic.com
+
+# === 蒸汽平台（Steam 中国）===
+  - DOMAIN-SUFFIX,steamchina.com

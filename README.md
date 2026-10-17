@@ -51,7 +51,7 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
 | **spotify.yaml** | Spotify |
-| **steam.yaml** | Steam 游戏平台（待补充） |
+| **steam.yaml** | Steam 游戏平台（商店、社区、下载 CDN、蒸汽平台） |
 | **streaming.yaml** | Netflix、Disney+、HBO 等 |
 | **telegram.yaml** | Telegram |
 | **tencent-global.yaml** | 腾讯海外服务 |
