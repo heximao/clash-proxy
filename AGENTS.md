@@ -59,9 +59,11 @@ clash-proxy/
 
 #### 已裁决结论（勿再问、勿收录）
 
-> 机器可读映射：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`
+> 机器可读映射（**已裁决项的运行时唯一数据源**）：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`
 > （`skip`=静默跳过，`manual`=待人工可见）。**新裁决项落 changelog 时必须同步追加到该文件**，
-> 用户定案的 manual 项要从文件移除；本节为判据权威，两者须保持一致。
+> 用户定案的 manual 项要从文件移除。判据规则以本节为权威；下方清单是该文件的人类可读快照，
+> 由**交互式会话**对齐维护（fill-domains-from-log skill 第 0 节对齐检查）——AGENTS.md 是受保护
+> 文件，cron / automation 会话写它必被 BLOCKED，清单同步延后至交互式会话，不要求逐轮一致。
 
 - 无主端点不归类：`antpeak.com` / `hibchr.com` / `zorvian.com`。
 - reject 上游已收录（跳过不加不问）：`clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com`、`cloudflareinsights.com`、`go-mpulse.net`、`akstat.io`。
@@ -71,7 +73,7 @@ clash-proxy/
 - 海外 → `proxy.yaml`；国内经 RDAP/NS 确认 → `direct.yaml`；`macked.site` 是 Mac 资源站→proxy。
 - 中国移动系（10086.cn / chinamobile.com / cmcc-cs.cn / komect.com / miguvideo.com / 10085.cn / cmicapm.com 等）→ direct.yaml 中国移动组。WPS 系（wps.cn / wpscdn.cn / qwps.cn / ksosoft.com）→ direct.yaml。
 - Agent 自用查询端点（rdap.org / verisign.com / crt.sh 等）→ direct.yaml「域名查询 / RDAP」组。
-- 长期挂起待人工（无锚点）：`logitech.io`、`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`applogcdn.com`、`temu.com`、`photon.codes`、`mdoelscope.ai`（仿冒）。
+- 长期挂起待人工（无锚点）：`logitech.io`、`logitechg.com`（Logitech G 系，2026-10-18 裁决，同 logitech.io）、`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`applogcdn.com`、`temu.com`、`photon.codes`、`mdoelscope.ai`（仿冒）。
 
 #### 文件格式规则
 
@@ -210,6 +212,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 - **`.workbuddy/skills` 与 `.workbuddy/memory` 是指向 `.agents/` 下真实目录的符号链接**，两个路径访问的是同一份文件。项目级 skill 的实际位置是 `.agents/skills/`，记忆是 `.agents/memory/`，文档里写 `.agents/...` 路径即为正确，不要"修正"成 `.workbuddy/...`。`Skill` 工具加载 `fill-domains-from-log` 可能报 "Cannot find skill" → 直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
 - **本机系统 `python3` 没有 pyyaml**，YAML 语法校验需用带 pyyaml 的解释器：`/Users/saibopika/.workbuddy/binaries/python/envs/default/bin/python`。
 - `whois` 命令不可用（`whois.iana.org` 无法解析且客户端会挂起），macOS 也**没有 `timeout` 命令**；域名注册信息查询走 RDAP（需代理 `https_proxy=http://127.0.0.1:7893`）。RDAP 首调常空需重试 2-3 次；registrar 为空时看 NS 定归属（HICHINA/ALIDNS→国内）或 DoH 看 A 记录 IP 段。
+- **AGENTS.md 本身是受保护文件**：cron / automation 会话（无交互用户）中 patch 工具直接 BLOCKED（"requires approval but no interactive user or gateway is present"，2026-10-18 实测）。automation 轮新裁决项只落 skip-list + changelog 即闭环（提取脚本只读 skip-list）；本文件与 `.agents/memory/MEMORY.md` 的「已裁决结论」清单同步延后至交互式会话（fill-domains-from-log skill 第 0 节对齐检查）。
 
 #### 仓库状态（已知事实与遗留问题）
 

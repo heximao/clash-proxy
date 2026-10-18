@@ -1,6 +1,6 @@
 ---
 name: fill-domains-from-log
-version: v2.6.0
+version: v2.7.0
 description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
@@ -18,6 +18,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
 ```text
  0. ★ 同步准备（每轮开头必做，详见第 0 节）★
       git fetch origin → main 追上远程 → 确认与远程双向 0 0
+      （交互式会话加做：skip-list ↔ AGENTS.md 已裁决清单对齐；automation 轮跳过）
       ↓
  1. 准备日志（cp 复制昨天的：~/.config/clash.meta/logs → log/clashx-meta-log/）
       ↓
@@ -84,6 +85,16 @@ git status -sb                                # 工作区干净（未跟踪文�
 - **禁止 `git push --force` / `--force-with-lease` 任何形式**，会抹掉 bot 的自动合并提交。
 - 第 3 步不是 `0  0` 就不算完成，必须继续同步；走到第 1 步时若 HEAD 不在 main 上，先 `git checkout main`。
 
+**skip-list ↔ AGENTS.md 清单对齐检查（仅交互式会话执行；automation 轮必须跳过）**
+
+比对 `.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt` 各条目与 AGENTS.md「已裁决结论」清单（以及 `.agents/memory/MEMORY.md` 的同构清单）：
+
+- skip-list 有而 AGENTS.md / MEMORY.md 清单缺的已裁决项（典型：cron 轮新增裁决，automation 会话写 AGENTS.md 被 BLOCKED 遗留），补入对应清单行，恢复三处一致。
+- 用户已定案移除的 manual 项（skip-list 已删），同步从清单移除。
+- 对齐产生的 AGENTS.md / MEMORY.md 改动随本轮提交入库。
+
+AGENTS.md 是受保护文件，cron / automation 会话（无交互用户）中 patch 必被 BLOCKED——automation 轮**不要尝试**此步，不一致留给下一次交互式会话；skip-list 是运行时唯一数据源，清单短暂不一致不影响 automation 正确性。
+
 ## 1. 准备日志
 
 - 日志源目录：`/Users/saibopika/.config/clash.meta/logs`，文件夹命名格式 `YYYY-MM-DD_HH-MM-SS`。
@@ -119,6 +130,8 @@ python3 .agents/skills/fill-domains-from-log/scripts/extract-match-domains/extra
 脚本内置过滤（不再人工排除）：无 TLD 伪域名、探针族（`wpad`、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`、`root-key-sentinel-*`）、私有/保留 IP 段、skip-list 清单。
 
 **skip-list.txt 维护入口**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt` 是「已裁决结论」的机器可读映射（`skip`=静默跳过、`manual`=待人工可见）。每轮产生新的「已裁决不归类 / 待人工」结论后，落 changelog 的同时**必须同步追加**到该文件，否则下轮重复出现同样候选。反过来，人工已定案的 manual 项（用户给出归属）要从文件移除。
+
+**AGENTS.md 清单同步（交互式会话专属动作，automation 轮禁止）**：skip-list 是已裁决项的**运行时唯一数据源**（提取脚本只读它）；AGENTS.md「已裁决结论」清单与 `.agents/memory/MEMORY.md` 同构清单是它的**人类可读快照**。AGENTS.md 是受保护文件，cron / automation 会话写它必被 patch 工具 BLOCKED（2026-10-18 实测）——automation 轮产生新裁决项时只落 skip-list + changelog，并在 changelog 条目标注「AGENTS.md 同步延后」；清单对齐由**交互式会话**在每轮第 0 节的对齐检查中完成。
 
 只提取 info 级别的 `... using` 行；忽略 `match Match/`、`match RuleSet/oc-cn-domain` 等斜杠形式的 dial 报错行（同一目标已含于 info 行）。
 
@@ -311,7 +324,7 @@ push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步
 - Git：main 提交 <hash> 已推送，同步 0 0。
 ```
 
-2. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。
+2. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。automation 轮产生新裁决项但 AGENTS.md 清单无法同步时，在 memory 日志标注「AGENTS.md 待同步」供下次交互式会话第 0 节对齐检查补齐。
 3. **完成日志归档**：按第 12 节执行。
 
 ## 14. 硬性约束
@@ -319,6 +332,7 @@ push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步
 - **禁止跳过第 0 步同步准备（本地与远程一致性检查）。** 在旧基线上做查重与规则判断会得出错误结论。
 - **查重必须用 `scripts/check-coverage/check_coverage.py`（规则级判断）**，不得回退到 `grep -l <域名> *.yaml` 子串匹配（会误命中 `xxxx53.com` 这类假阳性、漏掉品牌标签锚点）。
 - **skip-list 是已裁决跳过项的唯一数据源**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`。新的「已裁决不归类 / 待人工」结论落 changelog 时必须同步追加（`skip` / `manual`），用户定案的 manual 项要移除；禁止只写 changelog 不更新 skip-list。
+- **AGENTS.md 清单同步是交互式会话动作**：AGENTS.md 是受保护文件，cron / automation 会话写它必被 BLOCKED（2026-10-18 实测）——automation 轮只落 skip-list + changelog 即完整闭环（提取脚本只读 skip-list，下轮不受影响），禁止重试写 AGENTS.md；清单对齐走第 0 节对齐检查，延后到交互式会话完成。
 - **自主裁决须留痕**：每个归类决定在 changelog 写明依据（AGENTS.md 判据条号 / 进程名 / BRAND-ANCHOR / RDAP 结果 / 同文件同类分组），未归类项写明原因；证据不足且查询无结论的按兜底规则处理（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。
 - **第 4 步只做本地查重和粗判，禁止外部查询**；RDAP/DoH/wayback 等外部查询集中在第 6 节按需自主发起；代理 7893 不可用时待查项顺延下轮，不无限重试阻塞 automation。
 - **空结果轮按第 2b 节收尾**：无候选 → 无 changelog、无提交、照常归档、记 memory 一行。
@@ -340,4 +354,5 @@ push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步
 - `scripts/check-coverage/check_coverage.py` 为行级正则解析（与 find-duplicates 一致），不依赖 pyyaml，系统 `python3` 可直接运行；退出码恒为 0（查询工具，非门禁）。
 - Git 提交用 heredoc（`git commit -F - <<'EOF'`）可用，不会被安全策略拦截；只有 python 内联脚本会被误判。
 - **`.workbuddy/skills` 与 `.workbuddy/memory` 是指向 `.agents/` 下真实目录的符号链接**，两个路径访问的是同一份文件。`Skill` 工具加载本 skill 会报 "Cannot find skill"（符号链接对加载器不生效），需要时直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
+- **AGENTS.md 是受保护文件**：cron / automation 会话（无交互用户 / gateway 在场）中 patch 工具直接 BLOCKED，报 "requires approval but no interactive user or gateway is present"（2026-10-18 实测）。automation 轮新裁决项只落 skip-list + changelog 即闭环；AGENTS.md「已裁决结论」清单与 MEMORY.md 同构清单的同步延后至交互式会话（第 0 节对齐检查）。
 

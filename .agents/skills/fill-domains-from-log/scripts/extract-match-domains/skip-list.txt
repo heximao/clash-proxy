@@ -5,7 +5,10 @@
 #   manual = 不进候选段，但每轮单列 # manual-review 段（待人工项保持可见）
 # 匹配方式：后缀匹配——域名等于该值、或以 .<该值> 结尾的子域均命中。
 #
-# 权威关系：AGENTS.md「已裁决结论」是判据权威，本文件是其机器可读映射。
+# 权威关系：判据规则以 AGENTS.md「已裁决结论」为权威；已裁决项清单的运行时唯一数据源是
+# 本文件（提取脚本只读本文件），AGENTS.md / MEMORY.md 清单是本文件的人类可读快照。
+# AGENTS.md 是受保护文件，cron/automation 会话写它必被 BLOCKED——清单同步是交互式
+# 会话动作（skill 第 0 节对齐检查）；automation 轮只落 skip-list + changelog 即闭环。
 # 新裁决项落 changelog 后，必须同步追加到本文件（skill 第 2 节维护入口）。
 
 # --- reject.yaml 上游已收录（跳过不加不问）---

@@ -1,5 +1,20 @@
 # 更新记录
 
+## 2026-10-18 skill v2.7.0：AGENTS.md 清单同步机制重设计 + logitechg.com 补录 AGENTS/MEMORY 清单（main 直接提交，交互会话）
+
+- **动机**：今晨 automation run（`8c566c0`）实测——AGENTS.md 是受保护 agent 指令文件，cron / automation 会话（无交互用户）中 patch 工具直接 BLOCKED（"requires approval but no interactive user or gateway is present"），「已裁决结论」清单与 skip-list 出现不一致遗留（`logitechg.com` 只进了 skip-list）。
+- **设计变更（skill v2.6.0 → v2.7.0）**：
+  - **skip-list 定位明确为已裁决项的运行时唯一数据源**（提取脚本只读它）；AGENTS.md「已裁决结论」清单与 `.agents/memory/MEMORY.md` 同构清单定位改为**人类可读快照**。
+  - **AGENTS.md 清单同步划为交互式会话专属动作**：skill 第 0 节新增「skip-list ↔ AGENTS.md 清单对齐检查」（仅交互式会话执行，比对三处清单，不一致即补齐随本轮提交）；automation 轮禁止尝试写 AGENTS.md，新裁决项只落 skip-list + changelog 并标注「AGENTS.md 同步延后」，不算失败。
+  - 环境坑三处记录（skill 第 15 节、AGENTS.md「常见坑」、MEMORY.md「环境坑」）：AGENTS.md 受保护、cron 不可写。
+- **本轮落盘补录（上轮 `8c566c0` 遗留的同步项，本轮交互会话对齐完成）**：
+  - AGENTS.md「已裁决结论」长期挂起清单补 `logitechg.com`（Logitech G 系，2026-10-18 裁决，同 `logitech.io`）；节头权威关系表述更新（skip-list 为运行时唯一数据源、清单为快照、同步职责划归交互式会话）。
+  - `.agents/memory/MEMORY.md` 同构清单同补 `logitechg.com`；「环境坑」加 AGENTS.md 受保护条目。
+  - `skip-list.txt` 头部权威关系注释更新（与新设计一致）。
+- **hash 回填（顺延纪律执行）**：v2.6.0 条目 `<hash>` → `371593e`；上轮 logitechg 条目 `<hash>` → `8c566c0`。
+- **自检**：本轮未编辑任何规则 yaml，无 `find_duplicates.py` / yaml 语法校验触发（两者仅在编辑规则 yaml 时必做）。
+- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-18 漏网之鱼处理：logitechg.com 留人工裁决 + skip-list/AGENTS.md 补同步（零补录轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-17_08-38-11`（仓库已有，4 个日志文件）。该文件夹为 2026-10-17（昨天）日志，上轮（v2.4.1 护栏）因 app 会话未结束留原地未归档，本轮作为「昨天」处理。
@@ -15,7 +30,7 @@
   - `AGENTS.md`「已裁决结论」长期挂起清单的 `logitechg.com` 同步：**被保护文件策略拦截**（AGENTS.md 为受保护 agent 指令文件，cron 无交互用户无法批准写入，patch 工具直接 BLOCKED），留待交互式会话补同步。skip-list 已先行落盘保证 automation 下轮不再重复出现该候选；AGENTS.md 与 skip-list 暂时相差此项，下次交互会话需补齐 `logitechg.com` 以恢复「两者须保持一致」。
 - **待人工确认**：9 项（skip-list `manual` 全集）：`logitech.io`、`logitechg.com`（本轮新增同步）、`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`applogcdn.com`、`temu.com`、`photon.codes`、`mdoelscope.ai`（仿冒）。本轮 manual-review 命中 5 项（ntp.org.cn / logitech.io / mdoelscope.ai / oceanengine.com / yhgfb-cn-static.com），均为既有挂起项，无新增定案。
 - **自检结果**：本轮未编辑任何 `.yaml` 规则文件，无 `find_duplicates.py` 重复检查触发、无 yaml 语法校验触发（两者仅在编辑规则 yaml 时必做）。本轮实际落盘变更仅 `skip-list.txt` + `changelog.md`（AGENTS.md 写入被拦截，见上「本轮变更」）。
-- Git：main 直接提交 <hash> → push → 同步 `0 0`。
+- Git：main 直接提交 `8c566c0` → push（`371593e..8c566c0`）→ 同步 `0 0`。
 
 ## 2026-10-17 fill-domains-from-log skill v2.6.0：提取结构化 + check-coverage 规则级查重 + skip-list 数据化（main 直接提交）
 
@@ -27,7 +42,7 @@
 - **AGENTS.md 同步**：目录结构补 check-coverage 与 skill scripts 子目录；判据 1 注明 BRAND-ANCHOR 已机器化；「已裁决结论」头部加 skip-list 权威源指针与同步纪律；常用命令补 check_coverage.py；仓库状态「加文件前查重」改指 check_coverage；修正目录树中 duplicates.json「本地」为「入库」（实查 git ls-files 已跟踪）。
 - **实测**（log/clashx-meta-log/2026-10-17_08-38-11，4 个日志文件）：提取 123 候选域（mm 18 / oc 105）+ 1 公网 IP，skip-list 命中 skip 3 / manual 7，伪域名过滤 12；registrable 段 32 个主域喂 check_coverage：31 COVERED（含命中文件与行号）、1 UNCOVERED（logitechg.com，确为挂起项）；BRAND-ANCHOR 验证 `hdslb.net`→`hdslb.com`、`qpic.com`→`qpic.cn` 正确命中，`mdoelscope.ai` 标签不同不误报；IP 判定 `120.53.53.53`、`17.57.0.147` 均正确判 COVERED。
 - 本提交同时带上上轮 hash 回填（v2.5.0 条目 `<hash>` → `f39b892`）与当日 memory 更新。
-- Git：main 直接提交 `<hash>` → push → 同步 `0 0`。
+- Git：main 直接提交 `371593e` → push → 同步 `0 0`。
 
 ## 2026-10-17 fill-domains-from-log skill v2.5.0：日志获取回退 cp + 只处理昨天（避免沙箱弹窗、支持 automation 全自动）（main 直接提交）
 
