@@ -24,6 +24,7 @@ zorvian.com skip:无主端点，已裁决不归类
 
 # --- 长期挂起待人工（每轮可见，不参与自动裁决）---
 logitech.io manual:无锚点厂商文件，留人工
+logitechg.com manual:无锚点厂商文件，留人工（Logitech G 系，与 logitech.io 同）
 oceanengine.com manual:无锚点，留人工
 ntp.org.cn manual:待人工
 yhgfb-cn-static.com manual:待人工

@@ -1,5 +1,22 @@
 # 更新记录
 
+## 2026-10-18 漏网之鱼处理：logitechg.com 留人工裁决 + skip-list/AGENTS.md 补同步（零补录轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-17_08-38-11`（仓库已有，4 个日志文件）。该文件夹为 2026-10-17（昨天）日志，上轮（v2.4.1 护栏）因 app 会话未结束留原地未归档，本轮作为「昨天」处理。
+- **提取量**（结构化脚本 `extract_match_domains.py`，已过滤伪域名 12、探针 0、私有 IP 0）：
+  - 候选 123（`match Match` 18 / `oc-cn-domain` 105）+ 公网裸 IP 1（`120.53.53.53`）。
+  - skip-list 命中：`skip` 3（`hibchr.com`/`antpeak.com`/`zorvian.com` 无主端点）、`manual` 7 行映射 5 项（`ntp.org.cn` 2 子域 Lark Helper、`logitech.io` 2 子域 logioptionsplus_agent、`mdoelscope.ai` 仿冒、`oceanengine.com` Lark Helper、`yhgfb-cn-static.com` Feishu）。
+  - 归并主域 32 个 + IP 1。
+- **补录明细**：0 个（无新增规则）。32 主域 + 1 IP 经 `check_coverage.py` 判定全部 COVERED——命中 `bilibili.yaml`（hdslb.com/bilibili.com/bilivideo.com/bilivideo.cn/biligame.com/biliimg.com 6 主域）、`us-bank.yaml`（53.com/breadfinancial/capitalone/capitalone360/current/key/marcus/mtb/varomoney/wellsfargo/wf 11 个美国银行主域，进程均 `python3.13`）、`wechat.yaml`（qpic.cn/weixinbridge.com/servicewechat.com/wechat.com/qlogo.cn 5 主域）、`direct-ai.yaml`（sensenova.cn/sensecore.cn/sensecoreapi.cn 商汤系 3 主域）、`direct.yaml`（mountaintoys.cn/itdog.cn/rdap.org/verisign.com 4 主域 + IP `120.53.53.53/32`）、`baidu.yaml`（baidu.com）、`bytedance.yaml`（bytednsdoc.com）。规则集先于本地 yaml 匹配，COVERED 整批跳过，不代表规则缺失。
+- **未收录及原因**：
+  - **`logitechg.com`**（子域 `updates.optionsplus.logitechg.com`，进程 `logioptionsplus_updater` ×2）→ **留人工**。判据#5：品牌字面「logitech」在域内但**无 `logitech.yaml` 锚点文件**→「无锚点文件即新增厂商文件→一律留人工，即便品牌明确」（与既有 `logitech.io` 同属 Logitech 系挂起项）。`check_coverage` 判 UNCOVERED + BRAND-ANCHOR 0 印证库内无同标签锚点。此为上轮（2026-10-17 itdog 轮，commit `14c677c`）已裁决结论，当时未同步 skip-list，本轮补同步。
+- **本轮变更**（非规则补录，为已裁决结论的数据化同步）：
+  - `skip-list.txt` `# --- 长期挂起待人工 ---` 段：`logitech.io` 后补 `logitechg.com manual:无锚点厂商文件，留人工（Logitech G 系，与 logitech.io 同）`（机器可读映射，已裁决跳过项唯一数据源；下轮起 logitechg.com 不再进候选段）。
+  - `AGENTS.md`「已裁决结论」长期挂起清单的 `logitechg.com` 同步：**被保护文件策略拦截**（AGENTS.md 为受保护 agent 指令文件，cron 无交互用户无法批准写入，patch 工具直接 BLOCKED），留待交互式会话补同步。skip-list 已先行落盘保证 automation 下轮不再重复出现该候选；AGENTS.md 与 skip-list 暂时相差此项，下次交互会话需补齐 `logitechg.com` 以恢复「两者须保持一致」。
+- **待人工确认**：9 项（skip-list `manual` 全集）：`logitech.io`、`logitechg.com`（本轮新增同步）、`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`applogcdn.com`、`temu.com`、`photon.codes`、`mdoelscope.ai`（仿冒）。本轮 manual-review 命中 5 项（ntp.org.cn / logitech.io / mdoelscope.ai / oceanengine.com / yhgfb-cn-static.com），均为既有挂起项，无新增定案。
+- **自检结果**：本轮未编辑任何 `.yaml` 规则文件，无 `find_duplicates.py` 重复检查触发、无 yaml 语法校验触发（两者仅在编辑规则 yaml 时必做）。本轮实际落盘变更仅 `skip-list.txt` + `changelog.md`（AGENTS.md 写入被拦截，见上「本轮变更」）。
+- Git：main 直接提交 <hash> → push → 同步 `0 0`。
+
 ## 2026-10-17 fill-domains-from-log skill v2.6.0：提取结构化 + check-coverage 规则级查重 + skip-list 数据化（main 直接提交）
 
 - **动机**：评审 v2.5.0 后用户指示优化。三大短板：① 第 4 步查重是 `grep -l <域名> *.yaml` 子串匹配（`53.com` 误命中 `xxxx53.com`、漏品牌标签锚点）；② 已裁决跳过项散在 AGENTS.md / skill / changelog 三处，每轮人工排除 + 全量读 663 行 changelog 耗 context；③ 提取输出五段纯文本需 agent 二次加工，无私有 IP / 探针族 / skip-list 内置过滤，automation 空结果轮无收尾定义。
