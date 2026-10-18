@@ -10,7 +10,8 @@
 
 ```text
 clash-proxy/
-├── *.yaml                              # 规则文件：扁平存放在根目录，均以 payload: 开头
+├── config.yaml                         # Mac ClashX Meta 运行配置文件的副本，与正在运行的配置文件区别是隐藏了`proxy-providers`中的订阅链接
+├── *.yaml                              # 除config.yaml,均为规则文件：扁平存放在根目录，均以 payload: 开头
 ├── README.md                           # 面向使用者：CDN 引用方式、客户端配置示例、规则文件全表
 ├── changelog.md                        # 更新记录：每次变更后在顶部追加（见 Git 工作流）
 ├── scripts/                            # 维护脚本（每个脚本独立子目录，各带自己的 README）

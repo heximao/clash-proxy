@@ -6,3 +6,4 @@
 .codebuddy/
 log/
 __pycache__/
+.config
