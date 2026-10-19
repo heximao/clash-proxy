@@ -1,6 +1,6 @@
 ### clash-proxy/AGENTS.md
 
-本文件为 Agent（Claude、Codex、Opencode、Hermes)在本仓库工作提供指引。
+本文件为 Agent（Claude、Codex、Opencode、Hermes）在本仓库工作提供指引。
 
 本仓库（clash-proxy）是一个域名规则集合仓库，不是一个标准的代码仓库，本仓库无构建系统、测试套件或 linter。通过 jsDelivr CDN 分发为 Clash / OpenClash 客户端提供 YAML 域名规则文件。引用 CDN URL 格式：`https://cdn.jsdelivr.net/gh/heximao/clash-proxy/<filename>.yaml`。
 
@@ -10,7 +10,9 @@
 
 ```text
 clash-proxy/
-├── config.yaml                         # Mac ClashX Meta 运行配置文件的副本，与正在运行的配置文件区别是隐藏了`proxy-providers`中的订阅链接
+├── AGENTS.md                           # 本文件：Agent 在本仓库的工作指引
+├── CLAUDE.md                           # 指向 AGENTS.md 的符号链接（Claude 系客户端读它）
+├── config.yaml                         # Mac ClashX Meta 运行配置文件的副本，与正在运行的区别是隐藏了 proxy-providers 订阅链接（未跟踪也未 gitignore）
 ├── *.yaml                              # 除config.yaml,均为规则文件：扁平存放在根目录，均以 payload: 开头
 ├── README.md                           # 面向使用者：CDN 引用方式、客户端配置示例、规则文件全表
 ├── changelog.md                        # 更新记录：每次变更后在顶部追加（见 Git 工作流）
@@ -19,29 +21,35 @@ clash-proxy/
 │   ├── check-coverage/                # check_coverage.py：规则级覆盖检查 + 品牌标签锚点检索（查询工具，非门禁）
 │   ├── merge-reject-from-loyalsoldier/
 │   └── normalize-yaml-comments/
-├── .agents/skills/                     # 项目级 Agent Skills（已纳入 git 跟踪）
-│   └── fill-domains-from-log/         # 从日志提取漏网之鱼域名并分类补录的完整工作流
-│       └── scripts/extract-match-domains/  # 提取脚本 + skip-list.txt（已裁决跳过项数据源）+ README
+├── .agents/                            # 项目级 Agent 数据（已纳入 git 跟踪）
+│   ├── skills/
+│   │   └── fill-domains-from-log/     # 从日志提取漏网之鱼域名并分类补录的完整工作流
+│   │       └── scripts/extract-match-domains/  # 提取脚本 + skip-list.txt（已裁决跳过项数据源）+ README
+│   └── memory/                         # 项目记忆：每日工作日志 + MEMORY.md
 ├── .github/workflows/
 │   └── auto-merge-reject.yml           # 每日 00:20 UTC 自动合并 reject.yaml
-└── log/                                # 本地运行日志（已 gitignore，不入库）
-                                        # 是补充规则时"漏网之鱼"域名的数据来源
+└── log/                                # 本地运行日志（已 gitignore，不入库），补充规则时"漏网之鱼"域名的数据来源
+    ├── clashx-meta-log/                # ClashX Meta 日志：cp 只读复制昨天的日志进来（处理源）
+    ├── openclash-log/                  # OpenClash 日志：oc-cn-domain 命中来源
+    ├── .archive/                       # 已处理完（push + 0 0）的日志文件夹归档处
+    ├── .work/                          # 每轮粗判草稿（续跑用，轮末删除）
+    └── <时间戳目录>/                    # 早期直接拷贝进来的日志目录
 ```
 
-扁平存放的 40 余个（当前 43 个）`*.yaml` 规则文件，如新增或重构文件内容，需同步更新 [README.md](README.md) 的「规则文件」表。
+扁平存放的 40 余个 `*.yaml` 规则文件（精确数量以 [README.md](README.md) 的「规则文件」表为准，勿在本文硬编码维护），如新增或重构文件内容，需同步更新该表。
 
 #### 目录和文件命名规则
 
-- **文件命名**：新建或重命名文件，使用 `lowercase.yaml`格式，多词用连字符（示例 `hk-broker.yaml`、`fin-media.yaml`）。
+- **文件命名**：新建或重命名文件，使用 `lowercase.yaml` 格式，多词用连字符（示例 `hk-broker.yaml`、`fin-media.yaml`）。
 - **log/**：运行日志目录（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组；`match RuleSet(oc-cn-domain)` 表示命中了外部 OpenClash CN 域名规则集（通常走 DIRECT）。两类目标都说明未被本仓库 yaml 规则覆盖，需定期将这些域名归类到对应的规则文件中。归类漏网之鱼的域名时，查询域名归属用 **RDAP**（本机 `whois` 不可用，需走代理，见「常见坑」）。
 
 #### 文件分类规则
 
 - **大型互联网公司优先**：大型互联网公司使用独立规则文件，其次按照域名所属的服务区分（例如Apple、Google、Microsoft、AI 等）有各自专属文件。
 - **proxy.yaml**：兜底存放无法直连或者直连不稳定的杂项规则
-- **direct.yaml**：兜底存放可稳定直连的存放杂项规则。
+- **direct.yaml**：兜底存放可稳定直连的杂项规则。
 - **-global.yaml**：同厂商的海外 / 国际版服务，与国内主文件分开维护，目前有 `alibaba`、`bytedance`、`tencent` 三对
-- **-ai.yaml**： AI 服务按可直连 / 需代理拆分：`direct-ai.yaml`（直连）、`proxy-ai.yaml`（代理）；大厂 AI 优先归入厂商文件（如 `claude.yaml`、`openai.yaml`）
+- **-ai.yaml**：AI 服务按可直连 / 需代理拆分：`direct-ai.yaml`（直连）、`proxy-ai.yaml`（代理）；大厂 AI 优先归入厂商文件（如 `claude.yaml`、`openai.yaml`）
 - **占位文件**：截至 2026-10-17 全库空壳文件已清零（`paypal.yaml` 已删除、域名并入 `us-payment.yaml`；`steam.yaml`、`xhs.yaml` 已补真实规则）。如再出现仅有空占位 `DOMAIN-SUFFIX,`（无效规则）的文件，补充真实域名时直接替换占位行。
 - **reject.yaml**：由 GitHub Actions 工作流维护，每日从 Loyalsoldier 上游自动生成广告域名 — 禁止编辑，为本地新发现的域名做分类时，也不要查询、核对**reject.yaml**。
 
@@ -68,7 +76,7 @@ clash-proxy/
 
 - 无主端点不归类：`antpeak.com` / `hibchr.com` / `zorvian.com`。
 - reject 上游已收录（跳过不加不问）：`clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com`、`cloudflareinsights.com`、`go-mpulse.net`、`akstat.io`。
-- **伪域名 / 探针族整批跳过不计入待判**：`wpad`、`monitor_browser`、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`（NextDNS + DNSSEC `root-key-sentinel-*` 探针）。
+- **伪域名 / 探针族整批跳过不计入待判**：`wpad`、`monitor_browser`、`www.z` / `www.zhipin`（WorkBuddy AI Helper 截断主机名，无有效 TLD，2026-10-19 裁决入 skip-list）、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`（NextDNS + DNSSEC `root-key-sentinel-*` 探针）。
 - **广告/追踪类整批不落盘**：归 reject.yaml 上游且**禁止核对 reject.yaml**，故只记录不判断（Chrome 浏览一日可产出 40+ 个 ad-tech 主域）。
 - 微信主域 `weixin.com` / `wechat.com` → `wechat.yaml`（非 tencent）。`spacelama.com` → tencent（用户直接指定）。
 - 海外 → `proxy.yaml`；国内经 RDAP/NS 确认 → `direct.yaml`；`macked.site` 是 Mac 资源站→proxy。
@@ -94,7 +102,11 @@ clash-proxy/
 
 #### 日志差集纪律（从日志提取域名时必守）
 
-- **2026-10-17 起日志 cp 复制 + 只处理昨天（skill v2.5.0+）**：源目录 `~/.config/clash.meta/logs/` 的**昨天**日志文件夹用 `cp -R` **只读复制**到 `log/clashx-meta-log/`（不删源）；**禁止 `mv`/`rm` 源目录**——写/删 `~/.config`（系统配置目录）触发沙箱授权弹窗、automation 无人响应卡死，cp 只读源不弹窗。当天日志不处理（仍被实时写入）、更早的留存源目录（累积由用户定期清理）。处理完成（push + 同步 `0 0`）后已处理文件夹归档至同级 `log/.archive/`（归档为工作区内 mv，不碰 `~/.config`）。优先用仓库已有（`log/clashx-meta-log/` 下昨天前缀文件夹存在则直接用，无则从源 cp；防 cp 套娃——目标侧同名则跳过）。
+- **2026-10-17 起日志 cp 复制 + 只处理昨天（skill v2.5.0+）**：
+  - 源目录 `~/.config/clash.meta/logs/` 的**昨天**日志文件夹用 `cp -R` **只读复制**到 `log/clashx-meta-log/`（不删源）；优先用仓库已有（`log/clashx-meta-log/` 下昨天前缀文件夹存在则直接用，无则从源 cp；防 cp 套娃——目标侧同名则跳过）。
+  - **禁止 `mv`/`rm` 源目录**——写/删 `~/.config`（系统配置目录）触发沙箱授权弹窗、automation 无人响应卡死；cp 只读源不弹窗。
+  - 当天日志不处理（仍被实时写入），留待次日 automation 处理；更早的留存源目录（累积由用户定期清理）。
+  - 处理完成（push + 同步 `0 0`）后，已处理文件夹归档至 `log/.archive/`（归档为工作区内 `mv`，不碰 `~/.config`）。
 - **changelog 有记录 ≠ 已处理完**：日志当天持续追加、跨日追加、重启新增 core 文件，须 diff 后重新提取，与 changelog 已处理主域集合对比定位增量。
 - **只处理昨天**：当天日志留待次日 automation 处理（作为昨天的）；不再扫描今日目录。带出的目录必须真正跑提取，不能只 cp。
 - 差集 ≠ 漏跑：早期运行未 cp 造成的历史缺口用 changelog 交叉核验定性（特征域名能找到落点即是复制缺口）。
@@ -109,7 +121,7 @@ changelog.md 是变更账本（2026-10-17 起已纳入 git 跟踪，**每次提�
 - 一次逻辑变更一个条目；条目是提交说明的展开版，两者事实必须一致。
 
 **条目结构（域名归类类变更，必写要素）**
-1. **标题**：`## YYYY-MM-DD <对象>：<一句话摘要>（<branch> → <merge commit>）`。
+1. **标题**：`## YYYY-MM-DD <对象>：<一句话摘要>（<轮次>，如 automation 轮 / 交互轮）`。2026-10-17 取消分支制后不再写 branch → merge commit。
 2. **数据来源**：处理的日志目录清单 + `diff -rq` 差集结论（昨日 / 今日 / 续写增量分别说明）。
 3. **提取量**：`match Match` / `oc-cn-domain` 各自的域名数与裸 IP 数，注明统计口径（见下）。
 4. **补录明细**：落到哪个文件、哪个分组、什么规则、判定依据——引用「域名归属判定判据」条目号或既有先例，不要只写"无歧义"。
@@ -121,7 +133,7 @@ changelog.md 是变更账本（2026-10-17 起已纳入 git 跟踪，**每次提�
 
 **统计口径（写数字前先对齐）**
 - **提取行格式**：`match Match using` 与 `(match Match/)` 错误行**两种都要覆盖**（2026-10-07 曾因只取前一种漏记一个已覆盖域；近期日志该差异仅涉及探针伪域名与已覆盖域，但口径必须写全）。
-- **伪域名过滤**：`wpad`、`monitor_browser`、`postgres` 等无 TLD 主机名，以及 `*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`（NextDNS + DNSSEC `root-key-sentinel-*` 探针）整族剔除，不计入数量。
+- **伪域名过滤**：`wpad`、`monitor_browser`、`postgres`、`www.z` / `www.zhipin` 等无 TLD / 截断主机名，以及 `*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`（NextDNS + DNSSEC `root-key-sentinel-*` 探针）整族剔除，不计入数量。
 - **「归并主域后 N 个」**：按可注册主域合并后的去重数（含已覆盖项），括号注明构成（如 `oc-cn-domain 12 + match Match 6`），便于复核。
 - **payload 数**：文件中 `- ` 开头的规则行数（含 IP-CIDR）；写之前用 `grep -cE '^[[:space:]]*-[[:space:]]*[^[:space:]]' <file>` 实查，不凭记忆。
 - **全局数字**（全库文件数、规则总数）以提交时的仓库实际状态为准。
@@ -152,7 +164,10 @@ python3 scripts/find-duplicates/find_duplicates.py
 
 # 规则级覆盖检查：判断域名/IP 是否已被业务 yaml 覆盖 + 品牌标签锚点（判据1 机器化）
 # 排除 reject.yaml；查询工具非门禁，退出码恒 0；任意目录可运行
-python3 scripts/check-coverage/check_coverage.py feishu.cn itdog.cn 1.2.3.4
+# 批量输入走 stdin 管道（推荐）：cat domains.txt | python3 scripts/check-coverage/check_coverage.py -
+# 注意：`-` 与位置参数混用会吞掉 stdin 输入（2026-10-19 实测），多输入必须全部走 stdin
+# --quiet 只列未覆盖项
+python3 scripts/check-coverage/check_coverage.py --quiet feishu.cn itdog.cn 1.2.3.4
 
 # 从 Loyalsoldier 上游合并最新拒绝规则至 reject.yaml（须在仓库根目录执行）
 # 注意：本地无需手动执行，auto-merge-reject.yml 每日自动运行；仅在需要本地验证合并结果时使用
@@ -174,7 +189,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 说明：脚本退出码可直接作为门禁 —— **无重复为 0，发现任意跨文件 / 文件内重复为 1**（报告两种情况下都会生成）；但退出码只表示"有无"重复，定位和修正具体规则仍需读取 `scripts/find-duplicates/DUPLICATES.md`。
 
 **统计口径**：
-- 全库统计必须剥离 `reject.yaml`（占全库规则 99.29%）。`find_duplicates.py` 已跳过它，报的是业务文件间重复，**基线 1 条**（`settings.crashlytics.com` direct/google），不要误报成新增。
+- 全库统计必须剥离 `reject.yaml`（占全库规则 99.29%）。`find_duplicates.py` 已跳过它，报的是业务文件间重复，**基线 1 条**（`settings.crashlytics.com` direct/google），不要误报成新增。另注意 `config.yaml`（未跟踪的运行配置副本）也会被扫描，其 intra-file「重复」实为策略组名 / DNS 配置值噪声（2026-10-19 实测 23 条），不是规则重复，勿当新引入误判。
 - 解析规则行时 `IP-CIDR,...,no-resolve` 的 `no-resolve` 会被吞进 value，按逗号切第一段；空占位 `DOMAIN-SUFFIX,` 用允许空值的正则抓（`steam.yaml:3`）。
 
 #### Git 工作流
@@ -196,7 +211,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
    - 每完成一次阶段性任务，**必须先在 `changelog.md` 顶部追加本次变更记录**（写法见「changelog 编写约束」；已纳入 git 跟踪，**提交时与改动文件一并显式暂存**），然后再 commit。
    - 提交信息（commit message）使用中文，**一次逻辑变更一个提交**；暂存时显式列出文件，**禁止 `git add .` / `git add -A`**。
    - **禁止在提交中包含 `reject.yaml`**，该文件由 bot 独占维护，人工提交带上它会与上游自动合并产生冲突。
-   - **按时定期更新的特例**：如需定时 / 周期性更新文件，只允许 `git add -u && git commit -m "更新已有文件"`——仅暂存已跟踪文件的修改，不做批量跟踪、不引入新文件。
+   - **定时 / 周期性更新的特例**：如需定时 / 周期性更新文件，只允许 `git add -u && git commit -m "更新已有文件"`——仅暂存已跟踪文件的修改，不做批量跟踪、不引入新文件。
 5. **立即推送并确认同步** — 每完成一次 `commit`，**必须立即 `push`**。推送后确认 `git rev-list --left-right --count origin/main...HEAD` 输出 `0 0`。
 
 #### 文档 / README 改动约定
@@ -218,8 +233,8 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 #### 仓库状态（已知事实与遗留问题）
 
 - PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先用 `scripts/check-coverage/check_coverage.py` 全库查重（规则级判断，勿用 grep 子串匹配）。
-- 未修的已知问题：`proxy.yaml:784` 把 `USER-AGENT,WhatsApp*` 误写成分组注释头致 43 条归属错误；`direct.yaml` 44–179 行「腾讯云-香港」134 条实为杂项。
-- `domain-distribution.html` 未被 gitignore（未跟踪未提交）。
+- `config.yaml` 未跟踪也未 gitignore（`git status` 恒显示 `?? config.yaml`）；`find_duplicates.py` 会扫描到它，其 intra-file「重复」是策略组名 / DNS 配置值噪声，不是规则重复。
+- 未修的已知问题：`proxy.yaml:790` 把 `USER-AGENT,WhatsApp*` 误写成分组注释头，致其后 135 条规则（Google 系杂项，如 `1e100.net`、`appspot.com`）全部挂错分组；`direct.yaml` 44–177 行「腾讯云-香港」133 条实为杂项。
 - README 仍有用户挂起未确认的改动（两条 FAQ 未恢复、L100 句式杂糅等），非用户明确要求不要擅自动。
 
 #### .gitignore
@@ -234,6 +249,8 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 .workbuddy/
 .codebuddy/
 log/
+__pycache__/
+.config
 ```
 
 注：2026-10-17 用户裁决，`.agents/`、`AGENTS.md`、`CLAUDE.md`、`changelog.md`、`scripts/find-duplicates/duplicates.json` **均已纳入 git 跟踪**（`CLAUDE.md` 以指向 `AGENTS.md` 的符号链接形式跟踪）；`.omc/` 维持忽略不跟踪。提交时仍须显式列文件（`git add -A` / `git add .` 依旧禁止），且 `changelog.md` 变更须随对应提交入库。

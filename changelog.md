@@ -1,5 +1,21 @@
 # 更新记录
 
+## 2026-10-19 AGENTS.md 修订：修正 3 处事实过期 + 对齐 skip-list + 补齐 4 处文档缺口（交互轮）
+
+- **触发**：用户要求审查 AGENTS.md 可优化点；审查方式为与仓库实际状态逐项交叉核对（`ls` / `git status` / `git log` / skip-list / 脚本 docstring / changelog 格式 / README 表）。
+- **P0 事实过期修正**：
+  - `proxy.yaml` WhatsApp 误写注释头：文档记「784 行、43 条」，实测 **790 行、其后 135 条**（`grep -n` 定位 + 行计数核实；该组为 Google 系域名 `1e100.net` / `appspot.com` 等，新增规则历年追加在最后一个注释头下导致膨胀）。`direct.yaml`「腾讯云-香港」同步校准为 44–177 行 133 条（实测行计数）。
+  - `domain-distribution.html` 已不存在（`ls` 确认），从「仓库状态」移除该条。
+  - changelog 标题格式规范由 `（<branch> → <merge commit>）` 改为 `（<轮次>，如 automation 轮 / 交互轮）`——2026-10-17 取消分支制后实际条目均无 branch / merge commit。
+- **P1 漂移与缺口补齐**：
+  - 已裁决清单对齐 skip-list：补 `www.z` / `www.zhipin`（WorkBuddy AI Helper 截断主机名，2026-10-19 裁决入 skip-list）；「统计口径」伪域名过滤示例同步补列。
+  - `.gitignore` 快照补 `__pycache__/` 与 `.config`（实际文件 9 项，文档原列 7 项）。
+  - 「仓库状态」与「重复规则自检闭环」补 `config.yaml` 说明：未跟踪也未 gitignore，`find_duplicates.py` 会扫到它，其 intra-file「重复」实为策略组名 / DNS 配置值噪声（2026-10-19 实测 23 条），不是规则重复，避免误判为新引入。
+  - 「常用命令」补 `check_coverage.py` stdin 批量用法与「`-` 与位置参数混用会吞掉 stdin」陷阱（2026-10-19 实测），补 `--quiet`。
+- **P2 文字与结构优化**：修 5 处 typo（L3 括号全半宽混用、L35 缺空格、L42「存放」重复、L44 冒号后多空格、L199「按时定期」措辞）；目录结构树补 `AGENTS.md` / `CLAUDE.md`（符号链接）/ `.agents/memory/` / `log/` 四个子目录；「日志差集纪律」首条拆为 4 个子级；规则文件数改为指针化（不再硬编码 43，指向 README 表）。
+- **自检**：`git diff --stat` 仅 `AGENTS.md` + `changelog.md` + 本轮 memory 日记三个文件；过期引用（784 / domain-distribution / branch 格式 / 43 条 / 134 条）grep 清零；README、skip-list、scripts、全部 yaml 未动。
+- **Git 操作链**：动手前 `git fetch origin` + `origin/main...HEAD` 双向 `0 0` → 修订 → changelog 顶部追加 → 显式暂存 3 文件 → commit → push → 复核 `0 0`。
+
 ## 2026-10-19 漏网之鱼归类：极验验证码、微信支付、SchemaStore 等 5 域归档（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-18_08-09-12`（cp 只读复制自 `~/.config/clash.meta/logs/2026-10-18_08-09-12`，4 个日志文件，昨日日志；`log/clashx-meta-log/` 无上轮遗留存量）。
