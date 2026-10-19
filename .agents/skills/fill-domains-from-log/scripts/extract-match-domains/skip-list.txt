@@ -25,6 +25,10 @@ antpeak.com skip:无主端点，已裁决不归类
 hibchr.com skip:无主端点，已裁决不归类
 zorvian.com skip:无主端点，已裁决不归类
 
+# --- 伪域名 / 截断主机名（提取脚本过滤漏网，人工复核裁决不归类）---
+www.z skip:WorkBuddy AI Helper 截断伪域名，无有效 TLD，不归类
+www.zhipin skip:WorkBuddy AI Helper 截断伪域名，无有效 TLD，不归类
+
 # --- 长期挂起待人工（每轮可见，不参与自动裁决）---
 logitech.io manual:无锚点厂商文件，留人工
 logitechg.com manual:无锚点厂商文件，留人工（Logitech G 系，与 logitech.io 同）

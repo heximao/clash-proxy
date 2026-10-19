@@ -495,6 +495,432 @@
     "DOMAIN-SUFFIX,anthropic.ai": [
       "claude.yaml"
     ],
+    "geosite:cn": [
+      "config.yaml"
+    ],
+    "rule-set:oc-cn-domain": [
+      "config.yaml"
+    ],
+    "\"+.lan\"": [
+      "config.yaml"
+    ],
+    "\"+.local\"": [
+      "config.yaml"
+    ],
+    "https://1.1.1.1/dns-query": [
+      "config.yaml"
+    ],
+    "https://8.8.8.8/dns-query": [
+      "config.yaml"
+    ],
+    "https://1.12.12.12/dns-query": [
+      "config.yaml"
+    ],
+    "https://223.5.5.5/dns-query": [
+      "config.yaml"
+    ],
+    "223.5.5.5                                         # \u963f\u91cc": [
+      "config.yaml"
+    ],
+    "119.29.29.29                                      # \u817e\u8baf": [
+      "config.yaml"
+    ],
+    "https://doh.pub/dns-query                         # \u817e\u8baf": [
+      "config.yaml"
+    ],
+    "https://223.5.5.5/dns-query                       # \u963f\u91cc": [
+      "config.yaml"
+    ],
+    "tls://8.8.4.4:853": [
+      "config.yaml"
+    ],
+    "tls://1.0.0.1:853": [
+      "config.yaml"
+    ],
+    "geolocation-!cn                                 # \u975e\u4e2d\u56fd\u57df\u540d": [
+      "config.yaml"
+    ],
+    "gfw                                             # gfw\u57df\u540d": [
+      "config.yaml"
+    ],
+    "\"+.google.com\"": [
+      "config.yaml"
+    ],
+    "\"+.googleapis.com\"": [
+      "config.yaml"
+    ],
+    "\"+.facebook.com\"": [
+      "config.yaml"
+    ],
+    "\"+.youtube.com\"": [
+      "config.yaml"
+    ],
+    "any:53": [
+      "config.yaml"
+    ],
+    "tcp://any:53": [
+      "config.yaml"
+    ],
+    "443": [
+      "config.yaml"
+    ],
+    "8443": [
+      "config.yaml"
+    ],
+    "80": [
+      "config.yaml"
+    ],
+    "8080-8880": [
+      "config.yaml"
+    ],
+    "\"+.netflix.com\"": [
+      "config.yaml"
+    ],
+    "\"+.nflxvideo.net\"": [
+      "config.yaml"
+    ],
+    "\"+.amazonaws.com\"": [
+      "config.yaml"
+    ],
+    "\"+.media.dssott.com\"": [
+      "config.yaml"
+    ],
+    "\"+.io.mi.com\"": [
+      "config.yaml"
+    ],
+    "\"+.oray.com\"": [
+      "config.yaml"
+    ],
+    "\"+.sunlogin.net\"": [
+      "config.yaml"
+    ],
+    "\"+.push.apple.com\"": [
+      "config.yaml"
+    ],
+    "pattern: \"^(CF_V\\\\d+)_.*\"                                                                       # \u91cd\u547d\u540d\uff1a\u5c06 CF_V1_xxx / CF_V2_xxx \u7b80\u5316\u4e3a CF_V1 / CF_V2": [
+      "config.yaml"
+    ],
+    "pattern: \u4e13\u7ebf-": [
+      "config.yaml"
+    ],
+    "pattern: \"[A-Za-z]\"           # \u79fb\u9664\u8282\u70b9\u540d\u4e2d\u7684\u5b57\u6bcd\u90e8\u5206\uff08\u4ec5\u4fdd\u7559\u524d\u7f00\uff09": [
+      "config.yaml"
+    ],
+    "pattern: \"^([^|]+).*\"                   # \u53d6\u8282\u70b9\u540d\u7b2c\u4e00\u4e2a\"|\"\u4e4b\u524d\u7684\u90e8\u5206\u4f5c\u4e3a\u65b0\u540d\u79f0": [
+      "config.yaml"
+    ],
+    "name: \u82f9\u679c": [
+      "config.yaml"
+    ],
+    "DIRECT": [
+      "config.yaml"
+    ],
+    "PROXY": [
+      "config.yaml"
+    ],
+    "name: Claude": [
+      "config.yaml"
+    ],
+    "\u65e5\u672c_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "\u7f8e\u56fd_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "\u624b\u52a8\u9009\u62e9": [
+      "config.yaml"
+    ],
+    "name: \u52a0\u5bc6\u8d27\u5e01": [
+      "config.yaml"
+    ],
+    "\u65b0\u52a0\u5761_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u8d22\u7ecf\u5a92\u4f53": [
+      "config.yaml"
+    ],
+    "\u7f8e\u56fd_\u624b\u52a8\u9009\u62e9": [
+      "config.yaml"
+    ],
+    "CF_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u91d1\u878d\u79d1\u6280": [
+      "config.yaml"
+    ],
+    "name: Firefox": [
+      "config.yaml"
+    ],
+    "name: Github": [
+      "config.yaml"
+    ],
+    "\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: Youtube": [
+      "config.yaml"
+    ],
+    "\u8c37\u6b4c": [
+      "config.yaml"
+    ],
+    "name: \u8c37\u6b4c": [
+      "config.yaml"
+    ],
+    "\u65e5\u672c_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u9999\u6e2f\u94f6\u884c": [
+      "config.yaml"
+    ],
+    "name: \u9999\u6e2f\u5238\u5546": [
+      "config.yaml"
+    ],
+    "name: LINE": [
+      "config.yaml"
+    ],
+    "\u9999\u6e2f_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: META": [
+      "config.yaml"
+    ],
+    "name: \u5fae\u8f6f": [
+      "config.yaml"
+    ],
+    "name: \u82f1\u4f1f\u8fbe": [
+      "config.yaml"
+    ],
+    "name: OpenAI": [
+      "config.yaml"
+    ],
+    "name: P\u7ad9": [
+      "config.yaml"
+    ],
+    "name: \u793e\u5a92": [
+      "config.yaml"
+    ],
+    "name: Spotify": [
+      "config.yaml"
+    ],
+    "\u6d41\u5a92\u4f53": [
+      "config.yaml"
+    ],
+    "\u7f8e\u56fd_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u6d41\u5a92\u4f53": [
+      "config.yaml"
+    ],
+    "name: \u7535\u62a5": [
+      "config.yaml"
+    ],
+    "name: \u7f8e\u56fd\u5238\u5546": [
+      "config.yaml"
+    ],
+    "name: X": [
+      "config.yaml"
+    ],
+    "name: \u4ee3\u7406AI": [
+      "config.yaml"
+    ],
+    "CF_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: PROXY": [
+      "config.yaml"
+    ],
+    "name: \u53ef\u76f4\u8fdeAI": [
+      "config.yaml"
+    ],
+    "name: \u817e\u8baf": [
+      "config.yaml"
+    ],
+    "name: \u817e\u8baf\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "name: \u6f0f\u7f51\u4e4b\u9c7c": [
+      "config.yaml"
+    ],
+    "name: \u9999\u6e2f_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "sanmao2": [
+      "config.yaml"
+    ],
+    "sanmao": [
+      "config.yaml"
+    ],
+    "snakem982": [
+      "config.yaml"
+    ],
+    "yiyuan": [
+      "config.yaml"
+    ],
+    "cloudflare": [
+      "config.yaml"
+    ],
+    "name: \u65b0\u52a0\u5761_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u963f\u91cc\u5df4\u5df4\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "name: \u963f\u91cc\u5df4\u5df4": [
+      "config.yaml"
+    ],
+    "name: \u65e5\u672c_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u65e5\u672c_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u5b57\u8282": [
+      "config.yaml"
+    ],
+    "name: CF_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: CF_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u5b57\u8282\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "name: CRYPTO": [
+      "config.yaml"
+    ],
+    "name: \u5176\u4ed6_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u7f8e\u56fd_\u624b\u52a8\u9009\u62e9": [
+      "config.yaml"
+    ],
+    "name: \u7f8e\u56fd_\u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u7f8e\u56fd_\u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u81ea\u52a8\u56de\u9000": [
+      "config.yaml"
+    ],
+    "name: \u8d1f\u8f7d\u5747\u8861": [
+      "config.yaml"
+    ],
+    "name: \u624b\u52a8\u9009\u62e9": [
+      "config.yaml"
+    ],
+    "RULE-SET,reject,REJECT": [
+      "config.yaml"
+    ],
+    "RULE-SET,youtube,Youtube": [
+      "config.yaml"
+    ],
+    "RULE-SET,google,\u8c37\u6b4c": [
+      "config.yaml"
+    ],
+    "RULE-SET,apple,\u82f9\u679c": [
+      "config.yaml"
+    ],
+    "RULE-SET,claude,Claude": [
+      "config.yaml"
+    ],
+    "RULE-SET,crypto,\u52a0\u5bc6\u8d27\u5e01": [
+      "config.yaml"
+    ],
+    "RULE-SET,fin-media,\u8d22\u7ecf\u5a92\u4f53": [
+      "config.yaml"
+    ],
+    "RULE-SET,fin-tech,\u91d1\u878d\u79d1\u6280": [
+      "config.yaml"
+    ],
+    "RULE-SET,firefox,Firefox": [
+      "config.yaml"
+    ],
+    "RULE-SET,github,Github": [
+      "config.yaml"
+    ],
+    "RULE-SET,hk-bank,\u9999\u6e2f\u94f6\u884c": [
+      "config.yaml"
+    ],
+    "RULE-SET,hk-broker,\u9999\u6e2f\u5238\u5546": [
+      "config.yaml"
+    ],
+    "RULE-SET,line,LINE": [
+      "config.yaml"
+    ],
+    "RULE-SET,meta,META": [
+      "config.yaml"
+    ],
+    "RULE-SET,microsoft,\u5fae\u8f6f": [
+      "config.yaml"
+    ],
+    "RULE-SET,nvidia,\u82f1\u4f1f\u8fbe": [
+      "config.yaml"
+    ],
+    "RULE-SET,openai,OpenAI": [
+      "config.yaml"
+    ],
+    "RULE-SET,pornhub,P\u7ad9": [
+      "config.yaml"
+    ],
+    "RULE-SET,social,\u793e\u5a92": [
+      "config.yaml"
+    ],
+    "RULE-SET,spotify,Spotify": [
+      "config.yaml"
+    ],
+    "RULE-SET,streaming,\u6d41\u5a92\u4f53": [
+      "config.yaml"
+    ],
+    "RULE-SET,telegram,\u7535\u62a5": [
+      "config.yaml"
+    ],
+    "RULE-SET,us-broker,\u7f8e\u56fd\u5238\u5546": [
+      "config.yaml"
+    ],
+    "RULE-SET,x,X": [
+      "config.yaml"
+    ],
+    "RULE-SET,proxy-ai,\u4ee3\u7406AI": [
+      "config.yaml"
+    ],
+    "RULE-SET,proxy,PROXY": [
+      "config.yaml"
+    ],
+    "RULE-SET,direct-ai,\u53ef\u76f4\u8fdeAI": [
+      "config.yaml"
+    ],
+    "RULE-SET,bytedance,\u5b57\u8282": [
+      "config.yaml"
+    ],
+    "RULE-SET,bytedance-global,\u5b57\u8282\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "RULE-SET,tencent,\u817e\u8baf": [
+      "config.yaml"
+    ],
+    "RULE-SET,tencent-global,\u817e\u8baf\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "RULE-SET,alibaba-global,\u963f\u91cc\u5df4\u5df4\u56fd\u9645": [
+      "config.yaml"
+    ],
+    "RULE-SET,alibaba,\u963f\u91cc\u5df4\u5df4": [
+      "config.yaml"
+    ],
+    "RULE-SET,direct,DIRECT": [
+      "config.yaml"
+    ],
+    "RULE-SET,oc-cn-domain,DIRECT": [
+      "config.yaml"
+    ],
+    "GEOIP,CN,DIRECT": [
+      "config.yaml"
+    ],
+    "MATCH,\u6f0f\u7f51\u4e4b\u9c7c": [
+      "config.yaml"
+    ],
     "DOMAIN-SUFFIX,bit.com": [
       "crypto.yaml"
     ],
@@ -1331,6 +1757,12 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,tsinghua.edu.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,geetest.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,geevisit.com": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -4978,6 +5410,12 @@
     "DOMAIN-SUFFIX,turingfraud.net": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,hasseg.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,schemastore.org": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,redd.it": [
       "social.yaml"
     ],
@@ -5548,6 +5986,9 @@
     "DOMAIN-SUFFIX,servicewechat.com": [
       "wechat.yaml"
     ],
+    "DOMAIN-SUFFIX,wechatpay.cn": [
+      "wechat.yaml"
+    ],
     "DOMAIN-SUFFIX,x.com": [
       "x.yaml"
     ],
@@ -5603,6 +6044,31 @@
     "bytedance-global.yaml": [],
     "bytedance.yaml": [],
     "claude.yaml": [],
+    "config.yaml": [
+      "443",
+      "CF_\u81ea\u52a8\u56de\u9000",
+      "DIRECT",
+      "PROXY",
+      "cloudflare",
+      "https://1.1.1.1/dns-query",
+      "https://1.12.12.12/dns-query",
+      "https://223.5.5.5/dns-query",
+      "https://8.8.8.8/dns-query",
+      "pattern: \u4e13\u7ebf-",
+      "sanmao",
+      "sanmao2",
+      "snakem982",
+      "yiyuan",
+      "\u624b\u52a8\u9009\u62e9",
+      "\u65b0\u52a0\u5761_\u81ea\u52a8\u56de\u9000",
+      "\u65e5\u672c_\u81ea\u52a8\u56de\u9000",
+      "\u65e5\u672c_\u8d1f\u8f7d\u5747\u8861",
+      "\u7f8e\u56fd_\u624b\u52a8\u9009\u62e9",
+      "\u7f8e\u56fd_\u81ea\u52a8\u56de\u9000",
+      "\u7f8e\u56fd_\u8d1f\u8f7d\u5747\u8861",
+      "\u81ea\u52a8\u56de\u9000",
+      "\u9999\u6e2f_\u81ea\u52a8\u56de\u9000"
+    ],
     "crypto.yaml": [],
     "direct-ai.yaml": [],
     "direct.yaml": [],

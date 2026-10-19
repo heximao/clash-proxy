@@ -967,3 +967,9 @@ payload:
 
 # === 漏网之鱼（2026-10-11 补录）风控 / 反欺诈 ===
   - DOMAIN-SUFFIX,turingfraud.net
+
+# === 漏网之鱼（2026-10-19 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,hasseg.org
+
+# === 漏网之鱼（2026-10-19 补录）开发者工具 ===
+  - DOMAIN-SUFFIX,schemastore.org

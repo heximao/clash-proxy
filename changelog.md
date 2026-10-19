@@ -1,5 +1,29 @@
 # 更新记录
 
+## 2026-10-19 漏网之鱼归类：极验验证码、微信支付、SchemaStore 等 5 域归档（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-18_08-09-12`（cp 只读复制自 `~/.config/clash.meta/logs/2026-10-18_08-09-12`，4 个日志文件，昨日日志；`log/clashx-meta-log/` 无上轮遗留存量）。
+- **提取量**（结构化脚本，已过滤伪域名 3、探针 0、私有 IP 0）：候选 116（`match Match` 4 / `oc-cn-domain` 112），归并主域 25 + 公网裸 IP 1；skip-list 命中 `skip` 3（无主端点）、`manual` 7 行（映射 5 条目）。
+- **查重**：25 主域 + IP `120.53.53.53` 喂 `check_coverage.py`（全走 stdin；实测 `-` 与位置参数混用会吞掉 stdin 输入）→ COVERED 19 / UNCOVERED 7（BRAND-ANCHOR 0）。
+- **补录明细**（5 域、3 文件、4 个新分组）：
+  - `geetest.com` + `geevisit.com` → `direct.yaml`「验证码服务 / 极验（2026-10-19 漏网之鱼补录）」组：极验（GeeTest）验证码 `api.geetest.com`/`static.geetest.com`（oc-cn-domain 走 DIRECT）；`api.geevisit.com` 为极验验证通信姊妹域（判据 2 同厂商兄弟域成组补录）；RDAP 佐证：geetest.com NS `NS3/NS4.DNSV5.COM`（腾讯 DNSPod）、geevisit.com NS `VIP3/VIP4.ALIDNS.COM`（阿里云 DNS），均国内注册。
+  - `wechatpay.cn` → `wechat.yaml`「微信支付（2026-10-19 漏网之鱼补录）」组：子域 `gtimg.wechatpay.cn`（WeChat 进程，oc-cn-domain）；判据 5——品牌字面 wechat 在域内 + `wechat.yaml` 已落盘（同 `servicewechat.com` 先例）。
+  - `schemastore.org` → `proxy.yaml`「漏网之鱼（2026-10-19 补录）开发者工具」组：`www.schemastore.org`（node 进程拉取 JSON Schema，开发工具链）；SchemaStore 开源项目海外服务，RDAP NS `ns01/ns02.one.com`（海外）。2026-10-11 轮曾留人工（无同厂商参照），本轮以域名语义 + 进程 + RDAP 补齐证据裁决归档。
+  - `hasseg.org` → `proxy.yaml`「漏网之鱼（2026-10-19 补录）海外杂项」组：firefox 17 次高频访问、`match Match` 走代理；RDAP NS `ns1.your-server.de`/`ns.second-ns.com`（Hetzner）、DoH A 记录 `162.55.254.99`（Hetzner 段）、wayback 429 无快照；域名无品牌锚点，按海外杂项兜底归档。
+- **未收录及原因**：
+  - `www.z` / `www.zhipin`：WorkBuddy AI Helper 发起的截断伪域名（无有效 TLD），提取脚本过滤漏网、人工复核排除，不归类；已追加 skip-list（`skip` 模式）防下轮重复处理。
+  - COVERED 19 项整批跳过（规则集先于本地 yaml 匹配，不代表规则缺失）：`bilibili.yaml` 7 主域（hdslb/bilibili/bilivideo.com/bilivideo.cn/biligame/biliimg/biliapi）、`direct.yaml` 5 主域（zhipin/bosszhipin/kanzhun/mountaintoys.cn/tsinghua.edu.cn）、`wechat.yaml` 5 主域（weixinbridge/qpic/qlogo/servicewechat/weixin）、`baidu.yaml`（baidu.com）、IP `120.53.53.53`（direct.yaml:275 IP-CIDR）。
+  - 广告/追踪类子域不逐一判定（主域均已 COVERED）：`hm.baidu.com`、`badjs.weixinbridge.com`、`t.zhipin.com`/`z.zhipin.com`/`shink.zhipin.com`/`logapi.zhipin.com`/`apm-fe.zhipin.com`、`t.kanzhun.com` 等。
+- **待人工确认**（skip-list `manual` 命中 7 行，映射 5 条目，连续挂起）：
+  - `edu.ntp.org.cn`（Lark Helper ×22）、`cn.ntp.org.cn`（Lark Helper ×10）——`ntp.org.cn` 待人工；
+  - `flow.logitech.io`（logioptionsplus_agent ×12）、`datapipeline.logitech.io`（×1）——`logitech.io` 无锚点厂商文件；
+  - `updates.optionsplus.logitechg.com`（logioptionsplus_updater ×2）——`logitechg.com` 无锚点（Logitech G 系）；
+  - `athena-api.oceanengine.com`（Lark Helper ×1）——`oceanengine.com` 无锚点；
+  - `lf-rc1.yhgfb-cn-static.com`（Feishu ×1）——`yhgfb-cn-static.com` 待人工。
+- **自检**：`find_duplicates.py` 跨文件重复 1 条（历史基线 `settings.crashlytics.com` direct/google，非本轮引入）；文件内重复 23 条全在 `config.yaml`（未跟踪的运行配置副本，策略组名/DNS 配置值自然重复，非规则重复；扫描文件数 42→43 系该副本新出现在仓库根）。**本轮新引入重复 0 项**。`yaml.safe_load` 校验通过：direct.yaml 243 条 / proxy.yaml 850 条 / wechat.yaml 8 条 payload。
+- **AGENTS.md 同步延后**：`www.z` / `www.zhipin` 伪域名裁决已落 skip-list + changelog；AGENTS.md「已裁决结论」清单为受保护文件，同步留待交互式会话（第 0 节对齐检查）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-18 skill v2.7.0：AGENTS.md 清单同步机制重设计 + logitechg.com 补录 AGENTS/MEMORY 清单（main 直接提交，交互会话）
 
 - **动机**：今晨 automation run（`8c566c0`）实测——AGENTS.md 是受保护 agent 指令文件，cron / automation 会话（无交互用户）中 patch 工具直接 BLOCKED（"requires approval but no interactive user or gateway is present"），「已裁决结论」清单与 skip-list 出现不一致遗留（`logitechg.com` 只进了 skip-list）。
