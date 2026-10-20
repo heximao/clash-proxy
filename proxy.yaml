@@ -973,3 +973,23 @@ payload:
 
 # === 漏网之鱼（2026-10-19 补录）开发者工具 ===
   - DOMAIN-SUFFIX,schemastore.org
+
+# === 漏网之鱼（2026-10-20 补录）网络检测工具 ===
+  - DOMAIN-SUFFIX,icanhazip.com
+  - DOMAIN-SUFFIX,ipleak.net
+  - DOMAIN-SUFFIX,dnscheck.tools
+  - DOMAIN-SUFFIX,surfsharkdns.com
+  - DOMAIN-SUFFIX,addr.tools
+  - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN-SUFFIX,brokendnssec.net
+  - DOMAIN-SUFFIX,every1dns.net
+  - DOMAIN-SUFFIX,encryptedsni.com
+
+# === 漏网之鱼（2026-10-20 补录）地图瓦片 ===
+  - DOMAIN-SUFFIX,openstreetmap.org
+
+# === 漏网之鱼（2026-10-20 补录）CDN 服务商 ===
+  - DOMAIN-SUFFIX,b-cdn.net
+
+# === 漏网之鱼（2026-10-20 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,comparitech.com

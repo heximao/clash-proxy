@@ -1,5 +1,30 @@
 # 更新记录
 
+## 2026-10-20 漏网之鱼归类：DNS 泄露排查工具链、字节系、RDAP 等补录 19 域（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-19_09-47-52`、`2026-10-19_22-53-45`、`2026-10-19_23-59-44`（cp 只读复制自 `~/.config/clash.meta/logs/`，昨日 3 个文件夹共 14 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量）。背景：用户 10-19 晚 22:40–23:50 进行 DNS 泄露排查（详见 `.agents/memory/2026-10-19.md`），产生大量网络检测站流量，为本轮候选主力。
+- **提取量**（结构化脚本，已过滤伪域名 43、探针 0、私有 IP 0）：候选 670（`match Match` 566 / `oc-cn-domain` 104），归并主域 62 + 公网裸 IP 3（`120.53.53.53`、`1.1.1.1`、`8.8.8.8`）；skip-list 命中 `skip` 10 行（映射 `clarity.ms` 6 子域、`cloudflareinsights.com`、`antpeak.com`/`hibchr.com`/`zorvian.com`）、`manual` 4 行（`logitech.io`、`logitechg.com`、`ntp.org.cn`×2）。
+- **查重**：62 主域 + 3 IP 全走 stdin 喂 `check_coverage.py` → COVERED 26（含 3 IP）/ UNCOVERED 39 / BRAND-ANCHOR 0。
+- **补录明细**（19 域、4 文件、8 个分组）：
+  - `douyin.com` → `bytedance.yaml`「ByteDance / 字节跳动」主组：判据 5——抖音为字节核心品牌、厂商文件已落盘，子域 `tos-d-x-lf.douyin.com` 由 Trae CN Helper（字节系进程）访问，双佐证。
+  - `bytedancevod.com` → `bytedance.yaml`「字节系 CDN / 配置」组（组头日期合并至 10-20）：判据 4——bytedance 品牌字面 + Trae CN Helper 进程，同组既有 `bytescm.com`/`bytednsdoc.com` 先例。
+  - `marketbeat.com` → `fin-media.yaml`「财经媒体」组：美股市场数据/资讯站，Chrome 访问 `www.marketbeat.com` 18 次，同组既有 `seekingalpha.com`/`investing.com`。
+  - 网络检测工具 9 域 → `proxy.yaml`「漏网之鱼（2026-10-20 补录）网络检测工具」组（海外服务、国内直连不稳，均为 DNS 泄露排查场景）：`icanhazip.com`（Cloudflare IP echo，110 次）、`ipleak.net`（DNS/IP 泄露测试，300+ 检测子域）、`dnscheck.tools`（DNSSEC 检测，80+ 子域）、`surfsharkdns.com`（Surfshark VPN DNS 测试探针）、`addr.tools`（IP 查询）、`ip-api.com`（IP 地理查询，edns 检测子域）；`brokendnssec.net`、`every1dns.net`、`encryptedsni.com` 三域 RDAP 实证同一所有者（同 NS `carl/cruz.ns.cloudflare.com`、同 2018-08 注册期，`is-doh/is-dot/is-cf.help` 命名），为配套 DNS 检测探针组。
+  - `openstreetmap.org` → `proxy.yaml`「漏网之鱼（2026-10-20 补录）地图瓦片」组：OSM 瓦片源 `a/b/c.tile.openstreetmap.org`（firefox 18 次），国内直连不稳。
+  - `b-cdn.net` → `proxy.yaml`「漏网之鱼（2026-10-20 补录）CDN 服务商」组：RDAP NS `ns1/2/3.bunnydns.com` 实证 BunnyCDN 共享分发域。
+  - `comparitech.com` → `proxy.yaml`「漏网之鱼（2026-10-20 补录）海外杂项」组：VPN/安全产品比较内容站（WorkBuddy Helper，DNS 泄露调研附带）。
+  - `apnic.net` + `arin.net` → `direct.yaml`「域名查询 / RDAP（2026-10-20 漏网之鱼补录）」组：`rdap.apnic.net`/`rdap.arin.net`，同文件成组先例 `rdap.org`/`verisign.com`/`publicinterestregistry.org`（判据 2）。
+  - `iana.org` → 同组：`data.iana.org` 为 IANA 域名体系基础设施（root zone 数据，DNSSEC 检测访问），国内可直连。
+  - `doh.pub` → `direct.yaml`「公共 DNS / DoH（2026-10-20 漏网之鱼补录）」组：腾讯 DNSPod 公共 DoH 端点，国内服务可直连。
+- **未收录及原因**：
+  - COVERED 26 项整批跳过（规则集先于本地 yaml 匹配，不代表规则缺失）：`bilibili.yaml` 7 主域（hdslb/bilibili/bilivideo.com/bilivideo.cn/biligame/biliimg/biliapi）、`wechat.yaml` 5 主域（weixinbridge/qpic/qlogo/weixin/wechat.com）、`direct.yaml` 8 主域（zhipin/bosszhipin/mountaintoys.cn/rdap.org/ipip.net/jsdelivr/publicinterestregistry.org/verisign.com）+ IP `120.53.53.53`、`baidu.yaml`、`firefox.yaml`（mozilla.com）、`proxy.yaml`（schemastore.org）、IP `1.1.1.1`（dns.yaml+proxy.yaml）、IP `8.8.8.8`（dns.yaml+google.yaml）。
+  - 广告/追踪类 9 主域不落盘（AGENTS.md「整批不落盘」纪律，只记录不判断、不核对 reject.yaml）：`fastly-analytics.com`、`statcounter.com`、`marketo.net`、`taboola.com`、`appier.net`、`mfadsrvr.com`、`onetag-sys.com`、`outbrain.com`、`rfihub.com`——进程均 Chrome Helper / firefox。已入 skip-list（`skip` 模式，原因注明广告/追踪类）防下轮重复处理。
+  - 证据不足留人工 10 项（已入 skip-list `manual` 模式，均经 RDAP/DoH 查证后无结论）：`logitech.com`（判据 5 无 `logitech.yaml` 锚点，`updates.logitech.com`，与 logitech.io/logitechg.com 同族）；`123169.xyz`（Dynadot + Cloudflare NS 隐私保护，无归属线索，但 firefox 主动高频访问 `api.` 子域 26 次）、`111666.best`（同模式，24 次）、`999831.xyz`（同模式，3 次）——用户主动访问待确认用途；`yjz.hk`（.hk 无 RDAP 数据 + Cloudflare A 记录）；`tsight.io`（WorkBuddy Helper 访问，无线索）；`nsvcs.net`（AWS Route53 NS，`ingesteer.services-prod.` 遥测摄入端点，无品牌指向）；`ns1pcdn.net`（CSC 企业注册 + NS1，与 `mountaintoys.cn` 同批 CDN 子域模式但判据 2 不满足，无品牌锚点）；`sitemana.com`（Squarespace + CloudFront A 记录，疑似广告验证但证据不足）；`featureassets.org`（MarkMonitor 企业域 + GCP A 记录，疑似追踪但证据不足）。
+- **待人工确认**（skip-list `manual` 全集 19 条目，本轮命中 4 + 新增 10）：`logitech.io`（`flow.logitech.io` logioptionsplus_agent ×92）、`logitechg.com`（×2）、`ntp.org.cn`（`edu.`/`cn.` Lark Helper ×15/×9）为既有挂起命中；本轮新增 10 项见上；其余既有挂起未命中（oceanengine.com、yhgfb-cn-static.com、applogcdn.com、temu.com、photon.codes、mdoelscope.ai）。
+- **自检结果**：`find_duplicates.py` 业务文件间跨文件重复 1 条 = 历史基线（`settings.crashlytics.com` direct/google），**本次新引入 0 项**；本轮 19 个新增域经 duplicates.json 全库比对（含 followups/ 存档副本）零重复；42 个业务文件内重复 0。报告总量膨胀（跨文件 1343 / 文件内 34）系上轮交互会话引入的未跟踪目录 `followups/active/2026/2026-10/`（任务存档旧配置 yaml 副本，与根目录业务 yaml 天然大面积重合）与 `config.yaml` 策略组/DNS 值噪声（23 条）——非业务规则重复；`followups/` 归属 SPEC/FOLLOWUPS.md 管辖，本轮不动，其存档 yaml 是否纳入 .gitignore 待交互式会话裁决。`yaml.safe_load` 校验通过：bytedance.yaml 25 / fin-media.yaml 12 / proxy.yaml 862 / direct.yaml 247 条 payload。
+- **AGENTS.md 同步延后**：本轮新增 19 条已裁决项（9 skip + 10 manual）已落 skip-list + changelog；AGENTS.md「已裁决结论」清单为受保护文件，同步留待交互式会话（第 0 节对齐检查）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-19 AGENTS.md 修订：修正 3 处事实过期 + 对齐 skip-list + 补齐 4 处文档缺口（交互轮）
 
 - **触发**：用户要求审查 AGENTS.md 可优化点；审查方式为与仓库实际状态逐项交叉核对（`ls` / `git status` / `git log` / skip-list / 脚本 docstring / changelog 格式 / README 表）。

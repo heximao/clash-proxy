@@ -3,6 +3,7 @@ payload:
   - DOMAIN-SUFFIX,bytedance.com
   - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,doubao.com
+  - DOMAIN-SUFFIX,douyin.com
   # === Feishu / 飞书 ===
   - DOMAIN-SUFFIX,feishu.cn
   - DOMAIN-SUFFIX,feishucdn.com
@@ -27,8 +28,9 @@ payload:
   - DOMAIN-SUFFIX,marscode.cn
   # === 字节系 API（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bytedanceapi.com
-  # === 字节系 CDN / 配置（2026-10-13 / 2026-10-17 漏网之鱼补录）===
+  # === 字节系 CDN / 配置（2026-10-13 / 2026-10-17 / 2026-10-20 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bytescm.com
   - DOMAIN-SUFFIX,bytetcc.com
   - DOMAIN-SUFFIX,doubaocdn.com
   - DOMAIN-SUFFIX,bytednsdoc.com
+  - DOMAIN-SUFFIX,bytedancevod.com

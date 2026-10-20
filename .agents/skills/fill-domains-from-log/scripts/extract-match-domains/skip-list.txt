@@ -39,3 +39,25 @@ applogcdn.com manual:疑似 CDN 无锚点，留人工
 temu.com manual:留人工
 photon.codes manual:留人工
 mdoelscope.ai manual:仿冒域（modelscope.ai 字母转位），绝不补录
+# --- 广告 / 追踪类（AGENTS.md 整批不落盘纪律，不逐一判定不归类）---
+fastly-analytics.com skip:广告/追踪类（Fastly 分析遥测），整批不落盘
+statcounter.com skip:广告/追踪类（网站访问统计），整批不落盘
+marketo.net skip:广告/追踪类（Adobe Marketo 营销自动化 munchkin），整批不落盘
+taboola.com skip:广告/追踪类（内容推荐广告），整批不落盘
+appier.net skip:广告/追踪类（Appier 广告平台），整批不落盘
+mfadsrvr.com skip:广告/追踪类（Media.net RTB 广告），整批不落盘
+onetag-sys.com skip:广告/追踪类（OneTag 广告 SSP），整批不落盘
+outbrain.com skip:广告/追踪类（内容推荐广告），整批不落盘
+rfihub.com skip:广告/追踪类（Connexity 广告追踪），整批不落盘
+
+# --- 2026-10-20 automation 轮新裁决留人工（证据不足，无主端点或无品牌锚点）---
+logitech.com manual:无锚点厂商文件，留人工（罗技主域，与 logitech.io/logitechg.com 同族，判据 5）
+123169.xyz manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 高频访问 api. 子域），留人工
+111666.best manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 访问 i. 子域），留人工
+999831.xyz manual:Cloudflare 代理 + 隐私保护无归属线索，留人工
+yjz.hk manual:RDAP 无数据 + Cloudflare A 记录，无归属线索，留人工
+tsight.io manual:无归属线索（WorkBuddy Helper 访问），留人工
+nsvcs.net manual:AWS NS 无品牌指向（ingesteer 遥测摄入端点），留人工
+ns1pcdn.net manual:CSC 企业注册但无品牌锚点（与 mountaintoys.cn 同批 CDN 模式），留人工
+sitemana.com manual:疑似广告验证但证据不足（CloudFront + 无品牌指向），留人工
+featureassets.org manual:MarkMonitor 企业域无品牌指向，疑似追踪但证据不足，留人工

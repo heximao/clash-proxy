@@ -1,12 +1,4179 @@
 # Duplicate Rules Report
 
-Scanned 43 YAML files; skipped: reject.yaml
+Scanned 66 YAML files; skipped: reject.yaml
 
 Rules appearing in more than one file:
 
-- `DOMAIN-SUFFIX,settings.crashlytics.com`: 2 files
-  - direct.yaml
+- `DOMAIN-SUFFIX,2mdn.net`: 4 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
   - google.yaml
+- `DOMAIN-SUFFIX,bit.com`: 4 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,okx.com`: 4 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,recaptcha.net`: 4 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,scdn.co`: 4 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,settings.crashlytics.com`: 4 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,twimg.com`: 4 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/X弃用.yaml
+  - x.yaml
+- `DOMAIN,chat.openai.com.cdn.cloudflare.net`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN,openaicomproductionae4b.blob.core.windows.net`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN,production-openaicom-storage.azureedge.net`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,aaplimg.com`: 3 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ai.com`: 3 files
+  - followups/active/2026/2026-10/AI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,anthropic.com`: 3 files
+  - claude.yaml
+  - followups/active/2026/2026-10/AI.yaml
+  - followups/active/2026/2026-10/ClaudeAI.yaml
+- `DOMAIN-SUFFIX,api.telegram.org`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,apple-dns.net`: 3 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,azure.com`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azureedge.net`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azurewebsites.net`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,binance.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,bing.com`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,bing.net`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,bitexch.io`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,bitget.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,bybit.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,byspotify.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,chatgpt.com`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,cloudflare.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,coinbase.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,edgekey.net`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fast.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,fb.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,ggpht.com`: 3 files
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gmail.com`: 3 files
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletagservices-cn.com`: 3 files
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Reject.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,grok.com`: 3 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/X弃用.yaml
+  - x.yaml
+- `DOMAIN-SUFFIX,gstatic.com`: 3 files
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gtm.oasisfeng.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gvt1.com`: 3 files
+  - followups/active/2026/2026-10/Google.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,helpshift.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,huobi.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,licdn.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,lin.ee`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,line-apps.com`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,line-cdn.net`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,line-scdn.net`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,line.me`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,line.naver.jp`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,messenger.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,mzstatic.com`: 3 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,nhncorp.jp`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `DOMAIN-SUFFIX,o33249.ingest.sentry.io`: 3 files
+  - followups/active/2026/2026-10/AI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,oaistatic.com`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,oaiusercontent.com`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,office365.com`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,onenote.com`: 3 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,openai.com`: 3 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - followups/active/2026/2026-10/弃用5.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,oracle.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,polymarket.com`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,pscdn.co`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,pubnub.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Reject.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,redd.it`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,sfx.ms`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sharepoint.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,sharethis.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Reject.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,spoti.fi`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify-com.akamaized.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify-everywhere.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.app.link`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.com.edgesuite.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.design`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.map.fastly.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotify.map.fastlylb.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifycdn.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifycdn.net`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifycharts.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifycodes.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifyforbrands.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifyjobs.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotifynewsroom.jp`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,spotilocal.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,t.me`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,tdesktop.com`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,teamviewer.com`: 3 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,telegra.ph`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,telegram.me`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,telegram.org`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,telesco.pe`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `DOMAIN-SUFFIX,tether.to`: 3 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/弃用4.yaml
+- `DOMAIN-SUFFIX,tospotify.com`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN-SUFFIX,tradingview.com`: 3 files
+  - fin-tech.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,twitter.com`: 3 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/X弃用.yaml
+  - x.yaml
+- `DOMAIN-SUFFIX,x.ai`: 3 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/X弃用.yaml
+  - x.yaml
+- `DOMAIN-SUFFIX,x.com`: 3 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/X弃用.yaml
+  - x.yaml
+- `DOMAIN-SUFFIX,youtu.be`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,ytimg.com`: 3 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `IP-CIDR,103.2.28.0/22,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,109.239.140.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,119.235.224.0/21,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,119.235.232.0/23,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,119.235.235.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,119.235.236.0/23,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,125.209.208.0/20,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,125.6.146.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,125.6.149.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,125.6.190.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,149.154.160.0/20,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,185.76.151.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,203.104.103.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,203.104.128.0/20,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,203.174.66.64/26,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,203.174.77.0/24,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - line.yaml
+- `IP-CIDR,5.28.195.2/32,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.105.192.0/23,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.0.0/16,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.16.0/21,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.4.0/22,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.56.0/22,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.56.187/32,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,91.108.8.0/21,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR,95.161.64.0/20,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR6,2001:67c:4e8::/48,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR6,2001:b28:f23c::/47,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR6,2001:b28:f23d::/48,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR6,2001:b28:f23f::/48,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `IP-CIDR6,2a0a:f280::/32,no-resolve`: 3 files
+  - followups/active/2026/2026-10/InstantMessage弃用.yaml
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - telegram.yaml
+- `PROCESS-NAME,Spotify`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `PROCESS-NAME,Spotify.exe`: 3 files
+  - followups/active/2026/2026-10/Spotify弃用.yaml
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `DOMAIN,openai-api.arkoselabs.com`: 2 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - openai.yaml
+- `DOMAIN-KEYWORD,appledaily`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-KEYWORD,beetalk`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-KEYWORD,blogspot`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-KEYWORD,dlercloud`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-KEYWORD,dropbox`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,1drv.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,1e100.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,2mdn-cn.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,2o7.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,4everProxy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,4shared.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,4sqi.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,71.am.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,9to5mac.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,abc.xyz`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,abercrombie.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,abpchina.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,accountkit.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,acfun.tv`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,adblockplus.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,adguard.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,admob-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,adobe.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,adobedtm.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,adspower.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,adtidy.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,aerisapi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,aihubmix.com`: 2 files
+  - direct-ai.yaml
+  - followups/active/2026/2026-10/AI.yaml
+- `DOMAIN-SUFFIX,airstarbank.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,airstarbank.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,airtable.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,aka.ms`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,akadns.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,akamai.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,akamaiedge.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,akamaihd.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,alfredapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,algocasts.io`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,algolia.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,alipayhk.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,allconnected.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,amazon.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,amazon.co.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,amazon.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,amazonaws.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ampproject.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ampproject.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ampproject.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,anaconda.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ancsconf.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,android-x86.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,android.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,androidify.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,angularjs.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,antbank.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,anthonycalzadilla.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,antigravity.google`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,aol.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,aolcdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,apache.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,api.amplitude.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,api.apple-cloudkit.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,api.mapbox.com`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,api.mixpanel.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,api.termius.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,api.tiktokv.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,api.urbandictionary.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,apigee.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,apk-dl.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,apkpure.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,app-analytics-services.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,app-measurement-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,app-measurement.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,app.adjust.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,app.smartmailcloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,appdownloader.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,apple`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple-icloud.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple-mapkit.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple.com.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apple.news`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,appleicloud.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,applemx-icloud.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,apps5.oingo.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,appshopper.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,appspot.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,appstorrent.ru`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,arcgis.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,archive.is`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,archive.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,archives.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,armorgames.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,aspnetcdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,asusrouter.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,async.be`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,att.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,auth0.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,autodraw.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,avail.googleflights.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,avgle.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,awsstatic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,azure.cn`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azure.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azurecosmos.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azurefd.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,azureiotcentral.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,badoo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,baduziyuan.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,bandisoft.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bandwagonhost.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bank.za.group`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,bankofchina.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,baostock.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,battle.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,bbtoystore.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bet365.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,betvictor.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bigsound.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bingads.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,bingapis.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,bingtranslator.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,bintray.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,biquge.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,bit.do`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bit.ly`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bitbucket.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bitcointalk.org`: 2 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,bitshare.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bitwarden.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bitwarden.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bkrtx.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blizzard.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,blog.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blogblog.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blogcdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blogger.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bloglovin.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blogsmithmedia.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,blogspot.hk`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bloomberg.cn`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bloomberg.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bochk.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,bonjourr.fr`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,books.com.tw`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,boomtrain.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,botanwang.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,box.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,box.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,boxun.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,broadcasthe.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,broker.za.group`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,browserleaks.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,browserscan.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,c.admob.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,cachefly.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cbc.ca`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ccb.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,cdn-apple.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,cdn-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,cdn.angruo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cdn.jsdelivr.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cdn.segment.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cdnst.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,celestrak.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,census.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,certificate-transparency.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,chaipip.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,chalungu.cn`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,chatgpt.livekit.cloud`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,chdbits.co`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cherryin.ai`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,chinadigitaltimes.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,chinaplay.store`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,chinatimes.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,chrome.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,chromecast.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,chromeexperiments.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,chromercise.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,chromestatus.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,chromium.org`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,citibank.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,cl.ly`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,claude.ai`: 2 files
+  - claude.yaml
+  - followups/active/2026/2026-10/ClaudeAI.yaml
+- `DOMAIN-SUFFIX,clawhub.ai`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,clickserve.cc-dt.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,clickserve.dartsearch.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,clien.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudflare.dev`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudflaremirrors.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudfront.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudgarage.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudmagic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cloudxns.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cm.steampowered.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cmail19.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cmct.tv`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cn.widevine.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,cn163.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cnbeta.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cnbetacdn.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,cnet.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cnn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cocoapods.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,com-hs-hkdy.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,comodoca.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,content.office.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,creativelab5.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,crisp.chat`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,crittercism.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,crl.pki.goog`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,culturalspot.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,culturedcode.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,cygames.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,czybjz.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,d.pr`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dandanzan.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,danilo.to`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,daolan.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dartlang.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dartsearch-cn.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,data-vocabulary.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dayone.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,db-ip.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,db.tt`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dcmilitary.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,deja.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dell.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,demdex.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,deskconnect.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dg-meta.video.google.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,didiglobal.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,digisfera.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,digitaltrends.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dilidili.wang`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,disconnect.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,discord.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,discord.gg`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,discordapp.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,discordapp.net`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,disq.us`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,disqus.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,disquscdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dizhensubao.getui.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,dmm.co.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dns.alidns.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,dnsimple.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dnsleaktest.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,docker.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,docker.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,docker.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,doub.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,doubleclick-cn.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,doubleclick.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,dowjones.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,download.qatp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,dribbble.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,droplr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,duckduckgo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dueapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,dw.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,easybib.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,economist.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,edgecastcdn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,edgesuite.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,element-plus.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,engadget.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,entrust.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,epicgames.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,epicgames.dev`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,eurekavpt.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,evernote.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,extmatrix.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,eyny.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fabric.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,facebook.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,facebookmail.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,fantasy.tv`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,fastbull.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,fastly.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fastmail.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fb.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fbcdn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fbsbx.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fc2.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,feedburner.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,feedly.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,feedsportal.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fiftythree.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fir.im`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,firebase-settings.crashlytics.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,firebaseio.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,firefox.com`: 2 files
+  - firefox.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,firstrade.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,firstrade.net`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,fjhps.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,flexibits.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,flickr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,flipboard.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,flipkart.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,flitto.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,flurry.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,focusee.imobie-resource.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,focusee.imobie.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,freegeoip.app`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,freegeoip.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,freeopenProxy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fubo.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fubonbank.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,fullstory.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,fusionbank.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,fzlm.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,g-cores.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,g.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gabia.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,galaxycloud.app`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,garena.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gate.hockeyapp.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gcr.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geminicli.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,geni.us`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geocode.xyz`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geoipify.whoisxmlapi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geoiplookup.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geolocation.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,geoplugin.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,get.how`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,getcloudapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,getfoxyProxy.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,getlantern.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,getmdl.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,getpricetag.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gfw.press`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gfx.ms`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gh-proxy.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,gh-proxy.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ghcr.io`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,ghostnoteapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,git.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gitbook.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,github.com`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,github.io`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,githubapp.com`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,githubassets.com`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,githubcopilot.com`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,githubusercontent.com`: 2 files
+  - followups/active/2026/2026-10/Github.yaml
+  - github.yaml
+- `DOMAIN-SUFFIX,globalsign.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gmocloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gmodules.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,go.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,go.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,godaddy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,golang.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gonglchuangl.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gongm.in`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gongyichuangyi.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,goo.gl`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,goodreaders.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,goodreads.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,goog`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google-analytics-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google-analytics.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google-ohttp-relay-safebrowsing.fastly-edge.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,google.dev`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleadapis.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleads.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleadservices-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleadservices.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleanalytics.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleapis-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleapis.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleapps-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleflights-cn.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleoptimize-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleoptimize.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googlesyndication-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googlesyndication.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletagmanager-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletagmanager.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletagservices.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletraveladservices-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googletraveladservices.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googleusercontent.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googlevads-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,googlevideo.com`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,gosetsuden.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,got001.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,gravatar.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,gspe19-2-cn-ssl.ls-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,gspe19-cn.ls-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,gstatic-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gstatic.cn`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gtimg.cn`: 2 files
+  - followups/active/2026/2026-10/Reject.yaml
+  - tencent.yaml
+- `DOMAIN-SUFFIX,gtimg.com`: 2 files
+  - followups/active/2026/2026-10/Reject.yaml
+  - tencent.yaml
+- `DOMAIN-SUFFIX,gunsamerica.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gvt0.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,gvt1-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gvt2-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gvt2.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,gwtproject.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hackmd.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hangseng.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,hcaptcha.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hdchina.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,hdcmct.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,heroku.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hf.space`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,hitun.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hkab.org.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,hkbea.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,hockeyapp.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hollisterco.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,homedepot.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hootsuite.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,host.livekit.cloud`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,howtoforge.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,hsbc.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,html5rocks.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,huaren.live`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,huarenlivewebsite.top`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,huavod.com`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,huggingface.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,i-cable.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,iam.soy`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,icbcasia.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,icloud-apple.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud-content.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud-sandbox.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud.com.cn`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icloud.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,icoco.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,icon.horse`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,icons8.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ift.tt`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ifttt.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,iina.io`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,images-amazon.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,images.apple.com.edgekey.net.globalredir.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,imageshack.us`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,img.ly`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,imgix.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,imgur.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,immersivetranslate.cn`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,immersivetranslate.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,imore.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,imtintl.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,imtoken.fans`: 2 files
+  - crypto.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,infuse.im`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ingress.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,injections.adguard.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,inoreader.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,insder.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,instagram.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,instapaper.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,instructables.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,interactivebrokers.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,interactivebrokers.com.cn`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,interactivebrokers.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,intercom.io`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,intercomcdn.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,investing.com`: 2 files
+  - fin-media.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+- `DOMAIN-SUFFIX,io.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ip.la`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ip.sb`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ip2location.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipaddress.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipaddress.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipapi.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipapi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipdata.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipgeolocate.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipgeolocation.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipgeolocationapi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipify.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipinfo.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,iplocation.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,iplocation.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipn.li`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ippure.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipstack.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ipv6-test.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,is.gd`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ishowsapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,issuu.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,itgonglun.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,itun.es`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,itunes-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,itunes-cdn-cn.itunes-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,ixdzs.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ixquick.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,j.mp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,javbus.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,js.revsci.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,jsdelivr.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,jshint.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,jtvnw.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,justgetflux.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kakao.co.kr`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kakao.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kakaocdn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kat.cr`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kenengba.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,keyhole.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kik.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,klip.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,knock.app`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kobo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,kobobooks.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,koodomobile.ca`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,koodomobile.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,koyso.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,kusa.pics`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,kuyunbo.club`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,kwrt`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,lan`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,lancdns.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,langbot.app`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,laower.wasmer.app`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,launchdarkly.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,leancloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,leetcode.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,lemicp.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,letitfly.me`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,libsyn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,lightboxcdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,like.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,linkedin.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,linode.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,linux.do`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,linuxdo.org`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,lithium.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,littlehj.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,live.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,livefilestore.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,livibank.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,llnwd.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,local`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,localhost`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,localnetwork.uop`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,logmein.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,longbridge.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-broker.yaml
+- `DOMAIN-SUFFIX,longbridgewhale.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-broker.yaml
+- `DOMAIN-SUFFIX,luoo.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,macid.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,macked.app`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,macromedia.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,macrumors.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,madewithcode.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mangaup.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,manhuaren.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,maoyun.tv`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,marketwatch.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mashable.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,material.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mathjax.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,maven.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mcp.context7.com`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,mcp.exa.ai`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,mcp.grep.app`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,me.com`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,me.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,medium.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mega.co.nz`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mega.nz`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,megaupload.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,meta.ai`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,meta.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,metamail.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,microsoft`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoft.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoft.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoft365.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoftcloud.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoftedge.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsoftonline.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,microsofttranslator.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mindnode.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,minimax.io`: 2 files
+  - direct-ai.yaml
+  - followups/active/2026/2026-10/AI.yaml
+- `DOMAIN-SUFFIX,mixin.one`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mlssoccer.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mobile01.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,models.dev`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,modmyi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,moke.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,monitoring.qpdp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,moves-export.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,mozilla.com`: 2 files
+  - firefox.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,mozilla.net`: 2 files
+  - firefox.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,mozilla.org`: 2 files
+  - firefox.yaml
+  - followups/active/2026/2026-10/Proxy.yaml
+- `DOMAIN-SUFFIX,mp3buscador.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,msauth.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,msdn.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,msecnd.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,msedge.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,msftauth.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,msftncsi.com`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,msg.umengcloud.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,msn.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,mycnnews.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,myfontastic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,myicloud.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,myunlu.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,name.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nasa.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ndr.de`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,netdna-cdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,netflix.com`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,netmarble.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,newipnow.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nextmedia.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nianticlabs.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nicovideo.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nih.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nimg.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nintendo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nintendo.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nodejs.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nodesource.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,notion.so`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,novafile.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,npmjs.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,npmjs.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,npmmirror.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nrk.no`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nsstatic.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nssurge.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nuget.org`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,nvidia.com`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - nvidia.yaml
+- `DOMAIN-SUFFIX,nyt.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nytimes.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nytimg.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,nytstyle.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,obsidian.md`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ocbcwhhk.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,ocsp.digicert.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ocsp.pki.goog`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,office.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,office.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,okhuaren.com`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,okokserver.com`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - streaming.yaml
+- `DOMAIN-SUFFIX,ol.epicgames.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,omnigroup.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,onedrive.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,ooyala.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,openaiapi-site.azureedge.net`: 2 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,openaicom.imgix.net`: 2 files
+  - followups/active/2026/2026-10/OpenAI.yaml
+  - openai.yaml
+- `DOMAIN-SUFFIX,openclaw.ai`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,opencode.ai`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,opencodecn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,openrouter.ai`: 2 files
+  - direct-ai.yaml
+  - followups/active/2026/2026-10/AI.yaml
+- `DOMAIN-SUFFIX,openvpn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,openwrt.ai`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,openwrt.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,oplist.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,optimizely.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,origin-a.akamaihd.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,origin-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,orkut.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,osha.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,osxdaily.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ourbits.club`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,outlook.cn`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,outlook.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,overcast.fm`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ow.ly`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,p4pfile.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,paddle.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,paddleapi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,panoramio.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,paragon.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,parallels.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,parse.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,passport.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,passthepopcorn.me`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,paypalobjects.com`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - us-payment.yaml
+- `DOMAIN-SUFFIX,pdfexpert.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,periscope.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,perplexity.ai`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,phncdn.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,piaotian.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,picacomic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,picasaweb.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,picjs.xyz`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pinboard.in`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ping.pe`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pinimg.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pinterest.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pixelmator.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pixiv.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pixnet.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,playpcesor.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,playstation.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,playstation.net`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,playstationnetwork.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,poe.com`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,poecdn.net`: 2 files
+  - followups/active/2026/2026-10/AI.yaml
+  - proxy-ai.yaml
+- `DOMAIN-SUFFIX,pokemon.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,polymer-project.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,popo.tw`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pornhub.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,potato.im`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,prfct.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,privatehd.to`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,prod-support.apple-support.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,prompts.chat`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,proxfree.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,psiphon3.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,psu.edu`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ptt.cc`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,publicbank.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,pubu.com.tw`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,puffinbrowser.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,push-apple.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,pushbullet.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pushwoosh.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,pximg.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,qagpublic.qatp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,qgadmin.qcpp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,qiao-cn.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,qin.io`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,qpx.googleflights.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,qualysapi.qatp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,qualysguard.qpdp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,quora.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,quoracdn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,qupu123.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,rapid-disk-29c72222.he-ximao.workers.dev`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rarbg.to`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,rdtcdn.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,readingtimes.com.tw`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,readmoo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,recaptcha-cn.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,redacted.ch`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,reddit.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,redditmedia.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,redditspace.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,redditstatic.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - social.yaml
+- `DOMAIN-SUFFIX,redhat.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,redirector.bdn.dev`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,redirector.c.youtubeeducation.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,redirector.xn--ngstr-lra8j.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,redtube.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,repaik.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,reuters.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rfi.fr`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rileyguide.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rime.im`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,riotcdn.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,riotgames.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,royalapps.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,royalapps.onfastspring.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rsf.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,rthk.hk`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,s-microsoft.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,sbyr.de5.net`: 2 files
+  - direct-ai.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,sc.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,scanservice1.qcpp1.net`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,schwab.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,schwabadvisorcenter.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,schwabmail.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - us-broker.yaml
+- `DOMAIN-SUFFIX,sciencedaily.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sciencemag.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,scribd.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,search.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,seekingalpha.com`: 2 files
+  - fin-media.yaml
+  - followups/active/2026/2026-10/Finance.yaml
+- `DOMAIN-SUFFIX,segment.io`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,sentry.io`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,servebom.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,service.urchin.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,sexinsex.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,shacombank.com.hk`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,shadowsocks.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,shadowverse.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sharepointonline.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,shazam.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,shumilou.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,shutterstock.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sidelinesnews.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,signalr.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,simp.ly`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,simplecd.me`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,simplenote.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sketchappsources.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,skk.moe`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,skype.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,slack-edge.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,slack-msgs.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,slack.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,slideshare.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,smartdnsproxy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,smartmailcloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,smh.com.au`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,smtp`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,snapchat.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,snapdrop.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,sndcdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,snwx.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,sockslist.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sohuno.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,sony.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,soundcloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sourceforge.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sowers.org.hk`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,speedsmart.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,speedtest.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,speedtest.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,speedtest.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,spike.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,squarespace.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ssa.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sstatic.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,st.luluku.pw`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,stackoverflow.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,starp2p.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,startpage.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,startssl.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,state.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,staticflickr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,steamcontent.com`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,steamusercontent.com`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,store.apple.com.edgekey.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,store.apple.com.edgekey.net.globalredir.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,storify.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,stripe.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,stumbleupon.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sugarsync.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,supermariorun.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,support-china.apple-support.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,surfeasy.com.au`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,surge.run`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,surrenderat20.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,sydneytoday.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,symauth.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,symcb.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,symcd.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,synology.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,t.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,t66y.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,t8cdn.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,tablesgenerator.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tabtter.jp`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,talk853.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,talkboxapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,talkonly.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tapbots.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tapbots.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tbcdn.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,tebex.io`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,techcrunch.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,technorati.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,techsmith.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,teddysun.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tensorflow.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,test-ipv6.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,test.gbugs-qa.chromium.org`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,textnow.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,thebobs.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,theinitium.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,themoviedb.org`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,thepiratebay.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,theverge.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,thewgo.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,thumbzilla.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,tidbcloud.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tiltbrush.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,time.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,timeinc.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tinder.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tiny.cc`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tinychat.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tinypic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tmblr.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tmiaoo.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,todoist.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,togetter.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,toggleable.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tokyocn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tomshardware.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,torcn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,torproject.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,torrentprivacy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,torrentproject.se`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,torrentz.eu`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,totheglory.im`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,tp.m-team.cc`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,traffichaus.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,trafficmanager.net`: 2 files
+  - followups/active/2026/2026-10/Direct.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,trakt.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,transparency.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,trello.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,trendsmap.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,trip.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,trulyergonomic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,trustasiassl.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tt-rss.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ttmeiju.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,ttvnw.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tube8.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,tumblr.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tumblr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,turbobit.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,turn.livekit.cloud`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,tv.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tweetdeck.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,tweetmarker.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twimg.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twitch.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twitpic.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twitthat.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twtkr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,twttr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,txmblr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,typcn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,typekit.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,typography.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,uProxy.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ubertags.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ublock.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ubnt.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ubuntu.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,uchicago.edu`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,udacity.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,udn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ugo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,uhdwallpapers.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ulyssesapp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,unblockdmm.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,unblocksites.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,unfiltered.news`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,unpkg.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,unpo.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,unrealengine.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,unsplash.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,untraceable.us`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,update.crashlytics.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,uploaded.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,upwork.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,urchin.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,urlparser.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,us.to`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,usertrust.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,usgs.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,usma.edu`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,uspto.gov`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ustream.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,uxengine.net`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,v.gd`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,v2ex.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,v2ex.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,v2ray.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,van001.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vanpeople.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vansky.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vbstatic.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,venchina.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,venturebeat.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,veoh.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vercel-storage.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vercel.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,verizonwireless.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,viber.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vid.me`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,videomega.tv`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vidinfo.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,viewdns.info`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vikacg.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vimeo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vimeocdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vimperator.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vine.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,visibletweets.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,visualstudio.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,visualstudio.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,viu.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vivaldi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,voachinese.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vocativ.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vox-cdn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vpnaccount.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vpnbook.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vpngate.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vsco.co`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vscode-cdn.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,vscode-unpkg.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,vscode-webview.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,vscode.dev`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,vultr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,vzw.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,w.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,w3schools.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wan.video`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,wapi-sit.dev-wlab.com`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,wasmer.io`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wattpad.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,waveprotocol.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,weather.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,web2project.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,webfreer.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,weblagu.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,webmproject.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,webrtc.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,websnapr.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,webtype.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,webwarper.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,weiphone.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,welab.bank`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,wenxuecity.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,westca.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,westpoint.edu`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,whatbrowser.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,whatismyip.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,whatismyipaddress.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,whatsapp.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `DOMAIN-SUFFIX,wheel-size.cn`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,whoer.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wiki.metacubex.one`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikileaks-forum.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikileaks.info`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikileaks.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikimedia.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikipedia.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikipedia.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wikiwand.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,windows.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,windows.net`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,windowsazure.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,windowslive.cn`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,windowsupdate.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,wn.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wordpress.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,workflow.is`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,workflowy.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,worldcat.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wow.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wp.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wr.pvp.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wsj.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wsj.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,wwitv.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,www-cdn.icloud.com.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net`: 2 files
+  - apple.yaml
+  - followups/active/2026/2026-10/Apple.yaml
+- `DOMAIN-SUFFIX,www.destinationurl.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,www.pxcc.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,xanga.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xbox.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,xboxgamepass.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,xboxgamestudios.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,xboxlive.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,xboxservices.com`: 2 files
+  - followups/active/2026/2026-10/Microsoft.yaml
+  - microsoft.yaml
+- `DOMAIN-SUFFIX,xclient.info`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xda-developers.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xeeno.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xip.io`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,xiti.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xn--1-q07a56pdss.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xn--4gq62f.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xn--4gq62f.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xn--4gq62f52gdss.ink`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xn--flw351e.com`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `DOMAIN-SUFFIX,xn--ngstr-lra8j.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xteko.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xtools.wmflabs.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xuedingtoken.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,xuite.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,xvideo.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - followups/active/2026/2026-10/SocialMediaCN弃用.yaml
+- `DOMAIN-SUFFIX,xvideos.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,xz.pphimalayanrt.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,yach.me`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,yahoo.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yahooapis.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yasni.co.uk`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yastatic.net`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ycombinator.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yeeyi.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yes-news.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yesasia.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yidio.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yimg.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ying.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yiyuanjichang.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,yorkbbs.ca`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,youmaker.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,youporn.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,yourlisten.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,youtube`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,youtube-nocookie.com`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,youtube.com`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,youtubei.googleapis.com`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,yoyo.org`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,ypncdn.com`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - pornhub.yaml
+- `DOMAIN-SUFFIX,yt.be`: 2 files
+  - followups/active/2026/2026-10/Youtube.yaml
+  - youtube.yaml
+- `DOMAIN-SUFFIX,yyets.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,za.group`: 2 files
+  - followups/active/2026/2026-10/Finance.yaml
+  - hk-bank.yaml
+- `DOMAIN-SUFFIX,zacebook.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,zalmos.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,zaobao.com.sg`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,zeutch.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `DOMAIN-SUFFIX,zhangzishi.cc`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,zhuihd.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,zoho.com`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `DOMAIN-SUFFIX,zynamics.com`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,0.0.0.0/8`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,1.0.0.1/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,1.1.1.1/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,1.12.12.12/32`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,1.201.0.0/24,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,10.0.0.0/8`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,100.64.0.0/10`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,103.246.56.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,103.27.148.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,103.4.96.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,104.154.127.126/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `IP-CIDR,108.177.125.188/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,110.76.140.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,113.61.104.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,127.0.0.0/8`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,129.134.0.0/17,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,13.251.24.157/24,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,13.251.41.203/24,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,13.32.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,13.33.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,13.35.0.0/17,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,14.1.112.0/22`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,157.240.0.0/17,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,169.254.0.0/16`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,17.252.156.147/24,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,17.252.157.26/24,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,172.16.0.0/12`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,173.194.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,173.252.64.0/19,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,173.252.96.0/19,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,174.37.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,179.60.192.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,18.184.0.0/15,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,18.194.0.0/15,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,18.208.0.0/13,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,18.232.0.0/14,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,185.125.190.57,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,185.60.216.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,19.28.0.0/23`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,192.168.0.0/16`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,192.88.99.0/24`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,198.18.0.0/15`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,204.15.20.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,208.43.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,223.5.5.5/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,224.0.0.0/3`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,27.0.236.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,31.13.24.0/21,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,31.13.64.0/18,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,35.186.224.47/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Streaming.yaml
+  - spotify.yaml
+- `IP-CIDR,41.222.240.0/22`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,41.223.119.0/24`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,42.186.0.0/16`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,43.160.156.172/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,43.160.156.23/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,43.175.230.135/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,43.175.230.20/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,43.175.230.4/32,no-resolve`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,45.64.40.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,52.200.0.0/13,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,52.58.0.0/15,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,52.74.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,52.77.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,52.84.0.0/15,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,54.156.0.0/14,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,54.226.0.0/15,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,54.230.156.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,54.93.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,64.233.160.0/19,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,64.233.187.188/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,66.220.144.0/20,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,69.171.224.0/19,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,69.63.176.0/20,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,74.119.76.0/22,no-resolve`: 2 files
+  - followups/active/2026/2026-10/SocialMedia.yaml
+  - meta.yaml
+- `IP-CIDR,74.125.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,74.86.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,75.126.0.0/16,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Proxy.yaml
+  - proxy.yaml
+- `IP-CIDR,8.128.0.0/10`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.208.0.0/12`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.209.32.0/22`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.209.40.0/21`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.209.48.0/20`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.210.0.0/16`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.128.0/20`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.144.0/21`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.152.0/22`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.208.0/20`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.224.0/19`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.211.64.0/18`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.212.0.0/14`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.216.0.0/13`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR,8.8.4.4/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR,8.8.8.8/32,no-resolve`: 2 files
+  - followups/active/2026/2026-10/Google.yaml
+  - google.yaml
+- `IP-CIDR6,2001::/32`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR6,2002::/16`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR6,::1/128`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR6,fc00::/7`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR6,fe80::/10`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
+- `IP-CIDR6,ff00::/8`: 2 files
+  - direct.yaml
+  - followups/active/2026/2026-10/Direct.yaml
 
 Per-file intra-file duplicates (same rule repeated within the same file):
 
@@ -34,3 +4201,18 @@ Per-file intra-file duplicates (same rule repeated within the same file):
   - `美国_负载均衡`
   - `自动回退`
   - `香港_自动回退`
+- followups/active/2026/2026-10/AI.yaml:
+  - `DOMAIN-SUFFIX,ai.com`
+- followups/active/2026/2026-10/Finance.yaml:
+  - `DOMAIN-SUFFIX,tradingview.com`
+- followups/active/2026/2026-10/Proxy.yaml:
+  - `DOMAIN-SUFFIX,docker.com`
+  - `DOMAIN-SUFFIX,ip.sb`
+  - `DOMAIN-SUFFIX,ipaddress.com`
+  - `DOMAIN-SUFFIX,ipapi.co`
+  - `DOMAIN-SUFFIX,ipify.org`
+  - `DOMAIN-SUFFIX,trakt.tv`
+  - `DOMAIN-SUFFIX,unsplash.com`
+- followups/active/2026/2026-10/弃用5.yaml:
+  - `DOMAIN-SUFFIX,chatgpt.com`
+  - `DOMAIN-SUFFIX,openai.com`

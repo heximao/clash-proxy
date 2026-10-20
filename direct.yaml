@@ -316,3 +316,11 @@ payload:
 # === 验证码服务 / 极验（2026-10-19 漏网之鱼补录）===
   - DOMAIN-SUFFIX,geetest.com
   - DOMAIN-SUFFIX,geevisit.com
+
+# === 域名查询 / RDAP（2026-10-20 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,apnic.net
+  - DOMAIN-SUFFIX,arin.net
+  - DOMAIN-SUFFIX,iana.org
+
+# === 公共 DNS / DoH（2026-10-20 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,doh.pub
