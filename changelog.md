@@ -1,5 +1,13 @@
 # 更新记录
 
+## 2026-10-21 openai.yaml：补录 sora.com（交互轮）
+
+- **触发**：用户直接指定将 `sora.com` 添加到 `openai.yaml`。
+- **查重**：`check_coverage.py sora.com` → UNCOVERED（BRAND-ANCHOR 0），全库无既有覆盖。
+- **补录明细**：`sora.com` → `openai.yaml`，规则 `DOMAIN-SUFFIX,sora.com`，紧邻 `chatgpt.com` / `openai.com` 产品主域之后：Sora 为 OpenAI 官方视频生成产品，同文件已有两产品主域成组先例（判据 5——品牌归属明确且厂商文件已落盘，产品域与厂商主域同文件维护）。
+- **自检结果**：`find_duplicates.py` 跨文件重复 68 条中 67 条均涉及未跟踪本地目录 `followups/active/2026/2026-10/`（任务存档旧配置 yaml 副本，与业务 yaml 天然大面积重合），业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0 项**（`sora.com` 不在报告中）；文件内重复 26 条 = `config.yaml` 策略组/DNS 值噪声 23 + `followups/active` 存档副本 3，业务文件 0。`openai.yaml` payload 13 条，`yaml.safe_load` 通过。
+- **Git 操作链**：`git fetch origin` + `origin/main...HEAD` 双向 `0 0` → 显式暂存 `openai.yaml` + `changelog.md` + `scripts/find-duplicates/DUPLICATES.md` + `scripts/find-duplicates/duplicates.json` → commit → push → 复核 `0 0`。
+
 ## 2026-10-20 漏网之鱼归类：DNS 泄露排查工具链、字节系、RDAP 等补录 19 域（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-19_09-47-52`、`2026-10-19_22-53-45`、`2026-10-19_23-59-44`（cp 只读复制自 `~/.config/clash.meta/logs/`，昨日 3 个文件夹共 14 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量）。背景：用户 10-19 晚 22:40–23:50 进行 DNS 泄露排查（详见 `.agents/memory/2026-10-19.md`），产生大量网络检测站流量，为本轮候选主力。
