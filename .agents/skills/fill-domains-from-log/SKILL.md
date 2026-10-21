@@ -203,7 +203,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 
 - **代理可用性先探测（每轮现场做）**：本机 7893 代理状态会来回翻转，查询前先 `nc -z 127.0.0.1 7893`。不通时**不要无限重试**：所有待查项在粗判草稿（`log/.work/`）中标记「代理不可用，顺延下轮」，本轮按无结论兜底处理（记 changelog「待人工/下轮重试」），automation 正常收尾不卡死。
 - **本机 `whois` 命令不可用**：`whois.iana.org` 无法解析，客户端会挂起而非报错；macOS 也**没有 `timeout` 命令**（`timeout: command not found`）。不要再尝试 `timeout 30 whois <domain>`。
-- **RDAP（首选）**：`https_proxy=http://127.0.0.1:7893 curl -sL --max-time 20 https://rdap.org/domain/<domain>` — **必须走代理**（直连返回空）。首次调用常返回空响应，需重试 2–3 次（间隔 3s）。返回 JSON 中 `registrar` 为空数组 + `nameservers` 为 Cloudflare NS（`ALEC.NS.CLOUDFLARE.COM`）通常意味着注册信息完全隐私保护。
+- **RDAP（首选）**：`https_proxy=http://127.0.0.1:7893 curl -sL --max-time 20 https://rdap.org/domain/<domain>` — **必须走代理**（直连返回空）。首次调用常返回空响应，需重试 2–3 次（间隔 3s）。返回 JSON 中 `registrar` 为空数组 + `nameservers` 为 Cloudflare NS（`ALEC.NS.CLOUDFLARE.COM`）通常意味着注册信息完全隐私保护。**批量查证用 curl 循环落盘 JSON 再本地解析，不要用 python urllib/requests 直连代理（Hermes python3 缺 CA bundle，SSL 证书校验必失败，见第 15 节）。** 证据可信度层级：RDAP（注册商+NS）> DoH（CNAME 链可暴露所有者 DNS 调度域，如 `bytedns3.com` 实证字节）> HTTP 首页标题 > crt.sh（走代理常 502）/ wayback API（高频 429，两者不可作为主证据）。
 - **批量 RDAP**：写成 `/tmp/rdap.py` 循环 + 重试执行（heredoc 内联 python 会被安全策略拦截，见第 15 节环境坑）。
 - **DoH 存活检查**：`https_proxy=http://127.0.0.1:7893 curl -s "https://cloudflare-dns.com/dns-query?name=<domain>&type=A" -H "Accept: application/dns-json"` — `"Status":3`（NXDOMAIN）= 域名已失效，不归类。适合一次批量筛多个主域。
 - **辅助判**：`https://archive.org/wayback/available?url=<domain>` 查历史快照（走代理，高频会 429）；`urlscan.io` 搜索结果常直接暴露归属（如 `cmicapm.com` → China Mobile Group Guangdong）。
@@ -355,4 +355,6 @@ push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步
 - Git 提交用 heredoc（`git commit -F - <<'EOF'`）可用，不会被安全策略拦截；只有 python 内联脚本会被误判。
 - **`.workbuddy/skills` 与 `.workbuddy/memory` 是指向 `.agents/` 下真实目录的符号链接**，两个路径访问的是同一份文件。`Skill` 工具加载本 skill 会报 "Cannot find skill"（符号链接对加载器不生效），需要时直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
 - **AGENTS.md 是受保护文件**：cron / automation 会话（无交互用户 / gateway 在场）中 patch 工具直接 BLOCKED，报 "requires approval but no interactive user or gateway is present"（2026-10-18 实测）。automation 轮新裁决项只落 skip-list + changelog 即闭环；AGENTS.md「已裁决结论」清单与 MEMORY.md 同构清单的同步延后至交互式会话（第 0 节对齐检查）。
+- **Hermes python3 走代理 SSL 证书校验失败（CA bundle 缺失，2026-10-21 实测）**：urllib/build_opener 报 `SSLCertVerificationError`。RDAP/DoH 类外部查询一律用 `curl -sL --max-time N`（走 `https_proxy` 环境变量，curl 用系统钥匙串正常）；批量时 curl 循环落盘 `/tmp/*.json` 再写 python 解析脚本执行（heredoc 内联 python 仍被拦）。crt.sh 走代理常 502、wayback API 高频 429——两者不可作为归属判定的主证据。
+- **并发会话冲突（2026-10-21 实测）**：同一工作区可能有用户交互会话在 automation 轮运行途中直接提交（本轮交互轮 `e2a6302` 补录 sora.com 与本轮独立裁决撞车）。症状：find_duplicates 报出某文件 intra-file 重复，而自己确认只编辑过一处。排查法：`git diff HEAD -- <file>` + `git show HEAD:<file>` 三方状态定位——若 HEAD 版本已含该域（他人已提交），撤销本轮自己的追加、保留他人版本，并在 changelog 注明并发去重；DUPLICATES.md 重跑结果可能与他人提交的基线版本雷同，属正常。提交前 fetch + 双向 `0 0` 的窗口检查把碰撞概率降到最低，但查重→编辑窗口内仍可能被插队，发现症状先查 git 三方状态再动手。
 
