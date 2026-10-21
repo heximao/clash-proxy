@@ -14,6 +14,7 @@ payload:
   - DOMAIN-SUFFIX,linux.do
   - DOMAIN-SUFFIX,linuxdo.org
   - DOMAIN-SUFFIX,gnu.org
+  - DOMAIN-SUFFIX,kali.download
 # === 安全研究 / 恶意软件库（2026-10-16 漏网之鱼补录）===
   - DOMAIN-SUFFIX,team-cymru.com
 
@@ -115,6 +116,7 @@ payload:
 # === ##### 密码管理器 ===
   - DOMAIN-SUFFIX,bitwarden.com
   - DOMAIN-SUFFIX,bitwarden.net
+  - DOMAIN-SUFFIX,1password.com
 
 # === # Kwrt ===
   - DOMAIN-SUFFIX,openwrt.ai
@@ -506,6 +508,7 @@ payload:
   - DOMAIN-SUFFIX,nih.gov
   - DOMAIN-SUFFIX,nimg.jp
   - DOMAIN-SUFFIX,nintendo.com
+  - DOMAIN-SUFFIX,nintendo.co.jp
   - DOMAIN-SUFFIX,nintendo.net
   - DOMAIN-SUFFIX,notion.so
   - DOMAIN-SUFFIX,novafile.com
@@ -767,6 +770,7 @@ payload:
   - DOMAIN-SUFFIX,xteko.com
   - DOMAIN-SUFFIX,xuite.net
   - DOMAIN-SUFFIX,yahoo.com
+  - DOMAIN-SUFFIX,yahoo.co.jp
   - DOMAIN-SUFFIX,yahooapis.com
   - DOMAIN-SUFFIX,yasni.co.uk
   - DOMAIN-SUFFIX,yastatic.net
@@ -909,6 +913,7 @@ payload:
   - DOMAIN-SUFFIX,astral.sh
   - DOMAIN-SUFFIX,open-vsx.org
   - DOMAIN-SUFFIX,rgpub.io
+  - DOMAIN-SUFFIX,gitlab.com
 
 # === 漏网之鱼（2026-09-29 补录）文档/状态页平台 ===
   - DOMAIN-SUFFIX,gitbook.io
@@ -984,6 +989,7 @@ payload:
   - DOMAIN-SUFFIX,brokendnssec.net
   - DOMAIN-SUFFIX,every1dns.net
   - DOMAIN-SUFFIX,encryptedsni.com
+  - DOMAIN-SUFFIX,net.coffee
 
 # === 漏网之鱼（2026-10-20 补录）地图瓦片 ===
   - DOMAIN-SUFFIX,openstreetmap.org
@@ -993,3 +999,15 @@ payload:
 
 # === 漏网之鱼（2026-10-20 补录）海外杂项 ===
   - DOMAIN-SUFFIX,comparitech.com
+
+# === 漏网之鱼（2026-10-21 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,bbc.com
+  - DOMAIN-SUFFIX,shopify.com
+  - DOMAIN-SUFFIX,noon.com
+  - DOMAIN-SUFFIX,takealot.com
+  - DOMAIN-SUFFIX,mlstatic.com
+  - DOMAIN-SUFFIX,producthunt.com
+  - DOMAIN-SUFFIX,signal.org
+  - DOMAIN-SUFFIX,apify.com
+  - DOMAIN-SUFFIX,convex.cloud
+  - DOMAIN-SUFFIX,mupdf.com

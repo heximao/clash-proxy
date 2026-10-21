@@ -1,3 +1,5 @@
 payload:
   # === 小红书 / RedNote（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,zztfly.com
+# === 小红书 CDN（2026-10-21 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,xhscdn.com

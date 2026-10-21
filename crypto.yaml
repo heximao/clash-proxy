@@ -3,6 +3,7 @@ payload:
   - DOMAIN-SUFFIX,bitexch.io
   - DOMAIN-SUFFIX,polymarket.com
   - DOMAIN-SUFFIX,binance.com
+  - DOMAIN-SUFFIX,binance.info
   - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,bybit.com
   - DOMAIN-SUFFIX,bitget.com
@@ -17,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,bybdc6.com
   - DOMAIN-SUFFIX,byd3c3.com
   - DOMAIN-SUFFIX,wsot2022.com
+  - DOMAIN-SUFFIX,crypto.com
 # === WalletConnect ===
   - DOMAIN-SUFFIX,walletconnect.com
   - DOMAIN-SUFFIX,walletconnect.org

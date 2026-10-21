@@ -1,5 +1,35 @@
 # 更新记录
 
+## 2026-10-21 漏网之鱼归类：腾讯云系 9 域、网易 CDN、海外杂项等补录 42 规则（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-20_08-40-01`（cp 只读复制自 `~/.config/clash.meta/logs/`，昨日 1 个文件夹 5 个日志文件，含 2 个 core 日志——10-20 当天内核重启一次；`log/clashx-meta-log/` 无上轮遗留存量，cp 后 `diff -rq` 校验与源一致）。
+- **提取量**（结构化脚本，已过滤伪域名 4、探针 0、私有 IP 0）：候选 190（`match Match` 93 / `oc-cn-domain` 97），归并主域 92、公网裸 IP 0；skip-list 命中 `skip` 20 行、`manual` 7 行（本轮前口径）。
+- **查重**：92 主域全走 stdin 喂 `check_coverage.py` → COVERED 31 / UNCOVERED 61（含 BRAND-ANCHOR 19）。
+- **并发冲突处理**：本轮查重后，用户交互轮提交 `e2a6302`（13:51，`openai.yaml` 补录 `sora.com`）与本轮独立裁决重叠；本轮已撤销自己的 Sora 组追加、保留用户版本，`sora.com` 计入已覆盖不重复补录。
+- **补录明细**（42 条规则、12 文件、13 个分组，依据逐条留痕）：
+  - **腾讯云系 6 域 → `tencent.yaml`「腾讯云」组追加**：`qcloud.com`（判据 4 qcloud* 命名族、`myqcloud.com` 先例；RDAP MarkMonitor 上海 + NS ns1-4.qq.com 实证）、`qcloudimg.com`（判据 4；RDAP MarkMonitor 上海 + ns-open.qq.com）、`tencentcloud.com`（判据 5 tencent 字面；RDAP ns-open.qq.com + DoH CNAME 腾讯 EdgeOne）、`tencent-cloud.com`（判据 1 BRAND-ANCHOR `tencent-cloud.cn`@tencent.yaml）、`tencentcs.cn`（判据 5；腾讯云 COS 官方存储桶域，RDAP 404 系 .cn 无数据）、`cloudcachetci.com`（RDAP MarkMonitor + ns-open.qq.com 腾讯实证，腾讯云国际 CDN 缓存域，同批 `cloudcache.tencent-cloud.com`/`cloudcache.tencentcs.cn` 场景）。
+  - **腾讯账号 / 内部办公 3 条 → `tencent.yaml` 新组**：`DOMAIN,api.account.tencent.com` + `DOMAIN,oauth2.account.tencent.com`（判据 6 `*.tencent.com` 精确子域零歧义安全区）、`woa.com`（RDAP MarkMonitor 上海 + ns-open.qq.com 腾讯实证，WoA 腾讯内部办公域；`yehe.woa.com` firefox 访问）。
+  - `bytecdn.com` → `bytedance.yaml`「字节系 CDN / 配置」组：判据 4 byte* 命名族；DoH CNAME 链实证 `lf-arcosite.bytecdn.com.bytedns3.com`（字节自有 DNS 调度域）→ queniubg.com 海外节点。
+  - **网易 2 域 → `netease-music.yaml` 新组「网易门户 / CDN」**：`DOMAIN,www.163.com`（判据 1 BRAND-ANCHOR `music.163.com`/`api.iplay.163.com` 同标签 + 判据 8 精确主机规则不覆盖主域）、`127.net`（RDAP NS ns1-8.nease.net/166.com 网易自有 NS 实证，注册 1998；`necaptcha.nosdn.127.net` = 网易易盾验证码 + 网易对象存储 CDN）。
+  - `xhscdn.com` → `xhs.yaml` 新组「小红书 CDN」：判据 5 xhs 品牌字面 + `xhs.yaml`（小红书）已落盘；`fe-static.xhscdn.com` 小红书前端静态资源。
+  - **`proxy.yaml` 16 条**：`yahoo.co.jp`（判据 1 BRAND-ANCHOR yahoo.com@proxy.yaml:769，追加锚点旁）、`nintendo.co.jp`（判据 1 nintendo.com/net 锚点旁）、`1password.com`（「密码管理器」组 bitwarden.com/net 先例）、`kali.download`（「Linux 社区」组，Kali 官方下载域；RDAP Gandi + Cloudflare 海外）、`gitlab.com`（「开发者工具」组，Git 托管海外服务，schemastore.org 类比）、`net.coffee`（「网络检测工具」组追加——HTTP 首页标题「IP 查询 - IP分流测试」实证 + 哈希子域模式同 `dnscheck.tools`，10-19 DNS 泄露排查场景延续；RDAP Spaceship + Cloudflare，2025-07 新注册）、新组「漏网之鱼（2026-10-21 补录）海外杂项」10 域：`bbc.com`（国际媒体，同文件 nyt.com 先例）、`shopify.com`、`noon.com`、`takealot.com`、`mlstatic.com`（海外电商，直连不稳定）、`producthunt.com`、`signal.org`、`apify.com`（海外知名服务兜底）、`convex.cloud`（Convex 后端平台部署域 `wry-manatee-359.convex.cloud`，convex.dev 官网标题实证）、`mupdf.com`（MuPDF 官网，python3.12 = PyMuPDF 更新检查，RDAP Gandi 海外）。
+  - **`direct.yaml` 4 条**：`sony.jp`（判据 1 BRAND-ANCHOR sony.com@direct.yaml:132 锚点旁，索尼日本官网可直连）、新组「域名 / IP 查询」：`ip.cn`（DoH 解析与 ip138.com 共享 138.113.62.x 段 + oc 类别国内直达；RDAP 404 系 .cn）、`ip138.com`（国内老牌 IP 查询站，RDAP eName + DNSPod dnsv4 国内实证）、新组「域名查询 / RDAP」：`DOMAIN,rdap.centralnic.com`（AGENTS.md 明文 Agent 自用查询端点 → RDAP 组 + curl(3) 进程自证 + 同组 rdap.org/verisign.com/crt.sh 成组先例；精确主机避免兜 CentralNic 注册商主域）。
+  - **`proxy-ai.yaml` 2 条 → 「AI 服务」组追加**：`mistral.ai`（Mistral AI 法国模型公司，RDAP Cloudflare 留痕）、`midjourney.com`（Midjourney AI 绘图）——需代理 AI 服务无厂商专属文件，按 proxy-ai 兜底。
+  - **`streaming.yaml` 2 条**：`nflxext.com`（netflix 组追加，判据 2 同厂商兄弟域——`assets.nflxext.com` Netflix 静态资源）、`crunchyroll.com`（新组，Crunchyroll 动漫流媒体，同文件流媒体主题）。
+  - `cdninstagram.com` → `meta.yaml`：判据 5 instagram 品牌字面 + `instagram.com` 已落盘（Instagram CDN `static.cdninstagram.com`）。
+  - **`crypto.yaml` 2 条**：`binance.info`（判据 1 BRAND-ANCHOR binance.com@crypto.yaml:5 锚点旁）、`crypto.com`（Crypto.com 交易所，同文件 binance/okx/bybit 交易所先例）。
+  - `stripe.network` → `microsoft.yaml`：判据 1 BRAND-ANCHOR stripe.com@microsoft.yaml:87 锚点旁（`m.stripe.network` Stripe 移动端点，CodeBuddy Studio Helper 进程）。
+  - `naver.com` → `line.yaml` 新组「Naver」：判据 1 BRAND-ANCHOR line.naver.jp@line.yaml:5（naver 标签同 TLD 变体；Naver 门户与 LINE 同属 Naver 集团）。
+- **未收录及原因**：
+  - COVERED 31 项整批跳过（规则集先于本地 yaml 匹配，不代表规则缺失）：`bilibili.yaml` 5（hdslb/bilibili/bilivideo.com/bilivideo.cn/biliimg）、`wechat.yaml` 5（qlogo.cn/qpic.cn/weixinbridge/weixin/wechat.com）、`steam.yaml`（steampowered.com）、`baidu.yaml`（baidu.com）、`direct.yaml` 8（rdap.org/digicert.cn/mountaintoys.cn/verisign.com/arin.net/apnic.net/iana.org/ipip.net）、`proxy.yaml` 4（dnscheck.tools/icanhazip.com/surfsharkdns.com/addr.tools）、`openstreetmap.org`、`publicinterestregistry.org`、`deepseek.com`（direct-ai）、`wise.com`（us-payment）、`twitchcdn.net`（streaming）、`servicewechat.com`（wechat）。
+  - 广告/追踪类 9 主域不落盘（AGENTS.md「整批不落盘」纪律，只记录不判断、不核对 reject.yaml；已入 skip-list `skip` 模式）：`creativecdn.com`、`criteo.com`、`everesttech.net`、`mathtag.com`、`mookie1.com`、`teads.tv`、`iprsoftwaremedia.com`（进程均 Chrome Helper）、`pangle-ads.com`（字节穿山甲国际广告平台 analytics 端点，Chrome）、`mmstat.com`（友盟+/阿里妈妈网页统计——RDAP 阿里云注册 + SOA alibabadns.com 阿里系实证，但统计追踪场景按纪律不落业务文件）。
+  - `sora.com`：用户交互轮 `e2a6302` 已补录 `openai.yaml`，本轮去重。
+  - `byte-test.com`：byte* 字面但注册模式（阿里云 + alidns NS，2021 注册）与字节域名惯例（MarkMonitor + bytedns）不符，`perfops.byte-test.com` CNAME `bplslb.com`（自有 bpldns NS，2022 注册）无定论——不强行按判据 4 归类，留人工。
+- **待人工确认**（本轮新增 9 项，均入 skip-list `manual`）：`jd.com`（京东官网，大型公司宜建独立厂商文件，automation 不代建——`asus.com` 先例）、`mi.com`（小米官网，同前）、`zoom.us`（Zoom 品牌主域无厂商文件）、`qualcomm.cn`（高通中国，qualcomm 字面无厂商文件，判据 5）、`cloudflare-cn.com`（Cloudflare 中国站，cloudflare 字面无厂商文件，判据 5）、`sinaimg.cn`（新浪图床，新浪系 weibo.com/sina.com.cn 全库未覆盖，宜建新浪系文件待用户定夺）、`tcsdk.com`（DNSPod 注册 + 腾讯 ns-open NS + EdgeOne 403，疑国内 SDK/广告端点，无品牌指向）、`pixpix.com`（GoDaddy + Cloudflare 无主端点，firefox 访问 www. 主站，同 `123169.xyz` 模式）、`byte-test.com`（见上）。既有挂起本轮命中 7 行照抄：`edu.ntp.org.cn`/`cn.ntp.org.cn`（Lark Helper ×14/×8）、`p.sitemana.com`（Chrome ×8）、`i.111666.best`（firefox ×6）、`api.123169.xyz`、`updates.optionsplus.logitechg.com`、`cf.999831.xyz`。
+- **自检结果**：`find_duplicates.py` 跨文件重复 68 条中 67 条涉及未跟踪 `followups/active/` 存档副本（含 followups 内 OpenAI/AI/Spotify/弃用等存档 yaml 与业务 yaml 天然重合），业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0 项**（发现并修复 1 项并发引入的 intra-file 重复：openai.yaml `sora.com` 与用户提交 `e2a6302` 重叠，已撤销本轮追加）；文件内重复 26 条 = `config.yaml` 策略组/DNS 值噪声 23 + `followups/active` 存档 3，业务文件 0。42 条新规则经 `check_coverage.py` 复核全部 COVERED。`yaml.safe_load` 校验通过（payload 条数）：tencent 26 / bytedance 26 / netease-music 26 / xhs 2 / proxy 878 / direct 251 / proxy-ai 36 / streaming 13 / meta 28 / crypto 28 / microsoft 72 / line 21；openai.yaml 13（未编辑，HEAD 状态）。skip-list 消化验证：同日志重跑候选 190→170、manual 18 行、skip 29 行，数字自洽。
+- **AGENTS.md 同步延后**：本轮新增 18 条已裁决项（9 skip + 9 manual）已落 skip-list + changelog；AGENTS.md「已裁决结论」清单为受保护文件，同步留待交互式会话（第 0 节对齐检查）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-21 openai.yaml：补录 sora.com（交互轮）
 
 - **触发**：用户直接指定将 `sora.com` 添加到 `openai.yaml`。

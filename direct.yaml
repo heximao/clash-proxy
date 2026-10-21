@@ -130,6 +130,7 @@ payload:
   - DOMAIN-SUFFIX,snwx.com
   - DOMAIN-SUFFIX,sohuno.com
   - DOMAIN-SUFFIX,sony.com
+  - DOMAIN-SUFFIX,sony.jp
   - DOMAIN-SUFFIX,startssl.com
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,tbcdn.com
@@ -324,3 +325,10 @@ payload:
 
 # === 公共 DNS / DoH（2026-10-20 漏网之鱼补录）===
   - DOMAIN-SUFFIX,doh.pub
+
+# === 域名 / IP 查询（2026-10-21 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,ip.cn
+  - DOMAIN-SUFFIX,ip138.com
+
+# === 域名查询 / RDAP（2026-10-21 漏网之鱼补录）===
+  - DOMAIN,rdap.centralnic.com

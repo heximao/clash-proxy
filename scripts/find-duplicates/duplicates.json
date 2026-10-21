@@ -489,6 +489,9 @@
     "DOMAIN-SUFFIX,bytedancevod.com": [
       "bytedance.yaml"
     ],
+    "DOMAIN-SUFFIX,bytecdn.com": [
+      "bytedance.yaml"
+    ],
     "DOMAIN-SUFFIX,claude.ai": [
       "claude.yaml"
     ],
@@ -968,6 +971,9 @@
       "crypto.yaml",
       "followups/active/2026/2026-10/\u5f03\u75284.yaml"
     ],
+    "DOMAIN-SUFFIX,binance.info": [
+      "crypto.yaml"
+    ],
     "DOMAIN-SUFFIX,okx.com": [
       "crypto.yaml",
       "followups/active/2026/2026-10/\u5f03\u75284.yaml"
@@ -1014,6 +1020,9 @@
       "crypto.yaml"
     ],
     "DOMAIN-SUFFIX,wsot2022.com": [
+      "crypto.yaml"
+    ],
+    "DOMAIN-SUFFIX,crypto.com": [
       "crypto.yaml"
     ],
     "DOMAIN-SUFFIX,walletconnect.com": [
@@ -1408,6 +1417,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,sony.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sony.jp": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,startssl.com": [
@@ -1819,6 +1831,15 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,doh.pub": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ip.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ip138.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN,rdap.centralnic.com": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -2613,6 +2634,9 @@
     "IP-CIDR,203.174.77.0/24,no-resolve": [
       "line.yaml"
     ],
+    "DOMAIN-SUFFIX,naver.com": [
+      "line.yaml"
+    ],
     "DOMAIN-SUFFIX,meta.ai": [
       "meta.yaml"
     ],
@@ -2629,6 +2653,9 @@
       "meta.yaml"
     ],
     "DOMAIN-SUFFIX,instagram.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdninstagram.com": [
       "meta.yaml"
     ],
     "DOMAIN-SUFFIX,whatsapp.com": [
@@ -2898,6 +2925,9 @@
     "DOMAIN-SUFFIX,stripe.com": [
       "microsoft.yaml"
     ],
+    "DOMAIN-SUFFIX,stripe.network": [
+      "microsoft.yaml"
+    ],
     "DOMAIN-SUFFIX,chatgpt.livekit.cloud": [
       "microsoft.yaml"
     ],
@@ -2977,6 +3007,12 @@
       "netease-music.yaml"
     ],
     "IP-CIDR,59.111.181.60/32,no-resolve": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN,www.163.com": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,127.net": [
       "netease-music.yaml"
     ],
     "DOMAIN-SUFFIX,go.nvidianews.com": [
@@ -3087,6 +3123,12 @@
     "DOMAIN-SUFFIX,browse.sh": [
       "proxy-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,mistral.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,midjourney.com": [
+      "proxy-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,jina.ai": [
       "proxy-ai.yaml"
     ],
@@ -3112,6 +3154,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,gnu.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,kali.download": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,team-cymru.com": [
@@ -3334,6 +3379,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,bitwarden.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,1password.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,openwrt.ai": [
@@ -4395,6 +4443,9 @@
     "DOMAIN-SUFFIX,nintendo.com": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,nintendo.co.jp": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,nintendo.net": [
       "proxy.yaml"
     ],
@@ -5178,6 +5229,9 @@
     "DOMAIN-SUFFIX,yahoo.com": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,yahoo.co.jp": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,yahooapis.com": [
       "proxy.yaml"
     ],
@@ -5526,6 +5580,9 @@
     "DOMAIN-SUFFIX,rgpub.io": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,gitlab.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,gitbook.io": [
       "proxy.yaml"
     ],
@@ -5667,6 +5724,9 @@
     "DOMAIN-SUFFIX,encryptedsni.com": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,net.coffee": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,openstreetmap.org": [
       "proxy.yaml"
     ],
@@ -5674,6 +5734,36 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,comparitech.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bbc.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shopify.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,noon.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,takealot.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mlstatic.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,producthunt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,signal.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,apify.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,convex.cloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mupdf.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [
@@ -5745,6 +5835,9 @@
     "DOMAIN-SUFFIX,netflix.com": [
       "streaming.yaml"
     ],
+    "DOMAIN-SUFFIX,nflxext.com": [
+      "streaming.yaml"
+    ],
     "DOMAIN-SUFFIX,live-video.net": [
       "streaming.yaml"
     ],
@@ -5752,6 +5845,9 @@
       "streaming.yaml"
     ],
     "DOMAIN-SUFFIX,pscp.tv": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,crunchyroll.com": [
       "streaming.yaml"
     ],
     "IP-CIDR,5.28.195.2/32,no-resolve": [
@@ -5865,6 +5961,24 @@
     "DOMAIN-SUFFIX,tencent-cloud.cn": [
       "tencent.yaml"
     ],
+    "DOMAIN-SUFFIX,qcloud.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,qcloudimg.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tencentcloud.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tencent-cloud.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tencentcs.cn": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudcachetci.com": [
+      "tencent.yaml"
+    ],
     "DOMAIN-SUFFIX,codebuddy.cn": [
       "tencent.yaml"
     ],
@@ -5890,6 +6004,15 @@
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,time1.cloud.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN,api.account.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN,oauth2.account.tencent.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,woa.com": [
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,chase.com": [
@@ -6181,6 +6304,9 @@
       "x.yaml"
     ],
     "DOMAIN-SUFFIX,zztfly.com": [
+      "xhs.yaml"
+    ],
+    "DOMAIN-SUFFIX,xhscdn.com": [
       "xhs.yaml"
     ],
     "DOMAIN-SUFFIX,youtube": [

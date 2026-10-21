@@ -23,3 +23,6 @@ payload:
   - IP-CIDR,59.111.181.35/32,no-resolve
   - IP-CIDR,59.111.181.38/32,no-resolve
   - IP-CIDR,59.111.181.60/32,no-resolve
+# === 网易门户 / CDN（2026-10-21 漏网之鱼补录）===
+  - DOMAIN,www.163.com
+  - DOMAIN-SUFFIX,127.net
