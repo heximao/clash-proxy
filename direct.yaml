@@ -332,3 +332,18 @@ payload:
 
 # === 域名查询 / RDAP（2026-10-21 漏网之鱼补录）===
   - DOMAIN,rdap.centralnic.com
+
+# === NTP 时间服务（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,ntp.org.cn
+
+# === 国内电商 / 厂商官网（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,jd.com
+  - DOMAIN-SUFFIX,mi.com
+  - DOMAIN-SUFFIX,qualcomm.cn
+  - DOMAIN-SUFFIX,cloudflare-cn.com
+
+# === 国内平台 / CDN 杂项（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,oceanengine.com
+  - DOMAIN-SUFFIX,sinaimg.cn
+  - DOMAIN-SUFFIX,yhgfb-cn-static.com
+  - DOMAIN-SUFFIX,tcsdk.com

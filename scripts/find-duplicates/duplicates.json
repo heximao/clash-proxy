@@ -1842,6 +1842,33 @@
     "DOMAIN,rdap.centralnic.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,ntp.org.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,jd.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,mi.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qualcomm.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloudflare-cn.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,oceanengine.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sinaimg.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,yhgfb-cn-static.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,tcsdk.com": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
@@ -5764,6 +5791,24 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,mupdf.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,logitech.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,logitech.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,logitechg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zoom.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,temu.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,photon.codes": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

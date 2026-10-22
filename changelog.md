@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-10-22 issues-domain 用户裁定：15 项落盘（direct 9 / proxy 6），13 项继续挂起（交互轮）
+
+- **触发**：用户对 `issues-domain.md` 待人工判定表给出裁定——**`.cn` 全部加入 `direct.yaml`；agent 判断高度归属国内的也加入 `direct.yaml`；不需要新建厂商文件**（海外知名公司杂项归 `proxy.yaml`）；无国内实证且无海外公司归属的继续挂起，不强行归类。
+- **查重**：15 个待落盘主域全部走 `check_coverage.py` stdin → UNCOVERED 15（BRAND-ANCHOR 仅 `ntp.org.cn` 命中 `0.openwrt.pool.ntp.org`/`ubuntu.pool.ntp.org` 两个 NTP pool 锚点，均为 pool 子域而非 `ntp.org.cn` 本身，不构成覆盖）。
+- **补录明细**（15 域、2 文件、5 个新分组）：
+  - **`direct.yaml` 9 条**：新组「NTP 时间服务（2026-10-22 漏网之鱼补录）」`ntp.org.cn`（.cn，国内 NTP 池 `cn./edu.` 子域，Lark Helper；直连组已有 OpenWrt NTP 先例）；新组「国内电商 / 厂商官网（2026-10-22 漏网之鱼补录）」`jd.com`（京东）、`mi.com`（小米）、`qualcomm.cn`（高通中国官网，.cn）、`cloudflare-cn.com`（Cloudflare 中国站）；新组「国内平台 / CDN 杂项（2026-10-22 漏网之鱼补录）」`oceanengine.com`（字节旗下巨量引擎）、`sinaimg.cn`（新浪图床，.cn）、`yhgfb-cn-static.com`（Feishu 进程 CDN，`lf-rc1.` 子域）、`tcsdk.com`（DNSPod 注册 + 腾讯 `ns-open` NS + EdgeOne，国内 SDK/CDN 端点）。
+  - **`proxy.yaml` 6 条**：新组「Logitech（2026-10-22 漏网之鱼补录）」`logitech.io` / `logitech.com` / `logitechg.com`（罗技 Options+ 遥测与更新端点，海外公司不新建厂商）；新组「漏网之鱼（2026-10-22 补录）海外杂项」`zoom.us`（Zoom 主域 + `st1.` 子域）、`temu.com`（跨境电商）、`photon.codes`（无国内实证，按海外杂项兜底）。
+- **继续挂起 13 项**（不满足「.cn / 高度国内」，亦无海外公司归属，按「不强行归类」纪律留在 `issues-domain.md`）：`applogcdn.com`、`mdoelscope.ai`（仿冒域，AGENTS.md 已裁决不补录，待用户确认转 skip）、`123169.xyz`、`111666.best`、`999831.xyz`（Cloudflare 隐私保护三连，firefox 高频，疑用户自建服务）、`yjz.hk`、`tsight.io`、`nsvcs.net`、`ns1pcdn.net`、`sitemana.com`、`featureassets.org`、`pixpix.com`、`byte-test.com`（阿里云/alidns 国内倾向但非「高度国内」实证）。`mdoelscope.ai` 用户本轮未表态，按原状留表。
+- **三处同步**（skill 第 6b 节定案闭环）：`issues-domain.md` 移除 15 行（28 → 13，表尾新增「2026-10-22 定案记录」段）；skip-list `manual` 移除同 15 项（28 → 13）并补裁定注释；AGENTS.md「已裁决结论」补裁定规则行 + 挂起清单刷新为 13 项（**工作区改动，未提交**——文件内有用户未完成的 SPEC/ 重构，不打包）；`.agents/memory/MEMORY.md` 同款同步（随本轮提交）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），本次新引入 0；15 条新规则经 `check_coverage.py` 复核全部 COVERED；`yaml.safe_load` 校验通过（direct.yaml 260 / proxy.yaml 884 条 payload）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-22 fill-domains-from-log skill v2.8.0：证据不足项登记 issues-domain.md 待人工表，既有 28 项 manual 挂起项种子导入（main 直接提交，交互会话）
 
 - **触发**：用户要求——对于证据不足无法判定归属的域名，写入 `issues-domain.md` 用表格列出，留用户判定。

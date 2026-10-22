@@ -24,7 +24,8 @@
 - 海外 → `proxy.yaml`；国内经 RDAP/NS 确认 → `direct.yaml`；`macked.site` 是 Mac 资源站→proxy。
 - 中国移动系（10086.cn / chinamobile.com / cmcc-cs.cn / komect.com / miguvideo.com / 10085.cn / cmicapm.com 等）→ direct.yaml 中国移动组。WPS 系（wps.cn / wpscdn.cn / qwps.cn / ksosoft.com）→ direct.yaml。
 - Agent 自用查询端点（rdap.org / verisign.com / crt.sh 等）→ direct.yaml「域名查询 / RDAP」组。
-- 长期挂起待人工（无锚点）：`logitech.io`、`logitechg.com`（Logitech G 系，2026-10-18 裁决，同 logitech.io）、`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`applogcdn.com`、`temu.com`、`photon.codes`、`mdoelscope.ai`（仿冒）。
+- 长期挂起待人工（无锚点；现登记于 `issues-domain.md` 表）：`applogcdn.com`、`mdoelscope.ai`（仿冒，待用户确认转 skip）、`123169.xyz`、`111666.best`、`999831.xyz`、`yjz.hk`、`tsight.io`、`nsvcs.net`、`ns1pcdn.net`、`sitemana.com`、`featureassets.org`、`pixpix.com`、`byte-test.com`（2026-10-22 用户裁定后剩此 13 项）。
+- **用户 2026-10-22 裁定（issues-domain 挂起项处置规则）**：`.cn` 全部归 `direct.yaml`；高度归属国内的归 `direct.yaml`；**不新建厂商文件**（海外知名公司杂项归 `proxy.yaml`）；无国内实证且无海外公司归属的继续挂起，不强行归类。首批按此落盘 15 项（direct 9 + proxy 6）。
 
 ## 文档 / README 改动约定（2026-10-17 用户裁决；分支制度当日当晚取消）
 **2026-10-17 当晚用户裁决取消分支制度**：所有改动（含 README、scripts、AGENTS.md 等）一律**直接在 main 上修改、提交、推送**，本地只保留 main（`feature/workbuddy-add-log-domain` 已删）。**保留的核心约束**：动手前 `git fetch` + `git rev-list --left-right --count origin/main...HEAD` 双向 `0 0`，远程有新提交则 `git stash` → `git pull --rebase` → `git stash pop`；提交前再查一次；commit 后立即 push 并再校验 `0 0`。README 代码块用「生成（`/tmp/*.py`，CJK 双宽对齐）→ `yaml.safe_load` 校验 → 按板块标题 splice」流程，替换后补**引用一致性校验**（rules 引用的 provider/group、use 的订阅均已定义）。

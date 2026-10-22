@@ -29,16 +29,13 @@ zorvian.com skip:无主端点，已裁决不归类
 www.z skip:WorkBuddy AI Helper 截断伪域名，无有效 TLD，不归类
 www.zhipin skip:WorkBuddy AI Helper 截断伪域名，无有效 TLD，不归类
 
+# --- 2026-10-22 用户裁定（issues-domain 挂起项处置）：.cn 全部归 direct.yaml；
+#     高度归属国内的归 direct.yaml；不新建厂商文件，海外杂项归 proxy.yaml；
+#     无国内实证且无海外公司归属的继续挂起。已移除 15 项 manual，明细见 changelog。 ---
+
 # --- 长期挂起待人工（每轮可见，不参与自动裁决）---
-logitech.io manual:无锚点厂商文件，留人工
-logitechg.com manual:无锚点厂商文件，留人工（Logitech G 系，与 logitech.io 同）
-oceanengine.com manual:无锚点，留人工
-ntp.org.cn manual:待人工
-yhgfb-cn-static.com manual:待人工
 applogcdn.com manual:疑似 CDN 无锚点，留人工
-temu.com manual:留人工
-photon.codes manual:留人工
-mdoelscope.ai manual:仿冒域（modelscope.ai 字母转位），绝不补录
+mdoelscope.ai manual:仿冒域（modelscope.ai 字母转位），绝不补录（待用户确认后转 skip）
 # --- 广告 / 追踪类（AGENTS.md 整批不落盘纪律，不逐一判定不归类）---
 fastly-analytics.com skip:广告/追踪类（Fastly 分析遥测），整批不落盘
 statcounter.com skip:广告/追踪类（网站访问统计），整批不落盘
@@ -51,7 +48,6 @@ outbrain.com skip:广告/追踪类（内容推荐广告），整批不落盘
 rfihub.com skip:广告/追踪类（Connexity 广告追踪），整批不落盘
 
 # --- 2026-10-20 automation 轮新裁决留人工（证据不足，无主端点或无品牌锚点）---
-logitech.com manual:无锚点厂商文件，留人工（罗技主域，与 logitech.io/logitechg.com 同族，判据 5）
 123169.xyz manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 高频访问 api. 子域），留人工
 111666.best manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 访问 i. 子域），留人工
 999831.xyz manual:Cloudflare 代理 + 隐私保护无归属线索，留人工
@@ -74,12 +70,5 @@ pangle-ads.com skip:广告/追踪类（字节穿山甲国际广告平台 analyti
 mmstat.com skip:广告/追踪类（友盟+/阿里妈妈网页统计 sg. 端点，RDAP+SOA 阿里系实证），整批不落盘
 
 # --- 2026-10-21 automation 轮证据不足留人工 ---
-jd.com manual:京东官网，大型公司宜建独立厂商文件，automation 不代建（asus.com 先例），留人工
-mi.com manual:小米官网，同 jd.com——判据 5 无厂商锚点文件，留人工
-zoom.us manual:Zoom 品牌主域无厂商文件（zoom.us + st1.zoom.us），留人工
-qualcomm.cn manual:高通中国官网，qualcomm 字面无厂商文件（判据 5），留人工
-cloudflare-cn.com manual:Cloudflare 中国站，cloudflare 字面无厂商文件（判据 5），留人工
-sinaimg.cn manual:新浪图床 CDN，sina 字面但新浪系（weibo.com/sina.com.cn）全库未覆盖，宜建新浪系文件待用户定夺，留人工
-tcsdk.com manual:DNSPod 注册 + 腾讯 ns-open NS + EdgeOne 403，疑国内 SDK/广告端点，无品牌指向，留人工
 pixpix.com manual:GoDaddy + Cloudflare 无主端点（firefox 访问 www. 主站 2 次），同 123169.xyz 模式，留人工
 byte-test.com manual:byte* 字面但注册模式（阿里云+alidns）与字节惯例（MarkMonitor+bytedns）不符，perfops 子域 CNAME bplslb.com（自有 bpldns NS）无定论，留人工

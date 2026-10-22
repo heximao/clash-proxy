@@ -1011,3 +1011,13 @@ payload:
   - DOMAIN-SUFFIX,apify.com
   - DOMAIN-SUFFIX,convex.cloud
   - DOMAIN-SUFFIX,mupdf.com
+
+# === Logitech（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,logitech.io
+  - DOMAIN-SUFFIX,logitech.com
+  - DOMAIN-SUFFIX,logitechg.com
+
+# === 漏网之鱼（2026-10-22 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,zoom.us
+  - DOMAIN-SUFFIX,temu.com
+  - DOMAIN-SUFFIX,photon.codes
