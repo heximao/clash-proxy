@@ -2,6 +2,7 @@
 
 ## 目录结构
 `.workbuddy/skills`、`.workbuddy/memory` 是指向 `.agents/skills`、`.agents/memory` 的**单向符号链接**，同一份文件两个路径等价。文档写 `.agents/...` 即为正确，不要"修正"。`Skill` 工具加载 `fill-domains-from-log` 会报 "Cannot find skill" → 直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
+**`issues-domain.md`（仓库根，skill v2.8.0 起）**：待人工判定域名表——证据不足无法判定归属的主域（含判据 5 无锚点厂商文件的大型公司主域）登记于此，7 列（# / 域名 / 登记日期 / 命中子域（次数）/ 进程 / 已查证据 / 存疑点），留用户判定；与 skip-list `manual` 段、changelog「待人工」段三处一致；**行只许因用户定案移除**（补录 yaml 或转 skip 两种闭环）；`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进表；automation 可直接追加（非受保护文件，不同于 AGENTS.md）。
 **scripts/ 自 2026-10-17 起为子目录结构**（每脚本一目录一 README）：`scripts/find-duplicates/`、`scripts/merge-reject-from-loyalsoldier/`、`scripts/normalize-yaml-comments/`。`find-duplicates/find_duplicates.py` 扫描根已锚定仓库根、**任意目录可运行**，报告（DUPLICATES.md / duplicates.json）在脚本旁；另两个脚本仍须**仓库根目录执行**（依赖 cwd）。旧平铺路径已全部失效，见到的旧引用一律按此映射。
 
 ## 归属判定判据（按可信度排序）
@@ -50,6 +51,7 @@
 ## Skill 流程裁决
 - **2026-10-17 起 yaml 归属判定改自主裁决（skill v2.4.0）**：取消 review 关卡 / `AskUserQuestion` 强制提问，归属由 agent 自主判断——证据足直接定，证据不足自主走 RDAP/DoH，无结论按兜底（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类。**每个归类决定须在 changelog 留痕**（判据条号/进程名/RDAP 结果），是自主模式唯一可追溯手段。用户主动介入给归属时以用户为准，默认不主动问。AGENTS.md「域名归属判定判据」「已裁决结论」仍是判定依据本身，不变。
 - **2026-10-17 傍晚日志获取回退 cp + 只处理昨天（skill v2.5.0）**：移动制（v2.3.0–v2.4.1）mv 源目录触发沙箱弹窗、automation 卡死，用户要全自动；回退 cp 只读复制昨天的日志，禁止 mv/rm 源目录；当天不处理、更早留存。归档仍工作区内 mv。**沙箱规则**：读 `~/.config` 不弹窗，写/删才弹窗。
+- **2026-10-22 起证据不足项落 issues-domain.md 待人工表（skill v2.8.0，用户要求）**：RDAP/DoH 查证后仍无归属结论的主域，在 changelog「待人工」+ skip-list `manual` 之外必须写 `issues-domain.md` 表格（skill 新增第 6b 节）；命中子域/次数/进程须从日志实证（`log/.archive/` grep），不得凭记忆；登记日期取首轮 changelog 条目日期，历史项按「连续第 N 轮」反推；用户定案闭环同时清三处。首轮种子：manual 全集 28 项（提交 `35705e0`）。
 
 ## 仓库状态
 - PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先 grep 全库查重。
