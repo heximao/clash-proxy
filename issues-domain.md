@@ -8,6 +8,7 @@
 - **排序**：按登记日期升序——最早挂起、长期未定案的排在前面，便于优先处理。
 - **数据口径**：「命中子域（次数）」取该域最近一轮的日志实证（轮次为日志日期，非处理日期）；进程为发起进程名。
 - **定案闭环**：用户给出归属 → 补录对应 yaml、移除本表该行、skip-list `manual` 项同步移除；用户裁决不收录 → 移除本表该行、skip-list 改 `skip` 模式、AGENTS.md「已裁决结论」清单留痕（交互式会话）。
+- **本文件只保留待判定域名**：定案去向与依据只写 `changelog.md`，不在本表保留定案记录段；行被移除即净出，表始终等于「当前待判定集合」。
 - **三处一致**：本表 ↔ skip-list `manual` 段 ↔ changelog「待人工确认」段，数量与条目须一致（交互式会话第 0 节对齐检查）。
 - **不进表的类**（已裁决，无需用户判定）：无主端点（`antpeak.com` 类）、广告/追踪类、reject 上游已收录、伪域名/探针族——均为 skip-list `skip` 模式。
 - **automation 说明**：本文件是普通仓库文件（不同于受保护的 AGENTS.md），automation 轮可直接追加并随轮提交推送；行的移除只发生在用户定案后。
@@ -31,23 +32,3 @@
 | 13 | byte-test.com | 2026-10-21 | perfops.（×2，10-20 日志） | firefox | byte* 字面但注册模式（阿里云 + alidns NS，2021 注册）与字节惯例（MarkMonitor + bytedns）不符；CNAME `bplslb.com`（自有 bpldns NS）无定论 | 阿里云/alidns 国内倾向但非「高度国内」实证——直连还是代理待定夺 |
 
 > 登记日期说明：2026-10-17 之前挂起的历史项按 changelog「连续第 N 轮遗留」反推取近似值；其余为首次挂起轮的 changelog 条目日期。
-
-## 2026-10-22 定案记录（用户裁定，已落盘）
-
-用户裁决：**`.cn` 全部归 `direct.yaml`；高度归属国内的归 `direct.yaml`；不新建厂商文件**（海外知名公司杂项归 `proxy.yaml`）；无国内实证且无海外公司归属的继续挂起，不强行归类。
-
-| 域名 | 去向 | 依据 |
-|---|---|---|
-| ntp.org.cn | `direct.yaml`「NTP 时间服务」组 | .cn；国内 NTP 池（Lark Helper） |
-| qualcomm.cn | `direct.yaml`「国内电商 / 厂商官网」组 | .cn；高通中国官网 |
-| sinaimg.cn | `direct.yaml`「国内平台 / CDN 杂项」组 | .cn；新浪图床 CDN |
-| jd.com | `direct.yaml`「国内电商 / 厂商官网」组 | 高度国内（京东），不新建厂商 |
-| mi.com | `direct.yaml`「国内电商 / 厂商官网」组 | 高度国内（小米），不新建厂商 |
-| cloudflare-cn.com | `direct.yaml`「国内电商 / 厂商官网」组 | 高度国内（Cloudflare 中国站），不新建厂商 |
-| oceanengine.com | `direct.yaml`「国内平台 / CDN 杂项」组 | 高度国内（字节旗下巨量引擎），不新建厂商 |
-| yhgfb-cn-static.com | `direct.yaml`「国内平台 / CDN 杂项」组 | 高度国内（Feishu 进程 CDN） |
-| tcsdk.com | `direct.yaml`「国内平台 / CDN 杂项」组 | 高度国内（DNSPod 注册 + 腾讯 ns-open NS） |
-| logitech.io / logitech.com / logitechg.com | `proxy.yaml`「Logitech」组 | 海外公司，不新建厂商 |
-| zoom.us | `proxy.yaml`「海外杂项」组 | 海外公司，不新建厂商 |
-| temu.com | `proxy.yaml`「海外杂项」组 | 海外电商 |
-| photon.codes | `proxy.yaml`「海外杂项」组 | 无国内实证，按海外杂项兜底 |

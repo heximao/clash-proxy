@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-10-22 fill-domains-from-log skill v2.9.0：issues-domain.md 只保留待判定域名，定案记录收敛到 changelog（main 直接提交，交互会话）
+
+- **触发**：用户要求——流程上 issues 只保留待处理的 domain，记录写到 changelog 就可以。
+- **skill v2.9.0 改动**（`.agents/skills/fill-domains-from-log/SKILL.md`）：
+  - 第 6b 节「文件定位」明确：`issues-domain.md` **只保留待判定域名**——定案去向与依据只写 `changelog.md`，本表不留定案记录段；行被移除即净出，表始终等于「当前待判定集合」。
+  - front matter description、第 13 节核对项同步（定案记录只写 changelog，表不留定案段）。
+- **issues-domain.md 整改**：移除 10-22 裁定轮在表尾留的「2026-10-22 定案记录」段——15 项定案去向与依据在 changelog「2026-10-22 issues-domain 用户裁定」条目已完整留痕，无信息损失；表现在为纯待判定表（13 项，与 skip-list `manual` 段一致）。
+- **AGENTS.md 同步**（工作区改动，**未提交**）：blockquote 补「表只保留待判定域名，定案记录以 changelog 为准」clause；文件内用户未完成的 SPEC/ 重构继续不打包。
+- **MEMORY.md 同步**（随本轮提交）：目录结构节与 Skill 流程裁决节补「表只保留待判定域名，定案记录只写 changelog」。
+- **自检**：`grep -c '^| [0-9]' issues-domain.md` = 13 = skip-list manual 段条目数；全文已无「定案记录」段残留；无 yaml 规则改动，不涉及 find_duplicates / safe_load。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-22 issues-domain 用户裁定：15 项落盘（direct 9 / proxy 6），13 项继续挂起（交互轮）
 
 - **触发**：用户对 `issues-domain.md` 待人工判定表给出裁定——**`.cn` 全部加入 `direct.yaml`；agent 判断高度归属国内的也加入 `direct.yaml`；不需要新建厂商文件**（海外知名公司杂项归 `proxy.yaml`）；无国内实证且无海外公司归属的继续挂起，不强行归类。

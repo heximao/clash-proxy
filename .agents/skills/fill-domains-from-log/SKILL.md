@@ -1,7 +1,7 @@
 ---
 name: fill-domains-from-log
-version: v2.8.0
-description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。证据不足无法判定归属的域名写入 issues-domain.md 待人工表（表格列出命中子域/次数/进程/已查证据/存疑点），留用户判定（v2.8.0 新增）。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
+version: v2.9.0
+description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。证据不足无法判定归属的域名写入 issues-domain.md 待人工表（表格列出命中子域/次数/进程/已查证据/存疑点），留用户判定；表只保留待判定域名，定案记录写 changelog。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
 # 从日志补漏域名
@@ -219,7 +219,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 
 **触发条件：第 6 步 RDAP/DoH 查询后仍无法判定归属的主域**（含判据 5「无锚点厂商文件」的大型公司主域，如 `jd.com` / `mi.com` / `zoom.us`——automation 不代建厂商文件）。除 changelog「待人工」段与 skip-list `manual` 外，**必须写入仓库根目录 `issues-domain.md` 待人工判定表**，留用户判定。
 
-**文件定位**：`issues-domain.md`（仓库根，已入 git 跟踪）是 skip-list `manual` 段的**人类可读表格视图**——skip-list 管机器过滤，本表管用户判定。只有 `manual` 类（待用户判定）进表；`skip` 类（已裁决不归类：无主端点、广告/追踪类、reject 上游已收录、伪域名/探针）不进表。
+**文件定位**：`issues-domain.md`（仓库根，已入 git 跟踪）是 skip-list `manual` 段的**人类可读表格视图**——skip-list 管机器过滤，本表管用户判定。只有 `manual` 类（待用户判定）进表；`skip` 类（已裁决不归类：无主端点、广告/追踪类、reject 上游已收录、伪域名/探针）不进表。**本文件只保留待判定域名**——定案去向与依据只写 `changelog.md`，本表不留定案记录段；行被移除即净出，表始终等于「当前待判定集合」。
 
 **表格列定义**（追加时每列必填，无数据填 `—`）：
 
@@ -363,7 +363,7 @@ push 并确认 `0 0` 后做四件收尾（changelog 条目本体已在第 10 步
 - Git：main 提交 <hash> 已推送，同步 0 0。
 ```
 
-2. **核对 `issues-domain.md`**：本轮新无法判定项已按第 6b 节登记（条目数 = skip-list manual 新增数）；用户本轮定案的项已从表中移除并同步 skip-list。
+2. **核对 `issues-domain.md`**：本轮新无法判定项已按第 6b 节登记（条目数 = skip-list manual 新增数）；用户本轮定案的项已从表中移除并同步 skip-list（定案记录只写 changelog，表不留定案段）。
 3. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。automation 轮产生新裁决项但 AGENTS.md 清单无法同步时，在 memory 日志标注「AGENTS.md 待同步」供下次交互式会话第 0 节对齐检查补齐。
 4. **完成日志归档**：按第 12 节执行。
 
