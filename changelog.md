@@ -1,5 +1,32 @@
 # 更新记录
 
+## 2026-10-22 漏网之鱼归类：拼多多、揽岳 Lexmount、支付宝/蚂蚁、Apple AMPAE 等 14 条补录（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-21_09-17-30`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 6、探针 0、私有 IP 0）：候选 114（`match Match` 43 / `oc-cn-domain` 71），归并主域 67、公网裸 IP 0；skip-list 命中 `skip` 13 行、`manual` 4 行。
+- **查重**：67 主域全走 stdin 喂 `check_coverage.py` → COVERED 49 / UNCOVERED 18（含 BRAND-ANCHOR 2）。
+- **补录明细**（14 条新增 + 1 条扩域替换、6 文件、5 个新分组，依据逐条留痕）：
+  - **拼多多 2 域 → `direct.yaml` 新组「拼多多」**：`pinduoduo.com`（abtk/apm-a/ta/th/xg 等 9 子域 oc 命中，国内电商巨头，用户 2026-10-22 裁定「高度归属国内 → direct.yaml」）、`pddpic.com`（pdd 品牌字面 + 与 pinduoduo.com 同批成组，img/avatar 子域图片 CDN）。
+  - **揽岳智能 2 域 → `direct.yaml` 新组「揽岳智能 Lexmount」**：`lexmount.com` + `lexmount.cn`（`browser.lexmount.com` firefox 访问；直连首页实证「Lexmount | AI Browser Infrastructure」+ © 深圳市揽岳智能科技有限公司 + 粤ICP备2025476131号，LexBrowser AI 云浏览器平台，高度归属国内；.cn 主域由官网 JS 显式 zh 分流（browser.lexmount.cn），判据 1 同标签 TLD 零歧义补录；RDAP 阿里云 HiChina 注册）。
+  - **支付宝 / 蚂蚁 2 域 → `alibaba.yaml` 新组「支付宝 / 蚂蚁集团」**：`alipay.com`（判据 5 alipay 品牌字面 + alibaba.yaml 阿里系文件已落盘；mdap. 端点 oc 命中；config.yaml「阿里巴巴」策略组默认 DIRECT）、`alipayobjects.com`（gw. 静态资源，RDAP NS1-4.ALIPAY.COM 蚂蚁自有 NS 实证）。
+  - **阿里 CDN 2 域 → `alibaba.yaml`「CDN / 云」组追加**：`aliapp.org`（RDAP CSC 企业注册 + ns3-5.aliyun.com 阿里云 NS 实证，cdn.ynuf. 安全 JS CDN）、`alibabachengdun.com`（alibaba 品牌字面判据 5 + RDAP NS1/2.ALIBABADNS.CN/COM 阿里自有 DNS 实证，mum. 阿里云成都端点）。
+  - `ampaeservices.com` → `apple.yaml` 新组「AMPAE Services」：RDAP COM LAUDE 品牌注册商 + A-D.NS.APPLE.COM 苹果自有 NS，DoH CNAME 链 `afs.ampaeservices.com → afs.ampservices.v.aaplimg.com → 17.57.10.x`（aaplimg.com Apple CDN 域 + AS714 IP 段）三重实证，Apple 媒体服务端点（afs. 无进程 oc 命中）。
+  - `muse.ai` → `proxy-ai.yaml`「AI 服务」组追加：首页标题「Muse — Your Personal AI Agent」实证，海外 AI 服务需代理（firefox 31 次）。
+  - `convex.dev` → `proxy.yaml`「漏网之鱼（2026-10-21 补录）海外杂项」组 convex.cloud 旁追加：判据 1 BRAND-ANCHOR `convex.cloud`@proxy.yaml 同标签 TLD 变体（上轮即以 convex.dev 官网标题实证补录 convex.cloud，本轮官网本体现身）。
+  - `cdn-go.cn` → `direct.yaml`「国内平台 / CDN 杂项」组追加：用户 2026-10-22 裁定「.cn 全部归 direct.yaml」（curl 1 次 oc 命中）。
+  - **RDAP 注册局端点 2 条 → `direct.yaml` 新组「域名查询 / RDAP」**：`DOMAIN,rdap.nic.download`、`DOMAIN,rdap.registry.cloud`（Agent 自用查询端点，AGENTS.md 已裁决先例 rdap.org/verisign.com/crt.sh → RDAP 组；精确主机避免兜注册局主域，同 rdap.centralnic.com 先例，curl 进程自证）。
+  - **`google.yaml` 扩域替换 1 条**：`DOMAIN-SUFFIX,a.run.app` → `DOMAIN-SUFFIX,run.app`（判据 1 BRAND-ANCHOR a.run.app@google.yaml；run.app 全域属 Google Cloud Run，本轮命中部署 URL `bded8a3c6ae-1-1053047382554.us-central1.run.app`；原 a.run.app 覆盖的 antigravity 更新器子域为新规则子集，语义不变）。
+- **未收录及原因**：
+  - `freloop.com` → **新挂起待人工**（manual）：NameCheap 注册（2025-05）+ Cloudflare NS + 首页 429 / 直连 SSL 失败，firefox 访问主域 3 次无产品指向——同 pixpix.com 模式，三处留痕（issues-domain.md #14 + skip-list `manual` + 本段）。
+  - `fbthirdpartypixel.com` → 广告/追踪类整批不落盘（Meta Pixel 第三方追踪域 metadotcom. 端点，先例 clarity.ms / mmstat.com），skip-list `skip`。
+  - `sc-static.net` → 广告/追踪类整批不落盘（Snap Pixel 静态资源域，firefox 6 次），skip-list `skip`。
+  - `this-url-does-not-exist-<uuid>.invalid` → RFC 2606 保留 TLD 连通性探针，伪域名不归类；skip-list 新增 `invalid` 后缀条目（后缀匹配覆盖未来 UUID 变体）。
+- **整批跳过**（skip-list `skip` 命中 13 行审计照抄）：`clarity.ms`（4 子域 30 行，reject 上游）、`statcounter.com`（2 子域 30 行，网站访问统计）、`mmstat.com`（6，阿里妈妈统计）、`taboola.com`（3 子域 10 行，内容推荐广告）、`antpeak.com` / `zorvian.com`（各 1，无主端点已裁决）、`cloudflareinsights.com`（1，reject 上游）。
+- **待人工确认**（manual-review 4 行照抄，前 3 项已在 issues-domain.md 表中不重复登记）：`sitemana.com`（p. ×8 Google Chrome Helper，连续第 3 轮）、`pixpix.com`（×5 firefox + www. ×1 curl，连续第 2 轮）、`byte-test.com`（perfops. ×6 firefox，连续第 2 轮）、`freloop.com`（×3 firefox，**本轮新登记**）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复基线 1 条（`settings.crashlytics.com` direct/google）不变，**本次新引入 0**——DUPLICATES.md 与 HEAD 逐字节一致；报告口径 68 跨文件 / 26 文件内系未跟踪归档目录 `followups/` 旧 yaml 副本（67 跨文件 + 3 文件内）+ `config.yaml` 策略组名噪声（23）+ 基线 1 叠加所致，均非本轮引入、非业务规则重复。`yaml.safe_load` 六文件通过（direct 267 / alibaba 13 / apple 103 / google 97 / proxy 885 / proxy-ai 37 payload）；14 条新增 + 1 条替换经 `check_coverage.py` 复核全部 COVERED（nic.download / registry.cloud 为 DOMAIN 精确主机命中，判据 8）。
+- **AGENTS.md 同步延后**：本轮 skip-list 新增 4 项（fbthirdpartypixel.com / sc-static.net / invalid `skip` + freloop.com `manual`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-22 fill-domains-from-log skill v2.9.0：issues-domain.md 只保留待判定域名，定案记录收敛到 changelog（main 直接提交，交互会话）
 
 - **触发**：用户要求——流程上 issues 只保留待处理的 domain，记录写到 changelog 就可以。

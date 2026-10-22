@@ -24,10 +24,22 @@
     "DOMAIN-SUFFIX,aliyun.com": [
       "alibaba.yaml"
     ],
+    "DOMAIN-SUFFIX,aliapp.org": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alibabachengdun.com": [
+      "alibaba.yaml"
+    ],
     "DOMAIN-SUFFIX,autonavi.com": [
       "alibaba.yaml"
     ],
     "DOMAIN-SUFFIX,amap.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alipay.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,alipayobjects.com": [
       "alibaba.yaml"
     ],
     "DOMAIN-SUFFIX,apple": [
@@ -94,6 +106,9 @@
       "apple.yaml"
     ],
     "DOMAIN-SUFFIX,mzstatic.com": [
+      "apple.yaml"
+    ],
+    "DOMAIN-SUFFIX,ampaeservices.com": [
       "apple.yaml"
     ],
     "DOMAIN-SUFFIX,apple.com.akadns.net": [
@@ -1869,6 +1884,27 @@
     "DOMAIN-SUFFIX,tcsdk.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,cdn-go.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,pinduoduo.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,pddpic.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lexmount.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lexmount.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN,rdap.nic.download": [
+      "direct.yaml"
+    ],
+    "DOMAIN,rdap.registry.cloud": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
@@ -2274,7 +2310,7 @@
     "DOMAIN-SUFFIX,antigravity.google": [
       "google.yaml"
     ],
-    "DOMAIN-SUFFIX,a.run.app": [
+    "DOMAIN-SUFFIX,run.app": [
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,app-analytics-services.com": [
@@ -3154,6 +3190,9 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,midjourney.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,muse.ai": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,jina.ai": [
@@ -5788,6 +5827,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,convex.cloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,convex.dev": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,mupdf.com": [

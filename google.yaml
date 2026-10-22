@@ -47,8 +47,8 @@ payload:
 # === Antigravity（重力实验/AI 相关） ===
   - DOMAIN-SUFFIX,antigravity.google 
 
-# === Google Cloud Run（2026-09-29 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,a.run.app
+# === Google Cloud Run（2026-09-29 漏网之鱼补录；2026-10-22 扩域 a.run.app → run.app 全域，原 a.run.app 覆盖为其子集）===
+  - DOMAIN-SUFFIX,run.app
 
   - DOMAIN-SUFFIX,app-analytics-services.com
   

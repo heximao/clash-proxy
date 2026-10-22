@@ -72,3 +72,9 @@ mmstat.com skip:广告/追踪类（友盟+/阿里妈妈网页统计 sg. 端点�
 # --- 2026-10-21 automation 轮证据不足留人工 ---
 pixpix.com manual:GoDaddy + Cloudflare 无主端点（firefox 访问 www. 主站 2 次），同 123169.xyz 模式，留人工
 byte-test.com manual:byte* 字面但注册模式（阿里云+alidns）与字节惯例（MarkMonitor+bytedns）不符，perfops 子域 CNAME bplslb.com（自有 bpldns NS）无定论，留人工
+
+# --- 2026-10-22 automation 轮新裁决 ---
+fbthirdpartypixel.com skip:广告/追踪类（Meta Pixel 第三方追踪域 metadotcom. 端点，先例 clarity.ms），整批不落盘
+sc-static.net skip:广告/追踪类（Snap Pixel 静态资源域），整批不落盘
+invalid skip:RFC 2606 保留 TLD 连通性探针（this-url-does-not-exist-* UUID 变体），伪域名不归类
+freloop.com manual:NameCheap + Cloudflare 无归属线索（firefox 访问主域 3 次，首页 429 / 直连 SSL 失败），同 pixpix.com 模式，留人工

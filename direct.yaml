@@ -347,3 +347,16 @@ payload:
   - DOMAIN-SUFFIX,sinaimg.cn
   - DOMAIN-SUFFIX,yhgfb-cn-static.com
   - DOMAIN-SUFFIX,tcsdk.com
+  - DOMAIN-SUFFIX,cdn-go.cn
+
+# === 拼多多（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,pinduoduo.com
+  - DOMAIN-SUFFIX,pddpic.com
+
+# === 揽岳智能 Lexmount（AI 云浏览器，2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,lexmount.com
+  - DOMAIN-SUFFIX,lexmount.cn
+
+# === 域名查询 / RDAP（2026-10-22 漏网之鱼补录）===
+  - DOMAIN,rdap.nic.download
+  - DOMAIN,rdap.registry.cloud

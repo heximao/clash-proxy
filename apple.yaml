@@ -30,6 +30,9 @@ payload:
   - DOMAIN-SUFFIX,cdn-apple.com
   - DOMAIN-SUFFIX,mzstatic.com
 
+# === AMPAE Services（Apple 媒体服务端点，2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,ampaeservices.com
+
 # === Akamai Technologies CDN for Apple ===
   - DOMAIN-SUFFIX,apple.com.akadns.net
   - DOMAIN-SUFFIX,me.com.akadns.net

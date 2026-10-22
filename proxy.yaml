@@ -1010,6 +1010,7 @@ payload:
   - DOMAIN-SUFFIX,signal.org
   - DOMAIN-SUFFIX,apify.com
   - DOMAIN-SUFFIX,convex.cloud
+  - DOMAIN-SUFFIX,convex.dev
   - DOMAIN-SUFFIX,mupdf.com
 
 # === Logitech（2026-10-22 漏网之鱼补录）===
