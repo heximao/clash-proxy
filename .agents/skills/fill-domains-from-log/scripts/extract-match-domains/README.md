@@ -20,7 +20,7 @@ python3 .../extract_match_domains.py --skip-list /path/to/other-skip-list.txt <�
 | `# domains` | 候选域名表：`域名 \| 类别(mm/oc) \| 次数 \| 进程(次数)`，按总次数降序 |
 | `# registrable` | 主域归并：`主域 <- 子域(次数), ...`，供 check-coverage 输入 |
 | `# public-ips` | 公网裸 IP（私有/保留段已过滤） |
-| `# manual-review` | skip-list `manual` 项本轮命中——待人工，不参与自动裁决 |
+| `# manual-review` | skip-list `manual` 项本轮命中——待人工，不参与自动裁决（已登记 `issues-domain.md` 待人工表的不重复登记，见 skill 第 6b 节） |
 | `# skipped` | skip-list `skip` 项本轮命中——审计记录 |
 
 ## 内置过滤
@@ -40,6 +40,10 @@ python3 .../extract_match_domains.py --skip-list /path/to/other-skip-list.txt <�
 
 **维护纪律**：每轮产生新的「已裁决不归类 / 待人工」结论后，落 changelog 的同时
 必须同步追加到 skip-list.txt，否则下轮会重复出现同样的候选。
+
+**`manual` 项的表格视图**：`manual` 模式条目另登记于仓库根 `issues-domain.md`
+待人工判定表（人类可读，留用户定夺；新 manual 项三处同留痕：skip-list +
+issues-domain.md + changelog，用户定案后三处同步移除）。细则见 skill 第 6b 节。
 
 ## 已知限制
 

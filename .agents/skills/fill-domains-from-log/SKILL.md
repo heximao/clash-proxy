@@ -1,7 +1,7 @@
 ---
 name: fill-domains-from-log
-version: v2.7.0
-description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
+version: v2.8.0
+description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。证据不足无法判定归属的域名写入 issues-domain.md 待人工表（表格列出命中子域/次数/进程/已查证据/存疑点），留用户判定（v2.8.0 新增）。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
 # 从日志补漏域名
@@ -37,6 +37,10 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
    │                            ↓
    └── 证据不足 → 6. 自主 RDAP / DoH 查询 → 据结果定夺
                               ↓
+              ┌─ 有结论 ───────────→ 7. 按自主裁决结论分类到规则文件
+              └─ 仍无结论 → 6b. 登记 issues-domain.md 待人工表
+                           + skip-list(manual) + changelog 待人工段
+                              ↓
  7. 按自主裁决结论分类到规则文件
       ↓
  8. 编辑格式（payload: 开头、DOMAIN-SUFFIX、# === 分组 ===）
@@ -52,7 +56,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
 
 **两条核心原则：**
 
-1. **归属判断自主裁决（2026-10-17 起取消 review 关卡）。** 粗判 + 必要时 RDAP/DoH 即为判断依据，每个决定须**留痕**（AGENTS.md 判据条号 / 进程名 / 域名语义 / RDAP 结果），写入 changelog 可追溯。证据不足且查询无结论的按既定规则兜底（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。用户主动介入给归属时以用户为准，但默认不主动询问用户。
+1. **归属判断自主裁决（2026-10-17 起取消 review 关卡）。** 粗判 + 必要时 RDAP/DoH 即为判断依据，每个决定须**留痕**（AGENTS.md 判据条号 / 进程名 / 域名语义 / RDAP 结果），写入 changelog 可追溯。证据不足且查询无结论的按既定规则兜底（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。**归属完全无法判定的（含判据 5 无锚点厂商文件的大型公司主域）登记 `issues-domain.md` 待人工表留用户判定（第 6b 节）**，与 skip-list `manual`、changelog 待人工段三处一致。用户主动介入给归属时以用户为准，但默认不主动询问用户。
 2. **动手前必须确认本地与远程一致。** main 与 `auto-merge-reject.yml` 工作流共管（每日 00:20 UTC 自动推送 `reject.yaml`），远程随时可能出现新提交；每轮开头和每次 commit 前都必须 fetch + 双向 `0 0` 校验，否则可能在过期基线上做查重判断。所有编辑直接在 main 上进行（2026-10-17 起取消分支制度）。
 
 ## 0. 同步准备（每轮开头必做，不可跳过）
@@ -91,6 +95,7 @@ git status -sb                                # 工作区干净（未跟踪文�
 
 - skip-list 有而 AGENTS.md / MEMORY.md 清单缺的已裁决项（典型：cron 轮新增裁决，automation 会话写 AGENTS.md 被 BLOCKED 遗留），补入对应清单行，恢复三处一致。
 - 用户已定案移除的 manual 项（skip-list 已删），同步从清单移除。
+- **`issues-domain.md` 待人工表 ↔ skip-list `manual` 段一致性**：表为 manual 项的人类可读表格视图（第 6b 节）。表中有而 skip-list 无（或反之）的，以 skip-list 为准对齐补表；用户只在表中划掉某行而未同步 skip-list 的，按用户已定案处理（补录 yaml 或转 skip，并补移除 skip-list 项）。
 - 对齐产生的 AGENTS.md / MEMORY.md 改动随本轮提交入库。
 
 AGENTS.md 是受保护文件，cron / automation 会话（无交互用户）中 patch 必被 BLOCKED——automation 轮**不要尝试**此步，不一致留给下一次交互式会话；skip-list 是运行时唯一数据源，清单短暂不一致不影响 automation 正确性。
@@ -124,12 +129,12 @@ python3 .agents/skills/fill-domains-from-log/scripts/extract-match-domains/extra
 | `# domains` | 候选域名表 `域名 \| 类别(mm/oc) \| 次数 \| 进程(次数)`，按总次数降序——第 4 步粗判的直接输入 |
 | `# registrable` | 主域归并 `主域 <- 子域(次数), ...`——check_coverage 的直接输入 |
 | `# public-ips` | 公网裸 IP（私有/保留段已过滤） |
-| `# manual-review` | skip-list `manual` 项本轮命中——待人工，不参与自动裁决，changelog「待人工确认」段照抄 |
+| `# manual-review` | skip-list `manual` 项本轮命中——待人工，不参与自动裁决，changelog「待人工确认」段照抄；**已在 `issues-domain.md` 表中的不重复登记**（第 6b 节） |
 | `# skipped` | skip-list `skip` 项本轮命中——changelog「整批跳过」段照抄即可，不再逐个判断 |
 
 脚本内置过滤（不再人工排除）：无 TLD 伪域名、探针族（`wpad`、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`、`root-key-sentinel-*`）、私有/保留 IP 段、skip-list 清单。
 
-**skip-list.txt 维护入口**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt` 是「已裁决结论」的机器可读映射（`skip`=静默跳过、`manual`=待人工可见）。每轮产生新的「已裁决不归类 / 待人工」结论后，落 changelog 的同时**必须同步追加**到该文件，否则下轮重复出现同样候选。反过来，人工已定案的 manual 项（用户给出归属）要从文件移除。
+**skip-list.txt 维护入口**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt` 是「已裁决结论」的机器可读映射（`skip`=静默跳过、`manual`=待人工可见）。每轮产生新的「已裁决不归类 / 待人工」结论后，落 changelog 的同时**必须同步追加**到该文件，否则下轮重复出现同样候选。反过来，人工已定案的 manual 项（用户给出归属）要从文件移除。**`manual` 项另有人类可读表格视图：仓库根 `issues-domain.md` 待人工表（第 6b 节）**——新 manual 项三处同留痕（skip-list + issues-domain.md + changelog），用户定案后三处同步移除。
 
 **AGENTS.md 清单同步（交互式会话专属动作，automation 轮禁止）**：skip-list 是已裁决项的**运行时唯一数据源**（提取脚本只读它）；AGENTS.md「已裁决结论」清单与 `.agents/memory/MEMORY.md` 同构清单是它的**人类可读快照**。AGENTS.md 是受保护文件，cron / automation 会话写它必被 patch 工具 BLOCKED（2026-10-18 实测）——automation 轮产生新裁决项时只落 skip-list + changelog，并在 changelog 条目标注「AGENTS.md 同步延后」；清单对齐由**交互式会话**在每轮第 0 节的对齐检查中完成。
 
@@ -188,10 +193,10 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 裁决规则：
 
 - **证据充分（`可定`）**：粗判依据明确（命中 AGENTS.md 判据条号、或进程名+域名语义双佐证、或同文件已有同类分组）→ 直接定归属文件，进入第 7 步落盘。
-- **证据不足（`待查`）**：进入第 6 节自主调用 RDAP / DoH / wayback 查询；查询有结论的据结果定夺，无结论的按既定兜底规则处理（见下）。
+- **证据不足（`待查`）**：进入第 6 节自主调用 RDAP / DoH / wayback 查询；查询有结论的据结果定夺，无结论的按既定兜底规则处理（见下），其中**归属完全无法判定的登记 `issues-domain.md` 待人工表**（第 6b 节）。
 - **已裁决项直接跳过**：AGENTS.md「已裁决结论」、skip-list 已收录项（reject 上游已收录如 `clarity.ms`、`jpush.cn` 等，无主端点，伪域名/探针族——提取脚本已自动消化，见 `# skipped` / `# manual-review` 段）——不查、不收、不归类。
-- **无主端点兜底**：Cloudflare NS + RDAP 无注册商实体 + 首页 429/空 + 直连超时 + 仅浏览器进程且无产品指向（典型 `antpeak.com` / `hibchr.com` / `zorvian.com`）→ 不归类，记 changelog「待人工」。
-- **杂项兜底**：国内经 RDAP/NS 确认归 `direct.yaml`；海外归 `proxy.yaml`；归属仍完全无法判定的记 changelog「待人工」并跳过落盘，不强行归类。
+- **无主端点兜底**：Cloudflare NS + RDAP 无注册商实体 + 首页 429/空 + 直连超时 + 仅浏览器进程且无产品指向（典型 `antpeak.com` / `hibchr.com` / `zorvian.com`）→ 不归类，记 changelog「待人工」（`skip` 模式，不进 issues-domain.md）。
+- **杂项兜底**：国内经 RDAP/NS 确认归 `direct.yaml`；海外归 `proxy.yaml`；归属仍完全无法判定的（含判据 5 无锚点厂商文件的大型公司主域，如 `jd.com` / `mi.com` / `zoom.us`——automation 不代建厂商文件）**登记 `issues-domain.md` 待人工表**（第 6b 节）+ skip-list `manual` + changelog「待人工」三处留痕，跳过落盘，不强行归类。
 
 **留痕要求**：每个归类决定在 changelog 写明依据（判据条号 / 进程名 / RDAP 结果），未归类项写明原因。这是自主模式下唯一的可追溯手段，不可省略。
 
@@ -207,8 +212,41 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 - **批量 RDAP**：写成 `/tmp/rdap.py` 循环 + 重试执行（heredoc 内联 python 会被安全策略拦截，见第 15 节环境坑）。
 - **DoH 存活检查**：`https_proxy=http://127.0.0.1:7893 curl -s "https://cloudflare-dns.com/dns-query?name=<domain>&type=A" -H "Accept: application/dns-json"` — `"Status":3`（NXDOMAIN）= 域名已失效，不归类。适合一次批量筛多个主域。
 - **辅助判**：`https://archive.org/wayback/available?url=<domain>` 查历史快照（走代理，高频会 429）；`urlscan.io` 搜索结果常直接暴露归属（如 `cmicapm.com` → China Mobile Group Guangdong）。
-- **查询结果据以定夺并留痕**：拿到 RDAP/外部证据后，结论与粗判不同或仍有歧义时，按查询结果修正裁决，不再回问用户。查询无结论的（隐私保护 + 首页 429/空 + 直连超时 + 仅浏览器进程）按第 5 节「无主端点兜底」处理——不归类，记 changelog「待人工」，并同步追加到 skip-list（`manual` 模式）。
-- **判定"无主端点"的标准**：Cloudflare NS + RDAP 无注册商实体 + 首页 429 或空响应 + 直连超时 + 发起进程仅浏览器且无产品指向 → 判定为无主广告/追踪端点。典型样例：antpeak.com / hibchr.com / zorvian.com（2026-10-04）。**这类默认不归类，记 changelog「待人工」并同步进 skip-list（`skip` 模式）；不主动询问用户。**
+- **查询结果据以定夺并留痕**：拿到 RDAP/外部证据后，结论与粗判不同或仍有歧义时，按查询结果修正裁决，不再回问用户。查询无结论的（隐私保护 + 首页 429/空 + 直连超时 + 仅浏览器进程）按第 5 节「无主端点兜底」处理——不归类，记 changelog「待人工」，并同步追加到 skip-list（`manual` 模式）。**其中需要用户定夺的（`manual` 模式）同时登记 `issues-domain.md` 待人工表，见第 6b 节。**
+- **判定"无主端点"的标准**：Cloudflare NS + RDAP 无注册商实体 + 首页 429 或空响应 + 直连超时 + 发起进程仅浏览器且无产品指向 → 判定为无主广告/追踪端点。典型样例：antpeak.com / hibchr.com / zorvian.com（2026-10-04）。**这类默认不归类，记 changelog「待人工」并同步进 skip-list（`skip` 模式）；`skip` 模式是已裁决不归类，不进 issues-domain.md，不主动询问用户。**
+
+## 6b. issues-domain.md 登记（证据不足项的最终去向）
+
+**触发条件：第 6 步 RDAP/DoH 查询后仍无法判定归属的主域**（含判据 5「无锚点厂商文件」的大型公司主域，如 `jd.com` / `mi.com` / `zoom.us`——automation 不代建厂商文件）。除 changelog「待人工」段与 skip-list `manual` 外，**必须写入仓库根目录 `issues-domain.md` 待人工判定表**，留用户判定。
+
+**文件定位**：`issues-domain.md`（仓库根，已入 git 跟踪）是 skip-list `manual` 段的**人类可读表格视图**——skip-list 管机器过滤，本表管用户判定。只有 `manual` 类（待用户判定）进表；`skip` 类（已裁决不归类：无主端点、广告/追踪类、reject 上游已收录、伪域名/探针）不进表。
+
+**表格列定义**（追加时每列必填，无数据填 `—`）：
+
+| 列 | 内容 |
+|---|---|
+| `#` | 序号，接续表尾 |
+| `域名` | 主域（归并后） |
+| `登记日期` | 首次挂起的日期（YYYY-MM-DD，取该轮 changelog 条目日期） |
+| `命中子域（次数）` | 日志实证子域与次数，注明轮次 |
+| `进程` | 发起进程名 |
+| `已查证据` | RDAP/DoH/BRAND-ANCHOR/判据条号等已完成的查证 |
+| `存疑点 / 待定夺` | 为什么定不了 + 需要用户定夺什么 |
+
+**追加规则**：
+
+- 新无法判定项**追加到表尾**；表整体按登记日期升序排列（最早挂起的排最前，长期未定案项保持可见）。
+- **已在表中的域名不重复登记**；本轮又命中的，在 changelog「待人工确认」段照抄命中行即可（热度信息可选更新到该行「命中子域（次数）」列）。
+- 文件不存在时（首轮）按「使用说明 + 表头」模板创建（模板见仓库现有 `issues-domain.md`）。
+- **命中子域/次数/进程必须从日志实证**（`# domains` / `# manual-review` 段或归档日志 grep），不得凭记忆填写。
+
+**用户定案闭环**（本表行的唯一移除途径）：
+
+1. 用户在表/对话中给出归属 → 按归属补录 yaml → **移除本表该行** + skip-list `manual` 项移除 + changelog 记录定案。
+2. 用户裁决不收录 → 移除本表该行 + skip-list 改 `skip` 模式 + AGENTS.md「已裁决结论」清单留痕（交互式会话动作）。
+3. **agent 不得自行移除行**（误登记需修正时，在 changelog 说明后改行，不静默删）。
+
+**automation 兼容性**：`issues-domain.md` 是普通仓库文件（不同于受保护的 AGENTS.md），automation 轮可直接追加并随本轮提交推送；行的移除只发生在用户定案后，由交互式会话执行。
 
 ## 7. 分类到规则文件（按自主裁决结论执行）
 
@@ -260,6 +298,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
    git status -sb
    git add direct.yaml github.yaml README.md scripts/find-duplicates/DUPLICATES.md changelog.md   # 显式列出，changelog.md 变更随提交入库
    ```
+   本轮如有 `issues-domain.md` 变更（第 6b 节新登记 / 用户定案后移除），一并显式暂存。
 2. **确认 `reject.yaml` 未被暂存**（`git diff --cached --name-only | grep -x reject.yaml` 必须无输出）。该文件由 bot 独占维护，人工提交带上它会与上游自动合并冲突。
 3. 提交信息用中文，一次逻辑变更一个提交，格式示例：
    ```
@@ -310,7 +349,7 @@ mv log/clashx-meta-log/<已处理文件夹> log/.archive/
 
 ## 13. 收尾核对与记忆
 
-push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步随提交写入，本节只核对不重写；若第 10 步遗漏，此处补写并在下轮补提交）：
+push 并确认 `0 0` 后做四件收尾（changelog 条目本体已在第 10 步随提交写入，本节只核对不重写；若第 10 步遗漏，此处补写并在下轮补提交）：
 
 1. **核对 changelog 条目已入库**：`git show --stat HEAD` 应包含 `changelog.md`。条目格式：
 
@@ -319,19 +358,22 @@ push 并确认 `0 0` 后做三件收尾（changelog 条目本体已在第 10 步
 
 - 数据来源：<日志路径>，提取未被本仓库规则覆盖的目标去重后共 N 个（`match Match` x 个、`oc-cn-domain` y 个）：<列表>。
 - <每个归类决定：规则、目标文件、归属依据>
-- <未归类项及原因：伪域名、已收录、自主裁决不归类（无主端点/证据不足待人工）等>
+- <未归类项及原因：伪域名、已收录、自主裁决不归类（无主端点/证据不足待人工——已登记 issues-domain.md）等>
 - 重复检查结果与语法校验结论。
 - Git：main 提交 <hash> 已推送，同步 0 0。
 ```
 
-2. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。automation 轮产生新裁决项但 AGENTS.md 清单无法同步时，在 memory 日志标注「AGENTS.md 待同步」供下次交互式会话第 0 节对齐检查补齐。
-3. **完成日志归档**：按第 12 节执行。
+2. **核对 `issues-domain.md`**：本轮新无法判定项已按第 6b 节登记（条目数 = skip-list manual 新增数）；用户本轮定案的项已从表中移除并同步 skip-list。
+3. **经验落记忆**：把本轮经验追加到 `.agents/memory/YYYY-MM-DD.md`（若产生新的归属判定经验，同步更新 `.agents/memory/MEMORY.md`；新的已裁决项同时更新 skip-list，见第 2 节维护入口）。automation 轮产生新裁决项但 AGENTS.md 清单无法同步时，在 memory 日志标注「AGENTS.md 待同步」供下次交互式会话第 0 节对齐检查补齐。
+4. **完成日志归档**：按第 12 节执行。
 
 ## 14. 硬性约束
 
 - **禁止跳过第 0 步同步准备（本地与远程一致性检查）。** 在旧基线上做查重与规则判断会得出错误结论。
 - **查重必须用 `scripts/check-coverage/check_coverage.py`（规则级判断）**，不得回退到 `grep -l <域名> *.yaml` 子串匹配（会误命中 `xxxx53.com` 这类假阳性、漏掉品牌标签锚点）。
 - **skip-list 是已裁决跳过项的唯一数据源**：`.agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt`。新的「已裁决不归类 / 待人工」结论落 changelog 时必须同步追加（`skip` / `manual`），用户定案的 manual 项要移除；禁止只写 changelog 不更新 skip-list。
+- **证据不足项三处留痕（v2.8.0 起）**：无法判定归属的主域必须同时落 changelog「待人工」段、skip-list `manual`、`issues-domain.md` 待人工表，禁止只记其一；`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进 issues-domain.md。
+- **`issues-domain.md` 行只许因用户定案移除**（补录 yaml 或裁决不收录两种闭环），agent 不得自行删行；误登记修正须在 changelog 说明。表中命中子域/次数/进程必须取日志实证，不得凭记忆填写。
 - **AGENTS.md 清单同步是交互式会话动作**：AGENTS.md 是受保护文件，cron / automation 会话写它必被 BLOCKED（2026-10-18 实测）——automation 轮只落 skip-list + changelog 即完整闭环（提取脚本只读 skip-list，下轮不受影响），禁止重试写 AGENTS.md；清单对齐走第 0 节对齐检查，延后到交互式会话完成。
 - **自主裁决须留痕**：每个归类决定在 changelog 写明依据（AGENTS.md 判据条号 / 进程名 / BRAND-ANCHOR / RDAP 结果 / 同文件同类分组），未归类项写明原因；证据不足且查询无结论的按兜底规则处理（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类、不凭感觉。
 - **第 4 步只做本地查重和粗判，禁止外部查询**；RDAP/DoH/wayback 等外部查询集中在第 6 节按需自主发起；代理 7893 不可用时待查项顺延下轮，不无限重试阻塞 automation。

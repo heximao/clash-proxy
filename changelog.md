@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-10-22 fill-domains-from-log skill v2.8.0：证据不足项登记 issues-domain.md 待人工表，既有 28 项 manual 挂起项种子导入（main 直接提交，交互会话）
+
+- **触发**：用户要求——对于证据不足无法判定归属的域名，写入 `issues-domain.md` 用表格列出，留用户判定。
+- **skill v2.8.0 改动**（`.agents/skills/fill-domains-from-log/SKILL.md`）：
+  - **新增第 6b 节「issues-domain.md 登记（证据不足项的最终去向）」**：第 6 步 RDAP/DoH 查询后仍无法判定归属的主域（含判据 5「无锚点厂商文件」的大型公司主域，如 `jd.com` / `mi.com` / `zoom.us`——automation 不代建厂商文件），在 changelog「待人工」+ skip-list `manual` 之外**必须写入仓库根 `issues-domain.md` 待人工表**（7 列：`# | 域名 | 登记日期 | 命中子域（次数） | 进程 | 已查证据 | 存疑点 / 待定夺`）；已在表不重复登记；按登记日期升序（长期挂起项保持可见）；命中数据必须取日志实证不得凭记忆；**行只许因用户定案移除**（补录 yaml 或裁决不收录两种闭环），agent 不得自行删行；`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进表；automation 可直接追加（非受保护文件）。
+  - 全文同步：处理流程框图（第 6 步后接 6b 分支）、核心原则 1（三处留痕）、第 0 节对齐检查（增 issues-domain.md ↔ skip-list manual 一致性）、第 2 节（manual-review 段与 skip-list 维护入口补表格视图）、第 5 节（裁决规则两条 bullet）、第 6 节（末两条 bullet）、第 10 节（暂存清单补 issues-domain.md）、第 13 节（changelog 模板 + 新增 issues-domain.md 核对项，收尾改四件）、第 14 节（新增两条硬性约束）。
+- **issues-domain.md 种子导入**（新文件，已入 git 跟踪）：既有 skip-list `manual` 全集 **28 项**一次性建表——2026-10-11~10-15 历史挂起 4 项（`oceanengine.com`、`ntp.org.cn`、`yhgfb-cn-static.com`、`logitech.io`，按 changelog「连续第 N 轮遗留」反推登记日期）、10-17 轮 4 项（`applogcdn.com`、`photon.codes`、`temu.com`、`mdoelscope.ai`）、10-18 轮 1 项（`logitechg.com`）、10-20 轮 10 项（`logitech.com`、`123169.xyz`、`111666.best`、`999831.xyz`、`yjz.hk`、`tsight.io`、`nsvcs.net`、`ns1pcdn.net`、`sitemana.com`、`featureassets.org`）、10-21 轮 9 项（`jd.com`、`mi.com`、`zoom.us`、`qualcomm.cn`、`cloudflare-cn.com`、`sinaimg.cn`、`tcsdk.com`、`pixpix.com`、`byte-test.com`）。**命中子域/次数/进程全部从 `log/.archive/` 已处理日志实测 grep 补全**（10-17/10-18/10-19/10-20 四批日志），非凭记忆填写。
+- **AGENTS.md 同步**（交互会话动作，已改工作区）：目录结构树补 `issues-domain.md` 行；「已裁决结论」blockquote 后补 `manual` 项表格视图说明。**注意：AGENTS.md 工作区另有用户未提交的 SPEC/ 重构改动（§3 followups / §6 SPEC / §13 git 指针，2026-10-19 晚引入），本轮未纳入提交**，留待用户自行处置；`.agents/memory/2026-10-19.md` 的 DNS 治理未提交改动同样未动。
+- **extract 脚本 README 同步**：manual-review 段与 skip-list.txt 节补 `issues-domain.md` 表格视图注记。
+- **自检**：issues-domain.md 28 行与 skip-list `manual` 段逐条比对一致（28 = 28）；`git status` 确认本轮仅暂存 5 个文件（SKILL.md / issues-domain.md / extract README / changelog.md / 当日 memory），`reject.yaml` 未暂存；无 yaml 规则改动，不涉及 find_duplicates / safe_load。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`。
+
 ## 2026-10-21 漏网之鱼归类：腾讯云系 9 域、网易 CDN、海外杂项等补录 42 规则（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-20_08-40-01`（cp 只读复制自 `~/.config/clash.meta/logs/`，昨日 1 个文件夹 5 个日志文件，含 2 个 core 日志——10-20 当天内核重启一次；`log/clashx-meta-log/` 无上轮遗留存量，cp 后 `diff -rq` 校验与源一致）。
