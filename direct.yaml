@@ -287,6 +287,7 @@ payload:
   - DOMAIN-SUFFIX,bosszhipin.com
   - DOMAIN-SUFFIX,kanzhun.com
   - DOMAIN-SUFFIX,c-ctrip.com
+  - DOMAIN-SUFFIX,qibingdaojia.com
 
 # === 国内招聘 / 生活服务（2026-10-06 漏网之鱼补录）===
   - DOMAIN-SUFFIX,aikobo.cn
@@ -348,6 +349,10 @@ payload:
   - DOMAIN-SUFFIX,yhgfb-cn-static.com
   - DOMAIN-SUFFIX,tcsdk.com
   - DOMAIN-SUFFIX,cdn-go.cn
+  - DOMAIN-SUFFIX,mihuashi.com
+  - DOMAIN-SUFFIX,bmcx.com
+  - DOMAIN-SUFFIX,szxhdz.com
+  - DOMAIN-SUFFIX,wxgateway.com
 
 # === 拼多多（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,pinduoduo.com
@@ -360,3 +365,21 @@ payload:
 # === 域名查询 / RDAP（2026-10-22 漏网之鱼补录）===
   - DOMAIN,rdap.nic.download
   - DOMAIN,rdap.registry.cloud
+
+# === 东方财富 / 东方财富证券（2026-10-23 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,eastmoney.com
+  - DOMAIN-SUFFIX,18.cn
+  - DOMAIN-SUFFIX,eastmoneysec.com
+  - DOMAIN-SUFFIX,dfcfw.com
+  - DOMAIN-SUFFIX,dfcfs.cn
+  - DOMAIN-SUFFIX,dflcs.cn
+  - DOMAIN-SUFFIX,emhudong.cn
+
+# === 银联 UnionPay（2026-10-23 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,95516.com
+  - DOMAIN-SUFFIX,cup.com.cn
+
+# === 奇虎 360（2026-10-23 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,360.cn
+  - DOMAIN-SUFFIX,qhimg.com
+  - DOMAIN-SUFFIX,qhres2.com

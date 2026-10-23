@@ -78,3 +78,6 @@ fbthirdpartypixel.com skip:广告/追踪类（Meta Pixel 第三方追踪域 meta
 sc-static.net skip:广告/追踪类（Snap Pixel 静态资源域），整批不落盘
 invalid skip:RFC 2606 保留 TLD 连通性探针（this-url-does-not-exist-* UUID 变体），伪域名不归类
 freloop.com manual:NameCheap + Cloudflare 无归属线索（firefox 访问主域 3 次，首页 429 / 直连 SSL 失败），同 pixpix.com 模式，留人工
+
+# --- 2026-10-23 automation 轮新裁决 ---
+codarka.com skip:无主端点（NameCheap 2025-05-12 新注册 + Cloudflare NS + www NXDOMAIN + 首页空，1 次命中无进程），同 antpeak.com 模式，已裁决不归类

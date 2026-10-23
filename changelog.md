@@ -1,5 +1,25 @@
 # 更新记录
 
+## 2026-10-23 漏网之鱼归类：东方财富系、银联、奇虎 360、字节电商 CDN 等 24 条补录（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-22_09-17-18`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 0、探针 0、私有 IP 0）：候选 177（`match Match` 16 / `oc-cn-domain` 161），归并主域 55、公网裸 IP 0；skip-list 命中 `skip` 21 行、`manual` 2 行。
+- **查重**：55 主域全走 stdin 喂 `check_coverage.py` → COVERED 30 / UNCOVERED 25（BRAND-ANCHOR 0）；25 主域逐一检索 changelog 历史均无往期判定记录（新候选）。
+- **补录明细**（24 域、4 文件、4 个新分组 + 2 处既有组追加，依据逐条留痕）：
+  - **东方财富系 7 域 → `direct.yaml` 新组「东方财富 / 东方财富证券」**：`eastmoney.com`（RDAP 阿里云 2002 老牌注册 + alidns NS，国内财经门户/证券，本轮 32 子域 securities/mobappconfig 等）、`18.cn`（DoH NS vip3/vip4.alidns.com 与 eastmoney.com 完全一致，东方财富证券官方主域，tradegateway/tradenoticemix 交易端点）、`eastmoneysec.com`（DoH NS alidns 同款 + east money sec 字面）、`dfcfw.com`（东方财富网缩写，gbfek/gbres 端点）、`dfcfs.cn`（dfcf* 命名族 + DoH NS alidns + .cn 按用户 10-22 裁定归 direct）、`dflcs.cn`（df* 命名族 + appserverlisttx 子域 tx/mix 后缀同 18.cn 交易端点命名模式 + DoH NS alidns）、`emhudong.cn`（em* 命名族与同轮 30+ eastmoney emXXX 端点一致 + DoH NS alidns + gbapi A 记录全国内云厂商 + .cn 裁定；官网标题空，归组以命名族与同款 NS 为据）。
+  - **银联 2 域 → `direct.yaml` 新组「银联 UnionPay」**：`95516.com`（95516 = 银联官方热线，appcashier 收银台 / base / open / switch / tysdk 支付 SDK 端点）、`cup.com.cn`（China UnionPay 缩写官方域名，antifraud / pay / bill 端点）。
+  - **奇虎 360 3 域 → `direct.yaml` 新组「奇虎 360」**：`360.cn`（360 品牌字面）、`qhimg.com`（Qihoo Image，jspassport.ssl 通行证）、`qhres2.com`（Qihoo Resources，s.ssl 静态资源）——用户 2026-10-22 裁定不新建厂商文件、高度归属国内归 direct。
+  - **`direct.yaml` 既有组追加 5 域**：`qibingdaojia.com` →「国内招聘 / 生活服务」组（首页标题实证「奇兵到家-全国家具,卫浴,智能锁,门窗,晾衣架-家居安装维修服务平台」+ RDAP 阿里云，wxapipreview 小程序预览端点 45 次）；`mihuashi.com`（首页标题「米画师 - 带给你自由、高效、专业的美术工作体验」+ RDAP 阿里云 2015 注册）、`bmcx.com`（RDAP 阿里云 HiChina 2005 老站 + alidns，便民查询网 wannianrili 万年日历）、`szxhdz.com`（官网标题「深圳市星火电子工程公司」+ RDAP 厦门易名注册 + DNSPod NS + 子域 CNAME 华为云 WAF）、`wxgateway.com`（RDAP DNSPod 注册 + dnsv5 NS + report-online.sh A 记录上海电信，tcsdk.com 同模式先例）→「国内平台 / CDN 杂项」组。
+  - **字节系 4 域 → `bytedance.yaml`**：`toutiao.com` → 主组 douyin.com 后追加（今日头条主域，zhanzhang 站长端点，判据 5 品牌字面 + 厂商文件已落盘）；`ecombdimg.com`、`bytegoofy.com`、`bytelb.net` →「字节系 CDN / 配置」组追加——`ecombdimg.com`（抖店官方文档 op.jinritemai.com 实证 `.ecombdimg.com/obj/ecom-shop` 商品图片 URL + ICP 备案「电商静态资源服务」+ RDAP 阿里云注册，抖音电商图片静态资源域，DoH CNAME 白山云 bsgslb.com 调度国内 IP；判据 5）、`bytegoofy.com`（byte 命名族判据 4 + lf1-cdn-tos Feishu CDN 模式同 larkoffice / feishucdn 先例）、`bytelb.net`（byte 命名族判据 4 + direct-dualstack.eeft-lb-v3.lf 子域 + Lark Helper 进程，字节负载均衡端点）。
+  - **海外杂项 2 域 → `proxy.yaml` 新组「漏网之鱼（2026-10-23 补录）海外杂项」**：`ctfassets.net`（Contentful Assets CDN，海外 headless CMS 标准资源域 images.ctfassets.net）、`statsigapi.net`（Statsig 实验平台 API 端点域，海外 SaaS）。
+  - `unsloth.ai` → `proxy-ai.yaml`「AI 服务」组追加：Unsloth 开源 LLM 微调框架文档站（docs. 子域，WebKit 进程），同 muse.ai / mistral.ai / midjourney.com 先例。
+- **未收录及原因**：`codarka.com` → 无主端点不归类（RDAP NameCheap 2025-05-12 新注册 + Cloudflare NS + www NXDOMAIN + 首页空响应，1 次命中无进程指向），同 antpeak.com / hibchr.com / zorvian.com 模式，skip-list `skip`。
+- **整批跳过**（skip-list `skip` 命中 21 行审计照抄）：`cloudflareinsights.com`（2 子域 20 行，reject 上游）、`statcounter.com`（1 子域 8 行，网站访问统计）、`antpeak.com`（6 行，无主端点已裁决）、`clarity.ms`（4 子域 12 行，reject 上游）、`zorvian.com`（6 行，无主端点）、`hibchr.com`（2 子域 7 行，无主端点）、`etahub.com`（4 行，reject 上游）、`mmstat.com`（4 行，阿里妈妈统计）、`taboola.com`（2 子域 4 行，内容推荐广告）、`jpush.cn`（6 子域 6 行，reject 上游）。
+- **待人工确认**（manual-review 2 行照抄，均已在 issues-domain.md 表中不重复登记）：`freloop.com`（×5：curl ×2 疑为上轮 automation RDAP 自查流量回写进 10-22 日志、其余 3 次同上轮 firefox 模式，连续第 2 轮）、`sitemana.com`（p. ×2 Google Chrome Helper，连续第 4 轮）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——本轮 24 个新域名在 DUPLICATES.md 中 0 出现（DUPLICATES.md 与 HEAD 一致）；报告口径 68 跨文件 / 26 文件内系未跟踪归档目录 `followups/` 旧 yaml 副本（67 跨 + 3 内）+ `config.yaml` 策略组名噪声（23）+ 基线 1 叠加，均非本轮引入。`yaml.safe_load` 四文件通过（payload 条数：direct 284 / bytedance 30 / proxy 887 / proxy-ai 38，均与上轮基线 + 本次新增数吻合）；24 条新规则经 `check_coverage.py` 复核全部 COVERED（covered 24 / uncovered 0）。
+- **AGENTS.md 同步延后**：本轮 skip-list 新增 1 项（codarka.com `skip`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-22 漏网之鱼归类：拼多多、揽岳 Lexmount、支付宝/蚂蚁、Apple AMPAE 等 14 条补录（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-21_09-17-30`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。

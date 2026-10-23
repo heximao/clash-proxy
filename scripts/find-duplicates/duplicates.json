@@ -441,6 +441,9 @@
     "DOMAIN-SUFFIX,douyin.com": [
       "bytedance.yaml"
     ],
+    "DOMAIN-SUFFIX,toutiao.com": [
+      "bytedance.yaml"
+    ],
     "DOMAIN-SUFFIX,feishu.cn": [
       "bytedance.yaml"
     ],
@@ -505,6 +508,15 @@
       "bytedance.yaml"
     ],
     "DOMAIN-SUFFIX,bytecdn.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,ecombdimg.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytegoofy.com": [
+      "bytedance.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytelb.net": [
       "bytedance.yaml"
     ],
     "DOMAIN-SUFFIX,claude.ai": [
@@ -1794,6 +1806,9 @@
     "DOMAIN-SUFFIX,c-ctrip.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,qibingdaojia.com": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,aikobo.cn": [
       "direct.yaml"
     ],
@@ -1887,6 +1902,18 @@
     "DOMAIN-SUFFIX,cdn-go.cn": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,mihuashi.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,bmcx.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,szxhdz.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,wxgateway.com": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,pinduoduo.com": [
       "direct.yaml"
     ],
@@ -1903,6 +1930,42 @@
       "direct.yaml"
     ],
     "DOMAIN,rdap.registry.cloud": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,eastmoney.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,18.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,eastmoneysec.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dfcfw.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dfcfs.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dflcs.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,emhudong.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,95516.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cup.com.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,360.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qhimg.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,qhres2.com": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -3193,6 +3256,9 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,muse.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,unsloth.ai": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,jina.ai": [
@@ -5851,6 +5917,12 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,photon.codes": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ctfassets.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,statsigapi.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [
