@@ -42,6 +42,9 @@
     "DOMAIN-SUFFIX,alipayobjects.com": [
       "alibaba.yaml"
     ],
+    "DOMAIN-SUFFIX,umeng.com": [
+      "alibaba.yaml"
+    ],
     "DOMAIN-SUFFIX,apple": [
       "apple.yaml"
     ],
@@ -1115,6 +1118,12 @@
     "DOMAIN-SUFFIX,sensecoreapi.cn": [
       "direct-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,bigmodel.cn": [
+      "direct-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,z.ai": [
+      "direct-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com": [
       "direct.yaml"
     ],
@@ -1792,6 +1801,36 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,ksord.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,kdocs.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,docer.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ksyun.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ksyuncs.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,wpsdns.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,smzdm.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zdmimg.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,hzchengdun.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,soboten.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensorsdata.cn": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,zhipin.com": [
@@ -2686,6 +2725,12 @@
       "hk-broker.yaml"
     ],
     "DOMAIN-SUFFIX,wbkrs.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,longbridgeapp.com": [
+      "hk-broker.yaml"
+    ],
+    "DOMAIN-SUFFIX,pbkrs.com": [
       "hk-broker.yaml"
     ],
     "DOMAIN-SUFFIX,usmart.hk": [
@@ -6136,6 +6181,9 @@
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,cloudcachetci.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,tlivesdk.com": [
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,codebuddy.cn": [

@@ -1,5 +1,27 @@
 # 更新记录
 
+## 2026-10-24 漏网之鱼归类：金山系 5 域、智谱 AI 2 域、长桥 2 域、友盟、腾讯直播 SDK 等 16 域补录，穿山甲广告系 4 域不落盘（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-23_08-33-17`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 14、探针 0、私有 IP 0）：候选 247（`match Match` 4 / `oc-cn-domain` 243），归并主域 61、公网裸 IP 0；skip-list 命中 `skip` 10 行、`manual` 1 行。
+- **查重**：61 主域全走 stdin 喂 `check_coverage.py` → COVERED 40 / UNCOVERED 21（BRAND-ANCHOR 0）；21 未覆盖主域逐一检索 changelog 历史均无往期判定记录（新候选）。
+- **补录明细**（16 域、5 文件、3 个新分组 + 3 处既有组追加，依据逐条留痕）：
+  - **金山系 5 域 → `direct.yaml` 既有「金山办公 / WPS」组追加**：`kdocs.cn`（金山文档，WPS 在线文档，判据 2 同厂商兄弟域——direct 金山组已有 wps.cn/wpscdn.cn/qwps.cn/ksosoft.com/ksord.com；.cn 按用户 10-22 裁定）、`docer.com`（WPS 稻壳内容市场，命中子域 wps-docer-property.file.docer.com 自证 WPS 归属）、`ksyun.com`（金山云，ks3-cn-beijing 对象存储端点）、`ksyuncs.com`（金山云存储域变体，同轮 ksyun 成组先例）、`wpsdns.com`（WPS DNS，ksopush 推送端点，wps 前缀命名族）。
+  - **国内导购 / 数据服务 5 域 → `direct.yaml` 新组「国内电商导购 / 数据服务」**：`smzdm.com`（什么值得买，国内知名导购平台，RDAP eName 2010 老牌注册 + DNSV5 NS 国内实证，用户 10-22 裁定「高度归属国内 → direct、不新建厂商文件」；22 子域 analytics-api 等高频）、`zdmimg.com`（smzdm 图片 CDN：zdm+img 命名 + RDAP eName/DNSV5 与 smzdm.com 完全同款，判据 3 主域+同品牌衍生域成对）、`hzchengdun.com`（杭州诚盾，RDAP 阿里云 HiChina + ALIBABADNS NS + A 记录 59.82.x 国内）、`soboten.com`（DNSPod 注册 + DoH CNAME 阿里云高防 aliyunddos1020.com，高度国内；soboten 与智齿 sobot.com 标签不同不适用判据 1）、`sensorsdata.cn`（神策数据，国内用户行为分析 SDK，.cn 按用户 10-22 裁定）。
+  - `umeng.com` → `alibaba.yaml` 新组「友盟+ / Umeng」：友盟+，RDAP 阿里云注册 + NS 全 ALIBABADNS（阿里收购系实证），alibaba.yaml 已有独立子品牌先例（taobao/tmall/amap/alipay），判据 2 同厂商兄弟域 + 文件内成组约定；cnlogs/aspect-upush/errnewlog 等统计推送端点为功能性 SDK 非纯广告。
+  - `tlivesdk.com` → `tencent.yaml` 既有「腾讯云」组追加：腾讯云 MLVB（移动直播）SDK 拉流域名（mlvbdc 子域 + 哈希前缀推拉流模式为腾讯云直播典型特征 + DNSPod 腾讯系注册 + 2024 新注册带 transfer/update prohibited 腾讯批量特征），tencent.yaml 已有腾讯云独立主域先例（myqcloud/qcloud/tencentcloud）。
+  - **长桥证券 2 域 → `hk-broker.yaml` 既有「券商」组追加**：`longbridgeapp.com`（api-status 长桥 App 服务端，判据 2 同厂商兄弟域——文件已有 longbridge.com/.cn/longbridgewhale）、`pbkrs.com`（pub. 端点，bkrs 命名族与文件内 lbkrs.com/wbkrs.com/wbrks.com 同词根 + DoH CNAME 阿里云香港 ALB（长桥基建特征），判据 3 成对先例）。
+  - **智谱 AI 2 域 → `direct-ai.yaml` 新组「智谱 AI / Z.ai」**：`bigmodel.cn`（智谱开放平台，.cn 国内大模型）、`z.ai`（智谱 AI 国际品牌 Z.AI（北京智谱华章，SEHK: 2513），zcode.z.ai 为 ZCode AI coding agent 官网（Wikipedia/官网实证）；oc-cn-domain 命中即 OpenClash 判定 CN 直连可达 + firefox 16 次访问成功，直连实证归 direct-ai；DoH CNAME 阿里云新加坡 ALB 仅为托管位置）。
+- **未收录及原因**（广告/追踪类整批不落盘纪律，skip-list `skip` 4 项，先例 pangle-ads.com）：
+  - `pangolin-sdk-toutiao.com` / `pangolin-sdk-toutiao1.com` → 字节穿山甲广告联盟 SDK（api-access 端点），skip-list `skip`。
+  - `pglstatp-toutiao.com` → 穿山甲视频素材 CDN（pgl=pangolin；sf*-fe-tos/p26-be-pack-sign 端点；anti-AD GitHub issue #494 收录请求 + Netify 关联 TouTiao 应用双重佐证），skip-list `skip`。
+  - `adhuanxiao.com` → 广告 SDK 疑似（ad 前缀 + sdk. 端点 + 火山引擎云托管 180.184.x，注册商新网与字节惯例不符判第三方广告公司，主体不明），skip-list `skip`。
+- **整批跳过**（skip-list `skip` 命中 10 行审计照抄）：`antpeak.com`（14，无主端点）、`zorvian.com`（14，无主端点）、`hibchr.com`（12 含 plus.，无主端点）、`sg.mmstat.com`（3，阿里妈妈统计）、`static.cloudflareinsights.com`（2，reject 上游）、`www.clarity.ms`（2，reject 上游）、`www.codarka.com`（2，无主端点）、`ali-stats.jpush.cn`（1，reject 上游）、`this-url-does-not-exist-<uuid>.invalid`（1，RFC 2606 保留 TLD 探针）。
+- **待人工确认**：`mdoelscope.ai`（manual-review 照抄：仿冒域 5 次 firefox，已在 issues-domain.md 表中不重复登记，待用户确认转 skip）；`wdfl.co` → **本轮新挂起**（manual：.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次命中无进程，无归属线索，三处留痕 issues-domain.md #15 + skip-list `manual` + 本段）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——16 个新域名在 DUPLICATES.md 中 0 出现，DUPLICATES.md 与 HEAD 一致（duplicates.json 全量数据随规则数更新 +48 行）；报告口径 68 跨文件 / 26 文件内系未跟踪归档目录 `followups/` 旧 yaml 副本 + `config.yaml` 策略组名噪声（23）+ 基线 1 叠加，均非本轮引入。`yaml.safe_load` 五文件通过（payload：direct 294 / alibaba 14 / tencent 27 / hk-broker 12 / direct-ai 14，均与上轮基线 + 本次新增数吻合）；16 条新规则经 `check_coverage.py` 复核全部 COVERED（covered 16 / uncovered 0）。
+- **AGENTS.md 同步延后**：本轮 skip-list 新增 5 项（pangolin-sdk-toutiao.com / pangolin-sdk-toutiao1.com / pglstatp-toutiao.com / adhuanxiao.com `skip` + wdfl.co `manual`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-23 漏网之鱼归类：东方财富系、银联、奇虎 360、字节电商 CDN 等 24 条补录（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-22_09-17-18`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。

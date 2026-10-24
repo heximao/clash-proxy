@@ -13,7 +13,7 @@
 - **不进表的类**（已裁决，无需用户判定）：无主端点（`antpeak.com` 类）、广告/追踪类、reject 上游已收录、伪域名/探针族——均为 skip-list `skip` 模式。
 - **automation 说明**：本文件是普通仓库文件（不同于受保护的 AGENTS.md），automation 轮可直接追加并随轮提交推送；行的移除只发生在用户定案后。
 
-## 待判定域名（共 14 项）
+## 待判定域名（共 15 项）
 
 | # | 域名 | 登记日期 | 命中子域（次数） | 进程 | 已查证据 | 存疑点 / 待定夺 |
 |---|---|---|---|---|---|---|
@@ -31,5 +31,6 @@
 | 12 | pixpix.com | 2026-10-21 | www. / pixpix.com（各 ×1，10-20 日志） | firefox | GoDaddy + Cloudflare 无主端点（同 `123169.xyz` 模式） | 归属待定 |
 | 13 | byte-test.com | 2026-10-21 | perfops.（×2，10-20 日志） | firefox | byte* 字面但注册模式（阿里云 + alidns NS，2021 注册）与字节惯例（MarkMonitor + bytedns）不符；CNAME `bplslb.com`（自有 bpldns NS）无定论 | 阿里云/alidns 国内倾向但非「高度国内」实证——直连还是代理待定夺 |
 | 14 | freloop.com | 2026-10-22 | freloop.com（×3，10-21 日志） | firefox | NameCheap 注册（2025-05）+ Cloudflare NS + A 记录，首页 429 / 直连 SSL 失败，无归属线索 | 同 pixpix.com / 123169.xyz 模式，归属待定 |
+| 15 | wdfl.co | 2026-10-24 | r.（×1，10-23 日志） | — | .co 无 RDAP 数据；主域无 A 记录；r. 子域 CNAME CloudFront（AWS）短链端点 | 无品牌指向、无进程，短链服务归属待定 |
 
 > 登记日期说明：2026-10-17 之前挂起的历史项按 changelog「连续第 N 轮遗留」反推取近似值；其余为首次挂起轮的 changelog 条目日期。

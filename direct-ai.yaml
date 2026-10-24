@@ -15,3 +15,6 @@ payload:
   - DOMAIN-SUFFIX,sensenova.cn
   - DOMAIN-SUFFIX,sensecore.cn
   - DOMAIN-SUFFIX,sensecoreapi.cn
+  # === 智谱 AI / Z.ai（2026-10-24 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bigmodel.cn
+  - DOMAIN-SUFFIX,z.ai

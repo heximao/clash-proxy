@@ -81,3 +81,10 @@ freloop.com manual:NameCheap + Cloudflare 无归属线索（firefox 访问主域
 
 # --- 2026-10-23 automation 轮新裁决 ---
 codarka.com skip:无主端点（NameCheap 2025-05-12 新注册 + Cloudflare NS + www NXDOMAIN + 首页空，1 次命中无进程），同 antpeak.com 模式，已裁决不归类
+
+# --- 2026-10-24 automation 轮新裁决 ---
+pangolin-sdk-toutiao.com skip:广告/追踪类（字节穿山甲广告联盟 SDK api-access 端点，先例 pangle-ads.com），整批不落盘
+pangolin-sdk-toutiao1.com skip:广告/追踪类（穿山甲 SDK 域名变体，同 pangolin-sdk-toutiao.com），整批不落盘
+pglstatp-toutiao.com skip:广告/追踪类（pgl=pangolin 穿山甲视频素材 CDN，sf*-fe-tos/p26-be-pack-sign 端点，anti-AD issue #494 收录请求 + Netify 关联 TouTiao 应用；先例 pangle-ads.com），整批不落盘
+adhuanxiao.com skip:广告/追踪类（ad 前缀 + sdk. 端点，火山引擎云托管 180.184.x，主体不明，广告 SDK 特征），整批不落盘
+wdfl.co manual:.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次命中无进程，无归属线索，留人工

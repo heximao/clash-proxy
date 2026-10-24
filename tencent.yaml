@@ -17,6 +17,7 @@ payload:
   - DOMAIN-SUFFIX,tencent-cloud.com
   - DOMAIN-SUFFIX,tencentcs.cn
   - DOMAIN-SUFFIX,cloudcachetci.com
+  - DOMAIN-SUFFIX,tlivesdk.com
 # === 腾讯主域 / CodeBuddy（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,codebuddy.cn
   - DOMAIN-SUFFIX,ardot.tencent.com
