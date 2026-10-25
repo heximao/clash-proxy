@@ -26,3 +26,4 @@ payload:
 # === 网易门户 / CDN（2026-10-21 漏网之鱼补录）===
   - DOMAIN,www.163.com
   - DOMAIN-SUFFIX,127.net
+  - DOMAIN-SUFFIX,321fenx.com

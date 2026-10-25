@@ -88,3 +88,7 @@ pangolin-sdk-toutiao1.com skip:广告/追踪类（穿山甲 SDK 域名变体，�
 pglstatp-toutiao.com skip:广告/追踪类（pgl=pangolin 穿山甲视频素材 CDN，sf*-fe-tos/p26-be-pack-sign 端点，anti-AD issue #494 收录请求 + Netify 关联 TouTiao 应用；先例 pangle-ads.com），整批不落盘
 adhuanxiao.com skip:广告/追踪类（ad 前缀 + sdk. 端点，火山引擎云托管 180.184.x，主体不明，广告 SDK 特征），整批不落盘
 wdfl.co manual:.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次命中无进程，无归属线索，留人工
+
+# --- 2026-10-25 automation 轮新裁决 ---
+sigmob.cn skip:广告/追踪类（Sigmob 移动广告聚合平台 dc./tm. SDK 端点，先例 mmstat.com），整批不落盘
+checktrustworthiness.com manual:AWS Route53 NS + 主域无 A 记录 + global-iuni. 子域 CNAME AWS US-East ALB，checktrustworthiness 追踪/信誉检查语义无品牌指向，留人工

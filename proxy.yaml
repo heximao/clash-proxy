@@ -1026,3 +1026,8 @@ payload:
 # === 漏网之鱼（2026-10-23 补录）海外杂项 ===
   - DOMAIN-SUFFIX,ctfassets.net
   - DOMAIN-SUFFIX,statsigapi.net
+
+# === 漏网之鱼（2026-10-25 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,wistia.com
+  - DOMAIN-SUFFIX,wistia.net
+  - DOMAIN-SUFFIX,qualtrics.com

@@ -365,6 +365,11 @@ payload:
   - DOMAIN-SUFFIX,bmcx.com
   - DOMAIN-SUFFIX,szxhdz.com
   - DOMAIN-SUFFIX,wxgateway.com
+  - DOMAIN-SUFFIX,growingio.com
+  - DOMAIN-SUFFIX,yupaowang.com
+  - DOMAIN-SUFFIX,cdqlkj.cn
+  - DOMAIN-SUFFIX,zgzpsjz.com
+  - DOMAIN-SUFFIX,giocdn.com
 
 # === 拼多多（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,pinduoduo.com

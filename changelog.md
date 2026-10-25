@@ -1,5 +1,24 @@
 # 更新记录
 
+## 2026-10-25 漏网之鱼归类：国内数据/CDN 5 域、海外视频调研 3 域、网易系 1 域补录，Sigmob 广告 skip、checktrustworthiness 留人工（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-24_08-18-26`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 4、探针 0、私有 IP 0）：候选 151（`match Match` 22 / `oc-cn-domain` 129），归并主域 70、公网裸 IP 0；skip-list 命中 `skip` 10 行（6 主域）、`manual` 6 行（5 主域）。
+- **查重**：70 主域全走 stdin 喂 `check_coverage.py` → COVERED 57 / UNCOVERED 12（BRAND-ANCHOR 3，均属 `163.com` 同标签 TLD 变体锚点 netease-music.yaml）。
+- **补录明细**（9 域、3 文件、1 个新分组 + 2 处既有组追加，依据逐条留痕）：
+  - **`direct.yaml` 既有「国内平台 / CDN 杂项」组追加 5 域**：`growingio.com`（DoH NS vip3/vip4.alidns.com 国内 + A 117.50.x 国内 IP，GrowingIO 国内用户行为分析平台，api-os 端点）、`yupaowang.com`（DoH NS alidns + A CNAME prod-mse-external-lb → 123.56/39.97 阿里云北京 + HTTP 301 重定向 yupao.com 玉拍文玩平台，国内）、`cdqlkj.cn`（`.cn` 按用户 10-22 裁定 + DoH NS alidns + A CNAME prod-mse-external-lb.yupaowang.com，与 yupaowang 同系统同款 NS）、`zgzpsjz.com`（DoH NS alidns + A 39.107.57.143 阿里云北京，staticscdn 静态 CDN 端点）、`giocdn.com`（DoH NS dns17/18.hichina.com 阿里万网国内注册 + assets 子域 CNAME giocdn.com.edgekey.net Akamai CDN，国内注册商实证）。
+  - **`proxy.yaml` 新组「漏网之鱼（2026-10-25 补录）海外杂项」3 域**：`wistia.com`（Wistia 海外视频托管平台，Obsidian Helper 访问 fast/embed-ssl/distillery/pipedream 端点）、`wistia.net`（判据 1 同品牌 `wistia.com` TLD 变体，同批补录）、`qualtrics.com`（Qualtrics 海外调研/体验管理平台 SAP 收购，siteintercept 网站拦截调研端点 + zncvyyewtkgdypjbg-riotgames 哈希定制前缀，非纯广告追踪）。
+  - **`netease-music.yaml` 既有「网易门户 / CDN」组追加 1 域**：`321fenx.com`（DoH NS ns1-8.nease.net + ns1-6.166.com 网易自有 + A 42.186.x 网易 IP 段，同 `127.net` 先例 2026-10-21 判据；nstool. 子域 DNS 工具端点）。
+- **不补录**：`163.com`（BRAND-ANCHOR 锚点 netease-music.yaml，命中 `www.163.com` 已被 `DOMAIN,www.163.com`@netease-music.yaml:27 精确覆盖——判据 8 精确主机规则 ≠ 主域覆盖，回看命中行规则类型该命中已覆盖；2026-10-21 轮故意用精确主机而非主域，本轮不补 `DOMAIN-SUFFIX,163.com`）。
+- **未收录及原因**：
+  - `sigmob.cn` → 广告/追踪类整批不落盘（Sigmob 移动广告聚合平台 dc./tm. SDK 端点，DoH NS alidns 国内但属广告 SDK；先例 `mmstat.com`），skip-list `skip`。
+  - `checktrustworthiness.com` → 证据不足留人工（DoH NS AWS Route53 + 主域无 A 记录 + `global-iuni.` 子域 CNAME alb-*.us-east-1.alb.aliyuncs.com AWS US-East ALB + checktrustworthiness 追踪/信誉检查语义无品牌实锤），三处留痕 skip-list `manual` + `issues-domain.md` #16 + 本段。
+- **整批跳过**（skip-list `skip` 命中 10 行审计照抄）：`mmstat.com`（12，阿里妈妈统计）、`jpush.cn`（8 含 ali-stats/config/user/gd-stats 四子域，reject 上游）、`antpeak.com`（2，无主端点）、`zorvian.com`（2，无主端点）、`hibchr.com`（2 含 plus.，无主端点）、`cloudflareinsights.com`（1，reject 上游）。
+- **待人工确认**（manual-review 6 行照抄，前 5 项已在 issues-domain.md 表中不重复登记）：`byte-test.com`（perfops.×6 firefox）、`pixpix.com`（×4 + www.×1 firefox）、`featureassets.org`（×2 firefox）、`nsvcs.net`（ingesteer.services-prod.×2 firefox）、`mdoelscope.ai`（×1 firefox，仿冒待用户确认转 skip）；**本轮新挂起** `checktrustworthiness.com`（global-iuni.×2，登记 #16）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——9 个新域名在 DUPLICATES.md 中 0 出现（DUPLICATES.md 与 HEAD 一致）；`duplicates.json` +27 行（全量数据随规则数增加）。`yaml.safe_load` 三文件通过（payload：direct 299 / proxy 890 / netease-music 27，均与上轮基线 + 本次新增数吻合）；9 条新规则经 `check_coverage.py` 复核全部 COVERED（covered 9 / uncovered 0）。
+- **AGENTS.md 同步延后**：本轮 skip-list 新增 2 项（`sigmob.cn` `skip` + `checktrustworthiness.com` `manual`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-24 漏网之鱼归类：金山系 5 域、智谱 AI 2 域、长桥 2 域、友盟、腾讯直播 SDK 等 16 域补录，穿山甲广告系 4 域不落盘（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-23_08-33-17`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。

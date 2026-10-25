@@ -1953,6 +1953,21 @@
     "DOMAIN-SUFFIX,wxgateway.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,growingio.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,yupaowang.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdqlkj.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,zgzpsjz.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,giocdn.com": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,pinduoduo.com": [
       "direct.yaml"
     ],
@@ -3184,6 +3199,9 @@
       "netease-music.yaml"
     ],
     "DOMAIN-SUFFIX,127.net": [
+      "netease-music.yaml"
+    ],
+    "DOMAIN-SUFFIX,321fenx.com": [
       "netease-music.yaml"
     ],
     "DOMAIN-SUFFIX,go.nvidianews.com": [
@@ -5968,6 +5986,15 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,statsigapi.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wistia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wistia.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,qualtrics.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [
