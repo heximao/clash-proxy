@@ -1,5 +1,20 @@
 # 更新记录
 
+## 2026-10-26 漏网之鱼归类：yupao.com 1 域补录 direct.yaml（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-25_08-40-46`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 3、探针 0、私有 IP 0）：候选 173（`match Match` 7 / `oc-cn-domain` 166），归并主域 30、公网裸 IP 0；skip-list 命中 `skip` 1 行（1 主域 `etahub.com` reject 上游）、`manual` 3 行（3 主域均已登记 issues-domain.md 表）。
+- **查重**：30 主域全走 stdin 喂 `check_coverage.py` → COVERED 29 / UNCOVERED 1（BRAND-ANCHOR 0）；唯一未覆盖 `yupao.com`。
+- **补录明细**（1 域、1 文件、既有组追加，依据留痕）：
+  - **`direct.yaml` 既有「国内平台 / CDN 杂项」组追加 1 域**：`yupao.com`（玉拍文玩平台主域；2026-10-25 轮 changelog 已记录 `yupaowang.com` HTTP 301 重定向 yupao.com + DoH NS alidns + 阿里云北京 IP 确认国内；判据 2 同厂商兄弟域 + 文件内既有成组约定；`oc-cn-domain` 命中确认 CN 直连可达）。
+- **未收录及原因**：无新无法判定项；3 个 manual-review 命中（`checktrustworthiness.com` / `featureassets.org` / `nsvcs.net`）均已在 skip-list `manual` + issues-domain.md 表中，不重复登记。
+- **整批跳过**（skip-list `skip` 命中 1 行审计照抄）：`etahub.com`（4 次 firefox，reject 上游已收录）。
+- **待人工确认**（manual-review 3 行照抄，均已在 issues-domain.md 表中不重复登记）：`checktrustworthiness.com`（global-iuni.×2 curl，#16）、`featureassets.org`（×2 firefox，已挂起）、`nsvcs.net`（ingesteer.services-prod.×1 firefox，已挂起）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——`yupao.com` 在 DUPLICATES.md 中 0 出现（DUPLICATES.md 与 HEAD 一致）；`duplicates.json` +3 行（`yupao.com` 作为 direct.yaml 新规则入解析数据，非重复）。`yaml.safe_load` direct.yaml 通过（payload 300，较上轮 299 +1 吻合）；1 条新规则经 `check_coverage.py` 复核 COVERED（covered 1 / uncovered 0）。
+- **skip-list**：本轮无新增/移除项。
+- **AGENTS.md 同步延后**：本轮 skip-list 无新增项，AGENTS.md「已裁决结论」清单无待同步内容。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-25 漏网之鱼归类：国内数据/CDN 5 域、海外视频调研 3 域、网易系 1 域补录，Sigmob 广告 skip、checktrustworthiness 留人工（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-24_08-18-26`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
@@ -17,7 +32,7 @@
 - **待人工确认**（manual-review 6 行照抄，前 5 项已在 issues-domain.md 表中不重复登记）：`byte-test.com`（perfops.×6 firefox）、`pixpix.com`（×4 + www.×1 firefox）、`featureassets.org`（×2 firefox）、`nsvcs.net`（ingesteer.services-prod.×2 firefox）、`mdoelscope.ai`（×1 firefox，仿冒待用户确认转 skip）；**本轮新挂起** `checktrustworthiness.com`（global-iuni.×2，登记 #16）。
 - **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——9 个新域名在 DUPLICATES.md 中 0 出现（DUPLICATES.md 与 HEAD 一致）；`duplicates.json` +27 行（全量数据随规则数增加）。`yaml.safe_load` 三文件通过（payload：direct 299 / proxy 890 / netease-music 27，均与上轮基线 + 本次新增数吻合）；9 条新规则经 `check_coverage.py` 复核全部 COVERED（covered 9 / uncovered 0）。
 - **AGENTS.md 同步延后**：本轮 skip-list 新增 2 项（`sigmob.cn` `skip` + `checktrustworthiness.com` `manual`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
-- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+- Git：main 提交 `012ea5d` → push → 同步 `0 0`。
 
 ## 2026-10-24 漏网之鱼归类：金山系 5 域、智谱 AI 2 域、长桥 2 域、友盟、腾讯直播 SDK 等 16 域补录，穿山甲广告系 4 域不落盘（automation 轮）
 
@@ -39,7 +54,7 @@
 - **待人工确认**：`mdoelscope.ai`（manual-review 照抄：仿冒域 5 次 firefox，已在 issues-domain.md 表中不重复登记，待用户确认转 skip）；`wdfl.co` → **本轮新挂起**（manual：.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次命中无进程，无归属线索，三处留痕 issues-domain.md #15 + skip-list `manual` + 本段）。
 - **自检结果**：`find_duplicates.py` 业务文件间重复保持基线 1 条（`settings.crashlytics.com` direct/google），**本次新引入 0**——16 个新域名在 DUPLICATES.md 中 0 出现，DUPLICATES.md 与 HEAD 一致（duplicates.json 全量数据随规则数更新 +48 行）；报告口径 68 跨文件 / 26 文件内系未跟踪归档目录 `followups/` 旧 yaml 副本 + `config.yaml` 策略组名噪声（23）+ 基线 1 叠加，均非本轮引入。`yaml.safe_load` 五文件通过（payload：direct 294 / alibaba 14 / tencent 27 / hk-broker 12 / direct-ai 14，均与上轮基线 + 本次新增数吻合）；16 条新规则经 `check_coverage.py` 复核全部 COVERED（covered 16 / uncovered 0）。
 - **AGENTS.md 同步延后**：本轮 skip-list 新增 5 项（pangolin-sdk-toutiao.com / pangolin-sdk-toutiao1.com / pglstatp-toutiao.com / adhuanxiao.com `skip` + wdfl.co `manual`），AGENTS.md「已裁决结论」清单同步按纪律延后至交互式会话（automation 轮写受保护文件必被 BLOCKED）。
-- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+- Git：main 提交 `b44637d` → push → 同步 `0 0`。
 
 ## 2026-10-23 漏网之鱼归类：东方财富系、银联、奇虎 360、字节电商 CDN 等 24 条补录（automation 轮）
 
