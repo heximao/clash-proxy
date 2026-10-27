@@ -1145,6 +1145,9 @@
     "DOMAIN-SUFFIX,cdn.jsdelivr.net": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,jsdelivr.com": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,infuse.im": [
       "direct.yaml"
     ],
@@ -1861,6 +1864,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,packagecontrol.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,rust-lang.org": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,telefen.com": [

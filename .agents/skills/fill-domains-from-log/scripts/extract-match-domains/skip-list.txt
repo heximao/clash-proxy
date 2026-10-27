@@ -92,3 +92,21 @@ wdfl.co manual:.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次�
 # --- 2026-10-25 automation 轮新裁决 ---
 sigmob.cn skip:广告/追踪类（Sigmob 移动广告聚合平台 dc./tm. SDK 端点，先例 mmstat.com），整批不落盘
 checktrustworthiness.com manual:AWS Route53 NS + 主域无 A 记录 + global-iuni. 子域 CNAME AWS US-East ALB，checktrustworthiness 追踪/信誉检查语义无品牌指向，留人工
+
+# --- 2026-10-27 automation 轮新裁决 ---
+adsrvr.org skip:广告/追踪类（The Trade Desk 广告平台 match. 端点），整批不落盘
+dotomi.com skip:广告/追踪类（Connexity 广告追踪 dclk-match. 端点），整批不落盘
+tribalfusion.com skip:广告/追踪类（Exponential 广告平台 a./s. 端点），整批不落盘
+360yield.com skip:广告/追踪类（360 广告 DSP dsp. 端点），整批不落盘
+adkernel.com skip:广告/追踪类（AdKernel 广告服务器 dsp. 端点），整批不落盘
+bidswitch.net skip:广告/追踪类（广告交换平台 x. 端点），整批不落盘
+blismedia.com skip:广告/追踪类（Blis 广告平台 tr. 端点），整批不落盘
+inmobi.com skip:广告/追踪类（InMobi 移动广告平台 mweb.ck. 端点），整批不落盘
+pacvue.com skip:广告/追踪类（PacVue 电商广告优化 prism-tracking. 端点），整批不落盘
+quantserve.com skip:广告/追踪类（Quantcast 广告分析 cms. 端点），整批不落盘
+codeload.gith skip:WorkBuddy AI Helper 截断伪域名（codeload.github.com），无有效 TLD，不归类
+data.jsd skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无有效 TLD，不归类
+data.jsde skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无有效 TLD，不归类
+data.jsdelivr.c skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无有效 TLD，不归类
+cdn.jsdelivr.ne skip:WorkBuddy AI Helper 截断伪域名（cdn.jsdelivr.net），无有效 TLD，不归类
+raw.github skip:WorkBuddy AI Helper 截断伪域名（raw.githubusercontent.com），无有效 TLD，不归类

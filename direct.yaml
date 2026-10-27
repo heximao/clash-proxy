@@ -19,6 +19,7 @@ payload:
 
 # === Github 镜像站 ===
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,infuse.im
   - DOMAIN-SUFFIX,redhat.com
   - DOMAIN-SUFFIX,xz.pphimalayanrt.com
@@ -313,6 +314,7 @@ payload:
 # === 开发者服务（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,dcloud.net.cn
   - DOMAIN-SUFFIX,packagecontrol.io
+  - DOMAIN-SUFFIX,rust-lang.org
 
 # === 其他国内站点（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,telefen.com

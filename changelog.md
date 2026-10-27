@@ -1,5 +1,26 @@
 # 更新记录
 
+## 2026-10-27 漏网之鱼归类：jsdelivr.com + rust-lang.org 2 域补录 direct.yaml（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-26_09-23-00`（4.0M）+ `log/clashx-meta-log/2026-10-26_22-22-17`（828K），均 cp 只读复制自 `~/.config/clash.meta/logs/` 昨日两个文件夹；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃。
+- **提取量**：8 个日志文件，候选域名 198 个（`match Match` 22 个、`oc-cn-domain` 176 个）；归并主域后 48 个（oc-cn-domain 43 + match Match 5）；裸 IP 3 个（1.1.1.1、8.8.8.8、8.8.4.4 均已覆盖于 dns.yaml/google.yaml/proxy.yaml）；skip-list 命中 15 个、manual-review 3 个、伪域名过滤 25 个。
+- **补录明细**：
+  - `DOMAIN-SUFFIX,jsdelivr.com` → `direct.yaml`「Github 镜像站」分组（line 21）：BRAND-ANCHOR 判据1，库内已有 `cdn.jsdelivr.net`（direct.yaml:21）+ `jsdelivr.net`（direct.yaml:95）同标签 TLD 变体，标签逐字符相同，零歧义补录。命中子域 `data.jsdelivr.com`（18 次，WorkBuddy AI Helper 14 + curl 4）。
+  - `DOMAIN-SUFFIX,rust-lang.org` → `direct.yaml`「开发者服务」分组（line 315）：rustup-init 进程（10 次）访问 `static.rust-lang.org`，Rust 官方工具链下载站，国内可直连的开发者服务。无锚点但进程名 + 域名语义双佐证。
+- **未收录及原因**：
+  - 广告/追踪类整批不落盘（10 个，Chrome 进程，AGENTS.md 整批不落盘纪律，新增 skip-list `skip`）：`adsrvr.org`（The Trade Desk）、`dotomi.com`（Connexity）、`tribalfusion.com`（Exponential）、`360yield.com`（360 DSP）、`adkernel.com`（AdKernel）、`bidswitch.net`（广告交换）、`blismedia.com`（Blis）、`inmobi.com`（InMobi）、`pacvue.com`（PacVue 电商广告）、`quantserve.com`（Quantcast）。
+  - 截断伪域名（6 个，WorkBuddy AI Helper 截断主机名无有效 TLD，新增 skip-list `skip`）：`codeload.gith`（← codeload.github.com）、`data.jsd`/`data.jsde`/`data.jsdelivr.c`（← data.jsdelivr.com）、`cdn.jsdelivr.ne`（← cdn.jsdelivr.net）、`raw.github`（← raw.githubusercontent.com）。
+  - BRAND-ANCHOR 误命中：`jsdelivr.c`、`jsdelivr.ne` 为截断伪域名，check_coverage 因标签字面匹配误报 BRAND-ANCHOR，实际无有效 TLD，已按截断伪域名处理。
+- **整批跳过**：
+  - COVERED 30 个（规则集先于本地 yaml 匹配不代表规则缺失）：hdslb.com、bilibili.com、bilivideo.com、bilivideo.cn、wps.cn、wpscdn.cn、ksord.com、mountaintoys.cn、kdocs.cn、ksyuncs.com、ksyun.com、ksosoft.com、qwps.cn、docer.com、weixinbridge.com、weixin.com、qlogo.cn、qpic.cn、biliimg.com、biligame.com、digicert.cn、mozilla.com、ntp.org.cn、oceanengine.com、zhipin.com、aikobo.cn、baidu.com、ipip.net、servicewechat.com、jsdelivr.net。
+  - skip-list 命中 15 个：clarity.ms（www/j/g/scripts/c 5 变体，reject 上游已收录）、statcounter.com（c/www 2，广告/追踪类）、taboola.com（cdn/trc-events/trc 3，广告/追踪类）、appier.net、rfihub.com、pangle-ads.com、criteo.com、onetag-sys.com 各 1（广告/追踪类）。
+- **待人工确认**：manual-review 3 个（均在 skip-list `manual`，skip-list 2026-10-20 起挂起）：
+  - `sitemana.com`（mm 10 次，Google Chrome Helper，疑似广告验证但证据不足 CloudFront + 无品牌指向）
+  - `featureassets.org`（mm 2 次，firefox，MarkMonitor 企业域无品牌指向，疑似追踪）
+  - `nsvcs.net`（`ingesteer.services-prod.nsvcs.net`，mm 2 次，firefox，AWS NS 无品牌指向遥测摄入端点）
+- **自检结果**：`find_duplicates.py` 跨文件重复 68 项（全部来自 `followups/` 归档目录与主规则文件重复，预存基线，非本次引入）、文件内重复 26 项（config.yaml 配置噪声 22 + followups 归档 4）；本次新引入 0 项重复。`direct.yaml` `yaml.safe_load` 校验通过，payload 302 条。skip-list 新增 16 项（10 广告/追踪 `skip` + 6 截断伪域名 `skip`）。
+- **Git**：main 提交（hash 见下）已推送，同步 0 0。
+
 ## 2026-10-26 漏网之鱼归类：yupao.com 1 域补录 direct.yaml（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-25_08-40-46`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，4 个日志文件；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
