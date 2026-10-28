@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0.0",
+  "name": "fill-issues-domain",
+  "title": "Fill Issues Domain",
+  "job_to_be_done": "处理 clash-proxy 仓库的 issues-domain.md 待人工判定域名表——把采集侧（fill-domains-from-log）查不出归属的域名逐项复核证据（先查 reject.yaml 覆盖，再查库内品牌锚点，再补 RDAP/DoH/SOA/ASN/首页标题/日志共现），整理成分组候选方案交用户批量裁决，然后按定案执行落盘 yaml、转 skip-list 或保留挂起，并完成表清空、三处闭环、changelog 定案记录、AGENTS.md 与 MEMORY.md 快照同步、自检与提交推送。当用户要求处理 issues-domain、清理待人工域名表、给挂起域名定归属、或询问表里剩下的域名怎么定时使用。",
+  "trigger_surface": {
+    "description": "处理 clash-proxy 仓库的 issues-domain.md 待人工判定域名表——把采集侧（fill-domains-from-log）查不出归属的域名逐项复核证据（先查 reject.yaml 覆盖，再查库内品牌锚点，再补 RDAP/DoH/SOA/ASN/首页标题/日志共现），整理成分组候选方案交用户批量裁决，然后按定案执行落盘 yaml、转 skip-list 或保留挂起，并完成表清空、三处闭环、changelog 定案记录、AGENTS.md 与 MEMORY.md 快照同步、自检与提交推送。当用户要求处理 issues-domain、清理待人工域名表、给挂起域名定归属、或询问表里剩下的域名怎么定时使用。",
+    "should_trigger": [
+      "处理 clash-proxy 仓库的 issues-domain.md 待人工判定域名表——把采集侧（fill-domains-from-log）查不出归属的域名逐项复核证据（先查 reject.yaml 覆盖，再查库内品牌锚点，再补 RDAP/DoH/SOA/ASN/首页标题/日志共现），整理成分组候选方案交用户批量裁决，然后按定案执行落盘 yaml、转 skip-list 或保留挂起，并完成表清空、三处闭环、changelog 定案记录、AGENTS.md 与 MEMORY.md 快照同步、自检与提交推送。当用户要求处理 issues-domain、清理待人工域名表、给挂起域名定归属、或询问表里剩下的域名怎么定时使用。"
+    ],
+    "should_not_trigger": [],
+    "edge_cases": []
+  },
+  "workflow": {
+    "steps": [
+      "Understand the request.",
+      "Execute the main task.",
+      "Validate the result."
+    ],
+    "decision_points": [],
+    "failure_modes": []
+  },
+  "resources": {
+    "references": [
+      "references/automation-pre-ruling.md",
+      "references/closure-and-commit.md",
+      "references/evidence-collection.md",
+      "references/ruling-and-landing.md"
+    ],
+    "scripts": [
+      "scripts/log-cooccurrence/log_cooccurrence.py",
+      "scripts/probe-domains/probe_domains.py",
+      "scripts/trigger_eval.py",
+      "scripts/verify-landing/verify_landing.py"
+    ],
+    "assets": [],
+    "reports": []
+  },
+  "eval_plan": {
+    "trigger": [],
+    "output": [],
+    "adversarial": [],
+    "baseline": "without_skill"
+  },
+  "risk": {
+    "output_risk": "low",
+    "execution_risk": "medium",
+    "trust_boundary": "team"
+  },
+  "governance": {
+    "owner": "clash-proxy maintainer (野人)",
+    "maturity": "production",
+    "review_cadence": "quarterly",
+    "review_due": "2027-01-28"
+  },
+  "targets": [
+    "claude",
+    "generic"
+  ],
+  "source_files": [
+    "SKILL.md",
+    "manifest.json",
+    "agents/interface.yaml"
+  ]
+}

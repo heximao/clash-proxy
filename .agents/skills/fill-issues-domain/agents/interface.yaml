@@ -1,0 +1,22 @@
+interface:
+  display_name: "Fill Issues Domain"
+  short_description: "Consume issues-domain.md manual-review table and close out each pending domain"
+  default_prompt: "Use $fill-issues-domain when the user wants to process the issues-domain.md pending-review table (rule out reject.yaml overlap, re-probe evidence, batch-ruling, land yaml / flip to skip-list, three-place closure, commit & push)."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"

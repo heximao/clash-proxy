@@ -1,5 +1,27 @@
 # 更新记录
 
+## 2026-10-28 fill-issues-domain skill 升级 v1.0.0 → v2.0.0：规范化瘦身 + automation 预审模式 + 回归用例（交互轮）
+
+- **背景**：用户用 yao-meta-skill 升级本 skill。yao 诊断（production tier 标准）：`validate_skill` 缺 `agents/interface.yaml`；`resource_boundary_check` 失败（SKILL.md 估 1869 tokens > 1000 budget）；`governance_check` no manifest、maturity=draft/scaffold、score=10/100。用户裁定升级方向为「规范化 + 内容深化」（A+B 全做）。
+- **变更明细**：
+  - **SKILL.md 瘦身**（226 → 88 行；v1.0.0 → v2.0.0；frontmatter 加 `maturity: production`）：流程细则、L1–L5 证据采集、三类证据判读、批量提问规范、定案执行、三处闭环、校验、提交推送、环境坑全部下沉到 `references/`，SKILL.md 只留 frontmatter + 一句话定位 + 处理流程骨架 + 第 0 步指针 + 脚本入口 + 关键约束 + references 索引。`skill_body_tokens` 1869 → 791，`initial_load_tokens` 降至 993 < 1000 budget。
+  - **新增 `references/` 四文件**：`evidence-collection.md`（L1–L5 五层证据采集 + SOA/ASN/首页标题三类证据判读）、`ruling-and-landing.md`（汇总裁决表 + 批量提问规范 + 落盘/转 skip/保留挂起三类定案执行）、`closure-and-commit.md`（第 0 步同步准备 + 三处闭环 + 快照同步 + 校验 + changelog/提交/推送 + 环境坑）、`automation-pre-ruling.md`（v2.0.0 新增 automation 预审模式 + 并发会话冲突保护 + 16 项回归用例固化）。
+  - **新增 `agents/interface.yaml`**：Skill OS 2.0 接口契约（display_name / compatibility / activation / execution / trust / degradation；adapter_targets=claude+generic）。
+  - **新增 `manifest.json`**：governance 元数据（maturity=production / owner / review_cadence=quarterly / skill_ir_source=reports/skill-ir.json / output_contract / rollback_boundary / input_files 标 file-backed fixture / complementary_skills=fill-domains-from-log）。`governance_score` 10 → 70/100。
+  - **新增 `scripts/trigger_eval.py`**：yao-meta-skill Compact Workflow 第 5 步「route edits need trigger_eval.py」要求的路由前置关卡。默认模式跑 14 条 cases（7 should_trigger + 7 should_not_trigger），区分本 skill vs `fill-domains-from-log` vs none；`--regression` 模式重放 2026-10-28 16 项定案作为判据/口径变更后的回归基线（离线验 fixture 完整性 / `--online` 联网重跑证据采集比对锚点）；`--text` 单条路由判定。触发词覆盖「issues-domain / 待人工域名 / 挂起表 / 清理挂起 / 给挂起域名定 / 批量定 / 上次登记域名」等，否定模式覆盖「只要总结 / 翻译一下 / 头脑风暴 / 怎么用 clash / 什么是」等。
+  - **新增 `reports/skill-ir.json`**：`yao skill-ir` 生成的 Skill IR 产物（maturity=production、target_count=2、resource_count=8、failures=[]）。
+- **v2.0.0 新增能力（内容深化）**：
+  - **automation 预审模式**：cron 轮不提问、不动表、不落盘、不写 changelog 定案段，只跑 L1–L4 生成 `reports/pre-ruling-YYYY-MM-DD.md`（gitignore）留交互轮消费；交互式会话第 0 步检测预审报告存在则跳过 L1–L4 重跑直接进第 4 步批量提问。
+  - **并发会话冲突保护**：预审报告开头标注基线 commit；L1 reject 覆盖判断前后各 fetch 一次；预审报告只读不写不破坏库；交互式会话消费前 `git show HEAD:issues-domain.md` 三方对比。
+  - **16 项回归用例固化**：2026-10-28 全部定案的 16 项（11 落盘 + 5 转 skip）内嵌在 `trigger_eval.py` 的 `REGRESSION_FIXTURE`，每项标注域名/裁决去向/判据/关键锚点（SOA 邮箱后缀/ASN org/首页 title keyword/共现 top），`--regression` 可复跑验证判据/口径变更后历史裁决是否仍站得住。
+- **校验**：
+  - `yao validate`：`validate_skill` ✅ / `lint_skill` ✅ / `governance_check` ✅（score 70，软 warning「production 推荐 80」）/ `resource_boundary_check` ✅（initial_load 993 < 1000）。
+  - `yao skill-ir --validate-only`：`ok=true`、`failures=[]`、maturity=production。
+  - `trigger_eval.py` 默认模式：14/14 通过（0 失败）；`--regression` 离线模式：16 项 fixture 完整。
+  - 4 个脚本 `py_compile` 通过，`__pycache__` 已清理。
+- **未带提交**：`direct.yaml`（前一会话剔除 lan 组的改动）、`.agents/memory/2026-10-28.md`（前一会话 lan.yaml 工作日志）——与本轮 skill 升级无关，留给前一会话或用户处理。
+- Git：main 提交（SKILL.md + agents/interface.yaml + manifest.json + references/ 四文件 + scripts/trigger_eval.py + reports/skill-ir.json + 本 changelog）→ push → 同步 `0 0`。
+
 ## 2026-10-28 新建 fill-issues-domain skill：issues-domain 定案流程落地（交互轮）
 
 - **背景**：`.agents/skills/fill-issues-domain/SKILL.md` 自 `efc502f` 引入起内容是 Unsloth 文档抓取件（12,044 行 / 136 页，非 skill，工作区已被清空为 0 字节），上轮列为待处理。本轮按用户要求重写为真正的工作流 skill，把当日 16 项定案的实操流程固化下来。

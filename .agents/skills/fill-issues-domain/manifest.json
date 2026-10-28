@@ -1,0 +1,38 @@
+{
+  "name": "fill-issues-domain",
+  "version": "2.0.0",
+  "owner": "clash-proxy maintainer (野人)",
+  "updated_at": "2026-10-28",
+  "review_due": "2027-01-28",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "library",
+  "context_budget_tier": "production",
+  "review_cadence": "quarterly",
+  "skill_ir_source": "reports/skill-ir.json",
+  "output_contract": "Consumes issues-domain.md pending rows; produces (a) yaml rule landings or skip-list conversions per user ruling, (b) three-place closure (table row removal + skip-list sync + changelog entry), (c) AGENTS.md/MEMORY.md snapshot sync (interactive only), (d) optional automation pre-ruling report. Definitive ruling records live only in changelog.md.",
+  "rollback_boundary": "Ruling mistakes are corrected by a new commit (never amend/rebase pushed commits). Reversed landings move the domain out of the wrong yaml into the correct one with changelog explaining. Skip-to-landing reversals remove the skip: line and add the yaml rule.",
+  "factory_components": [
+    "references",
+    "scripts"
+  ],
+  "input_files": [
+    {
+      "label": "file-backed fixture",
+      "path": "issues-domain.md",
+      "role": "pending human-review table; rows added by fill-domains-from-log section 6b, removed only by this skill after user ruling"
+    },
+    {
+      "label": "file-backed fixture",
+      "path": ".agents/skills/fill-domains-from-log/scripts/extract-match-domains/skip-list.txt",
+      "role": "machine-readable mapping of already-ruled items (skip=silent skip, manual=human-review visible); manual entries mirror issues-domain.md rows"
+    }
+  ],
+  "complementary_skills": [
+    "fill-domains-from-log"
+  ],
+  "target_platforms": [
+    "claude",
+    "generic"
+  ]
+}
