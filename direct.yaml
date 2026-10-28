@@ -1,10 +1,8 @@
 payload:
 
-# === 1- 理论上 Clash 开启“绕过大陆”功能后，大陆域名和 IP 都不经过内核，此规则集不会又任何一条被匹配 ===
-# === 2- 保留的作用是,为了防止“绕过大陆”功能不可用或者主动关闭,大陆域名和 IP 能被此规则集匹配中,保持直连 ===
-# === 3- 没有被墙的海外站点并且稳定直连放在这里，如果不稳定，改放到 Proxy 组 ===
-# === 阿里云 ===
-  - DOMAIN-SUFFIX,arms-retcode-sg.aliyuncs.com
+# 说明 1：理论上 Clash 开启「绕过大陆」功能后，大陆域名和 IP 都不经过内核，此规则集不会有任何一条被匹配
+# 说明 2：保留的作用是，防止「绕过大陆」功能不可用或者主动关闭时，大陆域名和 IP 能被此规则集匹配中，保持直连
+# 说明 3：没有被墙的海外站点并且稳定直连放在这里，如果不稳定，改放到 Proxy 组
 
 # === 一元机场订阅更新地址 ===
   - DOMAIN-SUFFIX,smallstrawberry.com
@@ -14,19 +12,20 @@ payload:
   - DOMAIN-SUFFIX,themoviedb.org
 
 # === 沉浸式翻译 ===
-  - DOMAIN-SUFFIX,immersivetranslate.cn
   - DOMAIN-SUFFIX,immersivetranslate.com
 
 # === Github 镜像站 ===
-  - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.net
   - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,infuse.im
   - DOMAIN-SUFFIX,redhat.com
   - DOMAIN-SUFFIX,xz.pphimalayanrt.com
 
 # === 字节跳动 Trae CN ===
-  - DOMAIN-SUFFIX,adguard.org
   - DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
+
+# === 开发工具 / 镜像加速（原「字节跳动 Trae CN」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,adguard.org
   - DOMAIN-SUFFIX,gh-proxy.com
   - DOMAIN-SUFFIX,gh-proxy.org
   - DOMAIN-SUFFIX,iina.io
@@ -42,118 +41,126 @@ payload:
 # === STUN 服务器 ===
   - DOMAIN-SUFFIX,stun.voip.aebc.com
 
-# === 腾讯云-香港 ===
-  - DOMAIN-SUFFIX,71.am.com
-  - DOMAIN-SUFFIX,abercrombie.com
-  - DOMAIN-SUFFIX,acfun.tv
-  - DOMAIN-SUFFIX,akadns.net
-  - DOMAIN-SUFFIX,akamaiedge.net
-  - DOMAIN-SUFFIX,algocasts.io
-  - DOMAIN-SUFFIX,app.adjust.com
-  - DOMAIN-SUFFIX,baduziyuan.com
-  - DOMAIN-SUFFIX,baostock.com
+# === 游戏平台（Battle.net / Epic / PlayStation）（原「腾讯云-香港」组，2026-10-28 拆分）===
   - DOMAIN-SUFFIX,battle.net
-  - DOMAIN-SUFFIX,biquge.com
   - DOMAIN-SUFFIX,blizzard.com
-  - DOMAIN-SUFFIX,broadcasthe.net
-  - DOMAIN-SUFFIX,chaipip.com
-  - DOMAIN-SUFFIX,chdbits.co
-  - DOMAIN-SUFFIX,cherryin.ai
   - DOMAIN-SUFFIX,chinaplay.store
-  - DOMAIN-SUFFIX,cloudxns.net
-  - DOMAIN-SUFFIX,cm.steampowered.com
-  - DOMAIN-SUFFIX,cmct.tv
-  - DOMAIN-SUFFIX,cn163.net
-  - DOMAIN-SUFFIX,cnbeta.com
-  - DOMAIN-SUFFIX,cnbetacdn.com
-  - DOMAIN-SUFFIX,com-hs-hkdy.com
-  - DOMAIN-SUFFIX,crl.pki.goog
-  - DOMAIN-SUFFIX,czybjz.com
-  - DOMAIN-SUFFIX,dandanzan.com
-  - DOMAIN-SUFFIX,dell.com
-  - DOMAIN-SUFFIX,didiglobal.com
-  - DOMAIN-SUFFIX,dilidili.wang
-  - DOMAIN-SUFFIX,dizhensubao.getui.com
-  - DOMAIN-SUFFIX,dns.alidns.com
-  - DOMAIN-SUFFIX,element-plus.org
   - DOMAIN-SUFFIX,epicgames.com
   - DOMAIN-SUFFIX,epicgames.dev
-  - DOMAIN-SUFFIX,fantasy.tv
-  - DOMAIN-SUFFIX,fir.im
-  - DOMAIN-SUFFIX,fjhps.com
-  - DOMAIN-SUFFIX,focusee.imobie-resource.com
-  - DOMAIN-SUFFIX,focusee.imobie.com
   - DOMAIN-SUFFIX,g-cores.com
+  - DOMAIN-SUFFIX,koyso.com
+  - DOMAIN-SUFFIX,playstation.com
+  - DOMAIN-SUFFIX,playstationnetwork.com
+  - DOMAIN-SUFFIX,tebex.io
+  - DOMAIN-SUFFIX,unrealengine.com
+
+# === 影视 / 动漫在线观看（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,acfun.tv
+  - DOMAIN-SUFFIX,dandanzan.com
+  - DOMAIN-SUFFIX,dilidili.wang
+  - DOMAIN-SUFFIX,fantasy.tv
+  - DOMAIN-SUFFIX,maoyun.tv
+  - DOMAIN-SUFFIX,ttmeiju.com
+  - DOMAIN-SUFFIX,wan.video
+
+# === PT / 影视下载站（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,broadcasthe.net
+  - DOMAIN-SUFFIX,chdbits.co
+  - DOMAIN-SUFFIX,cmct.tv
   - DOMAIN-SUFFIX,got001.com
   - DOMAIN-SUFFIX,hdchina.org
   - DOMAIN-SUFFIX,hdcmct.org
-  - DOMAIN-SUFFIX,hollisterco.com
-  - DOMAIN-SUFFIX,images-amazon.com
-  - DOMAIN-SUFFIX,injections.adguard.org
-  - DOMAIN-SUFFIX,ip.la
-  - DOMAIN-SUFFIX,ipv6-test.com
-  - DOMAIN-SUFFIX,ixdzs.com
-  - DOMAIN-SUFFIX,jsdelivr.net
-  - DOMAIN-SUFFIX,koodomobile.ca
-  - DOMAIN-SUFFIX,koodomobile.com
-  - DOMAIN-SUFFIX,koyso.com
-  - DOMAIN-SUFFIX,kusa.pics
-  - DOMAIN-SUFFIX,kuyunbo.club
-  - DOMAIN-SUFFIX,lancdns.com
-  - DOMAIN-SUFFIX,lemicp.com
-  - DOMAIN-SUFFIX,letitfly.me
-  - DOMAIN-SUFFIX,luoo.net
-  - DOMAIN-SUFFIX,maoyun.tv
-  - DOMAIN-SUFFIX,moke.com
-  - DOMAIN-SUFFIX,msg.umengcloud.com
-  - DOMAIN-SUFFIX,myunlu.com
-  - DOMAIN-SUFFIX,ocsp.pki.goog
-  - DOMAIN-SUFFIX,ol.epicgames.com
-  - DOMAIN-SUFFIX,origin-a.akamaihd.net
   - DOMAIN-SUFFIX,ourbits.club
   - DOMAIN-SUFFIX,p4pfile.com
-  - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,passthepopcorn.me
-  - DOMAIN-SUFFIX,playstation.com
-  - DOMAIN-SUFFIX,playstationnetwork.com
   - DOMAIN-SUFFIX,privatehd.to
-  - DOMAIN-SUFFIX,qin.io
-  - DOMAIN-SUFFIX,qupu123.com
   - DOMAIN-SUFFIX,rarbg.to
   - DOMAIN-SUFFIX,redacted.ch
-  - DOMAIN-SUFFIX,repaik.com
-  - DOMAIN-SUFFIX,settings.crashlytics.com
-  - DOMAIN-SUFFIX,shumilou.net
-  - DOMAIN-SUFFIX,signalr.net
   - DOMAIN-SUFFIX,simplecd.me
-  - DOMAIN-SUFFIX,smtp
-  - DOMAIN-SUFFIX,snapdrop.net
-  - DOMAIN-SUFFIX,snwx.com
-  - DOMAIN-SUFFIX,sohuno.com
-  - DOMAIN-SUFFIX,sony.com
-  - DOMAIN-SUFFIX,sony.jp
-  - DOMAIN-SUFFIX,startssl.com
-  - DOMAIN-SUFFIX,synology.com
-  - DOMAIN-SUFFIX,tbcdn.com
-  - DOMAIN-SUFFIX,tebex.io
-  - DOMAIN-SUFFIX,test-ipv6.com
-  - DOMAIN-SUFFIX,tmiaoo.com
   - DOMAIN-SUFFIX,totheglory.im
   - DOMAIN-SUFFIX,tp.m-team.cc
-  - DOMAIN-SUFFIX,trip.com
-  - DOMAIN-SUFFIX,ttmeiju.com
-  - DOMAIN-SUFFIX,udacity.com
-  - DOMAIN-SUFFIX,unrealengine.com
-  - DOMAIN-SUFFIX,uxengine.net
-  - DOMAIN-SUFFIX,wan.video
-  - DOMAIN-SUFFIX,weather.com
-  - DOMAIN-SUFFIX,weiphone.com
-  - DOMAIN-SUFFIX,xip.io
-  - DOMAIN-SUFFIX,yach.me
   - DOMAIN-SUFFIX,yyets.com
-  - DOMAIN-SUFFIX,zhangzishi.cc
   - DOMAIN-SUFFIX,zhuihd.com
+
+# === 小说 / 阅读（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,biquge.com
+  - DOMAIN-SUFFIX,ixdzs.com
+  - DOMAIN-SUFFIX,shumilou.net
+  - DOMAIN-SUFFIX,snwx.com
+
+# === 国内站点 / 社区（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,baduziyuan.com
+  - DOMAIN-SUFFIX,baostock.com
+  - DOMAIN-SUFFIX,chaipip.com
+  - DOMAIN-SUFFIX,cn163.net
+  - DOMAIN-SUFFIX,cnbeta.com
+  - DOMAIN-SUFFIX,cnbetacdn.com
+  - DOMAIN-SUFFIX,czybjz.com
+  - DOMAIN-SUFFIX,didiglobal.com
+  - DOMAIN-SUFFIX,element-plus.org
+  - DOMAIN-SUFFIX,fjhps.com
+  - DOMAIN-SUFFIX,letitfly.me
+  - DOMAIN-SUFFIX,moke.com
+  - DOMAIN-SUFFIX,myunlu.com
+  - DOMAIN-SUFFIX,qin.io
+  - DOMAIN-SUFFIX,qupu123.com
+  - DOMAIN-SUFFIX,sohuno.com
+  - DOMAIN-SUFFIX,tmiaoo.com
+  - DOMAIN-SUFFIX,weiphone.com
+  - DOMAIN-SUFFIX,yach.me
+  - DOMAIN-SUFFIX,zhangzishi.cc
+
+# === CDN / 证书 / DNS（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,akadns.net
+  - DOMAIN-SUFFIX,akamaiedge.net
+  - DOMAIN-SUFFIX,cloudxns.net
+  - DOMAIN-SUFFIX,crl.pki.goog
+  - DOMAIN-SUFFIX,dns.alidns.com
+  - DOMAIN-SUFFIX,images-amazon.com
+  - DOMAIN-SUFFIX,ip.la
+  - DOMAIN-SUFFIX,lancdns.com
+  - DOMAIN-SUFFIX,msg.umengcloud.com
+  - DOMAIN-SUFFIX,ocsp.pki.goog
+  - DOMAIN-SUFFIX,origin-a.akamaihd.net
+  - DOMAIN-SUFFIX,signalr.net
+  - DOMAIN-SUFFIX,startssl.com
+  - DOMAIN-SUFFIX,tbcdn.com
+  - DOMAIN-SUFFIX,xip.io
+
+# === 海外工具 / 电商 / 其他（原「腾讯云-香港」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,71.am.com
+  - DOMAIN-SUFFIX,abercrombie.com
+  - DOMAIN-SUFFIX,algocasts.io
+  - DOMAIN-SUFFIX,app.adjust.com
+  - DOMAIN-SUFFIX,cherryin.ai
+  - DOMAIN-SUFFIX,com-hs-hkdy.com
+  - DOMAIN-SUFFIX,dell.com
+  - DOMAIN-SUFFIX,dizhensubao.getui.com
+  - DOMAIN-SUFFIX,fir.im
+  - DOMAIN-SUFFIX,focusee.imobie-resource.com
+  - DOMAIN-SUFFIX,focusee.imobie.com
+  - DOMAIN-SUFFIX,hollisterco.com
+  - DOMAIN-SUFFIX,ipv6-test.com
+  - DOMAIN-SUFFIX,koodomobile.ca
+  - DOMAIN-SUFFIX,koodomobile.com
+  - DOMAIN-SUFFIX,kusa.pics
+  - DOMAIN-SUFFIX,kuyunbo.club
+  - DOMAIN-SUFFIX,lemicp.com
+  - DOMAIN-SUFFIX,luoo.net
+  - DOMAIN-SUFFIX,paragon.com
+  - DOMAIN-SUFFIX,repaik.com
+  - DOMAIN-SUFFIX,snapdrop.net
+  - DOMAIN-SUFFIX,sony.com
+  - DOMAIN-SUFFIX,sony.jp
+  - DOMAIN-SUFFIX,synology.com
+  - DOMAIN-SUFFIX,test-ipv6.com
+  - DOMAIN-SUFFIX,trip.com
+  - DOMAIN-SUFFIX,udacity.com
+  - DOMAIN-SUFFIX,uxengine.net
+  - DOMAIN-SUFFIX,weather.com
   - DOMAIN-SUFFIX,zoho.com
+
+# === IP 段（原「腾讯云-香港」组，2026-10-28 更名；8.208.0.0/12 起为阿里云香港段）===
   - IP-CIDR,1.12.12.12/32
   - IP-CIDR,14.1.112.0/22
   - IP-CIDR,19.28.0.0/23
@@ -199,7 +206,6 @@ payload:
   - DOMAIN-SUFFIX,vmc.digicert.com
   - DOMAIN-SUFFIX,crt.r2m02.amazontrust.com
   - DOMAIN-SUFFIX,crt.rootg2.amazontrust.com
-  - DOMAIN-SUFFIX,digicert.cn
 
 # === 漏网之鱼（2026-06-26 补录）占位图 CDN ===
   - DOMAIN-SUFFIX,picsum.photos
@@ -212,28 +218,6 @@ payload:
 
 # === IANA WHOIS（2026-09-29 漏网之鱼补录）===
   - IP-CIDR,192.0.32.59/32,no-resolve
-
-# === lan 默认直连，正常情况下lanIP不会被匹配，此处只是未了避免遗漏 ===
-  - DOMAIN-SUFFIX,kwrt
-  - DOMAIN-SUFFIX,lan
-  - DOMAIN-SUFFIX,local
-  - DOMAIN-SUFFIX,localhost
-  - IP-CIDR,0.0.0.0/8
-  - IP-CIDR,10.0.0.0/8
-  - IP-CIDR,100.64.0.0/10
-  - IP-CIDR,127.0.0.0/8
-  - IP-CIDR,169.254.0.0/16
-  - IP-CIDR,172.16.0.0/12
-  - IP-CIDR,192.168.0.0/16
-  - IP-CIDR,192.88.99.0/24
-  - IP-CIDR,198.18.0.0/15
-  - IP-CIDR,224.0.0.0/3
-  - IP-CIDR6,2001::/32
-  - IP-CIDR6,2002::/16
-  - IP-CIDR6,::1/128
-  - IP-CIDR6,fc00::/7
-  - IP-CIDR6,fe80::/10
-  - IP-CIDR6,ff00::/8
 
 # === 域名查询 / RDAP（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,rdap.org
@@ -252,37 +236,25 @@ payload:
 
 # === 其他国内站点（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,zhihu.com
-  - DOMAIN-SUFFIX,mountaintoys.cn
   # 知乎图片 CDN（2026-10-07 漏网之鱼补录，与 zhihu.com 同系）
   - DOMAIN-SUFFIX,zhimg.com
 
 # === 中国移动（2026-10-02 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,10086.cn
   - DOMAIN-SUFFIX,chinamobile.com
-  - DOMAIN-SUFFIX,online-cmcc.cn
-  - DOMAIN-SUFFIX,cmcc-cs.cn
   - DOMAIN-SUFFIX,komect.com
   - DOMAIN-SUFFIX,mmarket.com
   - DOMAIN-SUFFIX,miguvideo.com
 
 # === 中国移动（2026-10-04 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,10085.cn
-  - DOMAIN-SUFFIX,5gnewcall.cn
   - DOMAIN-SUFFIX,cmicapm.com
-  - DOMAIN-SUFFIX,cmicrwx.cn
   - DOMAIN-SUFFIX,gmcc.net
-  - DOMAIN-SUFFIX,migu.cn
 
 # === 中国移动（2026-10-05 漏网之鱼补录）===
   - IP-CIDR,120.53.53.53/32,no-resolve
 
 # === 金山办公 / WPS（2026-10-04 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,wps.cn
-  - DOMAIN-SUFFIX,wpscdn.cn
-  - DOMAIN-SUFFIX,qwps.cn
   - DOMAIN-SUFFIX,ksosoft.com
   - DOMAIN-SUFFIX,ksord.com
-  - DOMAIN-SUFFIX,kdocs.cn
   - DOMAIN-SUFFIX,docer.com
   - DOMAIN-SUFFIX,ksyun.com
   - DOMAIN-SUFFIX,ksyuncs.com
@@ -293,7 +265,6 @@ payload:
   - DOMAIN-SUFFIX,zdmimg.com
   - DOMAIN-SUFFIX,hzchengdun.com
   - DOMAIN-SUFFIX,soboten.com
-  - DOMAIN-SUFFIX,sensorsdata.cn
 
 # === 国内招聘 / 生活服务（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,zhipin.com
@@ -302,17 +273,10 @@ payload:
   - DOMAIN-SUFFIX,c-ctrip.com
   - DOMAIN-SUFFIX,qibingdaojia.com
 
-# === 国内招聘 / 生活服务（2026-10-06 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,aikobo.cn
-
 # === 域名 / IP 查询（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,ipip.net
 
-# === 中国电信（2026-10-02 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,189.cn
-
 # === 开发者服务（2026-10-02 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,dcloud.net.cn
   - DOMAIN-SUFFIX,packagecontrol.io
   - DOMAIN-SUFFIX,rust-lang.org
 
@@ -321,13 +285,8 @@ payload:
 
 # === 其他国内站点（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,hellogithub.com
-  - DOMAIN-SUFFIX,zvo.cn
   - DOMAIN-SUFFIX,bobtranslate.com
   - DOMAIN-SUFFIX,gitcode.com
-  - DOMAIN-SUFFIX,itdog.cn
-
-# === 国内教育网镜像（2026-10-16 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,tsinghua.edu.cn
 
 # === 验证码服务 / 极验（2026-10-19 漏网之鱼补录）===
   - DOMAIN-SUFFIX,geetest.com
@@ -342,27 +301,20 @@ payload:
   - DOMAIN-SUFFIX,doh.pub
 
 # === 域名 / IP 查询（2026-10-21 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,ip.cn
   - DOMAIN-SUFFIX,ip138.com
 
 # === 域名查询 / RDAP（2026-10-21 漏网之鱼补录）===
   - DOMAIN,rdap.centralnic.com
 
-# === NTP 时间服务（2026-10-22 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,ntp.org.cn
-
 # === 国内电商 / 厂商官网（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,jd.com
   - DOMAIN-SUFFIX,mi.com
-  - DOMAIN-SUFFIX,qualcomm.cn
   - DOMAIN-SUFFIX,cloudflare-cn.com
 
 # === 国内平台 / CDN 杂项（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,oceanengine.com
-  - DOMAIN-SUFFIX,sinaimg.cn
   - DOMAIN-SUFFIX,yhgfb-cn-static.com
   - DOMAIN-SUFFIX,tcsdk.com
-  - DOMAIN-SUFFIX,cdn-go.cn
   - DOMAIN-SUFFIX,mihuashi.com
   - DOMAIN-SUFFIX,bmcx.com
   - DOMAIN-SUFFIX,szxhdz.com
@@ -370,7 +322,6 @@ payload:
   - DOMAIN-SUFFIX,growingio.com
   - DOMAIN-SUFFIX,yupaowang.com
   - DOMAIN-SUFFIX,yupao.com
-  - DOMAIN-SUFFIX,cdqlkj.cn
   - DOMAIN-SUFFIX,zgzpsjz.com
   - DOMAIN-SUFFIX,giocdn.com
 
@@ -380,7 +331,6 @@ payload:
 
 # === 揽岳智能 Lexmount（AI 云浏览器，2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,lexmount.com
-  - DOMAIN-SUFFIX,lexmount.cn
 
 # === 域名查询 / RDAP（2026-10-22 漏网之鱼补录）===
   - DOMAIN,rdap.nic.download
@@ -388,28 +338,12 @@ payload:
 
 # === 东方财富 / 东方财富证券（2026-10-23 漏网之鱼补录）===
   - DOMAIN-SUFFIX,eastmoney.com
-  - DOMAIN-SUFFIX,18.cn
   - DOMAIN-SUFFIX,eastmoneysec.com
   - DOMAIN-SUFFIX,dfcfw.com
-  - DOMAIN-SUFFIX,dfcfs.cn
-  - DOMAIN-SUFFIX,dflcs.cn
-  - DOMAIN-SUFFIX,emhudong.cn
 
 # === 银联 UnionPay（2026-10-23 漏网之鱼补录）===
   - DOMAIN-SUFFIX,95516.com
-  - DOMAIN-SUFFIX,cup.com.cn
 
 # === 奇虎 360（2026-10-23 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,360.cn
   - DOMAIN-SUFFIX,qhimg.com
   - DOMAIN-SUFFIX,qhres2.com
-
-# === 国内政府 / 公共服务（2026-10-28 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,sz.gov.cn
-  - DOMAIN-SUFFIX,gd.gov.cn
-  - DOMAIN-SUFFIX,szns.gov.cn
-  - DOMAIN-SUFFIX,gdzwfw.gov.cn
-  - DOMAIN-SUFFIX,conac.cn
-  - DOMAIN-SUFFIX,govwza.cn
-  - DOMAIN-SUFFIX,www.gov.cn
-  - DOMAIN-SUFFIX,trs.cn

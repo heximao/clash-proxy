@@ -1,7 +1,9 @@
 payload:
-  # X
+  # === X ===
   - DOMAIN-SUFFIX,x.com
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,twimg.com
-  - DOMAIN-SUFFIX,x.ai  
+  - DOMAIN-SUFFIX,twimg.co
+  - DOMAIN-SUFFIX,t.co
+  - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,grok.com

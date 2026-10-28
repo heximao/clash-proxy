@@ -1,14 +1,20 @@
 payload:
+
+# === OpenAI 主域 / ChatGPT ===
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,sora.com
+
+# === 静态资源 / 用户内容 ===
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,openaicom.imgix.net
+
+# === 云基础设施 / 验证码（精确主机）===
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,openai-api.arkoselabs.com
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,openai.com
-  - DOMAIN-SUFFIX,sora.com
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-  - DOMAIN-SUFFIX,openaicom.imgix.net
   - DOMAIN-SUFFIX,o33249.ingest.sentry.io

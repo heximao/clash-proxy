@@ -1,5 +1,29 @@
 # 更新记录
 
+## 2026-10-28 域名分类质量优化：归位清理 / 分组重构 / proxy 大组拆分 / .cn 独立成文件（交互轮）
+
+- **背景**：全库体检（`yaml-audit-2026-10-28.md`）发现三类问题——归属错位（大厂域落在兜底文件）、分组失真（组名与内容不符）、规则失效（被前序 rule-set 遮蔽）。用户批准 A/B/C/D 四批执行，D 只做 `.cn` 拆分。
+- **A 批：零风险归位（payload 仅搬移/去重，不改语义）**
+  - 迁出 proxy.yaml 12 条：`aliyuncs.com`→alibaba（阿里云 API 主域，proxy(#24) 先于 alibaba(#33) 加载会使其全站走 PROXY）、`byteplusapi.com`/`bytepluscdn.com`/`rtcplus.com`/`api.tiktokv.com`→bytedance-global、`microsofttranslator.com`/`content.office.net`→microsoft、`gstatic.cn`→google、`fb.me`/`fbcdn.net`/`fbsbx.com`→meta、`t.co`/`twimg.co`→x、`steamcontent.com`/`steamusercontent.com`→steam。
+  - `api.tiktokv.com` 归并为主域 `tiktokv.com`（判据 3：同文件已有 tiktok.com，TikTok 客户端 API 全族）；`content.office.net` 被 microsoft 的 `office.net` 覆盖，直接删除不迁移。
+  - direct.yaml 删 3 条死规则/冗余：`arms-retcode-sg.aliyuncs.com`（被 proxy 的 aliyuncs.com 遮蔽）、`settings.crashlytics.com`（与 google.yaml 重复，全库唯一跨文件重复）、`cm.steampowered.com`（被 `steampowered.com` 覆盖，且 Steam 统一到 steam.yaml）。
+  - 格式：4 条大写域名小写化（`4everProxy.com`/`freeopenProxy.com`/`getfoxyProxy.org`/`uProxy.org`）、10 处规则行尾空格清理、direct.yaml 顶部 3 条说明由 `# === … ===` 改为普通注释（原写法被解析成 3 个空分组）。
+  - **判据修正**：`DOMAIN-SUFFIX,apple` / `microsoft` / `youtube` / `google` / `goog` 经 DoH 核验均为**真实委派 TLD**（`.apple`→c.ns.apple.com、`.microsoft`→dns1.nic.microsoft、`.youtube`/`.google`/`.goog`→Google Registry），不是无效规则，体检报告原「apple.yaml:2 无效」判断作废；真正无效的是 `direct.yaml` 的 `DOMAIN-SUFFIX,smtp`（NXDOMAIN），已在 B 批删除。
+- **B 批：分组重构（只动注释与顺序，payload 除冗余项外不变）**
+  - direct.yaml「腾讯云-香港」134 条：组内腾讯云域名 0 条，实为历史杂项池。拆为游戏平台 11 / 影视动漫 7 / PT 下载站 17 / 小说阅读 4 / 国内站点 20 / CDN 证书 DNS 15 / 海外工具电商 31，IP 段 23 条独立成组并更名（8.208.0.0/12 起为阿里云香港段）。丢弃 4 条冗余：`smtp`（非 TLD）、`ol.epicgames.com`、`injections.adguard.org`、`jsdelivr.net`（本文件「Github 镜像站」组已收录，原 `cdn.jsdelivr.net` 同时升为主域规则）。
+  - direct.yaml「字节跳动 Trae CN」10 条：仅 `bytegate-sg.byteintlapi.com` 属字节，其余 9 条（adguard.org / gh-proxy / iina / obsidian / unpkg 等）另立「开发工具 / 镜像加速」组。
+  - proxy.yaml `# === USER-AGENT,WhatsApp* ===` 组头本身是规则、组内 43 条无一条 WhatsApp：拆为 Google 开发者 18 / 海外站点工具 17 / 关键词兜底 4。
+  - openai.yaml、bilibili.yaml、wechat.yaml 补分组头（原为无头平铺）；meta.yaml 畸形头 `# === Meta== # ===` 修正。
+- **C 批：proxy.yaml「Top blocked sites」553 条按主题拆分**（占全文件 62% 的单组）
+  - 云服务/CDN/证书 37、工具/软件/开发 159、媒体/新闻/出版 141、电商/消费 14、社交/通讯 38、游戏/娱乐/音视频 36、下载/网盘/成人 34、代理/VPN/隐私 24、政府/教育/其他 70；按域名品牌与用途归类，`smtp`/`localnetwork.uop` 一类伪域归入「其他」。
+- **D 批：`.cn` 域名独立成 cn.yaml**
+  - direct.yaml 42 条 `.cn` 规则整体迁入新建 `cn.yaml`，按中国移动 7 / 中国电信 1 / WPS 4 / 奇虎 360 1 / 东方财富 4 / 银联 1 / 政府公共服务 8 / 教育网 1 / 国内 CDN 3 / 开发者工具查询 5 / 厂商官网其他 7 共 11 组；direct.yaml 中因此变空的 5 个整组删除（国内招聘 10-06、中国电信 10-02、教育网镜像、NTP 10-22、政府公共服务 10-28）。
+  - README 规则表新增 `cn.yaml` 行。config.yaml 未接入（本机配置按需引用，留待用户决定）。
+- **保留未动**：openai.yaml 的 4 条 Azure/Sentry 规则在「全量引用」时被 microsoft 遮蔽，但按需单独引用 openai.yaml 时仍生效，故保留；`origin-a.akamaihd.net`（direct）同理保留。P3 冗余子域 37 条（us-payment 13 条 paypal 子域等）未处理。
+- **随本次一并入库**：direct.yaml 移除「lan 默认直连」组 20 条（前一会话已完成、未提交），内网规则改由 `lan.yaml` 承载。`lan.yaml` 目前**未入库**，只引用 `direct.yaml` 的使用者需自行补 `DOMAIN-SUFFIX,lan` / `IP-CIDR` 私网段（本机 config.yaml 顶部另有硬编码内网 DIRECT，不受影响）。
+- **校验**：44 个业务文件 `yaml.safe_load` 全部通过，共 2042 条规则；跨文件重复 0、文件内重复 0（原 1 条 `settings.crashlytics.com` 已消除）；遮蔽复查 6 条，全部为上述「按需引用仍有效」的保留项；`cn.yaml` 与原 direct.yaml 的 `.cn` 集合逐条比对 42 = 42，缺失 0、多余 0。
+- Git：main 提交（proxy/direct/cn/meta/x/steam/google/microsoft/alibaba/bytedance-global/openai/bilibili/wechat + README + 本 changelog）→ push → 同步 `0 0`。
+
 ## 2026-10-28 fill-issues-domain skill 升级 v1.0.0 → v2.0.0：规范化瘦身 + automation 预审模式 + 回归用例（交互轮）
 
 - **背景**：用户用 yao-meta-skill 升级本 skill。yao 诊断（production tier 标准）：`validate_skill` 缺 `agents/interface.yaml`；`resource_boundary_check` 失败（SKILL.md 估 1869 tokens > 1000 budget）；`governance_check` no manifest、maturity=draft/scaffold、score=10/100。用户裁定升级方向为「规范化 + 内容深化」（A+B 全做）。

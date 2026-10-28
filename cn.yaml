@@ -1,0 +1,68 @@
+payload:
+
+# 说明：本文件收录 `.cn` 域名（2026-10-28 从 direct.yaml 拆出），全部为国内可直连站点。
+# 与 direct.yaml 规则互不重叠，可单独引用，也可与 direct.yaml 一起引用。
+
+# === 中国移动 ===
+  - DOMAIN-SUFFIX,10086.cn
+  - DOMAIN-SUFFIX,10085.cn
+  - DOMAIN-SUFFIX,online-cmcc.cn
+  - DOMAIN-SUFFIX,cmcc-cs.cn
+  - DOMAIN-SUFFIX,cmicrwx.cn
+  - DOMAIN-SUFFIX,5gnewcall.cn
+  - DOMAIN-SUFFIX,migu.cn
+
+# === 中国电信 ===
+  - DOMAIN-SUFFIX,189.cn
+
+# === 金山办公 / WPS ===
+  - DOMAIN-SUFFIX,wps.cn
+  - DOMAIN-SUFFIX,wpscdn.cn
+  - DOMAIN-SUFFIX,qwps.cn
+  - DOMAIN-SUFFIX,kdocs.cn
+
+# === 奇虎 360 ===
+  - DOMAIN-SUFFIX,360.cn
+
+# === 东方财富 / 东方财富证券 ===
+  - DOMAIN-SUFFIX,18.cn
+  - DOMAIN-SUFFIX,dfcfs.cn
+  - DOMAIN-SUFFIX,dflcs.cn
+  - DOMAIN-SUFFIX,emhudong.cn
+
+# === 银联 UnionPay ===
+  - DOMAIN-SUFFIX,cup.com.cn
+
+# === 国内政府 / 公共服务 ===
+  - DOMAIN-SUFFIX,www.gov.cn
+  - DOMAIN-SUFFIX,sz.gov.cn
+  - DOMAIN-SUFFIX,gd.gov.cn
+  - DOMAIN-SUFFIX,szns.gov.cn
+  - DOMAIN-SUFFIX,gdzwfw.gov.cn
+  - DOMAIN-SUFFIX,conac.cn
+  - DOMAIN-SUFFIX,govwza.cn
+  - DOMAIN-SUFFIX,trs.cn
+
+# === 国内教育网 ===
+  - DOMAIN-SUFFIX,tsinghua.edu.cn
+
+# === 国内 CDN / 图片 ===
+  - DOMAIN-SUFFIX,sinaimg.cn
+  - DOMAIN-SUFFIX,cdn-go.cn
+  - DOMAIN-SUFFIX,cdqlkj.cn
+
+# === 开发者工具 / 网络查询 ===
+  - DOMAIN-SUFFIX,dcloud.net.cn
+  - DOMAIN-SUFFIX,zvo.cn
+  - DOMAIN-SUFFIX,itdog.cn
+  - DOMAIN-SUFFIX,ip.cn
+  - DOMAIN-SUFFIX,ntp.org.cn
+
+# === 厂商官网 / 其他国内站点 ===
+  - DOMAIN-SUFFIX,qualcomm.cn
+  - DOMAIN-SUFFIX,lexmount.cn
+  - DOMAIN-SUFFIX,sensorsdata.cn
+  - DOMAIN-SUFFIX,aikobo.cn
+  - DOMAIN-SUFFIX,mountaintoys.cn
+  - DOMAIN-SUFFIX,immersivetranslate.cn
+  - DOMAIN-SUFFIX,digicert.cn

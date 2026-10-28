@@ -31,6 +31,7 @@ payload:
   - DOMAIN-SUFFIX,bingads.com
   - DOMAIN-SUFFIX,bingapis.com
   - DOMAIN-SUFFIX,bingtranslator.com
+  - DOMAIN-SUFFIX,microsofttranslator.com
   - DOMAIN-SUFFIX,msn.com
   - DOMAIN-SUFFIX,microsoftedge.com
 

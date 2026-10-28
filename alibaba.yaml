@@ -9,6 +9,7 @@ payload:
   # === CDN / 云（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,alicdn.com
   - DOMAIN-SUFFIX,aliyun.com
+  - DOMAIN-SUFFIX,aliyuncs.com
   - DOMAIN-SUFFIX,aliapp.org
   - DOMAIN-SUFFIX,alibabachengdun.com
   # === 高德地图（2026-09-30 漏网之鱼补录）===

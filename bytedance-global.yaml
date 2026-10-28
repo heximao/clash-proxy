@@ -5,8 +5,14 @@ payload:
 
 # === TikTok（国际版）（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokv.com
   - DOMAIN-SUFFIX,ttwstatic.com
   - DOMAIN-SUFFIX,byteoversea.com
+
+# === BytePlus（字节海外云 / RTC，2026-10-28 从 proxy.yaml 归位）===
+  - DOMAIN-SUFFIX,byteplusapi.com
+  - DOMAIN-SUFFIX,bytepluscdn.com
+  - DOMAIN-SUFFIX,rtcplus.com
 
 # === 字节海外埋点 / APM（2026-10-04 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bytedapm.com

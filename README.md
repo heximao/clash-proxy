@@ -28,6 +28,7 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **bytedance-global.yaml** | 字节跳动海外服务（Trae 国际版、TikTok 等） |
 | **bytedance.yaml** | 字节跳动（抖音、飞书、豆包、火山引擎、Trae CN 等） |
 | **claude.yaml** | Claude / Anthropic |
+| **cn.yaml** | 中国大陆 `.cn` 域名（运营商、政务、教育网、WPS 等，可直连） |
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct-ai.yaml** | 可直连的 AI 服务 |
 | **direct.yaml** | 可直连的域名 |

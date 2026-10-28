@@ -8,6 +8,8 @@ payload:
 
 # === Steam 静态资源 / 下载 CDN ===
   - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamusercontent.com
 
 # === 蒸汽平台（Steam 中国）===
   - DOMAIN-SUFFIX,steamchina.com

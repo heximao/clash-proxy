@@ -1,16 +1,15 @@
 payload:
+
+# === 微信主域 / 小程序服务 ===
+  - DOMAIN-SUFFIX,weixin.com
+  - DOMAIN-SUFFIX,wechat.com
+  - DOMAIN-SUFFIX,servicewechat.com
+
+# === 图片 / JSBridge CDN（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,wximg.wxs.qq.com
-  # === 微信图片 / JSBridge（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,qlogo.cn
   - DOMAIN-SUFFIX,qpic.cn
   - DOMAIN-SUFFIX,weixinbridge.com
-
-# === 微信主域（2026-10-06 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,weixin.com
-  - DOMAIN-SUFFIX,wechat.com
-
-# === 微信小程序服务（2026-10-15 漏网之鱼补录）===
-  - DOMAIN-SUFFIX,servicewechat.com
 
 # === 微信支付（2026-10-19 漏网之鱼补录）===
   - DOMAIN-SUFFIX,wechatpay.cn

@@ -6,11 +6,11 @@ payload:
   - DOMAIN-SUFFIX,apple-dns.net
 
 # === Apple China ===
-  - DOMAIN-SUFFIX,apple.cn  
+  - DOMAIN-SUFFIX,apple.cn
   - DOMAIN-SUFFIX,apple.com.cn
-  - DOMAIN-SUFFIX,icloud.com.cn 
+  - DOMAIN-SUFFIX,icloud.com.cn
   - DOMAIN-SUFFIX,apple-icloud.cn
-  - DOMAIN-SUFFIX,appleicloud.cn 
+  - DOMAIN-SUFFIX,appleicloud.cn
   - DOMAIN-SUFFIX,icloud-apple.cn
 
 # === Mail 邮件 ===
@@ -39,8 +39,8 @@ payload:
   - DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
   - DOMAIN-SUFFIX,gspe19-2-cn-ssl.ls-apple.com.akadns.net
   - DOMAIN-SUFFIX,gspe19-cn.ls-apple.com.akadns.net
-  - DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net 
-  - DOMAIN-SUFFIX,itunes-apple.com.akadns.net 
+  - DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net
+  - DOMAIN-SUFFIX,itunes-apple.com.akadns.net
   - DOMAIN-SUFFIX,cdn-apple.com.akadns.net
   - DOMAIN-SUFFIX,prod-support.apple-support.akadns.net
   - DOMAIN-SUFFIX,push-apple.com.akadns.net

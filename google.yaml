@@ -45,7 +45,7 @@ payload:
   - DOMAIN-SUFFIX,gmail.com
     
 # === Antigravity（重力实验/AI 相关） ===
-  - DOMAIN-SUFFIX,antigravity.google 
+  - DOMAIN-SUFFIX,antigravity.google
 
 # === Google Cloud Run（2026-09-29 漏网之鱼补录；2026-10-22 扩域 a.run.app → run.app 全域，原 a.run.app 覆盖为其子集）===
   - DOMAIN-SUFFIX,run.app
@@ -93,7 +93,7 @@ payload:
   - DOMAIN-SUFFIX,googleapis-cn.com
   - DOMAIN-SUFFIX,googleflights-cn.net
   - DOMAIN-SUFFIX,googleoptimize.com
-  - DOMAIN-SUFFIX,googleoptimize-cn.com  
+  - DOMAIN-SUFFIX,googleoptimize-cn.com
 
 # === Google 广告联盟 ===
   - DOMAIN-SUFFIX,googlesyndication.com
@@ -103,7 +103,7 @@ payload:
   - DOMAIN-SUFFIX,googletagmanager-cn.com
   
   - DOMAIN-SUFFIX,googletagservices.com
-  - DOMAIN-SUFFIX,googletagservices-cn.com 
+  - DOMAIN-SUFFIX,googletagservices-cn.com
   
   - DOMAIN-SUFFIX,googletraveladservices-cn.com
   - DOMAIN-SUFFIX,googletraveladservices.com
@@ -113,6 +113,7 @@ payload:
   - DOMAIN-SUFFIX,googlevads-cn.com
   
   - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,gstatic.cn
   - DOMAIN-SUFFIX,gstatic-cn.com
   
   - DOMAIN-SUFFIX,gtm.oasisfeng.com
@@ -135,7 +136,7 @@ payload:
   - DOMAIN-SUFFIX,qualysapi.qatp1.net
   - DOMAIN-SUFFIX,qualysguard.qpdp1.net
 
-  - DOMAIN-SUFFIX,scanservice1.qcpp1.net 
+  - DOMAIN-SUFFIX,scanservice1.qcpp1.net
 
   - DOMAIN-SUFFIX,recaptcha.net
   - DOMAIN-SUFFIX,recaptcha-cn.net
