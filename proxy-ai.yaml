@@ -61,3 +61,6 @@ payload:
 
 # === 漏网之鱼（2026-09-30 补录）AI 阅读/搜索 API ===
   - DOMAIN-SUFFIX,jina.ai
+
+# === 漏网之鱼（2026-10-28 补录）PixPix AI 电商图文/视频生成 ===
+  - DOMAIN-SUFFIX,pixpix.com

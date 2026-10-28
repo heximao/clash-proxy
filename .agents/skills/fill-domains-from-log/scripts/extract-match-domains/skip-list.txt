@@ -33,9 +33,7 @@ www.zhipin skip:WorkBuddy AI Helper 截断伪域名，无有效 TLD，不归类
 #     高度归属国内的归 direct.yaml；不新建厂商文件，海外杂项归 proxy.yaml；
 #     无国内实证且无海外公司归属的继续挂起。已移除 15 项 manual，明细见 changelog。 ---
 
-# --- 长期挂起待人工（每轮可见，不参与自动裁决）---
-applogcdn.com manual:疑似 CDN 无锚点，留人工
-mdoelscope.ai manual:仿冒域（modelscope.ai 字母转位），绝不补录（待用户确认后转 skip）
+# --- 长期挂起待人工：2026-10-28 交互轮 issues-domain 全部定案后清空（明细见 changelog）---
 # --- 广告 / 追踪类（AGENTS.md 整批不落盘纪律，不逐一判定不归类）---
 fastly-analytics.com skip:广告/追踪类（Fastly 分析遥测），整批不落盘
 statcounter.com skip:广告/追踪类（网站访问统计），整批不落盘
@@ -48,15 +46,6 @@ outbrain.com skip:广告/追踪类（内容推荐广告），整批不落盘
 rfihub.com skip:广告/追踪类（Connexity 广告追踪），整批不落盘
 
 # --- 2026-10-20 automation 轮新裁决留人工（证据不足，无主端点或无品牌锚点）---
-123169.xyz manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 高频访问 api. 子域），留人工
-111666.best manual:Cloudflare 代理 + 隐私保护无归属线索（firefox 访问 i. 子域），留人工
-999831.xyz manual:Cloudflare 代理 + 隐私保护无归属线索，留人工
-yjz.hk manual:RDAP 无数据 + Cloudflare A 记录，无归属线索，留人工
-tsight.io manual:无归属线索（WorkBuddy Helper 访问），留人工
-nsvcs.net manual:AWS NS 无品牌指向（ingesteer 遥测摄入端点），留人工
-ns1pcdn.net manual:CSC 企业注册但无品牌锚点（与 mountaintoys.cn 同批 CDN 模式），留人工
-sitemana.com manual:疑似广告验证但证据不足（CloudFront + 无品牌指向），留人工
-featureassets.org manual:MarkMonitor 企业域无品牌指向，疑似追踪但证据不足，留人工
 
 # --- 2026-10-21 automation 轮广告/追踪类新裁决（AGENTS.md 整批不落盘纪律）---
 creativecdn.com skip:广告/追踪类（个性化广告 CDN），整批不落盘
@@ -70,14 +59,11 @@ pangle-ads.com skip:广告/追踪类（字节穿山甲国际广告平台 analyti
 mmstat.com skip:广告/追踪类（友盟+/阿里妈妈网页统计 sg. 端点，RDAP+SOA 阿里系实证），整批不落盘
 
 # --- 2026-10-21 automation 轮证据不足留人工 ---
-pixpix.com manual:GoDaddy + Cloudflare 无主端点（firefox 访问 www. 主站 2 次），同 123169.xyz 模式，留人工
-byte-test.com manual:byte* 字面但注册模式（阿里云+alidns）与字节惯例（MarkMonitor+bytedns）不符，perfops 子域 CNAME bplslb.com（自有 bpldns NS）无定论，留人工
 
 # --- 2026-10-22 automation 轮新裁决 ---
 fbthirdpartypixel.com skip:广告/追踪类（Meta Pixel 第三方追踪域 metadotcom. 端点，先例 clarity.ms），整批不落盘
 sc-static.net skip:广告/追踪类（Snap Pixel 静态资源域），整批不落盘
 invalid skip:RFC 2606 保留 TLD 连通性探针（this-url-does-not-exist-* UUID 变体），伪域名不归类
-freloop.com manual:NameCheap + Cloudflare 无归属线索（firefox 访问主域 3 次，首页 429 / 直连 SSL 失败），同 pixpix.com 模式，留人工
 
 # --- 2026-10-23 automation 轮新裁决 ---
 codarka.com skip:无主端点（NameCheap 2025-05-12 新注册 + Cloudflare NS + www NXDOMAIN + 首页空，1 次命中无进程），同 antpeak.com 模式，已裁决不归类
@@ -87,11 +73,9 @@ pangolin-sdk-toutiao.com skip:广告/追踪类（字节穿山甲广告联盟 SDK
 pangolin-sdk-toutiao1.com skip:广告/追踪类（穿山甲 SDK 域名变体，同 pangolin-sdk-toutiao.com），整批不落盘
 pglstatp-toutiao.com skip:广告/追踪类（pgl=pangolin 穿山甲视频素材 CDN，sf*-fe-tos/p26-be-pack-sign 端点，anti-AD issue #494 收录请求 + Netify 关联 TouTiao 应用；先例 pangle-ads.com），整批不落盘
 adhuanxiao.com skip:广告/追踪类（ad 前缀 + sdk. 端点，火山引擎云托管 180.184.x，主体不明，广告 SDK 特征），整批不落盘
-wdfl.co manual:.co 无 RDAP 数据 + r. 子域 CNAME CloudFront 短链 + 1 次命中无进程，无归属线索，留人工
 
 # --- 2026-10-25 automation 轮新裁决 ---
 sigmob.cn skip:广告/追踪类（Sigmob 移动广告聚合平台 dc./tm. SDK 端点，先例 mmstat.com），整批不落盘
-checktrustworthiness.com manual:AWS Route53 NS + 主域无 A 记录 + global-iuni. 子域 CNAME AWS US-East ALB，checktrustworthiness 追踪/信誉检查语义无品牌指向，留人工
 
 # --- 2026-10-27 automation 轮新裁决 ---
 adsrvr.org skip:广告/追踪类（The Trade Desk 广告平台 match. 端点），整批不落盘
@@ -110,3 +94,14 @@ data.jsde skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无�
 data.jsdelivr.c skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无有效 TLD，不归类
 cdn.jsdelivr.ne skip:WorkBuddy AI Helper 截断伪域名（cdn.jsdelivr.net），无有效 TLD，不归类
 raw.github skip:WorkBuddy AI Helper 截断伪域名（raw.githubusercontent.com），无有效 TLD，不归类
+
+# --- 2026-10-28 交互轮：issues-domain 16 项全部定案（5 项 skip，11 项落盘）---
+#     落盘：applogcdn.com → bytedance.yaml；byte-test.com → bytedance-global.yaml；
+#     pixpix.com → proxy-ai.yaml；123169.xyz / 111666.best / 999831.xyz / yjz.hk /
+#     tsight.io / ns1pcdn.net / freloop.com / checktrustworthiness.com → proxy.yaml
+#     （用户裁定：无国内实证的海外杂项统一归代理，不再逐项挂起）
+featureassets.org skip:reject.yaml 上游已收录（DOMAIN-SUFFIX L50446，reject 规则优先级最高，补录无意义）
+wdfl.co skip:reject.yaml 上游已收录（DOMAIN-SUFFIX L162770，同上）
+nsvcs.net skip:reject.yaml 上游已收录精确主机 ingesteer.services-prod.nsvcs.net（L68267），父域无其他端点
+mdoelscope.ai skip:仿冒域（modelscope.ai 字母转位），无 A 记录，用户确认转 skip，绝不补录
+sitemana.com skip:广告/追踪类（p.sitemana.com 与 doubleclick/googlesyndication/statcounter/clarity 同批，官网自称 conversion catalyst），整批不落盘

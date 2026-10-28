@@ -1,5 +1,47 @@
 # 更新记录
 
+## 2026-10-28 issues-domain 16 项全部定案：11 项落盘、5 项转 skip（交互轮）
+
+用户逐项裁决，`issues-domain.md` 待判定表 16 → 0，skip-list `manual` 计数 16 → 0。
+
+### 落盘（11 项）
+
+**bytedance.yaml**（并入「字节系 CDN / 配置」组，组头补 2026-10-28）
+- `applogcdn.com`：SOA = `ns1.volc-dns.com. dnsadmin.bytedance.com.`（管理员邮箱落在 bytedance.com，硬锚点）；`lf-static.applogcdn.com` CNAME `bytedns3.com` → 华为云 `cdnhwc2.com`；日志与 `lf-package-cn.feishucdn.com`、`internal-api-lark-api.feishu.cn`、`is.snssdk.com` 同批（判据 4 命名族 + 判据 5 已有锚点文件）
+
+**bytedance-global.yaml**（新增「BytePlus 海外性能测试平台」组）
+- `byte-test.com`：`perfops.` CNAME `bplslb.com` → A `71.18.228.101`（AS396986 Bytedance Inc）、`101.47.92.142`（AS150436 BytePlus Pte. Ltd.），香港节点。原挂起理由「阿里云注册 + alidns NS 不符字节惯例」被 IP 归属证伪——注册商不构成判据，ASN/端点实证优先
+
+**proxy-ai.yaml**（新增 PixPix 组）
+- `pixpix.com`：官网标题「PixPix — AI Product Image & Video Generator for E-commerce」，Cloudflare 前置（104.21/172.67），资源域 `storage.pixpix.media` 走阿里云 OSS `x-oss-process`
+
+**proxy.yaml**（新增「漏网之鱼（2026-10-28 补录）海外杂项」组，8 项）
+- `123169.xyz`（api.）、`111666.best`（i.）、`999831.xyz`（cf.）：三者互现，且与 `ipv6.icanhazip.com` / `dnscheck.tools` / `ipinfo.io` 同批；`111666.best` 首页标题「16图床，永久免费，无需登录的图床」，`i.` 为其图片域（302 由 Cloudflare 返回）
+- `yjz.hk`：「歸去如風」粤语技术博客（Nginx QUIC / DNSPod / 华为云 DNS 教程），Cloudflare A 记录 + vanitydns NS
+- `tsight.io`：TrueSight「High-Fidelity SERP Intelligence」，WorkBuddy Helper 进程调用，与 `www.workbuddy.cn`、`galileotelemetry.tencent.com` 同批
+- `ns1pcdn.net`：随机子域多租户 CDN（`9y49n2-m.` / `5bav82-m.` 等 5 个），NS1 + CSC 企业注册，与 dnscheck / ipleak 检测同批
+- `freloop.com`：NameCheap 2025-05 注册 + Cloudflare NS，首页 body 为空
+- `checktrustworthiness.com`：`global-iuni.` CNAME AWS US-East ALB，与 `cnlogs.umeng.com`、`ali-stats.jpush.cn`、`yupaowang.com` 同批
+
+用户同时裁定口径变更：**无国内实证的海外杂项统一归 `proxy.yaml`，不再逐项挂起**（取代 2026-10-22 裁定的「继续挂起」分支），已同步 AGENTS.md 判据与 MEMORY.md 快照。
+
+### 转 skip（5 项）
+
+- `featureassets.org`：`reject.yaml` L50446 `DOMAIN-SUFFIX` 已收录（Statsig 特征开关/追踪域）。`reject` 是 `rules` 首条（`RULE-SET,reject,REJECT`），优先级最高，再补录无意义
+- `wdfl.co`：`reject.yaml` L162770 `DOMAIN-SUFFIX` 已收录，同上
+- `nsvcs.net`：`reject.yaml` L68267 已有精确主机 `ingesteer.services-prod.nsvcs.net`，父域无其他端点
+- `mdoelscope.ai`：仿冒域（`modelscope.ai` 字母转位），无 A 记录，30 次命中全在 firefox + 沉浸式翻译同批，用户确认转 skip
+- `sitemana.com`：`p.sitemana.com` 与 `doubleclick` / `googlesyndication` / `statcounter` / `clarity.ms` 同批（Chrome，39 次），官网自称「Your conversion catalyst」，按广告追踪类整批不落盘
+
+### 校验
+
+- 4 个改动 yaml `yaml.safe_load` 通过：bytedance 31 / bytedance-global 9 / proxy-ai 39 / proxy 898 条
+- 11 项落点唯一性脚本核验：每项恰好命中 1 个业务文件、0 个命中 `reject.yaml`（无覆盖冲突）
+- skip-list `grep -c manual:` 实测 0；`issues-domain.md` 表头计数 0
+- 附带发现（未处理）：`.agents/skills/fill-issues-domain/SKILL.md` 仍是 `efc502f` 引入的 Unsloth 文档抓取件，工作区已被清空为 0 字节，本轮未纳入提交，待用户决定删除或重写
+
+Git：main 提交（4 个 yaml + `issues-domain.md` + `skip-list.txt` + `AGENTS.md` + `MEMORY.md` + 本 changelog + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 AGENTS.md 重构：剔除冗余约束、GIT 细则并入、目录结构更新（交互轮）
 
 - **精简**：260 → 220 行。删 §3 followups（`followups/` 目录已删，`SPEC/FOLLOWUPS.md` 通篇为 `~/career` 仓库内容）、`cv_jd` 存档整条（指向不存在的 `SPEC/CV-JD-ARCHIVE.md`，本仓库无 `jd/`）、`.gitignore` 全文快照（已漂移：文件里新增的 `tmp/` 快照没有）、13 项挂起清单（改为指向 `issues-domain.md` 表，避免三处同步）。

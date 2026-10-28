@@ -29,7 +29,7 @@ payload:
   - DOMAIN-SUFFIX,marscode.cn
   # === 字节系 API（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bytedanceapi.com
-  # === 字节系 CDN / 配置（2026-10-13 / 2026-10-17 / 2026-10-20 漏网之鱼补录）===
+  # === 字节系 CDN / 配置（2026-10-13 / 2026-10-17 / 2026-10-20 / 2026-10-28 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bytescm.com
   - DOMAIN-SUFFIX,bytetcc.com
   - DOMAIN-SUFFIX,doubaocdn.com
@@ -39,3 +39,4 @@ payload:
   - DOMAIN-SUFFIX,ecombdimg.com
   - DOMAIN-SUFFIX,bytegoofy.com
   - DOMAIN-SUFFIX,bytelb.net
+  - DOMAIN-SUFFIX,applogcdn.com

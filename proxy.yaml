@@ -1031,3 +1031,13 @@ payload:
   - DOMAIN-SUFFIX,wistia.com
   - DOMAIN-SUFFIX,wistia.net
   - DOMAIN-SUFFIX,qualtrics.com
+
+# === 漏网之鱼（2026-10-28 补录）海外杂项（issues-domain 定案）===
+  - DOMAIN-SUFFIX,123169.xyz
+  - DOMAIN-SUFFIX,111666.best
+  - DOMAIN-SUFFIX,999831.xyz
+  - DOMAIN-SUFFIX,yjz.hk
+  - DOMAIN-SUFFIX,tsight.io
+  - DOMAIN-SUFFIX,ns1pcdn.net
+  - DOMAIN-SUFFIX,freloop.com
+  - DOMAIN-SUFFIX,checktrustworthiness.com

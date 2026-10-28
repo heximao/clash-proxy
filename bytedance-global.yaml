@@ -14,3 +14,7 @@ payload:
 
 # === Lark（国际版）（2026-10-01 漏网之鱼补录）===
   - DOMAIN-SUFFIX,larksuite.com
+
+# === BytePlus 海外性能测试平台（2026-10-28 漏网之鱼补录）===
+# perfops. 子域 CNAME bplslb.com → AS396986 Bytedance Inc / AS150436 BytePlus（香港节点）
+  - DOMAIN-SUFFIX,byte-test.com

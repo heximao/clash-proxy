@@ -80,15 +80,15 @@ clash-proxy/
 > 域名，定案记录以 changelog 为准**）。`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进表。
 
 - 无主端点不归类：`antpeak.com` / `hibchr.com` / `zorvian.com`。
-- reject 上游已收录（跳过不加不问）：`clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com`、`cloudflareinsights.com`、`go-mpulse.net`、`akstat.io`。
+- reject 上游已收录（跳过不加不问）：`clarity.ms`、`jpush.cn`、`jiguang.cn`、`etahub.com`、`cloudflareinsights.com`、`go-mpulse.net`、`akstat.io`、`featureassets.org`、`wdfl.co`、`nsvcs.net`（后三者 2026-10-28 定案：`reject.yaml` 已有 `DOMAIN-SUFFIX` 或精确主机规则，而 `reject` 是 `rules` 首条、优先级最高，再补录无意义）。
 - **伪域名 / 探针族整批跳过不计入待判**：`wpad`、`monitor_browser`、`www.z` / `www.zhipin`（WorkBuddy AI Helper 截断主机名，无有效 TLD，2026-10-19 裁决入 skip-list）、`*.dotnxdomain.net` / `*.dashnxdomain.net` / `*.starnxdomain.net`（NextDNS + DNSSEC `root-key-sentinel-*` 探针）。
 - **广告/追踪类整批不落盘**：归 reject.yaml 上游且**禁止核对 reject.yaml**，故只记录不判断（Chrome 浏览一日可产出 40+ 个 ad-tech 主域）。
 - 微信主域 `weixin.com` / `wechat.com` → `wechat.yaml`（非 tencent）。`spacelama.com` → tencent（用户直接指定）。
 - 海外 → `proxy.yaml`；国内经 RDAP/NS 确认 → `direct.yaml`；`macked.site` 是 Mac 资源站→proxy。
 - 中国移动系（10086.cn / chinamobile.com / cmcc-cs.cn / komect.com / miguvideo.com / 10085.cn / cmicapm.com 等）→ direct.yaml 中国移动组。WPS 系（wps.cn / wpscdn.cn / qwps.cn / ksosoft.com）→ direct.yaml。
 - Agent 自用查询端点（rdap.org / verisign.com / crt.sh 等）→ direct.yaml「域名查询 / RDAP」组。
-- **issues-domain 挂起项处置规则（用户 2026-10-22 裁定）**：`.cn` 域名全部归 `direct.yaml`；agent 判定**高度归属国内**的域名归 `direct.yaml`；**不新建厂商文件**——海外知名公司杂项归 `proxy.yaml`；无国内实证且无海外公司归属的域名继续挂起 `issues-domain.md` 待人工，不强行归类。（广告/追踪类整批不落盘纪律优先于本裁定。）
-- 长期挂起待人工项以 [`issues-domain.md`](issues-domain.md) 表为唯一视图（2026-10-22 裁定后现 13 项），本文不镜像清单——定案只需改表 + skip-list 两处。
+- **issues-domain 挂起项处置规则（用户 2026-10-22 裁定，2026-10-28 修订）**：`.cn` 域名全部归 `direct.yaml`；agent 判定**高度归属国内**的域名归 `direct.yaml`；**不新建厂商文件**——海外知名公司杂项归 `proxy.yaml`；**无国内实证、无海外公司归属的域名也统一归 `proxy.yaml`，不再逐项挂起**（2026-10-28 用户裁定，取代 10-22 的「继续挂起」分支；无主端点/广告追踪/reject 上游等既有 skip 裁决优先）。（广告/追踪类整批不落盘纪律优先于本裁定。）
+- 长期挂起待人工项以 [`issues-domain.md`](issues-domain.md) 表为唯一视图（2026-10-28 全部定案后现 0 项），本文不镜像清单——定案只需改表 + skip-list 两处。
 
 #### 文件格式规则
 
