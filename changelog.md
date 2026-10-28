@@ -1,5 +1,14 @@
 # 更新记录
 
+## 2026-10-28 粗判草稿目录迁移：log/.work → 仓库根 tmp/（交互轮）
+
+- **变更**：skill 运行期粗判草稿目录由 `log/.work/` 迁移到仓库根 `tmp/`（用户指示）。原目录为空（上轮已消费清理），`mkdir tmp` + `rmdir log/.work`，无内容搬迁。
+- **`.gitignore`**：新增 `tmp/`（第 8 行，紧随 `log/`）；`git check-ignore -v` 实测目录自身与内部文件均命中，草稿不会入库。
+- **SKILL.md 同步 5 处**（`.agents/skills/fill-domains-from-log/SKILL.md`）：第 4 步粗判表落盘路径、流程图第 4/11 步、第 6 节代理不可用降级、第 11 节清理命令 `rm -f tmp/*.md`。归档旧版 `archive/fill-domains-from-log-v2.8.0/SKILL.md` 保持原样（历史存档不改）。
+- **AGENTS.md 同步**（工作区未提交改动，随用户重组提交）：目录树 `log/.work/` 行移除，根级新增 `tmp/` 条目。
+- **无关引用核查**：全库 grep 确认无 Python/shell 脚本引用该目录，仅 skill 文档约定；`tmp/` 无既有同名冲突。
+- Git：main 提交（`.gitignore` + SKILL.md + 本 changelog + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 移除 CLAUDE.md 符号链接（交互轮）
 
 - **变更**：删除仓库根 `CLAUDE.md`（原为指向 `AGENTS.md` 的符号链接，120000 模式跟踪；用户 2026-10-28 裁定不再需要，Claude 系客户端可直接读 `AGENTS.md`）。

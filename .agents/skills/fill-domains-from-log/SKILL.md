@@ -28,7 +28,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
  3. 人工复核过滤边界（脚本内置过滤之外的漏网情况）
       ↓
  4. 规则级查重（scripts/check-coverage/check_coverage.py，含品牌标签锚点）
-    + 读历史 changelog + 进程名粗判，粗判表落盘 log/.work/ 续跑
+    + 读历史 changelog + 进程名粗判，粗判表落盘 tmp/ 续跑
    —— 本步骤禁止任何外部查询 ——
       ↓
  5. ★ 自主裁决归属（证据足直接定；不足进 6）★
@@ -49,7 +49,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
       ↓
 10. 更新 changelog → 在 main 上提交（显式列文件，不推远程）
       ↓
-11. push main → 确认 0 0 → 删除本轮粗判草稿 log/.work/
+11. push main → 确认 0 0 → 删除本轮粗判草稿 tmp/
       ↓
 12. 归档已处理日志（log/clashx-meta-log/ → log/.archive/）
 ```
@@ -184,7 +184,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
    - `mihomo` / `OrbStack Helper` → 内核 / 基础设施自身流量
    - `logioptionsplus_agent` → 罗技 Options+（logitech 系，无锚点时留人工）
    - `Google Chrome Helper` / `firefox` → **无产品指向，归属由第 5/6 步自主裁决；证据不足走 RDAP**
-4. **粗判表落盘（中断续跑）**：每个未覆盖主域写一行「主域 → 建议归属文件 + 判断依据（进程名 / 域名语义 / BRAND-ANCHOR / AGENTS.md 判据条号）」，标记 `可定` / `待查`，**写入 `log/.work/YYYY-MM-DD-draft.md`**（gitignore 覆盖，不入库）。中断后下轮若发现该文件存在，先读它续跑而不是从头再来；第 11 步 push 成功后删除。
+4. **粗判表落盘（中断续跑）**：每个未覆盖主域写一行「主域 → 建议归属文件 + 判断依据（进程名 / 域名语义 / BRAND-ANCHOR / AGENTS.md 判据条号）」，标记 `可定` / `待查`，**写入 `tmp/YYYY-MM-DD-draft.md`**（gitignore 覆盖，不入库）。中断后下轮若发现该文件存在，先读它续跑而不是从头再来；第 11 步 push 成功后删除。
 
 ## 5. 自主裁决归属（留痕，可追溯）
 
@@ -206,7 +206,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 
 **前置条件：第 5 步自主裁决中标记为 `待查` 的项。** 不再以"用户答不确定"为触发条件，由 agent 自主判断证据是否充分。
 
-- **代理可用性先探测（每轮现场做）**：本机 7893 代理状态会来回翻转，查询前先 `nc -z 127.0.0.1 7893`。不通时**不要无限重试**：所有待查项在粗判草稿（`log/.work/`）中标记「代理不可用，顺延下轮」，本轮按无结论兜底处理（记 changelog「待人工/下轮重试」），automation 正常收尾不卡死。
+- **代理可用性先探测（每轮现场做）**：本机 7893 代理状态会来回翻转，查询前先 `nc -z 127.0.0.1 7893`。不通时**不要无限重试**：所有待查项在粗判草稿（`tmp/`）中标记「代理不可用，顺延下轮」，本轮按无结论兜底处理（记 changelog「待人工/下轮重试」），automation 正常收尾不卡死。
 - **本机 `whois` 命令不可用**：`whois.iana.org` 无法解析，客户端会挂起而非报错；macOS 也**没有 `timeout` 命令**（`timeout: command not found`）。不要再尝试 `timeout 30 whois <domain>`。
 - **RDAP（首选）**：`https_proxy=http://127.0.0.1:7893 curl -sL --max-time 20 https://rdap.org/domain/<domain>` — **必须走代理**（直连返回空）。首次调用常返回空响应，需重试 2–3 次（间隔 3s）。返回 JSON 中 `registrar` 为空数组 + `nameservers` 为 Cloudflare NS（`ALEC.NS.CLOUDFLARE.COM`）通常意味着注册信息完全隐私保护。**批量查证用 curl 循环落盘 JSON 再本地解析，不要用 python urllib/requests 直连代理（Hermes python3 缺 CA bundle，SSL 证书校验必失败，见第 15 节）。** 证据可信度层级：RDAP（注册商+NS）> DoH（CNAME 链可暴露所有者 DNS 调度域，如 `bytedns3.com` 实证字节）> HTTP 首页标题 > crt.sh（走代理常 502）/ wayback API（高频 429，两者不可作为主证据）。
 - **批量 RDAP**：写成 `/tmp/rdap.py` 循环 + 重试执行（heredoc 内联 python 会被安全策略拦截，见第 15 节环境坑）。
@@ -323,7 +323,7 @@ git push origin main
 git rev-list --left-right --count origin/main...HEAD
 
 # 4. push 成功后清理粗判草稿（本轮已消费的所有草稿，含往日中断遗留）
-rm -f log/.work/*.md
+rm -f tmp/*.md
 ```
 
 冲突与异常处理：
