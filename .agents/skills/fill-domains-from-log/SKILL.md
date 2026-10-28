@@ -1,7 +1,7 @@
 ---
 name: fill-domains-from-log
 version: v2.9.0
-description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。证据不足无法判定归属的域名写入 issues-domain.md 待人工表（表格列出命中子域/次数/进程/已查证据/存疑点），留用户判定；表只保留待判定域名，定案记录写 changelog。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/.archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
+description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-domain 外部规则集命中的域名，结构化输出去重候选（自带 skip-list 已裁决过滤、私有 IP/探针过滤、主域归并）；用 check-coverage 脚本做规则级查重与品牌标签锚点检索，进程名粗判后自主裁决归属（证据不足时自主调用 RDAP/DoH，不再经用户确认），分类补录到 clash-proxy 规则 yaml 并执行查重自检闭环。证据不足无法判定归属的域名写入 issues-domain.md 待人工表（表格列出命中子域/次数/进程/已查证据/存疑点），留用户判定；表只保留待判定域名，定案记录写 changelog。日志获取采用 cp 复制：从 ~/.config/clash.meta/logs 只读复制昨天的日志到仓库 log/clashx-meta-log/（禁止 mv/rm 源目录，避免沙箱授权弹窗、支持 automation 全自动；当天日志不处理、更早的留存源目录），处理完成后归档至 log/archive/。Git 侧所有改动直接在 main 上完成：每轮开头 fetch 并确认与远程双向 0 0，提交后立即 push 并再次确认。当用户要求补漏域名、归类漏网之鱼、分析日志补规则、整理 match Match 或 oc-cn-domain 域名时使用。
 ---
 
 # 从日志补漏域名
@@ -51,7 +51,7 @@ description: 从 ClashX Meta 日志提取漏网之鱼（match Match）及 oc-cn-
       ↓
 11. push main → 确认 0 0 → 删除本轮粗判草稿 tmp/
       ↓
-12. 归档已处理日志（log/clashx-meta-log/ → log/.archive/）
+12. 归档已处理日志（log/clashx-meta-log/ → log/archive/）
 ```
 
 **两条核心原则：**
@@ -147,7 +147,7 @@ python3 .agents/skills/fill-domains-from-log/scripts/extract-match-domains/extra
 automation 每天跑，多数轮可能过滤后**一个候选都没有**（全部已覆盖 / 被 skip-list 消化）。此时：
 
 - **不写 changelog 条目、不产生任何提交**——空轮没有可审计的变更，changelog 只记实质变更。
-- **照常归档**（第 12 节）：已提取确认无增量的日志文件夹照样移入 `log/.archive/`，否则下轮重复提取。
+- **照常归档**（第 12 节）：已提取确认无增量的日志文件夹照样移入 `log/archive/`，否则下轮重复提取。
 - **记当日 memory 一行**（如「10-18 轮：昨日日志提取 0 候选，全部已覆盖，已归档」），供用户事后核对 automation 存活。
 - 公网裸 IP 段也无新增时同样适用。
 
@@ -337,15 +337,15 @@ rm -f tmp/*.md
 **前提：第 11 步 push 已完成、同步确认 `0 0`、changelog 条目已按第 10 步写入并随提交入库（hash 回填按既有纪律顺延下轮）。** 归档是本轮流程的收尾动作，未归档不算完成。
 
 ```bash
-mkdir -p log/.archive
-mv log/clashx-meta-log/<已处理文件夹> log/.archive/
+mkdir -p log/archive
+mv log/clashx-meta-log/<已处理文件夹> log/archive/
 ```
 
 - 只归档本轮**确认处理完成**的文件夹；上轮中断遗留、本轮未能定案（留待人工）的日志**留在 `log/clashx-meta-log/` 原地**，待后续轮次处理完再归档。
 - **cp 模式下仓库副本是静态快照**（cp 后不再增长，源目录的实时写入不影响仓库副本），可直接归档。仅当历史 mv 场景遗留的文件夹仍在被内核写入时（fd 指向仓库副本）才需检查：`pgrep -fl ClashX` + `ls -lT log/clashx-meta-log/<folder>/` 看 core/mihomo mtime 是否接近当前时间；是则留原地待 app 重启后归档。
-- `.archive/` 与 `clashx-meta-log/` 同级（即 `log/.archive/`），同被 `.gitignore` 的 `log/` 规则覆盖，不会入库。
+- `archive/` 与 `clashx-meta-log/` 同级（即 `log/archive/`），同被 `.gitignore` 的 `log/` 规则覆盖，不会入库。
 - 归档后 `log/clashx-meta-log/` 应只剩未处理项；下一轮的待处理集合 = 昨天日期前缀的文件夹（源目录或仓库已有）+ `log/clashx-meta-log/` 未归档存量。
-- 归档情况（哪些文件夹移入了 `.archive/`）记入当日 memory 日志。
+- 归档情况（哪些文件夹移入了 `archive/`）记入当日 memory 日志。
 
 ## 13. 收尾核对与记忆
 
@@ -382,7 +382,7 @@ push 并确认 `0 0` 后做四件收尾（changelog 条目本体已在第 10 步
 - **禁止编辑 `reject.yaml`**，**禁止在提交中包含 `reject.yaml`**。
 - **禁止任何形式的强制推送**（`--force` / `--force-with-lease`）。
 - **禁止 `git add -A` / `git add .` 等批量跟踪**，只显式暂存本次改动文件；commit 后必须立即 push 并校验 `0 0`。
-- **禁止跳过日志归档（第 12 节）**：push 并确认 `0 0` 后必须把本轮已处理日志移入 `log/.archive/`（空结果轮同样归档），否则下轮会对同一批日志重复提取。
+- **禁止跳过日志归档（第 12 节）**：push 并确认 `0 0` 后必须把本轮已处理日志移入 `log/archive/`（空结果轮同样归档），否则下轮会对同一批日志重复提取。
 - 用户主动介入给归属时（对话中直接给出），以用户输入为准，不再自行论证或改判；默认不主动询问用户。
 
 ## 15. 环境坑（本机实测）

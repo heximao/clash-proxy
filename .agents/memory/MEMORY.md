@@ -43,7 +43,7 @@
 - **changelog 编写约束已落地 AGENTS.md（2026-10-17）**：提取须同时覆盖 `match Match using` 与 `(match Match/)` 两种行格式（10-07 曾因只取前者漏记 smallstrawberry.com）；payload 数写前用 `grep -cE '^[[:space:]]*-[[:space:]]*[^[:space:]]'` 实查；「归并主域后 N 个」要括号注明构成。
 
 ## 日志差集纪律
-- **2026-10-17 傍晚起日志 cp 复制 + 只处理昨天（skill v2.5.0+，回退自移动制）**：源目录 `~/.config/clash.meta/logs/` 的**昨天**日志用 `cp -R` **只读复制**到 `log/clashx-meta-log/`（不删源）；**禁止 `mv`/`rm` 源目录**——写/删 `~/.config` 触发沙箱授权弹窗、automation 卡死，cp 只读源不弹窗。当天日志不处理、更早留存源目录。处理完归档至 `log/.archive/`（工作区内 mv，不碰 `~/.config`）。优先用仓库已有昨天前缀文件夹，无则从源 cp（防 cp 套娃——目标同名则跳过）。**回退原因**：移动制 mv 源目录每次触发沙箱弹窗，用户要全自动 automation，故回退 cp。AGENTS.md 已同步。
+- **2026-10-17 傍晚起日志 cp 复制 + 只处理昨天（skill v2.5.0+，回退自移动制）**：源目录 `~/.config/clash.meta/logs/` 的**昨天**日志用 `cp -R` **只读复制**到 `log/clashx-meta-log/`（不删源）；**禁止 `mv`/`rm` 源目录**——写/删 `~/.config` 触发沙箱授权弹窗、automation 卡死，cp 只读源不弹窗。当天日志不处理、更早留存源目录。处理完归档至 `log/archive/`（工作区内 mv，不碰 `~/.config`）。优先用仓库已有昨天前缀文件夹，无则从源 cp（防 cp 套娃——目标同名则跳过）。**回退原因**：移动制 mv 源目录每次触发沙箱弹窗，用户要全自动 automation，故回退 cp。AGENTS.md 已同步。
 - **changelog 有记录 ≠ 已处理完**：日志当天持续追加、跨日追加、重启新增 core 文件，须 diff 后重新提取，与 changelog 已处理主域集合对比定位增量。
 - **只处理昨天**：当天日志留待次日 automation 处理；不再扫描今日目录。带出的目录必须真正跑提取，不能只 cp。
 - 差集 ≠ 漏跑：早期运行未 cp 造成的历史缺口用 changelog 交叉核验定性（特征域名能找到落点即是复制缺口）。
@@ -52,7 +52,7 @@
 ## Skill 流程裁决
 - **2026-10-17 起 yaml 归属判定改自主裁决（skill v2.4.0）**：取消 review 关卡 / `AskUserQuestion` 强制提问，归属由 agent 自主判断——证据足直接定，证据不足自主走 RDAP/DoH，无结论按兜底（无主端点不归类、国内杂项归 `direct.yaml`、海外杂项归 `proxy.yaml`），不强行归类。**每个归类决定须在 changelog 留痕**（判据条号/进程名/RDAP 结果），是自主模式唯一可追溯手段。用户主动介入给归属时以用户为准，默认不主动问。AGENTS.md「域名归属判定判据」「已裁决结论」仍是判定依据本身，不变。
 - **2026-10-17 傍晚日志获取回退 cp + 只处理昨天（skill v2.5.0）**：移动制（v2.3.0–v2.4.1）mv 源目录触发沙箱弹窗、automation 卡死，用户要全自动；回退 cp 只读复制昨天的日志，禁止 mv/rm 源目录；当天不处理、更早留存。归档仍工作区内 mv。**沙箱规则**：读 `~/.config` 不弹窗，写/删才弹窗。
-- **2026-10-22 起证据不足项落 issues-domain.md 待人工表（skill v2.8.0，用户要求）**：RDAP/DoH 查证后仍无归属结论的主域，在 changelog「待人工」+ skip-list `manual` 之外必须写 `issues-domain.md` 表格（skill 新增第 6b 节）；命中子域/次数/进程须从日志实证（`log/.archive/` grep），不得凭记忆；登记日期取首轮 changelog 条目日期，历史项按「连续第 N 轮」反推；用户定案闭环同时清三处。**表只保留待判定域名，定案记录只写 changelog**（v2.9.0 用户要求，10-22 裁定轮曾留的表尾定案记录段已移除）。首轮种子：manual 全集 28 项（提交 `35705e0`）。
+- **2026-10-22 起证据不足项落 issues-domain.md 待人工表（skill v2.8.0，用户要求）**：RDAP/DoH 查证后仍无归属结论的主域，在 changelog「待人工」+ skip-list `manual` 之外必须写 `issues-domain.md` 表格（skill 新增第 6b 节）；命中子域/次数/进程须从日志实证（`log/archive/` grep），不得凭记忆；登记日期取首轮 changelog 条目日期，历史项按「连续第 N 轮」反推；用户定案闭环同时清三处。**表只保留待判定域名，定案记录只写 changelog**（v2.9.0 用户要求，10-22 裁定轮曾留的表尾定案记录段已移除）。首轮种子：manual 全集 28 项（提交 `35705e0`）。
 
 ## 仓库状态
 - PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先 grep 全库查重。

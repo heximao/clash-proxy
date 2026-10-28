@@ -1,5 +1,14 @@
 # 更新记录
 
+## 2026-10-28 归档目录改名：log/.archive → log/archive，确立为唯一归档位置（交互轮）
+
+- **变更**：`mv log/.archive log/archive`（15 个已处理日志文件夹完整搬迁，项数与内容不变）；用户裁定 `log/archive/` 为归档目录的唯一位置。
+- **理由**：① 与处理源 `log/clashx-meta-log/` 同级而非嵌套其中，避免差集扫描把归档物当成待处理日志；② 去掉 `.` 前缀，不再是隐藏目录，便于人工核对归档批次。
+- **文档同步**（活引用 12 处，历史记录不改）：`SKILL.md` 8 处（front-matter description / 流程图第 12 步 / 第 2b 节照常归档 / 第 12 节 mkdir+mv 命令 / 同级说明 / 归档记录要求 / 硬性约束）；`AGENTS.md` 2 处（目录树、日志差集纪律）；`MEMORY.md` 2 处（日志差集纪律、issues-domain 实证来源）。
+- **gitignore**：`log/` 规则覆盖 `log/archive/`，`git check-ignore` 实测目录与内部文件夹均命中，不入库。
+- **未处理（待用户决定）**：遗留 `log/clashx-meta-log/.archive/`（26 个旧档案、286M、截止 `2026-10-16_19-43-14`）仍在原处，未合并未删除——上轮建议的合并方案未执行，且与 `log/archive/` 存在同名文件夹 `2026-10-04_10-20-36`（两份不同副本）待定去留。
+- Git：main 提交（`SKILL.md` + 本 changelog + `MEMORY.md` + 当日 memory 日志）→ push → 同步 `0 0`；`AGENTS.md` 改动并入用户未提交重组。
+
 ## 2026-10-28 删除 skill 旧版归档 archive/fill-domains-from-log-v2.8.0（交互轮）
 
 - **变更**：删除 `.agents/skills/fill-domains-from-log/archive/fill-domains-from-log-v2.8.0/` 下 4 个文件（SKILL.md 402 行、README.md、extract_match_domains.py、skip-list.txt），用户裁定旧版归档不再保留。
