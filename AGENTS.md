@@ -15,7 +15,7 @@ clash-proxy/
 ├── *.yaml                              # 除 config.yaml 外的业务规则文件：扁平存放根目录，均以 payload: 开头
 ├── README.md                           # 面向使用者：CDN 引用方式、客户端配置示例、规则文件全表
 ├── changelog.md                        # 更新记录：每次变更后在顶部追加（见「git 操作」）
-├── issues-domain.md                    # 待人工判定域名表：证据不足无法判定归属的域名登记于此（fill-domains-from-log skill 第 6b 节）
+├── issues-domain.md                    # 待人工判定域名表：证据不足无法判定归属的域名登记于此（fill-domains-from-log skill 第 6b 节登记，fill-issues-domain skill 处理定案）
 ├── .gitignore                          # 忽略规则（log/、tmp/、工具目录等；以文件本身为准）
 ├── scripts/                            # 维护脚本（每个脚本独立子目录，各带自己的 README）
 │   ├── find-duplicates/               # find_duplicates.py + 生成物 DUPLICATES.md（入库）/ duplicates.json（入库）
@@ -24,8 +24,9 @@ clash-proxy/
 │   └── normalize-yaml-comments/
 ├── .agents/                            # 项目级 Agent 数据（已纳入 git 跟踪）
 │   ├── skills/
-│   │   └── fill-domains-from-log/     # 从日志提取漏网之鱼域名并分类补录的完整工作流
-│   │       └── scripts/extract-match-domains/  # 提取脚本 + skip-list.txt（已裁决跳过项数据源）+ README
+│   │   ├── fill-domains-from-log/     # 从日志提取漏网之鱼域名并分类补录的完整工作流
+│   │   │   └── scripts/extract-match-domains/  # 提取脚本 + skip-list.txt（已裁决跳过项数据源）+ README
+│   │   └── fill-issues-domain/        # issues-domain.md 待判定表处理流程（证据复核 → 用户裁决 → 落盘/转 skip → 三处闭环）+ 查证/校验脚本
 │   └── memory/                         # 项目记忆：每日工作日志 + MEMORY.md
 ├── .github/workflows/
 │   └── auto-merge-reject.yml           # 每日 00:20 UTC 自动合并 reject.yaml
@@ -74,8 +75,8 @@ clash-proxy/
 > 用户定案的 manual 项要从文件移除。判据规则以本节为权威；下方清单是该文件的人类可读快照，
 > 同步延后至交互式会话（受保护文件限制见「常见坑」），不要求逐轮一致。
 >
-> `manual` 项另有人类可读表格视图：根目录 [`issues-domain.md`](issues-domain.md)（待人工判定域名表，由
-> fill-domains-from-log skill 第 6b 节维护）——证据不足无法判定归属的域名（含判据 5 无锚点厂商文件的
+> `manual` 项另有人类可读表格视图：根目录 [`issues-domain.md`](issues-domain.md)（待人工判定域名表，**登记**由
+> fill-domains-from-log skill 第 6b 节负责，**定案处理**由 fill-issues-domain skill 负责）——证据不足无法判定归属的域名（含判据 5 无锚点厂商文件的
 > 大型公司主域）登记于此留用户判定；用户定案后该行与 skip-list `manual` 项同步移除（**表只保留待判定
 > 域名，定案记录以 changelog 为准**）。`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进表。
 

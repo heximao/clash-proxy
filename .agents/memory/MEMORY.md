@@ -1,7 +1,7 @@
 # clash-proxy 项目长期笔记
 
 ## 目录结构
-`.workbuddy/skills`、`.workbuddy/memory` 是指向 `.agents/skills`、`.agents/memory` 的**单向符号链接**，同一份文件两个路径等价。文档写 `.agents/...` 即为正确，不要"修正"。`Skill` 工具加载 `fill-domains-from-log` 会报 "Cannot find skill" → 直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
+`.workbuddy/skills`、`.workbuddy/memory` 是指向 `.agents/skills`、`.agents/memory` 的**单向符号链接**，同一份文件两个路径等价。文档写 `.agents/...` 即为正确，不要"修正"。`Skill` 工具加载 `fill-domains-from-log` / `fill-issues-domain` 会报 "Cannot find skill" → 直接 Read `.agents/skills/<name>/SKILL.md`。
 **`issues-domain.md`（仓库根，skill v2.8.0 起）**：待人工判定域名表——证据不足无法判定归属的主域（含判据 5 无锚点厂商文件的大型公司主域）登记于此，7 列（# / 域名 / 登记日期 / 命中子域（次数）/ 进程 / 已查证据 / 存疑点），留用户判定；与 skip-list `manual` 段、changelog「待人工」段三处一致；**行只许因用户定案移除**（补录 yaml 或转 skip 两种闭环）；**表只保留待判定域名，定案记录只写 changelog**（v2.9.0 用户要求，不在表内留定案记录段）；`skip` 类已裁决项（无主端点/广告追踪/reject 上游/伪域名）不进表；automation 可直接追加（非受保护文件，不同于 AGENTS.md）。
 **scripts/ 自 2026-10-17 起为子目录结构**（每脚本一目录一 README）：`scripts/find-duplicates/`、`scripts/merge-reject-from-loyalsoldier/`、`scripts/normalize-yaml-comments/`。`find-duplicates/find_duplicates.py` 扫描根已锚定仓库根、**任意目录可运行**，报告（DUPLICATES.md / duplicates.json）在脚本旁；另两个脚本仍须**仓库根目录执行**（依赖 cwd）。旧平铺路径已全部失效，见到的旧引用一律按此映射。
 

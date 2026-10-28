@@ -1,6 +1,6 @@
 # issues-domain：待人工判定域名
 
-本文件登记 `fill-domains-from-log` 流程中**证据不足、无法判定归属**的域名，按登记轮次追加，留待用户（野人）人工判定。维护规范：fill-domains-from-log skill 第 6b 节（v2.8.0 起）。
+本文件登记 `fill-domains-from-log` 流程中**证据不足、无法判定归属**的域名，按登记轮次追加，留待用户（野人）人工判定。维护规范：**登记**见 fill-domains-from-log skill 第 6b 节（v2.8.0 起），**处理定案**见 fill-issues-domain skill。
 
 ## 使用说明
 

@@ -1,5 +1,18 @@
 # 更新记录
 
+## 2026-10-28 新建 fill-issues-domain skill：issues-domain 定案流程落地（交互轮）
+
+- **背景**：`.agents/skills/fill-issues-domain/SKILL.md` 自 `efc502f` 引入起内容是 Unsloth 文档抓取件（12,044 行 / 136 页，非 skill，工作区已被清空为 0 字节），上轮列为待处理。本轮按用户要求重写为真正的工作流 skill，把当日 16 项定案的实操流程固化下来。
+- **SKILL.md**（225 行；frontmatter：`name` / `version: v1.0.0` / `agent_created: true` / `description`）：定位为「消费 + 定案」——`fill-domains-from-log` 负责发现与登记（第 6b 节），本 skill 负责把表清零。流程 0–10：同步准备与三处一致性核对 → 建立清单 → **五层证据采集**（L1 先查 `reject.yaml` 覆盖 / L2 品牌锚点 / L3 网络查证 / L4 日志共现 / L5 兜底）→ 证据判读（SOA 邮箱、ASN、首页标题）→ 汇总裁决表（按主题分组 ≤4 组）→ 批量提问规范 → 执行定案 → 三处闭环与快照同步 → 校验 → changelog 提交推送 → 环境坑。
+- **三个脚本**（每脚本一子目录一 README，均实测跑通）：
+  - `scripts/probe-domains/probe_domains.py`：一次输出 SOA 邮箱 / NS / A / CNAME / RDAP / 首页标题。自测修掉三个 bug——NS 被按字符展开、SOA 权威段混进 A 记录、`000` 状态码被误判为成功。
+  - `scripts/log-cooccurrence/log_cooccurrence.py`：±N 秒共现反推产品簇（`sitemana` ↔ doubleclick、三个数字域互现 ↔ 同一图床站），按后缀匹配子域，默认过滤解析器 IP。
+  - `scripts/verify-landing/verify_landing.py`：落点唯一性 + reject 覆盖 + skip-list 模式 + `safe_load` 四验合一，输出 `OK/MISSING/DUP/IN-REJECT`，空文件自动跳过。用当日 16 项回归，异常项 0。
+- **指针同步**：`AGENTS.md`（目录树新增 skill 条目、`issues-domain.md` 行注明「登记 / 定案」分工、已裁决结论前言改分工表述）；`issues-domain.md` 首段；`fill-domains-from-log/SKILL.md` 第 6b 节末尾加「定案执行流程另立 skill」；`MEMORY.md` 的 skill 加载失败备注补 `fill-issues-domain`。
+- **校验**：skill-creator `quick_validate.py` → `Skill is valid!`；3 个脚本 `py_compile` 通过，`__pycache__` 已清理。
+- **未保留历史版本**：原文件内容为误入的抓取件，无可保留价值，直接覆盖写入。
+- Git：main 提交（`SKILL.md` + 3 个脚本目录 6 文件 + 4 处指针 + 本 changelog + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 issues-domain 16 项全部定案：11 项落盘、5 项转 skip（交互轮）
 
 用户逐项裁决，`issues-domain.md` 待判定表 16 → 0，skip-list `manual` 计数 16 → 0。

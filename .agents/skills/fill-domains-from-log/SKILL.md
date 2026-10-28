@@ -248,6 +248,8 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 
 **automation 兼容性**：`issues-domain.md` 是普通仓库文件（不同于受保护的 AGENTS.md），automation 轮可直接追加并随本轮提交推送；行的移除只发生在用户定案后，由交互式会话执行。
 
+**定案执行流程另立 skill**：用户裁决后的完整处理（证据复核与补查、批量提问、落盘 / 转 skip、三处闭环、校验与提交推送）见 `fill-issues-domain` skill（`.agents/skills/fill-issues-domain/SKILL.md`）。本节只负责**登记**，不展开定案步骤。
+
 ## 7. 分类到规则文件（按自主裁决结论执行）
 
 **前提：第 5 步自主裁决完成，第 6 步（证据不足项）已查清。按自主裁决结论执行，留痕已写入 changelog 草稿。**
