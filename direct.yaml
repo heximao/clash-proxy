@@ -403,3 +403,13 @@ payload:
   - DOMAIN-SUFFIX,360.cn
   - DOMAIN-SUFFIX,qhimg.com
   - DOMAIN-SUFFIX,qhres2.com
+
+# === 国内政府 / 公共服务（2026-10-28 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sz.gov.cn
+  - DOMAIN-SUFFIX,gd.gov.cn
+  - DOMAIN-SUFFIX,szns.gov.cn
+  - DOMAIN-SUFFIX,gdzwfw.gov.cn
+  - DOMAIN-SUFFIX,conac.cn
+  - DOMAIN-SUFFIX,govwza.cn
+  - DOMAIN-SUFFIX,www.gov.cn
+  - DOMAIN-SUFFIX,trs.cn

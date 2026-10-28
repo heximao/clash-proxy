@@ -1,5 +1,30 @@
 # 更新记录
 
+## 2026-10-28 漏网之鱼归类：8 个 .cn 政府/公共服务域名补录 direct.yaml（automation 轮）
+
+- **数据来源**：`log/clashx-meta-log/2026-10-27_10-14-04`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，6 个日志文件约 12.5M；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
+- **提取量**（结构化脚本，过滤伪域名 2、探针 0、私有 IP 0）：候选 222（`match Match` 6 / `oc-cn-domain` 216），归并主域 44、公网裸 IP 4（8.8.8.8/1.1.1.1/1.0.0.1/8.8.4.4 均已覆盖于 dns.yaml/google.yaml/proxy.yaml）；skip-list 命中 `skip` 11 行（4 主域）、`manual` 5 行（5 主域均已登记 issues-domain.md 表）。
+- **查重**：44 主域 + 4 IP 全走 stdin 喂 `check_coverage.py` → COVERED 39 / UNCOVERED 8（BRAND-ANCHOR 0）；8 未覆盖主域全部为 `.cn` 域名，按用户 2026-10-22 裁定「`.cn` 域名全部归 `direct.yaml`」直接归类，无需 RDAP 查询。
+- **补录明细**（8 域、1 文件、1 个新分组，依据逐条留痕）：
+  - **`direct.yaml` 新组「国内政府 / 公共服务（2026-10-28 漏网之鱼补录）」8 域**：
+    - `sz.gov.cn`（深圳市政府，子域 zjj.sz.gov.cn(25)/auth/fgw/mzj/www，firefox 访问；.cn 裁定）
+    - `gd.gov.cn`（广东省政府，子域 tyrz/statistics/app/service，firefox；.cn 裁定）
+    - `szns.gov.cn`（深圳南山区政府，www 子域(7)，firefox；.cn 裁定）
+    - `gdzwfw.gov.cn`（广东政务服务网，子域 www/static/xtbg，firefox；.cn 裁定）
+    - `conac.cn`（中央机构编制委员会办公室，dcs 子域(2)，firefox；.cn 裁定）
+    - `govwza.cn`（政务服务 WZA 平台，service 子域(2)，firefox；.cn 裁定）
+    - `www.gov.cn`（中央政府门户，zfwzgl.www.gov.cn 子域(2)，firefox；.cn 裁定；gov.cn 为特殊二级 TLD，www.gov.cn 为可注册三级域）
+    - `trs.cn`（拓尔思信息技术，ta 子域(1)，firefox；.cn 裁定）
+- **未收录及原因**：无新无法判定项；无广告/追踪类新发现。
+- **整批跳过**（COVERED 35 + skip-list `skip` 4 主域）：
+  - COVERED 35（规则集先于本地 yaml 匹配不代表规则缺失）：hdslb.com、bilibili.com、bilivideo.com、bilivideo.cn、mountaintoys.cn、qpic.cn、weixinbridge.com、qlogo.cn、wps.cn、ntp.org.cn、digicert.cn、ksord.com、biligame.com、wpscdn.cn、baidu.com、jsdelivr.net、ipip.net、qwps.cn、zhipin.com、bdimg.com、biliimg.com、ksosoft.com、127.net、binance.info、cloudflare-cn.com、crunchyroll.com、crypto.com、ip.cn、ip138.com、itdog.cn、ksyun.com、ksyuncs.com、qualcomm.cn、servicewechat.com、wise.com。
+  - skip-list `skip` 命中 11 行（4 主域）：clarity.ms（j/www/o/c/scripts 5 变体共 44 次，reject 上游已收录）、statcounter.com（c/www 2 变体共 18 次，广告/追踪类）、taboola.com（cdn/trc-events/trc 3 变体共 16 次，广告/追踪类）、cloudflareinsights.com（1 次，reject 上游）。
+- **待人工确认**（manual-review 5 行照抄，均已在 skip-list `manual` + `issues-domain.md` 表中不重复登记）：`sitemana.com`（p.sitemana.com mm 10 次 Google Chrome Helper，#9）、`byte-test.com`（perfops. oc 2 次 firefox，#13）、`featureassets.org`（mm 1 次 firefox，#12）、`nsvcs.net`（ingesteer.services-prod. mm 1 次 firefox，#8）、`pixpix.com`（mm 1 次 firefox，#11）。
+- **自检结果**：`find_duplicates.py` 业务文件间重复保持基线（68 跨文件来自 `followups/` 归档目录 + 26 文件内来自 `config.yaml` 策略组名噪声），**本次新引入 0**——8 个新域名在 DUPLICATES.md 中 0 出现（DUPLICATES.md 与 HEAD 一致）；`duplicates.json` +24 行（8 域作为 direct.yaml 新规则入解析数据，非重复）。`yaml.safe_load` direct.yaml 通过（payload 310，较上轮 302 +8 吻合）。
+- **skip-list**：本轮无新增/移除项。
+- **AGENTS.md 同步延后**：本轮 skip-list 无新增项，AGENTS.md「已裁决结论」清单无待同步内容。
+- Git：main 提交 `<hash>` → push → 同步 `0 0`（hash 回填按既有纪律顺延下轮）。
+
 ## 2026-10-27 漏网之鱼归类：jsdelivr.com + rust-lang.org 2 域补录 direct.yaml（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-26_09-23-00`（4.0M）+ `log/clashx-meta-log/2026-10-26_22-22-17`（828K），均 cp 只读复制自 `~/.config/clash.meta/logs/` 昨日两个文件夹；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃。

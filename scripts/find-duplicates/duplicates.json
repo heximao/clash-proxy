@@ -2031,6 +2031,30 @@
     "DOMAIN-SUFFIX,qhres2.com": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,sz.gov.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gd.gov.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,szns.gov.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,gdzwfw.gov.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,conac.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,govwza.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,www.gov.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,trs.cn": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
