@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-10-28 删除 skill 旧版归档 archive/fill-domains-from-log-v2.8.0（交互轮）
+
+- **变更**：删除 `.agents/skills/fill-domains-from-log/archive/fill-domains-from-log-v2.8.0/` 下 4 个文件（SKILL.md 402 行、README.md、extract_match_domains.py、skip-list.txt），用户裁定旧版归档不再保留。
+- **过程说明**：这 4 个文件在 21:29 前后已从磁盘消失（用户并行清理，本轮 git 操作未触及，前序提交 `5d8e170` 仅含 4 个文件），本轮把删除动作正式落库。全库 `find` 核实无迁移去向、`v2.8.0` 字样零命中。
+- **影响面**：现行 workflow 为 `.agents/skills/fill-domains-from-log/SKILL.md`，归档副本无任何引用方（脚本、skill、AGENTS.md 均不指向它），删除无功能影响。
+- Git：main 提交（4 个删除 + 本 changelog 条目 + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 粗判草稿目录迁移：log/.work → 仓库根 tmp/（交互轮）
 
 - **变更**：skill 运行期粗判草稿目录由 `log/.work/` 迁移到仓库根 `tmp/`（用户指示）。原目录为空（上轮已消费清理），`mkdir tmp` + `rmdir log/.work`，无内容搬迁。
