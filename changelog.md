@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-10-28 AGENTS.md 重构：剔除冗余约束、GIT 细则并入、目录结构更新（交互轮）
+
+- **精简**：260 → 220 行。删 §3 followups（`followups/` 目录已删，`SPEC/FOLLOWUPS.md` 通篇为 `~/career` 仓库内容）、`cv_jd` 存档整条（指向不存在的 `SPEC/CV-JD-ARCHIVE.md`，本仓库无 `jd/`）、`.gitignore` 全文快照（已漂移：文件里新增的 `tmp/` 快照没有）、13 项挂起清单（改为指向 `issues-domain.md` 表，避免三处同步）。
+- **失效引用修复**：`见 Git 工作流` → 「git 操作」节；`按 Git 工作流第 1、3 步` → 改指该节（原文指向的编号步骤并不存在）；`§13 git` 改名「git 操作」（§3/§6 删除后编号孤立）。删除空话「review 通过后」（仓库无 review 流程定义）。
+- **GIT 细则并入**（原 `SPEC/GIT.md`，用户指示回收进 AGENTS.md）：四小节——红线禁令（批量暂存 / 已 push 禁 amend-rebase / 禁 force push / 破坏性命令先确认 / commit 必带 `-m`）、暂存与提交（精确 add、`diff --cached` 过目、`git rm`、定时更新特例、含中文空格路径加引号、少用 stash 及同步用法）、移动改名删除（`git mv` 只暂存改名需补 `add`、macOS 大小写不敏感）、推送冲突配置（立即 push + `0 0` 校验、被拒 `fetch`+`rebase`、`reject.yaml` 冲突 `checkout --theirs`、改 `.gitignore` 前比对全局）。**剔除 career 专属内容**：`<!-- scope: ~/career/ -->` 头、「个人求职资料仓库」定位、`jd/` `cv/` 专属引号条（改通用「含中文或空格路径加引号」）。AGENTS.md 现已零 SPEC 引用。
+- **压缩下沉**：日志差集纪律 10 行 → 4 条硬禁令 + SKILL.md 第 1/2b/12 节指针（原文「只处理昨天」一段内说三遍）；changelog 编写约束 36 行 → 9 个必写要素骨架 + SKILL.md 第 10 节指针留统计口径细节。
+- **去数字化**：`proxy.yaml:790`（实为 794）、`direct.yaml 44–177 行 133 条`（组头实为 45 行，MEMORY.md 记 44–179/134 条）→ 改按内容定位，避免行号漂移。
+- **口径修正**：SPEC 排他条款原「禁止在 SPEC/ 之外创建任何约束性文件」与 `SKILL.md` 存在冲突 → 已随该节删除；`openclash-log/` 标注为历史遗留空目录（oc 命中实际来自 clashx-meta 日志）。
+- **目录结构更新**：补 `.gitignore` 行；`archive/` 标注为唯一归档位置；`tmp/` 标注为草稿目录；`openclash-log/` 加历史遗留说明。
+- **发现待处理**：`.agents/skills/fill-issues-domain/`（`efc502f` 引入）内容为 Unsloth 文档抓取件（12,044 行 / 136 页 / 804K，全文 0 次提及 `issues-domain`，`__tests__` 与 `archive` 均空），非 skill，目录树未收录，待用户决定删除。
+- Git：main 提交（`AGENTS.md` + 本 changelog + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 归档目录改名：log/.archive → log/archive，确立为唯一归档位置（交互轮）
 
 - **变更**：`mv log/.archive log/archive`（15 个已处理日志文件夹完整搬迁，项数与内容不变）；用户裁定 `log/archive/` 为归档目录的唯一位置。
