@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-10-28 移除 CLAUDE.md 符号链接（交互轮）
+
+- **变更**：删除仓库根 `CLAUDE.md`（原为指向 `AGENTS.md` 的符号链接，120000 模式跟踪；用户 2026-10-28 裁定不再需要，Claude 系客户端可直接读 `AGENTS.md`）。
+- **联动对齐**（AGENTS.md 工作区未提交改动，随重组提交入库）：目录结构树移除 `CLAUDE.md` 行；「已纳入 git 跟踪」注更新为移除后口径。
+- **背景**：2026-10-28 21:19 交互轮处理本地/远程双向分歧（本地 `update` vs 远程 Actions auto-merge reject）时发现工作区已删该文件，本轮把删除动作正式落库。
+- Git：main 单文件提交（`CLAUDE.md` 删除 + 本 changelog 条目 + 当日 memory 日志）→ push → 同步 `0 0`。
+
 ## 2026-10-28 漏网之鱼归类：8 个 .cn 政府/公共服务域名补录 direct.yaml（automation 轮）
 
 - **数据来源**：`log/clashx-meta-log/2026-10-27_10-14-04`（cp 只读复制自 `~/.config/clash.meta/logs/` 昨日唯一文件夹，6 个日志文件约 12.5M；`log/clashx-meta-log/` 无上轮遗留存量，cp 前确认目标侧无同名防套娃）。
