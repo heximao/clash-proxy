@@ -1,5 +1,13 @@
 # 更新记录
 
+## 2026-10-28 lan.yaml 入库：内网直连独立成 provider（交互轮）
+
+- **背景**：上一轮把 `direct.yaml` 的「lan 默认直连」组 20 条移除并随 `f44b6a2` 发布，但 `lan.yaml` 未入库，导致只引用 `direct.yaml` 的 CDN 使用者会丢内网直连（上一轮 changelog 已标注该风险）。本轮按用户要求把 `lan.yaml` 纳入仓库并在 README 规则表补条目，风险消除。
+- **文件内容**（38 条，自包含可直接作为独立 provider）：本地回环与主机名 2（localhost / localdomain）、mDNS `.local` 1、内网私有后缀 8（lan / home / home.arpa / internal / intranet / private / corp / kwrt）、反向解析域 2（in-addr.arpa / ip6.arpa）、路由器与网关管理页 9（router.asus.com、routerlogin.net/.com、orbilogin.com、linksyssmartwifi.com、tplogin.cn、miwifi.com、melogin.cn、tendawifi.com）、IPv4 私有保留段 10、IPv6 私有保留段 6，IP 规则均带 `no-resolve`。
+- **README**：规则表在 `hk-broker.yaml` 与 `line.yaml` 之间新增 `lan.yaml` 行，注明「建议与 direct.yaml 一起引用」。
+- **校验**：`yaml.safe_load` 通过，payload 38 条；与全库业务文件无重复规则（此前 direct.yaml 的 lan 组已移除，重叠归零）。
+- Git：main 提交（`lan.yaml` 新增 + README + AGENTS.md 前轮文案改动 + 本 changelog）→ push → 同步 `0 0`。
+
 ## 2026-10-28 域名分类质量优化：归位清理 / 分组重构 / proxy 大组拆分 / .cn 独立成文件（交互轮）
 
 - **背景**：全库体检（`yaml-audit-2026-10-28.md`）发现三类问题——归属错位（大厂域落在兜底文件）、分组失真（组名与内容不符）、规则失效（被前序 rule-set 遮蔽）。用户批准 A/B/C/D 四批执行，D 只做 `.cn` 拆分。
@@ -20,7 +28,7 @@
   - direct.yaml 42 条 `.cn` 规则整体迁入新建 `cn.yaml`，按中国移动 7 / 中国电信 1 / WPS 4 / 奇虎 360 1 / 东方财富 4 / 银联 1 / 政府公共服务 8 / 教育网 1 / 国内 CDN 3 / 开发者工具查询 5 / 厂商官网其他 7 共 11 组；direct.yaml 中因此变空的 5 个整组删除（国内招聘 10-06、中国电信 10-02、教育网镜像、NTP 10-22、政府公共服务 10-28）。
   - README 规则表新增 `cn.yaml` 行。config.yaml 未接入（本机配置按需引用，留待用户决定）。
 - **保留未动**：openai.yaml 的 4 条 Azure/Sentry 规则在「全量引用」时被 microsoft 遮蔽，但按需单独引用 openai.yaml 时仍生效，故保留；`origin-a.akamaihd.net`（direct）同理保留。P3 冗余子域 37 条（us-payment 13 条 paypal 子域等）未处理。
-- **随本次一并入库**：direct.yaml 移除「lan 默认直连」组 20 条（前一会话已完成、未提交），内网规则改由 `lan.yaml` 承载。`lan.yaml` 目前**未入库**，只引用 `direct.yaml` 的使用者需自行补 `DOMAIN-SUFFIX,lan` / `IP-CIDR` 私网段（本机 config.yaml 顶部另有硬编码内网 DIRECT，不受影响）。
+- **随本次一并入库**：direct.yaml 移除「lan 默认直连」组 20 条（前一会话已完成、未提交），内网规则改由 `lan.yaml` 承载。`lan.yaml` 已于同日后续提交入库（见上一条），只引用 `direct.yaml` 的使用者需一并引用 `lan.yaml`（本机 config.yaml 顶部另有硬编码内网 DIRECT，不受影响）。
 - **校验**：44 个业务文件 `yaml.safe_load` 全部通过，共 2042 条规则；跨文件重复 0、文件内重复 0（原 1 条 `settings.crashlytics.com` 已消除）；遮蔽复查 6 条，全部为上述「按需引用仍有效」的保留项；`cn.yaml` 与原 direct.yaml 的 `.cn` 集合逐条比对 42 = 42，缺失 0、多余 0。
 - Git：main 提交（proxy/direct/cn/meta/x/steam/google/microsoft/alibaba/bytedance-global/openai/bilibili/wechat + README + 本 changelog）→ push → 同步 `0 0`。
 

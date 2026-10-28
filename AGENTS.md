@@ -1,6 +1,6 @@
 ### clash-proxy/AGENTS.md
 
-本文件为 Agent（Claude、Codex、Opencode、Hermes）在本仓库工作提供指引。
+本文件为 Agent（Claude、Codex、Opencode、Hermes Agent）在本仓库工作提供指引。
 
 本仓库（clash-proxy）是一个域名规则集合仓库，不是一个标准的代码仓库，本仓库无构建系统、测试套件或 linter。通过 jsDelivr CDN 分发为 Clash / OpenClash 客户端提供 YAML 域名规则文件。引用 CDN URL 格式：`https://cdn.jsdelivr.net/gh/heximao/clash-proxy/<filename>.yaml`。
 
@@ -30,12 +30,11 @@ clash-proxy/
 │   └── memory/                         # 项目记忆：每日工作日志 + MEMORY.md
 ├── .github/workflows/
 │   └── auto-merge-reject.yml           # 每日 00:20 UTC 自动合并 reject.yaml
-├── tmp/                                # skill 运行期粗判草稿（续跑检查点，轮末清空；gitignore 覆盖，不入库）
+├── tmp/                                # 临时目录
 └── log/                                # 本地运行日志（已 gitignore，不入库），补充规则时"漏网之鱼"域名的数据来源
     ├── clashx-meta-log/                # ClashX Meta 日志：cp 只读复制昨天的日志进来（处理源）
     ├── openclash-log/                  # OpenClash 日志（历史遗留空目录；oc-cn-domain 命中实际来自 clashx-meta 日志）
     ├── archive/                        # 已处理完（push + 0 0）的日志文件夹归档处（归档目录唯一位置）
-    └── <时间戳目录>/                    # 早期直接拷贝进来的日志目录
 ```
 
 扁平存放的 40 余个 `*.yaml` 规则文件（精确数量以 [README.md](README.md) 的「规则文件」表为准，勿在本文硬编码维护），如新增或重构文件内容，需同步更新该表。
@@ -52,7 +51,6 @@ clash-proxy/
 - **direct.yaml**：兜底存放可稳定直连的杂项规则。
 - **-global.yaml**：同厂商的海外 / 国际版服务，与国内主文件分开维护，目前有 `alibaba`、`bytedance`、`tencent` 三对
 - **-ai.yaml**：AI 服务按可直连 / 需代理拆分：`direct-ai.yaml`（直连）、`proxy-ai.yaml`（代理）；大厂 AI 优先归入厂商文件（如 `claude.yaml`、`openai.yaml`）
-- **占位文件**：截至 2026-10-17 全库空壳文件已清零（`paypal.yaml` 已删除、域名并入 `us-payment.yaml`；`steam.yaml`、`xhs.yaml` 已补真实规则）。如再出现仅有空占位 `DOMAIN-SUFFIX,`（无效规则）的文件，补充真实域名时直接替换占位行。
 - **reject.yaml**：由 GitHub Actions 工作流维护，每日从 Loyalsoldier 上游自动生成广告域名 — 禁止编辑，为本地新发现的域名做分类时，也不要查询、核对**reject.yaml**。
 
 #### 域名归属判定判据（按可信度排序）
@@ -181,7 +179,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 
 **暂存与提交**
 
-- 每完成一次阶段性文件改动，立即 `git add <file>`（精确到文件）；提交前用 `git diff --cached` 过目，防止误提交凭证、调试产物或无关文件。
+- 每完成一次阶段性文件改动，立即 `git add <file>`（精确到文件）；提交前用 `git diff --cached` 过目，防止误提交凭证、调试产物或无关文件。除非用户主动要求不git
 - 每完成一次阶段性任务，必须同步更新 [changelog](changelog.md)（变更随该次提交显式暂存），然后 commit（附中文说明）并立即 push。
 - 删除已跟踪文件用 `git rm`（同时暂存删除动作）；直接 `rm` 后必须补 `git add <file>`，否则 commit 里文件还在。
 - 定时 / 周期性更新只允许 `git add -u && git commit -m "更新已有文件"`——仅暂存已跟踪文件，不引入新文件。

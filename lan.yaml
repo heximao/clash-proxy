@@ -1,0 +1,47 @@
+payload:
+# === 本地回环与主机名 ===
+  - DOMAIN-SUFFIX,localhost
+  - DOMAIN-SUFFIX,localdomain
+# === mDNS / Bonjour 广播域（.local，含 MacBook.local、打印机、HomeKit、小米设备等）===
+  - DOMAIN-SUFFIX,local
+# === 家庭 / 企业内网私有域名后缀（非 ICANN 公共 TLD，仅内网解析）===
+  - DOMAIN-SUFFIX,lan
+  - DOMAIN-SUFFIX,home
+  - DOMAIN-SUFFIX,home.arpa
+  - DOMAIN-SUFFIX,internal
+  - DOMAIN-SUFFIX,intranet
+  - DOMAIN-SUFFIX,private
+  - DOMAIN-SUFFIX,corp
+  - DOMAIN-SUFFIX,kwrt
+# === 反向解析域（PTR）===
+  - DOMAIN-SUFFIX,in-addr.arpa
+  - DOMAIN-SUFFIX,ip6.arpa
+# === 路由器 / 网关本地管理页（公网域名，但 A 记录指向内网网关）===
+  - DOMAIN,router.asus.com
+  - DOMAIN,routerlogin.net
+  - DOMAIN,routerlogin.com
+  - DOMAIN,orbilogin.com
+  - DOMAIN,linksyssmartwifi.com
+  - DOMAIN,tplogin.cn
+  - DOMAIN,miwifi.com
+  - DOMAIN,melogin.cn
+  - DOMAIN,tendawifi.com
+# === 私有 / 保留网段（IPv4）===
+# 已覆盖常见网关默认地址：192.168.0.1 / 192.168.1.1 / 192.168.31.1（小米）/ 192.168.3.1（华为）/ 10.0.0.1 / 172.16.0.1
+  - IP-CIDR,0.0.0.0/8,no-resolve
+  - IP-CIDR,10.0.0.0/8,no-resolve
+  - IP-CIDR,100.64.0.0/10,no-resolve
+  - IP-CIDR,127.0.0.0/8,no-resolve
+  - IP-CIDR,169.254.0.0/16,no-resolve
+  - IP-CIDR,172.16.0.0/12,no-resolve
+  - IP-CIDR,192.168.0.0/16,no-resolve
+  - IP-CIDR,192.88.99.0/24,no-resolve
+  - IP-CIDR,198.18.0.0/15,no-resolve
+  - IP-CIDR,224.0.0.0/3,no-resolve
+# === 私有 / 保留网段（IPv6）===
+  - IP-CIDR6,::1/128,no-resolve
+  - IP-CIDR6,fc00::/7,no-resolve
+  - IP-CIDR6,fe80::/10,no-resolve
+  - IP-CIDR6,ff00::/8,no-resolve
+  - IP-CIDR6,2001::/32,no-resolve
+  - IP-CIDR6,2002::/16,no-resolve

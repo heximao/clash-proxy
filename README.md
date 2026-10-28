@@ -40,6 +40,7 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **google.yaml** | Google 服务 |
 | **hk-bank.yaml** | 香港银行（汇丰、ZA、WeLab 等） |
 | **hk-broker.yaml** | 港股券商，建议使用代理 |
+| **lan.yaml** | 局域网 / 内网直连（`.lan`/`.local` 等私有后缀、路由器管理页、私网段），建议与 `direct.yaml` 一起引用 |
 | **line.yaml** | LINE |
 | **meta.yaml** | Facebook、Instagram、WhatsApp、Threads |
 | **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
