@@ -105,6 +105,8 @@ payload:
   - DOMAIN-SUFFIX,qin.io
   - DOMAIN-SUFFIX,qupu123.com
   - DOMAIN-SUFFIX,sohuno.com
+  - DOMAIN-SUFFIX,sohu.com
+  - DOMAIN-SUFFIX,sohucs.com
   - DOMAIN-SUFFIX,tmiaoo.com
   - DOMAIN-SUFFIX,weiphone.com
   - DOMAIN-SUFFIX,yach.me
@@ -299,6 +301,7 @@ payload:
 
 # === 公共 DNS / DoH（2026-10-20 漏网之鱼补录）===
   - DOMAIN-SUFFIX,doh.pub
+  - DOMAIN-SUFFIX,dns.pub
 
 # === 域名 / IP 查询（2026-10-21 漏网之鱼补录）===
   - DOMAIN-SUFFIX,ip138.com
@@ -324,6 +327,8 @@ payload:
   - DOMAIN-SUFFIX,yupao.com
   - DOMAIN-SUFFIX,zgzpsjz.com
   - DOMAIN-SUFFIX,giocdn.com
+  - DOMAIN-SUFFIX,linkflowtech.com
+  - DOMAIN-SUFFIX,beschannels.com
 
 # === 拼多多（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,pinduoduo.com

@@ -34,4 +34,5 @@ payload:
 # === 腾讯账号 / 内部办公（2026-10-21 漏网之鱼补录）===
   - DOMAIN,api.account.tencent.com
   - DOMAIN,oauth2.account.tencent.com
+  - DOMAIN,identity.tencent.com
   - DOMAIN-SUFFIX,woa.com

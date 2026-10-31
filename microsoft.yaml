@@ -72,6 +72,7 @@ payload:
   - DOMAIN-SUFFIX,msdn.com
   - DOMAIN-SUFFIX,msecnd.net
   - DOMAIN-SUFFIX,nuget.org
+  - DOMAIN-SUFFIX,vsassets.io
 
 # === Playwright（2026-09-29 漏网之鱼补录）===
   - DOMAIN-SUFFIX,playwright.dev

@@ -1,5 +1,36 @@
 # 更新记录
 
+## 2026-10-31 漏网之鱼归类：补齐 10-28/10-29 存量日志 20 域名，历史挂起项 volceapplog.com 定案（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/` 下 `2026-10-28_09-18-32`（5 个日志文件）、`2026-10-29_09-45-53`（5 个）、`2026-10-30_09-33-22`（6 个）。前两者是 10-29 / 10-30 两轮 cron 未归档的存量（`git log` 无对应补漏提交、changelog 无记录，确认未处理），按 skill 第 1 节纳入本轮提取；昨日（10-30）日志为主任务。
+- 提取量：三目录合并去重后候选主域 79 个（10-28 目录 222 域名候选 / 10-29 目录 113 / 10-30 目录 1），公网裸 IP 0 个；`check_coverage` 判定 covered 55 / uncovered 23（brand-anchor 9）。
+- **昨日主任务零新增**：唯一候选 `wx.qlogo.cn`（oc×2，WeChat）主域 `qlogo.cn` 已由 `wechat.yaml:10` 覆盖。
+- 补录明细（20 项，全部来自 10-28 / 10-29 存量日志的 uncovered 项）：
+  - `identity.tencent.com` → `tencent.yaml`「腾讯账号 / 内部办公」组 `DOMAIN,identity.tencent.com`（判据 6 精确子域安全区，同组已有 `api.account.tencent.com`）
+  - `bcebos.com` → `baidu.yaml` 新增「百度智能云 BOS 对象存储 CDN」注释组（判据 4 命名族 `bdimg`/`bdstatic`/`bcebos` 同百度 CDN 族；10-28 日志 `baikebcs.cdn.bcebos.com` / `bkimg.cdn.bcebos.com`）
+  - `vsassets.io` → `microsoft.yaml`「开发者 / VS / MSDN」组（VS Marketplace CDN，`ms-azuretools.gallery.vsassets.io` / `gallerycdn.vsassets.io`）
+  - `volceapplog.com` → `bytedance.yaml`「火山引擎 / 基础设施」组（**RDAP NS 全为 `NS-MOBILE/NS-TELECOM/NS-UNICOM/NS1/NS2.BYTEDNS.COM`，字节自有权威 DNS 硬锚点** + `volce-` 火山命名族；10-11 轮起挂起的待人工项本轮定案闭环）
+  - `sohu.com` + `sohucs.com` → `direct.yaml`「国内站点 / 社区」组（RDAP NS11–16.SOHU.COM 自有 NS = 搜狐官方门户；与既有 `sohuno.com` 同组）
+  - `itc.cn` → `cn.yaml`「厂商官网 / 其他国内站点」（DoH NS `sohu.com` + SOA `dnsadmin.sohu-inc.com` → 搜狐图片 CDN；`.cn` 按 2026-10-28 拆分结构归 cn.yaml）
+  - `dns.pub` → `direct.yaml`「公共 DNS / DoH」组（DoH NS `dnsv5.com` = DNSPod 企业 DNS；首页 title = DNSPod 烟台帝思普；与同组 `doh.pub` 同系）
+  - `dnspod.cn` → `cn.yaml`「开发者工具 / 网络查询」组（DNSPod 服务商官网/支持站 `support.` / `www.`）
+  - `ruijie.com.cn` → `cn.yaml` 厂商官网组（锐捷网络 `image.` / `utest.` / `sentinel.` / `web-e-gw.`）
+  - `clink.cn` → `cn.yaml` 厂商官网组（DoH NS `dnsv4.com` DNSPod 企业版、SOA `enterprise2dnsadmin.dnspod.com`；`webchat-bj.` / `webchat-api-bj.` 客服前端）
+  - `deephire.cn` → `cn.yaml` 厂商官网组（DoH NS `hichina`；title「职决」，招聘产品）
+  - `feelgood.cn` → `cn.yaml` 厂商官网组（DoH NS `alidns`；title「FeelGood平台」）
+  - `rzzx.com.cn` → `cn.yaml` 厂商官网组（DoH NS `alidns`；title「证件数码相片质量检测中心」）
+  - `linkflowtech.com` → `direct.yaml`「国内平台 / CDN 杂项」组（RDAP NS ALIDNS + 阿里云注册国内实证；Linkflow 领客 CDP，`cdp.` / `sdk.`）
+  - `beschannels.com` → `direct.yaml` 同组（RDAP NS ALIDNS；title「致趣百川 B2B 营销云」）
+  - `ipwho.is` → `proxy.yaml`「网络检测工具」组（IP 归属查询 API，与同组 `ip-api.com` 同类；mm×33 进程 python3.13/curl = 10-29 节点诊断脚本）
+  - `httpbin.org` → `proxy.yaml` 新增「海外工具 / CDN」组（AWS Route53 NS 托管 HTTP 调试端点，`cc-switch`×2）
+  - `fastly-masque.net` → 同新增组（RDAP NS `NS1-4.FASTLY-MASQUE.NET` 自有 NS = Fastly 官方 MASQUE 端点；`us.m1.fastly-masque.net` firefox×595）
+  - `icfcdn.com` → 同新增组（RDAP NS `flyingcroc.net` 海外 CDN、registrar SRSPlus，首页 403 无国内证据；`imagetransform.icfcdn.com`×12）
+- 未收录及原因：`hotjar.com`（Hotjar 行为分析，广告/追踪类整批不落盘）；`advolve.io`（首页 title「Carty」，检索确认 Carty Nexus Inc. 程序化广告平台，`cm-mx.` 为转化跟踪，广告/追踪类不落盘）；`api.githu`（WorkBuddy AI Helper 截断伪域名 `api.github.com`，无有效 TLD，已追加 skip-list `skip`，同 `codeload.gith` / `raw.github` 先例）。
+- 待人工确认：无新增；历史挂起项 `volceapplog.com` 本轮由 RDAP NS 取证定案落盘（issues-domain.md 维持 0 项）。
+- 整批跳过：COVERED 55 个主域（`bilibili.com` / `hdslb.com` / `zhihu.com` / `zhipin.com` / `baidu.com` / `zhimg.com` / `ipip.net` / `digicert.cn` / `verisign.com` / `rdap.org` / `ntp.org.cn` / `mountaintoys.cn` / `111666.best` 等）；skip-list 命中 41 条（10-28 目录 37 + 10-29 目录 4）；伪域名过滤 3 条（10-29 目录）。
+- 自检结果：`find_duplicates` 跨文件重复 **0**（历史基线 `settings.crashlytics.com` 已于 10-28 消除），intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声，非规则重复；7 个被编辑文件 `yaml.safe_load` 全部通过（tencent 28 / baidu 4 / microsoft 74 / bytedance 32 / direct 246 / proxy 887 / cn 49 条 payload）；21 个域（含 `qlogo.cn`）`check_coverage` 复核 21 COVERED / 0 UNCOVERED。
+- Git：main 提交（7 个 yaml + skip-list + DUPLICATES.md + duplicates.json + 本 changelog + 当日 memory）→ push → 同步 `0 0`。
+
 ## 2026-10-28 lan.yaml 入库：内网直连独立成 provider（交互轮）
 
 - **背景**：上一轮把 `direct.yaml` 的「lan 默认直连」组 20 条移除并随 `f44b6a2` 发布，但 `lan.yaml` 未入库，导致只引用 `direct.yaml` 的 CDN 使用者会丢内网直连（上一轮 changelog 已标注该风险）。本轮按用户要求把 `lan.yaml` 纳入仓库并在 README 规则表补条目，风险消除。

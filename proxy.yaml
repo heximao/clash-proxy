@@ -990,6 +990,7 @@ payload:
   - DOMAIN-SUFFIX,surfsharkdns.com
   - DOMAIN-SUFFIX,addr.tools
   - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN-SUFFIX,ipwho.is
   - DOMAIN-SUFFIX,brokendnssec.net
   - DOMAIN-SUFFIX,every1dns.net
   - DOMAIN-SUFFIX,encryptedsni.com
@@ -1045,3 +1046,8 @@ payload:
   - DOMAIN-SUFFIX,ns1pcdn.net
   - DOMAIN-SUFFIX,freloop.com
   - DOMAIN-SUFFIX,checktrustworthiness.com
+
+# === 漏网之鱼（2026-10-31 补录）海外工具 / CDN ===
+  - DOMAIN-SUFFIX,httpbin.org
+  - DOMAIN-SUFFIX,fastly-masque.net
+  - DOMAIN-SUFFIX,icfcdn.com

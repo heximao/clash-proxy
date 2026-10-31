@@ -5,3 +5,5 @@ payload:
   - DOMAIN-SUFFIX,bdstatic.com
   # 百度图片 / 静态资源 CDN（2026-10-12 漏网之鱼补录，与 baidu.com 同系）
   - DOMAIN-SUFFIX,bdimg.com
+  # 百度智能云 BOS 对象存储 CDN（2026-10-31 漏网之鱼补录，与 baidu.com 同系）
+  - DOMAIN-SUFFIX,bcebos.com

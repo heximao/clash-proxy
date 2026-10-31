@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,byteimg.com
   - DOMAIN-SUFFIX,volces.com
   - DOMAIN-SUFFIX,volccdn.com
+  - DOMAIN-SUFFIX,volceapplog.com
   # === Trae CN（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,trae.cn
   - DOMAIN-SUFFIX,trae.com.cn

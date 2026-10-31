@@ -55,6 +55,7 @@ payload:
   - DOMAIN-SUFFIX,dcloud.net.cn
   - DOMAIN-SUFFIX,zvo.cn
   - DOMAIN-SUFFIX,itdog.cn
+  - DOMAIN-SUFFIX,dnspod.cn
   - DOMAIN-SUFFIX,ip.cn
   - DOMAIN-SUFFIX,ntp.org.cn
 
@@ -66,3 +67,9 @@ payload:
   - DOMAIN-SUFFIX,mountaintoys.cn
   - DOMAIN-SUFFIX,immersivetranslate.cn
   - DOMAIN-SUFFIX,digicert.cn
+  - DOMAIN-SUFFIX,itc.cn
+  - DOMAIN-SUFFIX,ruijie.com.cn
+  - DOMAIN-SUFFIX,clink.cn
+  - DOMAIN-SUFFIX,deephire.cn
+  - DOMAIN-SUFFIX,feelgood.cn
+  - DOMAIN-SUFFIX,rzzx.com.cn

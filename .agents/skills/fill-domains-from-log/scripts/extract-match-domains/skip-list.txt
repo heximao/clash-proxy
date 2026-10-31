@@ -94,6 +94,7 @@ data.jsde skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无�
 data.jsdelivr.c skip:WorkBuddy AI Helper 截断伪域名（data.jsdelivr.com），无有效 TLD，不归类
 cdn.jsdelivr.ne skip:WorkBuddy AI Helper 截断伪域名（cdn.jsdelivr.net），无有效 TLD，不归类
 raw.github skip:WorkBuddy AI Helper 截断伪域名（raw.githubusercontent.com），无有效 TLD，不归类
+api.githu skip:WorkBuddy AI Helper 截断伪域名（api.github.com），无有效 TLD，不归类
 
 # --- 2026-10-28 交互轮：issues-domain 16 项全部定案（5 项 skip，11 项落盘）---
 #     落盘：applogcdn.com → bytedance.yaml；byte-test.com → bytedance-global.yaml；
