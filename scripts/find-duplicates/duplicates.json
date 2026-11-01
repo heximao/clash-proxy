@@ -420,6 +420,9 @@
     "DOMAIN-SUFFIX,solseed.cn": [
       "bilibili.yaml"
     ],
+    "DOMAIN-SUFFIX,bilibilitoy.com": [
+      "bilibili.yaml"
+    ],
     "DOMAIN-SUFFIX,trae.ai": [
       "bytedance-global.yaml"
     ],
@@ -712,6 +715,15 @@
       "cn.yaml"
     ],
     "DOMAIN-SUFFIX,rzzx.com.cn": [
+      "cn.yaml"
+    ],
+    "DOMAIN-SUFFIX,i4.cn": [
+      "cn.yaml"
+    ],
+    "DOMAIN-SUFFIX,i5.cn": [
+      "cn.yaml"
+    ],
+    "DOMAIN-SUFFIX,crlocsp.cn": [
       "cn.yaml"
     ],
     "geosite:cn": [
@@ -1903,6 +1915,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,rust-lang.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,crates.io": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,telefen.com": [
@@ -3883,6 +3898,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,yastatic.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,3u-tools.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,abpchina.org": [

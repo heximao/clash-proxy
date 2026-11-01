@@ -264,6 +264,7 @@ payload:
   - DOMAIN-SUFFIX,yastatic.net
 
 # === 工具 / 软件 / 开发（原「Top blocked sites」组，2026-10-28 拆分）===
+  - DOMAIN-SUFFIX,3u-tools.com
   - DOMAIN-SUFFIX,abpchina.org
   - DOMAIN-SUFFIX,adblockplus.org
   - DOMAIN-SUFFIX,adobe.com

@@ -73,3 +73,8 @@ payload:
   - DOMAIN-SUFFIX,deephire.cn
   - DOMAIN-SUFFIX,feelgood.cn
   - DOMAIN-SUFFIX,rzzx.com.cn
+
+# === 爱思助手 / StartCom 证书端点（2026-11-01 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,i4.cn
+  - DOMAIN-SUFFIX,i5.cn
+  - DOMAIN-SUFFIX,crlocsp.cn

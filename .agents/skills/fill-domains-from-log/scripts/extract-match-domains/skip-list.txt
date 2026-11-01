@@ -106,3 +106,5 @@ wdfl.co skip:reject.yaml 上游已收录（DOMAIN-SUFFIX L162770，同上）
 nsvcs.net skip:reject.yaml 上游已收录精确主机 ingesteer.services-prod.nsvcs.net（L68267），父域无其他端点
 mdoelscope.ai skip:仿冒域（modelscope.ai 字母转位），无 A 记录，用户确认转 skip，绝不补录
 sitemana.com skip:广告/追踪类（p.sitemana.com 与 doubleclick/googlesyndication/statcounter/clarity 同批，官网自称 conversion catalyst），整批不落盘
+advolve.io skip:广告/追踪类（Carty Nexus Inc. 程序化广告平台，2026-10-31 轮已裁决 cm-mx. 为转化跟踪端点），整批不落盘，本轮补录 skip-list
+nunlocker.com skip:无主端点（NameCheap 注册 + Cloudflare NS，首页仅 CF 挑战页无内容，firefox 进程无产品指向，同 antpeak/hibchr/zorvian 特征），不归类

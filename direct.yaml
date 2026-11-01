@@ -281,6 +281,7 @@ payload:
 # === 开发者服务（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,packagecontrol.io
   - DOMAIN-SUFFIX,rust-lang.org
+  - DOMAIN-SUFFIX,crates.io
 
 # === 其他国内站点（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,telefen.com

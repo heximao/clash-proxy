@@ -1,5 +1,22 @@
 # 更新记录
 
+## 2026-11-01 漏网之鱼归类：昨日 10-31 日志 6 域名补录 + 2 项已裁决补录 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-10-31_18-45-55`（5 个日志文件，本轮从 `~/.config/clash.meta/logs` cp 复制）。提取去重后候选主域 31 个（域名候选 186：`match Match` 11 / `oc-cn-domain` 175），公网裸 IP 0 个；`check_coverage` 判定 covered 23 / uncovered 8（brand-anchor 0）。
+- 补录明细（6 条，全部经 RDAP/DoH/HTTP 自主查证）：
+  - `i4.cn` → `cn.yaml` 新增「爱思助手 / StartCom 证书端点」组：爱思助手官网，首页 title 实证「爱思助手官网-安全好用的苹果设备管理软件」+ 进程 `i4Tools` 直接证据（oc 类，App 更新/分发端点 `d-updater.` / `url.` / `app4.` 等高频命中）。
+  - `i5.cn` → 同组：爱思系兄弟域，`www.i5.cn` title「爱思商城」+ `usercenter.i5.cn`（爱思账号中心，i4Tools 进程访问）双证。
+  - `crlocsp.cn` → 同组：StartCom CA 的 CRL/OCSP 证书校验端点，DoH NS 实证 `ns1-5.startcomca.net`；`trustd`（macOS 证书校验）进程 1 次命中 `crt.crlocsp.cn`。
+  - `bilibilitoy.com` → `bilibili.yaml`「游戏 / 关联域」组：`www.bilibilitoy.com` 首页 title「出错啦! - bilibili.com」实证平台为 B 站（判据 5 品牌字面在域内 + bilibili.yaml 已落盘；同组已有 biligame/biliapi/biliimg bili* 命名族先例）。
+  - `crates.io` → `direct.yaml`「开发者服务」组：Rust 官方 crate 仓库 CDN `static.crates.io`，进程 `cargo` 直接证据 + 同组已收录 `rust-lang.org` 生态先例。
+  - `3u-tools.com` → `proxy.yaml`「工具 / 软件 / 开发」组：3uTools 工具官网国际站（mm 类，firefox 高频访问），RDAP registrar NameCheap + NS `NS1-2.BEGET.COM/.PRO`（俄罗斯主机商）海外托管实证，直连 HTTPS 握手失败（curl code 35）。
+- skip-list 追加 2 条 `skip`：`nunlocker.com`（无主端点：NameCheap 注册 + Cloudflare NS + 首页仅 CF 挑战页无内容 + firefox 进程无产品指向，同 antpeak/hibchr/zorvian 特征，不归类）；`advolve.io`（**2026-10-31 轮已裁决**广告/追踪类不落盘——Carty Nexus Inc. 程序化广告平台、`cm-mx.` 转化跟踪端点，上轮遗漏 skip-list 致本轮重复出现，本轮补录闭环）。
+- 未收录及原因：无其他未覆盖项。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 23 个主域（`bilibili.com` / `hdslb.com` / `bilivideo.com` / `bilivideo.cn` / `biliapi.com` / `biliimg.com` / `baidu.com` / `mountaintoys.cn` / `ntp.org.cn` / `digicert.cn` / `rdap.org` / `verisign.com` / `identitydigital.services` / `publicinterestregistry.org` / `dns.pub` / `dnspod.cn` / `clink.cn` / `deephire.cn` / `feelgood.cn` / `rzzx.com.cn` / `icfcdn.com` / `beschannels.com` / `rust-lang.org`）；skip-list 现有条目命中 0、manual 命中 0、伪域名/探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 4 个文件 `yaml.safe_load` 全部通过（cn 52 / bilibili 16 / direct 247 / proxy 888 条 payload）；本轮新增 6 域名 `check_coverage` 复核 6 COVERED / 0 UNCOVERED。
+- Git：main 提交（cn.yaml / bilibili.yaml / direct.yaml / proxy.yaml / skip-list.txt / DUPLICATES.md / duplicates.json / 本 changelog / 当日 memory）→ push → 同步 `0 0`。
+
 ## 2026-10-31 漏网之鱼归类：补齐 10-28/10-29 存量日志 20 域名，历史挂起项 volceapplog.com 定案（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/` 下 `2026-10-28_09-18-32`（5 个日志文件）、`2026-10-29_09-45-53`（5 个）、`2026-10-30_09-33-22`（6 个）。前两者是 10-29 / 10-30 两轮 cron 未归档的存量（`git log` 无对应补漏提交、changelog 无记录，确认未处理），按 skill 第 1 节纳入本轮提取；昨日（10-30）日志为主任务。
