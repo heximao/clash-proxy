@@ -139,8 +139,8 @@ payload:
   - DOMAIN-SUFFIX,dell.com
   - DOMAIN-SUFFIX,dizhensubao.getui.com
   - DOMAIN-SUFFIX,fir.im
-  - DOMAIN-SUFFIX,focusee.imobie-resource.com
-  - DOMAIN-SUFFIX,focusee.imobie.com
+  - DOMAIN-SUFFIX,imobie-resource.com
+  - DOMAIN-SUFFIX,imobie.com
   - DOMAIN-SUFFIX,hollisterco.com
   - DOMAIN-SUFFIX,ipv6-test.com
   - DOMAIN-SUFFIX,koodomobile.ca
@@ -353,3 +353,6 @@ payload:
 # === 奇虎 360（2026-10-23 漏网之鱼补录）===
   - DOMAIN-SUFFIX,qhimg.com
   - DOMAIN-SUFFIX,qhres2.com
+
+# === 迅雷 / Thunder（2026-11-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sandai.net

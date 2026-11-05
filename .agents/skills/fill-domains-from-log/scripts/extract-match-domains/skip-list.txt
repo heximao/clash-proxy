@@ -108,3 +108,5 @@ mdoelscope.ai skip:仿冒域（modelscope.ai 字母转位），无 A 记录，�
 sitemana.com skip:广告/追踪类（p.sitemana.com 与 doubleclick/googlesyndication/statcounter/clarity 同批，官网自称 conversion catalyst），整批不落盘
 advolve.io skip:广告/追踪类（Carty Nexus Inc. 程序化广告平台，2026-10-31 轮已裁决 cm-mx. 为转化跟踪端点），整批不落盘，本轮补录 skip-list
 nunlocker.com skip:无主端点（NameCheap 注册 + Cloudflare NS，首页仅 CF 挑战页无内容，firefox 进程无产品指向，同 antpeak/hibchr/zorvian 特征），不归类
+cookieyes.com skip:广告/追踪类（Cookie consent 管理 + log.cookieyes.com 追踪端点），整批不落盘
+cdn-cookieyes.com skip:广告/追踪类（CookieYes CDN 端点），整批不落盘

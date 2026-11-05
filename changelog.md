@@ -1,5 +1,27 @@
 # 更新记录
 
+## 2026-11-05 漏网之鱼归类：11-02~11-04 存量+昨日日志 20 域名 + 1 IP 补录，2 项 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/` 下 `2026-11-02_07-30-52`（4 个日志文件）、`2026-11-02_21-14-27`（4 个）、`2026-11-02_22-15-14`（4 个）、`2026-11-03_07-52-06`（4 个）、`2026-11-04_08-31-53`（6 个），共 22 个日志文件。前四个是上轮 cron 未归档的存量（11-02 ×3、11-03 ×1），按 skill 第 1 节纳入本轮提取；昨日（11-04）日志为主任务，从 `~/.config/clash.meta/logs` cp 复制。
+- 提取量：五目录合并去重后候选主域 54 个（域名候选 224：`match Match` 26 / `oc-cn-domain` 198），公网裸 IP 7 个（`match Match` 7 / `oc-cn-domain` 0）；`check_coverage` 判定 covered 32 / uncovered 22（brand-anchor 12）。
+- 补录明细（20 域名 + 1 IP-CIDR，共 6 个文件）：
+  - `imobie.com` + `imobie-resource.com` → `direct.yaml`（进程 AnyUnlock = iMobie 产品 + 文件内已有 `focusee.imobie.com` / `focusee.imobie-resource.com` 子域规则，判据 2 同厂商兄弟域，扩展为主域 `DOMAIN-SUFFIX` 覆盖 `dl.imobie.com` 等漏网子域）
+  - `sandai.net` → `direct.yaml` 新增「迅雷 / Thunder」组（oc-cn-domain 命中，中国下载服务，进程 App Cleaner 9）
+  - `hunyuan.tencent.com` → `tencent.yaml` 新增「腾讯混元 AI」组（判据 6 `*.tencent.com` 精确子域安全区，命中 `cdn-hybrid-prod.hunyuan.tencent.com`）
+  - `cherry-ai.com` → `direct-ai.yaml`（Cherry Studio AI 客户端，RDAP registrar DNSPod = 中国注册商，可直连）
+  - `dify.ai` → `proxy-ai.yaml`（Dify LLM 开发平台国际域名，RDAP registrant Luyu Zhang + Cloudflare NS，需代理）
+  - `factory.ai` → `proxy-ai.yaml`（Factory AI 开发平台，RDAP registrant Matan Grinberg + AWS NS，美国公司，需代理）
+  - `nektony.com` + `electronic.us` + `devmate.com` + `mole.fit` + `pi.dev` → `proxy.yaml`「Mac 软件 / 工具」组（Nektony Mac 卸载工具公司 / CDN Push Zone / Devmate 应用更新平台 Paddle 旗下 / Mole 应用 Vercel NS / "Pi" web 应用 Cloudflare NS，均为海外，不新建厂商文件）
+  - `imeicheckpro.com` + `imeipro.info` + `sickw.com` + `ifreeicloud.co.uk` → `proxy.yaml`「IMEI / iCloud 检查服务」组（海外 IMEI/iCloud 检查服务，firefox 进程）
+  - `vk.com` + `er-api.com` + `frankfurter.app` + `geojs.io` → `proxy.yaml`「海外杂项」组（VK 俄罗斯社交平台 / 汇率 API Electron 进程 / ECB 汇率 API / GeoIP 服务）
+  - `194.221.250.50/32` → `telegram.yaml`（IP-CIDR，Telegram 进程 1061 次命中，未覆盖）
+- skip-list 追加 2 条 `skip`：`cookieyes.com`（广告/追踪类，Cookie consent 管理 + `log.cookieyes.com` 追踪端点，整批不落盘）；`cdn-cookieyes.com`（同上 CDN 端点）。
+- 未收录及原因：4 个 DNS IP（`1.1.1.1` / `8.8.8.8` / `1.0.0.1` / `8.8.4.4`）已由 `dns.yaml` 覆盖；2 个 Cloudflare CDN IP（`104.21.53.26` / `172.67.212.194`）为通用 CF IP，无法归属特定服务，不归类。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 32 个主域（`hdslb.com` / `bilibili.com` / `qlogo.cn` / `bilivideo.com` / `mountaintoys.cn` / `i4.cn` / `wps.cn` / `ntp.org.cn` / `bilivideo.cn` / `weixinbridge.com` / `qpic.cn` / `digicert.cn` / `ksord.com` / `biligame.com` / `wpscdn.cn` / `gitcode.com` / `biliimg.com` / `bigmodel.cn` / `i5.cn` / `jsdelivr.net` / `oceanengine.com` / `yhgfb-cn-static.com` / `kdocs.cn` / `ksosoft.com` / `servicewechat.com` / `smjcdh.top` / `weixin.com` / `ipip.net` / `ksyuncs.com` / `paypal.com` / `qwps.cn` / `tsinghua.edu.cn`）；skip-list 现有条目命中 15（`clarity.ms` ×7 / `statcounter.com` ×2 / `taboola.com` ×3 / `sitemana.com` ×1 / `etahub.com` ×1 / `cloudflareinsights.com` ×1）；manual 命中 0；伪域名 15、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 6 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新已裁决 manual 项，skip-list 2 条 `skip` 为广告/追踪类，AGENTS.md「已裁决结论」清单无须镜像）。
+
 ## 2026-11-01 漏网之鱼归类：昨日 10-31 日志 6 域名补录 + 2 项已裁决补录 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-10-31_18-45-55`（5 个日志文件，本轮从 `~/.config/clash.meta/logs` cp 复制）。提取去重后候选主域 31 个（域名候选 186：`match Match` 11 / `oc-cn-domain` 175），公网裸 IP 0 个；`check_coverage` 判定 covered 23 / uncovered 8（brand-anchor 0）。

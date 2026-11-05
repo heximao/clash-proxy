@@ -1302,6 +1302,9 @@
     "DOMAIN-SUFFIX,z.ai": [
       "direct-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,cherry-ai.com": [
+      "direct-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,smallstrawberry.com": [
       "direct.yaml"
     ],
@@ -1620,10 +1623,10 @@
     "DOMAIN-SUFFIX,fir.im": [
       "direct.yaml"
     ],
-    "DOMAIN-SUFFIX,focusee.imobie-resource.com": [
+    "DOMAIN-SUFFIX,imobie-resource.com": [
       "direct.yaml"
     ],
-    "DOMAIN-SUFFIX,focusee.imobie.com": [
+    "DOMAIN-SUFFIX,imobie.com": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,hollisterco.com": [
@@ -2041,6 +2044,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,qhres2.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sandai.net": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -3322,6 +3328,12 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,pixpix.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,dify.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,factory.ai": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,smjcdh.top": [
@@ -5988,6 +6000,45 @@
     "DOMAIN-SUFFIX,icfcdn.com": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,nektony.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,electronic.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,devmate.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mole.fit": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pi.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imeicheckpro.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imeipro.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sickw.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ifreeicloud.co.uk": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vk.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,er-api.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,frankfurter.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,geojs.io": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,redd.it": [
       "social.yaml"
     ],
@@ -6198,6 +6249,9 @@
     "IP-CIDR,185.76.151.0/24,no-resolve": [
       "telegram.yaml"
     ],
+    "IP-CIDR,194.221.250.50/32,no-resolve": [
+      "telegram.yaml"
+    ],
     "IP-CIDR6,2001:67c:4e8::/48,no-resolve": [
       "telegram.yaml"
     ],
@@ -6331,6 +6385,9 @@
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,woa.com": [
+      "tencent.yaml"
+    ],
+    "DOMAIN-SUFFIX,hunyuan.tencent.com": [
       "tencent.yaml"
     ],
     "DOMAIN-SUFFIX,chase.com": [

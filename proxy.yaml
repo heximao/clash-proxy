@@ -1052,3 +1052,22 @@ payload:
   - DOMAIN-SUFFIX,httpbin.org
   - DOMAIN-SUFFIX,fastly-masque.net
   - DOMAIN-SUFFIX,icfcdn.com
+
+# === 漏网之鱼（2026-11-05 补录）Mac 软件 / 工具 ===
+  - DOMAIN-SUFFIX,nektony.com
+  - DOMAIN-SUFFIX,electronic.us
+  - DOMAIN-SUFFIX,devmate.com
+  - DOMAIN-SUFFIX,mole.fit
+  - DOMAIN-SUFFIX,pi.dev
+
+# === 漏网之鱼（2026-11-05 补录）IMEI / iCloud 检查服务 ===
+  - DOMAIN-SUFFIX,imeicheckpro.com
+  - DOMAIN-SUFFIX,imeipro.info
+  - DOMAIN-SUFFIX,sickw.com
+  - DOMAIN-SUFFIX,ifreeicloud.co.uk
+
+# === 漏网之鱼（2026-11-05 补录）海外杂项 ===
+  - DOMAIN-SUFFIX,vk.com
+  - DOMAIN-SUFFIX,er-api.com
+  - DOMAIN-SUFFIX,frankfurter.app
+  - DOMAIN-SUFFIX,geojs.io

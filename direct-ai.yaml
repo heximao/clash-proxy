@@ -18,3 +18,5 @@ payload:
   # === 智谱 AI / Z.ai（2026-10-24 漏网之鱼补录）===
   - DOMAIN-SUFFIX,bigmodel.cn
   - DOMAIN-SUFFIX,z.ai
+  # === Cherry Studio AI 客户端（2026-11-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,cherry-ai.com

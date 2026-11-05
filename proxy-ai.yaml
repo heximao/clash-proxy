@@ -64,3 +64,7 @@ payload:
 
 # === 漏网之鱼（2026-10-28 补录）PixPix AI 电商图文/视频生成 ===
   - DOMAIN-SUFFIX,pixpix.com
+
+# === 漏网之鱼（2026-11-05 补录）AI 服务 ===
+  - DOMAIN-SUFFIX,dify.ai
+  - DOMAIN-SUFFIX,factory.ai
