@@ -18,6 +18,10 @@ payload:
   - DOMAIN-SUFFIX,threads.net
   - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,metamail.com
+
+# === Meta Muse ===
+  - DOMAIN-SUFFIX,muse.ai
+
   - IP-CIDR,103.4.96.0/22,no-resolve
   - IP-CIDR,129.134.0.0/17,no-resolve
   - IP-CIDR,157.240.0.0/17,no-resolve

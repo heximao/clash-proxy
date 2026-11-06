@@ -1,5 +1,14 @@
 # 更新记录
 
+## 2026-11-06 `muse.ai` 归属纠正：proxy-ai.yaml → meta.yaml（交互轮）
+
+- 触发：用户指出 `muse.ai` 属 Meta，要求连同其余 Meta 系域名一并迁入 `meta.yaml`。
+- 归属证据（DoH `dns.google` 实测）：`www.muse.ai` CNAME → `star.c10r.facebook.com`（Meta 边缘节点命名）；apex A → `57.144.134.141`，落于 Meta 边缘段 `57.144.0.0/16`。判据 2「同厂商兄弟域」成立，非"AI 服务"泛化归类。
+- 迁移明细：`muse.ai` 从 `proxy-ai.yaml`「漏网之鱼（2026-09-29 补录）AI 服务」组移除（该组为按补录批次建的杂项桶，无产品语义），落 `meta.yaml` 新增 `# === Meta Muse ===` 组（`DOMAIN-SUFFIX,muse.ai`），置于 Meta 品牌域与 Meta IP 段之间。
+- 其余 Meta 系域名核查：对全部非 `reject.yaml` 规则文件按 `facebook` / `fbcdn` / `fbsbx` / `instagram` / `whatsapp` / `threads` / `messenger` / `wa.me` / `metamail` / `facebookmail` / `meta.ai` / `meta.com` / `oculus` / `wit.ai` / `internet.org` / `workplace` / `llama` / `novi` / `diem` / `fburl` / `fb.watch` 逐一 grep，**未发现 meta.yaml 之外的 Meta 域名**——`meta.yaml` 已含现有全量（18 个域名 + 15 条 IP-CIDR）。`reject.yaml` 按仓库纪律不参与比对、不编辑（其内 `*.facebook.com` / `*.whatsapp.net` 等为上游广告追踪条目，`rules` 首条优先级更高，无需搬运）。
+- 自检结果：`meta.yaml` payload 33 → 34（域名 18 → 19），`proxy-ai.yaml` payload 41 → 40；两文件 `yaml.safe_load` 均通过；全库 `muse.ai` 落点唯一（`meta.yaml:23`）；未新增跨文件重复。
+- 遗留观察（未改动）：`meta.yaml` IP-CIDR 列表缺 `57.144.0.0/16`（本次实测到 `muse.ai` apex A 记录所在段）。因 `DOMAIN-SUFFIX,muse.ai` 已覆盖域名流量，裸 IP 命中不构成实际缺口，故未擅自扩段；如需补齐可作独立变更。
+
 ## 2026-11-06 漏网之鱼归类：昨日 11-05 日志 9 域名补录 + 1 项 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-05_08-35-48`（5 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 33 个（域名候选 119：`match Match` 12 / `oc-cn-domain` 107），公网裸 IP 3 个（`match Match` 3 / `oc-cn-domain` 0）；`check_coverage` 判定 covered 24 / uncovered 9（brand-anchor 2）。
