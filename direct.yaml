@@ -356,3 +356,14 @@ payload:
 
 # === 迅雷 / Thunder（2026-11-05 漏网之鱼补录）===
   - DOMAIN-SUFFIX,sandai.net
+
+# === 分期乐 / 乐信 LexinFintech（2026-11-06 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,fenqile.com
+  - DOMAIN-SUFFIX,fenqile.cn
+  - DOMAIN-SUFFIX,lexin.com
+
+# === 其他国内站点（2026-11-06 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,dlife.cn
+
+# === 域名查询 / RDAP（2026-11-06 漏网之鱼补录）===
+  - DOMAIN,rdap.nic.fit

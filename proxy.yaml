@@ -1071,3 +1071,6 @@ payload:
   - DOMAIN-SUFFIX,er-api.com
   - DOMAIN-SUFFIX,frankfurter.app
   - DOMAIN-SUFFIX,geojs.io
+
+# === 漏网之鱼（2026-11-06 补录）海外 CDN / 工具 ===
+  - DOMAIN-SUFFIX,datatables.net

@@ -2049,6 +2049,21 @@
     "DOMAIN-SUFFIX,sandai.net": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,fenqile.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,fenqile.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,lexin.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dlife.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN,rdap.nic.fit": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
@@ -2764,6 +2779,12 @@
       "meta.yaml"
     ],
     "DOMAIN-SUFFIX,whatsapp.com": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,whatsapp.net": [
+      "meta.yaml"
+    ],
+    "DOMAIN-SUFFIX,wa.me": [
       "meta.yaml"
     ],
     "DOMAIN-SUFFIX,messenger.com": [
@@ -6037,6 +6058,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,geojs.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,datatables.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

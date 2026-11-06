@@ -1,5 +1,24 @@
 # 更新记录
 
+## 2026-11-06 漏网之鱼归类：昨日 11-05 日志 9 域名补录 + 1 项 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-05_08-35-48`（5 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 33 个（域名候选 119：`match Match` 12 / `oc-cn-domain` 107），公网裸 IP 3 个（`match Match` 3 / `oc-cn-domain` 0）；`check_coverage` 判定 covered 24 / uncovered 9（brand-anchor 2）。
+- 补录明细（9 域名，3 个文件）：
+  - `whatsapp.net` → `meta.yaml`（判据 1 BRAND-ANCHOR `whatsapp.com` 同标签 TLD 变体，标签 `whatsapp` 逐字符相同；命中子域 `static.whatsapp.net`(5) / `crashlogs.whatsapp.net`(1)）
+  - `wa.me` → `meta.yaml`（判据 2 WhatsApp 官方短链服务，`whatsapp.com` 已在文件内；命中 1 次）
+  - `fenqile.com` → `direct.yaml` 新增「分期乐 / 乐信 LexinFintech」组（分期乐，国内金融科技 / 分期购物平台，域名语义明确；命中子域 `coss-platform.`(48) / `dc.`(20) / `coss-ec.`(12) / `passport.`(2) / `pay.m.`(2) 等，进程 firefox）
+  - `fenqile.cn` → 同组（判据 1 同标签 `.cn` 变体，标签 `fenqile` 逐字符相同；命中 `cres1.`(20) / `cres2.`(4) / `cecfui.`(2)）
+  - `lexin.com` → 同组（乐信 LexinFintech Holdings，fenqile 母公司；命中 `m.lexin.com`(2) / `www.lexin.com`(2)）
+  - `dlife.cn` → `direct.yaml` 新增「其他国内站点」组（`.cn` 域名归 direct，AGENTS.md 2026-10-28 裁定；命中 `id.dlife.cn`(2)）
+  - `rdap.nic.fit` → `direct.yaml` 新增「域名查询 / RDAP」组（`.fit` TLD 注册局 RDAP 端点，agent 自用查询，curl 进程 1 次；同 `rdap.nic.download` / `rdap.registry.cloud` 模式，`DOMAIN` 精确主机规则）
+  - `datatables.net` → `proxy.yaml` 新增「海外 CDN / 工具」组（`cdn.datatables.net` DataTables jQuery 插件 CDN，国际开源 CDN，进程 firefox 10 次）
+- skip-list 追加 1 条 `skip`：`example.com`（IANA 保留测试域名 RFC 2606，非真实服务，不归类）。
+- 未收录及原因：3 个公网 IP（`188.0.10.94` / `32.194.145.39` / `7.0.0.0`，各 1 次命中无进程，判据 7 无同厂商 IP 分组，不归类）。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 24 个主域（`hdslb.com` / `bilibili.com` / `zhipin.com` / `qlogo.cn` / `weixinbridge.com` / `bilivideo.com` / `baidu.com` / `qpic.cn` / `mountaintoys.cn` / `bilivideo.cn` / `ntp.org.cn` / `digicert.cn` / `bosszhipin.com` / `sickw.com` / `rdap.org` / `weixin.com` / `189.cn` / `biligame.com` / `geetest.com` / `identitydigital.services` / `verisign.com` / `electronic.us` / `pi.dev` / `servicewechat.com`）；skip-list 命中 9（`clarity.ms` ×6 / `hibchr.com` ×2 / `zorvian.com` ×1 / `antpeak.com` ×1）；manual 命中 0；伪域名 12、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 3 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮 skip-list 1 条 `skip` 为保留测试域名，AGENTS.md「已裁决结论」清单无须镜像）。
+
 ## 2026-11-05 漏网之鱼归类：11-02~11-04 存量+昨日日志 20 域名 + 1 IP 补录，2 项 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/` 下 `2026-11-02_07-30-52`（4 个日志文件）、`2026-11-02_21-14-27`（4 个）、`2026-11-02_22-15-14`（4 个）、`2026-11-03_07-52-06`（4 个）、`2026-11-04_08-31-53`（6 个），共 22 个日志文件。前四个是上轮 cron 未归档的存量（11-02 ×3、11-03 ×1），按 skill 第 1 节纳入本轮提取；昨日（11-04）日志为主任务，从 `~/.config/clash.meta/logs` cp 复制。
