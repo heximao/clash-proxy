@@ -2802,6 +2802,9 @@
     "DOMAIN-SUFFIX,metamail.com": [
       "meta.yaml"
     ],
+    "DOMAIN-SUFFIX,muse.ai": [
+      "meta.yaml"
+    ],
     "IP-CIDR,103.4.96.0/22,no-resolve": [
       "meta.yaml"
     ],
@@ -3339,9 +3342,6 @@
     "DOMAIN-SUFFIX,midjourney.com": [
       "proxy-ai.yaml"
     ],
-    "DOMAIN-SUFFIX,muse.ai": [
-      "proxy-ai.yaml"
-    ],
     "DOMAIN-SUFFIX,unsloth.ai": [
       "proxy-ai.yaml"
     ],
@@ -3355,6 +3355,9 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,factory.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,deepl.com": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,smjcdh.top": [
@@ -6063,6 +6066,9 @@
     "DOMAIN-SUFFIX,datatables.net": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,hackt1vator.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,redd.it": [
       "social.yaml"
     ],
@@ -6274,6 +6280,102 @@
       "telegram.yaml"
     ],
     "IP-CIDR,194.221.250.50/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,2.0.0.0/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,4.0.0.0/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,7.0.0.0/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,9.0.0.0/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,11.0.0.0/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,16.70.234.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,16.118.242.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,16.198.43.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,16.230.92.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,32.86.68.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,48.86.68.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,48.230.217.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,128.67.18.155/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,128.230.63.138/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,160.146.13.152/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.0.248.163/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.21.101.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.21.226.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.26.193.137/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.53.150.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.69.234.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.85.68.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.117.242.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.133.76.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.149.35.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.149.41.14/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.149.166.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.165.250.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.197.43.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.229.92.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.229.217.12/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.245.51.13/32,no-resolve": [
       "telegram.yaml"
     ],
     "IP-CIDR6,2001:67c:4e8::/48,no-resolve": [

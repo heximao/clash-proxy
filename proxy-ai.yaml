@@ -67,3 +67,6 @@ payload:
 # === 漏网之鱼（2026-11-05 补录）AI 服务 ===
   - DOMAIN-SUFFIX,dify.ai
   - DOMAIN-SUFFIX,factory.ai
+
+# === 漏网之鱼（2026-11-07 补录）AI 翻译 ===
+  - DOMAIN-SUFFIX,deepl.com

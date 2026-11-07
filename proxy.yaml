@@ -1074,3 +1074,6 @@ payload:
 
 # === 漏网之鱼（2026-11-06 补录）海外 CDN / 工具 ===
   - DOMAIN-SUFFIX,datatables.net
+
+# === 漏网之鱼（2026-11-07 补录）iOS 激活工具 ===
+  - DOMAIN-SUFFIX,hackt1vator.com

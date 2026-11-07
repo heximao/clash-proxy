@@ -1,5 +1,18 @@
 # 更新记录
 
+## 2026-11-07 漏网之鱼归类：昨日 11-06 日志 2 域名 + 32 Telegram IP 补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-06_09-11-26`（6 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 29 个（域名候选 50：`match Match` 11 / `oc-cn-domain` 39），公网裸 IP 34 个（`match Match` 34 / `oc-cn-domain` 0）；`check_coverage` 判定域名 covered 27 / uncovered 2（brand-anchor 0），IP covered 2 / uncovered 32。
+- 补录明细（2 域名 + 32 IP-CIDR，共 3 个文件）：
+  - `deepl.com` → `proxy-ai.yaml` 新增「AI 翻译」组（DeepL 知名 AI 翻译服务，域名语义明确 + firefox 进程 2 次命中；AGENTS.md「AI 服务按可直连/需代理拆分」，DeepL 需代理 → proxy-ai.yaml）
+  - `hackt1vator.com` → `proxy.yaml` 新增「iOS 激活工具」组（RDAP: Hostinger operations UAB 注册商立陶宛 + NS `NS1/NS2.DNS-PARKING.COM`；DoH: A 记录 `148.135.128.87` / `92.112.198.44`；HTTP 200 title "Home - Hackt1vator" desc "free untethered Hello and MDM activation tool for iOS 8+"；curl 进程 1 次；per 2026-10-28 兜底规则海外杂项归 proxy.yaml）
+  - 32 个 IP-CIDR/32 → `telegram.yaml` 新增「Telegram 进程硬编码连接 IP」组（判据 7：telegram.yaml 已有 IP-CIDR 分组；全部 Telegram 进程命中；含 208.x.x.x 段 17 个、16.x.x.x 段 4 个、128.x.x.x 段 2 个、其他 9 个含 .0 网络地址 5 个 `2.0.0.0`/`4.0.0.0`/`7.0.0.0`/`9.0.0.0`/`11.0.0.0`）
+- 未收录及原因：2 个 DNS IP（`1.1.1.1` / `8.8.8.8`）已由 `dns.yaml` 覆盖。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 27 个主域（`fast.com` / `bilibili.com` / `hdslb.com` / `jsdelivr.net` / `weixinbridge.com` / `qlogo.cn` / `ntp.org.cn` / `digicert.cn` / `ip138.com` / `mountaintoys.cn` / `qpic.cn` / `bilivideo.cn` / `bilivideo.com` / `127.net` / `binance.info` / `cloudflare-cn.com` / `crunchyroll.com` / `crypto.com` / `ip.cn` / `qualcomm.cn` / `wise.com` / `biligame.com` / `githubusercontent.com` / `netflix.com` / `oceanengine.com` / `wechat.com` / `yhgfb-cn-static.com`）；skip-list 命中 7（`hibchr.com` ×4 / `metadotcom.fbthirdpartypixel.com` ×3 / `sc-static.net` ×2 / `antpeak.com` ×1 / `static.cloudflareinsights.com` ×1 / `zorvian.com` ×1）；manual 命中 0；伪域名 0、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 3 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新已裁决 manual/skip 项，skip-list 无变更）。
+
 ## 2026-11-06 `muse.ai` 归属纠正：proxy-ai.yaml → meta.yaml（交互轮）
 
 - 触发：用户指出 `muse.ai` 属 Meta，要求连同其余 Meta 系域名一并迁入 `meta.yaml`。
