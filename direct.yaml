@@ -282,6 +282,8 @@ payload:
   - DOMAIN-SUFFIX,packagecontrol.io
   - DOMAIN-SUFFIX,rust-lang.org
   - DOMAIN-SUFFIX,crates.io
+  - DOMAIN-SUFFIX,csdn.net
+  - DOMAIN-SUFFIX,cnblogs.com
 
 # === 其他国内站点（2026-10-02 漏网之鱼补录）===
   - DOMAIN-SUFFIX,telefen.com

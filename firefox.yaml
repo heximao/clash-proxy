@@ -8,3 +8,4 @@ payload:
 # === Mozilla 服务域名（2026-09-29 漏网之鱼补录）===
   - DOMAIN-SUFFIX,mozilla-backup.org
   - DOMAIN-SUFFIX,firefox-portal-detection.com
+  - DOMAIN-SUFFIX,mozgcp.net

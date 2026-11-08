@@ -1,5 +1,18 @@
 # 更新记录
 
+## 2026-11-08 漏网之鱼归类：昨日 11-07 日志 3 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-07_08-55-11`（5 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 21 个（域名候选 90：`match Match` 4 / `oc-cn-domain` 86），公网裸 IP 0 个；`check_coverage` 判定 covered 18 / uncovered 3（brand-anchor 0）。
+- 补录明细（3 域名，2 个文件）：
+  - `csdn.net` → `direct.yaml`「开发者服务」组（CSDN 国内开发者技术社区，域名语义明确；命中子域 `blog.csdn.net`(2)，进程 WorkBuddy AI Helper；AGENTS.md 2026-10-28 裁定高度归属国内归 direct.yaml）
+  - `cnblogs.com` → `direct.yaml`「开发者服务」组（博客园国内开发者博客平台；命中子域 `www.cnblogs.com`(1)，进程 WorkBuddy AI Helper；同上裁定）
+  - `mozgcp.net` → `firefox.yaml`「Mozilla 服务域名」组（判据 5：品牌字面"moz"在域内 + firefox.yaml 已落盘含 mozilla.com/net/org；命中子域 `prod.ohttp-gateway.prod.webservices.mozgcp.net`(1)，进程 firefox，OHTTP 隐私网关端点）
+- 未收录及原因：无其他未覆盖项。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 18 个主域（`bilibili.com` / `hdslb.com` / `bilivideo.com` / `qlogo.cn` / `mountaintoys.cn` / `ntp.org.cn` / `weixinbridge.com` / `digicert.cn` / `qpic.cn` / `bilivideo.cn` / `weixin.com` / `biligame.com` / `rdap.org` / `verisign.com` / `hackt1vator.com` / `biliimg.com` / `oceanengine.com` / `servicewechat.com`）；skip-list 命中 0；manual 命中 0；伪域名 2、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 2 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新已裁决 manual/skip 项，skip-list 无变更）。
+
 ## 2026-11-07 漏网之鱼归类：昨日 11-06 日志 2 域名 + 32 Telegram IP 补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-06_09-11-26`（6 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 29 个（域名候选 50：`match Match` 11 / `oc-cn-domain` 39），公网裸 IP 34 个（`match Match` 34 / `oc-cn-domain` 0）；`check_coverage` 判定域名 covered 27 / uncovered 2（brand-anchor 0），IP covered 2 / uncovered 32。

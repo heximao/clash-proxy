@@ -1923,6 +1923,12 @@
     "DOMAIN-SUFFIX,crates.io": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,csdn.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cnblogs.com": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,telefen.com": [
       "direct.yaml"
     ],
@@ -2128,6 +2134,9 @@
       "firefox.yaml"
     ],
     "DOMAIN-SUFFIX,firefox-portal-detection.com": [
+      "firefox.yaml"
+    ],
+    "DOMAIN-SUFFIX,mozgcp.net": [
       "firefox.yaml"
     ],
     "DOMAIN-SUFFIX,github.com": [
