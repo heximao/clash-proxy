@@ -910,7 +910,7 @@ payload:
 
 # === 漏网之鱼（2026-09-29 补录）证书验证 ===
   - DOMAIN-SUFFIX,lencr.org
-  - DOMAIN,crt.sectigo.com
+  - DOMAIN-SUFFIX,sectigo.com
   - DOMAIN,ocsp.comodoca4.com
 
 # === 漏网之鱼（2026-09-29 补录）开发者工具 ===

@@ -5757,7 +5757,7 @@
     "DOMAIN-SUFFIX,lencr.org": [
       "proxy.yaml"
     ],
-    "DOMAIN,crt.sectigo.com": [
+    "DOMAIN-SUFFIX,sectigo.com": [
       "proxy.yaml"
     ],
     "DOMAIN,ocsp.comodoca4.com": [
@@ -6385,6 +6385,15 @@
       "telegram.yaml"
     ],
     "IP-CIDR,208.245.51.13/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.37.188.5/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.53.147.5/32,no-resolve": [
+      "telegram.yaml"
+    ],
+    "IP-CIDR,208.229.220.5/32,no-resolve": [
       "telegram.yaml"
     ],
     "IP-CIDR6,2001:67c:4e8::/48,no-resolve": [

@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-11-09 漏网之鱼归类：昨日 11-08 日志 1 域名升级 + 3 Telegram IP 补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-08_09-22-29`（4 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 18 个（域名候选 82：`match Match` 3 / `oc-cn-domain` 79），公网裸 IP 5 个（`match Match` 5 / `oc-cn-domain` 0）；`check_coverage` 判定域名 covered 17 / uncovered 1（brand-anchor 1），IP covered 2 / uncovered 3。
+- 补录明细（1 域名规则升级 + 3 IP-CIDR，共 2 个文件）：
+  - `sectigo.com` → `proxy.yaml`「漏网之鱼（2026-09-29 补录）证书验证」组：将原有 `DOMAIN,crt.sectigo.com` 升级为 `DOMAIN-SUFFIX,sectigo.com`（判据 5 品牌字面在域内 + proxy.yaml 已落盘；BRAND-ANCHOR `crt.sectigo.com` 同标签；命中子域 `ocsp.sectigo.com`(1)，进程 `trustd` macOS 证书 OCSP 校验；Sectigo 为知名证书颁发机构，升级后覆盖 crt/ocsp 等全部子域）
+  - 3 个 `IP-CIDR/32` → `telegram.yaml`「漏网之鱼（2026-11-07 补录）Telegram 进程硬编码连接 IP」组：`208.37.188.5` / `208.53.147.5` / `208.229.220.5`（判据 7：telegram.yaml 已有 IP-CIDR 分组且含同 `208.x.x.x` 段；全部 Telegram 进程命中，各 2 次）
+- 未收录及原因：2 个 DNS IP（`1.1.1.1`(7) / `8.8.8.8`(5)）已由 `dns.yaml` 覆盖。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 17 个主域（`hdslb.com` / `bilibili.com` / `bilivideo.com` / `qlogo.cn` / `bilivideo.cn` / `jsdelivr.net` / `mountaintoys.cn` / `ntp.org.cn` / `biligame.com` / `biliimg.com` / `digicert.cn` / `weixinbridge.com` / `mozgcp.net` / `oceanengine.com` / `qpic.cn` / `servicewechat.com` / `yhgfb-cn-static.com`）；skip-list 命中 1（`etahub.com` ×6 firefox，reject 上游已收录）；manual 命中 0；伪域名 3、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 2 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交（见下方）→ push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新已裁决 manual/skip 项，skip-list 无变更）。
+
 ## 2026-11-08 漏网之鱼归类：昨日 11-07 日志 3 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-07_08-55-11`（5 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 21 个（域名候选 90：`match Match` 4 / `oc-cn-domain` 86），公网裸 IP 0 个；`check_coverage` 判定 covered 18 / uncovered 3（brand-anchor 0）。
