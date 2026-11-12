@@ -1077,3 +1077,75 @@ payload:
 
 # === 漏网之鱼（2026-11-07 补录）iOS 激活工具 ===
   - DOMAIN-SUFFIX,hackt1vator.com
+
+# === BitTorrent Tracker（2026-11-12 补录）DownloadService 进程 ===
+  - DOMAIN-SUFFIX,abcvg.info
+  - DOMAIN-SUFFIX,gbitt.info
+  - DOMAIN-SUFFIX,anirena.com
+  - DOMAIN-SUFFIX,itzmx.com
+  - DOMAIN-SUFFIX,dler.org
+  - DOMAIN-SUFFIX,coalition.space
+  - DOMAIN-SUFFIX,hama3.net
+  - DOMAIN-SUFFIX,imgoingto.icu
+  - DOMAIN-SUFFIX,iriseden.eu
+  - DOMAIN-SUFFIX,iriseden.fr
+  - DOMAIN-SUFFIX,lilithraws.cf
+  - DOMAIN-SUFFIX,mapfactor.com
+  - DOMAIN-SUFFIX,nanoha.org
+  - DOMAIN-SUFFIX,nitrix.me
+  - DOMAIN-SUFFIX,orel.ru
+  - DOMAIN-SUFFIX,tamersunion.org
+  - DOMAIN-SUFFIX,thetracker.org
+  - DOMAIN-SUFFIX,wwwww.wtf
+  - DOMAIN-SUFFIX,torrent.eu.org
+  - DOMAIN-SUFFIX,bt4g.com
+  - DOMAIN-SUFFIX,cili001.com
+  - DOMAIN-SUFFIX,darmowy-torrent.pl
+  - DOMAIN-SUFFIX,desync.com
+  - DOMAIN-SUFFIX,files.fm
+  - DOMAIN-SUFFIX,filetracker.xyz
+  - DOMAIN-SUFFIX,ipv6tracker.ru
+  - DOMAIN-SUFFIX,moeking.me
+  - DOMAIN-SUFFIX,opentracker.xyz
+  - DOMAIN-SUFFIX,publictracker.xyz
+  - DOMAIN-SUFFIX,realliferpg.de
+  - DOMAIN-SUFFIX,stealth.si
+  - DOMAIN-SUFFIX,tace.ru
+  - DOMAIN-SUFFIX,tfile.co
+  - DOMAIN-SUFFIX,torrentsmd.com
+  - DOMAIN-SUFFIX,tracker.wf
+  - DOMAIN-SUFFIX,trackerfix.com
+  - DOMAIN-SUFFIX,demonii.com
+  - DOMAIN-SUFFIX,explodie.org
+  - DOMAIN-SUFFIX,newtoncity.org
+  - DOMAIN-SUFFIX,opentor.org
+  - DOMAIN-SUFFIX,tracker.army
+  - DOMAIN-SUFFIX,zsw.ca
+  - DOMAIN-SUFFIX,monocul.us
+  - DOMAIN-SUFFIX,wassermann.online
+  - DOMAIN-SUFFIX,arenabg.com
+  - DOMAIN-SUFFIX,engplus.ru
+  - DOMAIN-SUFFIX,foreverpirates.co
+  - DOMAIN-SUFFIX,heihachi.pw
+  - DOMAIN-SUFFIX,monitorit4.me
+  - DOMAIN-SUFFIX,openbittorrent.com
+  - DOMAIN-SUFFIX,opentrackr.org
+  - DOMAIN-SUFFIX,shkinev.me
+  - DOMAIN-SUFFIX,sleepyinternetfun.xyz
+  - DOMAIN-SUFFIX,theoks.net
+  - DOMAIN-SUFFIX,ufibox.com
+  - DOMAIN-SUFFIX,vibe.community
+  - DOMAIN-SUFFIX,nyaatracker.com
+  - DOMAIN-SUFFIX,transmissionbt.com
+
+# === 漏网之鱼（2026-11-12 补录）海外工具 / 服务 ===
+  - DOMAIN-SUFFIX,macupdate.com
+  - DOMAIN-SUFFIX,sftcdn.net
+  - DOMAIN-SUFFIX,stockanalysis.com
+  - DOMAIN-SUFFIX,tipranks.com
+  - DOMAIN-SUFFIX,fonts.net
+  - DOMAIN-SUFFIX,snapi.dev
+  - DOMAIN-SUFFIX,dlcdnimgs.asus.com
+  - DOMAIN-SUFFIX,odinapi.asus.com
+  - DOMAIN-SUFFIX,demeter.asus.com
+  - DOMAIN-SUFFIX,mwservice.asus.com

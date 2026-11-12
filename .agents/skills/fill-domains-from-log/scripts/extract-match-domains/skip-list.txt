@@ -111,3 +111,7 @@ nunlocker.com skip:无主端点（NameCheap 注册 + Cloudflare NS，首页仅 C
 cookieyes.com skip:广告/追踪类（Cookie consent 管理 + log.cookieyes.com 追踪端点），整批不落盘
 cdn-cookieyes.com skip:广告/追踪类（CookieYes CDN 端点），整批不落盘
 example.com skip:IANA 保留测试域名（RFC 2606），非真实服务，不归类
+res.res skip:伪域名（.res 非有效 TLD，res.res.res.res DownloadService 119 次命中，无效域名不归类）
+clickiocmp.com skip:广告/追踪类（ClickIO CMP 广告变现平台，firefox 进程 12 次命中），整批不落盘
+investingchannel.com skip:广告/追踪类（InvestingChannel 金融广告网络，Chrome 进程 4 次命中），整批不落盘
+arturito.cloud skip:广告/追踪类（analytics.arturito.cloud 分析追踪端点，firefox 进程 2 次命中），整批不落盘

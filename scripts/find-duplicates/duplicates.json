@@ -3042,6 +3042,9 @@
     "DOMAIN-SUFFIX,vsassets.io": [
       "microsoft.yaml"
     ],
+    "DOMAIN-SUFFIX,appcenter.ms": [
+      "microsoft.yaml"
+    ],
     "DOMAIN-SUFFIX,playwright.dev": [
       "microsoft.yaml"
     ],
@@ -6076,6 +6079,210 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,hackt1vator.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,abcvg.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,gbitt.info": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,anirena.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,itzmx.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dler.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,coalition.space": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,hama3.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,imgoingto.icu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iriseden.eu": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,iriseden.fr": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,lilithraws.cf": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mapfactor.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nanoha.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nitrix.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,orel.ru": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tamersunion.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,thetracker.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wwwww.wtf": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torrent.eu.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bt4g.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cili001.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,darmowy-torrent.pl": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,desync.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,files.fm": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,filetracker.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipv6tracker.ru": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,moeking.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,opentracker.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,publictracker.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,realliferpg.de": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stealth.si": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tace.ru": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tfile.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,torrentsmd.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tracker.wf": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,trackerfix.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,demonii.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,explodie.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,newtoncity.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,opentor.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tracker.army": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zsw.ca": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,monocul.us": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,wassermann.online": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,arenabg.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,engplus.ru": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,foreverpirates.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,heihachi.pw": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,monitorit4.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,openbittorrent.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,opentrackr.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,shkinev.me": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sleepyinternetfun.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,theoks.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ufibox.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vibe.community": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,nyaatracker.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,transmissionbt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,macupdate.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sftcdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stockanalysis.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,tipranks.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fonts.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,snapi.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,dlcdnimgs.asus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,odinapi.asus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,demeter.asus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,mwservice.asus.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

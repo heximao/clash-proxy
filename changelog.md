@@ -1,5 +1,35 @@
 # 更新记录
 
+## 2026-11-12 漏网之鱼归类：11-09 遗留 + 11-11 日志 69 域名补录 + 4 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/` 下 `2026-11-09_09-29-38`（5 个日志文件，上轮中断遗留）、`2026-11-11_10-00-17` / `2026-11-11_11-41-36` / `2026-11-11_14-46-09` / `2026-11-11_14-47-08` / `2026-11-11_21-56-21` / `2026-11-11_22-05-46` / `2026-11-11_23-07-58`（共 7 个目录，cp 自 `~/.config/clash.meta/logs`），以及仓库根散落 8 个 10 月 `.log` 文件（历史遗留未归档），共 42 个日志文件。
+- 提取量：候选域名 90 个（`match Match` 85 / `oc-cn-domain` 5），公网裸 IP 57 个（`match Match` 57 / `oc-cn-domain` 0）；skip-list 命中 4（`hibchr.com` ×2 / `antpeak.com` ×1 / `zorvian.com` ×1）；伪域名 20、探针 0；manual 命中 0。
+- `check_coverage` 判定：域名 covered 5 / uncovered 71（brand-anchor 2）；IP covered 4 / uncovered 53。
+- 补录明细（69 域名，共 3 个文件）：
+  - **BitTorrent Tracker 组**（58 域名 → `proxy.yaml` 新增「BitTorrent Tracker（2026-11-12 补录）DownloadService 进程」组）：全部 DownloadService 进程命中，为 BitTorrent 公共 tracker 端点，海外主机需代理。含 `abcvg.info` / `gbitt.info` / `anirena.com` / `itzmx.com` / `dler.org` / `coalition.space` / `hama3.net` / `imgoingto.icu` / `iriseden.eu` / `iriseden.fr` / `lilithraws.cf` / `mapfactor.com` / `nanoha.org` / `nitrix.me` / `orel.ru` / `tamersunion.org` / `thetracker.org` / `wwwww.wtf` / `torrent.eu.org`（`eu.org` 为免费域名注册局，改用独立注册的 `torrent.eu.org` 子域避免覆盖全 eu.org）/ `bt4g.com` / `cili001.com` / `darmowy-torrent.pl` / `desync.com` / `files.fm` / `filetracker.xyz` / `ipv6tracker.ru` / `moeking.me` / `opentracker.xyz` / `publictracker.xyz` / `realliferpg.de` / `stealth.si` / `tace.ru` / `tfile.co` / `torrentsmd.com` / `tracker.wf` / `trackerfix.com` / `demonii.com` / `explodie.org` / `newtoncity.org` / `opentor.org` / `tracker.army` / `zsw.ca` / `monocul.us` / `wassermann.online` / `arenabg.com` / `engplus.ru` / `foreverpirates.co` / `heihachi.pw` / `monitorit4.me` / `openbittorrent.com` / `opentrackr.org` / `shkinev.me` / `sleepyinternetfun.xyz` / `theoks.net` / `ufibox.com` / `vibe.community` / `nyaatracker.com` / `transmissionbt.com`（AGENTS.md 2026-10-28 兜底规则：无国内实证的海外杂项统一归 proxy.yaml；DownloadService 进程 + tracker/torrent 域名语义双佐证）。
+  - **海外工具 / 服务组**（10 域名 → `proxy.yaml` 新增「漏网之鱼（2026-11-12 补录）海外工具 / 服务」组）：
+    - `macupdate.com`（MacUpdate Mac 软件目录，RDAP: NameCheap + Cloudflare NS，firefox 28 次命中）
+    - `sftcdn.net`（Software.fr CDN，firefox 8 次命中）
+    - `stockanalysis.com`（Stock Analysis 美股数据站，Chrome 8 次命中）
+    - `tipranks.com`（TipRanks 以色列股票评级站，Chrome 1 次命中）
+    - `fonts.net`（Monotype Fonts CDN，firefox 1 次命中）
+    - `snapi.dev`（开发者 API，RDAP: GoDaddy + DigitalOcean NS，curl 2 / Chrome 1 次命中）
+    - `dlcdnimgs.asus.com` / `odinapi.asus.com` / `demeter.asus.com` / `mwservice.asus.com`（ASUS 在线服务，firefox 共 8 次命中；BRAND-ANCHOR `router.asus.com` @ lan.yaml 为 `DOMAIN` 精确主机规则，判据 8 ≠ 主域覆盖；不使用 `DOMAIN-SUFFIX,asus.com` 主域避免与 lan.yaml 语义冲突，改用 4 个精确子域；AGENTS.md 判据 5 品牌字面在域内 + 无 asus.yaml 厂商文件 + 2026-10-28 裁定不新建厂商文件 → proxy.yaml）
+  - `appcenter.ms` → `microsoft.yaml`「开发者 / VS / MSDN」组（RDAP: MarkMonitor 注册商 + Azure NS = Microsoft Visual Studio App Center；Thunder 进程 9 次命中，oc-cn-domain 类别；判据 5 品牌字面 + microsoft.yaml 已落盘）
+- skip-list 追加 4 条：
+  - `res.res` `skip`：伪域名（`.res` 非有效 TLD，`res.res.res.res` DownloadService 119 次命中，脚本未过滤已人工识别）
+  - `clickiocmp.com` `skip`：广告/追踪类（ClickIO CMP 广告变现平台，firefox 12 次）
+  - `investingchannel.com` `skip`：广告/追踪类（InvestingChannel 金融广告网络，Chrome 4 次）
+  - `arturito.cloud` `skip`：广告/追踪类（analytics.arturito.cloud 分析追踪端点，firefox 2 次）
+- 未收录及原因：
+  - BRAND-ANCHOR `ccwu.cc`：`go.cfapi.ccwu.cc` @ proxy.yaml `DOMAIN-SUFFIX` 已覆盖唯一命中子域 `go.cfapi.ccwu.cc`(2)；RDAP: Porkbun + DNSHE NS，隐私保护无其他子域证据，不升级为主域（避免冗余覆盖）。
+  - 53 个公网 IP 全部 DownloadService 进程（torrent tracker IP），判据 7 无同厂商 IP 分组已存在，不归类。
+  - 4 个 DNS IP（`8.8.8.8` / `1.1.1.1` / `8.8.4.4` / `1.0.0.1`）已由 `dns.yaml` / `google.yaml` 覆盖。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 5 个主域（`jsdelivr.net` / `smjcdh.top` / `githubusercontent.com` / `rdap.org` / `smallstrawberry.com`）；skip-list 命中 4（`hibchr.com` ×2 / `antpeak.com` ×1 / `zorvian.com` ×1）；manual 命中 0；伪域名 20（含本轮新增 `res.res`）。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 2 个文件 `yaml.safe_load` 全部通过。
+- Git：main 提交（见下方）→ push → 同步 `0 0`（AGENTS.md 同步延后：本轮新增 4 条 skip-list `skip` 项 + 69 域名补录，AGENTS.md「已裁决结论」清单无须镜像 skip 类项）。
+
 ## 2026-11-09 漏网之鱼归类：昨日 11-08 日志 1 域名升级 + 3 Telegram IP 补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-08_09-22-29`（4 个日志文件，cp 自 `~/.config/clash.meta/logs`）。提取去重后候选主域 18 个（域名候选 82：`match Match` 3 / `oc-cn-domain` 79），公网裸 IP 5 个（`match Match` 5 / `oc-cn-domain` 0）；`check_coverage` 判定域名 covered 17 / uncovered 1（brand-anchor 1），IP covered 2 / uncovered 3。

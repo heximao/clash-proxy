@@ -73,6 +73,7 @@ payload:
   - DOMAIN-SUFFIX,msecnd.net
   - DOMAIN-SUFFIX,nuget.org
   - DOMAIN-SUFFIX,vsassets.io
+  - DOMAIN-SUFFIX,appcenter.ms
 
 # === Playwright（2026-09-29 漏网之鱼补录）===
   - DOMAIN-SUFFIX,playwright.dev
