@@ -61,6 +61,8 @@ payload:
   - DOMAIN-SUFFIX,unisvg.com
   - DOMAIN-SUFFIX,iconify.design
   - DOMAIN-SUFFIX,supabase.co
+  - DOMAIN-SUFFIX,supabase.com
+  - DOMAIN-SUFFIX,supabase.io
   - DOMAIN-SUFFIX,fastly-edge.com
   - DOMAIN-SUFFIX,rapidssl.com
   - DOMAIN-SUFFIX,exp-tas.com
@@ -1149,3 +1151,12 @@ payload:
   - DOMAIN-SUFFIX,odinapi.asus.com
   - DOMAIN-SUFFIX,demeter.asus.com
   - DOMAIN-SUFFIX,mwservice.asus.com
+
+# === 漏网之鱼（2026-11-14 补录）海外服务 / 工具 ===
+  - DOMAIN-SUFFIX,metabase.com
+  - DOMAIN-SUFFIX,pwnedpasswords.com
+  - DOMAIN-SUFFIX,ghproxy.net
+  - DOMAIN-SUFFIX,cortexanalytics.app
+  - DOMAIN-SUFFIX,visualwebsiteoptimizer.com
+  - DOMAIN-SUFFIX,zencdn.net
+  - DOMAIN-SUFFIX,fastgit.org

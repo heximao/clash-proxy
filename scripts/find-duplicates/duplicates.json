@@ -2070,6 +2070,9 @@
     "DOMAIN,rdap.nic.fit": [
       "direct.yaml"
     ],
+    "DOMAIN,rdap.nic.ms": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
@@ -3511,6 +3514,12 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,supabase.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,supabase.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,supabase.io": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,fastly-edge.com": [
@@ -6283,6 +6292,27 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,mwservice.asus.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,metabase.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pwnedpasswords.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ghproxy.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cortexanalytics.app": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,visualwebsiteoptimizer.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,zencdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fastgit.org": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

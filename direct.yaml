@@ -369,3 +369,6 @@ payload:
 
 # === 域名查询 / RDAP（2026-11-06 漏网之鱼补录）===
   - DOMAIN,rdap.nic.fit
+
+# === 域名查询 / RDAP（2026-11-14 漏网之鱼补录）===
+  - DOMAIN,rdap.nic.ms

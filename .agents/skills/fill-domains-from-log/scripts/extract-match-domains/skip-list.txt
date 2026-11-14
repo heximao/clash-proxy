@@ -115,3 +115,11 @@ res.res skip:伪域名（.res 非有效 TLD，res.res.res.res DownloadService 11
 clickiocmp.com skip:广告/追踪类（ClickIO CMP 广告变现平台，firefox 进程 12 次命中），整批不落盘
 investingchannel.com skip:广告/追踪类（InvestingChannel 金融广告网络，Chrome 进程 4 次命中），整批不落盘
 arturito.cloud skip:广告/追踪类（analytics.arturito.cloud 分析追踪端点，firefox 进程 2 次命中），整批不落盘
+
+# --- 2026-11-14 automation 轮新裁决（11-12 遗留 + 11-13 日志）---
+bitphox.com skip:无主端点（NameCheap 注册 + Cloudflare NS + 首页 429 + Chrome timeout + curl 无产品指向，同 antpeak/hibchr/zorvian 特征），不归类
+hisball.com skip:无主端点（同 bitphox.com 特征：NameCheap + Cloudflare NS + 429 + Chrome timeout），不归类
+techvaso.com skip:无主端点（同 bitphox.com 特征：NameCheap + Cloudflare NS + 首页空 + DoH 空响应），不归类
+tronyza.com skip:无主端点（同 bitphox.com 特征：NameCheap + Cloudflare NS + 429 + Chrome timeout），不归类
+usercentrics.eu skip:广告/追踪类（GDPR 同意管理平台 CMP，先例 cookieyes.com），整批不落盘
+unifyintent.com skip:广告/追踪类（营销意图追踪平台，tag. 子域为追踪标签端点），整批不落盘

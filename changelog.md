@@ -1,5 +1,35 @@
 # 更新记录
 
+## 2026-11-14 漏网之鱼归类：11-12 遗留 + 昨日 11-13 日志 10 域名补录 + 6 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/` 下 `2026-11-12_00-04-44` / `2026-11-12_01-05-15` / `2026-11-12_11-38-16` / `2026-11-12_21-14-05` / `2026-11-12_22-18-27` / `2026-11-12_23-00-27`（共 6 个目录，上轮中断遗留未归档）+ `2026-11-13_11-03-08`（cp 自 `~/.config/clash.meta/logs`），共 30 个日志文件。`diff -rq` 无新增差异（均为待处理存量）。
+- 提取量：候选域名 43 个（`match Match` 40 / `oc-cn-domain` 3），主域归并 29 个；公网裸 IP 4 个（`match Match` 4 / `oc-cn-domain` 0，全为 DNS IP）；skip-list 命中 5（`hibchr.com` ×2 / `antpeak.com` ×1 / `zorvian.com` ×1 / `static.cloudflareinsights.com` ×1）；manual 命中 0；伪域名 1（`res.res`）、探针 0。
+- `check_coverage` 判定：域名 covered 12 / uncovered 17（brand-anchor 5）；IP covered 4 / uncovered 0。
+- 补录明细（10 域名，共 2 个文件）：
+  - **`supabase.com` / `supabase.io`** → `proxy.yaml`（判据 1 同标签 TLD 变体：`supabase.co` @ proxy.yaml:63 为 BRAND-ANCHOR，标签「supabase」逐字符相同，补 .com / .io；命中 `api.supabase.com`(64) / `ph.supabase.com`(64) / `configcat.supabase.com`(46) / `ss.supabase.com`(11) / `supabase.com`(81) / `auth.supabase.io`(23)，进程 firefox / WorkBuddy AI Helper / Electron / sandbox-cli）
+  - **`metabase.com`** → `proxy.yaml`「漏网之鱼（2026-11-14 补录）海外服务 / 工具」组（Metabase 美国开源 BI / 分析 SaaS，命中 `sp.`(8) / `cdn.`(2) / `status.`(2) / `www.`(2) / `product-analytics-ingestion.`(2)，firefox；AGENTS.md 2026-10-28 兜底：无国内实证海外杂项归 proxy.yaml）
+  - **`pwnedpasswords.com`** → 同上组（Have I Been Pwned 密码查询 API，命中 `api.pwnedpasswords.com`(6)，firefox，海外安全服务）
+  - **`ghproxy.net`** → 同上组（GitHub 代理镜像加速服务，命中 `ghproxy.net`(3)，git-remote-http(2)/curl(1)，海外）
+  - **`cortexanalytics.app`** → 同上组（分析平台，命中 `www.cortexanalytics.app`(2)，firefox，海外）
+  - **`visualwebsiteoptimizer.com`** → 同上组（VWO A/B 测试工具，命中 `dev.visualwebsiteoptimizer.com`(2)，firefox，海外）
+  - **`zencdn.net`** → 同上组（Video.js 开源播放器 CDN，命中 `vjs.zencdn.net`(2)，firefox，海外）
+  - **`fastgit.org`** → 同上组（GitHub 镜像加速，命中 `hub.fastgit.org`(1)，curl，海外）
+  - **`rdap.nic.ms`** → `direct.yaml` 新增「域名查询 / RDAP（2026-11-14 漏网之鱼补录）」组（`.ms` TLD 注册局 RDAP 端点，命中 `rdap.nic.ms`(1)，curl；同组已有 `DOMAIN,rdap.nic.download` / `DOMAIN,rdap.nic.fit` 同类先例；用 `DOMAIN` 精确主机而非 `DOMAIN-SUFFIX,nic.ms` 避免覆盖全 nic 泛用域）
+- skip-list 追加 6 条：
+  - `bitphox.com` `skip`：无主端点（NameCheap 注册 + Cloudflare NS + 首页 429 + Chrome `context deadline exceeded` + curl 无产品指向，同 antpeak/hibchr/zorvian 特征），不归类
+  - `hisball.com` `skip`：无主端点（同 bitphox.com 特征；命中 `plus.hisball.com`，Chrome timeout）
+  - `techvaso.com` `skip`：无主端点（同特征；DoH 空响应 + 首页空）
+  - `tronyza.com` `skip`：无主端点（同特征；Chrome timeout）
+  - `usercentrics.eu` `skip`：广告/追踪类（GDPR 同意管理平台 CMP，先例 cookieyes.com，命中 `consent-api.service.consent.` / `aggregator.service.` / `api.` / `app.` 共 13 次 firefox），整批不落盘
+  - `unifyintent.com` `skip`：广告/追踪类（营销意图追踪平台，`tag.unifyintent.com` 为追踪标签端点，命中 api(4)+tag(2) firefox），整批不落盘
+- 未收录及原因：
+  - BRAND-ANCHOR `ccwu.cc`：上轮（2026-11-12）已定案不升级主域——唯一命中子域 `go.cfapi.ccwu.cc` 已被 proxy.yaml `DOMAIN-SUFFIX,go.cfapi.ccwu.cc` 覆盖；本轮又命中 3 次，维持不升级（避免冗余覆盖）。
+  - 4 个 DNS IP（`1.1.1.1` / `8.8.8.8` / `1.0.0.1` / `8.8.4.4`）已由 `dns.yaml` / `google.yaml` 覆盖。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 整批跳过：COVERED 12 个主域（`rdap.org` / `verisign.com` / `jsdelivr.net` / `binance.info` / `crunchyroll.com` / `crypto.com` / `smjcdh.top` / `wise.com` / `ddnsto.com` / `bilibili.com` / `rust-lang.org` / `smallstrawberry.com`）；skip-list 命中 5（见上）；manual 命中 0；伪域名 1（`res.res`）、探针 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 2 个文件（`proxy.yaml` / `direct.yaml`）`yaml.safe_load` 全部通过。新增 10 域名 `check_coverage` 复核全覆盖（covered 10 / uncovered 0）。
+- Git：main 提交（见下）→ push → 同步 `0 0`（AGENTS.md 同步延后：本轮新增 6 条 skip-list `skip` 项，AGENTS.md「已裁决结论」清单为人类可读快照，automation 轮无法写受保护的 AGENTS.md，延后至交互式会话第 0 节对齐补齐）。
+
 ## 2026-11-12 漏网之鱼归类：11-09 遗留 + 11-11 日志 69 域名补录 + 4 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/` 下 `2026-11-09_09-29-38`（5 个日志文件，上轮中断遗留）、`2026-11-11_10-00-17` / `2026-11-11_11-41-36` / `2026-11-11_14-46-09` / `2026-11-11_14-47-08` / `2026-11-11_21-56-21` / `2026-11-11_22-05-46` / `2026-11-11_23-07-58`（共 7 个目录，cp 自 `~/.config/clash.meta/logs`），以及仓库根散落 8 个 10 月 `.log` 文件（历史遗留未归档），共 42 个日志文件。
