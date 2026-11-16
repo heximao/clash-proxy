@@ -1,5 +1,27 @@
 # 更新记录
 
+## 2026-11-16 漏网之鱼归类：11-14 遗留 + 昨日 11-15 日志 20 域名补录 + 26 skip-list（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-14_09-08-28`（上轮 11-15 cron 未运行导致的遗留，11-15 已 cp 未处理）+ `log/clashx-meta-log/2026-11-15_10-04-47`（本轮 cp 自 `~/.config/clash.meta/logs`，`diff -rq` 与源目录一致），共 8 个日志文件。
+- 提取量：候选域名 97 个（`match Match` 97 / `oc-cn-domain` 0；11-14 32 个、11-15 65 个），主域归并 58 个（跨两日去重后 56 个）；公网裸 IP 0；skip-list 命中 23（11-14 10 个、11-15 13 个）；manual 命中 0；伪域名 0、探针 0、私有 IP 0。
+- `check_coverage` 判定：域名 covered 10 / uncovered 46（brand-anchor 4 条，有效仅 `textnow.com`：`go.dev` 的 `go.com`/`go.jp` 为通用标签误报、`amplitude.com` 按广告追踪跳过）；IP 无候选。
+- 补录明细（20 域名，共 2 个文件）：
+  - **`proxy.yaml` 新增「漏网之鱼（2026-11-16 补录）开发者工具」组（7 域名）**：`rubygems.org`（Ruby 官方 gem 源，curl 89 次，直连首次 000 不稳定）、`ruby-lang.org`（`cache.ruby-lang.org` 4 次，同厂商兄弟域）、`python.org`（`www.` 4 次，同厂商 `pythonhosted.org` 已在 proxy.yaml「开发者工具」组，判据 2）、`sqlite.org`、`go.dev`（Google 域名；BRAND-ANCHOR `go.com`/`go.jp` 为通用标签误报，不采用）、`libssh2.org`、`ariadne.space`（`distfiles.ariadne.space` 开源 distfiles 镜像）——均为海外开发工具/包源，AGENTS.md 2026-10-28 兜底：无国内实证的海外杂项归 `proxy.yaml`。
+  - **`proxy.yaml` 新增「漏网之鱼（2026-11-16 补录）海外服务 / 工具」组（9 域名）**：`ifixit.com`（iFixit 维修手册，6 子域 22 次 firefox）、`obsidianstats.com`（Obsidian 插件/主题目录站，WorkBuddy Helper 8 次）、`floccus.org`（Floccus 开源书签同步，Chrome(Aperitif) 2 次）、`pdfwork.com`（PDFWork 在线 PDF 工具站 6 次）、`storyblok.com`（Storyblok 无头 CMS，`a-us.` 5 次）、`eppo.cloud`（Eppo 特性开关/A-B 实验 SaaS，`fscdn.` 11 次；先例 `visualwebsiteoptimizer.com`(VWO) 同组）、`withpersona.com`（Persona 身份验证 KYC，6 子域 22 次）、`script.ac`（根域无 HTTP 响应 + RDAP 空 + `cadmus.script.ac` 404，无海外公司归属 → 按 2026-10-28 裁定归 proxy 不挂起）、`avacdn.net`（RDAP Amazon Registrar + AWS NS，S3/CloudFront `AccessDenied`，模板静态资源 CDN）。
+  - **`proxy.yaml` 既有组追加 2 条**：`DOMAIN-SUFFIX,browser-intake-datadoghq.com` → 「漏网之鱼（2026-06-05 补录）」组 `datadoghq.com` 旁（判据 2 同厂商兄弟域，11-14 2 次 + 11-15 16 次）；`DOMAIN-SUFFIX,textnow.com` → 社交组 `textnow.me` 旁（判据 1 同标签 TLD 变体 BRAND-ANCHOR @ proxy.yaml:613，3 子域 31 次）。
+  - **`direct.yaml`「开发工具 / 镜像加速」组追加**：`mirror.techrich.hk`（Techrich Mirror 香港开源镜像站，`Index of /` 直连 200，curl 22 次；按精确主机规则不加 `techrich.hk` 主域，避免覆盖非镜像主机）。
+  - **`direct.yaml` 新增「其他国内站点（2026-11-16 漏网之鱼补录）」组**：`sysin.org`（SYStem INside 中文 macOS 软件站，firefox 3 次，直连 200）。
+- skip-list 追加 26 条（全部 `skip` 模式，无 `manual`）：
+  - 移动广告归因 / 广告 SDK 类 12 条：`appsflyersdk.com`（AppsFlyer，「11 子域 21 次）、`app-ads-services.com`（聚合广告服务，20 次）、`moloco.com`（Moloco 移动广告，10 次）、`adsmoloco.com`（3 次）、`inner-active.mobi`（InMobi 系，9 次）、`amazon-adsystem.com`（Amazon 广告，8 次）、`vungle.com`（4 次）、`fyber.com`（1 次）、`onelink.me`（AppsFlyer OneLink 归因，6 次）、`adj.st`（Adjust，3 次）、`pxf.io`（Partnerize 联盟，1 次）、`tiktokw.us`（TikTok 广告/分析，1 次）。
+  - 风控指纹 / 设备指纹类 5 条：`perimeterx.net`（HUMAN/PerimeterX，11 次）、`px-cdn.net`（7 次）、`px-client.net`（2 次）、`fpcdn.io`、`fptls.com`（Fingerprint 设备指纹）。
+  - 联盟追踪 / 隐私合规 / 埋点分析类 8 条：`impactcdn.com`、`impct.site`（RDAP Gandi+AWS NS，`d.impct.site` 返回 impact.com 典型 malformed-link 页）均为 impact.com 联盟追踪；`transcend-cdn.com`（Transcend 同意管理 SDK，先例 usercentrics.eu）；`mgln.ai`（Magellan AI 播客广告分析，RDAP Burning Barn LLC）；`amplitude.com`（Amplitude 产品分析，仅 `api.amplitude.com` 精确子域在库）；`51.la`（51.LA 站长统计）；`app-us1.com`（ActiveCampaign 邮件营销追踪 CDN）。
+  - 无主端点 / 垃圾站 2 条：`crcldu.com`（NameCheap + Cloudflare NS + Varnish 403 + 与广告 SDK 同批，无产品指向）、`freeonlineapps.net`（免费在线工具聚合站 CDN，10 次无进程命中，疑广告分发）。
+- 未收录及原因：`techrich.hk` 主域不单独收录（只用精确主机 `mirror.techrich.hk`，主域非镜像用途）；其余 uncovered 项全部落入上述补录或 skip-list。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项（`script.ac`/`avacdn.net` 按 2026-10-28「无国内实证、无海外归属统一归 proxy，不再逐项挂起」裁定处理）。
+- 整批跳过：COVERED 10 个主域（`supabase.com` / `supabase.io` / `rust-lang.org` / `rdap.org` / `verisign.com` / `pscp.tv` / `binance.info` / `crunchyroll.com` / `crypto.com` / `wise.com`）；skip-list 命中 23（`usercentrics.eu` ×6 子域、`hibchr.com` 8 次、`antpeak.com` 2 次、`zorvian.com` 2 次、`inmobi.com` 3 次、`sc-static.net` 7 次、`cloudflareinsights.com` 3 次、`clarity.ms` 2 次，另有 `bitphox.com` / `hisball.com` / `techvaso.com` / `tronyza.com` / `etahub.com` 各 1 次）。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名 / DNS 配置值噪声（历史基线，非规则重复）。被编辑 2 个文件（`proxy.yaml` payload 998 / `direct.yaml` payload 258）`yaml.safe_load` 全部通过。新增 20 域名 `check_coverage` 复核全覆盖（covered 20 / uncovered 0）。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮新增 26 条 skip 类项，AGENTS.md「已裁决结论」清单为人类可读快照，automation 轮无法写受保护的 AGENTS.md，延后至交互式会话第 0 节对齐补齐）。
+
 ## 2026-11-14 漏网之鱼归类：11-12 遗留 + 昨日 11-13 日志 10 域名补录 + 6 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/` 下 `2026-11-12_00-04-44` / `2026-11-12_01-05-15` / `2026-11-12_11-38-16` / `2026-11-12_21-14-05` / `2026-11-12_22-18-27` / `2026-11-12_23-00-27`（共 6 个目录，上轮中断遗留未归档）+ `2026-11-13_11-03-08`（cp 自 `~/.config/clash.meta/logs`），共 30 个日志文件。`diff -rq` 无新增差异（均为待处理存量）。

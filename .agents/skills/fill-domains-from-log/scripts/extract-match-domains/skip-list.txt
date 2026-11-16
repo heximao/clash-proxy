@@ -123,3 +123,31 @@ techvaso.com skip:无主端点（同 bitphox.com 特征：NameCheap + Cloudflare
 tronyza.com skip:无主端点（同 bitphox.com 特征：NameCheap + Cloudflare NS + 429 + Chrome timeout），不归类
 usercentrics.eu skip:广告/追踪类（GDPR 同意管理平台 CMP，先例 cookieyes.com），整批不落盘
 unifyintent.com skip:广告/追踪类（营销意图追踪平台，tag. 子域为追踪标签端点），整批不落盘
+
+# --- 2026-11-16 automation 轮新裁决（11-14 遗留 + 11-15 日志）---
+appsflyersdk.com skip:广告/追踪类（AppsFlyer 移动归因 SDK，fe0v2w.* / wa.* / websdk.* 共 11 子域 21 次命中），整批不落盘
+app-ads-services.com skip:广告/追踪类（移动广告聚合服务，odf/odm/muf 子域 20 次命中），整批不落盘
+perimeterx.net skip:广告/追踪类（HUMAN/PerimeterX 风控指纹采集，collector-*. 11 次命中），整批不落盘
+px-cdn.net skip:广告/追踪类（PerimeterX CAPTCHA/指纹 CDN，captcha./client. 7 次命中），整批不落盘
+px-client.net skip:广告/追踪类（PerimeterX 指纹客户端，collector-*.px-client.net 2 次命中），整批不落盘
+fpcdn.io skip:广告/追踪类（Fingerprint 设备指纹 CDN），整批不落盘
+fptls.com skip:广告/追踪类（Fingerprint 设备指纹 TLS 端点），整批不落盘
+moloco.com skip:广告/追踪类（Moloco 移动广告平台，dsp-api.moloco.com 10 次命中），整批不落盘
+adsmoloco.com skip:广告/追踪类（Moloco 广告投放域，noti-us.adsmoloco.com 3 次命中），整批不落盘
+inner-active.mobi skip:广告/追踪类（InMobi 移动广告 SDK，cdn2./sdk-events. 9 次命中），整批不落盘
+amazon-adsystem.com skip:广告/追踪类（Amazon 广告系统，c./mads./s. 共 8 次命中），整批不落盘
+vungle.com skip:广告/追踪类（Vungle 广告 SDK，logs.ads./config.ads. 4 次命中），整批不落盘
+fyber.com skip:广告/追踪类（Fyber 广告 SDK，skadnetworks.fyber.com 1 次命中），整批不落盘
+impactcdn.com skip:广告/追踪类（impact.com 联盟营销追踪 CDN，utt.impactcdn.com 1 次命中），整批不落盘
+impct.site skip:广告/追踪类（impact.com 联盟追踪链接域，d.impct.site 返回 malformed-link 页，RDAP Gandi+AWS NS），整批不落盘
+pxf.io skip:广告/追踪类（Partnerize 联盟追踪短链，textnowbillingaccount.pxf.io 1 次命中），整批不落盘
+onelink.me skip:广告/追踪类（AppsFlyer OneLink 深度链接归因，wa.onelink.me 6 次命中），整批不落盘
+adj.st skip:广告/追踪类（Adjust 归因短链，94lr.adj.st 3 次命中），整批不落盘
+mgln.ai skip:广告/追踪类（Magellan AI 播客广告分析，RDAP Burning Barn LLC，cdn.mgln.ai 2 次命中），整批不落盘
+tiktokw.us skip:广告/追踪类（TikTok 广告/分析端点，analytics-ipv6.tiktokw.us 1 次命中），整批不落盘
+transcend-cdn.com skip:广告/追踪类（Transcend 隐私合规/同意管理 SDK CDN，先例 usercentrics.eu，14 次命中），整批不落盘
+crcldu.com skip:无主端点（NameCheap 注册 + Cloudflare NS + Varnish 403 + 与广告 SDK 同批 Chrome 命中，无产品指向），不归类
+freeonlineapps.net skip:广告/追踪类（免费在线工具聚合站 CDN，cdn.freeonlineapps.net 10 次无进程命中，疑广告分发），整批不落盘
+amplitude.com skip:广告/追踪类（Amplitude 产品分析埋点，sr-client-cfg.amplitude.com 2 次命中；仅 api.amplitude.com 精确子域在库），整批不落盘
+51.la skip:广告/追踪类（51.LA 站长统计，collect-v6.51.la 1 次命中），整批不落盘
+app-us1.com skip:广告/追踪类（ActiveCampaign 邮件营销追踪 CDN，diffuser-cdn.app-us1.com 1 次命中），整批不落盘

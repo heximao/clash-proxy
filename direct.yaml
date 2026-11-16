@@ -30,6 +30,7 @@ payload:
   - DOMAIN-SUFFIX,gh-proxy.org
   - DOMAIN-SUFFIX,iina.io
   - DOMAIN-SUFFIX,langbot.app
+  - DOMAIN-SUFFIX,mirror.techrich.hk
   - DOMAIN-SUFFIX,obsidian.md
   - DOMAIN-SUFFIX,oplist.org
   - DOMAIN-SUFFIX,unpkg.com
@@ -372,3 +373,6 @@ payload:
 
 # === 域名查询 / RDAP（2026-11-14 漏网之鱼补录）===
   - DOMAIN,rdap.nic.ms
+
+# === 其他国内站点（2026-11-16 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sysin.org

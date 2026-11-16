@@ -38,6 +38,7 @@ payload:
 # === 漏网之鱼（2026-06-05 补录）===
   - DOMAIN-SUFFIX,onesignal.com
   - DOMAIN-SUFFIX,datadoghq.com
+  - DOMAIN-SUFFIX,browser-intake-datadoghq.com
   - DOMAIN-SUFFIX,nousresearch.com
   - DOMAIN-SUFFIX,gihiji.com
   - DOMAIN-SUFFIX,cnouyi.pizza
@@ -611,6 +612,7 @@ payload:
   - DOMAIN-SUFFIX,tabtter.jp
   - DOMAIN-SUFFIX,talkboxapp.com
   - DOMAIN-SUFFIX,textnow.me
+  - DOMAIN-SUFFIX,textnow.com
   - DOMAIN-SUFFIX,tinder.com
   - DOMAIN-SUFFIX,tinychat.com
   - DOMAIN-SUFFIX,tmblr.co
@@ -1160,3 +1162,23 @@ payload:
   - DOMAIN-SUFFIX,visualwebsiteoptimizer.com
   - DOMAIN-SUFFIX,zencdn.net
   - DOMAIN-SUFFIX,fastgit.org
+
+# === 漏网之鱼（2026-11-16 补录）开发者工具 ===
+  - DOMAIN-SUFFIX,rubygems.org
+  - DOMAIN-SUFFIX,ruby-lang.org
+  - DOMAIN-SUFFIX,python.org
+  - DOMAIN-SUFFIX,sqlite.org
+  - DOMAIN-SUFFIX,go.dev
+  - DOMAIN-SUFFIX,libssh2.org
+  - DOMAIN-SUFFIX,ariadne.space
+
+# === 漏网之鱼（2026-11-16 补录）海外服务 / 工具 ===
+  - DOMAIN-SUFFIX,ifixit.com
+  - DOMAIN-SUFFIX,obsidianstats.com
+  - DOMAIN-SUFFIX,floccus.org
+  - DOMAIN-SUFFIX,pdfwork.com
+  - DOMAIN-SUFFIX,storyblok.com
+  - DOMAIN-SUFFIX,eppo.cloud
+  - DOMAIN-SUFFIX,withpersona.com
+  - DOMAIN-SUFFIX,script.ac
+  - DOMAIN-SUFFIX,avacdn.net

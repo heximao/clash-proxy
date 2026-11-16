@@ -1350,6 +1350,9 @@
     "DOMAIN-SUFFIX,langbot.app": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,mirror.techrich.hk": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,obsidian.md": [
       "direct.yaml"
     ],
@@ -2071,6 +2074,9 @@
       "direct.yaml"
     ],
     "DOMAIN,rdap.nic.ms": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sysin.org": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -3451,6 +3457,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,datadoghq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browser-intake-datadoghq.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,nousresearch.com": [
@@ -4974,6 +4983,9 @@
     "DOMAIN-SUFFIX,textnow.me": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,textnow.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,tinder.com": [
       "proxy.yaml"
     ],
@@ -6313,6 +6325,54 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,fastgit.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,rubygems.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ruby-lang.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,python.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,sqlite.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,libssh2.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ariadne.space": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ifixit.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,obsidianstats.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,floccus.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pdfwork.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,storyblok.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,eppo.cloud": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,withpersona.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,script.ac": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,avacdn.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [
