@@ -1,5 +1,21 @@
 payload:
+
+# === Claude 主域 / Anthropic ===
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,anthropic.ai
+  - DOMAIN-SUFFIX,clau.de
+
+# === MCP / 用户内容 ===
+  - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudemcpcontent.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+
+# === CDN / 官方博客（精确主机）===
+  - DOMAIN,anthropic.com.cdn.cloudflare.net
+  - DOMAIN,anthropic-com.ghost.io
+
+# === Anthropic 自有 IP 段兜底（ANTHR5-ARIN）===
+  - IP-CIDR,160.79.104.0/21,no-resolve
+  - IP-CIDR6,2607:6bc0::/32,no-resolve

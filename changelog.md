@@ -1,5 +1,23 @@
 # 更新记录
 
+## 2026-11-18 claude.yaml：按官方分流清单补齐 Claude Code 域名 + Anthropic IP 段（交互式轮）
+
+- 数据来源：用户指定的第三方参考页 `https://ip.net.coffee/claude/site.html`（Anthropic / Claude Code 分流规则清单），非日志驱动；页面共列 24 个域名（去重后，含 4 个 `*.anthropic.com` 子域）+ 2 条 IP 段 + 3 条关键词/分类兜底，逐项经全库 grep 查重与 DoH/RDAP 验证后决定取舍：新增 6 域名 + 2 IP 段，既有覆盖 9、他文件已落盘 8、建议转其他文件 1。
+- 补录明细（`claude.yaml`，payload 由 4 条扩至 12 条，原 4 条一条未动）：
+  - 「Claude 主域 / Anthropic」组追加 `DOMAIN-SUFFIX,clau.de`（Claude 短域名，DoH 解析 `160.79.104.10` 即 Anthropic 自有段）。
+  - 新增「MCP / 用户内容」组 3 条：`claudemcpclient.com`、`claudemcpcontent.com`（两域均 Cloudflare 正式委派，NS `isla/randy.ns.cloudflare.com`，apex 无 A/AAAA 属 API 型域名，故用 DOMAIN-SUFFIX 覆盖子域）、`claudeusercontent.com`（DoH 解析 `160.79.104.10`）。
+  - 新增「CDN / 官方博客（精确主机）」组 2 条：`DOMAIN,anthropic.com.cdn.cloudflare.net`（先例 `openai.yaml:14` 的 `chat.openai.com.cdn.cloudflare.net`，同类 Cloudflare 回源主机）、`DOMAIN,anthropic-com.ghost.io`（官方博客 Ghost CMS，CNAME `ghost.map.fastly.net`，非 `.anthropic.com` 子域故后缀规则抓不到，必须精确主机）。
+  - 新增「Anthropic 自有 IP 段兜底」组 2 条：`IP-CIDR,160.79.104.0/21,no-resolve`、`IP-CIDR6,2607:6bc0::/32,no-resolve`（ARIN RDAP 证实两段均登记于 `ANTHR5-ARIN`，/21 起止 `160.79.104.0`–`160.79.111.255`，与页面声明一致；仓库 IP-CIDR6 先例见 `telegram.yaml:51-55`）。
+- 未收录及原因（24 域名中剩余 18 项 + 4 条非域名项）：
+  - **既有规则已覆盖 9 项**：`anthropic.com` / `claude.ai` / `claude.com` 为 claude.yaml 原有条目；`cdn.anthropic.com`、`anthropic.auth0.com`、`mcp.anthropic.com`、`console.anthropic.com`、`workbench.anthropic.com` 均被 `DOMAIN-SUFFIX,anthropic.com` 吸收；`maps.googleapis.com` 被 `google.yaml:92` 的 `DOMAIN-SUFFIX,googleapis.com` 覆盖。
+  - **他文件已落盘 8 项（不重复收录）**：`servd-anthropic-website.b-cdn.net`（`proxy.yaml:1008` `DOMAIN-SUFFIX,b-cdn.net` 已整体覆盖）、`sentry.io` / `intercom.io` / `intercomcdn.com`（`microsoft.yaml:84-89` 组）、`statsigapi.net`（`proxy.yaml:1038`）、`browser-intake-us5-datadoghq.com`（`proxy.yaml:29` 精确主机，另有 `datadoghq.com` 后缀 `proxy.yaml:40`）、`withpersona.com`（`proxy.yaml:1182`）、`cdn.usefathom.com`（`reject.yaml:28075` 已在阻断侧）。
+  - **关键词 / 分类兜底不适用 3 项**：`DOMAIN-KEYWORD,datadog` / `sift` / `sentry` —— 本仓库无 DOMAIN-KEYWORD 兜底先例，且此类广域关键词会误命中无关域名，风险大于收益，不加。
+  - **结构不兼容 2 项**：`IP-ASN,399358` —— 本仓库 40 余个规则文件无任何 IP-ASN 先例，且该类型依赖客户端内置 ASN 库，不加（现有 /21 + /32 已覆盖 Anthropic 主要流量）；`geosite:category-ntp` —— 仓库无 GEOSITE 规则先例，且 NTP 分流属客户端 rules 层配置（`config.yaml`）职责，不属于域名规则集的范畴。
+  - **建议不落 claude.yaml 1 项**：`frompersona.com`（Persona KYC 邮件域，DoH 解析 `34.8.133.106`）系第三方厂商域名、服务于全部 Persona 客户而非 Claude 专有，按判据 2（同厂商兄弟域）应补在 `proxy.yaml` 的 `withpersona.com` 同级；本轮仅按授权范围改 `claude.yaml`，未动第二文件，待用户确认。
+- 已知冲突提示（未处理）：`reject.yaml:140885` 存在 `DOMAIN-SUFFIX,statsig.anthropic.com`，reject 为 rules 首条、优先级最高，Claude 的 Statsig 上报可能被直接阻断；reject.yaml 由 Actions 自动维护禁止编辑，此处仅记录。
+- 自检结果：`yaml.safe_load` 通过；payload 12 条；文件内重复 0；跨文件重复 0（脚本排除 reject.yaml / config.yaml）。
+- Git：main 提交 → push → 校验 `0 0`。
+
 ## 2026-11-16 漏网之鱼归类：11-14 遗留 + 昨日 11-15 日志 20 域名补录 + 26 skip-list（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-14_09-08-28`（上轮 11-15 cron 未运行导致的遗留，11-15 已 cp 未处理）+ `log/clashx-meta-log/2026-11-15_10-04-47`（本轮 cp 自 `~/.config/clash.meta/logs`，`diff -rq` 与源目录一致），共 8 个日志文件。
