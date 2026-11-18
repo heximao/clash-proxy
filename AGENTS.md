@@ -208,6 +208,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 - **`git commit -F - <<'EOF'`（heredoc 提交信息）可用**，但 **heredoc 内联 python 脚本会被安全策略拦截**；批量处理请先 Write 成 `/tmp/xxx.py` 再执行。单条带内联脚本+参数的校验命令也可能被拦 → 写 `/tmp/yaml_check.py` 循环校验。
 - **git 代理 7893 状态来回翻转，每轮现场双探测**：`nc -z 127.0.0.1 7893` + `curl --noproxy '*' github.com`。禁用代理时 zsh 变量不做词分割，须 `gitx() { git -c http.proxy= -c https.proxy= "$@"; }`。
 - **`git merge` 必须带 `-m/--no-edit`**，否则无终端下退出码 137 并留 `MERGE_HEAD`。
+- **本机 `dig` 被 Clash fake-ip 接管**：任何域名都答 `198.18.1.x`（NOERROR），**不能当存在性/解析证据**。须走 DoH 直连：`curl --noproxy '*' -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=X&type=A"`；IP 段归属用 `https://rdap.arin.net/registry/ip/<ip>`（`entities.handle` 即组织句柄，Anthropic=ANTHR5-ARIN），同样 `--noproxy '*'` 可直连。
 - **`.workbuddy/skills` 与 `.workbuddy/memory` 是指向 `.agents/` 下真实目录的符号链接**，两个路径访问的是同一份文件。项目级 skill 的实际位置是 `.agents/skills/`，记忆是 `.agents/memory/`，文档里写 `.agents/...` 路径即为正确，不要"修正"成 `.workbuddy/...`。`Skill` 工具加载 `fill-domains-from-log` 可能报 "Cannot find skill" → 直接 Read `.agents/skills/fill-domains-from-log/SKILL.md`。
 - `whois` 命令不可用（`whois.iana.org` 无法解析且客户端会挂起），macOS 也**没有 `timeout` 命令**；域名注册信息查询走 RDAP（需代理 `https_proxy=http://127.0.0.1:7893`）。RDAP 首调常空需重试 2-3 次；registrar 为空时看 NS 定归属（HICHINA/ALIDNS→国内）或 DoH 看 A 记录 IP 段。
 - **AGENTS.md 本身是受保护文件**：cron / automation 会话（无交互用户）中 patch 工具直接 BLOCKED（"requires approval but no interactive user or gateway is present"，2026-10-18 实测）。automation 轮新裁决项只落 skip-list + changelog 即闭环（提取脚本只读 skip-list）；本文件与 `.agents/memory/MEMORY.md` 的「已裁决结论」清单同步延后至交互式会话（fill-domains-from-log skill 第 0 节对齐检查）。
@@ -215,6 +216,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 #### 仓库状态（已知事实与遗留问题）
 
 - PayPal 域名全在 `us-payment.yaml`，独立 `paypal.yaml` 已删（2026-10-11）。用户说「加到 X 文件」前必须先用 `scripts/check-coverage/check_coverage.py` 全库查重（规则级判断，勿用 grep 子串匹配）。
-- 未修的已知问题（行号会漂移，按内容定位）：`proxy.yaml` 中 `# === USER-AGENT,WhatsApp* ===` 把本应是规则的条目写成了分组注释头，致其后一批 Google 系杂项（`1e100.net`、`appspot.com` 等）全部挂错分组；`direct.yaml` 的「腾讯云-香港」组内实为杂项，名不副实。
+- 已修复的已知问题（2026-10-28 重组）：`proxy.yaml` 原 `# === USER-AGENT,WhatsApp* ===` 误写分组注释头已重组为「Google 开发者 / 实验站点」「海外站点 / 工具」等新组（原注释头保留在 `proxy.yaml:803` / `:823` 标注来源）；`direct.yaml` 原「腾讯云-香港」组已拆分为「游戏平台」「影视 / 动漫在线观看」「PT / 影视下载站」「小说 / 阅读」「国内站点 / 社区」等新组（原注释头保留在 `direct.yaml:45` 等标注来源）。
 - README 仍有用户挂起未确认的改动（两条 FAQ 未恢复、句式杂糅等），非用户明确要求不要擅自动。
-- `.gitignore` 以仓库根文件为准，本文不镜像清单。`log/`、`tmp/` 是本地数据；`config.yaml` 未跟踪也未 gitignore，`git status` 恒显示 `?? config.yaml`。哪些文件入库以 `git ls-files` 实查为准。
+- `.gitignore` 以仓库根文件为准，本文不镜像清单。`log/`、`tmp/` 是本地数据；`config.yaml` 未跟踪也未 gitignore，`git status` 恒显示 `?? config.yaml`。macOS `.DS_Store` 由全局 `~/.gitignore_global` 忽略，项目级 `.gitignore` 未显式列出（2026-11-18 复核：21 个 `.DS_Store` 散落工作区，均未被 git 跟踪，不影响入库；如需项目级显式忽略可加一行 `.DS_Store`，与全局不冲突）。哪些文件入库以 `git ls-files` 实查为准。
+- **`.agents/memory/` 每日工作日志**：为项目级 Agent 记忆数据（已纳入 git 跟踪），自动化轮生成后应及时 `git add` 精确路径并提交推送，避免跨轮次积压（2026-11-18 复核：12 个日志文件未跟踪 + `MEMORY.md` 1 处未提交修改）。

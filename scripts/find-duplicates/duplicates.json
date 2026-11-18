@@ -570,6 +570,30 @@
     "DOMAIN-SUFFIX,anthropic.ai": [
       "claude.yaml"
     ],
+    "DOMAIN-SUFFIX,clau.de": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,claudemcpclient.com": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,claudemcpcontent.com": [
+      "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,claudeusercontent.com": [
+      "claude.yaml"
+    ],
+    "DOMAIN,anthropic.com.cdn.cloudflare.net": [
+      "claude.yaml"
+    ],
+    "DOMAIN,anthropic-com.ghost.io": [
+      "claude.yaml"
+    ],
+    "IP-CIDR,160.79.104.0/21,no-resolve": [
+      "claude.yaml"
+    ],
+    "IP-CIDR6,2607:6bc0::/32,no-resolve": [
+      "claude.yaml"
+    ],
     "DOMAIN-SUFFIX,10086.cn": [
       "cn.yaml"
     ],

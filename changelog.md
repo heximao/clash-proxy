@@ -1,5 +1,17 @@
 # 更新记录
 
+## 2026-11-18 AGENTS.md：同步仓库状态与已知问题更新（交互式轮）
+
+- 数据来源：2026-11-18 仓库状态复核（`git status` / `find_duplicates.py` / 目录结构实查），非日志驱动。
+- 更新内容：
+  - 「常见坑」新增 **本机 `dig` 被 Clash fake-ip 接管** 条目：任何域名都答 `198.18.1.x`（NOERROR），不能当存在性/解析证据；须走 DoH 直连（`cloudflare-dns.com/dns-query`）或 ARIN RDAP（`rdap.arin.net/registry/ip/<ip>`），与 `.agents/memory/MEMORY.md` 既有补记对齐。
+  - 「仓库状态」已知问题更新：`proxy.yaml` 原 `USER-AGENT,WhatsApp*` 误写分组注释头与 `direct.yaml` 原「腾讯云-香港」组，均已于 2026-10-28 重组修复，从「未修」改为「已修复」，并标注修复后注释头保留位置（`proxy.yaml:803` / `:823`、`direct.yaml:45` 等）。
+  - 「仓库状态」新增 macOS `.DS_Store` 说明：由全局 `~/.gitignore_global` 忽略，项目级 `.gitignore` 未显式列出（2026-11-18 复核 21 个 `.DS_Store` 散落工作区，均未被 git 跟踪）。
+  - 「仓库状态」新增 `.agents/memory/` 每日工作日志提交提醒：自动化轮生成后应及时精确 `git add` 提交推送，避免跨轮次积压（2026-11-18 复核：12 个日志文件未跟踪 + `MEMORY.md` 1 处未提交修改）。
+- 未收录及原因：无（纯文档更新，不涉及域名规则）。
+- 自检结果：`yaml.safe_load` 不适用（未改 YAML）；`find_duplicates` 跨文件重复 0、intra-file 23 条全部为 `config.yaml` 噪声（历史基线）；`duplicates.json` 增量 24 行（`claude.yaml` 新增 8 条规则的索引补全，随本轮提交）。
+- Git：main 提交 → push → 校验 `0 0`。
+
 ## 2026-11-18 claude.yaml：按官方分流清单补齐 Claude Code 域名 + Anthropic IP 段（交互式轮）
 
 - 数据来源：用户指定的第三方参考页 `https://ip.net.coffee/claude/site.html`（Anthropic / Claude Code 分流规则清单），非日志驱动；页面共列 24 个域名（去重后，含 4 个 `*.anthropic.com` 子域）+ 2 条 IP 段 + 3 条关键词/分类兜底，逐项经全库 grep 查重与 DoH/RDAP 验证后决定取舍：新增 6 域名 + 2 IP 段，既有覆盖 9、他文件已落盘 8、建议转其他文件 1。
