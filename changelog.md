@@ -14,7 +14,7 @@
   - **关键词 / 分类兜底不适用 3 项**：`DOMAIN-KEYWORD,datadog` / `sift` / `sentry` —— 本仓库无 DOMAIN-KEYWORD 兜底先例，且此类广域关键词会误命中无关域名，风险大于收益，不加。
   - **结构不兼容 2 项**：`IP-ASN,399358` —— 本仓库 40 余个规则文件无任何 IP-ASN 先例，且该类型依赖客户端内置 ASN 库，不加（现有 /21 + /32 已覆盖 Anthropic 主要流量）；`geosite:category-ntp` —— 仓库无 GEOSITE 规则先例，且 NTP 分流属客户端 rules 层配置（`config.yaml`）职责，不属于域名规则集的范畴。
   - **建议不落 claude.yaml 1 项**：`frompersona.com`（Persona KYC 邮件域，DoH 解析 `34.8.133.106`）系第三方厂商域名、服务于全部 Persona 客户而非 Claude 专有，按判据 2（同厂商兄弟域）应补在 `proxy.yaml` 的 `withpersona.com` 同级；本轮仅按授权范围改 `claude.yaml`，未动第二文件，待用户确认。
-- 已知冲突提示（未处理）：`reject.yaml:140885` 存在 `DOMAIN-SUFFIX,statsig.anthropic.com`，reject 为 rules 首条、优先级最高，Claude 的 Statsig 上报可能被直接阻断；reject.yaml 由 Actions 自动维护禁止编辑，此处仅记录。
+- 已知冲突提示（未处理，2026-11-18 复核修正）：`reject.yaml:140885` 的 `DOMAIN-SUFFIX,statsig.anthropic.com` 该主机经 Cloudflare DoH 与 Google DoH 双解析器查询均为 **NXDOMAIN**（历史端点，Anthropic 已弃用），规则存在但无实际影响；真正生效的阻断在 `reject.yaml:1988` `DOMAIN-SUFFIX,statsigapi.net`（另有 `:17699` `api.statsig.com`、`:17700` `api.statsigcdn.com`、`:48781` `events.statsigapi.net`），而 `config.yaml:832` 将 `RULE-SET,reject,REJECT` 置于 rules 首条，故 `proxy.yaml:1038` 的 `DOMAIN-SUFFIX,statsigapi.net` 实为宕空条目——Statsig 的功能开关/实验上报当前被整体阻断（SDK 失败即回落默认值，不影响核心对话）。reject.yaml 由 Actions 自动维护禁止编辑，此处仅记录。
 - 自检结果：`yaml.safe_load` 通过；payload 12 条；文件内重复 0；跨文件重复 0（脚本排除 reject.yaml / config.yaml）。
 - Git：main 提交 → push → 校验 `0 0`。
 
