@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,threads.net
   - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,metamail.com
+  - DOMAIN-SUFFIX,metaaivm.com
 
 # === Meta Muse ===
   - DOMAIN-SUFFIX,muse.ai

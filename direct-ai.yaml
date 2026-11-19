@@ -20,3 +20,6 @@ payload:
   - DOMAIN-SUFFIX,z.ai
   # === Cherry Studio AI 客户端（2026-11-05 漏网之鱼补录）===
   - DOMAIN-SUFFIX,cherry-ai.com
+
+  # === Moonshot AI / 月之暗面 Kimi（2026-11-19 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,moonshot.cn

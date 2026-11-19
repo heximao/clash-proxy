@@ -1,5 +1,23 @@
 # 更新记录
 
+## 2026-11-19 漏网之鱼归类：昨日 11-18 日志 6 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-18_10-33-50` + `log/clashx-meta-log/2026-11-18_16-02-28`（cp 自 `~/.config/clash.meta/logs`，共 10 个日志文件）。
+- 提取量：候选域名 7 个（`match Match` 6 / `oc-cn-domain` 1），主域归并 7 个；公网裸 IP 0；skip-list 命中 6（`hibchr.com` 14 次、`zorvian.com` 6 次、`antpeak.com` 5 次、`usercentrics.eu` ×3 子域各 1 次）；manual 命中 0；伪域名 2、探针 0、私有 IP 0。
+- `check_coverage` 判定：covered 1（`rust-lang.org` @ direct.yaml:284）/ uncovered 6（brand-anchor 0）。
+- 补录明细（6 域名，共 5 个文件）：
+  - **`metaaivm.com`** → `meta.yaml`「Meta」组（判据 2：同厂商兄弟域 + 文件内既有 Meta 分组；RDAP NS = `A/B/C/D.NS.FACEBOOK.COM`，DoH CNAME `hatch.metaaivm.com` → `edge-metaclaw-http.c10r.facebook.com` → `57.144.135.197`，零歧义属 Meta AI 基础设施域；命中 `hatch.metaaivm.com`(1)，firefox）。
+  - **`usemagpie.ai`** → `proxy-ai.yaml`「漏网之鱼（2026-11-07 补录）AI 翻译」组（Magpie macOS AI 翻译 App 自有域；RDAP Cloudflare Registrar 注册 + Cloudflare NS，DoH 解析 `172.67.175.136`/`104.21.91.163`；进程 `magpie`(24) + 域名语义双佐证；AGENTS.md 2026-10-28 兜底：无国内实证的海外 AI 服务归 proxy-ai.yaml）。
+  - **`moonshot.cn`** → `direct-ai.yaml` 新增「Moonshot AI / 月之暗面 Kimi（2026-11-19 漏网之鱼补录）」组（月之暗面 AI，Kimi 智能助手；oc-cn-domain 命中确认国内服务走 DIRECT；DoH `status.moonshot.cn` CNAME → StatusPage/AWS `18.155.173.x`；进程 `magpie`(4)，Magpie App 查询 Moonshot API 状态页）。
+  - **`rustup.rs`** → `direct.yaml`「开发者服务（2026-10-02 漏网之鱼补录）」组（判据 2/3：同厂商兄弟域 + 文件内既有成组约定，`rust-lang.org` + `crates.io` 已在同组；`rustup.rs` 是 Rust 官方工具链安装器，同一 Rust 基金会；命中 `sh.rustup.rs`(2)，curl；DoH CNAME → CloudFront `52.85.132.x`）。
+  - **`stlouisfed.org`** → `proxy.yaml` 新增「漏网之鱼（2026-11-19 补录）海外服务 / 工具」组（美联储圣路易斯分行 FRED 经济数据；命中 `fred.stlouisfed.org`(2)，curl；DoH CNAME → Akamai Edge `23.52.223.185`；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+  - **`logo.dev`** → 同上组（Logo API 服务，开发者工具；命中 `img.logo.dev`(1)，node；DoH CNAME → CloudFront `18.155.173.x`；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+- 未收录及原因：`rust-lang.org` 已 COVERED（direct.yaml:284 `DOMAIN-SUFFIX,rust-lang.org`），整批跳过。
+- 整批跳过：skip-list 命中 6（`hibchr.com` 14 次 / `zorvian.com` 6 次 / `antpeak.com` 5 次 — 无主端点已裁决不归类；`usercentrics.eu` ×3 子域 — 广告/追踪类 GDPR CMP 已裁决不落盘）。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名/DNS 配置值噪声（历史基线，非规则重复）。被编辑 5 个文件（`meta.yaml` payload 21 / `direct-ai.yaml` payload 17 / `direct.yaml` payload 259 / `proxy-ai.yaml` payload 32 / `proxy.yaml` payload 1002）`yaml.safe_load` 全部通过。新增 6 域名 `check_coverage` 复核全覆盖（covered 6 / uncovered 0）。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新增 skip-list 项，无需同步）。
+
 ## 2026-11-18 AGENTS.md：同步仓库状态与已知问题更新（交互式轮）
 
 - 数据来源：2026-11-18 仓库状态复核（`git status` / `find_duplicates.py` / 目录结构实查），非日志驱动。

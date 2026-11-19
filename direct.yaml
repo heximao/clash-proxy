@@ -283,6 +283,7 @@ payload:
   - DOMAIN-SUFFIX,packagecontrol.io
   - DOMAIN-SUFFIX,rust-lang.org
   - DOMAIN-SUFFIX,crates.io
+  - DOMAIN-SUFFIX,rustup.rs
   - DOMAIN-SUFFIX,csdn.net
   - DOMAIN-SUFFIX,cnblogs.com
 

@@ -1329,6 +1329,9 @@
     "DOMAIN-SUFFIX,cherry-ai.com": [
       "direct-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,moonshot.cn": [
+      "direct-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,smallstrawberry.com": [
       "direct.yaml"
     ],
@@ -1948,6 +1951,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,crates.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,rustup.rs": [
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,csdn.net": [
@@ -2844,6 +2850,9 @@
     "DOMAIN-SUFFIX,metamail.com": [
       "meta.yaml"
     ],
+    "DOMAIN-SUFFIX,metaaivm.com": [
+      "meta.yaml"
+    ],
     "DOMAIN-SUFFIX,muse.ai": [
       "meta.yaml"
     ],
@@ -3403,6 +3412,9 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,deepl.com": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,usemagpie.ai": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,smjcdh.top": [
@@ -6397,6 +6409,12 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,avacdn.net": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,stlouisfed.org": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,logo.dev": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

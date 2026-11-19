@@ -1182,3 +1182,7 @@ payload:
   - DOMAIN-SUFFIX,withpersona.com
   - DOMAIN-SUFFIX,script.ac
   - DOMAIN-SUFFIX,avacdn.net
+
+# === 漏网之鱼（2026-11-19 补录）海外服务 / 工具 ===
+  - DOMAIN-SUFFIX,stlouisfed.org
+  - DOMAIN-SUFFIX,logo.dev
