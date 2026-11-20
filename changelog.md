@@ -1,5 +1,22 @@
 # 更新记录
 
+## 2026-11-20 漏网之鱼归类：昨日 11-19 日志 5 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-19_08-31-36` + `log/clashx-meta-log/2026-11-19_15-25-27` + `log/clashx-meta-log/2026-11-19_15-57-05`（cp 自 `~/.config/clash.meta/logs`，共 12 个日志文件）。
+- 提取量：候选域名 17 个（`match Match` 16 / `oc-cn-domain` 1），主域归并 17 个；公网裸 IP 4（全为 DNS IP：`1.1.1.1`(17)/`8.8.8.8`(16)/`1.0.0.1`(6)/`8.8.4.4`(5)）；skip-list 命中 3（`sg.mmstat.com` 18 次、`x-marketing.fbthirdpartypixel.com` 8 次、`static.cloudflareinsights.com` 2 次）；manual 命中 0；伪域名 0、探针 0、私有 IP 0。
+- `check_coverage` 判定：域名 covered 11 / uncovered 6（brand-anchor 2）；IP covered 4 / uncovered 0。
+- 补录明细（5 域名，共 3 个文件）：
+  - **`agnes-ai.space`** → `direct-ai.yaml`「DNS 分组」`agnes-ai.com` 旁（判据 1 同标签 TLD 变体：`agnes-ai.com` @ direct-ai.yaml:5 为 BRAND-ANCHOR，标签 "agnes-ai" 逐字符相同；命中 `cos-aigc-default.agnes-ai.space`(1)，AgnesCode Helper；零歧义补录）。
+  - **`weather.gov.hk`** → `direct.yaml` 新增「香港政府服务（2026-11-20 漏网之鱼补录）」组（香港天文台天气数据 `data.weather.gov.hk`；gov.hk 为政府 TLD，取 `weather.gov.hk` 而非主域；命中 `data.weather.gov.hk`(3)，WeChatAppEx Helper；DoH Status 0 确认存活；香港政府服务直连可达，AGENTS.md：可稳定直连的杂项归 direct.yaml）。
+  - **`orca.dev`** → `proxy.yaml` 新增「漏网之鱼（2026-11-20 补录）海外服务 / 工具」组（Orca — Agent Development Environment，ADE for coding agents，by Lovecast Inc. d/b/a Stably AI；RDAP Porkbun+Cloudflare NS，DoH `172.67.201.109`/`104.21.21.240`；命中 `orca.dev`(22)，Orca Helper(14)+Orca(8)；HTTP 标题 "Orca — The agent development environment" 双佐证；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+  - **`openmarket.xyz`** → 同上组（OpenMarket 金融交易平台——股票/加密货币/期货/期权/外汇/预测市场一体化；RDAP GoDaddy+Cloudflare NS，DoH `172.66.172.105`/`104.20.16.6`；命中 `openmarket.xyz`(4)，Electron(2)+curl(2)；HTTP 标题 "OpenMarket: the new interface to the world's markets" 双佐证；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+  - **`propelauth.com`** → 同上组（PropelAuth B2B 认证 SaaS；RDAP Squarespace Domains+AWS NS，DoH `76.76.21.21`(Vercel)；命中 `img.propelauth.com`(2)，firefox；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+- 未收录及原因：`ccwu.cc` 实际命中子域 `go.cfapi.ccwu.cc` 已被 proxy.yaml:49 `DOMAIN-SUFFIX,go.cfapi.ccwu.cc` 覆盖，BRAND-ANCHOR 为子域误报（非 TLD 变体），整批跳过；COVERED 11 个主域（`usemagpie.ai`/`jsdelivr.net`/`moonshot.cn`/`rdap.org`/`smjcdh.top`/`stlouisfed.org`/`githubusercontent.com`/`identitydigital.services`/`metaaivm.com`/`smallstrawberry.com`/`verisign.com`）整批跳过；4 个公网 IP 全 COVERED（dns.yaml/google.yaml/proxy.yaml）整批跳过。
+- 整批跳过：skip-list 命中 3（`sg.mmstat.com` 18 次 — 广告/追踪类友盟+；`x-marketing.fbthirdpartypixel.com` 8 次 — Meta Pixel 追踪；`static.cloudflareinsights.com` 2 次 — reject.yaml 上游已收录）。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名/DNS 配置值噪声（历史基线，非规则重复）。被编辑 3 个文件（`direct-ai.yaml` payload 17 / `direct.yaml` payload 260 / `proxy.yaml` payload 1003）`yaml.safe_load` 全部通过。新增 5 域名 `check_coverage` 复核全覆盖。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新增 skip-list 项，无需同步）。
+
 ## 2026-11-19 漏网之鱼归类：昨日 11-18 日志 6 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-18_10-33-50` + `log/clashx-meta-log/2026-11-18_16-02-28`（cp 自 `~/.config/clash.meta/logs`，共 10 个日志文件）。

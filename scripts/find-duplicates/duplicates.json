@@ -1293,6 +1293,9 @@
     "DOMAIN-SUFFIX,agnes-ai.com": [
       "direct-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,agnes-ai.space": [
+      "direct-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,openrouter.ai": [
       "direct-ai.yaml"
     ],
@@ -2107,6 +2110,9 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,sysin.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,weather.gov.hk": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -6415,6 +6421,15 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,logo.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,orca.dev": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,openmarket.xyz": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,propelauth.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

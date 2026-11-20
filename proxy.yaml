@@ -1186,3 +1186,8 @@ payload:
 # === 漏网之鱼（2026-11-19 补录）海外服务 / 工具 ===
   - DOMAIN-SUFFIX,stlouisfed.org
   - DOMAIN-SUFFIX,logo.dev
+
+# === 漏网之鱼（2026-11-20 补录）海外服务 / 工具 ===
+  - DOMAIN-SUFFIX,orca.dev
+  - DOMAIN-SUFFIX,openmarket.xyz
+  - DOMAIN-SUFFIX,propelauth.com

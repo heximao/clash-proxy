@@ -377,3 +377,6 @@ payload:
 
 # === 其他国内站点（2026-11-16 漏网之鱼补录）===
   - DOMAIN-SUFFIX,sysin.org
+
+# === 香港政府服务（2026-11-20 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,weather.gov.hk
