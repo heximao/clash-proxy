@@ -33,6 +33,7 @@
 ## 环境坑
 - 系统 `python3` 无 pyyaml → 用 `/Users/saibopika/.workbuddy/binaries/python/envs/default/bin/python`。
 - `whois` 不可用、无 `timeout`。RDAP 走代理 `https_proxy=http://127.0.0.1:7893`，首调常空需重试 2-3 次。RDAP registrar 为空时看 NS 定归属（HICHINA/ALIDNS→国内）或 DoH 看 A 记录 IP 段。
+- **本机 `dig` 被 Clash fake-ip 接管**：任何域名都答 `198.18.1.x`（NOERROR），**不能当存在性/解析证据**。须走 DoH 直连：`curl --noproxy '*' -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=X&type=A"`；IP 段归属用 `https://rdap.arin.net/registry/ip/<ip>`（`entities.handle` 即组织句柄，Anthropic=ANTHR5-ARIN），同样 `--noproxy '*'` 可直连。
 - **git 代理 7893 状态来回翻转，每轮现场双探测**：`nc -z 127.0.0.1 7893` + `curl --noproxy '*' github.com`。禁用代理时 zsh 变量不做词分割，须 `gitx() { git -c http.proxy= -c https.proxy= "$@"; }`。
 - heredoc 内联 python 被安全策略拦截 → Write 成 `/tmp/*.py` 再跑（`git commit -F -` 不受影响）。单条带内联脚本+参数的校验命令也可能被拦 → 写 `/tmp/yaml_check.py` 循环校验。
 - **AGENTS.md 是受保护文件**：cron/automation（无交互用户）中 patch 直接 BLOCKED（2026-10-18 实测）。automation 轮新裁决项只落 skip-list + changelog 即闭环（提取脚本只读 skip-list）；AGENTS.md / MEMORY.md「已裁决结论」清单同步延后至交互式会话（fill-domains-from-log skill 第 0 节对齐检查）。
