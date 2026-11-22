@@ -51,6 +51,12 @@
     "DOMAIN-SUFFIX,alipayobjects.com": [
       "alibaba.yaml"
     ],
+    "DOMAIN-SUFFIX,zoloz.com": [
+      "alibaba.yaml"
+    ],
+    "DOMAIN-SUFFIX,zoloz.net": [
+      "alibaba.yaml"
+    ],
     "DOMAIN-SUFFIX,umeng.com": [
       "alibaba.yaml"
     ],
@@ -2586,7 +2592,7 @@
     "DOMAIN-SUFFIX,airstarbank.com.hk": [
       "hk-bank.yaml"
     ],
-    "DOMAIN-SUFFIX,conn.broker.elebank.com": [
+    "DOMAIN-SUFFIX,elebank.com": [
       "hk-bank.yaml"
     ],
     "DOMAIN-SUFFIX,longbridge.com": [
@@ -5406,6 +5412,9 @@
     "DOMAIN-SUFFIX,doub.io": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,duolingo.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,easybib.com": [
       "proxy.yaml"
     ],
@@ -5626,6 +5635,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,crittercism.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,electrounlock.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,gosetsuden.jp": [

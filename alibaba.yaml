@@ -19,6 +19,8 @@ payload:
 # === 支付宝 / 蚂蚁集团（2026-10-22 漏网之鱼补录）===
   - DOMAIN-SUFFIX,alipay.com
   - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN-SUFFIX,zoloz.com
+  - DOMAIN-SUFFIX,zoloz.net
 
 # === 友盟+ / Umeng（2026-10-24 漏网之鱼补录）===
   - DOMAIN-SUFFIX,umeng.com

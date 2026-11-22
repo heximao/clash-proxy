@@ -41,4 +41,4 @@ payload:
   - DOMAIN-SUFFIX,airstarbank.com.hk
 
 # === ELE Bank ===
-  - DOMAIN-SUFFIX,conn.broker.elebank.com
+  - DOMAIN-SUFFIX,elebank.com

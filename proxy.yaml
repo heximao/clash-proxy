@@ -747,6 +747,7 @@ payload:
   - DOMAIN-SUFFIX,demdex.net
   - DOMAIN-SUFFIX,digisfera.com
   - DOMAIN-SUFFIX,doub.io
+  - DOMAIN-SUFFIX,duolingo.com
   - DOMAIN-SUFFIX,easybib.com
   - DOMAIN-SUFFIX,eurekavpt.com
   - DOMAIN-SUFFIX,flurry.com
@@ -825,6 +826,7 @@ payload:
   - DOMAIN-SUFFIX,bandwagonhost.com
   - DOMAIN-SUFFIX,blogblog.com
   - DOMAIN-SUFFIX,crittercism.com
+  - DOMAIN-SUFFIX,electrounlock.com
   - DOMAIN-SUFFIX,gosetsuden.jp
   - DOMAIN-SUFFIX,hackmd.io
   - DOMAIN-SUFFIX,heroku.com

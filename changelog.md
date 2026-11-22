@@ -1,5 +1,21 @@
 # 更新记录
 
+## 2026-11-22 漏网之鱼归类：昨日 11-21 日志 5 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-21_09-05-48`（`cp -R` 自 `~/.config/clash.meta/logs`，只读源；共 4 个日志文件：`clashx.log` / `clashx_core_21_09-06-08.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，`diff -rq` 与仓库侧无差异，无跨日常量）。
+- 提取量：候选域名 14 个（`match Match` 13 / `oc-cn-domain` 1），主域归并 10 个；公网裸 IP 1（`8.8.8.8`，DNS）；skip-list 命中 14；manual 命中 0；伪域名 2、探针 0、私有 IP 0。
+- `check_coverage` 判定：域名 covered 6 / uncovered 5（brand-anchor 1）；IP covered 1 / uncovered 0。
+- 补录明细（5 域名，共 3 个文件）：
+  - **`elebank.com`** → `hk-bank.yaml`「ELE Bank」组，原精确主机 `DOMAIN-SUFFIX,conn.broker.elebank.com` 由主域后缀取代（判据 1 BRAND-ANCHOR 命中 `hk-bank.yaml:44`，标签 `elebank` 逐字符相同；判据 2 同文件已有「ELE Bank」独立分组；命中 `app.elebank.com`(30) + `api.platform.elebank.com`(15) + `conf.platform.elebank.com`(1) + `update.platform.elebank.com`(1) 共 47 次，均为该行香港虚拟银行 App 接口；`check_coverage` 复核 `conn.broker.elebank.com` 仍由后缀规则覆盖）。
+  - **`zoloz.com`** + **`zoloz.net`** → `alibaba.yaml`「支付宝 / 蚂蚁集团」组（RDAP 双实证：`zoloz.com` 注册商 CSC Corporate Domains、`zoloz.net` 注册商阿里云 HiChina，两者 NS 均为 `NS1-4.ALIPAY.COM` → 蚂蚁集团 ZOLOZ 实名认证服务；命中 `nearx-hk-sail-api.zoloz.com`(2) `match Match`、`hk-production-zmgs.zoloz.net`(8) `oc-cn-domain`，两域为同一服务的主域/TLD 变体，零歧义补录）。
+  - **`duolingo.com`** → `proxy.yaml`「政府 / 教育 / 其他」组（RDAP Amazon Registrar + AWS DNS；多邻国语言学习 App，海外服务且大陆访问不稳；命中 `ios-api-2.duolingo.com`(2) + `localization-duostrings.duolingo.com`(3)；AGENTS.md 2026-10-28 兜底：海外杂项归 `proxy.yaml`）。
+  - **`electrounlock.com`** → `proxy.yaml`「海外站点 / 工具」组（RDAP NameSilo + Cloudflare NS，DoH `172.67.181.249`/`104.21.75.205`；HTTP 首页 200 且正文 `unlock`/`IMEI`/`iPhone` 高频关键词，为海外手机 IMEI 解锁服务；命中 `www.electrounlock.com`(4)，firefox；无国内实证 → `proxy.yaml`）。
+- 未收录及原因：covered 6 主域整批跳过 —— `rust-lang.org`（direct.yaml:284）、`wise.com`（us-payment.yaml:18）、`binance.info`（crypto.yaml:6）、`crunchyroll.com`（streaming.yaml:19）、`crypto.com`（crypto.yaml:21）、`8.8.8.8`（google.yaml:27 + dns.yaml:2）。
+- 整批跳过（skip-list 14 项）：`app-ads-services.com` 系 3 子域 16 次（`odm` 12 / `muf` 3 / `odf` 1 — 移动广告聚合）、`appsflyersdk.com` 系 6 子域 8 次（AppsFlyer 归因 SDK）、`sg.mmstat.com`(5 — 友盟+ 统计)、`static.cloudflareinsights.com`(3 — reject 上游已收录)、`hibchr.com`(11) / `antpeak.com`(3) / `zorvian.com`(3 — 无主端点已裁决不归类)。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名/DNS 配置值噪声（历史基线，非规则重复）。被编辑 3 个文件（`hk-bank.yaml` payload 27 / `alibaba.yaml` payload 17 / `proxy.yaml` payload 1005）`yaml.safe_load` 全部通过。新增 5 域名 `check_coverage` 复核 covered 7 / uncovered 0。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新增 skip-list 项，无需同步）。
+
 ## 2026-11-20 漏网之鱼归类：昨日 11-19 日志 5 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-19_08-31-36` + `log/clashx-meta-log/2026-11-19_15-25-27` + `log/clashx-meta-log/2026-11-19_15-57-05`（cp 自 `~/.config/clash.meta/logs`，共 12 个日志文件）。
