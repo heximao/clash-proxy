@@ -1,0 +1,55 @@
+payload:
+
+# === Steam 商店 / 账户 / API ===
+  - DOMAIN-SUFFIX,steampowered.com
+
+# === Steam 社区 / 市场 ===
+  - DOMAIN-SUFFIX,steamcommunity.com
+
+# === Steam 静态资源 / 下载 CDN ===
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+
+# === 蒸汽平台（Steam 中国）===
+  - DOMAIN-SUFFIX,steamchina.com
+
+# === Tencent 国际版（原 tencent-global.yaml 并入）===
+  # === WorkBuddy AI ===
+  - DOMAIN-SUFFIX,tgalileo.com
+  - DOMAIN,sg.tgalileo.com
+  - IP-CIDR,43.156.86.223/32,no-resolve
+  # === WorkBuddy / CodeBuddy（腾讯海外 AI，2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,workbuddy.ai
+  - DOMAIN-SUFFIX,codebuddy.ai
+
+# === Alibaba 国际版（原 alibaba-global.yaml 并入）===
+  # === ModelScope ===
+  - DOMAIN-SUFFIX,modelscope.ai
+
+# === ByteDance 国际版（原 bytedance-global.yaml 并入）===
+  # === Trae AI IDE（海外版）===
+  - DOMAIN-SUFFIX,trae.ai
+  - DOMAIN-SUFFIX,traecdn.ai
+
+  # === TikTok（国际版）（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-SUFFIX,ttwstatic.com
+  - DOMAIN-SUFFIX,byteoversea.com
+
+  # === BytePlus（字节海外云 / RTC，2026-10-28 从 proxy.yaml 归位）===
+  - DOMAIN-SUFFIX,byteplusapi.com
+  - DOMAIN-SUFFIX,bytepluscdn.com
+  - DOMAIN-SUFFIX,rtcplus.com
+
+  # === 字节海外埋点 / APM（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytedapm.com
+  - DOMAIN-SUFFIX,ibytedapm.com
+
+  # === Lark（国际版）（2026-10-01 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,larksuite.com
+
+  # === BytePlus 海外性能测试平台（2026-10-28 漏网之鱼补录）===
+  # perfops. 子域 CNAME bplslb.com → AS396986 Bytedance Inc / AS150436 BytePlus（香港节点）
+  - DOMAIN-SUFFIX,byte-test.com

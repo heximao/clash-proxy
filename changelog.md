@@ -1,5 +1,21 @@
 # 更新记录
 
+## 2026-11-22 海外/国际版规则整合：steam.yaml 重命名 cn-global.yaml 并合并三个 -global 文件（交互轮）
+
+- 数据来源：非日志轮，为规则库结构整理。对象为 `steam.yaml`（6 规则，Steam 游戏平台）、`tencent-global.yaml`（5 规则，腾讯海外）、`alibaba-global.yaml`（1 规则，ModelScope 国际版）、`bytedance-global.yaml`（13 规则，字节海外 Trae/TikTok/Lark）。
+- 操作与用户指示：「将 steam.yaml 重命名为 cn-global.yaml，将 tencent-global/alibaba-global/bytedance-global 迁入 cn-global.yaml。无需校验域名归属，保证格式正确即可。」用户另行裁定 config.yaml 不改动、由用户自理。
+- 执行明细：
+  - `git mv steam.yaml cn-global.yaml`（重命名沿用暂存区旧内容，内容修改后需再 `git add` 新路径补上，Git 操作坑见 AGENTS.md）。
+  - 合并后 `cn-global.yaml` 共 **25 条规则**，分组头保留原文件厂商语义并标注来源：`# === Steam 商店 / 账户 / API ===` / `# === Steam 社区 / 市场 ===` / `# === Steam 静态资源 / 下载 CDN ===` / `# === 蒸汽平台（Steam 中国）===`（原 steam.yaml）/ `# === Tencent 国际版（原 tencent-global.yaml 并入）===`（含 `# === WorkBuddy AI ===` 与 `# === WorkBuddy / CodeBuddy ===`，原 `tgalileo.com` 组 `# workbuddy ai` 非规范注释头已规范为 `# === Title ===`，域名与 IP-CIDR 原样保留）/ `# === Alibaba 国际版（原 alibaba-global.yaml 并入）===` / `# === ByteDance 国际版（原 bytedance-global.yaml 并入）===`（含 Trae / TikTok / BytePlus / 埋点 APM / Lark / 性能测试平台各子组注释，全部原样保留）。
+  - `git rm tencent-global.yaml alibaba-global.yaml bytedance-global.yaml`。
+- 引用清理：
+  - `README.md` 规则文件表：删除 `alibaba-global` / `bytedance-global` / `steam` / `tencent-global` 四行，新增 `cn-global.yaml` 行（ASCII 序插入 `claude.yaml` 与 `cn.yaml` 之间）。
+  - `AGENTS.md` 常见坑：`steam.yaml:3` 空占位引用改写（该空占位为历史遗留，2026-10-17 已随 steam 补录清零，现无业务文件含空占位，仅保留历史说明）。
+  - `.agents/skills/fill-domains-from-log/SKILL.md`：归类表「大厂海外/国际版服务」目标文件由 `-global.yaml` 三个文件改为 `cn-global.yaml`；提交信息示例 `trae.ai 归入 bytedance-global.yaml` 改为 `cn-global.yaml`。
+  - `config.yaml`：**未改动**（用户裁定自理；合并后三个 global 的 CDN URL 将 404，用户需自行将 rule-provider 与 RULE-SET 指向 `cn-global.yaml`）。
+- 自检结果：`find_duplicates.py` 跨文件重复 **0**，文件内 23 条为 `config.yaml` 策略组名/DNS 值噪声（历史基线，非规则重复），**本次新引入 0**；`yaml.safe_load` 通过（`cn-global.yaml` payload **25** = steam 6 + tencent-global 5 + alibaba-global 1 + bytedance-global 13，逐文件 grep 计数核对一致）；21 个代表域名（steampowered/steamcommunity/steamstatic/steamchina/tgalileo/workbuddy/codebuddy/modelscope/trae/traecdn/tiktok/tiktokv/ttwstatic/byteoversea/byteplusapi/bytepluscdn/rtcplus/bytedapm/ibytedapm/larksuite/byte-test）经 `check_coverage.py` 复核全部 COVERED（covered 21 / uncovered 0 / brand-anchor 0）。
+- Git 操作链：见提交记录。
+
 ## 2026-11-22 AI 规则整合：direct-ai.yaml 并入 direct.yaml 并删除文件（交互轮）
 
 - 数据来源：非日志轮，为规则库结构整理。对象为 `direct-ai.yaml`（17 域名）与 `proxy-ai.yaml`（42 域名）。

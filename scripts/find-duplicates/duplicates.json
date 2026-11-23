@@ -6,9 +6,6 @@
     "\"generic\"": [
       ".agents/skills/fill-issues-domain/agents/interface.yaml"
     ],
-    "DOMAIN-SUFFIX,modelscope.ai": [
-      "alibaba-global.yaml"
-    ],
     "DOMAIN-SUFFIX,modelscope.cn": [
       "alibaba.yaml"
     ],
@@ -429,45 +426,6 @@
     "DOMAIN-SUFFIX,bilibilitoy.com": [
       "bilibili.yaml"
     ],
-    "DOMAIN-SUFFIX,trae.ai": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,traecdn.ai": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,tiktok.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,tiktokv.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,ttwstatic.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,byteoversea.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,byteplusapi.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,bytepluscdn.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,rtcplus.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,bytedapm.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,ibytedapm.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,larksuite.com": [
-      "bytedance-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,byte-test.com": [
-      "bytedance-global.yaml"
-    ],
     "DOMAIN-SUFFIX,bytedance.com": [
       "bytedance.yaml"
     ],
@@ -599,6 +557,81 @@
     ],
     "IP-CIDR6,2607:6bc0::/32,no-resolve": [
       "claude.yaml"
+    ],
+    "DOMAIN-SUFFIX,steampowered.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamcommunity.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamstatic.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamcontent.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamusercontent.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,steamchina.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,tgalileo.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN,sg.tgalileo.com": [
+      "cn-global.yaml"
+    ],
+    "IP-CIDR,43.156.86.223/32,no-resolve": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,workbuddy.ai": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,codebuddy.ai": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,modelscope.ai": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,trae.ai": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,traecdn.ai": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,tiktok.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,tiktokv.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,ttwstatic.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteoversea.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,byteplusapi.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytepluscdn.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,rtcplus.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,bytedapm.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,ibytedapm.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,larksuite.com": [
+      "cn-global.yaml"
+    ],
+    "DOMAIN-SUFFIX,byte-test.com": [
+      "cn-global.yaml"
     ],
     "DOMAIN-SUFFIX,10086.cn": [
       "cn.yaml"
@@ -6558,24 +6591,6 @@
     "IP-CIDR,35.186.224.47/32,no-resolve": [
       "spotify.yaml"
     ],
-    "DOMAIN-SUFFIX,steampowered.com": [
-      "steam.yaml"
-    ],
-    "DOMAIN-SUFFIX,steamcommunity.com": [
-      "steam.yaml"
-    ],
-    "DOMAIN-SUFFIX,steamstatic.com": [
-      "steam.yaml"
-    ],
-    "DOMAIN-SUFFIX,steamcontent.com": [
-      "steam.yaml"
-    ],
-    "DOMAIN-SUFFIX,steamusercontent.com": [
-      "steam.yaml"
-    ],
-    "DOMAIN-SUFFIX,steamchina.com": [
-      "steam.yaml"
-    ],
     "DOMAIN-SUFFIX,huavod.com": [
       "streaming.yaml"
     ],
@@ -6794,21 +6809,6 @@
     ],
     "DOMAIN-SUFFIX,telesco.pe": [
       "telegram.yaml"
-    ],
-    "DOMAIN-SUFFIX,tgalileo.com": [
-      "tencent-global.yaml"
-    ],
-    "DOMAIN,sg.tgalileo.com": [
-      "tencent-global.yaml"
-    ],
-    "IP-CIDR,43.156.86.223/32,no-resolve": [
-      "tencent-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,workbuddy.ai": [
-      "tencent-global.yaml"
-    ],
-    "DOMAIN-SUFFIX,codebuddy.ai": [
-      "tencent-global.yaml"
     ],
     "DOMAIN-SUFFIX,weixin.qq.com": [
       "tencent.yaml"
@@ -7227,14 +7227,13 @@
   },
   "file_dups": {
     ".agents/skills/fill-issues-domain/agents/interface.yaml": [],
-    "alibaba-global.yaml": [],
     "alibaba.yaml": [],
     "apple.yaml": [],
     "baidu.yaml": [],
     "bilibili.yaml": [],
-    "bytedance-global.yaml": [],
     "bytedance.yaml": [],
     "claude.yaml": [],
+    "cn-global.yaml": [],
     "cn.yaml": [],
     "config.yaml": [
       "443",
@@ -7283,10 +7282,8 @@
     "proxy.yaml": [],
     "social.yaml": [],
     "spotify.yaml": [],
-    "steam.yaml": [],
     "streaming.yaml": [],
     "telegram.yaml": [],
-    "tencent-global.yaml": [],
     "tencent.yaml": [],
     "us-bank.yaml": [],
     "us-broker.yaml": [],

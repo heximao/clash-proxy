@@ -20,14 +20,13 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 
 | 文件 | 说明 |
 |------|------|
-| **alibaba-global.yaml** | 阿里巴巴海外服务（ModelScope 国际版等） |
 | **alibaba.yaml** | 阿里巴巴 / 阿里系服务（淘宝、天猫、高德、ModelScope 等） |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
 | **baidu.yaml** | 百度 |
 | **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
-| **bytedance-global.yaml** | 字节跳动海外服务（Trae 国际版、TikTok 等） |
 | **bytedance.yaml** | 字节跳动（抖音、飞书、豆包、火山引擎、Trae CN 等） |
 | **claude.yaml** | Claude / Anthropic |
+| **cn-global.yaml** | 海外 / 国际版服务（Steam 平台、腾讯海外 AI、ModelScope 国际版、字节海外 Trae/TikTok/Lark） |
 | **cn.yaml** | 中国大陆 `.cn` 域名（运营商、政务、教育网、WPS 等，可直连） |
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct.yaml** | 可直连的域名（含国内 AI 平台与可直连 AI 服务） |
@@ -52,10 +51,8 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
 | **spotify.yaml** | Spotify |
-| **steam.yaml** | Steam 游戏平台（商店、社区、下载 CDN、蒸汽平台） |
 | **streaming.yaml** | Netflix、Disney+、HBO 等 |
 | **telegram.yaml** | Telegram |
-| **tencent-global.yaml** | 腾讯海外服务 |
 | **tencent.yaml** | 腾讯（QQ、腾讯云等） |
 | **us-bank.yaml** | 美国银行，建议优先直连 |
 | **us-broker.yaml** | 美股券商，建议优先直连 |

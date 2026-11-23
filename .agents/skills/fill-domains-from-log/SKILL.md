@@ -259,7 +259,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 | 域名特征 | 目标文件 |
 |---|---|
 | 大型互联网公司主域 | 对应厂商文件：`google.yaml`、`apple.yaml`、`microsoft.yaml`、`meta.yaml`、`bytedance.yaml`、`alibaba.yaml`、`tencent.yaml` 等 |
-| 大厂海外 / 国际版服务 | 对应 `-global.yaml`（`alibaba-global`、`bytedance-global`、`tencent-global`） |
+| 大厂海外 / 国际版服务 | 归入 `cn-global.yaml`（Steam 平台、腾讯海外 AI `workbuddy.ai`，阿里巴巴海外 `modelscope.ai`，字节海外 Trae/TikTok/Lark 等——原 `alibaba-global`/`bytedance-global`/`tencent-global` 三文件已于 2026-11-22 合并入此文件） |
 | 大厂 AI 服务 | 优先归入厂商专属 AI 文件（如 `claude.yaml`、`openai.yaml`）；无专属文件的按可直连 / 需代理归 `direct.yaml` / `proxy-ai.yaml`（原 `direct-ai.yaml` 已于 2026-11-22 并入 `direct.yaml`） |
 | 无法直连或直连不稳定的杂项 | `proxy.yaml` |
 | 可稳定直连的杂项 | `direct.yaml` |
@@ -304,7 +304,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 2. **确认 `reject.yaml` 未被暂存**（`git diff --cached --name-only | grep -x reject.yaml` 必须无输出）。该文件由 bot 独占维护，人工提交带上它会与上游自动合并冲突。
 3. 提交信息用中文，一次逻辑变更一个提交，格式示例：
    ```
-   漏网之鱼归类：trae.ai 归入 bytedance-global.yaml
+   漏网之鱼归类：trae.ai 归入 cn-global.yaml
 
    Co-Authored-By: WorkBuddy <noreply@workbuddy.cn>
    ```

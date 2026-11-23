@@ -163,7 +163,7 @@ python3 scripts/normalize-yaml-comments/normalize_yaml_comments.py
 
 **统计口径**：
 - 全库统计必须剥离 `reject.yaml`（占全库规则 99.29%）。`find_duplicates.py` 已跳过它，报的是业务文件间重复，**基线 1 条**（`settings.crashlytics.com` direct/google），不要误报成新增。另注意 `config.yaml`（未跟踪的运行配置副本）也会被扫描，其 intra-file「重复」实为策略组名 / DNS 配置值噪声（2026-10-19 实测 23 条），不是规则重复，勿当新引入误判。
-- 解析规则行时 `IP-CIDR,...,no-resolve` 的 `no-resolve` 会被吞进 value，按逗号切第一段；空占位 `DOMAIN-SUFFIX,` 用允许空值的正则抓（`steam.yaml:3`）。
+- 解析规则行时 `IP-CIDR,...,no-resolve` 的 `no-resolve` 会被吞进 value，按逗号切第一段；空占位 `DOMAIN-SUFFIX,` 用允许空值的正则抓（注：全库规则文件现已无空占位，`paypal.yaml`/`steam.yaml` 曾含空占位的早期情况见 changelog，`steam.yaml` 已于 2026-11-22 并入 `cn-global.yaml`）。
 
 #### git 操作
 
