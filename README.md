@@ -30,8 +30,7 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **claude.yaml** | Claude / Anthropic |
 | **cn.yaml** | 中国大陆 `.cn` 域名（运营商、政务、教育网、WPS 等，可直连） |
 | **crypto.yaml** | 加密货币交易所与钱包 |
-| **direct-ai.yaml** | 可直连的 AI 服务 |
-| **direct.yaml** | 可直连的域名 |
+| **direct.yaml** | 可直连的域名（含国内 AI 平台与可直连 AI 服务） |
 | **dns.yaml** | DNS 服务器 |
 | **fin-media.yaml** | 财经媒体与数据 |
 | **fin-tech.yaml** | 金融科技工具 |

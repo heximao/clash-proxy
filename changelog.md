@@ -1,5 +1,30 @@
 # 更新记录
 
+## 2026-11-22 AI 规则整合：direct-ai.yaml 并入 direct.yaml 并删除文件（交互轮）
+
+- 数据来源：非日志轮，为规则库结构整理。对象为 `direct-ai.yaml`（17 域名）与 `proxy-ai.yaml`（42 域名）。
+- 判据：用户裁定「归属判国内 + 实测佐证」。**实测佐证受本机网络限制无法取得**——本机 Clash 开启 `tun.strict-route` + `dns.dns-hijack: any:53` + `fake-ip`，任何 DNS 路径（`dig @8.8.8.8` / `dig @223.5.5.5` / `--noproxy` 直连 DoH）均返回 fake-ip 掩码 `public-ip-*`，走代理访问 Cloudflare/Google DoH 的响应亦带 `"Comment":"Response from public-ip-*"`，确认远端解析同样被 Clash DNS 模块接管；`ip-api.com` 免费接口拒绝代理 IP。故「直连连通性」维度**无有效数据，不作声称**，归属判定全部改由网页实测证据承担。
+- 归属证据（走代理抓取首页 HTML / RDAP / SOA，均为可复核硬证据）：
+  - `deepseek.com`：浙ICP备2023025841号，页脚「杭州深度求索人工智能基础技术研究有限公司」。
+  - `moonshot.cn`：京ICP备2023011302号-3 + 公网安备11010802043150号，主体「北京月之暗面科技股份有限公司」。
+  - `sensecore.cn`：沪ICP备2021035992号，商汤。
+  - `sensenova.cn`：页脚「上海商汤智能科技有限公司」。
+  - `sensecoreapi.cn`：无网页内容，SOA 为 `vip3.alidns.com. hostmaster.hichina.com.`（阿里云 DNS + 万网注册），且为 `sensecore.cn` 同厂商兄弟域。
+  - `cherry-ai.com`：主体「上海千彗科技有限公司」，NS `camille.dnspod.net` / `ives.dnspod.net`（DNSPod）。
+  - `newapi.pro`：浙ICP备2025190188号-2 + 公网安备33010602014019号，正文 18816 中文字，主体 QuantumNous。**原在 `proxy-ai.yaml`，属误分类**。
+  - `bigmodel.cn`：主体「北京智谱华章科技股份有限公司」。
+  - `z.ai`：智谱国际品牌，NS `vip7.alidns.com` / `vip8.alidns.com`，页面 `lang=zh-CN`。
+  - `ccswitch.io`：标题「CC Switch 官方网站 - AI 编程工具统一管理平台」，`lang=zh-CN`。**原在 `proxy-ai.yaml`，归属国内按用户裁定迁移**（无 ICP 备案，证据强度弱于其余项，已如实记录）。
+- 迁移明细（`direct.yaml` 新增 3 组，共 19 条规则）：
+  - 「国内 AI 平台（原 direct-ai.yaml 并入）」7 条：`deepseek.com` / `moonshot.cn` / `sensenova.cn` / `sensecore.cn` / `sensecoreapi.cn` / `cherry-ai.com` / `newapi.pro`。
+  - 「智谱 AI / Z.ai（原 direct-ai.yaml 并入）」2 条：`bigmodel.cn` / `z.ai`。
+  - 「AI 服务 / 工具（原 direct-ai.yaml 并入）」10 条：`sbyr.de5.net` / `model.uprime.cc.cd` / `agnes-ai.com` / `agnes-ai.space` / `openrouter.ai` / `openrouter.com` / `freemodel.dev` / `minimax.io` / `aihubmix.com` / `ccswitch.io`。
+- 特殊处置（已在文件内注释标注）：`sbyr.de5.net` / `model.uprime.cc.cd` 原注释为「单独为 DNS 分组，给 DNS 服务器分配代理节点」，语义上需走代理；经用户明确裁定一并迁入 `direct.yaml`，未按原语义留在代理侧。
+- 未迁移（维持 `proxy-ai.yaml`）：`ai.com` / `opencode.ai` / `mcp.context7.com` / `mcp.exa.ai` / `mcp.grep.app` / `models.dev` / `perplexity.ai` / `openclaw.ai` / `clawhub.ai` / `poe.com` / `poecdn.net` / `hf.space` / `hf.co` / `firecrawl.dev` / `tavily.com` / `skill.sh` / `io.net` 系 4 项（`ai.io.net`/`io.net`/`ionet.betteruptime.com`/`status.io.net`）/ `newapi.ai` / `parallel.ai` / `cua.ai` / `keenable.ai` / `flova.ai` / `lobehub.com` / `manus.space` / `agentlane.com` / `skills.sh` / `skill-history.com` / `browse.sh` / `mistral.ai` / `midjourney.com` / `unsloth.ai` / `jina.ai` / `pixpix.com` / `dify.ai` / `factory.ai` / `deepl.com` / `usemagpie.ai`。依据：均为海外主体（RDAP/NS 为 Cloudflare/AWS/Vercel/GoDaddy；页面 `lang=en` 且无中文主体），无国内归属实证。
+- 文件删除与引用清理：`git rm direct-ai.yaml`；`README.md` 规则文件表删除 `direct-ai.yaml` 行、`direct.yaml` 说明补「含国内 AI 平台与可直连 AI 服务」；`config.yaml` 删除 `direct-ai` 的 rule-provider 定义（4 行）与 `- RULE-SET,direct-ai,可直连AI` 行；`AGENTS.md` 文件分类规则 `-ai.yaml` 条目改写为「需代理归 `proxy-ai.yaml`；可直连归 `direct.yaml`」；`.agents/skills/fill-domains-from-log/SKILL.md` 归类表同步。
+- 自检结果：`find_duplicates.py` 跨文件重复 **0**，文件内 23 条为未跟踪 `config.yaml` 策略组名 / DNS 配置值噪声（历史基线，非规则重复）；被编辑 3 个 YAML `yaml.safe_load` 全部通过（`direct.yaml` payload 260 → **279**，`proxy-ai.yaml` 42 → **40**，`config.yaml` rules 42 / providers 34 且 `direct-ai` 在 providers 与 rules 中均已不存在）；19 条迁移规则经 `check_coverage.py` 复核全部 COVERED（covered 19 / uncovered 0 / brand-anchor 0）；`direct.yaml` 行内注释残留 0（本轮首次写入的 12 条行内注释已改为分组注释头，避免污染规则解析）。
+- Git 操作链：见提交记录。
+
 ## 2026-11-22 漏网之鱼归类：昨日 11-21 日志 5 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-21_09-05-48`（`cp -R` 自 `~/.config/clash.meta/logs`，只读源；共 4 个日志文件：`clashx.log` / `clashx_core_21_09-06-08.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，`diff -rq` 与仓库侧无差异，无跨日常量）。

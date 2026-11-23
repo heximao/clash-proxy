@@ -380,3 +380,35 @@ payload:
 
 # === 香港政府服务（2026-11-20 漏网之鱼补录）===
   - DOMAIN-SUFFIX,weather.gov.hk
+
+# === 国内 AI 平台（原 direct-ai.yaml 并入，2026-11-22）===
+# 归属证据：deepseek.com 浙ICP备2023025841号 / moonshot.cn 京ICP备2023011302号-3 /
+# sensecore.cn 沪ICP备2021035992号 / sensecoreapi.cn SOA 为 vip3.alidns.com + hostmaster.hichina.com /
+# sensenova.cn 上海商汤智能科技 / cherry-ai.com 上海千彗科技 NS camille.dnspod.net /
+# newapi.pro 浙ICP备2025190188号-2（原 proxy-ai.yaml，误分类迁移）
+  - DOMAIN-SUFFIX,deepseek.com
+  - DOMAIN-SUFFIX,moonshot.cn
+  - DOMAIN-SUFFIX,sensenova.cn
+  - DOMAIN-SUFFIX,sensecore.cn
+  - DOMAIN-SUFFIX,sensecoreapi.cn
+  - DOMAIN-SUFFIX,cherry-ai.com
+  - DOMAIN-SUFFIX,newapi.pro
+
+# === 智谱 AI / Z.ai（原 direct-ai.yaml 并入，2026-11-22）===
+# 归属证据：bigmodel.cn 北京智谱华章科技股份有限公司 / z.ai 智谱国际品牌，NS vip7.alidns.com
+  - DOMAIN-SUFFIX,bigmodel.cn
+  - DOMAIN-SUFFIX,z.ai
+
+# === AI 服务 / 工具（原 direct-ai.yaml 并入，2026-11-22）===
+# sbyr.de5.net / model.uprime.cc.cd 原注释为「给 DNS 服务器分配代理节点」，按用户要求一并迁入
+# ccswitch.io 原在 proxy-ai.yaml，CC Switch 中文官网，误分类迁移
+  - DOMAIN-SUFFIX,sbyr.de5.net
+  - DOMAIN-SUFFIX,model.uprime.cc.cd
+  - DOMAIN-SUFFIX,agnes-ai.com
+  - DOMAIN-SUFFIX,agnes-ai.space
+  - DOMAIN-SUFFIX,openrouter.ai
+  - DOMAIN-SUFFIX,openrouter.com
+  - DOMAIN-SUFFIX,freemodel.dev
+  - DOMAIN-SUFFIX,minimax.io
+  - DOMAIN-SUFFIX,aihubmix.com
+  - DOMAIN-SUFFIX,ccswitch.io

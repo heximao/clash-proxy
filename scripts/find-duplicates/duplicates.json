@@ -1173,9 +1173,6 @@
     "RULE-SET,proxy,PROXY": [
       "config.yaml"
     ],
-    "RULE-SET,direct-ai,\u53ef\u76f4\u8fdeAI": [
-      "config.yaml"
-    ],
     "RULE-SET,bytedance,\u5b57\u8282": [
       "config.yaml"
     ],
@@ -1289,57 +1286,6 @@
     ],
     "DOMAIN-SUFFIX,magic.link": [
       "crypto.yaml"
-    ],
-    "DOMAIN-SUFFIX,sbyr.de5.net": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,model.uprime.cc.cd": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,agnes-ai.com": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,agnes-ai.space": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,openrouter.ai": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,openrouter.com": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,freemodel.dev": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,minimax.io": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,aihubmix.com": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,deepseek.com": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,sensenova.cn": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,sensecore.cn": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,sensecoreapi.cn": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,bigmodel.cn": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,z.ai": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,cherry-ai.com": [
-      "direct-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,moonshot.cn": [
-      "direct-ai.yaml"
     ],
     "DOMAIN-SUFFIX,smallstrawberry.com": [
       "direct.yaml"
@@ -2119,6 +2065,63 @@
       "direct.yaml"
     ],
     "DOMAIN-SUFFIX,weather.gov.hk": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,deepseek.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,moonshot.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensenova.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensecore.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sensecoreapi.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,cherry-ai.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,newapi.pro": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,bigmodel.cn": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,z.ai": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,sbyr.de5.net": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,model.uprime.cc.cd": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,agnes-ai.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,agnes-ai.space": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,openrouter.ai": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,openrouter.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,freemodel.dev": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,minimax.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,aihubmix.com": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ccswitch.io": [
       "direct.yaml"
     ],
     "IP-CIDR,8.8.8.8,no-resolve": [
@@ -3366,9 +3369,6 @@
     "DOMAIN-SUFFIX,newapi.ai": [
       "proxy-ai.yaml"
     ],
-    "DOMAIN-SUFFIX,newapi.pro": [
-      "proxy-ai.yaml"
-    ],
     "DOMAIN-SUFFIX,parallel.ai": [
       "proxy-ai.yaml"
     ],
@@ -3388,9 +3388,6 @@
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,agentlane.com": [
-      "proxy-ai.yaml"
-    ],
-    "DOMAIN-SUFFIX,ccswitch.io": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,skills.sh": [
@@ -7265,7 +7262,6 @@
       "\u9999\u6e2f_\u81ea\u52a8\u56de\u9000"
     ],
     "crypto.yaml": [],
-    "direct-ai.yaml": [],
     "direct.yaml": [],
     "dns.yaml": [],
     "fin-media.yaml": [],

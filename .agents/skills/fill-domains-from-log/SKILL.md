@@ -260,7 +260,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 |---|---|
 | 大型互联网公司主域 | 对应厂商文件：`google.yaml`、`apple.yaml`、`microsoft.yaml`、`meta.yaml`、`bytedance.yaml`、`alibaba.yaml`、`tencent.yaml` 等 |
 | 大厂海外 / 国际版服务 | 对应 `-global.yaml`（`alibaba-global`、`bytedance-global`、`tencent-global`） |
-| 大厂 AI 服务 | 优先归入厂商专属 AI 文件（如 `claude.yaml`、`openai.yaml`）；无专属文件的按可直连 / 需代理归 `direct-ai.yaml` / `proxy-ai.yaml` |
+| 大厂 AI 服务 | 优先归入厂商专属 AI 文件（如 `claude.yaml`、`openai.yaml`）；无专属文件的按可直连 / 需代理归 `direct.yaml` / `proxy-ai.yaml`（原 `direct-ai.yaml` 已于 2026-11-22 并入 `direct.yaml`） |
 | 无法直连或直连不稳定的杂项 | `proxy.yaml` |
 | 可稳定直连的杂项 | `direct.yaml` |
 | 特定领域服务 | 对应主题文件（`streaming.yaml`、`telegram.yaml`、`github.yaml` 等） |
