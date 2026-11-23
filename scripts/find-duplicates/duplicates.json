@@ -3303,42 +3303,6 @@
     "DOMAIN-SUFFIX,o33249.ingest.sentry.io": [
       "openai.yaml"
     ],
-    "DOMAIN-SUFFIX,pornhub.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,phncdn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,youporn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,ypncdn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,redtube.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,rdtcdn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,tube8.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,t8cdn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,thumbzilla.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,xvideos.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,xvideos-cdn.com": [
-      "pornhub.yaml"
-    ],
-    "DOMAIN-SUFFIX,xvideos.net": [
-      "pornhub.yaml"
-    ],
     "DOMAIN-SUFFIX,ai.com": [
       "proxy-ai.yaml"
     ],
@@ -6501,96 +6465,6 @@
     "DOMAIN-SUFFIX,discord.gg": [
       "social.yaml"
     ],
-    "DOMAIN-SUFFIX,spotify.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifycdn.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,scdn.co": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,byspotify.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,pscdn.co": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spoti.fi": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify.app.link": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify.design": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifycdn.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifycharts.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifycodes.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifyforbrands.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifyjobs.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotifynewsroom.jp": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotilocal.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,tospotify.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify-everywhere.com": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify.com.edgesuite.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify.map.fastly.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify.map.fastlylb.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,spotify-com.akamaized.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net": [
-      "spotify.yaml"
-    ],
-    "DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com": [
-      "spotify.yaml"
-    ],
-    "PROCESS-NAME,Spotify": [
-      "spotify.yaml"
-    ],
-    "PROCESS-NAME,Spotify.exe": [
-      "spotify.yaml"
-    ],
-    "IP-CIDR,104.154.127.126/32,no-resolve": [
-      "spotify.yaml"
-    ],
-    "IP-CIDR,35.186.224.47/32,no-resolve": [
-      "spotify.yaml"
-    ],
     "DOMAIN-SUFFIX,huavod.com": [
       "streaming.yaml"
     ],
@@ -6618,6 +6492,42 @@
     "DOMAIN-SUFFIX,nflxext.com": [
       "streaming.yaml"
     ],
+    "DOMAIN-SUFFIX,pornhub.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,phncdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,youporn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,ypncdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,redtube.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,rdtcdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,tube8.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,t8cdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,thumbzilla.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos-cdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,xvideos.net": [
+      "streaming.yaml"
+    ],
     "DOMAIN-SUFFIX,live-video.net": [
       "streaming.yaml"
     ],
@@ -6628,6 +6538,96 @@
       "streaming.yaml"
     ],
     "DOMAIN-SUFFIX,crunchyroll.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycdn.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,scdn.co": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,byspotify.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,pscdn.co": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spoti.fi": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.app.link": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.design": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycdn.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycharts.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifycodes.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifyforbrands.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifyjobs.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotifynewsroom.jp": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotilocal.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,tospotify.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify-everywhere.com": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.com.edgesuite.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.map.fastly.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify.map.fastlylb.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,spotify-com.akamaized.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net": [
+      "streaming.yaml"
+    ],
+    "DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com": [
+      "streaming.yaml"
+    ],
+    "PROCESS-NAME,Spotify": [
+      "streaming.yaml"
+    ],
+    "PROCESS-NAME,Spotify.exe": [
+      "streaming.yaml"
+    ],
+    "IP-CIDR,104.154.127.126/32,no-resolve": [
+      "streaming.yaml"
+    ],
+    "IP-CIDR,35.186.224.47/32,no-resolve": [
       "streaming.yaml"
     ],
     "IP-CIDR,5.28.195.2/32,no-resolve": [
@@ -7277,11 +7277,9 @@
     "netease-music.yaml": [],
     "nvidia.yaml": [],
     "openai.yaml": [],
-    "pornhub.yaml": [],
     "proxy-ai.yaml": [],
     "proxy.yaml": [],
     "social.yaml": [],
-    "spotify.yaml": [],
     "streaming.yaml": [],
     "telegram.yaml": [],
     "tencent.yaml": [],

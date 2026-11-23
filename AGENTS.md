@@ -58,7 +58,7 @@ clash-proxy/
 为新域名定归属文件时，按以下判据逐级判断；都不满足的一律留人工，不得凭感觉归类：
 
 1. **同标签 TLD 变体**：库内已有该品牌标签任一 TLD（如 `browserleaks.com`）→ `.net`/`.org` 零歧义补录。**标签须逐字符相同**，形近/字母转位（`mdoelscope.ai` vs `modelscope.ai`）是仿冒域，绝不补录。（锚点检索已机器化：`check_coverage.py` 对未覆盖域名自动输出 `BRAND-ANCHOR`，仍须人工确认标签逐字符相同。）
-2. **同厂商兄弟域 + 文件内既有成组约定**：`intercom.io`+`intercomcdn.com` 组 → 补 `sentry-cdn.com`；`pornhub.yaml` 的「主域+同名 CDN」组 → 补 `xvideos.net`。
+2. **同厂商兄弟域 + 文件内既有成组约定**：`intercom.io`+`intercomcdn.com` 组 → 补 `sentry-cdn.com`；`streaming.yaml` 的「主域+同名 CDN」组（原 `pornhub.yaml`，2026-11-22 并入）→ 补 `xvideos.net`。
 3. **「品牌 + 固定后缀」成对先例**：同文件分组内已有「主域 + 同品牌衍生域」成对并存（`volces.com` + `volccdn.com`、`doubao.com`）→ 同结构的 `doubaocdn.com` 属零歧义补录。
 4. **命名族归属 > 进程证据**：`byte*` 族（byteimg/bytetos/bytedanceapi/bytescm/bytetcc）支持 `bytednsdoc`；`bdstatic.com` 支持 `bdimg.com`。进程证据只能加分不能单独定案（`volceapplog.com` 疑火山但仅 firefox 进程 → 留人工）。
 5. **品牌字面在域内 + 该厂商文件已落盘**：`servicewechat.com` / `wechat.com` → `wechat.yaml`（已有 weixin.com）。**无锚点文件即新增厂商文件**（`logitech.io`、`asus.com`）→ 一律留人工，即便品牌明确。

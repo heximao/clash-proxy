@@ -1,5 +1,19 @@
 # 更新记录
 
+## 2026-11-22 流媒体规则整合：pornhub.yaml / spotify.yaml 并入 streaming.yaml（交互轮）
+
+- 数据来源：非日志轮，为规则库结构整理。对象为 `pornhub.yaml`（12 规则，成人视频）、`spotify.yaml`（30 规则，含 Spotify 全部域名 + PROCESS-NAME + 2 个 IP-CIDR）、`streaming.yaml`（13 规则，华视影院 / netflix / Twitch / Crunchyroll）。
+- 操作与用户指示：「将 pornhub.yaml spotify.yaml 整合入 streaming.yaml」。config.yaml 延续上次裁定由用户自理、本文件不改动。
+- 执行明细：
+  - `streaming.yaml` 追加两组（保留原分组注释语义）：`# === pornhub / 成人内容（原 pornhub.yaml 并入）===`（含 `# === pornhub ===` 与 `# === xvideos ===` 两个子组，共 12 条）+ `# === Spotify（原 spotify.yaml 并入）===`（含 Spotify 登录取向说明注释 4 行、26 个域名、2 个 PROCESS-NAME、2 个 IP-CIDR，共 30 条）。
+  - `git rm pornhub.yaml spotify.yaml`。
+- 引用清理：
+  - `README.md` 规则文件表：删除 `pornhub.yaml` / `spotify.yaml` 两行，`streaming.yaml` 说明由「Netflix、Disney+、HBO 等」改为「流媒体（Netflix、Spotify、Pornhub、Disney+、Twitch 等）」。
+  - `AGENTS.md` 判据 2 示例：`pornhub.yaml` 的「主域+同名 CDN」组 → `streaming.yaml` 的「主域+同名 CDN」组（原 `pornhub.yaml`，2026-11-22 并入）。
+  - `config.yaml`：**未改动**（用户裁定自理；合并后 pornhub/spotify 的 CDN URL 将 404，用户需自行将 rule-provider 与 RULE-SET 合并指向 `streaming.yaml`，或保留直达策略组）。
+- 自检结果：`find_duplicates.py` 跨文件重复 **0**，文件内 23 条为 `config.yaml` 策略组名/DNS 值噪声（历史基线，非规则重复），**本次新引入 0**；`yaml.safe_load` 通过（`streaming.yaml` payload **55** = 原 streaming 13 + pornhub 12 + spotify 30，逐文件 grep 计数核对一致）；14 个代表域名（pornhub/phncdn/xvideos/xvideos-cdn/xvideos.net/spotify/spotifycdn/scdn.co/byspotify/pscdn.co/netflix/crunchyroll/live-video/huavod）经 `check_coverage.py` 复核全部 COVERED（covered 14 / uncovered 0 / brand-anchor 0）。
+- Git 操作链：见提交记录。
+
 ## 2026-11-22 海外/国际版规则整合：steam.yaml 重命名 cn-global.yaml 并合并三个 -global 文件（交互轮）
 
 - 数据来源：非日志轮，为规则库结构整理。对象为 `steam.yaml`（6 规则，Steam 游戏平台）、`tencent-global.yaml`（5 规则，腾讯海外）、`alibaba-global.yaml`（1 规则，ModelScope 国际版）、`bytedance-global.yaml`（13 规则，字节海外 Trae/TikTok/Lark）。

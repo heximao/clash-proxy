@@ -45,13 +45,11 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **netease-music.yaml** | 网易云音乐 |
 | **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
-| **pornhub.yaml** | Pornhub |
 | **proxy-ai.yaml** | 需代理的 AI 服务 |
 | **proxy.yaml** | 需代理的杂项域名 |
 | **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
-| **spotify.yaml** | Spotify |
-| **streaming.yaml** | Netflix、Disney+、HBO 等 |
+| **streaming.yaml** | 流媒体（Netflix、Spotify、Pornhub、Disney+、Twitch 等） |
 | **telegram.yaml** | Telegram |
 | **tencent.yaml** | 腾讯（QQ、腾讯云等） |
 | **us-bank.yaml** | 美国银行，建议优先直连 |
