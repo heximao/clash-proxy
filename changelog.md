@@ -1,5 +1,28 @@
 # 更新记录
 
+## 2026-11-24 漏网之鱼归类：昨日 11-23 日志 11 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-23_09-59-13`（`cp -R` 自 `~/.config/clash.meta/logs`，只读源；共 4 个日志文件：`clashx.log` / `clashx_core_23_09-59-23.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，均为昨日文件夹内容，无跨日常量）。
+- 提取量：候选域名 25 个（`match Match` 25 / `oc-cn-domain` 0），主域归并 21 个；公网裸 IP 2（`1.1.1.1`、`8.8.8.8`，DNS）；skip-list 命中 4（`sg.mmstat.com` 15 次、`usercentrics.eu` ×3 子域各 2 次 = 广告/追踪类，整批不落盘）；manual 命中 0；伪域名 0、探针 0、私有 IP 0。
+- `check_coverage` 判定：域名 covered 10 / uncovered 11（brand-anchor 4）；IP covered 2 / uncovered 0。
+- 补录明细（11 域名，共 6 个文件）：
+  - **`manus.im`** → `proxy-ai.yaml`「漏网之鱼（2026-09-29 补录）AI 服务」组（判据 1 BRAND-ANCHOR：`manus.space` @ proxy-ai.yaml:50，标签 `manus` 逐字符相同；命中 `manus.im`(4)，curl；Manus AI 主域 TLD 变体，零歧义）。
+  - **`factory.com`** → `proxy-ai.yaml`「漏网之鱼（2026-11-05 补录）AI 服务」组（判据 1 BRAND-ANCHOR：`factory.ai` @ proxy-ai.yaml:67，标签 `factory` 逐字符相同；命中 `factory.com`(2)，curl；Factory AI 编程智能体 TLD 变体，零歧义）。
+  - **`nekuda.ai`** → `proxy-ai.yaml` 新增「漏网之鱼（2026-11-23 补录）AI 服务」组（RDAP GoDaddy + Cloudflare NS，DoH `104.26.0.85`/`104.26.1.85`/`172.67.75.7`；Nekuda AI 消费者洞察分析服务，海外 AI，进程 curl；AGENTS.md 2026-10-28 兜底：无国内实证的海外 AI 服务归 proxy-ai.yaml）。
+  - **`vercel.sh`** → `proxy.yaml`「免费版」组 vercel.com 旁（判据 1 BRAND-ANCHOR：`vercel.com` @ proxy.yaml:202 / `vercel.app` @ proxy.yaml:24，标签 `vercel` 逐字符相同；命中 `api-frameworks.vercel.sh`(2)，firefox；Vercel 函数运行时域，零歧义）。
+  - **`vercel-status.com`** → `proxy.yaml`「免费版」组 vercel.com 旁（判据 2 同厂商兄弟域 + 文件内既有 vercel 组；RDAP Amazon Registrar + AWS NS，DoH CNAME `www.vercel-status.com` → `lvglq8h0mdyh.stspg-customer.com` = Atlassian Statuspage 托管；域名语义 = Vercel 状态页；命中 `www.vercel-status.com`(6)，firefox）。
+  - **`pusher.com`** → `proxy.yaml` 新增「漏网之鱼（2026-11-23 补录）海外服务 / 工具」组（RDAP MarkMonitor + AWS NS，DoH `ws-us3.pusher.com` → AWS `44.224.4.86` 等；Pusher 实时消息 / WebSocket SaaS 平台，海外；命中 `ws-us3.pusher.com`(4) + `sockjs-us3.pusher.com`(2)，firefox；AGENTS.md 2026-10-28 兜底：海外杂项归 proxy.yaml）。
+  - **`ccxt.com`** → 同上组（RDAP Cloudflare Registrar + Cloudflare NS，DoH A = `185.199.108-111.153` 即 GitHub Pages；CCXT 开源加密货币交易库文档站，海外开源工具；命中 `ccxt.com`(1)，firefox；海外杂项归 proxy.yaml）。
+  - **`metaaiusercontent.com`** → `meta.yaml`「Meta」组 metaaivm.com 后（RDAP NS = `A/B/C/D.NS.FACEBOOK.COM`、CNAME `htmlpreview.s.metaaiusercontent.com` → `star.c10r.facebook.com` → `57.144.202.141`（Facebook Edge），零歧义 Meta AI 基础设施域；判据 2 同厂商兄弟域，与 2026-11-19 metaaivm.com 同类；命中 `htmlpreview.s.metaaiusercontent.com`(2)，firefox）。
+  - **`cloud.run`** → `google.yaml`「Google Cloud Run」组 run.app 旁（RDAP MarkMonitor + NS `ns1-4.google.com`，DoH A = `142.251.210.142`（Google IP 段），零歧义 Google Cloud Run 域；同组已有 `run.app`，Cloud Run 另一官方域；命中 `n2n5o3nlb661.cloud.run`(1)，firefox）。
+  - **`radix.host`** → `direct.yaml`「域名查询 / RDAP（2026-09-30 漏网之鱼补录）」组（RDAP Radix Technologies Inc. + NS `ns02.trs-dns.com/net`，`rdap.radix.host` 是 Radix 注册局 RDAP 服务器（CNAME → `rdap-aws.radix.host` → `aws.radix.host` → `64.99.87.24`），进程 curl = agent 自用查询端点；AGENTS.md：Agent 自用查询端点（rdap.org / verisign.com / crt.sh 等）→ direct.yaml「域名查询 / RDAP」组；命中 `rdap.radix.host`(4)，curl）。
+  - **`squarecdn.com`** → `us-payment.yaml` 新增「Square / Block（2026-11-23 漏网之鱼补录）」组（RDAP MarkMonitor + AWS NS，DoH `cash-f.squarecdn.com`（命中子域）A = `76.223.91.57`/`13.248.205.93`（AWS Global Accelerator）；Square/Block Inc.（NYSE: XYZ）美股支付公司 CDN，`cash-f` = Cash App；判据「同文件同类分组」——us-payment.yaml 为美股支付公司集合（PayPal/Wise），Square 同类；命中 `cash-f.squarecdn.com`(1)，AgnesCode Helper）。
+- 未收录及原因：covered 10 主域整批跳过 —— `rdap.org`（direct.yaml:226）、`verisign.com`（direct.yaml:231）、`jsdelivr.net`（direct.yaml:18）、`identitydigital.services`（direct.yaml:227）、`usemagpie.ai`（proxy-ai.yaml:71）、`agnes-ai.space`（direct.yaml:408）、`hf.space`（proxy-ai.yaml:29）、`arin.net`（direct.yaml:304）、`growingio.com`（direct.yaml:330）、`models.dev`（proxy-ai.yaml:12）；IP covered 2（`1.1.1.1` → dns.yaml:4 + proxy.yaml:82，`8.8.8.8` → dns.yaml:2 + google.yaml:27）整批跳过。
+- 整批跳过（skip-list 4 项）：`sg.mmstat.com`(15 — 友盟+ 统计)、`aggregator.service.usercentrics.eu` / `api.usercentrics.eu` / `app.usercentrics.eu` 各 2 次（GDPR CMP 广告/追踪类）。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项。
+- 自检结果：`find_duplicates` 跨文件重复 **0**；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名/DNS 配置值噪声（历史基线，非规则重复），本次新引入 0。被编辑 6 个文件（`proxy-ai.yaml` / `meta.yaml` / `google.yaml` / `direct.yaml` / `us-payment.yaml` / `proxy.yaml`）`yaml.safe_load` 全部通过。新增 11 域名 `check_coverage` 复核 covered 11 / uncovered 0。
+- Git：main 提交 → push → 同步 `0 0`（AGENTS.md 同步延后：本轮无新增 skip-list 项，无需同步）。
+
 ## 2026-11-22 流媒体规则整合：pornhub.yaml / spotify.yaml 并入 streaming.yaml（交互轮）
 
 - 数据来源：非日志轮，为规则库结构整理。对象为 `pornhub.yaml`（12 规则，成人视频）、`spotify.yaml`（30 规则，含 Spotify 全部域名 + PROCESS-NAME + 2 个 IP-CIDR）、`streaming.yaml`（13 规则，华视影院 / netflix / Twitch / Crunchyroll）。

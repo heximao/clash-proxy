@@ -48,6 +48,7 @@ payload:
   - DOMAIN-SUFFIX,flova.ai
   - DOMAIN-SUFFIX,lobehub.com
   - DOMAIN-SUFFIX,manus.space
+  - DOMAIN-SUFFIX,manus.im
   - DOMAIN-SUFFIX,agentlane.com
   - DOMAIN-SUFFIX,skills.sh
   - DOMAIN-SUFFIX,skill-history.com
@@ -65,7 +66,11 @@ payload:
 # === 漏网之鱼（2026-11-05 补录）AI 服务 ===
   - DOMAIN-SUFFIX,dify.ai
   - DOMAIN-SUFFIX,factory.ai
+  - DOMAIN-SUFFIX,factory.com
 
 # === 漏网之鱼（2026-11-07 补录）AI 翻译 ===
   - DOMAIN-SUFFIX,deepl.com
   - DOMAIN-SUFFIX,usemagpie.ai
+
+# === 漏网之鱼（2026-11-23 补录）AI 服务 ===
+  - DOMAIN-SUFFIX,nekuda.ai

@@ -200,6 +200,8 @@ payload:
   - DOMAIN-SUFFIX,huggingface.co
   - DOMAIN-SUFFIX,vercel-storage.com
   - DOMAIN-SUFFIX,vercel.com
+  - DOMAIN-SUFFIX,vercel.sh
+  - DOMAIN-SUFFIX,vercel-status.com
   - DOMAIN-SUFFIX,wasmer.io
 
 # === Riot Games ===
@@ -1193,3 +1195,7 @@ payload:
   - DOMAIN-SUFFIX,orca.dev
   - DOMAIN-SUFFIX,openmarket.xyz
   - DOMAIN-SUFFIX,propelauth.com
+
+# === 漏网之鱼（2026-11-23 补录）海外服务 / 工具 ===
+  - DOMAIN-SUFFIX,pusher.com
+  - DOMAIN-SUFFIX,ccxt.com

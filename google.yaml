@@ -49,6 +49,7 @@ payload:
 
 # === Google Cloud Run（2026-09-29 漏网之鱼补录；2026-10-22 扩域 a.run.app → run.app 全域，原 a.run.app 覆盖为其子集）===
   - DOMAIN-SUFFIX,run.app
+  - DOMAIN-SUFFIX,cloud.run
 
   - DOMAIN-SUFFIX,app-analytics-services.com
   

@@ -1839,6 +1839,9 @@
     "DOMAIN-SUFFIX,publicinterestregistry.org": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,radix.host": [
+      "direct.yaml"
+    ],
     "DOMAIN-SUFFIX,verisign.com": [
       "direct.yaml"
     ],
@@ -2329,6 +2332,9 @@
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,run.app": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,cloud.run": [
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,app-analytics-services.com": [
@@ -2901,6 +2907,9 @@
     "DOMAIN-SUFFIX,metaaivm.com": [
       "meta.yaml"
     ],
+    "DOMAIN-SUFFIX,metaaiusercontent.com": [
+      "meta.yaml"
+    ],
     "DOMAIN-SUFFIX,muse.ai": [
       "meta.yaml"
     ],
@@ -3384,6 +3393,9 @@
     "DOMAIN-SUFFIX,manus.space": [
       "proxy-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,manus.im": [
+      "proxy-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,agentlane.com": [
       "proxy-ai.yaml"
     ],
@@ -3417,10 +3429,16 @@
     "DOMAIN-SUFFIX,factory.ai": [
       "proxy-ai.yaml"
     ],
+    "DOMAIN-SUFFIX,factory.com": [
+      "proxy-ai.yaml"
+    ],
     "DOMAIN-SUFFIX,deepl.com": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,usemagpie.ai": [
+      "proxy-ai.yaml"
+    ],
+    "DOMAIN-SUFFIX,nekuda.ai": [
       "proxy-ai.yaml"
     ],
     "DOMAIN-SUFFIX,smjcdh.top": [
@@ -3847,6 +3865,12 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,vercel.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vercel.sh": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,vercel-status.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,wasmer.io": [
@@ -6438,6 +6462,12 @@
     "DOMAIN-SUFFIX,propelauth.com": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,pusher.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,ccxt.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,redd.it": [
       "social.yaml"
     ],
@@ -7144,6 +7174,9 @@
       "us-payment.yaml"
     ],
     "DOMAIN-SUFFIX,loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com": [
+      "us-payment.yaml"
+    ],
+    "DOMAIN-SUFFIX,squarecdn.com": [
       "us-payment.yaml"
     ],
     "DOMAIN-SUFFIX,weixin.com": [

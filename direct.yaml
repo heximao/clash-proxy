@@ -226,6 +226,7 @@ payload:
   - DOMAIN-SUFFIX,rdap.org
   - DOMAIN-SUFFIX,identitydigital.services
   - DOMAIN-SUFFIX,publicinterestregistry.org
+  - DOMAIN-SUFFIX,radix.host
 
 # === 域名查询 / RDAP（2026-10-05 漏网之鱼补录）===
   - DOMAIN-SUFFIX,verisign.com

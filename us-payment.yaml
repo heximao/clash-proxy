@@ -19,3 +19,6 @@ payload:
   - DOMAIN-SUFFIX,api.wise.com
   - DOMAIN-SUFFIX,sst.wise.com
   - DOMAIN-SUFFIX,loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com
+
+# === Square / Block（2026-11-23 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,squarecdn.com
