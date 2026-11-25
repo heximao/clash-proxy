@@ -18,3 +18,8 @@ payload:
   - DOMAIN-SUFFIX,tradingcode.net
   - DOMAIN-SUFFIX,trading-strategies.academy
   - DOMAIN-SUFFIX,biggo.com
+
+# === 财经数据 API（2026-11-25 漏网之鱼补录）===
+# finnhub.io：海外行情数据 API（node 24 次）；stooq.com：历史行情 CSV 下载（curl 2 次）
+  - DOMAIN-SUFFIX,finnhub.io
+  - DOMAIN-SUFFIX,stooq.com

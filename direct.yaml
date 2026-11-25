@@ -413,3 +413,20 @@ payload:
   - DOMAIN-SUFFIX,minimax.io
   - DOMAIN-SUFFIX,aihubmix.com
   - DOMAIN-SUFFIX,ccswitch.io
+
+# === 开源项目 / 开发者资源（2026-11-25 漏网之鱼补录）===
+# go-licenses / curl 拉取 license 与 module 元数据（gopkg.in、k8s.io、go.yaml.in、dario.cat、opentelemetry.io、ffmpeg.org、videolan.org、mpg123.de），本机直连探测 200/30x
+# ipsw.me：iOS 固件信息站（api.ipsw.me 16 次），直连探测 200
+  - DOMAIN-SUFFIX,gopkg.in
+  - DOMAIN-SUFFIX,k8s.io
+  - DOMAIN-SUFFIX,yaml.in
+  - DOMAIN-SUFFIX,dario.cat
+  - DOMAIN-SUFFIX,opentelemetry.io
+  - DOMAIN-SUFFIX,ffmpeg.org
+  - DOMAIN-SUFFIX,videolan.org
+  - DOMAIN-SUFFIX,mpg123.de
+  - DOMAIN-SUFFIX,ipsw.me
+
+# === Airbnb 中国站（2026-11-25 漏网之鱼补录）===
+# airbnb.cn / f02aa.airbnb.cn 命中 oc-cn-domain（国内可达），.cn 域名归 direct
+  - DOMAIN-SUFFIX,airbnb.cn

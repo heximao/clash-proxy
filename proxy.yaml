@@ -140,6 +140,8 @@ payload:
 
 # === 机器人验证 ===
   - DOMAIN-SUFFIX,hcaptcha.com
+# Arkose Labs 反 bot 验证（2026-11-25 补录）：BRAND-ANCHOR openai-api.arkoselabs.com @ openai.yaml:15，airbnb-api.arkoselabs.com 命中
+  - DOMAIN-SUFFIX,arkoselabs.com
 
 # === unsplash ===
   - DOMAIN-SUFFIX,imgix.com
@@ -1078,6 +1080,7 @@ payload:
   - DOMAIN-SUFFIX,vk.com
   - DOMAIN-SUFFIX,er-api.com
   - DOMAIN-SUFFIX,frankfurter.app
+  - DOMAIN-SUFFIX,frankfurter.dev
   - DOMAIN-SUFFIX,geojs.io
 
 # === 漏网之鱼（2026-11-06 补录）海外 CDN / 工具 ===
@@ -1199,3 +1202,14 @@ payload:
 # === 漏网之鱼（2026-11-23 补录）海外服务 / 工具 ===
   - DOMAIN-SUFFIX,pusher.com
   - DOMAIN-SUFFIX,ccxt.com
+
+# === 漏网之鱼（2026-11-25 补录）海外服务 / 工具 ===
+# browser-intake-us3-datadoghq.com：判据 2 同厂商兄弟域（既有 browser-intake-datadoghq.com / datadoghq.com）；`-us3` 是前缀拼接不是子域，原后缀规则不覆盖
+# airbnb.com / muscache.com：Airbnb 主站 + 图片 CDN（无 airbnb.yaml，海外知名公司杂项归 proxy）
+# bookra1n.com / pablostanley.com / keydesign.xyz：单次命中、无产品指向的海外站（直连状态不确定，兜底归 proxy）
+  - DOMAIN-SUFFIX,airbnb.com
+  - DOMAIN-SUFFIX,muscache.com
+  - DOMAIN-SUFFIX,browser-intake-us3-datadoghq.com
+  - DOMAIN-SUFFIX,bookra1n.com
+  - DOMAIN-SUFFIX,pablostanley.com
+  - DOMAIN-SUFFIX,keydesign.xyz

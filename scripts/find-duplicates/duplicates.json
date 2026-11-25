@@ -2160,6 +2160,36 @@
     "DOMAIN-SUFFIX,ccswitch.io": [
       "direct.yaml"
     ],
+    "DOMAIN-SUFFIX,gopkg.in": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,k8s.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,yaml.in": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,dario.cat": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,opentelemetry.io": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ffmpeg.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,videolan.org": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,mpg123.de": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,ipsw.me": [
+      "direct.yaml"
+    ],
+    "DOMAIN-SUFFIX,airbnb.cn": [
+      "direct.yaml"
+    ],
     "IP-CIDR,8.8.8.8,no-resolve": [
       "dns.yaml"
     ],
@@ -2203,6 +2233,12 @@
       "fin-media.yaml"
     ],
     "DOMAIN-SUFFIX,biggo.com": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,finnhub.io": [
+      "fin-media.yaml"
+    ],
+    "DOMAIN-SUFFIX,stooq.com": [
       "fin-media.yaml"
     ],
     "DOMAIN-SUFFIX,tradingview.com": [
@@ -3727,6 +3763,9 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,hcaptcha.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,arkoselabs.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,imgix.com": [
@@ -6165,6 +6204,9 @@
     "DOMAIN-SUFFIX,frankfurter.app": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,frankfurter.dev": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,geojs.io": [
       "proxy.yaml"
     ],
@@ -6466,6 +6508,24 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,ccxt.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,airbnb.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,muscache.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,browser-intake-us3-datadoghq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,bookra1n.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,pablostanley.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,keydesign.xyz": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [

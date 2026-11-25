@@ -151,3 +151,25 @@ freeonlineapps.net skip:广告/追踪类（免费在线工具聚合站 CDN，cdn
 amplitude.com skip:广告/追踪类（Amplitude 产品分析埋点，sr-client-cfg.amplitude.com 2 次命中；仅 api.amplitude.com 精确子域在库），整批不落盘
 51.la skip:广告/追踪类（51.LA 站长统计，collect-v6.51.la 1 次命中），整批不落盘
 app-us1.com skip:广告/追踪类（ActiveCampaign 邮件营销追踪 CDN，diffuser-cdn.app-us1.com 1 次命中），整批不落盘
+# --- 2026-11-25 automation 轮广告/追踪类新裁决（AGENTS.md 整批不落盘纪律，firefox 浏览产出）---
+hubspot.com skip:广告/追踪类（HubSpot 营销追踪族 js.hubspot.com / track.hubspot.com / cta-service-cms2.），整批不落盘
+hsforms.com skip:广告/追踪类（HubSpot 表单 forms-/perf-na1.hsforms.com），整批不落盘
+hsforms.net skip:广告/追踪类（HubSpot 表单 JS js.hsforms.net），整批不落盘
+hscollectedforms.net skip:广告/追踪类（HubSpot 表单采集 forms-/js.hscollectedforms.net），整批不落盘
+hs-analytics.net skip:广告/追踪类（HubSpot 分析 js.hs-analytics.net），整批不落盘
+hs-banner.com skip:广告/追踪类（HubSpot Cookie 横幅 js.hs-banner.com），整批不落盘
+hs-scripts.com skip:广告/追踪类（HubSpot 脚本 js.hs-scripts.com），整批不落盘
+hsadspixel.net skip:广告/追踪类（HubSpot 广告像素 js.hsadspixel.net），整批不落盘
+hubapi.com skip:广告/追踪类（HubSpot 表单提交 API api.hubapi.com），整批不落盘
+zoominfo.com skip:广告/追踪类（ZoomInfo 访客识别 ws.zoominfo.com），整批不落盘
+zi-scripts.com skip:广告/追踪类（ZoomInfo 追踪脚本 js.zi-scripts.com），整批不落盘
+clearbit.com skip:广告/追踪类（Clearbit B2B 访客识别 app.clearbit.com），整批不落盘
+clearbitjs.com skip:广告/追踪类（Clearbit JS x.clearbitjs.com），整批不落盘
+clearbitscripts.com skip:广告/追踪类（Clearbit 追踪脚本 tag.clearbitscripts.com），整批不落盘
+company-target.com skip:广告/追踪类（Demandbase B2B 广告 api./s.company-target.com），整批不落盘
+demandbase.com skip:广告/追踪类（Demandbase ABM 广告 tag./tag-logger.），整批不落盘
+ketchcdn.com skip:广告/追踪类（Ketch GDPR 同意管理 CDN global.ketchcdn.com，先例 usercentrics.eu），整批不落盘
+ketchjs.com skip:广告/追踪类（Ketch CMP JS cdn.ketchjs.com），整批不落盘
+ninetailed.co skip:广告/追踪类（Ninetailed 个性化/实验体验 API），整批不落盘
+mountain.com skip:广告/追踪类（MNTN 联网电视效果广告平台 px./gs./dx.mountain.com），整批不落盘
+pdst.fm skip:广告/追踪类（播客广告追踪前缀 cdn.pdst.fm），整批不落盘

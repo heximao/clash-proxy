@@ -1,5 +1,28 @@
 # 更新记录
 
+## 2026-11-25 漏网之鱼归类：昨日 11-24 双日志 20 域名补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-24_09-57-33` 与 `log/clashx-meta-log/2026-11-24_19-36-44`（均为昨日日期前缀，`cp -R` 自 `~/.config/clash.meta/logs`，只读源不做 mv/rm；各 4 个文件：`clashx.log` / `clashx_core_24_*.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，共 8 个）。两文件夹为同一日两次 ClashX 启动产生的 core，无重叠。
+- 提取量：候选域名 86 个（`match Match` 83 / `oc-cn-domain` 3），主域归并 62 个；公网裸 IP 3（`1.1.1.1`、`8.8.8.8`、`52.22.50.55`）；skip-list 命中 6（`sg.mmstat.com` 12、`etahub.com` 10、`usercentrics.eu` ×3 子域 9/8/1、`www.clarity.ms` 1）；manual 命中 0；伪域名 4、探针 0、私有 IP 0。
+- `check_coverage` 首轮判定：域名 covered 20 / uncovered 41（brand-anchor 2）；IP covered 2 / uncovered 1。
+- 补录明细（20 域名，4 个文件）：
+  - **`gopkg.in` / `k8s.io` / `yaml.in` / `dario.cat` / `opentelemetry.io` / `ffmpeg.org` / `videolan.org` / `mpg123.de`** → `direct.yaml` 新增「开源项目 / 开发者资源（2026-11-25 漏网之鱼补录）」组（进程 `go-licenses` / `curl` 拉取 license 与 module 元数据，均为开源项目/文档站；本机 `curl --noproxy '*'` 直连探测 200/301/307，判为可稳定直连）。
+  - **`ipsw.me`** → 同上组（`api.ipsw.me` 16 次，iOS 固件信息站，curl；直连探测 200）。
+  - **`airbnb.cn`** → `direct.yaml` 新增「Airbnb 中国站（2026-11-25 漏网之鱼补录）」组（命中 `airbnb.cn` + `f02aa.airbnb.cn` 且类别为 `oc-cn-domain`＝国内可达；`.cn` 域名归 direct.yaml，2026-10-22 用户裁定）。
+  - **`frankfurter.dev`** → `proxy.yaml`「漏网之鱼（2026-11-05 补录）海外杂项」组 `frankfurter.app` 旁（判据 1 BRAND-ANCHOR：标签 `frankfurter` 逐字符相同；ECB 汇率 API 的 TLD 变体，零歧义）。
+  - **`arkoselabs.com`** → `proxy.yaml`「机器人验证」组 `hcaptcha.com` 后（BRAND-ANCHOR `openai-api.arkoselabs.com` @ openai.yaml:15；命中 `airbnb-api.arkoselabs.com`＝Airbnb 登录用 Arkose Labs 反 bot 验证，服务需代理加载）。
+  - **`airbnb.com` / `muscache.com`** → `proxy.yaml` 新增「漏网之鱼（2026-11-25 补录）海外服务 / 工具」组（Airbnb 主站 + 图片 CDN，firefox；无 `airbnb.yaml`，按 2026-10-28 裁定不新建厂商文件、海外知名公司杂项归 proxy.yaml）。
+  - **`browser-intake-us3-datadoghq.com`** → 同上组（判据 2 同厂商兄弟域：`browser-intake-datadoghq.com` @ proxy.yaml:41、`datadoghq.com` @ proxy.yaml:40；注意 `-us3` 非子域拼接，既有后缀规则不覆盖，首轮 check_coverage 亦判 UNCOVERED）。
+  - **`bookra1n.com` / `pablostanley.com` / `keydesign.xyz`** → 同上组（各 1 次、无进程名/单 firefox 命中、无产品指向的海外站：BR Team 主页、设计师个人站、Sierra WordPress 主题演示站；直连状态不确定，按兜底规则海外杂项归 proxy.yaml）。
+  - **`finnhub.io` / `stooq.com`** → `fin-media.yaml` 新增「财经数据 API（2026-11-25 漏网之鱼补录）」组（finnhub 海外行情数据 API，node 24 次；stooq 历史行情 CSV，curl 2 次；与「财经媒体与数据」文件性质一致）。
+- 未收录及原因：
+  - **广告/追踪类整批不落盘 21 个主域**（只记录不判断，禁止核对 reject.yaml）：`hubspot.com` / `hsforms.com` / `hsforms.net` / `hscollectedforms.net` / `hs-analytics.net` / `hs-banner.com` / `hs-scripts.com` / `hsadspixel.net` / `hubapi.com`（HubSpot 营销追踪族）、`zoominfo.com` / `zi-scripts.com`（ZoomInfo 访客识别）、`clearbit.com` / `clearbitjs.com` / `clearbitscripts.com`（Clearbit B2B 追踪）、`company-target.com` / `demandbase.com`（Demandbase ABM 广告）、`ketchcdn.com` / `ketchjs.com`（Ketch CMP，先例 usercentrics.eu）、`ninetailed.co`（个性化/实验体验）、`mountain.com`（MNTN 联网电视效果广告平台，首页标题实证）、`pdst.fm`（播客广告追踪前缀）。均已同步写入 skip-list（`skip` 模式），避免下轮重复列表。
+  - **裸 IP `52.22.50.55`**（AWS us-east-1，firefox 1 次）：判据 7 要求同厂商 IP 分组已存在，库内无 AWS 网段分组，单次命中无产品指向 → 不归类。
+  - covered 20 主域整批跳过（`hf.space` / `phncdn.com` / `openrouter.ai` / `jsdelivr.net` / `tavily.com` / `workbuddy.ai` / `usemagpie.ai` / `rust-lang.org` / `pornhub.com` / `pscp.tv` / `rdap.org` / `verisign.com` / `agnes-ai.com` / `models.dev` / `opencode.ai` / `pusher.com` / `identitydigital.services` / `vercel-status.com` / `metaaiusercontent.com` / `radix.host`）；IP covered 2（`1.1.1.1` → dns.yaml:4、`8.8.8.8` → dns.yaml:2 + google.yaml:27）。
+- 待人工确认：无新增，`issues-domain.md` 维持 0 项；skip-list `manual` 新增 0。
+- 自检结果：`find_duplicates` 跨文件重复 **0**（历史基线 `settings.crashlytics.com` 已不在报告内）；intra-file 23 条全部为未跟踪 `config.yaml` 的策略组名/DNS 配置值噪声（历史基线，非规则重复），本次新引入 0。被编辑 3 个规则文件（`direct.yaml` / `proxy.yaml` / `fin-media.yaml`）`yaml.safe_load` 全部通过。新增 20 域名 `check_coverage` 复核 covered 20 / uncovered 0。
+- Git：main 提交 → push → 同步 `0 0`（本轮新增 skip-list 项 21 条，AGENTS.md「已裁决结论」清单同步延后至交互式会话）。
+
 ## 2026-11-24 漏网之鱼归类：昨日 11-23 日志 11 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-23_09-59-13`（`cp -R` 自 `~/.config/clash.meta/logs`，只读源；共 4 个日志文件：`clashx.log` / `clashx_core_23_09-59-23.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，均为昨日文件夹内容，无跨日常量）。
