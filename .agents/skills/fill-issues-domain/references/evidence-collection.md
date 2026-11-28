@@ -56,7 +56,7 @@ $PY .agents/skills/fill-issues-domain/scripts/log-cooccurrence/log_cooccurrence.
 
 | 实测 | 结论 |
 |---|---|
-| `applogcdn.com` → `ns1.volc-dns.com. dnsadmin.bytedance.com.` | 字节（该轮据此定 `bytedance.yaml`） |
+| `applogcdn.com` → `ns1.volc-dns.com. dnsadmin.bytedance.com.` | 字节（该轮据此定 `bytedance.yaml`；2026-11-28 起归 `cn.yaml`） |
 | NS 为 `*-m.ns1pcdn.net` + NS1 | 多租户 CDN，无品牌指向 → 无锚点 |
 
 ### ASN 直接判厂商，注册商不是判据
@@ -76,7 +76,7 @@ curl -s --max-time 10 "https://ipwho.is/<ip>" | $PY -c "import json,sys;c=json.l
 | 实测 | 定性 |
 |---|---|
 | `111666.best` → 「16图床，永久免费，无需登录的图床」 | 图床（`i.` 子域即图片域） |
-| `pixpix.com` → 「PixPix — AI Product Image & Video Generator for E-commerce」 | AI SaaS → `proxy-ai.yaml` |
+| `pixpix.com` → 「PixPix — AI Product Image & Video Generator for E-commerce」 | AI SaaS → 原 `proxy-ai.yaml`（2026-11-28 起归 `proxy.yaml`） |
 | `sitemana.com` → 「Your conversion catalyst」+ 与 doubleclick 同批 | 广告追踪 → skip |
 
 `403 Just a moment...` / `429` 多为 Cloudflare 挑战或反爬，**不代表无主**，只说明该端点在防抓取。

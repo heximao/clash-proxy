@@ -10,7 +10,7 @@ PY=/Users/saibopika/.workbuddy/binaries/python/envs/default/bin/python
 cd /Users/saibopika/clash-proxy
 $PY .agents/skills/fill-issues-domain/scripts/verify-landing/verify_landing.py \
     --domains applogcdn.com byte-test.com sitemana.com \
-    --yaml bytedance.yaml proxy.yaml
+    --yaml cn.yaml proxy.yaml
 ```
 
 `--expect` 默认 `auto`：域名在 `reject.yaml` 命中或 skip-list 为 `skip` 时按 skip 项校验，

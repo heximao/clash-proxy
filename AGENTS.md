@@ -41,7 +41,7 @@ clash-proxy/
 
 #### 目录和文件命名规则
 
-- **文件命名**：新建或重命名文件，使用 `lowercase.yaml` 格式，多词用连字符（示例 `hk-broker.yaml`、`fin-media.yaml`）。
+- **文件命名**：新建或重命名文件，使用 `lowercase.yaml` 格式，多词用连字符（示例 `us-broker.yaml`、`fin-tech.yaml`）。
 - **log/**：运行日志目录（流量日志和插件日志）。日志中 `match Match` 表示该域名未匹配任何规则，落入了"漏网之鱼"策略组；`match RuleSet(oc-cn-domain)` 表示命中了外部 OpenClash CN 域名规则集（通常走 DIRECT）。两类目标都说明未被本仓库 yaml 规则覆盖，需定期将这些域名归类到对应的规则文件中。归类漏网之鱼的域名时，查询域名归属用 **RDAP**（本机 `whois` 不可用，需走代理，见「常见坑」）。
 
 #### 文件分类规则

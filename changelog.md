@@ -10,7 +10,7 @@
   - `hk.yaml` 删空组头「# === 香港银行 ===」（组下 0 规则，银行规则实际挂在 ZA Group / 汇立 / 传统银行等组头下）。
 - 验证：`verify_landing.py` `py_compile` 通过；`trigger_eval.py` 离线回归失败 0 条（夹具未动）；全库空组头扫描 0；`find_duplicates` 跨文件 0 / 文件内 0 退出码 0；活文档失效引用扫描清零（含 `fill-domains-from-log` 第 7 节路由表与判据 6，已于 11-28 两轮内同步过）。
 - 并发注记：本条目提交时 `proxy.yaml`（estk.me）/ `direct.yaml`（inputsource.pro）为在途自动化轮改动，未纳入本次暂存；顶部「漏网之鱼归类 11-27」条目随本文件一并入库，其 Git 操作链由该轮补全。
-- Git：main 提交（skill 活文档 4 + hk.yaml + AGENTS.md + changelog + 报告，不含在途 direct/proxy）→ push → 校验 `0 0`。
+- Git：main 提交（skill 活文档 4 + hk.yaml + AGENTS.md + changelog；`duplicates.json` 因含在途改动不纳入，留待下轮）→ push → 校验 `0 0`。
 
 ## 2026-11-28 漏网之鱼归类：昨日 11-27 日志 2 主域补录（自动化轮）
 

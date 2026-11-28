@@ -3,8 +3,8 @@
 
 用法（务必用带 pyyaml 的解释器）：
     /Users/saibopika/.workbuddy/binaries/python/envs/default/bin/python \
-        verify_landing.py --domains applogcdn.com byte-test.com ... \
-        --yaml bytedance.yaml proxy.yaml
+        verify_landing.py --domains applogcdn.com pixpix.com sitemana.com ... \
+        --yaml cn.yaml proxy.yaml
 
 判定口径：
     OK       恰好落在 1 个业务 yaml（落盘项应为此状态）
