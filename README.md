@@ -20,14 +20,10 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 
 | 文件 | 说明 |
 |------|------|
-| **alibaba.yaml** | 阿里巴巴 / 阿里系服务（淘宝、天猫、高德、ModelScope 等） |
 | **apple.yaml** | Apple 服务（App Store、iCloud 等） |
-| **baidu.yaml** | 百度 |
-| **bilibili.yaml** | 哔哩哔哩（B 站、B23、BiliBili 国际版等） |
-| **bytedance.yaml** | 字节跳动（抖音、飞书、豆包、火山引擎、Trae CN 等） |
 | **claude.yaml** | Claude / Anthropic |
 | **cn-global.yaml** | 海外 / 国际版服务（Steam 平台、腾讯海外 AI、ModelScope 国际版、字节海外 Trae/TikTok/Lark） |
-| **cn.yaml** | 中国大陆 `.cn` 域名（运营商、政务、教育网、WPS 等，可直连） |
+| **cn.yaml** | 中国大陆域名（运营商、政务、教育网、WPS、百度、B 站、字节跳动、阿里系、网易云音乐、腾讯、小红书等，可直连） |
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct.yaml** | 可直连的域名（含国内 AI 平台与可直连 AI 服务） |
 | **dns.yaml** | DNS 服务器 |
@@ -42,22 +38,18 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **line.yaml** | LINE |
 | **meta.yaml** | Facebook、Instagram、WhatsApp、Threads、Meta Muse |
 | **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
-| **netease-music.yaml** | 网易云音乐 |
 | **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
-| **proxy-ai.yaml** | 需代理的 AI 服务 |
-| **proxy.yaml** | 需代理的杂项域名 |
+| **proxy.yaml** | 需代理的杂项域名（含需代理的 AI 服务） |
 | **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
 | **social.yaml** | Reddit、Discord、Pinterest 等 |
 | **streaming.yaml** | 流媒体（Netflix、Spotify、Pornhub、Disney+、Twitch 等） |
 | **telegram.yaml** | Telegram |
-| **tencent.yaml** | 腾讯（QQ、腾讯云等） |
 | **us-bank.yaml** | 美国银行，建议优先直连 |
 | **us-broker.yaml** | 美股券商，建议优先直连 |
 | **us-payment.yaml** | 美国支付（PayPal、Wise 等） |
 | **wechat.yaml** | 微信（国内域名，可直连） |
 | **x.yaml** | Twitter / X |
-| **xhs.yaml** | 小红书 / RedNote |
 | **youtube.yaml** | YouTube |
 
 ## 使用建议

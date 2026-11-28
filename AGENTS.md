@@ -46,11 +46,11 @@ clash-proxy/
 
 #### 文件分类规则
 
-- **大型互联网公司优先**：大型互联网公司使用独立规则文件，其次按照域名所属的服务区分（例如Apple、Google、Microsoft、AI 等）有各自专属文件。
-- **proxy.yaml**：兜底存放无法直连或者直连不稳定的杂项规则
+- **大型互联网公司优先**：大型互联网公司使用独立规则文件，其次按照域名所属的服务区分（例如Apple、Google、Microsoft、AI 等）有各自专属文件。百度、B 站、字节跳动、阿里系、网易云音乐、腾讯、小红书等国内厂商规则已于 2026-11-28 并入 `cn.yaml`（海外 / 国际版仍归 `cn-global.yaml`）
+- **proxy.yaml**：兜底存放无法直连或者直连不稳定的杂项规则（需代理的 AI 服务已于 2026-11-28 并入，原 `proxy-ai.yaml` 删除）
 - **direct.yaml**：兜底存放可稳定直连的杂项规则。
-- **-global.yaml**：同厂商的海外 / 国际版服务，与国内主文件分开维护，目前有 `alibaba`、`bytedance`、`tencent` 三对
-- **AI 服务**：需代理的归 `proxy-ai.yaml`；可直连的归 `direct.yaml`（原 `direct-ai.yaml` 已于 2026-11-22 并入 `direct.yaml` 并删除文件）；大厂 AI 优先归入厂商文件（如 `claude.yaml`、`openai.yaml`）
+- **-global.yaml**：同厂商的海外 / 国际版服务，与国内主文件分开维护；`alibaba-global` / `bytedance-global` / `tencent-global` 三对已于 2026-11-22 合并入 `cn-global.yaml`
+- **AI 服务**：需代理的归 `proxy.yaml`（原 `proxy-ai.yaml` 已于 2026-11-28 并入）；可直连的归 `direct.yaml`（原 `direct-ai.yaml` 已于 2026-11-22 并入 `direct.yaml` 并删除文件）；大厂 AI 优先归入厂商文件（如 `claude.yaml`、`openai.yaml`）
 - **reject.yaml**：由 GitHub Actions 工作流维护，每日从 Loyalsoldier 上游自动生成广告域名 — 禁止编辑，为本地新发现的域名做分类时，也不要查询、核对**reject.yaml**。
 
 #### 域名归属判定判据（按可信度排序）

@@ -1,5 +1,15 @@
 # 更新记录
 
+## 2026-11-28 规则文件整合：7 国内厂商文件并入 cn.yaml、proxy-ai.yaml 并入 proxy.yaml
+
+- 用户指令整合：`baidu.yaml` / `bilibili.yaml` / `bytedance.yaml` / `alibaba.yaml` / `netease-music.yaml` / `tencent.yaml` / `xhs.yaml` 共 7 文件并入 `cn.yaml`（`git rm` 删除源文件，保留原分组注释头并归一至 0 列）；`proxy-ai.yaml` 并入 `proxy.yaml` 尾部（`git rm` 删除）。
+- 合并前查重：8 个源文件全部规则（cn 侧 141 条 / proxy-ai 侧 48 条）与全库其余 30 个业务 yaml 及源文件间零交集（逐条脚本比对），无需去重。
+- 结果：`cn.yaml` 规则数 80 → 179（逐段累计 56/72/104/121/148/177/179），新增「网易云音乐」组头（原文件头部规则无组头）；`proxy.yaml` 并入 74 行、payload 规则数 → 1060。两文件头注说明已更新。
+- 文档同步：README「规则文件」表删 8 行、`cn.yaml` / `proxy.yaml` 行说明并入；AGENTS.md「文件分类规则」四条更新（国内厂商归 `cn.yaml`、AI 需代理归 `proxy.yaml`、-global 三对已于 2026-11-22 并入 `cn-global.yaml`）；`fill-domains-from-log/SKILL.md` 第 7 节路由表同步（`fill-issues-domain` 的 `trigger_eval.py` 回归夹具为 2026-10-28 历史记录含已删 `bytedance-global.yaml`，不动）。
+- 未处理：本地未跟踪 `config.yaml` 运行副本内仍引用 `heximao/rule_provider/{alibaba,bytedance,proxy-ai}.yaml` CDN 旧地址（另一仓库 rule_provider 的产物，本次不改；用户如需可后续在 rule_provider 仓库同步）。
+- 自检：`find_duplicates` 跨文件 0、文件内 0，退出码 0；`cn.yaml` / `proxy.yaml` `yaml.safe_load` 通过（pyyaml 解释器）。
+- Git：main 提交（8 删 + cn/proxy 改 + README / AGENTS / SKILL / changelog / 报告）→ push → 校验 `0 0`。
+
 ## 2026-11-28 find_duplicates 脚本：排除 config.yaml 本地配置副本
 
 - 修改 `scripts/find-duplicates/find_duplicates.py`：`EXCLUDED` 集合由 `{'reject.yaml'}` 扩展为 `{'reject.yaml', 'config.yaml'}`。`config.yaml` 是未跟踪的 ClashX Meta 运行配置副本，脚本此前将其 `-` 列表行（策略组名、DNS 配置值、端口等）误报为文件内重复（23 条噪声），导致退出码恒为 1，无法作为门禁。

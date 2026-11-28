@@ -1,7 +1,8 @@
 payload:
 
-# 说明：本文件收录 `.cn` 域名（2026-10-28 从 direct.yaml 拆出），全部为国内可直连站点。
-# 与 direct.yaml 规则互不重叠，可单独引用，也可与 direct.yaml 一起引用。
+# 说明：本文件收录中国大陆可直连站点（2026-10-28 从 direct.yaml 拆出 .cn 域名；
+# 2026-11-28 并入 baidu / bilibili / bytedance / alibaba / netease-music / tencent / xhs
+# 七个厂商文件的国内规则），与 direct.yaml 规则互不重叠，可单独引用，也可与 direct.yaml 一起引用。
 
 # === 中国移动 ===
   - DOMAIN-SUFFIX,10086.cn
@@ -78,3 +79,179 @@ payload:
   - DOMAIN-SUFFIX,i4.cn
   - DOMAIN-SUFFIX,i5.cn
   - DOMAIN-SUFFIX,crlocsp.cn
+
+# === Baidu / 百度（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,baidu.com
+# 百度静态资源 CDN（2026-10-07 漏网之鱼补录，与 baidu.com 同系）
+  - DOMAIN-SUFFIX,bdstatic.com
+# 百度图片 / 静态资源 CDN（2026-10-12 漏网之鱼补录，与 baidu.com 同系）
+  - DOMAIN-SUFFIX,bdimg.com
+# 百度智能云 BOS 对象存储 CDN（2026-10-31 漏网之鱼补录，与 baidu.com 同系）
+  - DOMAIN-SUFFIX,bcebos.com
+
+# === B 站主域 / 客户端 API ===
+  - DOMAIN-SUFFIX,bilibili.com
+  - DOMAIN-SUFFIX,bilibili.tv
+  - DOMAIN-SUFFIX,b23.tv
+  - DOMAIN-SUFFIX,acg.tv
+  - DOMAIN-SUFFIX,biliapi.net
+  - DOMAIN-SUFFIX,biliapi.com
+  - DOMAIN,apiintl.biliapi.net
+
+# === 视频 / 图片 CDN ===
+  - DOMAIN-SUFFIX,bilivideo.com
+  - DOMAIN-SUFFIX,bilivideo.cn
+  - DOMAIN-SUFFIX,hdslb.com
+  - DOMAIN-SUFFIX,biliimg.com
+  - DOMAIN,upos-hz-mirrorakam.akamaized.net
+
+# === 游戏 / 关联域（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,acgvideo.com
+  - DOMAIN-SUFFIX,biligame.com
+  - DOMAIN-SUFFIX,solseed.cn
+  - DOMAIN-SUFFIX,bilibilitoy.com
+
+# === ByteDance / 字节跳动 ===
+  - DOMAIN-SUFFIX,bytedance.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,doubao.com
+  - DOMAIN-SUFFIX,douyin.com
+  - DOMAIN-SUFFIX,toutiao.com
+# === Feishu / 飞书 ===
+  - DOMAIN-SUFFIX,feishu.cn
+  - DOMAIN-SUFFIX,feishucdn.com
+  - DOMAIN-SUFFIX,larkoffice.com
+# === Short URL / 短链 ===
+  - DOMAIN-SUFFIX,bdurl.net
+# === VisActor 开源可视化（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,visactor.io
+# === 火山引擎 / 基础设施（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,volces.com
+  - DOMAIN-SUFFIX,volccdn.com
+  - DOMAIN-SUFFIX,volceapplog.com
+# === Trae CN（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,trae.cn
+  - DOMAIN-SUFFIX,trae.com.cn
+  - DOMAIN-SUFFIX,mchost.guru
+# === 字节系图片 / 对象存储（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytetos.com
+  - DOMAIN-SUFFIX,byteacctimg.com
+# === MarsCode（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,marscode.cn
+# === 字节系 API（2026-10-11 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytedanceapi.com
+# === 字节系 CDN / 配置（2026-10-13 / 2026-10-17 / 2026-10-20 / 2026-10-28 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,bytescm.com
+  - DOMAIN-SUFFIX,bytetcc.com
+  - DOMAIN-SUFFIX,doubaocdn.com
+  - DOMAIN-SUFFIX,bytednsdoc.com
+  - DOMAIN-SUFFIX,bytedancevod.com
+  - DOMAIN-SUFFIX,bytecdn.com
+  - DOMAIN-SUFFIX,ecombdimg.com
+  - DOMAIN-SUFFIX,bytegoofy.com
+  - DOMAIN-SUFFIX,bytelb.net
+  - DOMAIN-SUFFIX,applogcdn.com
+
+# === ModelScope ===
+  - DOMAIN-SUFFIX,modelscope.cn
+# === 淘宝 / 天猫 / 阿里巴巴（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,alibaba.com
+  - DOMAIN-SUFFIX,alibaba-inc.com
+# === CDN / 云（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,alicdn.com
+  - DOMAIN-SUFFIX,aliyun.com
+  - DOMAIN-SUFFIX,aliyuncs.com
+  - DOMAIN-SUFFIX,aliapp.org
+  - DOMAIN-SUFFIX,alibabachengdun.com
+# === 高德地图（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,autonavi.com
+  - DOMAIN-SUFFIX,amap.com
+
+# === 支付宝 / 蚂蚁集团（2026-10-22 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,alipay.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN-SUFFIX,zoloz.com
+  - DOMAIN-SUFFIX,zoloz.net
+
+# === 友盟+ / Umeng（2026-10-24 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,umeng.com
+
+# === 网易云音乐 ===
+  - DOMAIN-SUFFIX,163yun.com
+  - DOMAIN-SUFFIX,api.iplay.163.com
+  - DOMAIN-SUFFIX,hz.netease.com
+  - DOMAIN-SUFFIX,mam.netease.com
+  - DOMAIN-SUFFIX,music.163.com
+  - IP-CIDR,101.71.154.241/32,no-resolve
+  - IP-CIDR,103.126.92.132/32,no-resolve
+  - IP-CIDR,103.126.92.133/32,no-resolve
+  - IP-CIDR,112.13.119.17/32,no-resolve
+  - IP-CIDR,112.13.122.1/32,no-resolve
+  - IP-CIDR,115.236.118.33/32,no-resolve
+  - IP-CIDR,115.236.121.1/32,no-resolve
+  - IP-CIDR,118.24.63.156/32,no-resolve
+  - IP-CIDR,193.112.159.225/32,no-resolve
+  - IP-CIDR,223.252.199.66/32,no-resolve
+  - IP-CIDR,223.252.199.67/32,no-resolve
+  - IP-CIDR,39.105.63.80/32,no-resolve
+  - IP-CIDR,45.254.48.1/32,no-resolve
+  - IP-CIDR,47.100.127.239/32,no-resolve
+  - IP-CIDR,59.111.160.195/32,no-resolve
+  - IP-CIDR,59.111.160.197/32,no-resolve
+  - IP-CIDR,59.111.181.35/32,no-resolve
+  - IP-CIDR,59.111.181.38/32,no-resolve
+  - IP-CIDR,59.111.181.60/32,no-resolve
+# === 网易门户 / CDN（2026-10-21 漏网之鱼补录）===
+  - DOMAIN,www.163.com
+  - DOMAIN-SUFFIX,127.net
+  - DOMAIN-SUFFIX,321fenx.com
+
+# === WeChat / 微信 ===
+  - DOMAIN-SUFFIX,weixin.qq.com
+# === QQ / 腾讯通用（2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,qq.com.cn
+# === WorkBuddy / Buddy（腾讯 AI，2026-09-30 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,workbuddy.cn
+  - DOMAIN-SUFFIX,tencentbuddy.com
+# === 腾讯云（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,myqcloud.com
+  - DOMAIN-SUFFIX,cloud.tencent.com
+  - DOMAIN-SUFFIX,tencent-cloud.cn
+  - DOMAIN-SUFFIX,qcloud.com
+  - DOMAIN-SUFFIX,qcloudimg.com
+  - DOMAIN-SUFFIX,tencentcloud.com
+  - DOMAIN-SUFFIX,tencent-cloud.com
+  - DOMAIN-SUFFIX,tencentcs.cn
+  - DOMAIN-SUFFIX,cloudcachetci.com
+  - DOMAIN-SUFFIX,tlivesdk.com
+# === 腾讯主域 / CodeBuddy（2026-10-04 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,codebuddy.cn
+  - DOMAIN-SUFFIX,ardot.tencent.com
+  - DOMAIN-SUFFIX,galileotelemetry.tencent.com
+# === Spacelama（2026-10-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,spacelama.com
+# === 腾讯静态资源（2026-10-07 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,gtimg.com
+  - DOMAIN-SUFFIX,gtimg.cn
+# === 腾讯子域补充（2026-10-11 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,copilot.tencent.com
+  - DOMAIN-SUFFIX,lightai.cloud.tencent.com
+  - DOMAIN-SUFFIX,time1.cloud.tencent.com
+# === 腾讯账号 / 内部办公（2026-10-21 漏网之鱼补录）===
+  - DOMAIN,api.account.tencent.com
+  - DOMAIN,oauth2.account.tencent.com
+  - DOMAIN,identity.tencent.com
+  - DOMAIN-SUFFIX,woa.com
+
+# === 腾讯混元 AI（2026-11-05 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,hunyuan.tencent.com
+
+# === 小红书 / RedNote（2026-10-02 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,zztfly.com
+# === 小红书 CDN（2026-10-21 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,xhscdn.com
