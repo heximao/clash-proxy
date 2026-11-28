@@ -3,15 +3,13 @@ payload:
   #   1. Google 核心域名
   #   2. Google 核心 IP
   #   3. Gmail 邮箱服务
-  #   4. Antigravity（重力实验/AI 相关）
-  #   5. 统计/广告/分析/API
+  #   4. 统计/广告/分析/API
   # === 6. 其它 Google 相关域名 ===
   # === withGoogle ===
   - DOMAIN-SUFFIX,withgoogle.com
 
   # === OSV (Open Source Vulnerabilities) API ===
   - DOMAIN-SUFFIX,osv.dev
-  - DOMAIN-SUFFIX,api.osv.dev
   # === 7. Google with Fastly CDN ===
 
 # === Google 核心域名 ===
@@ -22,6 +20,7 @@ payload:
   - DOMAIN-SUFFIX,google.co.jp
   - DOMAIN-SUFFIX,google.dev
   - DOMAIN-SUFFIX,google.cn
+  - DOMAIN-SUFFIX,google.ai
 
 # === Google 核心 IP ===
   - IP-CIDR,8.8.8.8/32,no-resolve
@@ -44,8 +43,6 @@ payload:
 # === Gmail 邮箱服务 ===
   - DOMAIN-SUFFIX,gmail.com
     
-# === Antigravity（重力实验/AI 相关） ===
-  - DOMAIN-SUFFIX,antigravity.google
 
 # === Google Cloud Run（2026-09-29 漏网之鱼补录；2026-10-22 扩域 a.run.app → run.app 全域，原 a.run.app 覆盖为其子集）===
   - DOMAIN-SUFFIX,run.app
@@ -65,7 +62,6 @@ payload:
   
   - DOMAIN-SUFFIX,cn.widevine.com
   - DOMAIN-SUFFIX,dartsearch-cn.net
-  - DOMAIN-SUFFIX,dg-meta.video.google.com
   
 # === DoubleClick 广告平台 ===
   - DOMAIN-SUFFIX,doubleclick.net
@@ -148,7 +144,6 @@ payload:
 
   - DOMAIN-SUFFIX,service.urchin.com
   - DOMAIN-SUFFIX,settings.crashlytics.com
-  - DOMAIN-SUFFIX,test.gbugs-qa.chromium.org
   - DOMAIN-SUFFIX,update.crashlytics.com
   - DOMAIN-SUFFIX,www.destinationurl.com
   - DOMAIN-SUFFIX,www.pxcc.com

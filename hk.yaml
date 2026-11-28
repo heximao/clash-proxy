@@ -4,8 +4,6 @@ payload:
 
 # === ZA Group ===
   - DOMAIN-SUFFIX,za.group
-  - DOMAIN-SUFFIX,bank.za.group
-  - DOMAIN-SUFFIX,broker.za.group
 
 # === 汇立银行 ===
   - DOMAIN-SUFFIX,welab.bank

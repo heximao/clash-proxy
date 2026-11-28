@@ -1,5 +1,13 @@
 # 更新记录
 
+## 2026-11-28 IP 风控优化：影子规则瘦身 42 条 + AI 推理平台风控白名单 8 域预置
+
+- 影子规则瘦身（同文件内「主域 SUFFIX + 其子域」双写，功能完全重复，逐条脚本比对定位后删除）：`us-payment.yaml` 13 条（paypal 9 子域 + wise 3 子域，保留主域 `paypal.com` / `wise.com`）、`proxy.yaml` 10 条（`ai.io.net`/`status.io.net` 被 `io.net` 覆盖等）、`cn.yaml` 4 条（`weixin.qq.com` 被 `qq.com` 覆盖、`lightai/time1.cloud.tencent.com` 被 `cloud.tencent.com` 覆盖、`apiintl.biliapi.net` 被 `biliapi.net` 覆盖）、`google.yaml` 4 条（`api.osv.dev` 等）、`hk.yaml` / `apple.yaml` / `cn-global.yaml` / `telegram.yaml` / `us-broker.yaml` 各 1 条；共 42 行（含 2 个变空组头「WeChat / 微信」「Antigravity」及其在 `google.yaml` 头部 TOC 的 `# 4. Antigravity` 行，TOC 重编号 5→4）。删除后全库 13 个受影响文件 `yaml.safe_load` 通过，`find_duplicates` 0 重复。
+- `proxy.yaml` AI 段清理：删死组头「MiniMax 国际版」（组下 0 规则，`minimax.io` 实际在 `direct.yaml:413` 可直连侧）；`hf.space` / `hf.co` 孤儿规则补「Hugging Face」组头。
+- AI 风控白名单预置（不依赖日志命中，用户 2026-11-28 裁定）：`groq.com` / `cohere.com` / `together.ai` / `replicate.com` / `fal.ai` / `baseten.co` / `elevenlabs.io` / `deepmind.com` 8 域 → `proxy.yaml` 新增「AI 推理平台（2026-11-28 风控预置白名单）」组；`google.ai` → `google.yaml`「Google 核心域名」组（判据 1 BRAND-ANCHOR `google` @ google.yaml:19）。此前 9 域 `check_coverage` 全部 UNCOVERED，访问会落 `MATCH` 兜底而非 AI 风控节点。
+- 自检：全库空组头扫描 0、影子残留扫描 0、`find_duplicates` 0 重复退出码 0、全部 yaml `yaml.safe_load` 通过。
+- Git：main 提交（13 改）→ push → 校验 `0 0`。
+
 ## 2026-11-28 规则文件整合（二）：line / fin-media 并入 social.yaml、nvidia 并入 proxy.yaml、hk-broker 并入 hk-bank 并改名 hk.yaml
 
 - 用户指令整合：`line.yaml` + `fin-media.yaml` → `social.yaml`（`git rm` 两源文件）；`nvidia.yaml` → `proxy.yaml`（`git rm`）；`hk-broker.yaml` → `hk-bank.yaml` 后 `git mv hk-bank.yaml hk.yaml`（`git rm` hk-broker.yaml）。

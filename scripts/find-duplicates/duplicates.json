@@ -123,9 +123,6 @@
     "DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net": [
       "apple.yaml"
     ],
-    "DOMAIN-SUFFIX,itunes-cdn-cn.itunes-apple.com.akadns.net": [
-      "apple.yaml"
-    ],
     "DOMAIN-SUFFIX,store.apple.com.edgekey.net": [
       "apple.yaml"
     ],
@@ -372,9 +369,6 @@
     "DOMAIN-SUFFIX,tgalileo.com": [
       "cn-global.yaml"
     ],
-    "DOMAIN,sg.tgalileo.com": [
-      "cn-global.yaml"
-    ],
     "IP-CIDR,43.156.86.223/32,no-resolve": [
       "cn-global.yaml"
     ],
@@ -610,9 +604,6 @@
       "cn.yaml"
     ],
     "DOMAIN-SUFFIX,biliapi.com": [
-      "cn.yaml"
-    ],
-    "DOMAIN,apiintl.biliapi.net": [
       "cn.yaml"
     ],
     "DOMAIN-SUFFIX,bilivideo.com": [
@@ -870,9 +861,6 @@
     "DOMAIN-SUFFIX,321fenx.com": [
       "cn.yaml"
     ],
-    "DOMAIN-SUFFIX,weixin.qq.com": [
-      "cn.yaml"
-    ],
     "DOMAIN-SUFFIX,qq.com": [
       "cn.yaml"
     ],
@@ -934,12 +922,6 @@
       "cn.yaml"
     ],
     "DOMAIN-SUFFIX,copilot.tencent.com": [
-      "cn.yaml"
-    ],
-    "DOMAIN-SUFFIX,lightai.cloud.tencent.com": [
-      "cn.yaml"
-    ],
-    "DOMAIN-SUFFIX,time1.cloud.tencent.com": [
       "cn.yaml"
     ],
     "DOMAIN,api.account.tencent.com": [
@@ -1986,9 +1968,6 @@
     "DOMAIN-SUFFIX,osv.dev": [
       "google.yaml"
     ],
-    "DOMAIN-SUFFIX,api.osv.dev": [
-      "google.yaml"
-    ],
     "DOMAIN-SUFFIX,goog": [
       "google.yaml"
     ],
@@ -2008,6 +1987,9 @@
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,google.cn": [
+      "google.yaml"
+    ],
+    "DOMAIN-SUFFIX,google.ai": [
       "google.yaml"
     ],
     "IP-CIDR,8.8.8.8/32,no-resolve": [
@@ -2049,9 +2031,6 @@
     "DOMAIN-SUFFIX,gmail.com": [
       "google.yaml"
     ],
-    "DOMAIN-SUFFIX,antigravity.google": [
-      "google.yaml"
-    ],
     "DOMAIN-SUFFIX,run.app": [
       "google.yaml"
     ],
@@ -2086,9 +2065,6 @@
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,dartsearch-cn.net": [
-      "google.yaml"
-    ],
-    "DOMAIN-SUFFIX,dg-meta.video.google.com": [
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,doubleclick.net": [
@@ -2244,9 +2220,6 @@
     "DOMAIN-SUFFIX,settings.crashlytics.com": [
       "google.yaml"
     ],
-    "DOMAIN-SUFFIX,test.gbugs-qa.chromium.org": [
-      "google.yaml"
-    ],
     "DOMAIN-SUFFIX,update.crashlytics.com": [
       "google.yaml"
     ],
@@ -2278,12 +2251,6 @@
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,za.group": [
-      "hk.yaml"
-    ],
-    "DOMAIN-SUFFIX,bank.za.group": [
-      "hk.yaml"
-    ],
-    "DOMAIN-SUFFIX,broker.za.group": [
       "hk.yaml"
     ],
     "DOMAIN-SUFFIX,welab.bank": [
@@ -2883,9 +2850,6 @@
     "DOMAIN-SUFFIX,smjcdh.top": [
       "proxy.yaml"
     ],
-    "DOMAIN-SUFFIX,dns.cloudflare.com": [
-      "proxy.yaml"
-    ],
     "DOMAIN-SUFFIX,playstation.net": [
       "proxy.yaml"
     ],
@@ -2934,9 +2898,6 @@
     "DOMAIN-SUFFIX,influxdata.com": [
       "proxy.yaml"
     ],
-    "DOMAIN-SUFFIX,formulae.brew.sh": [
-      "proxy.yaml"
-    ],
     "DOMAIN-SUFFIX,brew.sh": [
       "proxy.yaml"
     ],
@@ -2971,9 +2932,6 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,edu.kg": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,api.ttt.sh": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,go.cfapi.ccwu.cc": [
@@ -3328,12 +3286,6 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,api.amplitude.com": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,app.smartmailcloud.com": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,gate.hockeyapp.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,knock.app": [
@@ -5265,15 +5217,6 @@
     "DOMAIN-SUFFIX,betterstack.net": [
       "proxy.yaml"
     ],
-    "DOMAIN-SUFFIX,cdnjs.betterstack.com": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,t.betterstack.com": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,uptime.betterstack.com": [
-      "proxy.yaml"
-    ],
     "DOMAIN-SUFFIX,s1569222.us-west-12.betterstackdata.com": [
       "proxy.yaml"
     ],
@@ -5979,16 +5922,10 @@
     "DOMAIN-SUFFIX,skill.sh": [
       "proxy.yaml"
     ],
-    "DOMAIN-SUFFIX,ai.io.net": [
-      "proxy.yaml"
-    ],
     "DOMAIN-SUFFIX,io.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,ionet.betteruptime.com": [
-      "proxy.yaml"
-    ],
-    "DOMAIN-SUFFIX,status.io.net": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,newapi.ai": [
@@ -6067,6 +6004,30 @@
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,info.nvidianews.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,groq.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,cohere.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,together.ai": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,replicate.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,fal.ai": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,baseten.co": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,elevenlabs.io": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,deepmind.com": [
       "proxy.yaml"
     ],
     "DOMAIN-SUFFIX,redd.it": [
@@ -6540,9 +6501,6 @@
     "DOMAIN-SUFFIX,telegram.org": [
       "telegram.yaml"
     ],
-    "DOMAIN-SUFFIX,api.telegram.org": [
-      "telegram.yaml"
-    ],
     "DOMAIN-SUFFIX,telesco.pe": [
       "telegram.yaml"
     ],
@@ -6720,9 +6678,6 @@
     "DOMAIN-SUFFIX,ibkr.com": [
       "us-broker.yaml"
     ],
-    "DOMAIN-SUFFIX,api.ibkr.com": [
-      "us-broker.yaml"
-    ],
     "DOMAIN-SUFFIX,www.clientam.com": [
       "us-broker.yaml"
     ],
@@ -6750,49 +6705,10 @@
     "DOMAIN-SUFFIX,paypal.com": [
       "us-payment.yaml"
     ],
-    "DOMAIN-SUFFIX,www.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,api-m.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,c.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,c6.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,d.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,ddbm2.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,t.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,pics.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,hcaptcha.paypal.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,newassets.hcaptcha.paypal.com": [
-      "us-payment.yaml"
-    ],
     "DOMAIN-SUFFIX,paypalobjects.com": [
       "us-payment.yaml"
     ],
     "DOMAIN-SUFFIX,wise.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,api.wise.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,sst.wise.com": [
-      "us-payment.yaml"
-    ],
-    "DOMAIN-SUFFIX,loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com": [
       "us-payment.yaml"
     ],
     "DOMAIN-SUFFIX,squarecdn.com": [

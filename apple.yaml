@@ -50,7 +50,6 @@ payload:
   - DOMAIN-SUFFIX,support-china.apple-support.akadns.net
   - DOMAIN-SUFFIX,www-cdn.icloud.com.akadns.net
   - DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
-  - DOMAIN-SUFFIX,itunes-cdn-cn.itunes-apple.com.akadns.net
   - DOMAIN-SUFFIX,store.apple.com.edgekey.net
 
 # === Apple IP 段 ===

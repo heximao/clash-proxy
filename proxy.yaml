@@ -2,7 +2,6 @@ payload:
 
 # === 机场订阅 ===
   - DOMAIN-SUFFIX,smjcdh.top
-  - DOMAIN-SUFFIX,dns.cloudflare.com
 
 # === PlayStation ===
   - DOMAIN-SUFFIX,playstation.net
@@ -28,7 +27,6 @@ payload:
   - DOMAIN-SUFFIX,dynatrace.com
   - DOMAIN,browser-intake-us5-datadoghq.com
   - DOMAIN-SUFFIX,influxdata.com
-  - DOMAIN-SUFFIX,formulae.brew.sh
   - DOMAIN-SUFFIX,brew.sh
   - DOMAIN-SUFFIX,revenuecat.com
   - DOMAIN-SUFFIX,da7d.org
@@ -45,7 +43,6 @@ payload:
   - DOMAIN-SUFFIX,edu.kg
 
 # === 漏网之鱼（2026-06-02 补录）===
-  - DOMAIN-SUFFIX,api.ttt.sh
   - DOMAIN-SUFFIX,go.cfapi.ccwu.cc
   - DOMAIN-SUFFIX,ttt.sh
   - DOMAIN-SUFFIX,argotunnel.com
@@ -213,8 +210,6 @@ payload:
 
 # === Spark ===
   - DOMAIN-SUFFIX,api.amplitude.com
-  - DOMAIN-SUFFIX,app.smartmailcloud.com
-  - DOMAIN-SUFFIX,gate.hockeyapp.net
   - DOMAIN-SUFFIX,knock.app
   - DOMAIN-SUFFIX,smartmailcloud.com
 
@@ -904,9 +899,6 @@ payload:
 # === 漏网之鱼（2026-06-25 补录）监控分析 ===
   - DOMAIN-SUFFIX,betterstack.com
   - DOMAIN-SUFFIX,betterstack.net
-  - DOMAIN-SUFFIX,cdnjs.betterstack.com
-  - DOMAIN-SUFFIX,t.betterstack.com
-  - DOMAIN-SUFFIX,uptime.betterstack.com
   - DOMAIN-SUFFIX,s1569222.us-west-12.betterstackdata.com
   - DOMAIN-SUFFIX,faro-collector-prod-us-east-0.grafana.net
   - DOMAIN-SUFFIX,plausible.io
@@ -1232,7 +1224,6 @@ payload:
   - DOMAIN-SUFFIX,openclaw.ai
   - DOMAIN-SUFFIX,clawhub.ai
 
-# === MiniMax 国际版 ===
 
 # === Token供应商 ===
   - DOMAIN-SUFFIX,poe.com
@@ -1240,6 +1231,7 @@ payload:
 
 
 
+# === Hugging Face ===
   - DOMAIN-SUFFIX,hf.space
   - DOMAIN-SUFFIX,hf.co
 
@@ -1250,10 +1242,8 @@ payload:
   - DOMAIN-SUFFIX,skill.sh
 
 # === io.net ===
-  - DOMAIN-SUFFIX,ai.io.net
   - DOMAIN-SUFFIX,io.net
   - DOMAIN-SUFFIX,ionet.betteruptime.com
-  - DOMAIN-SUFFIX,status.io.net
 # === 漏网之鱼（2026-09-29 补录）AI 服务 ===
   - DOMAIN-SUFFIX,newapi.ai
   - DOMAIN-SUFFIX,parallel.ai
@@ -1295,3 +1285,13 @@ payload:
 # === NVIDIA News ===
   - DOMAIN-SUFFIX,go.nvidianews.com
   - DOMAIN-SUFFIX,info.nvidianews.com
+
+# === AI 推理平台（2026-11-28 风控预置白名单）===
+  - DOMAIN-SUFFIX,groq.com
+  - DOMAIN-SUFFIX,cohere.com
+  - DOMAIN-SUFFIX,together.ai
+  - DOMAIN-SUFFIX,replicate.com
+  - DOMAIN-SUFFIX,fal.ai
+  - DOMAIN-SUFFIX,baseten.co
+  - DOMAIN-SUFFIX,elevenlabs.io
+  - DOMAIN-SUFFIX,deepmind.com

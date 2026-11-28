@@ -96,7 +96,6 @@ payload:
   - DOMAIN-SUFFIX,acg.tv
   - DOMAIN-SUFFIX,biliapi.net
   - DOMAIN-SUFFIX,biliapi.com
-  - DOMAIN,apiintl.biliapi.net
 
 # === 视频 / 图片 CDN ===
   - DOMAIN-SUFFIX,bilivideo.com
@@ -210,8 +209,6 @@ payload:
   - DOMAIN-SUFFIX,127.net
   - DOMAIN-SUFFIX,321fenx.com
 
-# === WeChat / 微信 ===
-  - DOMAIN-SUFFIX,weixin.qq.com
 # === QQ / 腾讯通用（2026-09-30 漏网之鱼补录）===
   - DOMAIN-SUFFIX,qq.com
   - DOMAIN-SUFFIX,qq.com.cn
@@ -240,8 +237,6 @@ payload:
   - DOMAIN-SUFFIX,gtimg.cn
 # === 腾讯子域补充（2026-10-11 漏网之鱼补录）===
   - DOMAIN-SUFFIX,copilot.tencent.com
-  - DOMAIN-SUFFIX,lightai.cloud.tencent.com
-  - DOMAIN-SUFFIX,time1.cloud.tencent.com
 # === 腾讯账号 / 内部办公（2026-10-21 漏网之鱼补录）===
   - DOMAIN,api.account.tencent.com
   - DOMAIN,oauth2.account.tencent.com
