@@ -27,22 +27,18 @@ clash-proxy 的域名来自真实的网络访问请求，按厂商与服务分�
 | **crypto.yaml** | 加密货币交易所与钱包 |
 | **direct.yaml** | 可直连的域名（含国内 AI 平台与可直连 AI 服务） |
 | **dns.yaml** | DNS 服务器 |
-| **fin-media.yaml** | 财经媒体与数据 |
 | **fin-tech.yaml** | 金融科技工具 |
 | **firefox.yaml** | Firefox / Mozilla |
 | **github.yaml** | GitHub 及相关开发工具 |
 | **google.yaml** | Google 服务 |
-| **hk-bank.yaml** | 香港银行（汇丰、ZA、WeLab 等） |
-| **hk-broker.yaml** | 港股券商，建议使用代理 |
+| **hk.yaml** | 香港银行与港股券商（汇丰、ZA、WeLab、长桥、uSMART 等，建议使用代理） |
 | **lan.yaml** | 局域网 / 内网直连（`.lan`/`.local` 等私有后缀、路由器管理页、私网段），建议与 `direct.yaml` 一起引用 |
-| **line.yaml** | LINE |
 | **meta.yaml** | Facebook、Instagram、WhatsApp、Threads、Meta Muse |
 | **microsoft.yaml** | Microsoft 服务（Office、Azure 等） |
-| **nvidia.yaml** | NVIDIA 服务 |
 | **openai.yaml** | OpenAI（ChatGPT、API 等） |
-| **proxy.yaml** | 需代理的杂项域名（含需代理的 AI 服务） |
+| **proxy.yaml** | 需代理的杂项域名（含需代理的 AI 服务、NVIDIA 等） |
 | **reject.yaml** | 广告/追踪/恶意软件拦截（推荐设置 reject） |
-| **social.yaml** | Reddit、Discord、Pinterest 等 |
+| **social.yaml** | Reddit、Discord、Pinterest、LINE / Naver、财经媒体（道琼斯、SeekingAlpha 等） |
 | **streaming.yaml** | 流媒体（Netflix、Spotify、Pornhub、Disney+、Twitch 等） |
 | **telegram.yaml** | Telegram |
 | **us-bank.yaml** | 美国银行，建议优先直连 |

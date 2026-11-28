@@ -269,7 +269,7 @@ automation 每天跑，多数轮可能过滤后**一个候选都没有**（全�
 
 - 日志中走代理节点不代表必须归代理文件；按服务性质判断（如 Let's Encrypt 证书端点 `lencr.org` 可直连归 `proxy.yaml` 或 `direct.yaml` 的证书验证分组需按实际情况定）。
 - **oc-cn-domain 类别**的域名命中外部 OpenClash CN 域名规则集且通常走 DIRECT，说明其为国内可达服务，多为国内大厂子域（字节系 `zijieapi.com`、`doubao.com`、`feishu.cn`、`byteimg.com` 等，腾讯系 `qq.com`、`weixinbridge.com` 等）——优先归入对应厂商文件，杂项归 `direct.yaml`。**高频场景：oc-cn-domain 提取出的域名主域往往已被现有 `DOMAIN-SUFFIX` 规则覆盖（如 `*.feishu.cn` 已有 `DOMAIN-SUFFIX,feishu.cn`），这是 Clash 规则集评估优先级导致——规则集先于本地 yaml 匹配，不代表规则缺失。check_coverage 判为 COVERED 的整批跳过，不逐个处理。**
-- **不要用厂商主域一次性兜底**：`DOMAIN-SUFFIX,tencent.com` 这类主域会与其它文件里的子域分组产生语义冲突（如 hk-bank.yaml 的 `tpns.hk.tencent.com`），厂商主域很宽时改用精确子域。
+- **不要用厂商主域一次性兜底**：`DOMAIN-SUFFIX,tencent.com` 这类主域会与其它文件里的子域分组产生语义冲突（如 hk.yaml 的 `tpns.hk.tencent.com`），厂商主域很宽时改用精确子域。
 - 已收录的域名不重复添加；若已有文件中的归属明显合理，沿用即可。
 - **禁止编辑 `reject.yaml`**。
 - 全库空壳占位文件已清零（2026-10-17）；如再出现仅有无效占位行 `DOMAIN-SUFFIX,` 的文件，补充真实域名时直接替换该占位行。

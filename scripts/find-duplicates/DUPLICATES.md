@@ -1,6 +1,6 @@
 # Duplicate Rules Report
 
-Scanned 31 YAML files; skipped: config.yaml, reject.yaml
+Scanned 27 YAML files; skipped: config.yaml, reject.yaml
 
 Rules appearing in more than one file:
 

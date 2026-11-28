@@ -1288,3 +1288,10 @@ payload:
 
 # === 漏网之鱼（2026-11-23 补录）AI 服务 ===
   - DOMAIN-SUFFIX,nekuda.ai
+
+# === Cloud Server ===
+  - DOMAIN-SUFFIX,nvidia.com
+
+# === NVIDIA News ===
+  - DOMAIN-SUFFIX,go.nvidianews.com
+  - DOMAIN-SUFFIX,info.nvidianews.com

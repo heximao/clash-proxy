@@ -1926,48 +1926,6 @@
     "IP-CIDR,1.1.1.1,no-resolve": [
       "dns.yaml"
     ],
-    "DOMAIN-SUFFIX,dowjones.ai": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,dowjones.io": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,mansionglobal.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,mktw.net": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,rdcpix.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,seekingalpha.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,investing.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,marketbeat.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,sec.gov": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,tradingcode.net": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,trading-strategies.academy": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,biggo.com": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,finnhub.io": [
-      "fin-media.yaml"
-    ],
-    "DOMAIN-SUFFIX,stooq.com": [
-      "fin-media.yaml"
-    ],
     "DOMAIN-SUFFIX,tradingview.com": [
       "fin-tech.yaml"
     ],
@@ -2320,121 +2278,121 @@
       "google.yaml"
     ],
     "DOMAIN-SUFFIX,za.group": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,bank.za.group": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,broker.za.group": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,welab.bank": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,wapi-sit.dev-wlab.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,hsbc.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,bochk.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,bankofchina.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,hkab.org.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,hkbea.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,sc.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,hangseng.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,icbcasia.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,ccb.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,citibank.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,ocbcwhhk.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,fubonbank.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,publicbank.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,shacombank.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,livibank.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,antbank.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,alipayhk.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,fusionbank.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,tpns.hk.tencent.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,airstarbank.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,airstarbank.com.hk": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,elebank.com": [
-      "hk-bank.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,longbridge.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,longbridge.cn": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,longbridgewhale.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,lbkrs.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,lbctrl.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,wbkrs.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,longbridgeapp.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,pbkrs.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,usmart.hk": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,usmart.sg": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,wbrks.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,usmartglobal.com": [
-      "hk-broker.yaml"
+      "hk.yaml"
     ],
     "DOMAIN-SUFFIX,localhost": [
       "lan.yaml"
@@ -2549,69 +2507,6 @@
     ],
     "IP-CIDR6,2002::/16,no-resolve": [
       "lan.yaml"
-    ],
-    "DOMAIN-SUFFIX,lin.ee": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,line.me": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,line.naver.jp": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,line-apps.com": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,line-cdn.net": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,line-scdn.net": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,nhncorp.jp": [
-      "line.yaml"
-    ],
-    "IP-CIDR,103.2.28.0/22,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,119.235.224.0/21,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,119.235.232.0/23,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,119.235.235.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,119.235.236.0/23,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,125.6.146.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,125.6.149.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,125.6.190.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,125.209.208.0/20,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,203.104.103.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,203.104.128.0/20,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,203.174.66.64/26,no-resolve": [
-      "line.yaml"
-    ],
-    "IP-CIDR,203.174.77.0/24,no-resolve": [
-      "line.yaml"
-    ],
-    "DOMAIN-SUFFIX,naver.com": [
-      "line.yaml"
     ],
     "DOMAIN-SUFFIX,meta.ai": [
       "meta.yaml"
@@ -2945,15 +2840,6 @@
     ],
     "DOMAIN-SUFFIX,turn.livekit.cloud": [
       "microsoft.yaml"
-    ],
-    "DOMAIN-SUFFIX,nvidia.com": [
-      "nvidia.yaml"
-    ],
-    "DOMAIN-SUFFIX,go.nvidianews.com": [
-      "nvidia.yaml"
-    ],
-    "DOMAIN-SUFFIX,info.nvidianews.com": [
-      "nvidia.yaml"
     ],
     "DOMAIN-SUFFIX,openai.com": [
       "openai.yaml"
@@ -6174,6 +6060,15 @@
     "DOMAIN-SUFFIX,nekuda.ai": [
       "proxy.yaml"
     ],
+    "DOMAIN-SUFFIX,nvidia.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,go.nvidianews.com": [
+      "proxy.yaml"
+    ],
+    "DOMAIN-SUFFIX,info.nvidianews.com": [
+      "proxy.yaml"
+    ],
     "DOMAIN-SUFFIX,redd.it": [
       "social.yaml"
     ],
@@ -6199,6 +6094,111 @@
       "social.yaml"
     ],
     "DOMAIN-SUFFIX,discord.gg": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,lin.ee": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,line.me": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,line.naver.jp": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-apps.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-cdn.net": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,line-scdn.net": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,nhncorp.jp": [
+      "social.yaml"
+    ],
+    "IP-CIDR,103.2.28.0/22,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,119.235.224.0/21,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,119.235.232.0/23,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,119.235.235.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,119.235.236.0/23,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,125.6.146.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,125.6.149.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,125.6.190.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,125.209.208.0/20,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,203.104.103.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,203.104.128.0/20,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,203.174.66.64/26,no-resolve": [
+      "social.yaml"
+    ],
+    "IP-CIDR,203.174.77.0/24,no-resolve": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,naver.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,dowjones.ai": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,dowjones.io": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,mansionglobal.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,mktw.net": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,rdcpix.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,seekingalpha.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,investing.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,marketbeat.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,sec.gov": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,tradingcode.net": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,trading-strategies.academy": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,biggo.com": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,finnhub.io": [
+      "social.yaml"
+    ],
+    "DOMAIN-SUFFIX,stooq.com": [
       "social.yaml"
     ],
     "DOMAIN-SUFFIX,huavod.com": [
@@ -6880,18 +6880,14 @@
     "crypto.yaml": [],
     "direct.yaml": [],
     "dns.yaml": [],
-    "fin-media.yaml": [],
     "fin-tech.yaml": [],
     "firefox.yaml": [],
     "github.yaml": [],
     "google.yaml": [],
-    "hk-bank.yaml": [],
-    "hk-broker.yaml": [],
+    "hk.yaml": [],
     "lan.yaml": [],
-    "line.yaml": [],
     "meta.yaml": [],
     "microsoft.yaml": [],
-    "nvidia.yaml": [],
     "openai.yaml": [],
     "proxy.yaml": [],
     "social.yaml": [],

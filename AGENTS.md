@@ -62,7 +62,7 @@ clash-proxy/
 3. **「品牌 + 固定后缀」成对先例**：同文件分组内已有「主域 + 同品牌衍生域」成对并存（`volces.com` + `volccdn.com`、`doubao.com`）→ 同结构的 `doubaocdn.com` 属零歧义补录。
 4. **命名族归属 > 进程证据**：`byte*` 族（byteimg/bytetos/bytedanceapi/bytescm/bytetcc）支持 `bytednsdoc`；`bdstatic.com` 支持 `bdimg.com`。进程证据只能加分不能单独定案（`volceapplog.com` 疑火山但仅 firefox 进程 → 留人工）。
 5. **品牌字面在域内 + 该厂商文件已落盘**：`servicewechat.com` / `wechat.com` → `wechat.yaml`（已有 weixin.com）。**无锚点文件即新增厂商文件**（`logitech.io`、`asus.com`）→ 一律留人工，即便品牌明确。
-6. **`*.tencent.com` 精确子域**属零歧义安全区；禁止 `DOMAIN-SUFFIX,tencent.com` 主域（与 hk-bank 的 `tpns.hk.tencent.com` 冲突）。
+6. **`*.tencent.com` 精确子域**属零歧义安全区；禁止 `DOMAIN-SUFFIX,tencent.com` 主域（与 hk.yaml 的 `tpns.hk.tencent.com` 冲突）。
 7. **裸 IP 判据 = 同厂商 IP 分组已存在**，非"同主域"：`17.57.0.147` → apple.yaml「apsd」组（已有 `17.57.145.0/24`）。加前先确认无更宽既有网段。
 8. **精确主机规则 ≠ 主域覆盖**：`DOMAIN,cdn.ripperhe.com` 不代表覆盖 `ripperhe.com`。判定前必须回看命中行规则类型。
 

@@ -1,10 +1,19 @@
 # 更新记录
 
+## 2026-11-28 规则文件整合（二）：line / fin-media 并入 social.yaml、nvidia 并入 proxy.yaml、hk-broker 并入 hk-bank 并改名 hk.yaml
+
+- 用户指令整合：`line.yaml` + `fin-media.yaml` → `social.yaml`（`git rm` 两源文件）；`nvidia.yaml` → `proxy.yaml`（`git rm`）；`hk-broker.yaml` → `hk-bank.yaml` 后 `git mv hk-bank.yaml hk.yaml`（`git rm` hk-broker.yaml）。
+- 合并前查重：5 个源文件全部规则与全库其余业务 yaml 及彼此零交集（逐条脚本比对），无需去重。
+- 结果：`social.yaml` payload 9 → 44 规则（LINE 21 / 财经媒体 14 并入）；`proxy.yaml` payload 1060 → 1063 规则（新增 NVIDIA 3 条）；`hk.yaml`（原 hk-bank.yaml）39 规则 = 银行 27 + 券商 12（长桥 / uSMART 组）。
+- 文档同步：README 规则表删 5 行（fin-media / hk-bank / hk-broker / line / nvidia），新增 `hk.yaml` 行（香港银行与港股券商），`social.yaml` / `proxy.yaml` 说明更新；AGENTS.md 判据 6 `hk-bank` → `hk.yaml`；`fill-domains-from-log/SKILL.md` 示例引用 `hk-bank.yaml` → `hk.yaml`。
+- 自检：`find_duplicates` 跨文件 0、文件内 0，退出码 0；`social.yaml` / `proxy.yaml` / `hk.yaml` `yaml.safe_load` 通过（pyyaml 解释器）。
+- Git：main 提交（4 删 + 1 改名 + 3 改 + 文档）→ push → 校验 `0 0`。
+
 ## 2026-11-28 规则文件整合：7 国内厂商文件并入 cn.yaml、proxy-ai.yaml 并入 proxy.yaml
 
 - 用户指令整合：`baidu.yaml` / `bilibili.yaml` / `bytedance.yaml` / `alibaba.yaml` / `netease-music.yaml` / `tencent.yaml` / `xhs.yaml` 共 7 文件并入 `cn.yaml`（`git rm` 删除源文件，保留原分组注释头并归一至 0 列）；`proxy-ai.yaml` 并入 `proxy.yaml` 尾部（`git rm` 删除）。
-- 合并前查重：8 个源文件全部规则（cn 侧 141 条 / proxy-ai 侧 48 条）与全库其余 30 个业务 yaml 及源文件间零交集（逐条脚本比对），无需去重。
-- 结果：`cn.yaml` 规则数 80 → 179（逐段累计 56/72/104/121/148/177/179），新增「网易云音乐」组头（原文件头部规则无组头）；`proxy.yaml` 并入 74 行、payload 规则数 → 1060。两文件头注说明已更新。
+- 合并前查重：8 个源文件全部规则（cn 侧 127 条 / proxy-ai 侧 43 条）与全库其余业务 yaml 及源文件间零交集（逐条脚本比对），无需去重。
+- 结果：`cn.yaml` 规则数 52 → 179（逐段累计 56/72/104/121/148/177/179），新增「网易云音乐」组头（原文件头部规则无组头）；`proxy.yaml` payload 规则数 1017 → 1060（并入 43 条）。两文件头注说明已更新。
 - 文档同步：README「规则文件」表删 8 行、`cn.yaml` / `proxy.yaml` 行说明并入；AGENTS.md「文件分类规则」四条更新（国内厂商归 `cn.yaml`、AI 需代理归 `proxy.yaml`、-global 三对已于 2026-11-22 并入 `cn-global.yaml`）；`fill-domains-from-log/SKILL.md` 第 7 节路由表同步（`fill-issues-domain` 的 `trigger_eval.py` 回归夹具为 2026-10-28 历史记录含已删 `bytedance-global.yaml`，不动）。
 - 未处理：本地未跟踪 `config.yaml` 运行副本内仍引用 `heximao/rule_provider/{alibaba,bytedance,proxy-ai}.yaml` CDN 旧地址（另一仓库 rule_provider 的产物，本次不改；用户如需可后续在 rule_provider 仓库同步）。
 - 自检：`find_duplicates` 跨文件 0、文件内 0，退出码 0；`cn.yaml` / `proxy.yaml` `yaml.safe_load` 通过（pyyaml 解释器）。

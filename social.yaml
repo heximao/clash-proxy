@@ -10,3 +10,51 @@ payload:
   - DOMAIN-SUFFIX,discordapp.com
   - DOMAIN-SUFFIX,discordapp.net
   - DOMAIN-SUFFIX,discord.gg
+
+# === LINE ===
+  - DOMAIN-SUFFIX,lin.ee
+  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,line.naver.jp
+  - DOMAIN-SUFFIX,line-apps.com
+  - DOMAIN-SUFFIX,line-cdn.net
+  - DOMAIN-SUFFIX,line-scdn.net
+  - DOMAIN-SUFFIX,nhncorp.jp
+  - IP-CIDR,103.2.28.0/22,no-resolve
+  - IP-CIDR,119.235.224.0/21,no-resolve
+  - IP-CIDR,119.235.232.0/23,no-resolve
+  - IP-CIDR,119.235.235.0/24,no-resolve
+  - IP-CIDR,119.235.236.0/23,no-resolve
+  - IP-CIDR,125.6.146.0/24,no-resolve
+  - IP-CIDR,125.6.149.0/24,no-resolve
+  - IP-CIDR,125.6.190.0/24,no-resolve
+  - IP-CIDR,125.209.208.0/20,no-resolve
+  - IP-CIDR,203.104.103.0/24,no-resolve
+  - IP-CIDR,203.104.128.0/20,no-resolve
+  - IP-CIDR,203.174.66.64/26,no-resolve
+  - IP-CIDR,203.174.77.0/24,no-resolve
+# === Naver（2026-10-21 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,naver.com
+
+# === 道琼斯 ===
+  - DOMAIN-SUFFIX,dowjones.ai
+  - DOMAIN-SUFFIX,dowjones.io
+# === 财经媒体 ===
+  - DOMAIN-SUFFIX,mansionglobal.com
+  - DOMAIN-SUFFIX,mktw.net
+  - DOMAIN-SUFFIX,rdcpix.com
+  - DOMAIN-SUFFIX,seekingalpha.com
+  - DOMAIN-SUFFIX,investing.com
+  - DOMAIN-SUFFIX,marketbeat.com
+
+# === 美国证监会（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,sec.gov
+
+# === 交易学习/比价站点（2026-09-29 漏网之鱼补录）===
+  - DOMAIN-SUFFIX,tradingcode.net
+  - DOMAIN-SUFFIX,trading-strategies.academy
+  - DOMAIN-SUFFIX,biggo.com
+
+# === 财经数据 API（2026-11-25 漏网之鱼补录）===
+# finnhub.io：海外行情数据 API（node 24 次）；stooq.com：历史行情 CSV 下载（curl 2 次）
+  - DOMAIN-SUFFIX,finnhub.io
+  - DOMAIN-SUFFIX,stooq.com
