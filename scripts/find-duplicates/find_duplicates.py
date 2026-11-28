@@ -18,7 +18,10 @@ out_dir = Path(__file__).resolve().parent
 root = out_dir.parent.parent
 # reject.yaml is machine-generated from the Loyalsoldier upstream and is never
 # edited locally, so duplicates inside or against it are expected and ignored.
-EXCLUDED = {'reject.yaml'}
+# config.yaml is an untracked local copy of the ClashX Meta runtime config; its
+# repeated values (strategy group names, DNS entries, port numbers) are config
+# noise, not rule duplicates, so it is excluded from the scan.
+EXCLUDED = {'reject.yaml', 'config.yaml'}
 files = sorted(p for p in root.rglob('*.yaml') if p.name not in EXCLUDED)
 rule_re = re.compile(r"^\s*-\s*(.+)$")
 

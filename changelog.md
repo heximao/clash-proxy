@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2026-11-28 find_duplicates 脚本：排除 config.yaml 本地配置副本
+
+- 修改 `scripts/find-duplicates/find_duplicates.py`：`EXCLUDED` 集合由 `{'reject.yaml'}` 扩展为 `{'reject.yaml', 'config.yaml'}`。`config.yaml` 是未跟踪的 ClashX Meta 运行配置副本，脚本此前将其 `-` 列表行（策略组名、DNS 配置值、端口等）误报为文件内重复（23 条噪声），导致退出码恒为 1，无法作为门禁。
+- 重跑脚本验证：扫描 39 个 yaml（`reject.yaml` / `config.yaml` 均跳过），跨文件重复 0、文件内重复 0，退出码 0。顺带确认 AGENTS.md 记载的「基线 1 条」（`settings.crashlytics.com` direct/google）已不存在——该规则现仅存于 `google.yaml:75,150,152`，当前全库零重复。
+- 重新生成 `scripts/find-duplicates/DUPLICATES.md` 与 `duplicates.json`（随本次提交入库）。
+- Git：main 提交 → push → 校验 `0 0`。
+
 ## 2026-11-25 漏网之鱼归类：昨日 11-24 双日志 20 域名补录（自动化轮）
 
 - 数据来源：`log/clashx-meta-log/2026-11-24_09-57-33` 与 `log/clashx-meta-log/2026-11-24_19-36-44`（均为昨日日期前缀，`cp -R` 自 `~/.config/clash.meta/logs`，只读源不做 mv/rm；各 4 个文件：`clashx.log` / `clashx_core_24_*.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`，共 8 个）。两文件夹为同一日两次 ClashX 启动产生的 core，无重叠。
