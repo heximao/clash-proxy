@@ -1206,6 +1206,11 @@ payload:
   - DOMAIN-SUFFIX,pablostanley.com
   - DOMAIN-SUFFIX,keydesign.xyz
 
+# === 漏网之鱼（2026-11-28 补录）海外服务 / 工具 ===
+# estk.me：ESTKme Technology Limited 可插拔 eSIM 卡（www/store/api.estk.me，firefox 访问商城与官方 API），
+# 无国内主体实证；Cloudflare NS，首页直连与代理均返回 403 challenge，走代理更稳，按海外杂项归 proxy
+  - DOMAIN-SUFFIX,estk.me
+
 # IP风控不严格的AI平台统一使用
   - DOMAIN-SUFFIX,ai.com
 # === OpenCode Zen ===

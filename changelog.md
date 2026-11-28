@@ -1,5 +1,33 @@
 # 更新记录
 
+## 2026-11-28 skill 活文档同步：修正 11-28 两轮整合遗留的已删文件失效引用
+
+- 背景：2026-11-28 两轮规则文件整合（7 国内厂商 + proxy-ai → `cn.yaml` / `proxy.yaml`；line / fin-media → `social.yaml`、nvidia → `proxy.yaml`、hk-broker → `hk-bank` 改名 `hk.yaml`）后，skill 活文档与脚本示例仍指向已删文件。只修「活文档 / 活示例」（下一轮 Agent 会照抄执行的部分），历史记录（memory 日志、`trigger_eval.py` 回归夹具、skip-list 注释、AGENTS.md 判据 5/166 行历史叙述）保持原样。
+- 修正明细：
+  - `verify_landing.py` docstring + `verify-landing/README.md` 示例：`--yaml bytedance.yaml proxy.yaml` → `--yaml cn.yaml proxy.yaml`；示例域改与参数自洽组合 `applogcdn.com`(现 `cn.yaml`) / `pixpix.com`(现 `proxy.yaml`) / `sitemana.com`(skip 项)；
+  - `fill-issues-domain/references/evidence-collection.md` 两行实测表：`bytedance.yaml` → 标注「2026-11-28 起归 `cn.yaml`」；`proxy-ai.yaml` → 标注「2026-11-28 起归 `proxy.yaml`」；
+  - `AGENTS.md` 命名规则示例：`hk-broker.yaml` / `fin-media.yaml`（已删）→ `us-broker.yaml` / `fin-tech.yaml`（现存）；
+  - `hk.yaml` 删空组头「# === 香港银行 ===」（组下 0 规则，银行规则实际挂在 ZA Group / 汇立 / 传统银行等组头下）。
+- 验证：`verify_landing.py` `py_compile` 通过；`trigger_eval.py` 离线回归失败 0 条（夹具未动）；全库空组头扫描 0；`find_duplicates` 跨文件 0 / 文件内 0 退出码 0；活文档失效引用扫描清零（含 `fill-domains-from-log` 第 7 节路由表与判据 6，已于 11-28 两轮内同步过）。
+- 并发注记：本条目提交时 `proxy.yaml`（estk.me）/ `direct.yaml`（inputsource.pro）为在途自动化轮改动，未纳入本次暂存；顶部「漏网之鱼归类 11-27」条目随本文件一并入库，其 Git 操作链由该轮补全。
+- Git：main 提交（skill 活文档 4 + hk.yaml + AGENTS.md + changelog + 报告，不含在途 direct/proxy）→ push → 校验 `0 0`。
+
+## 2026-11-28 漏网之鱼归类：昨日 11-27 日志 2 主域补录（自动化轮）
+
+- 数据来源：`log/clashx-meta-log/2026-11-27_06-06-46`（昨日日期前缀，`cp -R` 自 `~/.config/clash.meta/logs`，只读源不做 mv/rm；4 个文件：`clashx.log` / `clashx_core_27_06-06-57.log` / `clashx_mihomo.log` / `clashx_mihomo_error.log`）。仓库 `log/clashx-meta-log/` 本轮为空，无上轮遗留；`diff -rq` 与源目录一致（cp 快照）。
+- 提取量：候选域名 15 个（`match Match` 14 / `oc-cn-domain` 1），主域归并 11 个；公网裸 IP 0；skip-list 命中 0（`# skipped` 空）；manual 命中 0；伪域名 0、探针 0、私有 IP 0。
+- `check_coverage` 首轮判定：covered 9 / uncovered 2（brand-anchor 0）。
+- 补录明细（2 主域，2 文件）：
+  - **`estk.me`** → `proxy.yaml` 新增「漏网之鱼（2026-11-28 补录）海外服务 / 工具」组。命中 `www.estk.me`(2) / `store.estk.me`(2) / `api.estk.me`(6)，均 firefox、均落 `漏网之鱼[🇯🇵日本2S2]`。归属依据：ESTKme Technology Limited 可插拔 eSIM 卡厂商（`store.estk.me/manual` 页面标题「ESTKme Technology Limited – Turnkey LPAe solution」、App Store「ESTKme」、第三方评测文可证），域名无国内主体实证（NS 为 Cloudflare `bristol`/`junade`，RDAP 无注册商实体返回）；首页与 api 直连、走代理均 403 challenge（Cloudflare 挑战页），跨域访问需代理更稳，按 AGENTS.md「海外杂项归 `proxy.yaml`」+ 2026-10-28 裁定处理。
+  - **`inputsource.pro`** → `direct.yaml` 新增「macOS 工具（2026-11-28 漏网之鱼补录）」组。命中 `inputsource.pro`(1)，进程 `Input Source Pro`（进程名与产品同名，开源 Mac 输入法自动切换工具 `runjuu/InputSourcePro`）。归属依据：本机 `curl --noproxy '*'` 直连探测 HTTP 200 / 0.85s，属可稳定直连杂项 → `direct.yaml`。
+- 未收录及原因：
+  - covered 9 主域整批跳过（`hf.space` → proxy.yaml:1235、`openrouter.ai` → direct.yaml:410、`workbuddy.ai` → cn-global.yaml:22、`usemagpie.ai` → proxy.yaml:1277、`tavily.com` → proxy.yaml:1240、`models.dev` → proxy.yaml:1218、`opencode.ai` → proxy.yaml:1212、`agnes-ai.com` → direct.yaml:408、`vercel-status.com` → proxy.yaml:203）；其中 `www.workbuddy.ai` 为 `oc-cn-domain` 类别，主域已被 `cn-global.yaml` 的 `DOMAIN-SUFFIX,workbuddy.ai` 覆盖（规则集先于本地 yaml 匹配，非规则缺失）。
+  - 本轮无裸 IP、无广告/追踪类新主域、无伪域名/探针族命中。
+- 待人工确认：无新增；`issues-domain.md` 维持 0 项，skip-list `manual` 新增 0。
+- 备注（日志缺口，非本轮遗漏）：源目录 `~/.config/clash.meta/logs` 下 `2026-11-25_11-06-01` / `2026-11-26_10-11-48` 两日日志仍未经处理（changelog 最近一轮归类条目为 2026-11-25，处理的是 11-24 日志），按「只处理昨天」纪律本轮不纳入，留待用户决定是否补跑。
+- 自检结果：`find_duplicates` 跨文件重复 0、intra-file 重复 0，退出码 0（历史基线 `settings.crashlytics.com`、`config.yaml` 噪声均已不在报告内）；`proxy.yaml` / `direct.yaml` `yaml.safe_load` 通过；新增 2 主域 `check_coverage` 复核 covered 2 / uncovered 0。
+- Git：main 提交 → push → 同步 `0 0`。
+
 ## 2026-11-28 IP 风控优化：影子规则瘦身 42 条 + AI 推理平台风控白名单 8 域预置
 
 - 影子规则瘦身（同文件内「主域 SUFFIX + 其子域」双写，功能完全重复，逐条脚本比对定位后删除）：`us-payment.yaml` 13 条（paypal 9 子域 + wise 3 子域，保留主域 `paypal.com` / `wise.com`）、`proxy.yaml` 10 条（`ai.io.net`/`status.io.net` 被 `io.net` 覆盖等）、`cn.yaml` 4 条（`weixin.qq.com` 被 `qq.com` 覆盖、`lightai/time1.cloud.tencent.com` 被 `cloud.tencent.com` 覆盖、`apiintl.biliapi.net` 被 `biliapi.net` 覆盖）、`google.yaml` 4 条（`api.osv.dev` 等）、`hk.yaml` / `apple.yaml` / `cn-global.yaml` / `telegram.yaml` / `us-broker.yaml` 各 1 条；共 42 行（含 2 个变空组头「WeChat / 微信」「Antigravity」及其在 `google.yaml` 头部 TOC 的 `# 4. Antigravity` 行，TOC 重编号 5→4）。删除后全库 13 个受影响文件 `yaml.safe_load` 通过，`find_duplicates` 0 重复。

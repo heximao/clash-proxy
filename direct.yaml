@@ -430,3 +430,8 @@ payload:
 # === Airbnb 中国站（2026-11-25 漏网之鱼补录）===
 # airbnb.cn / f02aa.airbnb.cn 命中 oc-cn-domain（国内可达），.cn 域名归 direct
   - DOMAIN-SUFFIX,airbnb.cn
+
+# === macOS 工具（2026-11-28 漏网之鱼补录）===
+# inputsource.pro：开源 Mac 输入法自动切换工具 InputSource Pro（进程名同名，GitHub runjuu/InputSourcePro），
+# 本机直连探测 200 / 0.85s，可稳定直连
+  - DOMAIN-SUFFIX,inputsource.pro
